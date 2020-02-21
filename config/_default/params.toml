@@ -9,7 +9,7 @@
 #   Latest themes (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in themes in `themes/academic/data/themes/`
 #   Browse user installed themes in `data/themes/`
-theme = "my_theme"
+theme = "se_theme"
 
 # Enable users to switch between day and night mode?
 day_night = true
@@ -82,33 +82,33 @@ edit_page = {repo_url = "https://github.com/gcushen/hugo-academic", content_dir 
 
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "startup.engineer@tuhh.de"
-phone = "888 888 88 88"
+phone = "+49 40 42878-4765"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "450 Serra Mall", city = "Stanford", region = "CA", postcode = "94305", country = "United States", country_code = "US"}
+address = {street = "Am Irrgarten 3-9", city = "Hamburg", region = "HH", postcode = "21073", country = "Germany", country_code = "GE"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
 coordinates = {latitude = "53.459695", longitude = "9.971900"}
 
 # Directions for visitors to locate you.
-directions = "Enter Building 1 and take the stairs to Office 200 on Floor 2"
+directions = "Enter building Q and take the stairs to office 133 on first floor"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
-office_hours = ["Monday 10:00 to 13:00", "Wednesday 09:00 to 10:00"]
+office_hours = ["Appointments via the contact form above or startup.engineer@tuhh.de"]
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
-appointment_url = "https://calendly.com"
+# appointment_url = "https://calendly.com"
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/Twitter"},
-  {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
-  {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
-  {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
+  {icon = "twitter", icon_pack = "fab", name = "Twitter", link = "https://twitter.com/Startup3ngineer"},
+  {icon = "facebook", icon_pack = "fab", name = "Facebook", link = "https://www.facebook.com/Startup.Engineer"},
+  # {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
+  # {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
   ]
 
@@ -120,7 +120,7 @@ contact_links = [
 sharing_image = ""
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter = ""
+twitter = "Startup3ngineer"
 
 ############################
 ## Regional Settings
@@ -256,9 +256,9 @@ plugins_js  = ["custom"]
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  engine = 3
-  api_key = "pk.eyJ1IjoiaWhsdW1pbmF0ZSIsImEiOiJjazZ2eHNrbWIwNTJqM2xueXNkbzd2aXdoIn0.6JI-I1qcQfU8sUIHEeskoQ"
-  # api_key = "AIzaSyAkK1vSbd9CRHttVRljZ6qBSJC6KRtp65o"
+  engine = 1
+  # api_key = "pk.eyJ1IjoiaWhsdW1pbmF0ZSIsImEiOiJjazZ2eHNrbWIwNTJqM2xueXNkbzd2aXdoIn0.6JI-I1qcQfU8sUIHEeskoQ"
+  api_key = "AIzaSyAkK1vSbd9CRHttVRljZ6qBSJC6KRtp65o"
   zoom = 15
 
 ############################
