@@ -18,7 +18,7 @@ day_night = true
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in font sets in `themes/academic/data/fonts/`
 #   Browse user installed font sets in `data/fonts/`
-font = ""
+font = "se_fonts"
 
 # Choose a font size.
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
@@ -41,10 +41,10 @@ local_business_type = ""
 
 # Organization name (optional)
 # Enter an organization or project name. Defaults to the site title from `config.toml`.
-org_name = ""
+org_name = "TUHH Institute of Entrepreneurship"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = ""
+description = "Entrepreneurship research and teaching"
 
 ############################
 ## Site Features
