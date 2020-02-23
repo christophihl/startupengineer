@@ -73,19 +73,19 @@ social:
   link: https://twitter.com/Ihluminate
 - icon: keybase
   icon_pack: fab
-  link: https://keybase.io/alisonhill
+  link: https://keybase.io/christophihl
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.co.uk/citations?user=rOAPv_gAAAAJ
+- icon: researchgate
+  icon_pack: ai
+  link: https://www.researchgate.net/profile/Christoph_Ihl
 - icon: orcid
   icon_pack: ai
   link: https://orcid.org/0000-0002-0842-5201
 - icon: publons
   icon_pack: ai
   link: https://publons.com/researcher/1886744/christoph-ihl/
-- icon: researchgate
-  icon_pack: ai
-  link: https://www.researchgate.net/profile/Christoph_Ihl
 - icon: impactstory
   icon_pack: ai
   link: https://profiles.impactstory.org/u/0000-0002-0842-5201
@@ -111,7 +111,7 @@ user_groups:
 - Visitors
 ---
 
-As professor of management at Hamburg University of Technology I am heading the TUHH Institute of Entrepreneurship (TIE). My research about entrepreneurship and innovation lies at the intersection of organizational theory, sociology and strategy. In particular, I am interested in how actors are influenced by and interact with their social and cultural environments to bring about novelty, e.g. with regard to ideas, teams, products, practices or business models. 
+As professor of management at Hamburg University of Technology (TUHH) I am heading the TUHH Institute of Entrepreneurship (TIE). My research about entrepreneurship and innovation lies at the intersection of organizational theory, sociology and strategy. In particular, I am interested in how actors are influenced by and interact with their social and cultural environments to bring about novelty, e.g. with regard to ideas, teams, products, practices or business models. 
 
 My research is situated in domains, where social and cultural spaces can be measured (more or less) comprehensively, such as digital startup innovation, academic science, creative industries as well as user crowds and communities. I deeply enjoy getting insights from novel data using econometric and computational methods from network analysis and natural language processing.
 
