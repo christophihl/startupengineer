@@ -86,7 +86,7 @@ phone = "+49 40 42878-4765"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "Am Irrgarten 3-9", city = "Hamburg", region = "HH", postcode = "21073", country = "Germany", country_code = "GE"}
+address = {street = "Am Irrgarten 3-9", city = "Hamburg", region = "HH", postcode = "21073", country = "Germany", country_code = "de"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
@@ -130,17 +130,17 @@ twitter = "Startup3ngineer"
 #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
 date_format = "Jan 2, 2006"
 #   Examples: "3:04 pm" or "15:04"
-time_format = "3:04 PM"
+time_format = "15:04"
 
 # Address format (choose from the [address_formats] list below or add you own to the list).
-address_format = "en-us"
+address_format = "de"
 
 ############################
 ## Advanced
 ############################
 
 # Main menu alignment (l = left, c = center, r = right) and logo options.
-main_menu = {align = "l", show_logo = true}
+main_menu = {align = "r", show_logo = true}
 
 # Show estimated reading time for posts? (true/false)
 reading_time = true
