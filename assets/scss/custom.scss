@@ -1,9 +1,11 @@
 // Override this file to add your own SCSS styling.
 
 
+
 /*************************************************
  *  Navigation bar
  **************************************************/
+
 
 .navbar {
   height: 70px;
@@ -39,21 +41,22 @@
     }
   }
 
+  .nav-icons {
+    height: 46px;
+  }
+
   .navbar-nav {
     display: flex;
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-weight: bold;
-    letter-spacing: 0.08em;
-    border-top: solid 5px transparent;
-    border-bottom: solid 5px #2DC6D6;
+    border-bottom: 5px solid #2DC6D6;
 
     .nav-link {
-      color: rgba($sta-menu-text, .85);
+      //color: rgba($sta-menu-text, .85);
+      text-transform: uppercase;
+      letter-spacing: .08em;
 
       &.active,
       &:hover {
-        border-top: solid 5px #2DC6D6;
+        background: #95e1ea
       }
       &:focus {
         color: $sta-menu-text;
@@ -61,7 +64,7 @@
 
       &.active {
         font-weight: bold !important;
-        color: $sta-menu-text-active !important;
+        color: $sta-menu-text !important;
       }
     }
   }
@@ -211,3 +214,4 @@ ul.nav-icons li.nav-item a.nav-link {
   background-color: $sta-menu-primary !important;
   color: $sta-menu-text !important;
 }
+
