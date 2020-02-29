@@ -1,0 +1,30 @@
+
+
+{{ $ := .root }}
+{{ $page := .page }}
+
+<div class="row featurette">
+  {{ with $page.Title }}
+  <div class="col-md-12 section-heading">
+    <h1>{{ . | markdownify | emojify }}</h1>
+    {{ if $page.Params.subtitle }}<p>{{ $page.Params.subtitle | markdownify | emojify }}</p>{{ end }}
+  </div>
+  {{ end }}
+
+ {{ with $page.Content }}
+  <div class="col-md-12">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  {{ range $page.Params.affiliation }}
+
+
+  <div class="col-12 col-sm-3" title="{{ .name }}">
+                          <a href="{{ .url }}" target="_blank">
+                            <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" />
+                          </a>
+  </div>
+  {{ end }}
+</div>
+
