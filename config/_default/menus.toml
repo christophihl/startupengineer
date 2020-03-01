@@ -21,6 +21,7 @@
 [[main]]
   name = "Research"
   url = "research/"
+  identifier = "research"
   weight = 40
 
 [[main]]
