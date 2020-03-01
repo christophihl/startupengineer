@@ -24,14 +24,14 @@ subtitle = ""
   url = "http://www.startupdock.de"
 
 [[affiliation]]
-  name = "Academy of Management"
-  image = "img/affiliations/AOM.png"
-  url = "http://aom.org"
-
-[[affiliation]]
   name = "DRUID Society"
   image = "img/affiliations/druid.png"
   url = "http://druid.dk"
+
+[[affiliation]]
+  name = "Academy of Management"
+  image = "img/affiliations/AOM.png"
+  url = "http://aom.org"
 
 [[affiliation]]
   name = "European Group for Organizational Studies"
