@@ -107,8 +107,7 @@ email: ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
-- Visitors
+- Current Members
 ---
 
 As professor of management at Hamburg University of Technology (TUHH) I am heading the TUHH Institute of Entrepreneurship (TIE). My research about entrepreneurship and innovation lies at the intersection of organizational theory, sociology and strategy. In particular, I am interested in how actors are influenced by and interact with their social and cultural environments to bring about novelty, e.g. with regard to ideas, teams, products, practices or business models. 

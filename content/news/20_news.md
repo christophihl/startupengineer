@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
 title = "News"
-subtitle = "From recent to old ..."
+subtitle = "From recent to ancient"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
