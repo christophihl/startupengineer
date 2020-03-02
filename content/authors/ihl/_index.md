@@ -12,6 +12,12 @@ superuser: true
 # Role/position
 role: Professor & Head of Institute
 
+# Room
+room: Q133
+
+# Telephone
+phone: +49 40 42878-4765
+
 # Organizations/Affiliations
 organizations:
 - name: Hamburg University of Technology
