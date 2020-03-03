@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Christoph Ihl
+name: Prof. Dr. Christoph Ihl
 
 # Username (this should match the folder name)
 authors:
@@ -19,9 +19,9 @@ room: Q133
 phone: +49 40 42878-4765
 
 # Organizations/Affiliations
-organizations:
-- name: Hamburg University of Technology
-  url: "https://www.tuhh.de/tuhh/startseite.html"
+# organizations:
+# - name: Hamburg University of Technology
+#   url: "https://www.tuhh.de/tuhh/startseite.html"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include cultural entrepreneurship, social networks and natural language processing.
@@ -77,9 +77,9 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/Ihluminate
-- icon: keybase
-  icon_pack: fab
-  link: https://keybase.io/christophihl
+# - icon: keybase
+#   icon_pack: fab
+#   link: https://keybase.io/christophihl
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.co.uk/citations?user=rOAPv_gAAAAJ
@@ -92,15 +92,15 @@ social:
 - icon: publons
   icon_pack: ai
   link: https://publons.com/researcher/1886744/christoph-ihl/
-- icon: impactstory
-  icon_pack: ai
-  link: https://profiles.impactstory.org/u/0000-0002-0842-5201
+# - icon: impactstory
+#   icon_pack: ai
+#   link: https://profiles.impactstory.org/u/0000-0002-0842-5201
 - icon: github
   icon_pack: fab
   link: https://github.com/christophihl
-- icon: stack-overflow
-  icon_pack: fab
-  link: https://stackoverflow.com/users/9882371/christoph-ihl
+# - icon: stack-overflow
+#   icon_pack: fab
+#   link: https://stackoverflow.com/users/9882371/christoph-ihl
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv

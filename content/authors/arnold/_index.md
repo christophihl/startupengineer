@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Jan-Frederik Arnold
+name: Dr. Jan-Frederik Arnold
 
 # Username (this should match the folder name)
 authors:
@@ -24,7 +24,7 @@ organizations:
   url: "https://www.tuhh.de/tuhh/startseite.html"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Venture Capital, Startup Distinctiveness, Social Evaluation, 
+bio: Venture Capital, Startup Distinctiveness, Social Evaluation
 
 
 interests:
@@ -35,28 +35,21 @@ interests:
 
 education:
   courses:
-  - course: Professor & Head of Institute of Entrepreneurship
-    institution: Hamburg University of Technology, Germany
-    year: 2014 - current
-  - course: Academic Director of Startup Dock - Center for Entrepreneurship
-    institution: Hamburg University of Technology, Germany
-    year: 2014 - 2018
-  - course: Assistant Professor
-    institution: RWTH Aachen University, Germany
-    year: 2008 - 2014
+  - course: CFO
+    institution: Flighrbright, Berlin, Germany
+    year: 2019 - current
+  - course: Engagement Manager
+    institution: McKinsey & Company, Munich, Germany
+    year: 2012 - 2019
   - course: PhD in Management
-    institution: Technical University of Munich, Germany
-    year: 2008
-  - course: MSc in Engineering and Management
     institution: Technical University of Berlin, Germany
-    year: 2001
-  - course: MBA
-    institution: University of British Columbia, Vancouver, Canada
-    year: 1998
-  - course: BSc in Engineering and Management
-    institution: Technical University of Kaiserslautern, Germany
-    year: 1995
-
+    year: 2015 - 2018
+  - course: MSc in Accounting and Finance
+    institution: London School of Economics and Political Science, UK
+    year: 2010 - 2012
+  - course: Bachelor of Arts in Business Administration
+    institution: Universität St. Gallen, Switzerland
+    year: 2007 - 2010
 
 
 # Social/Academic Networking
@@ -64,12 +57,9 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-- icon: envelope
-  icon_pack: fas
-  link: "mailto:christoph.ihl@tuhh.de"
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/christoph-ihl-b87a8773/
+  link: https://de.linkedin.com/in/jan-frederik-arnold
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -80,4 +70,3 @@ user_groups:
 - Alumni
 ---
 
-Coming soon ...
