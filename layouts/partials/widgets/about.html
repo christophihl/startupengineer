@@ -41,26 +41,18 @@
         </h3>
         {{ end }}
 
-   
-        <ul class="ul-contact-person fa-ul">
-      
-          <li>
-            <i class="fa-li fas fa-phone fa" aria-hidden="true"></i>
-            <span id="person-telephone">
-            <a href="tel:{{ . }}">{{ $person.phone }}</a>
-            </span>
-          </li>
-  
-          <li>
-            <i class="fa-li fas fa-map-marker fa" aria-hidden="true"></i>
-            <span id="person-address">{{$person.room}}</span>
-          </li>
-
-        </ul>
-
       </div>
 
 
+      {{ if in $person.user_groups "Current Members" }}
+        <div class="contact-person">
+
+          <h3><i class="fas fa-phone fa" aria-hidden="true"></i><a href="tel:{{ . }}">      {{ $person.phone }}</a></h3>
+  
+          <h3><i class="fas fa-map-marker fa" aria-hidden="true"></i>     {{$person.room}}</h3>
+
+        </div>
+      {{ end }}
 
 
       <ul class="network-icon" aria-hidden="true">
