@@ -1,10 +1,10 @@
 ---
 # Display name
-name: Dr. Giulio Barth
+name: Dr. Matthias Jacobi
 
 # Username (this should match the folder name)
 authors:
-- barth
+- jacobi
 
 # Is this the primary user of the site?
 superuser: false
@@ -24,38 +24,34 @@ role: Research Assistant & Doctoral Student
 #   url: "https://www.tuhh.de/tuhh/startseite.html"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Venture Capital, Startup Distinctiveness, Social Evaluation
+bio: Startup Failure, Media Sentiment, Social Judgement
 
 
 interests:
-- Synthetic biology
-- Open source
-- Diffusion
-- Institutional entrepreneurship
+- Startup failure
+- Media sentiment
+- Entrepreneurship culture
+- Serial entrepreneurship
+- Social judgement
 
 
 education:
   courses:
-  - course: Consultant
-    institution: McKinsey & Company, Munich, Germany
-    year: 2013 - current
+
+  - course: Head of Transformation
+    institution: Syntegon / Bosch Packaging Technology
+    year: 2019 - 2020
   - course: Startup Consultant @ Startup Dock - Center for Entrepreneurship
     institution: Hamburg University of Technology, Germany
     year: 2017 - 2018
-  - course: PhD Summer School in Synthetic Biology
-    institution: Stanford University, USA
-    year: 2016
   - course: PhD in Management
     institution: Hamburg University of Technology, Germany
     year: 2015 - 2018
-  - course: MSc in Industrial Engineering and Management
-    institution: RWTH Aachen University, Germany
-    year: 2010 - 2012
-  - course: Studies in Industrial Engineering and Management
-    institution: Politecnico di Milano, Italy
-    year: 2009 - 2010
-  - course: BSc in Industrial Engineering and Management
-    institution: RWTH Aachen University, Germany
+  - course: Operations Specialist
+    institution: McKinsey & Company, Hamburg, Germany
+    year: 2013 - 2019
+  - course: BSc & MSc in Physics
+    institution: University of Hamburg, Germany
     year: 2006 - 2009
 
 
@@ -66,7 +62,7 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/giulio-barth-00939039
+  link: https://de.linkedin.com/in/dr-matthias-jacobi-306792b4
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""

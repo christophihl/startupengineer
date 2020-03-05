@@ -1,10 +1,10 @@
 ---
 # Display name
-name: Dr. Giulio Barth
+name: Dr. Michael Engel
 
 # Username (this should match the folder name)
 authors:
-- barth
+- engel
 
 # Is this the primary user of the site?
 superuser: false
@@ -24,39 +24,33 @@ role: Research Assistant & Doctoral Student
 #   url: "https://www.tuhh.de/tuhh/startseite.html"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Venture Capital, Startup Distinctiveness, Social Evaluation
+bio: Transistion to entrepreneurship, status, peer influence
 
 
 interests:
-- Synthetic biology
-- Open source
-- Diffusion
-- Institutional entrepreneurship
+- Transistion to entrepreneurship
+- Status
+- Peer influence
+- Comic book industry
 
 
 education:
   courses:
-  - course: Consultant
-    institution: McKinsey & Company, Munich, Germany
-    year: 2013 - current
-  - course: Startup Consultant @ Startup Dock - Center for Entrepreneurship
-    institution: Hamburg University of Technology, Germany
+  - course: Head of Data & AI Product Management
+    institution: Volkswagen Financial Services, Berlin, Germany
+    year: 2018 - current
+  - course: Senior Data Strategist
+    institution: Deloitte Consulting, Berlin, Germany
     year: 2017 - 2018
-  - course: PhD Summer School in Synthetic Biology
-    institution: Stanford University, USA
-    year: 2016
   - course: PhD in Management
     institution: Hamburg University of Technology, Germany
-    year: 2015 - 2018
-  - course: MSc in Industrial Engineering and Management
+    year: 2014 - 2019
+  - course: PhD in Management
     institution: RWTH Aachen University, Germany
-    year: 2010 - 2012
-  - course: Studies in Industrial Engineering and Management
-    institution: Politecnico di Milano, Italy
-    year: 2009 - 2010
-  - course: BSc in Industrial Engineering and Management
-    institution: RWTH Aachen University, Germany
-    year: 2006 - 2009
+    year: 2012 - 2014
+  - course: BSc & MSc in Economics
+    institution: Ludwig-Maximilians University, Munich, Germany
+    year: 2006 - 2011
 
 
 # Social/Academic Networking
@@ -66,7 +60,7 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/giulio-barth-00939039
+  link: https://de.linkedin.com/in/m-engel
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""

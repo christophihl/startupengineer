@@ -1,10 +1,10 @@
 ---
 # Display name
-name: Dr. Giulio Barth
+name: Dimitri Graf
 
 # Username (this should match the folder name)
 authors:
-- barth
+- graf
 
 # Is this the primary user of the site?
 superuser: false
@@ -13,10 +13,10 @@ superuser: false
 role: Research Assistant & Doctoral Student
 
 # Room
-# room:
+room: Building Q Room 1.132
 
 # Telephone
-# phone:
+phone: +49 40 42878-4738
 
 # Organizations/Affiliations
 # organizations:
@@ -24,39 +24,29 @@ role: Research Assistant & Doctoral Student
 #   url: "https://www.tuhh.de/tuhh/startseite.html"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Venture Capital, Startup Distinctiveness, Social Evaluation
+bio: My research interests include science of science, computational social science and machine learning.
 
 
 interests:
-- Synthetic biology
-- Open source
-- Diffusion
-- Institutional entrepreneurship
+- Science of science
+- Social networks
+- Natural language processing
+- Deep learning 
+- Computational social science
 
 
 education:
   courses:
-  - course: Consultant
-    institution: McKinsey & Company, Munich, Germany
-    year: 2013 - current
-  - course: Startup Consultant @ Startup Dock - Center for Entrepreneurship
+  - course: PhD in Computational Social Science
     institution: Hamburg University of Technology, Germany
-    year: 2017 - 2018
-  - course: PhD Summer School in Synthetic Biology
-    institution: Stanford University, USA
-    year: 2016
-  - course: PhD in Management
+    year: 2016 - current
+  - course: MSc in Industrial Engineering & Management
     institution: Hamburg University of Technology, Germany
-    year: 2015 - 2018
-  - course: MSc in Industrial Engineering and Management
-    institution: RWTH Aachen University, Germany
-    year: 2010 - 2012
-  - course: Studies in Industrial Engineering and Management
-    institution: Politecnico di Milano, Italy
-    year: 2009 - 2010
-  - course: BSc in Industrial Engineering and Management
-    institution: RWTH Aachen University, Germany
-    year: 2006 - 2009
+    year: 2015
+  - course: BSc in Engineering and Management
+    institution: University of Bremen, Germany
+    year: 2011
+
 
 
 # Social/Academic Networking
@@ -64,9 +54,13 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
+- icon: envelope
+  icon_pack: fas
+  link: "mailto:dimitri.graf@tuhh.de"
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/giulio-barth-00939039
+  link: https://www.linkedin.com/in/dimitri-graf-980a06a2/
+
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -74,6 +68,5 @@ email: ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Alumni
+- Current Members
 ---
-
