@@ -1,10 +1,10 @@
 ---
 # Display name
-name: Dr. Jan-Frederik Arnold
+name: Dr. Giulio Barth
 
 # Username (this should match the folder name)
 authors:
-- arnold
+- barth
 
 # Is this the primary user of the site?
 superuser: false
@@ -28,28 +28,32 @@ bio: Venture Capital, Startup Distinctiveness, Social Evaluation
 
 
 interests:
-- Venture capital
-- Startup atypicality
-- Social evaluation
+- Synthetic biology
+- Open source
+- Diffusion
+- Institutional entrepreneurship
 
 
 education:
   courses:
-  - course: CFO
-    institution: Flightbright, Berlin, Germany
-    year: 2019 - current
-  - course: Engagement Manager
+  - course: Consultant
     institution: McKinsey & Company, Munich, Germany
-    year: 2012 - 2019
+    year: 2013 - current
+  - course: PhD Summer School in Synthetic Biology
+    institution: Stanford University, USA
+    year: 2016
   - course: PhD in Management
     institution: Hamburg University of Technology, Germany
     year: 2015 - 2018
-  - course: MSc in Accounting and Finance
-    institution: London School of Economics and Political Science, UK
+  - course: MSc in Industrial Engineering and Management
+    institution: RWTH Aachen University, Germany
     year: 2010 - 2012
-  - course: Bachelor of Arts in Business Administration
-    institution: Universität St. Gallen, Switzerland
-    year: 2007 - 2010
+  - course: Studies in Industrial Engineering and Management
+    institution: Politecnico di Milano, Italy
+    year: 2009 - 2010
+  - course: BSc in Industrial Engineering and Management
+    institution: RWTH Aachen University, Germany
+    year: 2006 - 2009
 
 
 # Social/Academic Networking
@@ -59,7 +63,7 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: https://de.linkedin.com/in/jan-frederik-arnold
+  link: https://www.linkedin.com/in/giulio-barth-00939039
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""

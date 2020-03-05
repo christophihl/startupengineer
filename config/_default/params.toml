@@ -93,7 +93,7 @@ address = {street = "Am Irrgarten 3-9", city = "Hamburg", region = "HH", postcod
 coordinates = {latitude = "53.459695", longitude = "9.971900"}
 
 # Directions for visitors to locate you.
-directions = "Enter building Q and take the stairs to office 133 on first floor"
+directions = "Enter building Q and take the stairs to office 134 on first floor"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.

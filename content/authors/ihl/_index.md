@@ -13,7 +13,7 @@ superuser: true
 role: Professor & Head of Institute
 
 # Room
-room: Q133
+room: Building Q Room 133
 
 # Telephone
 phone: +49 40 42878-4765
