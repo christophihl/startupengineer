@@ -1,10 +1,10 @@
 ---
 # Display name
-name: Dr. Giulio Barth
+name: Benjamin Müller
 
 # Username (this should match the folder name)
 authors:
-- barth
+- mueller
 
 # Is this the primary user of the site?
 superuser: false
@@ -24,39 +24,34 @@ role: Research Assistant & Doctoral Student
 #   url: "https://www.tuhh.de/tuhh/startseite.html"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Synthetic Biology, Open Source, Institutional Entrepreneurship
+bio: Corprorate Venture Capital, Startup Acquisitions, Event Studies
 
 
 interests:
-- Synthetic biology
-- Open source
-- Diffusion
-- Institutional entrepreneurship
+- Corprorate venture capital
+- Startup acquisitions
+- Startup accelerators
+- Event studies
 
 
 education:
   courses:
-  - course: Consultant
-    institution: McKinsey & Company, Munich, Germany
-    year: 2013 - current
-  - course: Startup Consultant @ Startup Dock - Center for Entrepreneurship
-    institution: Hamburg University of Technology, Germany
-    year: 2017 - 2018
-  - course: PhD Summer School in Synthetic Biology
-    institution: Stanford University, USA
-    year: 2016
   - course: PhD in Management
     institution: Hamburg University of Technology, Germany
-    year: 2015 - 2018
-  - course: MSc in Industrial Engineering and Management
-    institution: RWTH Aachen University, Germany
-    year: 2010 - 2012
-  - course: Studies in Industrial Engineering and Management
-    institution: Politecnico di Milano, Italy
-    year: 2009 - 2010
-  - course: BSc in Industrial Engineering and Management
-    institution: RWTH Aachen University, Germany
-    year: 2006 - 2009
+    year: 2015 - 2019
+  - course: Startup Consultant @ Startup Dock - Center for Entrepreneurship
+    institution: Hamburg University of Technology, Germany
+    year: 2016 - 2019
+  - course: Consultant
+    institution: McKinsey & Company, Hamburg, Germany
+    year: 2013 - current
+  - course: MSc in Business Administration
+    institution: HHL Leipzig Graduate School of Management, Germany
+    year: 2010 - 2013
+  - course: BSc in Business and Management Studies
+    institution: University of Applied Sciences Europe, Hamburg, Germany
+    year: 2007 - 2000
+
 
 
 # Social/Academic Networking
@@ -66,7 +61,7 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/giulio-barth-00939039
+  link: https://www.linkedin.com/in/benjamin-mueller-hamburg/
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
