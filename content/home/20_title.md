@@ -54,7 +54,7 @@ subtitle = ""
 
 # **TUHH Institute of Entrepreneurship (TIE)**
 
-### Inaugurated in June 2014 &middot; Headed by [**Christoph Ihl**](https://sourcethemes.com/academic/) &middot; Dedicated to three objectives:
+### Inaugurated in June 2014 &middot; Headed by [**Christoph Ihl**](/authors/_ihl) &middot; Dedicated to three objectives:
 
 
 
