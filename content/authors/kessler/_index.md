@@ -39,7 +39,7 @@ education:
   - course: PhD in Management
     institution: Hamburg University of Technology, Germany
     year: 2014 - current
-  - course: MSc in Industrial Engineering and Management
+  - course: MSc in Technology Innovation Management
     institution: Portland State University, USA
     year: 2013 - 2014 
   - course: BSc & MSc in Industrial Engineering and Management
