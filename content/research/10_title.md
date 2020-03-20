@@ -34,7 +34,8 @@ subtitle = ""
   image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
   image_position = "center"  # Options include `left`, `center` (default), or `right`.
   image_parallax = false  # Use a fun parallax-like fixed background effect? true/false
-
+  image_caption = "&copy; [Anne Gärtner](https://www.gaertner-photo.de)"
+  
   # Text color (true=light or false=dark).
   text_color_light = true
 

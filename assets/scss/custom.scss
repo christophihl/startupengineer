@@ -2,6 +2,72 @@
 
 
 
+
+/*************************************************
+ *   widget scss
+ **************************************************/
+
+.home-section {
+  position: relative;
+}
+
+.backimage-caption {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 0 auto;
+  padding: 2px 5px;
+  color: #ccc;
+  font-size: .5em;
+  background: #323232;
+  text-align: right;
+  z-index: 5;
+  opacity: 0.40;
+  border-radius: 5px 0 0 0;
+}
+@media (min-width: 54em) {
+  .backimage-caption {
+    padding: 5px 10px;
+  }
+}
+
+.backimage-caption a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+
+
+.bimage-caption {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 0 auto;
+  padding: 2px 5px;
+  color: #ccc;
+  font-size: .5em;
+  background: #323232;
+  text-align: right;
+  z-index: 5;
+  opacity: 0.40;
+  border-radius: 5px 0 0 0;
+}
+
+@media (min-width: 54em) {
+  .bimage-caption {
+    padding: 5px 10px;
+  }
+}
+
+.bimage-caption a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+
+
+
+
 /*************************************************
  *  ABOUT widget
  **************************************************/
