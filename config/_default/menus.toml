@@ -30,8 +30,8 @@
   weight = 50
 
 [[main]]
-  name = "Practice"
-  url = "practice/"
+  name = "Transfer"
+  url = "transfer/"
   weight = 60
 
 [[main]]

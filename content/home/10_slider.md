@@ -69,7 +69,7 @@ height = ""
   cta_icon = "graduation-cap"
 
 [[item]]
-  title = "Practice"
+  title = "Transfer"
   content = " "
   # content = "Inspiring. Customized. Solution-oriented."
   align = "left"
@@ -79,7 +79,7 @@ height = ""
   overlay_filter = 0.1 # Darken the image. Value in range 0-1.
   overlay_caption = "&copy; [Anne Gärtner](https://www.gaertner-photo.de)"
 
-  cta_label = "Let's work with you."
+  cta_label = "Let's work together."
   cta_url = "/practice/"
   cta_icon_pack = "fas"
   cta_icon = "cogs"

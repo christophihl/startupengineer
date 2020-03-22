@@ -26,7 +26,7 @@ subtitle = ""
   icon = "search"
   icon_pack = "fas"
   name = "Research"
-  description = "We strive to conduct relevant research in the area of innovation and entrepreneurship and publish the results in leading international journals. As data enthusiasts, we love to apply state-of-art econometric and computational methods to novel, large-scale data sets."
+  description = "We strive to do rigor and relevant research about innovation and entrepreneurship from perspectives of organization theory, sociology and strategy. As data enthusiasts, we love to apply state-of-art computational and econometric methods to novel, large-scale data sets."
   
 [[feature]]
   icon = "graduation-cap"
@@ -37,8 +37,8 @@ subtitle = ""
 [[feature]]
   icon = "cogs"
   icon_pack = "fas"
-  name = "Practice"
-  description = "We are open to collaborate with corporates, startups and associations to transfer our knowledge about data science and startup engineering into Practice. Possible modes of collaboration are master theses, applied research and data science projects, consulting, talks, workshops, trainings or events."
+  name = "Transfer"
+  description = "We are open to collaborate with corporates, startups and associations to transfer our knowledge about data science and startup engineering into Practice. Possible modes of collaboration are master theses, applied research and data science projects, consulting, talks, workshops or trainings."
 
 
 

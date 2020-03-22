@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Dr. Jan Niklas Wick
+name: Jan Niklas Wick
 
 # Username (this should match the folder name)
 authors:
