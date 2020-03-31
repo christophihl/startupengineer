@@ -4,7 +4,9 @@ name: Prof. Dr. Christoph Ihl
 
 # Username (this should match the folder name)
 authors:
-- _ihl
+- ihl
+
+weight: 1
 
 # Is this the primary user of the site?
 superuser: false

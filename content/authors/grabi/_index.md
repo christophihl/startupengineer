@@ -4,7 +4,9 @@ name: Birgit Grabi
 
 # Username (this should match the folder name)
 authors:
-- bgrabi
+- grabi
+
+weight: 2
 
 # Is this the primary user of the site?
 superuser: false
