@@ -1,9 +1,11 @@
 ---
-title: Technology Entrepreneurship
-subtitle: 6 ECTS Module for IWI & GTIME
-summary: 6 ECTS Module for IWI & GTIME
+title: Sustainable Entrepreneurship
+subtitle: 2 ECTS Course for Bachelor NTW
+summary: 2 ECTS Course for Bachelor NTW
 authors:
-- _ihl
+- ihl
+- schwarz
+- Prof. Dr. Domnik Walcher
 tags: []
 categories: []
 date: "2020-03-25T00:00:00Z"
@@ -14,8 +16,8 @@ draft: false
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: ""
-  focal_point: ""
+  caption: "[pxfuel](https://www.pxfuel.com/en/free-photo-efgok), [cc0](https://creativecommons.org/share-your-work/public-domain/cc0/)"
+  focal_point: "smart"
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.

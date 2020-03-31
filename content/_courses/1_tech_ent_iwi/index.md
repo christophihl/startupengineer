@@ -14,8 +14,8 @@ draft: false
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: ""
-  focal_point: ""
+  caption: "[sujins, pixabay](https://www.needpix.com/photo/1287856/artificial-intelligence-technology-futuristic-science-intelligence-business-free-pictures-free-photos-free-images), [cc0](https://creativecommons.org/share-your-work/public-domain/cc0/)"
+  focal_point: "smart"
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.

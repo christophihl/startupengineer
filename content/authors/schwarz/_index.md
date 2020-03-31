@@ -6,6 +6,8 @@ name: Joschka Schwarz
 authors:
 - schwarz
 
+weight: 60
+
 # Is this the primary user of the site?
 superuser: false
 

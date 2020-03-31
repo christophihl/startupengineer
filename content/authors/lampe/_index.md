@@ -6,6 +6,8 @@ name: Dr. Hannes W. Lampe
 authors:
 - lampe
 
+weight: 50
+
 # Is this the primary user of the site?
 superuser: false
 
