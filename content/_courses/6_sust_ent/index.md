@@ -1,11 +1,12 @@
 ---
 title: Sustainable Entrepreneurship
-subtitle: 2 ECTS Course for Bachelor NTW
+subtitle:
 summary: 2 ECTS Course for Bachelor NTW
 authors:
 - ihl
 - schwarz
 - Prof. Dr. Domnik Walcher
+weight: 10
 tags: []
 categories: []
 date: "2020-03-25T00:00:00Z"

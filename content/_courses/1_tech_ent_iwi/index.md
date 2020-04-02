@@ -1,9 +1,10 @@
 ---
 title: Technology Entrepreneurship
-subtitle: 6 ECTS Module for IWI & GTIME
-summary: 6 ECTS Module for IWI & GTIME
+subtitle:
+summary: 6 ECTS Module for Master IWI & GTIME
 authors:
 - _ihl
+weight: 1
 tags: []
 categories: []
 date: "2020-03-25T00:00:00Z"
