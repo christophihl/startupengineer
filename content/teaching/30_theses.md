@@ -75,5 +75,6 @@ We are open to collaborative thesis projects with startups and corporates, prefe
 <br><br>
 The first step for an applicant is to choose or propose a thesis topic (either based on our research or a concrete company collaboration) by submitting a 300 word abstract describing the topic, how to approach it and the applicant's backround, via this <a href="{{< ref "/#contact" >}}">contact form</a>.
 </details>
+<br>
 
 ## Open Topics 
