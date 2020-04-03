@@ -39,30 +39,30 @@ projects: []
 
 ***
 
-## Overview
+### Overview
 
 ***
 
-## Objectives
+### Objectives
 
 ***
 
-## Organization
+### Organization
 
 ***
 
-## Grading
+### Grading
 
 ***
 
-## Times & Location
+### Times & Location
 
 ***
 
-## Registration
+### Registration
 
 ***
 
-## Schedule
+### Schedule
 
 ***
