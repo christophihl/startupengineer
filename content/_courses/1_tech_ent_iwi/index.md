@@ -4,7 +4,6 @@ subtitle:
 summary: 6 ECTS Module for Master IWI & GTIME
 authors:
 - ihl
-- schwarz
 weight: 1
 tags: []
 categories: []
@@ -33,19 +32,37 @@ projects: []
 
 ---
 
-## Instructors
+### Instructors
 
+{{% mention "ihl" %}}
+
+
+***
 
 ## Overview
 
+***
+
 ## Objectives
+
+***
 
 ## Organization
 
+***
+
 ## Grading
+
+***
 
 ## Times & Location
 
+***
+
 ## Registration
 
+***
+
 ## Schedule
+
+***
