@@ -3,7 +3,7 @@ title: Technology Entrepreneurship
 subtitle:
 summary: 6 ECTS Module for Master IWI & GTIME
 authors:
-- ihl
+- barth
 - schwarz
 weight: 1
 tags: []
