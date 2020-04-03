@@ -117,9 +117,17 @@ email: ""
 user_groups:
 - Current Members
 ---
-
+<h3>Bio</h3><details class="description" close><summary data-close="Show" data-open="Hide"></summary>
 As professor of management at Hamburg University of Technology (TUHH) I am heading the TUHH Institute of Entrepreneurship (TIE). My research about entrepreneurship and innovation lies at the intersection of organizational theory, sociology and strategy. In particular, I am interested in how actors are influenced by and interact with their social and cultural environments to bring about novelty, e.g. with regard to ideas, teams, products, practices or business models. 
-
+<br><br>
 My research is situated in domains, where social and cultural spaces can be measured (more or less) comprehensively, such as digital startup innovation, academic science, creative industries as well as user crowds and communities. I deeply enjoy getting insights from novel data using econometric and computational methods from network analysis and natural language processing.
-
+<br><br>
 I have benefited from studying and working at universities with outstanding entrepreneurial culture. Drawing on this experience together with my taste for empirical research, I engage students in active "startup engineering" to let them learn about and validate their own startup ideas from first-hand evidence. I regularly work with startups and corporates in the area of business model innovation and data science.
+</details>
+
+
+  
+
+
+
+

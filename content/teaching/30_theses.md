@@ -67,7 +67,13 @@ subtitle = ""
  # CSS class.
  css_class = ""
 +++
+## General Info
+<details class="description" close><summary data-close="Show" data-open="Hide"></summary>
+We can best supervise bachelor or master theses if the topic is related to our research. Therefore, we recommend applicants to explore our research first in order to propose a related topic. We expect a strong interest in working with data in order to theoretically explain innovation and entrepreneurship phenomena. Depending on the applicants' background, topics can also focus on technical aspects in the area of data science, machine learning, natural language processing, network analysis or econometrics. Ideally, applicants find an interesting topic among those suggested below. 
+<br><br>
+We are open to collaborative thesis projects with startups and corporates, preferebly under two conditions: (1) Entrepreneurial focus, i.e. projects imply a market-oriented change of company offerings e.g. in terms of target customers, product features, pricing, marketing or sales channels (i.e. no process reorganization or competitor benchmarking). (2) Empirical focus, i.e. the market-oriented change can be (a) experimented with in terms of A/B testing, (b) analyzed based on existing data about its potential outcomes, or (c) evaluated on a qualitative, strategic level by interviewing stakeholders.
+<br><br>
+The first step for an applicant is to choose or propose a thesis topic (either based on our research or a concrete company collaboration) by submitting a 300 word proposal abstract the topic, how to approach it and the applicant's backround, via this <a href="{{< ref "/#contact" >}}">contact form</a>.
+</details>
 
-We can best supervise bachelor or master theses if their topic is related to our research interests. Thus, we recommend that interested students explore our research before they propose a topic. Ideally, you find an intersting topic among the one among the topics suggested below.
-
-We are also open 
+## Open Topics 
