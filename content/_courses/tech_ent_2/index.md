@@ -1,10 +1,10 @@
 ---
 title: Technology Entrepreneurship
 subtitle: Startup Engineering&#58; How to build a startup
-summary: 6 ECTS Module for Master IWI, LIM & GTIME
+summary: 6 ECTS Module for Master MEM, NTW & Erasmus
 authors:
-- ihl
-weight: 1
+- lampe
+weight: 2
 tags: []
 categories: []
 date: "2020-03-25T00:00:00Z"
@@ -41,14 +41,14 @@ projects: []
 
 ### Target Audience
 
-* Master Students in IWI, LIM & GTIME
+* Master Students in MEM, NTW & Erasmus
 * Other students please refer to the exact same course here <br>(duplicated because of capacity contraints)
 
 ***
 
 ### Instructor(s)
 
-* {{% mention "ihl" %}}
+* {{% mention "lampe" %}}
 
 ***
 
