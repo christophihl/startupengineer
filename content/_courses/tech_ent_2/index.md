@@ -15,7 +15,7 @@ draft: false
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: "[sujins, pixabay](https://www.needpix.com/photo/1287856/artificial-intelligence-technology-futuristic-science-intelligence-business-free-pictures-free-photos-free-images), [cc0](https://creativecommons.org/share-your-work/public-domain/cc0/)"
+  caption: "[andreas baetz, pixabay](https://pixabay.com/illustrations/earth-planet-light-bulb-innovation-4782262/), [cc0](https://creativecommons.org/share-your-work/public-domain/cc0/)"
   focal_point: "smart"
 
 # Projects (optional).
@@ -27,22 +27,21 @@ image:
 projects: []
 
 # Optional external URL for project (replaces project detail page).
-# external_link: /_syllabi/course_1/
-
+# external_link:
 
 ---
 
 ### Credits
 
 * 6 ECTS module
-* 2 courses "Entrepreneurship” & “Creation of Business Opportunities”
+* 2 courses {{< hl >}}Entrepreneurship{{< /hl >}} & {{< hl >}}Creation of Business Opportunities{{< /hl >}}
 
 ***
 
 ### Target Audience
 
-* Master Students in MEM, NTW & Erasmus
-* Other students please refer to the exact same course here <br>(duplicated because of capacity contraints)
+* Master Students in MEM, NTW (Betrieb & Management, 2 * 2 ECTS) & Erasmus
+* IWI, LIM & GTIME students please refer to [this course]({{< relref "_courses/tech_ent_1/index.md" >}}) <br>(duplicated because of capacity contraints)
 
 ***
 
@@ -92,7 +91,7 @@ Upon completion of this course module, students will be able to:
 This course module can prepare student for the following career paths: 
 * Startup founder
 * Early employee in a startup
-* Corporate business development
+* New business development in established corporations
 * Venture capital investing 
 
 </details>
@@ -108,14 +107,20 @@ This course module can prepare student for the following career paths:
 
 ***
 
-### Times & Location
+### Registration
 
-* Entrepreneurship: Monday, 13.00 - 14.30, Buidling A, Room A 1.20
-* Creation of Business Opportunities: Monday, 15.00 - 17.30, Buidling O, Room 018
+* Open from April 6th until April 18th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=bd4e4b11a889ae54b0e7bfdb57dc0b64)
 
 ***
 
-### Registration
+### Time & Location
+
+* {{< hl >}}Entrepreneurship{{< /hl >}}: Monday, 13.00 - 14.30, Buidling M, Room 0526
+* {{< hl >}}Creation of Business Opportunities{{< /hl >}}: Monday, 15.00 - 17.30, Buidling M, Room 1582
+
+{{% alert warning %}}
+As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
+{{% /alert %}}
 
 ***
 

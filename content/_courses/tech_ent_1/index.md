@@ -27,22 +27,21 @@ image:
 projects: []
 
 # Optional external URL for project (replaces project detail page).
-# external_link: /_syllabi/course_1/
-
+# external_link: 
 
 ---
 
 ### Credits
 
 * 6 ECTS module
-* 2 courses "Entrepreneurship” & “Creation of Business Opportunities”
+* 2 courses {{< hl >}}Entrepreneurship{{< /hl >}} & {{< hl >}}Creation of Business Opportunities{{< /hl >}}
 
 ***
 
 ### Target Audience
 
-* Master Students in IWI, LIM & GTIME
-* Other students please refer to the exact same course here <br>(duplicated because of capacity contraints)
+* Master students in IWI, LIM & GTIME
+* MEM, NTW & Erasmus students please refer to [this course]({{< relref "_courses/tech_ent_2/index.md" >}}) <br>(duplicated because of capacity contraints)
 
 ***
 
@@ -92,7 +91,7 @@ Upon completion of this course module, students will be able to:
 This course module can prepare student for the following career paths: 
 * Startup founder
 * Early employee in a startup
-* Corporate business development
+* New business development in established corporations
 * Venture capital investing 
 
 </details>
@@ -108,17 +107,42 @@ This course module can prepare student for the following career paths:
 
 ***
 
-### Times & Location
-
-* Entrepreneurship: Monday, 13.00 - 14.30, Buidling A, Room A 1.20
-* Creation of Business Opportunities: Monday, 15.00 - 17.30, Buidling O, Room 018
-
-***
-
 ### Registration
 
-***
-
-### Schedule
+* Open from April 6th until April 18th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=fdcd1a92820187a11787a272da3cbaf8)
 
 ***
+
+### Time & Location
+
+* {{< hl >}}Entrepreneurship{{< /hl >}}: Monday, 13.00 - 14.30, Buidling A, Room A 1.20
+* {{< hl >}}Creation of Business Opportunities{{< /hl >}}: Monday, 15.00 - 17.30, Buidling O, Room 018
+
+{{% alert warning %}}
+As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
+{{% /alert %}}
+
+***
+
+### Preliminary Schedule
+
+
+| Session | Date | Topic[^1] |
+| --- | --- | --- |
+| 1 | April 20th | [Introduction: What is Entrepreneurship?]({{< relref "_syllabi/course_1/example1.md" >}}) |
+| 2 | April 27th | Customer Segmentation |
+| 3 | May 4th | Business Model Design |
+| 4 | May 11th | Revenue Models & Pricing |
+| 5 | May 18th | Lean Startup & Experimentation |
+| 6 | May 25th | Market & Competition |
+| - | June 1st | Pfingsten Holiday |
+| 7 | June 8th |  |
+| 8 | June 15th |  |
+| 9 | June 22th | Sales |
+| 10 | June 29th | Marketing  |
+| 11 | July 6th | Operations |
+| 12 | July 13th | Growth and Organization |
+| 13 | July 20th | Financial Projections |
+| 14 | July 27th | Final Startup Pitches |
+
+[^1]: With password protected links to course notes & materials to which registered participants will receive access in due time.
