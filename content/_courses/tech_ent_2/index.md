@@ -119,20 +119,20 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 | Session | Date | Topic[^1] |
 | --- | --- | --- |
-| 1 | April 20th | [Introduction: What is Entrepreneurship?]({{< relref "_syllabi/course_1/example1.md" >}}) |
+| 1 | April 20th | [Introduction: What is Entrepreneurship?]({{< relref "_syllabi/course_1/_index.md" >}}) |
 | 2 | April 27th | Customer Segmentation |
-| 3 | May 4th | Business Model Design |
+| 3 | May 4th | Buisness Model Design |
 | 4 | May 11th | Revenue Models & Pricing |
 | 5 | May 18th | Lean Startup & Experimentation |
 | 6 | May 25th | Market & Competition |
 | - | June 1st | Pfingsten Holiday |
-| 7 | June 8th |  |
-| 8 | June 15th |  |
-| 9 | June 22th | Sales |
-| 10 | June 29th | Marketing  |
-| 11 | July 6th | Operations |
-| 12 | July 13th | Growth and Organization |
-| 13 | July 20th | Financial Projections |
-| 14 | July 27th | Final Startup Pitches |
+| 7 | June 8th | Intermediate Pitches |
+| 8 | June 15th | Marketing & Sales |
+| 9 | June 22th | Operations |
+| 10 | June 29th | Organization  |
+| 11 | July 6th | Marketing |
+| 12 | July 13th | Final Startup Pitches  |
+| 13 | July 20th | Submission of Final Pitch Deck |
+
 
 [^1]: With password protected links to course notes & materials to which registered participants will receive access in due time.

@@ -1,11 +1,11 @@
 ---
 # Course title, summary, and position.
-linktitle: An Example Course
-summary: Learn how to use Academic's docs layout for publishing online courses, software documentation, and tutorials.
+linktitle: Technology Entrepreneurship Course Notes and Materials
+summary: Course Notes and Materials
 weight: 1
 
 # Page metadata.
-title: Overview
+title: Startup Engineering - Course Notes and Materials
 date: "2018-09-09T00:00:00Z"
 lastmod: "2018-09-09T00:00:00Z"
 draft: false  # Is this a draft? true/false
@@ -17,46 +17,31 @@ type: docs  # Do not modify.
 # - weight: Position of link in menu.
 menu:
   course_1:
-    name: Overview
+    name: Technology Entrepreneurship - How to Build a Startup
     weight: 1
 ---
 
-## Flexibility
+## Course Notes and Materials
 
-This feature can be used for publishing content such as:
+Under construction. Coming soon.
 
-* **Online courses**
-* **Project or software documentation**
-* **Tutorials**
+## Schedule
 
-The `courses` folder may be renamed. For example, we can rename it to `docs` for software/project documentation or `tutorials` for creating an online course.
 
-## Delete tutorials
+| Session | Date | Topic |
+| --- | --- | --- |
+| 1 | April 20th | Introduction: What is Entrepreneurship? |
+| 2 | April 27th | Customer Segmentation |
+| 3 | May 4th | Buisness Model Design |
+| 4 | May 11th | Revenue Models & Pricing |
+| 5 | May 18th | Lean Startup & Experimentation |
+| 6 | May 25th | Market & Competition |
+| - | June 1st | Pfingsten Holiday |
+| 7 | June 8th | Intermediate Pitches |
+| 8 | June 15th | Marketing & Sales |
+| 9 | June 22th | Operations |
+| 10 | June 29th | Organization  |
+| 11 | July 6th | Marketing |
+| 12 | July 13th | Final Startup Pitches  |
+| 13 | July 20th | Submission of Final Pitch Deck |
 
-**To remove these pages, delete the `courses` folder and see below to delete the associated menu link.**
-
-## Update site menu
-
-After renaming or deleting the `courses` folder, you may wish to update any `[[main]]` menu links to it by editing your menu configuration at `config/_default/menus.toml`.
-
-For example, if you delete this folder, you can remove the following from your menu configuration:
-
-```toml
-[[main]]
-  name = "Courses"
-  url = "courses/"
-  weight = 50
-```
-
-Or, if you are creating a software documentation site, you can rename the `courses` folder to `docs` and update the associated *Courses* menu configuration to:
-
-```toml
-[[main]]
-  name = "Docs"
-  url = "docs/"
-  weight = 50
-```
-
-## Update the docs menu
-
-If you use the *docs* layout, note that the name of the menu in the front matter should be in the form `[menu.X]` where `X` is the folder name. Hence, if you rename the `courses/example/` folder, you should also rename the menu definitions in the front matter of files within `courses/example/` from `[menu.example]` to `[menu.<NewFolderName>]`.
