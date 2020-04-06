@@ -67,8 +67,6 @@ subtitle = ""
  # CSS class.
  css_class = ""
 
-# <a href="{{< ref "/#contact" >}}">contact form</a>
-
 +++
 ## General Info
 <details class="description" close><summary data-close="Show" data-open="Hide"></summary>
@@ -76,7 +74,7 @@ We can best supervise bachelor or master theses if the topic is related to our r
 <br><br>
 We are open to collaborative thesis projects with startups and corporates, preferebly under two conditions: (1) Entrepreneurial focus, i.e. projects imply a market-oriented change of company offerings w.r.t. target customers, product features, pricing, marketing or sales. (2) Empirical focus, i.e. the entrepreneurial change can be (a) experimented with in terms of A/B testing, (b) analyzed based on existing data about its potential outcomes, or (c) evaluated on a qualitative, strategic level by thoroughly interviewing stakeholders. Thesis projects involving purely conceptual work without any empirical evaluation or only secondary research about state-of-art, best-practices, competitor benchmarks or market intelligence do rather not qualify.
 <br><br>
-The first step for applicants is to choose or propose a thesis topic (based on our research or a company collaboration) by submitting an abstract describing the topic, how to approach it and the applicant's backround, via this contact form.
+The first step for applicants is to choose or propose a thesis topic (based on our research or a company collaboration) by submitting an abstract describing the topic, how to approach it and the applicant's backround, via the <a href="{{< ref "/#contact" >}}">contact form</a>.
 </details>
 <br>
 
