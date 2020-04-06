@@ -19,9 +19,9 @@ subtitle = ""
   url = "http://mwt-tuhh.de"
 
 [[affiliation]]
-  name = "TUHH Startup Dock"
-  image = "img/affiliations/startupdock.png"
-  url = "http://www.startupdock.de"
+  name = "MLE @ TUHH"
+  image = "img/affiliations/mle.png"
+  url = "http://www.mle.hamburg"
 
 [[affiliation]]
   name = "DRUID Society"
