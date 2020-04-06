@@ -2,8 +2,6 @@
 title: "An example journal article"
 authors:
 - ihl
-- schwarz
-- Larry Bird
 date: "2015-09-01T00:00:00Z"
 doi: ""
 

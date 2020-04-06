@@ -53,27 +53,17 @@ projects: []
 
 ### Overview
 <details class="description" close><summary data-close="Show" data-open="Hide"></summary>
-Startups are temporary, team-based organizations, which can form independently, but also within established companies. They pursue one central objective: taking a new venture idea to market by finding and designing a repeatable and scalable business model.
+Startups are temporary, team-based organizations, which can form independently, but also within established companies. They pursue one central objective: taking a business idea to market by finding and designing a repeatable and scalable business model. This entrepreneurial process involves gathering and combining resources that you do not (yet) possess and dealing with high uncertainty about what combinations of resources actually generate value. This course module is designed to introduce students to a systematic Startup Engineering approach to master the process of taking a business idea to market in light of resource contraints and uncertainty.
+<br><br>
+Startup Engineering takes an iterative approach, in that it favors variety and alternatives over one detailed, linear five-year business plan to reach steady state operations. From a problem solving and systems thinking perspective, Startup Engineers create different possible versions of a new venture and alternative hypotheses about value creation for customers and value capture vis-à-vis competitors. To test critical hypotheses early on, Startup Engineers engage in an evidence-based, experimental trial-and-error learning process that measures real progress.
+<br><br>
+The workflow in this course module is comprised of three elements:
 
+1. {{< hl >}}(Flipped) classroom{{< /hl >}}: learning about and discussing concepts and tools currently prevailing in theory and practice of modern technology entrepreneurship.
+2. {{< hl >}}Problem-based learning{{< /hl >}}: deepen an understanding of the concepts and tools by seeing them applied and applying them to real company cases.
+3. {{< hl >}}Experiential learning{{< /hl >}}: applying the concepts and tools in teams to an own new startup project.
 
-In this course, students will form startup teams around self-selected ideas and run through the process just like real startups would do in the first three months of intensive work. 
-
-
-
-Startup Engineering takes an incremental and iterative approach, in that it favors variety and alternatives over one detailed, linear five-year business plan to reach steady state operations. From a problem solving and systems thinking perspective, student teams create different possible versions of a new venture and alternative hypotheses about value creation for customers and value capture vis-à-vis competitors. To test critical hypotheses early on, student teams engage in an evidence-based, experimental trial-and-error learning process that measures real progress.
-
-
-
-Students are invited to apply to this course module already with a startup idea and/ or team, but this is not a requirement! We will form teams and ideas in the beginning of the course. Class meetings have alternate intervals of lecture inputs, teamwork, mentoring, and peer feedback. Attendance is mandatory for at least 80% of class time due to large proportion of teamwork sessions.
-
-
-How do you transform an idea into a business? 
-To successfully transform an idea into a business, you need to take the right steps, approach them in the right order, and execute each one in a savvy manner. In “New Business Ventures” (NBV) you will learn how to do all of the above.
-
-This course is introductory, as you will learn about the actions required to build a new business venture: for example, generating and selecting ideas, forming and developing a team, raising and spending capital, hiring and managing employees, identifying and managing partnerships, and acquiring and keeping customers. In addition to teaching you about these steps, this class will give you the opportunity and require you to conduct some of these activities yourself. You will go out of the classroom, explore the actions it takes to implement your new business venture, and interact with decision makers relevant to your domain. The need/opportunity to go out of your comfort zone and reach out to people outside of your network is one of the key learning experiences.
-
-This course is also foundational, as you will learn how to think as an entrepreneur. Successfully building a new business venture requires a particular mindset. You must be able to see constraints as a source of creativity. You must learn how to embrace risk and make bold decisions when faced with it. You must recognize ways to position your venture in markets that do not yet exist. Only as you learn how to think as an entrepreneur can you read the hidden patterns that explain the success or failure of new business ventures (think Neo in The Matrix). We will draw on insights from entrepreneurs, cutting-edge research, and ideas from very distant fields.
-
+Students are invited to apply to this course module already with a startup idea and/ or team, but this is not a requirement. We will form teams and ideas in the beginning of the course. 
 </details>
 
 ***
@@ -101,9 +91,10 @@ This course module can prepare student for the following career paths:
 
 ### Grading
 
-* {{< hl >}}50%{{< /hl >}} (team): Development and pitch of an own startup project
-* {{< hl >}}30%{{< /hl >}} (individual): Three written case memos
-* {{< hl >}}20%{{< /hl >}} (individual): Class participation
+* {{< hl >}}40%{{< /hl >}} (team): Development and pitch of an own startup project
+* {{< hl >}}35%{{< /hl >}} (team): Solutions to cases submitted in class
+* {{< hl >}}15%{{< /hl >}} (individual): Three written case memos submitted before class
+* {{< hl >}}10%{{< /hl >}} (individual): Class participation
 
 ***
 
@@ -129,9 +120,9 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 | Session | Date | Topic[^1] |
 | --- | --- | --- |
-| 1 | April 20th | [Introduction: What is Entrepreneurship?]({{< relref "_syllabi/course_1/example1.md" >}}) |
-| 2 | April 27th | Customer Segmentation |
-| 3 | May 4th | Business Model Design |
+| 1 | April 20th | [Introduction: What is Entrepreneurship?]({{< relref "_syllabi/course_1/_index.md" >}}) |
+| 2 | April 27th | [Customer Segmentation]({{< relref "_syllabi/course_1/example1.md" >}}) |
+| 3 | May 4th | [Buisness Model Design]({{< relref "_syllabi/course_1/example2.md" >}}) |
 | 4 | May 11th | Revenue Models & Pricing |
 | 5 | May 18th | Lean Startup & Experimentation |
 | 6 | May 25th | Market & Competition |

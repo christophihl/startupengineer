@@ -1,15 +1,13 @@
 ---
-title: 'Academic: the website builder for Hugo'
-subtitle: 'Create a beautifully simple website in under 10 minutes :rocket:'
-summary: Create a beautifully simple website in under 10 minutes.
+title: Launch of new institute website
+subtitle: New website created with the beautiful Academic theme in Hugo
+summary: New website created with the beautiful Academic theme in Hugo
 authors:
 - ihl
 tags:
-- Academic
 categories:
-- Demo
-date: "2016-04-20T00:00:00Z"
-lastmod: "2019-04-17T00:00:00Z"
+date: "2020-04-05T00:00:00Z"
+date: "2020-04-05T00:00:00Z"
 featured: false
 draft: false
 
@@ -19,7 +17,7 @@ draft: false
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
   placement: 2
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
+  caption:
   focal_point: ""
   preview_only: false
 
