@@ -17,7 +17,7 @@ height = ""
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "Team"
-  content = " "
+  content = "<p>&nbsp;</p>"
   # content = "Smart. Dedicated. Supportive."
   align = "left"  # Choose `center`, `left`, or `right`.
 
@@ -38,7 +38,7 @@ height = ""
 
 [[item]]
   title = "Research"
-  content = " "
+  content = "<p>&nbsp;</p>"
   # content = "Relevant. Evidence-based. Data-driven."
   align = "left"
 
@@ -54,7 +54,7 @@ height = ""
 
 [[item]]
   title = "Teaching"
-  content = " "
+  content = "<p>&nbsp;</p>"
   # content = "Challenging. Team-oriented. Project-based."
   align = "left"
 
@@ -70,7 +70,7 @@ height = ""
 
 [[item]]
   title = "Transfer"
-  content = " "
+  content = "<p>&nbsp;</p>"
   # content = "Inspiring. Customized. Solution-oriented."
   align = "left"
 
