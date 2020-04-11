@@ -120,7 +120,7 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 | Session | Date | Topic[^1] |
 | --- | --- | --- |
-| 1 | April 20th | [Introduction: What is Entrepreneurship?]({{< relref "_syllabi/course_1/_index.md" >}}) |
+| 1 | April 20th | [Introduction: What is Entrepreneurship?]({{< relref "_syllabi/tech_ent/_index.md" >}}) |
 | 2 | April 27th | Customer Segmentation |
 | 3 | May 4th | Buisness Model Design |
 | 4 | May 11th | Revenue Models & Pricing |
