@@ -3,6 +3,6 @@ set -e
 
 source ./config/_default/credentials
 
-npm install -g https://github.com/christophihl/staticrypt
+npm install -g https://github.com/jwarz/staticrypt
 
 find ./public/_syllabi/tech_ent -type f -name "index.html" -exec staticrypt {} $(echo "$password_encoded" | openssl enc -d -base64) -o {} \;
