@@ -218,7 +218,7 @@ plugins_js  = ["custom"]
   # Configuration of Commento.
   [comments.commento]
     # If self-hosting Commento, enter its URL here (e.g. "https://commento.?.com"), otherwise leave empty.
-    url = ""
+    url = "https://commento.memetrify.de"
 
 ############################
 ## Search
