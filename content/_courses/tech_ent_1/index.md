@@ -41,7 +41,7 @@ projects: []
 ### Target Audience
 
 * Master students in IWI, LIM & GTIME
-* MEM, NTW & Erasmus students please refer to [this course]({{< relref "_courses/tech_ent_2/index.md" >}}) <br>(duplicated because of capacity contraints)
+* Engineering Masters, Erasmus & NTW students please refer to [this course]({{< relref "_courses/tech_ent_2/index.md" >}}) <br>(duplicated because of capacity contraints)
 
 ***
 
@@ -92,8 +92,8 @@ This course module can prepare student for the following career paths:
 ### Grading
 
 * {{< hl >}}40%{{< /hl >}} (team): Development and pitch of an own startup project
-* {{< hl >}}35%{{< /hl >}} (team): Solutions to cases submitted in class
-* {{< hl >}}15%{{< /hl >}} (individual): Three written case memos submitted before class
+* {{< hl >}}35%{{< /hl >}} (team): Case solutions submitted in/after class
+* {{< hl >}}15%{{< /hl >}} (individual): Three case memos submitted before class
 * {{< hl >}}10%{{< /hl >}} (individual): Class participation
 
 ***
@@ -115,12 +115,18 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 ***
 
+### Course Notes & Materials
+
+Access to course notes & materials [**here**]({{< relref "_syllabi/tech_ent/_index.md" >}}).
+
+***
+
 ### Preliminary Schedule
 
 
-| Session | Date | Topic[^1] |
+| Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 20th | [Introduction: What is Entrepreneurship?]({{< relref "_syllabi/tech_ent/_index.md" >}}) |
+| 1 | April 20th | Introduction |
 | 2 | April 27th | Customer Segmentation |
 | 3 | May 4th | Buisness Model Design |
 | 4 | May 11th | Revenue Models & Pricing |
@@ -128,11 +134,10 @@ As long as the current situation stands, physical meetings will be replaced by o
 | 6 | May 25th | Market & Competition |
 | - | June 1st | Pfingsten Holiday |
 | 7 | June 8th | Intermediate Pitches |
-| 8 | June 15th | Marketing & Sales |
-| 9 | June 22th | Operations |
-| 10 | June 29th | Organization  |
-| 11 | July 6th | Marketing |
+| 8 | June 15th | Marketing |
+| 9 | June 22th | Sales |
+| 10 | June 29th | Operations |
+| 11 | July 6th | Organization |
 | 12 | July 13th | Final Startup Pitches  |
 | 13 | July 20th | Submission of Final Pitch Deck |
 
-[^1]: With password protected links to course notes & materials to which registered participants will receive access in due time.
