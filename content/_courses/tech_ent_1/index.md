@@ -34,7 +34,7 @@ projects: []
 ### Credits
 
 * 6 ECTS module
-* 2 courses {{< hl >}}Entrepreneurship{{< /hl >}} & {{< hl >}}Creation of Business Opportunities{{< /hl >}}
+* 2 courses `Entrepreneurship` & `Creation of Business Opportunities`
 
 ***
 
