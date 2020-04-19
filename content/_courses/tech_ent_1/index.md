@@ -91,10 +91,10 @@ This course module can prepare student for the following career paths:
 
 ### Grading
 
-* {{< hl >}}40%{{< /hl >}} (team): Development and pitch of an own startup project
-* {{< hl >}}35%{{< /hl >}} (team): Case solutions submitted in/after class
-* {{< hl >}}15%{{< /hl >}} (individual): Three case memos submitted before class
-* {{< hl >}}10%{{< /hl >}} (individual): Class participation
+* `40%` (team): Development and pitch of an own startup project
+* `35%` (team): Case solutions submitted in/after class
+* `15%` (individual): Three case memos submitted before class
+* `10%` (individual): Class participation
 
 ***
 
@@ -106,8 +106,8 @@ This course module can prepare student for the following career paths:
 
 ### Time & Location
 
-* {{< hl >}}Entrepreneurship{{< /hl >}}: Monday, 13.00 - 14.30, Buidling A, Room A 1.20
-* {{< hl >}}Creation of Business Opportunities{{< /hl >}}: Monday, 15.00 - 17.30, Buidling O, Room 018
+* `Entrepreneurship`: Monday, 13.00 - 14.30, Buidling A, Room A 1.20
+* `Creation of Business Opportunities`: Monday, 15.00 - 17.30, Buidling O, Room 018
 
 {{% alert warning %}}
 As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.

@@ -55,6 +55,27 @@ if porridge == "blueberry":
 
 ---
 
+## Code Highlighting
+
+Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the `highlight` option in your `config/_default/params.toml` file.
+
+    ```python
+    import pandas as pd
+    data = pd.read_csv("data.csv")
+    data.head()
+    ```
+
+renders as
+
+```python
+import pandas as pd
+data = pd.read_csv("data.csv")
+data.head()
+```
+
+
+---
+
 ## Math
 
 In-line math: $x + y = z$
