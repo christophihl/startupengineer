@@ -39,6 +39,8 @@ For students enrolled in the entire module worth 6 ECTS, we pay close attention 
 * `Recommendations`: what are the alternatives? How would you prioritize? Why?
 * `Next steps`: How should your recommendations be implemented?
 
+Please post questions using the commenting tool on this page down below.
+
 </details>
 
 

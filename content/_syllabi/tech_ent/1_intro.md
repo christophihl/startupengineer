@@ -13,6 +13,26 @@ menu:
 weight: 1
 ---
 
-## Under Construction. Coming Soon
+## How to find good startup ideas?
 
-Lorem ipsum dolor sit amet
+
+Here are a few good resources and inspirations about how to find startup ideas:
+
+* [Five Sources of Startup Ideas](https://hbr.org/2013/11/five-sources-of-start-up-ideas)
+
+* [How to Develop a Great Startup Idea](https://medium.com/swlh/how-to-develop-a-great-startup-idea-5e55f9fedbf2)
+
+* [How to get Startup Ideas](http://www.paulgraham.com/startupideas.html)
+
+
+<br>
+{{< youtube f4_14pZlJBs >}}
+
+
+<br>
+<br>
+
+{{< youtube egJeFaIXZLo >}}
+
+
+
