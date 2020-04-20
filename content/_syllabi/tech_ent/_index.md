@@ -58,8 +58,8 @@ Please post questions using the commenting tool on this page down below.
 | 7 | June 8th | Intermediate Pitches |
 | 8 | June 15th | Marketing |
 | 9 | June 22th | Sales |
-| 10 | June 29th | Operations |
-| 11 | July 6th | Organization |
-| 12 | July 13th | Final Startup Pitches  |
+| 10 | June 29th | Scaling Operations |
+| 11 | July 6th | Financial Projections |
+| 12 | July 13th | Final Startup Pitches |
 | 13 | July 20th | Submission of Final Pitch Deck |
 
