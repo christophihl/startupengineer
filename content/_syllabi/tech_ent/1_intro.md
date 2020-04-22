@@ -3,7 +3,7 @@ title: Introduction
 linktitle: Introduction
 toc: true
 type: docs
-date: "2020-16-04T00:00:00Z"
+date: "2020-04-22T00:00:00Z"
 draft: false
 menu:
   tech_ent:
@@ -13,12 +13,12 @@ menu:
 weight: 1
 ---
 
+## Objectives
+
 This introductory section covers three basic things: 
 1. `The Start`: how to find a startup idea.
 2. `The End` (not really, only for this class): how to pitch a startup business.
 3. `The Middle`: how to turn an startup idea into a startup business.
-
-
 
 <br/>
 
@@ -31,6 +31,8 @@ Here are a few good resources and inspirations about how to find startup ideas:
 * [How to Develop a Great Startup Idea](https://medium.com/swlh/how-to-develop-a-great-startup-idea-5e55f9fedbf2)
 
 * [How to get Startup Ideas](http://www.paulgraham.com/startupideas.html)
+
+* [Brainstorming for New Startup Ideas: A Framework to Spur Creative Thinking](https://www.forentrepreneurs.com/startup-ideation/)
 
 * Two video lectures on ideation from the [Y-Combinator](https://www.ycombinator.com) Startup School (2014 inaugural edition):
 <br/>
