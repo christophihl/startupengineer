@@ -27,7 +27,11 @@ This section on customer segmentation provides resources and materials to suppor
 
 ## Strategic choice between customer segments
 
-**...soon to come ...**
+* Market Opportunity Navigator - Intro:
+<br/>
+{{< youtube N4ZUMr70-0w >}}
+<br/>
+* [Market Opportunity Navigator - Materials](https://wheretoplay.co)
 
 <br/>
 

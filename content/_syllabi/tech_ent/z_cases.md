@@ -30,9 +30,14 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 4) As an investor, what factors would you consider to evaluate the investment potential of Zentaix?
 
 
+## Business Model Innovation
 
+**Case**: [CampusHash](https://www.dropbox.com/s/83nybff6ecyqr0e/CampusHash.pdf?dl=0)
 
-
-
-
+`Assigments Questions`:
+1) What is CampusHash‘s current business model? (Only in class: Outline them with the business model canvas.) 
+2) How does it fit into the Entrepreneurial Strategy Compass?
+3) How does the business model change with the three considered alternatives? (Only in class: Outline them with the business model canvas.) 
+4) How do the three considered alternatives fit into the Entrepreneurial Strategy Compass?
+5) Develop one more additonal alternative with the Business Model Navigator Patterns! (Only in class.) 
 
