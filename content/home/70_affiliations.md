@@ -16,7 +16,7 @@ subtitle = ""
 [[affiliation]]
   name = "TUHH School of Management Science & Technology"
   image = "img/affiliations/mwt.png"
-  url = "http://mwt-tuhh.de"
+  url = "https://www.tuhh.de/sdw/dekanat.html"
 
 [[affiliation]]
   name = "MLE @ TUHH"
