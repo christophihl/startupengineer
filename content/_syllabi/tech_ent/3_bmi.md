@@ -44,7 +44,7 @@ This section on buiness model innovation provides resources and materials to sup
 <br/>
 {{< youtube QoAOzMTLP5s >}}
 <br/>
-* Exaples:
+* Examples:
 <br/>
 {{< youtube CakUeC1sCSs >}}
 <br/>
