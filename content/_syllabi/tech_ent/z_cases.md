@@ -69,4 +69,13 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 2) Are movie goers beeing subsidized? Calculate the average gross margin per user (AGMPU)!
 3) What are the critical assumptions you would want to test in this business model? How?
 
+<br/>
+
+## Market Sizing & Competition Analysis
+
+**Case**: [Eventbrite](https://www.dropbox.com/s/98rrui0fw6i99uw/Eventbrite.pdf?dl=0) (this case is not suitable for a memo, just read it and make up your mind about the assignment questions)
+
+`Assigments Questions`:
+1) What is Eventbrite's TAM, SAM, SOM? Compare and/ or combine top down and bottom up approaches.
+2) How would you describe Eventbrite's competition? Whom does Eventbrite compare to and compete with?
 
