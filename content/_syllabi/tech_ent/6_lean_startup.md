@@ -40,6 +40,21 @@ https://medium.com/lean-startup-circle/how-to-conduct-lean-experiments-aecc6aae1
 
 https://blog.leanstack.com/the-7-habits-for-running-highly-effective-lean-startup-experiments-f1daaa93f85b
 
+eisenman
+http://platformsandnetworks.blogspot.com/2011/01/launching-tech-ventures-part-iv.html
+
+mollick
+http://www.startupinnovation.org/readings-and-resources/
+
+
+risks
+https://techcrunch.com/2014/03/01/our-dangerous-obsession-with-the-mvp/
+
+Protoytyping
+Wireframing
+
+
+
 
 
 ## Market Sizing: The Startup Way
