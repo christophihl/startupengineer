@@ -20,7 +20,7 @@ This section on market sizing & competition analysis provides resources and mate
 2. Combine top down and bottom up approaches in your market sizing attempts.
 3. Apply the Fermi estimation logic to quantify unknonws.
 4. Understand different types of markets and modes of competition.
-5. Conduct and vidualize the competition analysis for a startup idea.
+5. Conduct and visualize the competition analysis for a startup idea.
 
 <br/>
 
