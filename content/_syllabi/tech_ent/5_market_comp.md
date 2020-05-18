@@ -55,7 +55,7 @@ This section on market sizing & competition analysis provides resources and mate
 <br/>
 * [Visualize Competition I](http://www.startupshk.com/pitch-club-the-competion-slide-in-your-startup-pitch-deck/)
 <br/>
-* [Visualize Competition II](https://blogs.berkeley.edu/2013/11/11/a-new-way-to-look-at-competitors/=)
+* [Visualize Competition II](https://blogs.berkeley.edu/2013/11/11/a-new-way-to-look-at-competitors/)
 <br/>
 * [Visualize Competition III](https://www.edrawsoft.com/competition-analysis-charts.html)
 <br/>
