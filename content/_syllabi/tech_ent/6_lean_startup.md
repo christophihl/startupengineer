@@ -4,7 +4,7 @@ linktitle: Lean Startup & Experimentation
 toc: true
 type: docs
 date: "2020-05-25T00:00:00Z"
-draft: true
+draft: false
 menu:
   tech_ent:
     weight: 7
@@ -15,73 +15,72 @@ weight: 6
 
 ## Objectives
 
-This section on market sizing & competition analysis provides resources and materials to support the following learning objectives:
-1. Assess the market potential for a startups idea in terms of adressable, servicable and obtainable market shares.
-2. Combine top down and bottom up approaches in your market sizing attempts.
-3. Apply the Fermi estimation logic to quantify unknonws.
-4. Understand different types of markets and modes of competition.
-5. Conduct and vidualize the competition analysis for a startup idea.
+This section on lean startup & experimentation provides resources and materials to support the following learning objectives:
+1. Understand the basic logic of the lean startup appraoch.
+2. Identify the riskiest assumption of a startup idea.
+3. Design appropriate experiments to test assumptions.
+4. Design MVPs, prototypes and wireframes to test assumptions.
+5. Understand potential pitfals and challenges of the lean startup appraoch.
 
 <br/>
 
 
-
-
-
-https://blog.leanstack.com/minimum-viable-product-mvp-7e280b0b9418
-
-
-https://grasshopperherder.com/what-type-of-lean-startup-experiment-should-i-run/
-
-https://www.movestheneedle.com/all-blog/2016/6/14/enterprise-lean-startup-experiment-examples
-
-https://medium.com/lean-startup-circle/how-to-conduct-lean-experiments-aecc6aae17c5
-
-
-https://blog.leanstack.com/the-7-habits-for-running-highly-effective-lean-startup-experiments-f1daaa93f85b
-
-eisenman
-http://platformsandnetworks.blogspot.com/2011/01/launching-tech-ventures-part-iv.html
-
-mollick
-http://www.startupinnovation.org/readings-and-resources/
-
-
-risks
-https://techcrunch.com/2014/03/01/our-dangerous-obsession-with-the-mvp/
-
-Protoytyping
-Wireframing
-
-
-
-
-
-## Market Sizing: The Startup Way
-* [The Startup Way: TAM, SAM, SOM](https://demigos.com/blog-post/how-a-startup-can-define-its-market-size/)
+## Lean Startup Principles
+* [Eric Ries](http://theleanstartup.com/principles)
 <br/>
-* [Top Down vs Bottom Up I](https://towardsdatascience.com/sizing-up-market-sizing-for-your-business-c569e45730ef)
+* [Steve Blank](https://hbr.org/2013/05/why-the-lean-start-up-changes-everything?referral=03758&cm_vc=rr_item_page.top_right)
 <br/>
-* [Top Down vs Bottom Up II](https://www.forentrepreneurs.com/calculating-tam/)
+* [Ash Maurya](https://blog.leanstack.com/the-7-habits-for-running-highly-effective-lean-startup-experiments-f1daaa93f85b)
 <br/>
-* [Market Sizing Example](https://learn.marsdd.com/article/how-to-estimate-market-size-business-and-marketing-planning-for-startups/) 
 
-## Market Sizing: Guesstimation vs Research
-* [Fermi Estimation I](https://www.lesswrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates) 
+## Identifying Risky Assumptions
+* [Qualitatively](https://medium.com/lean-startup-circle/how-to-conduct-lean-experiments-aecc6aae17c5)
 <br/>
-* [Fermi Estimation II](http://nsfconsulting.com.au/estimate-market-size/) 
+* [Quantitatively](https://dkander.wordpress.com/2013/05/07/how-to-diagnose-your-riskiest-assumptions/)
 <br/>
-* [Market & Competition Analysis with Google Keyword Planner](https://ahrefs.com/blog/google-keyword-planner/)
-<br/>
-* [Other Free Keyword Planning Tools](https://ahrefs.com/blog/free-keyword-research-tools/)
+* [More Quantitatively](https://medium.com/startup-patterns/the-only-proven-method-to-identify-your-riskiest-assumption-a240c6403a67)
 
-## Competition Analysis
-* How Startups should think about Competition (Peter Thiel):
-<br/><br/>
-{{< youtube 3Fx5Q8xGU8k >}}
+
+## Lean Experiments
+* [Types](https://grasshopperherder.com/what-type-of-lean-startup-experiment-should-i-run/)
 <br/>
-* [Market Types & Competition (Steve Blank)](https://guides.co/g/how-to-build-a-startup/3017)
+* [Process](https://www.alexandercowan.com/creating-a-lean-startup-style-assumption-set/)
 <br/>
+* [Define Target Metrics](https://openclassrooms.com/en/courses/4544561-learn-about-lean-startup/4705111-prioritize-which-experiments-to-run)
+<br/>
+* [Example](https://openclassrooms.com/en/courses/4544561-learn-about-lean-startup/4710706-formulate-a-hypothesis-design-an-experiment-to-test-it)
+<br/>
+* [Landing Page "Smoke" Test Example](http://aymeric.gaurat.net/2010/how-to-test-the-viability-of-your-online-business-idea/)
+<br/>
+* [AB-Testing Example at Strava](https://medium.com/strava-design/designing-for-growth-7d95fdddb9d7)
+<br/>
+* [Three more examples](https://www.kaushik.net/avinash/lean-analytics-cycle-metrics-hypothesis-experiment-act/)
+
+
+## MVPs, Prototypes & Wireframes
+* [MVPs](https://blog.leanstack.com/minimum-viable-product-mvp-7e280b0b9418)
+<br/>
+* [MVP Examples](https://blog.fastmonkeys.com/2014/06/18/minimum-viable-product-your-ultimate-guide-to-mvp-great-examples/)
+<br/>
+* [LoFi-Prototyping](https://www.smashingmagazine.com/2014/10/the-skeptics-guide-to-low-fidelity-prototyping/)
+<br/>
+* [Difference between MVP, Prototype & Wireframe](https://www.develandoo.com/blog/what-is-the-differencebetween-a-wireframe-prototype-and-mvp/)
+<br/>
+* [Wireframes I](https://www.webfx.com/blog/web-design/website-wireframing/)
+<br/>
+* [Wireframes II](https://careerfoundry.com/en/blog/ux-design/how-to-create-your-first-wireframe/)
+
+
+## Potential Pitfalls & Challenges
+* [Bill Aulet](https://techcrunch.com/2014/03/01/our-dangerous-obsession-with-the-mvp/)
+<br/>
+* [Ethan Mollick](https://hbr.org/2019/10/what-the-lean-startup-method-gets-right-and-wrong)
+<br/>
+* [Teppo Felin](https://medium.com/@teppofelin/lean-startup-revisited-c81fb8719614)
+<br/>
+* [Ted Lad](https://hbr.org/2016/03/the-limits-of-the-lean-startup-method)
+
+
 
 
 

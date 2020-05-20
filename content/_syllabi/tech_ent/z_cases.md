@@ -79,3 +79,20 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 1) What is Eventbrite's TAM, SAM, SOM? Compare and/ or combine top down and bottom up approaches.
 2) How would you describe Eventbrite's competition? Whom does Eventbrite compare to and compete with?
 
+<br/>
+
+## Lean Startup & Experimentation
+
+`Please choose in advance one of the following three cases to work on in your group. Then it would only be smart to choose this case also for an optional individual case memo :wink:`
+
+**Case 1**: [Rent The Runway](https://www.dropbox.com/s/cbwkgjhav6p3xam/RentTheRunway.pdf?dl=0)
+
+**Case 2**: [Dropbox](https://www.dropbox.com/s/vna6mxwy68pov2o/Dropbox.pdf?dl=0)
+
+**Case 3**: [Lit Motors](https://www.dropbox.com/s/47puky574i6hctd/LitMotors.pdf?dl=0)
+
+`Assigments Questions for all three cases`:
+1) What hypotheses did the company seek to validate so far?
+2) What did the company do to validate these hypotheses?
+3) How do you evaluate these validation efforts? What was good, what could be improved and how?
+4) What hypotheses should the company validate next? And how?
