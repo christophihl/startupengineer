@@ -16,7 +16,7 @@ weight: 6
 ## Objectives
 
 This section on lean startup & experimentation provides resources and materials to support the following learning objectives:
-1. Understand the basic logic of the lean startup appraoch.
+1. Understand the basic principles of the lean startup approach.
 2. Identify the riskiest assumption of a startup idea.
 3. Design appropriate experiments to test assumptions.
 4. Design MVPs, prototypes and wireframes to test assumptions.
