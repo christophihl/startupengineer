@@ -3,7 +3,7 @@ title: Lean Startup & Experimentation
 linktitle: Lean Startup & Experimentation
 toc: true
 type: docs
-date: "2020-05-25T00:00:00Z"
+date: "2020-05-20T00:00:00Z"
 draft: false
 menu:
   tech_ent:
