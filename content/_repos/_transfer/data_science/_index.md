@@ -5,7 +5,7 @@ summary: Overview
 weight: 1
 
 # Page metadata.
-title: Data Scienve & Machine Learning
+title: Data Science & Machine Learning
 date: "2020-06-10T00:00:00Z"
 lastmod: "2020-06-10T00:00:00Z"
 draft: false  # Is this a draft? true/false
