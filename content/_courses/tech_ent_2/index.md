@@ -118,7 +118,7 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 ### Course Notes & Materials
 
-Access to course notes & materials [**here**]({{< relref "_syllabi/tech_ent/_index.md" >}}).
+Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index.md" >}}).
 
 ***
 

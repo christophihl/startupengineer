@@ -68,5 +68,5 @@ Solange die gegenwärtige Situation anhält, finden alle Veranstaltungen in Form
 
 ### Vorlesungsmaterialien `Unternehmertum (Entrepreneurship)` 
 
-Zugang zu Vorlesungsfolien und -videos [**here**]({{< relref "_syllabi/gbwl/_index.md" >}}).
+Zugang zu Vorlesungsfolien und -videos [**here**]({{< relref "_repos/gbwl/_index.md" >}}).
 

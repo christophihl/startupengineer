@@ -23,7 +23,7 @@ menu:
 
 ## Course organization
 
-All participants are supposed to form teams of 5 students. These teams should primarily form around a common startup project idea. How to go about finding an idea will be subject of the first session described under [**Inroduction**]({{< relref "_syllabi/tech_ent/1_intro.md" >}}).
+All participants are supposed to form teams of 5 students. These teams should primarily form around a common startup project idea. How to go about finding an idea will be subject of the first session described under [**Inroduction**]({{< relref "_repos/tech_ent/1_intro.md" >}}).
 
 The weekly class sessions follow along a process to develop your startup projects. Teams will be provided with materials for each topic and step in the process before each class session. Students are supposed to read and watch the material before class. In the first part of each class session, we will discuss the tools and concepts and how they might apply to your specific projects ideas. Your task is to continously elaborate and improve your startup projects based on the tools, concepts and feedback received. Teams get the chance to receive comprehensive feedback based on a recorded intermediate pitches of their projects in the beginning of June. The final pitch of your startup projects is due by the end of class in July.
 
