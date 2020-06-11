@@ -97,7 +97,7 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 3) How do you evaluate these validation efforts? What was good, what could be improved and how?
 4) What hypotheses should the company validate next? And how?
 
-
+<br/>
 
 ## Marketing
 
