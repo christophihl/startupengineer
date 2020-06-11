@@ -96,3 +96,47 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 2) What did the company do to validate these hypotheses?
 3) How do you evaluate these validation efforts? What was good, what could be improved and how?
 4) What hypotheses should the company validate next? And how?
+
+
+
+## Marketing
+
+`The Wildfang case should not be used for a memo. Just read this short case in advance (esp. pp. 8-11).:`
+
+**Case 1**: [Wildfang](https://www.dropbox.com/s/fsc6xshlqpc3r2p/Wildfang.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/3eymlrjv08n6exw/Wildfang.xlsx?dl=0)
+
+`Assigments Questions`:
+1) Compare the two buiness model designs under consideration with the current one, i.e. private label B&C and multisided plattform.
+2) Using the supplemental Excel worksheet, estimate a blended CLV for a simulated portfolio of 10,000 shoppers. The assumptions used to populate the input worksheet are provided in the case narrative.
+3) Combining the buisness model and CLV considerations: what are the riskiest assumptions associated with each growth option? Which one would you prefer?
+
+
+`This case can be used for a memo (Question 5 is optional for the memo):`
+
+**Case 2**: [Hubble Contact Lenses](https://www.dropbox.com/s/gc9qdblhlg3iui2/HubbleContactLenses.pdf?dl=0)
+
+`Assigments Questions`:
+1) What are strengths and weaknesses in Hubble's current business model?
+2) How efficiently does Hubble acquire and retain customers? What do they do well? What needs improvement?
+3) Assess how Hubble has used owned, earned, and paid media? What needs to change as the company scales? Why?
+4) What is the role of offline and online advertising in acquiring Hubble customers? Evaluate the following decisions facing Hubble regarding online versus offline media allocation:
+	- As of April 2018, Hubble is allocating 78% of its paid media spend to online advertising and 22% to traditional channels (i.e., TV, radio, podcast, and direct mail). Is this budget allocation between online and offline appropriate and if not, how would you adjust it?
+	- Based on the results of the TV campaigns, would you recommend that Hubble switch some of its spending to TV? Why or why not? How much?
+	- Should Hubble continue to spend the bulk of its budget on reaching new consumers or reallocate some of that spending to retarget those who have already been exposed to its ads? Why?
+5) As Hubble prepares to scale its business following its upcoming fundraise, how should they allocate capital across the following decisions? Which, if any, would you priotitize in the short term?
+	- Should Hubble expand its product line?
+	- Should Hubble move beyond DTC? If so, should it open its own flagship stores, sell via a wholesale model through retailers, or create a reseller option for opticians?
+	- Should Hubble expand internationally or focus on its business at home in the U.S.?
+	- How do each of these scaling decisions impact Hubble's integrated marekting communication strategy?
+
+
+
+
+
+
+
+
+
+
+
+
