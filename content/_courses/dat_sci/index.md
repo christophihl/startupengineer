@@ -116,5 +116,5 @@ Access to course notes & materials [**here**]({{< relref "_repos/dat_sci/_index.
 | 10 | tbd | Unsupervised ML: Clustering |
 | 11 | tbd | Unsupervised ML: Dimension Reduction  |
 | 12 | tbd | ML: Deep Learning |
-| 13 | tbd | Reportign with RMarkdown  |
+| 13 | tbd | Reporting with RMarkdown  |
 | 14 | tbd | Reporting with Shiny |
