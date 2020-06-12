@@ -102,7 +102,7 @@ Access to course notes & materials [**here**]({{< relref "_repos/dat_sci/_index.
 ### Preliminary Schedule
 
 
-| Session | Date | Topic[^1] |
+| Session | Date | Topic |
 | --- | --- | --- |
 | 1 | June 12nd | Introduction to R, RStudio IDE & GitHub |
 | 2 | tbd | Introduction to the tidyverse |
@@ -118,5 +118,3 @@ Access to course notes & materials [**here**]({{< relref "_repos/dat_sci/_index.
 | 12 | tbd | ML: Deep Learning |
 | 13 | tbd | Reportign with RMarkdown  |
 | 14 | tbd | Reporting with Shiny |
-
-[^1]: With password protected links to course notes & materials to which registered participants will receive access in due time.
