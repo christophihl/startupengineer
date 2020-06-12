@@ -8,7 +8,9 @@
 
   </p>
 
-
+  <!-- Init code folding -->
+  {{ partial "article_footer_js.html" . }}
+  
    {{ if or (site.GetPage "imprint.md") (site.GetPage "privacy.md") }}
   <p class="powered-by">
     {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify}} &middot; {{ end }}
