@@ -4,11 +4,11 @@ subtitle: Business Analytics with R
 summary: 6 ECTS Module for Master Technology Management (NIT)
 authors:
 - ihl
-weight: 1
+weight: 50
 tags: []
 categories: []
-date: "2020-03-25T00:00:00Z"
-lastMod: "2020-03-25T00:00:00Z"
+date: "2002-06-12T00:00:00Z"
+lastMod: "2020-06-12T00:00:00Z"
 showauthordate: false
 featured: true
 draft: false
@@ -80,12 +80,6 @@ After completing this module, students will be able to:
 
 </details>
 
-
-***
-
-### Registration
-
-* Book on the booking platform <a href="https://monitor.nithh.de/offers/12" target="_blank">moNITor</a>
 
 ***
 

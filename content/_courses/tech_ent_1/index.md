@@ -4,7 +4,7 @@ subtitle: Startup Engineering&#58; How to build a startup
 summary: 6 ECTS Module for Master IWI, LIM & GTIME
 authors:
 - ihl
-weight: 1
+weight: 10
 tags: []
 categories: []
 date: "2020-03-25T00:00:00Z"
