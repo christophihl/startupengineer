@@ -810,7 +810,7 @@ See the `R Markdown Cheat Sheet` for further information regarding the markdown 
   <div id="clear"></div>
 </div>
 
-Send the URLs of your website to ...
+Send the URLs of your website to <a href = "mailto: joschka.schwarz@tuhh.de">joschka.schwarz@tuhh.de</a>.
 
 ### Datacamp
 <div id="header">Recommended Datacamp courses</div>
