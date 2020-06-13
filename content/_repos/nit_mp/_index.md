@@ -45,7 +45,7 @@ The following procedure has the objective to satisfy your articulated needs in t
 		- a detailed description and visualization of stimuli shown to customers (e.g. landing pages, feature lists, survey questions, exact price tags / points to be tested),
 		- the experimental design (i.e. who sees what stimulus, e.g. A/B, multivariate A/B/n, full vs. fractional factorial designs, repeated / within-subject / conjoint designs),
 		- an estimation of the required sample size,
-		- a cost and time estimate to actually run these tests.[^1]
+		- a cost and time estimate to actually run these tests. [^1]
 [^1]: You are NOT supposed to actually run these tests! If these tasks partly overlap with prior deliverables, then consider this as synergy to make progress on the same aspects, not redundancy. Your focus here should be on pricing, though.
 3. In addition, and probably before you apply the material to your own projects, choose either the B2C or B2B case provided below (depending on the focus of your my-project) and prepare solutions/ answers for the assignment questions.
 4. Upon initial completion of these tasks, each team should schedule a 1.5 hour Zoom meeting with me [here](https://docs.google.com/spreadsheets/d/13ZeDIz8DYia4TUm3yQU1ZNTLWycmFEgGcDDxBEaTSSc/edit#gid=387312941) to pitch and receive feedback on their results as well as the chance to revise them before final submission. These Zoom feedback meetings should take place before July 15th and will be open to all teams to participate and learn (on a voluntary basis). The above deliverables will account for 25% of the grade in this term (next to the deliverables for the Hackathon, Prof. Lüthje and Prof. Fixon).
@@ -76,12 +76,15 @@ The following procedure has the objective to satisfy your articulated needs in t
 <br/>
 
 ## Economics of Pricing
-* [Comprehensive Pricing Framework for SaaS and beyond](https://www.dropbox.com/s/71zfxuxi7fklron/cloudpricing.pdf?dl=0)
+* [Pricing Models, Strategies, Tactics (for Saas and beyond)](https://www.cobloom.com/blog/saas-pricing-models#)
+* [Comprehensive Pricing Framework (for SaaS and beyond)](https://www.dropbox.com/s/71zfxuxi7fklron/cloudpricing.pdf?dl=0)
 
 {{< figure library="true" src="pricing_framework.png" title="Pricing Framework (Laatikainen et al., 2013)" lightbox="true" >}}
 
-* [Pricing on Multisided Plattforms (vs Product or Reseller Plattforms)](https://sloanreview.mit.edu/article/strategic-decisions-for-multisided-platforms/)
 * [Behaviorial Pricing Tactics](https://www.helpscout.com/blog/pricing-strategies/)
+* [Pricing on Multisided Plattforms (vs Product or Reseller Plattforms)](https://sloanreview.mit.edu/article/strategic-decisions-for-multisided-platforms/)
+
+
 
 <br/>
 
@@ -120,6 +123,7 @@ The following procedure has the objective to satisfy your articulated needs in t
 `Assignment Questions`:
 1) Assess AnswerDash’s current revenue and pricing model. Which aspects do you like? Which ones don’t you like?
 2) Calculate the economic value that the AnswerDash product delivers for an e-commerce vs. Software-as-a-Service customer. Separate between cost savings and revenue lift benefits. (As as a starting point, you can consider an organization with 100,000 monthly web visitors and $1,000,000 monthly revenues.) 
-3) For the three strategic option AnswerDash considers, what are (your hypothesized) implications for the design of an appropriate pricing model? How would you change the current pricing approach under each of these three options?
+3) For the three strategic option AnswerDash considers, what are (your hypothesized) implications for the design of an appropriate pricing model? How would you change the current pricing approach under each of these three options? [^2]
+[^2]: Possible aspects to change are: value metric, pricing tiers, penalties / allowances, commitment period, payment timing, money-back guarantees, feature bundling.
 4) Describe in detail how to test whether the changes to the pricing approach suggested above work or not? 
 
