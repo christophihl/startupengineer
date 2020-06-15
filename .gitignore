@@ -1,8 +1,0 @@
-# IDEs
-.idea/
-
-# Hugo
-resources/
-public/
-.Rproj.user
-.DS_Store
