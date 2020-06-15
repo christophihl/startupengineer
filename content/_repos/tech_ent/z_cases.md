@@ -25,7 +25,7 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 **Case**: [Zenatix](https://www.dropbox.com/s/r6caw2tmqlyxbd4/Zenatix.pdf?dl=0)
 
-`Assigments Questions`:
+`Assignment Questions`:
 1) What issues made Zenatix change its target market, first from industrial clients to commercial building clients, and then from commercial building clients to-retail chain clients? 
 2) What is your opinion of Zenatix's final target market (i.e., retail chain clients)? Did Zenatix finally find the right target market?
 3) What is a value proposition campus? Draw a value proposition for each of the three versions of WattMan to show changes in value proposition over time.
@@ -37,7 +37,7 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 **Case**: [CampusHash](https://www.dropbox.com/s/83nybff6ecyqr0e/CampusHash.pdf?dl=0)
 
-`Assigments Questions`:
+`Assignment Questions`:
 1) What is CampusHash‘s current business model? (Only in class: Outline them with the business model canvas.) 
 2) How does it fit into the Entrepreneurial Strategy Compass?
 3) How does the business model change with the three considered alternatives? (Only in class: Outline them with the business model canvas.) 
@@ -50,7 +50,7 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 **Case 1**: [PassionConnect](https://www.dropbox.com/s/39fbzukq6hvj4vj/PassionConnect.pdf?dl=0) (use this case for individual memos, or just read it to prepare in-class group work)
 
-`Assigments Questions`:
+`Assignment Questions`:
 1) What criteria should the co-founders use to evaluate each of the revenue models they consider? [^1]
 [^1]: Here is a list of possible criteria:
 	- **Financial:** predictability of revenues (recurring vs. one-time); positive cash flow cycle (earn before you spend); profit potential; fixed vs. variable cost; customer acquisition / marketing cost
@@ -64,7 +64,7 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 **Case 2**: [MoviePass](https://www.dropbox.com/s/wmduhuj1x9bfx5z/MoviePass.pdf?dl=0) (do not use this case for individual memos, just read it to prepare in-class group work)
 
-`Assigments Questions`:
+`Assignment Questions`:
 1) What is MoviePass‘ business model? Describe the value proposition (what?), revenue model (why?), and value creation (how?) for both sides of their platform model.
 2) Are movie goers beeing subsidized? Calculate the average gross margin per user (AGMPU)!
 3) What are the critical assumptions you would want to test in this business model? How?
@@ -75,7 +75,7 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 **Case**: [Eventbrite](https://www.dropbox.com/s/98rrui0fw6i99uw/Eventbrite.pdf?dl=0) (this case is not suitable for a memo, just read it and make up your mind about the assignment questions)
 
-`Assigments Questions`:
+`Assignment Questions`:
 1) What is Eventbrite's TAM, SAM, SOM? Compare and/ or combine top down and bottom up approaches.
 2) How would you describe Eventbrite's competition? Whom does Eventbrite compare to and compete with?
 
@@ -91,7 +91,7 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 **Case 3**: [Lit Motors](https://www.dropbox.com/s/47puky574i6hctd/LitMotors.pdf?dl=0)
 
-`Assigments Questions for all three cases`:
+`Assignment Questions for all three cases`:
 1) What hypotheses did the company seek to validate so far?
 2) What did the company do to validate these hypotheses?
 3) How do you evaluate these validation efforts? What was good, what could be improved and how?
@@ -105,17 +105,17 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 **Case 1**: [Wildfang](https://www.dropbox.com/s/fsc6xshlqpc3r2p/Wildfang.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/3eymlrjv08n6exw/Wildfang.xlsx?dl=0)
 
-`Assigments Questions`:
-1) Compare the two buiness model designs under consideration with the current one, i.e. private label B&C and multisided plattform.
+`Assignment Questions`:
+1) Compare the two business model designs under consideration with the current one, i.e. private label B&C and multisided plattform.
 2) Using the supplemental Excel worksheet, estimate a blended CLV for a simulated portfolio of 10,000 shoppers. The assumptions used to populate the input worksheet are provided in the case narrative.
-3) Combining the buisness model and CLV considerations: what are the riskiest assumptions associated with each growth option? Which one would you prefer?
+3) Combining the business model and CLV considerations: what are the riskiest assumptions associated with each growth option? Which one would you prefer?
 
 
 `This case can be used for a memo (Question 5 is optional for the memo):`
 
 **Case 2**: [Hubble Contact Lenses](https://www.dropbox.com/s/gc9qdblhlg3iui2/HubbleContactLenses.pdf?dl=0)
 
-`Assigments Questions`:
+`Assignment Questions`:
 1) What are strengths and weaknesses in Hubble's current business model?
 2) How efficiently does Hubble acquire and retain customers? What do they do well? What needs improvement?
 3) Assess how Hubble has used owned, earned, and paid media? What needs to change as the company scales? Why?
@@ -129,12 +129,29 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 	- Should Hubble expand internationally or focus on its business at home in the U.S.?
 	- How do each of these scaling decisions impact Hubble's integrated marekting communication strategy?
 
+<br/>
 
+## Sales
 
+`Both cases can be used for a memo. Teams will also work on both cases in class.`
 
+**Case 1**: [InsightSquared](https://www.dropbox.com/s/qc9mmqho1p6vt84/InsightSquared.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/9qqbm07646n6fzt/InsightSquared.xlsx?dl=0)
 
+`Assignment Questions`:
+1) Which plan would you choose? Shilmover's plan? Clemens' plan?  One of their plans with variations?  Why? If you prefer a variation, what would be your revenue target for 2014 and how much would you spend on marketing and sales?
+2) From a structural perspective, how did Clemens and Shilmover build their plans differently? What are the pros and cons of each approach?
+3) What can we learn from the 2013 data about the relative effectiveness of various sales and marketing techniques at InsightSquared? As you look ahead to the 2014 plan, are there additional or different considerations you would factor into the decisions facing Clemens and Shilmover?
+4) How would you decide on the revenue target for 2014? Why not plan for a larger target? Why not plan for a smaller target?
 
+<br/>
 
+**Case 2**: [AnswerDash](https://www.dropbox.com/s/jyu705ou96sgzkp/AnswerDash.pdf?dl=0)
+
+`Assignment Questions`:
+1) Assess AnswerDash’s current go-to-market approach, including customer selection, pricing, communication, and sales efforts. Which aspects do you like? Which ones don’t you like? In class only: Based on the current pricing model what is the lifetime value of a customer to AnswerDash?  (Make reasonable assumptions as needed.)
+2) In class only: Calculate the economic value that the AnswerDash product delivers for an e-commerce vs. Software-as-a-Service customer. Separate between cost savings and revenue lift benefits. (As as a starting point, you can consider an organization with 100,000 monthly web visitors and $1,000,000 monthly revenues.) 
+3) What is your view on the three primary options AnswerDash is contemplating going forward? Which would you recommend by the company pursue?
+4) For the strategic option you support, what would be your marketing & sales approach? What companies to target, how to position the value proposition, how to sell to an organization, and what pricing model / format to allow?
 
 
 
