@@ -131,11 +131,26 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 <br/>
 
-## Sales
+## Marketing & Sales
 
-`Both cases can be used for a memo. Teams will also work on both cases in class.`
+`Case 1 is probably not perfectly suited for a memo, but you can try by adressing a subset of questions (that require qualitative judgement). The team work on quantitative funnel analysis of case 1 will consume the entire class on June 22. Case 2 and 3 can be prepared for the class on June 29.`
 
-**Case 1**: [InsightSquared](https://www.dropbox.com/s/qc9mmqho1p6vt84/InsightSquared.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/9qqbm07646n6fzt/InsightSquared.xlsx?dl=0)
+
+**Case 1**: [eSig](https://www.dropbox.com/s/4tf9n1ekextue4f/eSig.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/m2g7zxpfhit19ep/eSig.xlsx?dl=0)
+
+`Assignment Questions`:
+
+1) For each major marketing medium used by eSig -- direct traffic, email, organic search, and paid ads -- how have conversion rates from accounts created to paid upgrades been trending? What hypotheses do you have about factors behind conversion rate trends?
+2) What might explain changes in the number of accounts created via direct traffic over time? In accounts created via organic search?
+3) Does eSig benefit from virality? What can the company do to increase virality?
+4) Have eSig's investments in paid marketing been yielding a good return?
+5) Contractors have produced a steady stream of 12 blog posts per week for eSig over the past year at a total cost of $5,000. Was this a good investment? What other factors, besides the data in the Excel Supplement, would you want to answer this question? Why?
+6) What is your current estimate of the lifetime value of an eSig customer? What’s the most we should be willing to spend to acquire a Pro customer?
+7) In the case, Tsai asks Dalton to project the number of Pro customers as of 3/31/16 if eSig spends nothing on paid marketing between 12/1/15 and 3/31/16. How would you go about formulating this projection? What additional research, analysis or tests would you do to make such a projection? Why?
+
+<br/>
+
+**Case 2**: [InsightSquared](https://www.dropbox.com/s/qc9mmqho1p6vt84/InsightSquared.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/9qqbm07646n6fzt/InsightSquared.xlsx?dl=0)
 
 `Assignment Questions`:
 1) Which plan would you choose? Shilmover's plan? Clemens' plan?  One of their plans with variations?  Why? If you prefer a variation, what would be your revenue target for 2014 and how much would you spend on marketing and sales?
@@ -145,7 +160,7 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 <br/>
 
-**Case 2**: [AnswerDash](https://www.dropbox.com/s/jyu705ou96sgzkp/AnswerDash.pdf?dl=0)
+**Case 3**: [AnswerDash](https://www.dropbox.com/s/jyu705ou96sgzkp/AnswerDash.pdf?dl=0)
 
 `Assignment Questions`:
 1) Assess AnswerDash’s current go-to-market approach, including customer selection, pricing, communication, and sales efforts. Which aspects do you like? Which ones don’t you like? In class only: Based on the current pricing model what is the lifetime value of a customer to AnswerDash?  (Make reasonable assumptions as needed.)
