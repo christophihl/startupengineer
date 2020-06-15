@@ -537,7 +537,7 @@ Getting set up: Create a new project, organize your working directory and save y
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/jwarz/dat_sci_ss20/raw/master/01/DS_business_case_01.zip" target="_blank"><b>ds_project_01.zip</b></a></div>
+  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/01/DS_business_case_01.zip" target="_blank"><b>ds_project_01.zip</b></a></div>
   <div id="clear"></div>
 </div>
 
