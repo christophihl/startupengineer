@@ -168,7 +168,3 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 3) What is your view on the three primary options AnswerDash is contemplating going forward? Which would you recommend by the company pursue?
 4) For the strategic option you support, what would be your marketing & sales approach? What companies to target, how to position the value proposition, how to sell to an organization, and what pricing model / format to allow?
 
-
-
-
-
