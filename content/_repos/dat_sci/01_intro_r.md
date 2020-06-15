@@ -701,9 +701,9 @@ We will use GitHub to store your data and hand in your assignments through your 
   <div id="clear"></div>
 </div>
 
-3. Create a website using R Markdown and host it on Github pages, then submit the link to your website for assignments. You will create the website using this template <a href="https://tuhh-w11.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
+3. Create a website using R Markdown and host it on Github pages, then submit the link to your website for assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
 
-To use this, got to <a href="https://tuhh-w11.github.io/lab_journal_website/" target="_blank"><b>https://github.com/TUHH-W11/lab_journal_website/</b></a> and fork this repository (press the fork button in top right hand corner, then choose your github account) to get started that way. You should now see a copy of this repo in your github account. That means you have all of the files you need to compile a website with RMarkdown.
+To use this, got to <a href="https://github.com/TUHHStartupEngineers/lab_journal_website/" target="_blank"><b>https://github.com/TUHHStartupEngineers/lab_journal_website/</b></a> and fork this repository (press the fork button in top right hand corner, then choose your github account) to get started that way. You should now see a copy of this repo in your github account. That means you have all of the files you need to compile a website with RMarkdown.
 
 ### Compiling on your local computer
 
