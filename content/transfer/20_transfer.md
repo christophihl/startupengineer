@@ -80,4 +80,6 @@ in the domains of
 
 Feel free to explore and [*contact*](/#contact) us in case you find something interesting for you!
 
+Or enjoy and use the materials on your own. We wish you fun and success!
+
 <br/>
