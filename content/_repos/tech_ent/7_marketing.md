@@ -48,7 +48,7 @@ This section on marketing for startups provides resources and materials to suppo
 
 ## Marketing as Conversion Funnel
 
-* [Intro](https://medium.com/@DaveParkerSEA/startup-marketing-funnel-breakdown-508b423d3747)
+* [Primer](https://www.startuphacks.vc/blog/2017/02/03/funnels-for-startups-a-primer)
 * [Funnel Economics](https://blog.ladder.io/marketing-funnel/#analysis)
 
 
