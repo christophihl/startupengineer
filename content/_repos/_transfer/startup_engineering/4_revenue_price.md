@@ -36,24 +36,32 @@ This section on revenue models & pricing provides resources and materials to sup
 * Startup Pricing 101 by Startup School of YCombinator:
 <br/>
 {{< youtube jwXlo9gy_k4 >}}
-* [Product Pricing for Startups](https://medium.com/@vinaysays/product-pricing-for-startups-e55f35b73719) (brief Medium blog post)
+* [Product Pricing for Startups](https://medium.com/@vinaysays/product-pricing-for-startups-e55f35b73719)
 * [Sequoia's Pricing Advice](https://www.sequoiacap.com/article/pricing-your-product/#) (including a nice [worksheet](https://www.dropbox.com/s/47vzqqrqyfmh91k/Pricing-Worksheet.pdf?dl=0))
+* [Pricing Strategies for B-to-B Startups](https://www.priceintelligently.com/blog/bid/163986/a-complete-guide-to-pricing-strategy)
+
 
 <br/>
 
 ## Economics of Pricing
-* [Comprehensive Pricing Framework for SaaS and beyond](https://www.dropbox.com/s/71zfxuxi7fklron/cloudpricing.pdf?dl=0)
+* [Pricing Models, Strategies, Tactics (for Saas and beyond)](https://www.cobloom.com/blog/saas-pricing-models#)
+* [Comprehensive Pricing Framework (for SaaS and beyond)](https://www.dropbox.com/s/71zfxuxi7fklron/cloudpricing.pdf?dl=0)
 
 {{< figure library="true" src="pricing_framework.png" title="Pricing Framework (Laatikainen et al., 2013)" lightbox="true" >}}
 
-* [Pricing on Multisided Plattforms (vs Product or Reseller Plattforms)](https://sloanreview.mit.edu/article/strategic-decisions-for-multisided-platforms/)
 * [Behaviorial Pricing Tactics](https://www.helpscout.com/blog/pricing-strategies/)
+* [Pricing on Multisided Plattforms (vs Product or Reseller Plattforms)](https://sloanreview.mit.edu/article/strategic-decisions-for-multisided-platforms/)
 
 <br/>
 
 ## Tools to Measure Willingness-to-pay
-- [Survey-based Methods](https://www.focusvision.com/blog/pricing-research-how-to-evaluate-price-perceptions-and-willingness-to-pay/) 
-- [A/B-testing](https://vwo.com/blog/ab-testing-price-testing/)
-- [Some Cautionary Notes about A/B Price Testing in the Field](https://www.priceintelligently.com/blog/ab-test-pricing-page-strategy)
+- [Survey-based Methods 1](https://www.focusvision.com/blog/pricing-research-how-to-evaluate-price-perceptions-and-willingness-to-pay/) 
+- [Survey-based Methods 2](https://www.quantilope.com/en/blog/whitepaper-three-great-methods-to-determine-price-acceptance) 
+- [A/B Price Testing 1](https://vwo.com/blog/ab-testing-price-testing/)
+- [A/B Price Testing 2](https://medium.com/analytics-vidhya/pricing-optimization-with-a-b-test-e720efe62b0)
+- [Cautionary Notes about A/B Price Testing for B-to-B](https://www.priceintelligently.com/blog/ab-test-pricing-page-strategy)
+- [A/B Sample Size Calculator](https://www.evanmiller.org/ab-testing/)
+- [Multivariate, A/B/n Designs](https://cxl.com/blog/multivariate-tests/)
+- Advanced stuff on A/B testing: [Peeking](https://www.evanmiller.org/how-not-to-run-an-ab-test.html), [Sequential](https://www.evanmiller.org/sequential-ab-testing.html), [Bayesian](https://www.evanmiller.org/bayesian-ab-testing.html)
 
 
