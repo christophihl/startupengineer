@@ -30,7 +30,7 @@ This section on marketing for startups provides resources and materials to suppo
 {{< youtube 6lY9CYIY4pQ >}}
 
 * Key take aways:
-	* Invest in growth only if you have reached product market, measured by retention!
+	* Invest in growth only if you have reached product market fit, measured by retention!
 	* Try things that don't scale.
 	* Growth means (1) attracting attention through external channels and (2) inceasing conversion on your site.
 	* Optimize the use of only one or two external marketing channels.
