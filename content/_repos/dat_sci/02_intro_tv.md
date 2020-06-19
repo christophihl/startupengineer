@@ -1488,6 +1488,15 @@ If you run into errors, you can download the code from the closest next Code Che
   <div id="clear"></div>
 </div>
 
+### Datacamp
+<div id="header">Recommended Datacamp courses</div>
+<div id="container">
+  <div id="first">{{% icon datacamp %}}</div>
+  <div id="second">
+    <a href="https://learn.datacamp.com/courses/introduction-to-the-tidyverse" target="_blank"><b>Introduction to the tidyverse</b></a><br></div>  
+  <div id="clear"></div>
+</div>
+
 <!-- HEADING (challenge) -->
 ## <i class="fas fa-laptop-code"></i> Challenge
 
