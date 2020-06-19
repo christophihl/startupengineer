@@ -55,7 +55,7 @@ Downlaod the following file and place in your getting_started folder. Try runnin
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/jwarz/dat_sci_ss20/raw/master/02/install_pkgs.R" target="_blank"><b>install_pkgs.R</b></a></div>
+  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/02/install_pkgs.R" target="_blank"><b>install_pkgs.R</b></a></div>
   <div id="clear"></div>
 </div>
 
@@ -75,7 +75,7 @@ If otherwise unsuccessful, contact me and I will do my best to troubleshoot.
 <a href="https://magrittr.tidyverse.org" target="_blank">
 <img src="/img/icons/logo_pipe.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
 </a>
-Pipes are a powerful tool for clearly expressing a sequence of multiple operations. You will be using the “pipe”-operator <code>%>%</code> throughout this class. The “pipe” is from the <code>magrittr</code> package. The point of the pipe is to help you write code in a way that is easier to read and understand. It makes your code more readable by structuring sequences of data operations left-to-right (as opposed to from the inside and out). The pipe makes your code read more like a sentence, branching from left to right. You can read it as a series of imperative statements: group, then summarise, then filter. As suggested by this reading, a good way to pronounce <code>%>%</code> when reading code is “then”. Mathematically it can be expressed like the following:<br></br>
+Pipes are a powerful tool for clearly expressing a sequence of multiple operations. You will be using the “pipe”-operator <code>%>%</code> throughout this class. The “pipe” is from the <code>magrittr</code> package (included in the tidyverse). The point of the pipe is to help you write code in a way that is easier to read and understand. It makes your code more readable by structuring sequences of data operations left-to-right (as opposed to from the inside and out). The pipe makes your code read more like a sentence, branching from left to right. You can read it as a series of imperative statements: group, then summarise, then filter. As suggested by this reading, a good way to pronounce <code>%>%</code> when reading code is “then”. Mathematically it can be expressed like the following:<br></br>
 
 * `x %>% f` is equivalent to `f(x)`
 * `x %>% f(y)` is equivalent to `f(x, y)`
@@ -203,7 +203,7 @@ The tidyverse offers the following packages for importing data:
 <figcaption>Click on the images to get more information about the packages and their functions.</figcaption>
 </figure>
 
-There are a handful of other packages that are not in the tidyverse, but are tidyverse-adjacent. They are very useful for importing data from other sources:
+There are a handful of other packages that are not in the tidyverse, but are tidyverse-adjacent. They are very useful for importing data from other sources (we will use them in the next session):
 
 * [jsonlite](https://github.com/jeroen/jsonlite#jsonlite) for JSON.
 * [xml2](https://github.com/r-lib/xml2) for XML.
@@ -408,7 +408,7 @@ To illustrate how we can make data tidy easily, we are using modified variants o
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/jwarz/dat_sci_ss20/blob/master/02/diamonds2.rds?raw=true" target="_blank"><b>diamonds2.rds</b></a></div>
+  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/02/diamonds2.rds" target="_blank"><b>diamonds2.rds</b></a></div>
   <div id="clear"></div>
 </div>
 
@@ -753,7 +753,7 @@ Select helpers
 ## 4  4.2   4.23  2.63 0.290 Premium I     VS2      62.4    58   334
 ## 5  4.34  4.35  2.75 0.31  Good    J     SI2      63.3    58   335</code></pre>
 
-* **`rename()`**
+* **`rename()`** changes the name of a column.
 
 
 <!-- CODE (show) -->
@@ -925,7 +925,8 @@ In this session you are about to get your hands into R with a real world situati
 We are going to do that by importing, wrangling and visualizing of the provided data.
   
 **Context**</br>
-Olist is the largest department store in Brazilian marketplaces. Olist connects small businesses from all over Brazil to channels without hassle and with a single contract. Those merchants are able to sell their products through the Olist Store and ship them directly to the customers using Olist logistics partners. See more on their website: [www.olist.com](www.olist.com)
+
+Olist is the largest department store in Brazilian marketplaces. Olist connects small businesses from all over Brazil to channels without hassle and with a single contract. Those merchants are able to sell their products through the Olist Store and ship them directly to the customers using Olist logistics partners. See more on their website: <a href="https://olist.com" target="_blank">olist.com</a>
 
 After a customer purchases the product from Olist Store a seller gets notified to fulfill that order. Once the customer receives the product, or the estimated delivery date is due, the customer gets a satisfaction survey by email where he can give a note for the purchase experience and write down some comments.
 
@@ -936,12 +937,10 @@ After a customer purchases the product from Olist Store a seller gets notified t
 
 The data of Olist is divided in multiple datasets for better understanding and organization. When working with transactional data, Entity-relationship diagrams (ERD) are used for describing and defining the data models (see example below). It illustrates the logical structure of the databases.
 
-Types of database relationships (1-to-1, 1-to-many,many-to-many) ...
-
 <!-- Image with source -->
 {{< source_figure src="/img/courses/dat_sci/02/transactional_data.png" caption="Example of an entity-relationship model" ref-link="https://support.bizzdesign.com/download/attachments/39814141/worddav928fdea0a6b423e337e8814628445af4.png" ref-title="bizzdesign" >}}
 
-Please refer to the following data schema when working with the Olist data. It shows with which key column we can combine the single databases. Example: To see which items are included in an order, you have to combine the `orders` database with the `order_items` via the column `order_id`.
+Please refer to the following data schema when working with the Olist data. It shows with which key column we can combine the single databases. Example: To see which items are included in an order, you have to combine `orders` with `order_items` via the column `order_id`.
 
 <!-- Image with source -->
 {{< source_figure src="/img/courses/dat_sci/02/olist_structure_01.png" caption="Data scheme of Olist" ref-link="https://www.kaggle.com/olistbr/brazilian-ecommerce" ref-title="kaggle" >}}
@@ -1022,7 +1021,7 @@ You have downloaded the data already in the last session. Let's start by creatin
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/jwarz/dat_sci_ss20/blob/master/02/diamonds4.rds?raw=true" target="_blank"><b>sales_analysis.R</b></a></div>
+  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/02/sales_analysis.R" target="_blank"><b>sales_analysis.R</b></a></div>
   <div id="clear"></div>
 </div>
 
@@ -1089,9 +1088,9 @@ The files are located at `/00_data/01_e-commerce/01_raw_data/`. To read tha data
 
 We need: 
 
-* orders
-* order_items
-* products
+* orders (for years)
+* order_items (for price)
+* products (for the categories)
 
 <pre><code class="r"># 2.0 Importing Files ----
 # A good convention is to use the csv file name and suffix it with tbl for the data structure tibble
@@ -1231,7 +1230,7 @@ Data manipulation & Cleaning. Usually a data scientist will spend most of his/he
 
 We want to analyze the sales by product category. To do it by main and by sub categories we have to separate product category name in product main and sub category name.
 
-Moreover, we want to report also the freight value as revenue. Therefore, we have to add the total price (sales price + freight value) to the data.
+Moreover, we want to report the freight value as revenue as well. Therefore, we have to add the total price (sales price + freight value) to the data.
 
 To fix those issues we are going to do a series of `dplyr` operations on the object `order_items_joined_tbl`:
 
@@ -1259,7 +1258,7 @@ order_items_wrangled_tbl <- order_items_joined_tbl %>%</br>
   select(-ends_with(".date")) %>%</br>
   # 5.3.3 Actually we need the column "product.id". Let's bind it back to the data
   bind_cols(order_items_joined_tbl %>% select(product.id)) %>% </br>
-  # 5.3.4 You can reorde the data by selecting the columns in your desired order.
+  # 5.3.4 You can reorder the data by selecting the columns in your desired order.
   # You can use select_helpers like contains() or everything()
     select(contains("timestamp"), contains(".id"),
          main.category.name, sub.category.name, price, freight.value, total.price,
@@ -1278,7 +1277,7 @@ Explanation of the last step:</br>
 <ul>
 <li><code>names()</code> returns all of the column names of a tibble as a character vector.</li> 
 <li>The dot <code>.</code> is used in dplyr pipes <code>%>%</code> to supply the incoming data in another part of the function. The dot enables passing the incoming tibble to multiple spots in the function.</li>
-<li><code>str_replace_all()</code> takes a "pattern" argument to find using Regular Expressions (RegEx). Takes a "replacement" argument to replace the pattern. Regex is used in programming to match strings. The period <code>.</code> is a special character.  It needs to be "escaped" using <code>"\\."</code></li>
+<li><code>str_replace_all()</code> takes a "pattern" argument to find a pattern using Regular Expressions (RegEx) and a "replacement" argument to replace the pattern. Regex is used in programming to match strings. The period <code>.</code> is a special character.  It needs to be "escaped" using <code>"\\.". We will use RegEx again in the next session.</code></li>
 </ul>
 </section>
 <!-- CODE (hide) -->
@@ -1429,7 +1428,7 @@ revenue_by_year_cat_main_tbl %>%</br>
     fill = "Main category" # Changes the legend name
   )</code></pre>
   
-{{< figure src="/img/courses/dat_sci/02/facet_wrap.png" caption="Revenue by year" >}}
+{{< figure src="/img/courses/dat_sci/02/facet_wrap.png" caption="Revenue by year and category" >}}
   
 </section>
 
@@ -1480,8 +1479,6 @@ Excel is great when others may want access to your data that are Excel users. Fo
 Periodically I'll have Code Checkpoints to to help if you get stuck on a code error or want to verify output in your data project. The Code Checkpoint contains working code up to this point.
 
 If you run into errors, you can download the code from the closest next Code Checkpoint, run it, and compare the results to yours.
-
-Attached, you will find a R file. Downloading the file contains the code up to this point.
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
