@@ -5,7 +5,7 @@ event_url: https://example.org
 
 showauthordate: false
 
-draft: true 
+draft: false 
 
 location: Source Themes HQ
 address:
