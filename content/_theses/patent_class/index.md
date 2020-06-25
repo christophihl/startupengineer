@@ -77,7 +77,6 @@ The focus of this thesis is on the analysis of a patent data set for predicting 
 * Willingness to cooperate with R&D of a leading global skin care company
 * Very good knowledge of English
 * Team player with an international mindset
-* Master’s degree with a focus on computer science, data science or reelated subjects
 
 ### Ideally:
 * Skills in R or Python
