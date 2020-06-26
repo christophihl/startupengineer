@@ -217,6 +217,8 @@ There are a handful of other packages that are not in the tidyverse, but are tid
 <pre><code class="r"># Loading data (can also be achieved by clicking on "Import Dataset > From Text (readr)" in the upper right corner)
 library(readr)
 dataset_tbl <- read_csv("data.csv")
+# In case of possible parsing errors, analyze them with problems()
+readr::problems(dataset_tbl)
 
 # Writing data
 write_csv(dataset_tbl, "data.csv")
@@ -597,7 +599,7 @@ diamonds5
 
 Often you’ll need to create some new variables or summaries, or maybe you just want to rename the variables or reorder the observations in order to make the data a little easier to work with. `dplyr` is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges. The following five key dplyr functions allow you to solve the vast majority of your data manipulation challenges:
 
-* **`filter()`** picks cases based on their values. So it can be used for selecting the relevant rows.
+* **`filter()`** picks cases based on their values (formula based filtering). Use **`slice()`** for filtering with row numbers. So both can be used for selecting the relevant rows.
 
 <!-- CODE (show) -->
 <pre><code class="r">library(ggplot2) # To load the diamonds dataset
@@ -613,7 +615,17 @@ diamonds %>%
 ## 2 0.290 Premium I     VS2      62.4    58   334  4.2   4.23  2.63
 ## 3 0.23  Ideal   J     VS1      62.8    56   340  3.93  3.9   2.46
 ## 4 0.31  Ideal   J     SI2      62.2    54   344  4.35  4.37  2.71
-## 5 0.32  Premium E     I1       60.9    58   345  4.38  4.42  2.68</pre></code>
+## 5 0.32  Premium E     I1       60.9    58   345  4.38  4.42  2.68
+
+diamonds %>% 
+   filter(cut == 'Ideal' | cut == 'Premium', carat >= 0.23) %>% 
+   slice(3:4)
+   
+## # A tibble: 2 x 10
+##   carat cut   color clarity depth table price     x     y     z
+##   <dbl> <ord> <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+## 1  0.23 Ideal J     VS1      62.8    56   340  3.93  3.9   2.46
+## 2  0.31 Ideal J     SI2      62.2    54   344  4.35  4.37  2.71</pre></code>
 
 <!-- INFOBOX -->
 <div id="header">Infobox</div>
@@ -1470,10 +1482,7 @@ Excel is great when others may want access to your data that are Excel users. Fo
 </div>
 
 
-**Code Checkpoint**
-
 ## <i class="fa fa-flag-checkered" aria-hidden="true"></i> Code Checkpoint
-
 
 
 Periodically I'll have Code Checkpoints to to help if you get stuck on a code error or want to verify output in your data project. The Code Checkpoint contains working code up to this point.

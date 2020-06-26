@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" viewBox="0 0 900 900" height="300" viewbox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <polygon class="hex" points="713.9,226 367.5,26 367.5,26 21.1,226 21.1,626 367.5,826 713.9,626" fill="#fa5" fill-opacity="0" stroke="#2dc6d6" stroke-width="30" transform="translate(10)"></polygon>
+    <text x="375" y="465" 
+        fill="white" 
+        font-family="Arial, Helvetica, sans-serif"
+        font-stretch="extra-expanded"
+        font-size="100"
+        text-anchor="middle">
+    jsonlite
+    </text>  
+</svg>
