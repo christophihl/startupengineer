@@ -104,9 +104,9 @@ Access to course notes & materials [**here**]({{< relref "_repos/dat_sci/_index.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | June 12nd | Introduction to R, RStudio IDE & GitHub |
-| 2 | tbd | Introduction to the tidyverse |
-| 3 | tbd | Data Acqusition |
+| 1 | June 12th | Introduction to R, RStudio IDE & GitHub |
+| 2 | June 19th | Introduction to the tidyverse |
+| 3 | June 26th | Data Acqusition |
 | 4 | tbd | Data Wrangling |
 | 5 | tbd | Data Visualization |
 | 6 | tbd | Fundamentals of Machine Learning |

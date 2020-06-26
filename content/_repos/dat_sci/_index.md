@@ -58,9 +58,9 @@ These tutorials are optional and you can choose whatever <a href="https://learn.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | June 12 | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci/01_intro_r.html" >}}) |
-| 2 | tbd | [Introduction to the tidyverse] |
-| 3 | tbd | Data Acqusition |
+| 1 | June 12th | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci/01_intro_r.html" >}}) |
+| 2 | June 19th | [Introduction to the tidyverse]({{< relref "_repos/dat_sci/02_intro_tv.html" >}}) |
+| 3 | June 26th | [Data Acqusition]({{< relref "_repos/dat_sci/03_dat_acq.html" >}}) |
 | 4 | tbd | Data Wrangling |
 | 5 | tbd | Data Visualization |
 | 6 | tbd | Fundamentals of Machine Learning |
