@@ -142,11 +142,11 @@ If you want to submit a case memo or solution, please `upload the pdf file to St
 
 1) For each major marketing medium used by eSig -- direct traffic, email, organic search, and paid ads -- how have conversion rates from accounts created to paid upgrades been trending? What hypotheses do you have about factors behind conversion rate trends?
 2) What might explain changes in the number of accounts created via direct traffic over time? In accounts created via organic search?
-3) Does eSig benefit from virality? What can the company do to increase virality?
+3) Does eSig benefit from virality? What is your estimate of the viral coefficient for an eSig Free account? What can the company do to increase virality?
 4) Have eSig's investments in paid marketing been yielding a good return?
-5) Contractors have produced a steady stream of 12 blog posts per week for eSig over the past year at a total cost of $5,000. Was this a good investment? What other factors, besides the data in the Excel Supplement, would you want to answer this question? Why?
-6) What is your current estimate of the lifetime value of an eSig customer? What’s the most we should be willing to spend to acquire a Pro customer?
-7) In the case, Tsai asks Dalton to project the number of Pro customers as of 3/31/16 if eSig spends nothing on paid marketing between 12/1/15 and 3/31/16. How would you go about formulating this projection? What additional research, analysis or tests would you do to make such a projection? Why?
+5) Contractors have produced a steady stream of 1-2 blog posts per week for eSig over the past year at a total cost of $5,000. Was this a good investment? What other factors, besides the data in the Excel Supplement, would you want to answer this question? Why?
+6) What is your current estimate of the lifetime value of an eSig Pro customer? What’s the most we should be willing to spend to acquire a Pro customer?
+7) In the case, Tsai asks Dalton to project the number of Pro customers as of 3/31/16 if eSig spends nothing on paid marketing between 12/1/15 and 3/31/16. How would you allocate $1 million in paid marketing budget across channels and months between 12/1/15 and 3/31/16? How would you go about formulating this projection? What additional research, analysis or experiments would you do to make such a projection? Why? 
 
 <br/>
 
