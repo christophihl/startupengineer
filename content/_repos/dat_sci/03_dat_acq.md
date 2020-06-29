@@ -1266,7 +1266,51 @@ bike_data_wrangled_tbl %>% glimpse()
 
 ***
 
-Now we have the URL for each individual bike. With that you could monitor the prices, availability etc. But I leave that up to you how to proceed.
+Now we have the URL for each individual bike and can get the stock availability for each size. Saving that data in a tibble for each obseravtion in the tibble itself and then using `unnest()` to create the wide data format is way easier then using `str_c()`,  `separate()` and `pivot_longer()`:
+
+<section class="hide">
+<pre><code class="r"># Create function
+get_sizes <- function(url) {</br>
+  json <- url %>%</br>
+    read_html() %>%</br>
+    # Get all 'script nodes' and convert to char
+    html_nodes(css = "script") %>%
+    as.character() %>%</br>
+    # Select the node, that contains 'window.deptsfra'
+    str_subset(pattern = "window.deptsfra") %>%</br>
+    # remove the chars that do not belong to the json
+    # 1. replace at the beginning everything until the first "{" with ""
+    gsub("^[^\\{]+", "", .) %>%
+    # 2. replace at the end everything after the last "}" with ""
+    gsub("[^\\}]+$", "", .) %>%</br>
+    # Convert from json to an r object and pick the relevant values
+    fromJSON(flatten = T) %>%
+    purrr::pluck("productDetail", "variationAttributes", "values", 2) %>%</br>
+    # select(id, value, available, availability)# %>%
+    select(id, value, availability.onlyXLeftNumber) %>%</br>
+    # Rename
+    rename(id_size = id) %>%
+    rename(size = value) %>%
+    rename(stock_availability = availability.onlyXLeftNumber) %>%</br>
+    # Conver to tibble
+    as_tibble()</br>
+}</br>
+# Pull url vector
+bike_url_color_vec <- bike_data_wrangled_tbl %>% 
+                        pull(url_color)</br>
+# Map
+bike_data_sizes_tbl <- bike_data_wrangled_tbl %>% 
+  mutate(size = map(bike_url_color_vec, get_sizes))</br>
+# Unnest
+bike_data_sizes_tbl <- bike_data_sizes_tbl %>% 
+                         select(-url) %>% 
+                         unnest(size)</br>
+saveRDS(bike_data_sizes_tbl, "bike_data_sizes_tbl.rds")</code></pre>
+</section>
+
+***
+
+The database has now already over 2000 observations. From here we could start monitoring prices and availablilty etc. But I leave that up to you how to proceed.
 
 This was an introduction to web scraping static sites by using the library `rvest`. However, many web pages are dynamic and use JavaScript to load their content. These websites often require a different approach to gather the data. If you take a look at the following screenshot, you see, that also the website of Canyon uses JavaScript libraries like JQuery or ReactJs or Angular to dynamically create the HTML data. It will only be downloaded if we click the 'View More Items' button. So we can not simply use rvest to scrap the data if we want zo analyze the entire content (in this case only a few bikes/frames are not loaded).
 

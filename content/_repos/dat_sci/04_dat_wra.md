@@ -14,4 +14,3 @@ menu:
 weight: 5
 ---
 
-Under construction. Coming soon …
