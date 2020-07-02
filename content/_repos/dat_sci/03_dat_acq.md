@@ -1156,12 +1156,20 @@ for (i in seq_along(bike_category_tbl$url)) {</br>
 
 ***
 
-* Step 2.4: We didn't get only the canyon bikes, but also other products listed below some bike categories. They have a different id length. Let's remove observations, where the length of the id is not 4.
+* Step 2.4: We didn't get only the canyon bikes, but also other products listed below some bike categories. They have a different id length. Let's remove observations, where the length of the id is not 4. And we got some duplicates. They have to be removed as well:
+
+<pre><code class="r"># Check for duplicates
+bike_data_cleaned_tbl %>%
+    group_by(id) %>%
+    filter(n()>1) %>%
+    View()</code></pre>
 
 <section class="hide">
 <pre><code class="r"># Filter non Canyon bikes (based on id length)
 bike_data_cleaned_tbl <- bike_data_tbl %>%
-                            filter(nchar(.$id) == 4)</code></pre>
+                            filter(nchar(.$id) == 4) %>%</br> 
+                            # And remove the duplicates based on the id
+                            distinct(id, .keep_all = T)</code></pre>
 </section>
 
 ***
