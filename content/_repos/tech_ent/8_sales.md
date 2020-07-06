@@ -29,7 +29,7 @@ This section on sales for startups provides resources and materials to support t
 
 * Sales Alignment wit Marketing
 
-{{< slideshare id="63541074" >}}
+{{< slideshare id="175588900" >}}
 
 
 <br/>
@@ -45,6 +45,3 @@ This section on sales for startups provides resources and materials to support t
 ## Bottoms-up Sales and Marketing Plan
 
 * [Template](https://www.dropbox.com/s/ccplac3ba34bhig/Bottoms%20Up%20Sales%20and%20Marketing%20Plan%20Template.xlsx?dl=0)
-
-
-
