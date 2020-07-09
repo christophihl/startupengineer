@@ -20,7 +20,7 @@ This section on financial projections & valuation provides resources and materia
 2. Forecast revenues.
 3. Forecast costs.
 4. Assess the financial attractiveness and capital needs of a startup.
-5. Determnine the financial value of a startup business.
+5. Determine the financial value of a startup business.
 
 
 <br/>
@@ -65,23 +65,11 @@ This section on financial projections & valuation provides resources and materia
 
 ## Financial Projections Template
 
-* [Template by Prof. Thomas Hellmann](https://www.dropbox.com/s/1whtk3gv6v7amqu/Financial_Projections_TH.xlsx?dl=0)
+* [Template by Prof. Thomas Hellmann](https://www.dropbox.com/s/whv56heecq97wb7/Financial_Projections_TH.xlsx?dl=0)
 
 
+<br/>
 
+## Startup Valuation
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Under Construction. Coming soon...
