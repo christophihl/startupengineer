@@ -41,6 +41,10 @@ The goal of a model is not to uncover truth, but to discover a simple approximat
 
 **A simple model**
 
+<a href="https://github.com/tidyverse/modelr" target="_blank">
+<img src="/img/icons/logo_modelr.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
+</a>
+
 Lets take a look at the simulated dataset `sim1`, included with the `modelr` package. It contains two continuous variables, x and y. Let’s plot them to see how they’re related:
 
 <pre><code class="r">library(tidyverse)
