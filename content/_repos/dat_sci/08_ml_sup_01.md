@@ -338,7 +338,7 @@ One of the huge advantages of linear regression is that it is very explainable. 
 
 Making a Linear Regression interpretable is very easy provided all of the predictors are categorical (meaning any numeric predictors need to be binned so their values are interpreted in the model as low/med/high). The categorical nature is necessary so we can create a plot like this:
 
-{{< figure src="/img/courses/dat_sci/08/model1.png" width="75%">}}
+{{< figure src="/img/courses/dat_sci/08/model1_lgs.png" width="75%">}}
 
 In the plot, each predictor has a coefficient that is in terms of the final output (i.e. price of the bike model). For a carbon Gravel Bike the linear equation becomes:
 
