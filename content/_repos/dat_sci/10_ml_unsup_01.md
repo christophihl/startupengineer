@@ -1122,7 +1122,7 @@ The following computation will take around 30-60 seconds (depending on your mach
 automl_models_h2o <- h2o.automl(
   x = x,
   y = y,
-  training_frame    = train_h20,
+  training_frame    = train_h2o,
   validation_frame  = valid_h2o,
   leaderboard_frame = test_h2o,
   max_runtime_secs  = 30,
