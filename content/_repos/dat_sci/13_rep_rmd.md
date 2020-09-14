@@ -495,7 +495,7 @@ Let's test our model with a completely new image. First, we have to load the ima
   </div>
     <div class="flex-item">
     <figure>
-      <img style="height:200px" src="/img/courses/dat_sci/13/dress-4.jpg" />
+      <img style="height:200px" src="/img/courses/dat_sci/13/dress-5.jpg" />
     </figure>
   </div>
 </div>
