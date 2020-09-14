@@ -20,7 +20,7 @@ In this short session, you will learn:
 
 * How to make an explainer using the `lime()` function for single and multiple employees
 * How to make an explanation using the `explain()` function for single and multiple employees
-* How to visualize model explanations using `plot_features()` (one or a small number of observations) and plot_explanations() (for many observations)
+* How to visualize model explanations using `plot_features()` (one or a small number of observations) and `plot_explanations()` (for many observations)
 
 ## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;Theory Input
 
@@ -32,7 +32,7 @@ Machine learning models are often considered “black boxes” due to their comp
 
 Moreover, it’s often important to understand the ML model that you’ve trained on a global scale, and also to zoom into local regions of your data or your predictions and derive local explanations. Global interpretations help us understand the inputs and their entire modeled relationship with the prediction target, but global interpretations can be highly approximate in some cases. Local interpretations help us understand model predictions for a single row of data or a group of similar rows.
 
-This session demonstrates how to use the lime package (`install.packages("lime")`) to perform local interpretations of ML models. This will not focus on the theoretical and mathematical underpinnings but, rather, on the practical application of using lime.
+This session demonstrates how to use the lime package (`install.packages("lime")`) to perform local interpretations of ML models. This session will not focus on the theoretical and mathematical underpinnings but, rather, on the practical application of using lime.
 
 The following video gives a good explanation of lime:
 
@@ -94,9 +94,9 @@ automl_leader <- h2o.loadModel("04_Modeling/h20_models/StackedEnsemble_BestOfFam
 automl_leader
 ```
 
-Let's move to the LIME section. To use lime we nee dour predictions.
+Let's move to the LIME section. To use lime we need our predictions.
 
-* `h2o.predict()` generate predictions using an H2O model and newdata as an H2O Frame. 
+* `h2o.predict()` generates predictions using an H2O model and newdata as an H2O Frame. 
 * `bind_cols()` binds two data frames together column-wise (makes wider).
 
 ```r
@@ -131,7 +131,7 @@ predictions_tbl
 
 Let's investigate the 1st employee, that did indeed leave the company:
 
-* `slice()´ selects specific rows by rownumber.
+* `slice()` selects specific rows by rownumber.
 
 ```r
 test_tbl %>%
@@ -189,8 +189,8 @@ LIME Algorithm 6 Steps:
 5. Fit a simple model to the permuted data, explaining the complex model outcome with m features from the permuted data weighted by its similarity to the original observation.
 6. Use the resulting feature weights to explain local behaviour.
 
-The data argument must match the format that the model requires to predict. Since h2o.predict() requires "x" to be without the target variable, we must remove.
-Use `lime::explain()` since `explain()` is a common function used in other packages. You will get errors if the incorrect explain() function is used.
+The data argument must match the format that the model requires to predict. Since `h2o.predict()` requires "x" to be without the target variable, we must remove.
+Use `lime::explain()` since `explain()` is a common function used in other packages. You will get errors if the incorrect `explain()` function is used.
 
 * `kernel_width`: Affects the lime linear model fit (R-squared value) and therefore should be tuned to make sure you get the best explanations.
 
