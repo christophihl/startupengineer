@@ -26,6 +26,8 @@ This introductory section covers three basic things:
 
 Here are a few good resources and inspirations about how to find startup ideas:
 
+* [20 Mental Models for Idea Generation](https://medium.com/@AliKAfridi/systematic-ideation-for-startups-venture-theses-77b672ac1ae1)
+
 * [Five Sources of Startup Ideas](https://hbr.org/2013/11/five-sources-of-start-up-ideas)
 
 * [How to Develop a Great Startup Idea](https://medium.com/swlh/how-to-develop-a-great-startup-idea-5e55f9fedbf2)
