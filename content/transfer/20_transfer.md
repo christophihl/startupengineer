@@ -65,7 +65,7 @@ subtitle = ""
 +++
 
 
-Here you find (yet imcomplete, but growing) repositories of topics, concepts, resources and tools we like to use in 
+Here you find (yet incomplete, but growing) repositories of topics, concepts, resources and tools we like to use in 
 * `workshops, trainings & talks`,
 * `joint master theses`,
 * `applied research` and
