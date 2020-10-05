@@ -61,15 +61,9 @@ They can be taken independently, but it is highly recommended to enroll sequenti
 
 ### Overview
 <details class="description" close><summary data-close="Show" data-open="Hide"></summary>
-Data Science is the science of extracting knowledge and information from data and requires competencies in both statistical and computer-based data analysis. This module is part of our complementary studies which are supposed to familiarize students with the entrepreneurial challenges of the future and expand their knowledge on important aspects of technology management.
-<br><br>
-In this module, students learn how to acquire, cleanse, and transform large amounts of data online using various techniques. The aim is to explore, visualize, and model the related data in a target-oriented way, using modern methods of machine learning. This is a class for programming with R. It is designed for non-programmers to provide a friendly introduction to the R language, with hands-on examples. Throughout the class, you will use your newfound skills to solve practical data science problems.
-<br><br>
+Business Analytics is an applied and interactive course program designed to provide you with a sound understanding of the constantly growing opportunities that business analytics experiences through modern approaches in data science and machine learning. In this course you will learn methods of descriptive, predictive and prescriptive analytics in order to approach critical business decisions based on data and to derive recommendations for action. Participants learn how to collect, cleanse and transform large amounts of data using various techniques. The aim is to specifically examine, visualize and model the associated data using modern machine learning methods.
 
-<b>Course structure</b>
-<br>
-Over the course of all class sessions, students will create a coding portfolio demonstrating a variety of data-analysis and communication skills. Each session will involve a small amount of lecturing on R concepts, and a large amount of time for students to complete assigned coding and analysis problems.
-
+During the course program, the participants apply the tools they have learned to practical data science problems from various management areas, creating a comprehensive and multifaceted application portfolio that demonstrates their data analysis and modeling skills. The programming language used is R, whereby the integration of Python into the workflow is also practiced. Programming knowledge is not required, but is of course an advantage. Each session will involve a small amount of lecturing on R concepts, and a large amount of time for students to complete assigned coding and analysis problems.
 </details>
 
 ***
@@ -83,11 +77,17 @@ After completing this module, students will be able to:
 * Obtain large amounts of data via APIs or web scraping from the Internet
 * Clean and transform data
 * Explore and visualize data in a goal-oriented way
-* Model data using modern machine learning techniques with respect to classifications and predictive predictions
-* Communicate data and results in the form of products and applications  
+* Model data using modern machine learning techniques
+* Communicate data and results in an actionable form of products, dashboards and applications  
 
 </details>
 
+
+***
+
+### Grading
+
+* Students are evaluated based on their solutions of challenges assigned in each session, which they continously document in their github lab journals.
 
 ***
 
