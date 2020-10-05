@@ -87,7 +87,7 @@ After completing this module, students will be able to:
 
 ### Grading
 
-* Students are evaluated based on their solutions of challenges assigned in each session, which they continously document in their github lab journals.
+* Students are evaluated based on their solutions of challenges assigned in each session, which they continuously document in their github lab journals.
 
 ***
 
