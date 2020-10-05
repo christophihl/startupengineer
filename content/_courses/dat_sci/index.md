@@ -1,14 +1,16 @@
 ---
-title: Data Science and Machine Learning for Managers
-subtitle: Business Analytics with R
-summary: 6 ECTS Module for Master Technology Management (NIT)
+title: Business Analytics with Data Science and Machine Learning
+subtitle: 3 complementary elective courses in "Business & Management"
+summary: 3 complementary elective courses in "Business & Management"
 authors:
 - ihl
-weight: 50
+- schwarz
+- mork
+weight: 20
 tags: []
 categories: []
-date: "2002-06-12T00:00:00Z"
-lastMod: "2020-06-12T00:00:00Z"
+date: "2020-10-05T00:00:00Z"
+lastMod: "2020-10-05T00:00:00Z"
 showauthordate: false
 featured: true
 draft: false
@@ -33,13 +35,18 @@ projects: []
 
 ### Credits
 
-* 6 ECTS module
+3 complementary courses with 2 ECTS each:
+* `Business Data Science Basics`
+* `Business Decisions with Machine Learning`
+* `Building Business Data Products`
+
+They can be taken independently, but it is highly recommended to enroll sequentially. 
 
 ***
 
 ### Target Audience
 
-* Master students in Technology Management (NIT) 
+* Master students with "Business & Management" courses in their curriculum
 * Students with a strong interest and motivation in acquiring the skills required for mastering the computational aspects of modern business analytics.
 
 ***
@@ -48,6 +55,7 @@ projects: []
 
 * {{% mention "ihl" %}}
 * {{% mention "schwarz" %}}
+* {{% mention "mork" %}}
 
 ***
 
@@ -60,7 +68,7 @@ In this module, students learn how to acquire, cleanse, and transform large amou
 
 <b>Course structure</b>
 <br>
-Over the course of seven days, each with two sessions, students will create a coding portfolio demonstrating a variety of data-analysis and communication skills. Each session will involve a small amount of lecturing on R concepts, and a large amount of time for students to complete coding and analysis problems assigned on a daily basis.
+Over the course of all class sessions, students will create a coding portfolio demonstrating a variety of data-analysis and communication skills. Each session will involve a small amount of lecturing on R concepts, and a large amount of time for students to complete assigned coding and analysis problems.
 
 </details>
 
@@ -101,20 +109,38 @@ Access to course notes & materials [**here**]({{< relref "_repos/dat_sci/_index.
 
 ### Preliminary Schedule
 
+<br>
+
+`Business Data Science Basics`
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | June 12th | Introduction to R, RStudio IDE & GitHub |
-| 2 | June 19th | Introduction to the tidyverse |
-| 3 | June 26th | Data Acqusition |
-| 4 | tbd | Data Wrangling |
-| 5 | tbd | Data Visualization |
-| 6 | tbd | Fundamentals of Machine Learning |
-| 7 | tbd | ML: Performance Measures |
-| 8 | tbd | Supervised ML: Classifaction |
-| 9 | tbd | Supervised ML: Regression |
-| 10 | tbd | Unsupervised ML: Clustering |
-| 11 | tbd | Unsupervised ML: Dimension Reduction  |
-| 12 | tbd | ML: Deep Learning |
-| 13 | tbd | Reporting with RMarkdown  |
-| 14 | tbd | Reporting with Shiny |
+| 1 | --- | Introduction to R, RStudio IDE & GitHub |
+| 2 | --- | Introduction to the tidyverse |
+| 3 | --- | Data Acquisition |
+| 4 | --- | Data Wrangling |
+| 5 | --- | Data Visualization |
+
+<br>
+
+`Business Decisions with Machine Learning`
+
+| Session | Date | Topic |
+| --- | --- | --- |
+| 6 | --- | Fundamentals of Machine Learning |
+| 7 | --- | Supervised ML: Regression (I) |
+| 8 | --- | Supervised ML: Regression (II) |
+| 9 | --- | Automated ML with H20 (I) | 
+| 10 | --- | Automated ML with H20 (II) |
+| 11 | --- | ML Performance Measures |
+
+
+<br>
+
+`Building Business Data Products`
+
+| Session | Date | Topic |
+| --- | --- | --- |
+| 12 | --- | Explainable ML with LIME |
+| 13 | --- | ML: Deep Learning |
+| 14 | --- | Reporting with RMarkdown, Shiny, Flexdashboard |

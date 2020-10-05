@@ -4,11 +4,11 @@ subtitle: Vorlesungsthemen des Instituts für Entrepreneurship `Unternehmertum` 
 summary: 6 ECTS Modul für Bachelor
 authors:
 - ihl
-weight: 40
+weight: 30
 tags: []
 categories: []
-date: "2020-02-28T00:00:00Z"
-lastMod: "2020-02-28T00:00:00Z"
+date: "2020-10-05T00:00:00Z"
+lastMod: "2020-10-05T00:00:00Z"
 showauthordate: false
 featured: false
 draft: false
