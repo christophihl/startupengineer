@@ -2,7 +2,6 @@
 title: Startup Engineering
 summary: Tools and Concepts to Systematically Develop New Ventures
 tags:
-- Demo
 date: "2020-06-10T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

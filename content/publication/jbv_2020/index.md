@@ -25,7 +25,12 @@ abstract: Entrepreneurs face the challenge of having to conform to gain legitima
 summary: We investigate how entrepreneurs should craft the narrative about their new ventures in order to position it successfully in the semantic space vis-à-vis incumbents and established market categories.
 
 tags:
-- Cultural Entrepreneurship, Categories, Narratives, Natural Language Processing
+- Cultural Entrepreneurship
+- Categories
+- Narratives
+- Legitimacy
+- Optimal Distinctiveness
+- Natural Language Processing
 featured: true
 
 links:
