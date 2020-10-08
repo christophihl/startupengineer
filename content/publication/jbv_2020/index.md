@@ -29,8 +29,8 @@ tags:
 featured: true
 
 # links:
-# - name: ""
-#   url: ""
+- name: Journal website
+  url: https://www.sciencedirect.com/science/article/pii/S0883902620306583?dgcid=coauthor
 url_pdf: https://www.dropbox.com/s/umolihjqry0dt7k/steam_paper_accept.pdf?dl=0
 url_code: ''
 url_dataset: ''
