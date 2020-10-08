@@ -28,7 +28,7 @@ tags:
 - Cultural Entrepreneurship, Categories, Narratives, Natural Language Processing
 featured: true
 
-# links:
+links:
 - name: Journal website
   url: https://www.sciencedirect.com/science/article/pii/S0883902620306583?dgcid=coauthor
 url_pdf: https://www.dropbox.com/s/umolihjqry0dt7k/steam_paper_accept.pdf?dl=0
