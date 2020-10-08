@@ -11,4 +11,4 @@ find ./public/_repos/gbwl -type f -name "index.html" -exec staticrypt {} $(echo 
 
 find ./public/_repos/dat_sci -maxdepth 1 -type f -name "index.html" -exec staticrypt {} $(echo "$password_encoded_2" | openssl enc -d -base64) -o {} -t "Access to Course Materials" -i "Enter the Course Password" \;
 
-find ./public/_repos/ent_fin -type f -name "index.html" -exec staticrypt {} $(echo "$password_encoded_3" | openssl enc -d -base64) -o {} -t "Access to Course Materials" -i "Enter the Course Password" \;
+find ./public/_repos/ent_fin -maxdepth 1 -type f -name "index.html" -exec staticrypt {} $(echo "$password_encoded_3" | openssl enc -d -base64) -o {} -t "Access to Course Materials" -i "Enter the Course Password" \;
