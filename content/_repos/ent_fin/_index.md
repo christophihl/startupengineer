@@ -21,11 +21,15 @@ menu:
     weight: 1
 ---
 
-## Course organization
 
-The first part of each class session will be an interactive lecture on the class topics below. The concepts and tools will be further discussed and exemplified with respect to a fictional startup (“WorkHorse”) that is continued throughout the entire course.
+## Materials
 
-In the second part of each class session, we will discuss a real company case study related to the respective topics. Students are supposed to have read (not solved) each case before class. We will briefly clarify questions about the case, then students will work in breakout sessions on an intial solution of the case (for approximately 1.5 hours) within teams of up to 5 students. These initial solutions are then (selectively) discussed among all partcipants. Based on the team solutions and joint discussions, students should then write up individual case solutions to be uploaded to Studip prior to the following week's class.
+Here you find the following materials:
+
+- Slides
+- Cases
+- Tools
+
 
 <br/>
 
