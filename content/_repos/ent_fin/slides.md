@@ -75,13 +75,8 @@ weight: 10
 
 <br/>
 
-## 11) Early Stage & Venture Capital Investors
+## 11) Venture Capital vs. Early Stage Investors
 
-
-
-<br/>
-
-## 12) Ecosystems
 
 
 

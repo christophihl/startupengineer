@@ -48,6 +48,5 @@ Here you find the following materials:
 | 8 | January 4th | Staged Financing |
 | 9 | January 11th | Debt Financing |
 | 10 | January 18th | Exit |
-| 11 | January 25th | Early Stage & Venture Capital Investors |
-| 12 | February 1st | Ecosystems |
+| 11 | January 25th | Venture Capital vs. Early Stage Investors |
 

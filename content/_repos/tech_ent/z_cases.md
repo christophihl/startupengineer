@@ -4,7 +4,7 @@ linktitle: Cases
 toc: true
 type: docs
 date: "2020-04-22T00:00:00Z"
-draft: false
+draft: true
 menu:
   tech_ent:
     weight: 20
