@@ -40,16 +40,16 @@ Hardina Smythe, a recent MBA graduate, has just joined a top-tier venture capita
 
 ## 2) Financial Planning
 
-**Case**: [GenapSys: Business Models for the Genome (HBS-5-816-035)](https://www.dropbox.com/s/83nybff6ecyqr0e/CampusHash.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/m2g7zxpfhit19ep/eSig.xlsx?dl=0)
+**Case**: [Workhorse Inc. (Da Rin, Hellmann, FEF 2020)](), [supplemental Excel worksheet]()
 
 `Abstract`:
-GenapSys, a California-based startup, was soon to release a new DNA sequencer that the company's founder, Hesaam Esfandyarpour, believed was truly revolutionary. The sequencer would be substantially less expensive-potentially costing just a few thousand dollars-and smaller than other sequencers, many of which were large devices costing tens of thousands or hundreds of thousands of dollars. GenapSys' device, named GENIUS, could also quickly generate large amounts of data, as it was capable of sequencing an entire human genome in less than eight hours. At this price, GenapSys' device would be attractive to customers that had been unable to afford sequencers, such as smaller laboratories or hospitals, and even expand the market to include industries such as agriculture and biofuels. As GenapSys came closer to releasing its product, Esfandyarpour and his Senior Director of Operations and Strategy, Leila Rastegar (HBS '11), sat down to decide which of three business models they would choose to bring this device to market. In the first model, the company would sell sequencers at a higher price to those entities which already purchased sequencers, primarily major research labs and pharmaceutical firms, but position its machine as a faster alternative to existing technologies. In the second model, GenapSys would sell its sequencer at a lower price but charge more for the cartridges necessary to run a sample, and earn its primary revenue from these cartridges. The third model would see GenapSys sell its device at or around cost, but use the data customers generated to create a proprietary database of genetic information. Customers could pay to access the database for research, to create genetic tests, or for many other purposes. GenapSys would also build an online store with the genetic tests customers created. Esfandyarpour's and Rastegar's decision would determine GenapSys' customer base and financial position for the coming years, and also impact development and capital needs of the firm. Which was the right model to bring the device to market and have a meaningful impact?
+tbd
 
 `Assignment Questions`:
-1) What do we know about the market for gene sequences? How do you expect the market to develop? What are the major uncertainties that must be taken into consideration?
-2) Evaluate the three strategic options Esfandyarpour and Rastegar are considering. What has to be true about the market, competitors and the company’s operating performance for each to be successful? What are the major risks for each? What has to go right for each of the strategies to work? What could go wrong and what are the consequences?
-3) Using the associated exercise, calculate the cumulative cash flow curves for each strategy using the assumptions in the exercise. Which strategy maximizes the value realized by the founders? Assess the additional implications of each of the cash flow curves. After analyzing the given cash flow curves, change the assumptions in the model to see if you can come up with a strategy that better harmonizes the goals of the founders with the likely expectations of investors. How would you describe your choice of strategy to your current and potential investors? 
-4) If given the opportunity to invest in any of the three strategies on attractive terms, which would you choose and why? What risks are you most concerned about?
+1) Use the the [`Financial Projections tool`](https://www.dropbox.com/s/v5bnoud3z2nbync/Financial-Projections-Model_%28blank%29.xlsx?dl=0)<br/> to complete the financial plan for Workhorse Inc.
+2) Assess the financial attractiveness of the venture.
+3) Determine the financial need of the venture.
+4) Prepare a few slides to pitch the financial plan to investors.
 
 <br/>
 
@@ -84,23 +84,72 @@ OutReach Networks is an unusual start-up company in that it was profitable early
 
 ## 5) Term Sheets
 
+**Case**: [OptiGuard, Inc.: Series A-Round Term Sheet (UV-7287)](https://www.dropbox.com/s/1s1x8ot7nbrpgal/OptiGuard.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/rrd5oelvdlj6jvz/OptiGuard.xlsx?dl=0)
 
+`Abstract`:
+OptiGuard. Inc. is a cybersecurity startup that is attempting raise a first round of venture financing in November 2015. To date, the firm has been unsuccessful in attracting funding from venture capitalists (VCs) and has instead relied on a small seed round from local investors. With funds running short, the startup is again attempting to raise funds from VCs. During this process, it receives a bridge loan from a reputable venture capital firm to tide it over until it can complete a Series A round with the same firm. In November 2015, it receives the terms for a $5 million Series A round. The adequacy of the offer in light of other comparable financing rounds should be evaluated. How will the terms affect the future performance and other aspects of the firm in light of the high likelihood of future financing rounds? Which features of the term sheet have the largest impact on the company's valuation and control? 
+
+`Assignment Questions`:
+1)	How attractive is the company to prospective investors?
+2)	Does the term sheet for the Series A round generally favour the entrepreneur (Mannix) or the VC investor (WVP)? Cite specific terms and features of the contract to support your opinion.
+3)	Before the Series A round, what is OptiGuard’s postmoney value? After the Series A round, what is the pre- and postmoney value if the offer is accepted as proposed?
+4)	What are the implications to WVP if another investor offers to provide OptiGuard an additional $7.8 million in equity after the Series A round at a price of $8.00 a share? At $3.00 a share?
+5)	What are the implications to WVP if it has a participating versus conventional liquidation preference and OptiGuard is sold for $15 million in three years?
+6)	If you were Mannix, would you accept WVP’s offer as proposed, or attempt to negotiate certain terms of the offer? If you choose to negotiate, what adjustments would you seek to make?
 
 <br/>
 
 ## 6) Structuring Deals
 
+**Case**: [StreetShares, Inc: Fintech Platform Lending Business (UV-7935)](https://www.dropbox.com/s/ps5txt2pyjbznxq/StreetShares.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/3n9aapofsuelfm5/StreetShares.xlsx?dl=0)
 
+`Abstract`:
+In November 2017, John Fruehwirth, managing partner of Rotunda Capital Partners (RCP), was considering the final terms of a Series B offer to StreetShares, Inc. (StreetShares), a fintech platform lending company whose principal business was lending to veteran-owned businesses. StreetShares was cofounded by Mark L. Rockefeller and Mickey Konson-both veterans themselves-in 2013, with the mission to provide better access to credit for veteran-run businesses. Since the financial crisis in 2008, banks had been reducing small-business lending, and the founders believed there were over a million veteran-run businesses that could benefit from better access to small loans and other forms of credit. When Fruehwirth first met the two founders in the spring of 2017, initially he thought the company was too early in its development to satisfy his investment criteria-but he was impressed with the company's management and mission. His view changed in October 2017, when StreetShares beat out Kabbage and several other online lenders to pilot a program for MILBANK, Inc., a large military affinity-focused bank, to offer small-business loans to its members. If successful, the pilot would significantly accelerate loan growth. But if the pilot failed, it would leave the firm with more expensive channels for growth and raise doubts about its small-loan business. Fruehwirth was contemplating a Series B-round investment of $20 million for 40% of the company's equity, but needed to determine whether the returns would satisfy his investors, knowing they were highly dependent on the success of the pilot. The case contains RCP's offering memorandum summarizing the merits of the StreetShares investment and Fruehwirth's proposed deal terms. Students are asked to qualitatively evaluate the potential benefits and risks of the investment from the perspective of RCP's investors, and to quantitatively calculate the investment's returns.
+
+Because the deal is earlier than those RCP usually invests in, Fruehwirth has asked for some protective terms-including, among others, seniority in liquidation over other round investors and a participating-preferred liquidation preference. To correctly calculate RCP's returns, students must incorporate the deal terms in their analysis.
+
+`Assignment Questions`:
+1)	How attractive is StreetShares as an investment opportunity? Waht are its strenghts and weaknesses?
+2)	What are some of the challenges online lenders face in competing and gaining share againbst incumbent banks? How well is StreetShares positioned relative to its competitors?
+3) 	Do the deal terms om page 8 of the case give Fruehwirth adequate rights to protect his interests as a minority investor?
+4) 	Complete the capitalization table for the Series B investment, assuming the deal closes on January 1, 2018.
+5) 	What are the expected IRR and CoC to RCP's investors before carried interest (i.e., their gross returns)?
+6)	All things conisidered, would you proceed with the investment in StreetShares?
 
 <br/>
 
 ## 7) Corporate Governance
+
+**Case**: [The Uber Board Deliberates: Is Good Governance Worth the Firing of an Entrepreneurial Founder? (CU-243)](https://www.dropbox.com/s/c6vw9t6zwt86icf/Uber.pdf?dl=0)
+
+`Abstract`:
+Uber Technologies, the privately held ride-sharing service and logistics platform, suffered a series of PR crises during 2017. As Uber's legal and PR turmoil increased, Travis Kalanick, cofounder and longtime CEO, was forced to resign as CEO, while retaining his directorship position on the nine-member board. His June 2017 resignation was meant to calm the uproar, but it instead increased investor uncertainty. In an effort to put the recent past behind the company, the directors of Uber scheduled a board meeting for October 3, 2017, to vote on critical proposals from new CEO Dara Khosrowshahi that were focused essentially on one question: How should Uber be governed now that Kalanick had stepped down as CEO? In this case, students are asked to consider the responsibilities of the Uber board of directors to the company's investors and shareholders, employees, management, and contractors as the company moves rapidly towards its long-awaited IPO. Included with the case text are board member roles for use in a role play simulating board discussion.
+
+`Assignment Questions`:
+1)	What is the problem, and is the board or Kalanick responsible?
+2)	Was Kalanick the right CEO for Uber considering the competitive strategy of the ride-sharing platform?
+3) 	What are the central governance issues for Uber?
+4) 	What is more important to Uber's success: Khosrowshahi's governance or Kalanick's entreprneurial spirit?
 
 
 <br/>
 
 ## 8) Staged Financing
 
+**Case**: [Fast Ion Battery (HBS 9-815-025)](https://www.dropbox.com/s/jjezygy9ey7y2ra/FastIon.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/lte2c6t85knlyag/FastIon.xlsx?dl=0)
+
+
+`Abstract`:
+A battery company is running out of money and has not met all of its milestones. The year is 2012 and many cleantech investors have decided to pull back. Fast Ion Battery needs a \$5 million bridge round, but one of its three investors has refused to continue funding the company. John Davidson, a partner at Ware Street Capital and the lead investor in Fast Ion, must decide whether or not to save the company.
+
+`Assignment Questions`:
+1)	Calculate the value of the abandonment option embedded in the Bridge round of funding by taking the following steps:<br/>
+	a.	Use the decision tree framework to map the capitalization table to potential outcomes for Fast Ion Battery. Assume the startup gets the projected pre-money valuation and investment amounts if it continues to raise capital and zero if it fails. What are the implied probabilities that it will achieve each round of funding?<br/>
+	b.	Use these probabilities to generate the expected value of two decision trees: one where the investors put in <span>$</span>5 million at the first stage and <span>$</span>25 million if the Bridge Round is successful. And a second where they put in the full <span>$</span>30 million in an all-or-nothing bet. In each case, use <span>$</span>175 million as the value if successful (pre-money of Series C) and assume the startup is worth zero if it fails.<br/>
+	c.	Given these assumptions, what is the value of the option to abandon the investment if Fast Ion continues to falter after the Bridge round of funding runs out?<br/>
+2)	What factors should John Davidson be considering as he decides whether or not to convince his partnership to continue funding Fast Ion Battery?
+3) 	Using the data in Exhibits 1, 2, 4 and 5 please build out a revised Cap Table for Fast Ion by including a <span>$</span>5 million bridge round at <span>$</span>1.50 per share. Calculate both the IRR and cash-on-cash multiple for each investor, assuming that Fast Ion gets funded and is able to exit in December 2016 at a <span>$</span>350 million valuation, and that WSC and Franconia Ventures split the investments Bluelock would have made). How does implementing “pay-to-play” impact returns?
+4)	If they decide to do the Bridge round, should they implement the pay-to-play clause?
 
 
 <br/>
@@ -108,23 +157,51 @@ OutReach Networks is an unusual start-up company in that it was profitable early
 ## 9) Debt Financing
 
 
+**Case**: [greeNEWit: Financing the Next Level (NA-0401)](https://www.dropbox.com/s/sqka7t4aifo1891/greeNEWit.pdf?dl=0)
+
+`Abstract`:
+greeNEWit is an energy audit company in Columbia, Maryland. The firm's three founders financed their start-up through loans from friends and family and an aggressive use of credit cards. Now the business is established, showing an exponential growth in revenues in a short time. Founder Josh Notes believes there is a billion dollar market available for the tak-ing in the area of smart grid integration. greeNEWit has been able to obtain limited bank financing but may need more to move into nationwide smart grid integration. Possibilities include additional bank loans, angel investors or venture capital, an equity partner, or perhaps generating additional revenues. A good estimate of firm value is needed in order to correctly price the share value. Josh needs to investigate all sources of financing before choosing the right next step for the firm.
+
+`Assignment Questions`:
+1) What are the options greeNEWit has available for generating revenue and what are you the advantages of each option? What recommendations do you have for growing greeNEWit's business from the options it has available to it? 
+2) What sources of funding did the co-owners of greeNEWit use in the past? What are some other sources of funding that the partners might want to look at in the future? What are the costs and benefits of each of the new types of financing listed in the case? 
+3) How should Josh, Zach and John analyse the current financial situation in order to arrive at how to proceed in the future? Does greeNEWit have a strong enough balance sheet and income statement to satisfy a bank's loan team? 
+4) How risky is greeNEWit? What beta would you assign to this company? What cost of capital should be used for analysing greeNEWit? 
+5) Should the partners seek equity financing? Use DCF and multiples analysis to determine fair value for the firm's equity. This also means that you will need to estimate an industry growth rate and sales forecast for greeNEWit.
+
 
 <br/>
 
 ## 10) Exits
 
+**Case**: [Glassdoor: The Fundraising Journey (E-673)](https://www.dropbox.com/s/ueytrp8z6ssnaij/Glassdoor_A.pdf?dl=0)
+
+`Abstract`:
+From his time as a young engineer at Microsoft in 1993, to the challenge of building Glassdoor from the ground up until it reached a valuation of over $1 billion, in 2018, Robert Hohman had come a long way. Now, from his spacious office with a picturesque view of Richardson Bay in Mill Valley, California, Hohman confronted one of the most important decisions of his life. Glassdoor, the company he cofounded in 2007 with Rich Barton and Tim Besse, had grown consistently over the years. It had been fueled by multiple different investors and VC firms, under various circumstances and deal structures. Like most start-up founders, they expected to take the IPO route at some point. Then, in early 2019, when it seemed that the company was finally ready to go public, one of its largest competitors placed an offer that was hard to refuse.
+
+
+`Assignment Questions`:
+1)	Write up an analysis of all pros and cons for both alternatives, IPO vs acquisition.
+2)	Reflect on the issues discussed in class.
+3)	Weigh these pros and cons to derive your own recommendation how Hohman should decide.
 
 
 <br/>
 
-## 11) Early Stage & Venture Capital Investors
+## 11) Venture Capital vs. Early Stage Investors
+
+**Case**: [PunchTab, Inc. (HBS 9-812-033)](https://www.dropbox.com/s/9b1kmrwtmtna68h/PunchTab.pdf?dl=0)
+
+`Abstract`:
+PunchTab was a Silicon Valley startup founded in 2011 that was developing an Internet-based turnkey customer loyalty program for website owners, mobile applications developers, and brands. Founder/CEO Ranjith Kumaran must make strategic decisions about how to fund PunchTab's early operations and growth given the many options available: individual angel investors, super angel funds, incubators, and seed funds inside traditional venture capital firms.
 
 
-
-<br/>
-
-## 12) Ecosystems
-
+`Assignment Questions`:
+1)	What is your evaluation of PunchTab’s business? Is it an attractive investment opportunity?
+2)	Do you think it makes sense to do a seed round financing? Why or why not?
+3)	What are the relevant differences between angels and venture capital investors that Ranjith Kumaran should consider when raising money for his venture? Who would be the best partner for him in the short term? Who would be the best partner in the long term?
+4)	How is a convertible note different from a traditional “priced” financing? Should Kumaran care whether the investors offer him one option or another?
+5)	What should Kumaran do?
 
 
 <br/>
