@@ -30,7 +30,7 @@ weight: 4
 
 Before you can start to work with your data within your R session, you need to get the data into your R workspace. Data acquisition is the process you use to import data into your R session so that it can be viewed, stored, and analyzed. We have discussed already how to import spreadsheet-like tables saved as csv or Excel files using `read_csv` and `read_excel`. Data and information on the web is growing exponentially. In today’s world, all the data that you need for your own personal projects is already available on the internet – the only thing limiting you from using it is the ability to access it. This session will cover how to connect to databases and how to acquire data from the web.
 
-Why web scrape in the context of Business Analytics
+Why web scrape in the context of Business Analytics?
 
 * The web is full of free & valuable data
 * Many companies put their information out there
@@ -51,7 +51,9 @@ Connecting to databases is kind of an advanced topic, but it is something which 
   <div id="clear"></div>
 </div>
 
-There are many different kinds of databases out there: MySQL, PostgreSQL, Redshift, etc. In the documentation you will find instructions for each of those. I will only demonstrate an example for SQLite with the *Chinook* database. The Chinook data model represents a digital media store, including tables for artists, albums, media tracks, invoices and customers. First you need to download the data:
+There are many different kinds of databases out there: MySQL, PostgreSQL, Redshift, etc. In the documentation you will find instructions for each of those. I will only demonstrate an example for SQLite with the *Chinook* database. The Chinook data model represents a digital media store, including tables for artists, albums, media tracks, invoices and customers. The database should be already present in your project folder.
+
+{{< figure src="/img/courses/dat_sci/03/chinook_scheme.png" caption="Chinook database model" >}}
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
@@ -61,7 +63,7 @@ There are many different kinds of databases out there: MySQL, PostgreSQL, Redshi
   <div id="clear"></div>
 </div>
 
-<a href="https://rvest.tidyverse.org/" target="_blank">
+<a href="https://github.com/r-dbi/RSQLite" target="_blank">
 <img src="/img/icons/logo_rsqlite.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
 </a>
 
@@ -69,9 +71,10 @@ To open up a connection you need the `RSQLite` package and the function `dbConne
 
 <!-- CODE (show) -->
 <pre><code class="r">library(RSQLite)
-con <- RSQLite::dbConnect(drv = SQLite(), dbname = "Chinook_Sqlite.sqlite")</code></pre>
+con <- RSQLite::dbConnect(drv    = SQLite(), 
+                          dbname = "00_data/02_chinook/Chinook_Sqlite.sqlite")</code></pre>
 
-So once we have that connection, we can use the function `dbListTables()` (from the `DBI` package) to return the names of the tables that are available in the database that you are connected to:
+Once we have that connection, we can use the function `dbListTables()` (from the `DBI` package) to return the names of the tables that are available in the database that you are connected to:
 
 <!-- CODE (show) -->
 <pre><code class="r">dbListTables(con)
@@ -86,7 +89,7 @@ To examine a table from a database, use `tbl()` from the `dplyr` package. Just p
 ## # Source:   table<Album> [?? x 3]
 ## # Database: sqlite 3.30.1 [~/Chinook_Sqlite.sqlite]
 ##    AlbumId Title                                 ArtistId
-##      <int> <chr>                                    <int>
+##      &lt;int&gt; &lt;chr&gt;                                    &lt;int&gt;
 ##  1       1 For Those About To Rock We Salute You        1
 ##  2       2 Balls to the Wall                            2
 ##  3       3 Restless and Wild                            2
@@ -102,6 +105,8 @@ To examine a table from a database, use `tbl()` from the `dplyr` package. Just p
 This is just a connection so far. If we want to pull the data into local memory we have to chain another function called `collect()`:
 
 <pre><code class="r">album_tbl <- tbl(con, "Album") %>% collect()</code></pre>
+
+If you are familiar with SQL, you can send queries like this: `x <- dbGetQuery(con, 'SELECT * FROM artists')`. 
 
 Once you are done with the data acquisition, disconnect from the database:
 
@@ -199,12 +204,28 @@ To make a request, first load the package `httr`, then call the `GET()` function
 * `403`: The client does not have access rights to the content.
 * `404`: Not found. The server can not find the requested resource.
 
+***
+
+<a href="https://glue.tidyverse.org/index.html" target="_blank">
+<img src="/img/icons/logo_glue.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
+</a>
+
+The `glue` package is fantastic for string interpolation. With glue you can concatenate strings and and other R objects. Glue does this by embedding R expressions in curly braces which are then evaluated and inserted into the argument string. Compared to equivalents like `paste()` and `sprintf()` it is easier to write and less time consuming to maintain. 
+
+```r
+library(glue)
+name <- "Fred"
+glue('My name is {name}.')
+## My name is Fred.
+```
+
+***
+
 <!-- CODE (show) -->
 <pre><code class="r">library(httr)
 resp <- GET("https://swapi.dev/api/people/1/")
 
 # Wrapped into a function
-library(glue)
 sw_api <- function(path) {
   url <- modify_url(url = "https://swapi.dev", path = glue("/api{path}"))
   resp <- GET(url)
@@ -222,15 +243,17 @@ resp
 Since the status code is 200, you can take the response returned by the API and turn it into a useful object. Most APIs will return most or all useful information in the response body, which is stored as raw Unicode (exactly the sequence of bytes that the web server sent) in `resp$content`. So in its current state, the data is not usable and needs to be converted. This particular response says that the data takes on a json format (`application/json`). To convert the raw Unicode into a character vector that resembles the JSON format, we can use `rawToChar()`:
 
 <!-- CODE (show) -->
-<pre><code class="r">rawToChar(resp)
-## "{\"name\":\"Luke Skywalker\",\"height\":\"172\",\"mass\":\"77\",\"hair_color\":
-## \"blond\",\"skin_color\":\"fair\",\"eye_color\":\"blue\",\"birth_year\":
-## \"19BBY\",\"gender\":\"male\",\"homeworld\":\"http://swapi.dev/api/planets/1/\",
-## \"films\":[\"http://swapi.dev/api/films/1/\",\"http://swapi.dev/api/films/2/\",
-## \"http://swapi.dev/api/films/3/\",\"http://swapi.dev/api/films/6/\"],\"species\":
-## [],\"vehicles\":[\"http://swapi.dev/api/vehicles/14/\",\"http://swapi.dev/api/
-## vehicles/30/\"],\"starships\":[\"http://swapi.dev/api/starships/12/\",
-## \"http://swapi.dev/api/starships/22/\"],\"created\":\"2014-12-09T13:50:
+<pre><code class="r">rawToChar(resp$content)
+## "{\"name\":\"Luke Skywalker\",\"height\":\"172\",\"mass\":\"77\",
+## \"hair_color\":\"blond\",\"skin_color\":\"fair\",\"eye_color\":
+## \"blue\",\"birth_year\":\"19BBY\",\"gender\":\"male\",\"homeworld\":
+## \"http://swapi.dev/api/planets/1/\",\"films\":
+## [\"http://swapi.dev/api/films/1/\",\"http://swapi.dev/api/films/2/\",
+## \"http://swapi.dev/api/films/3/\",\"http://swapi.dev/api/films/6/\"],
+## \"species\":[],\"vehicles\":[\"http://swapi.dev/api/vehicles/14/\",
+## \"http://swapi.dev/api/vehicles/30/\"],\"starships\":
+## [\"http://swapi.dev/api/starships/12/\",\"http://swapi.dev/api/
+## starships/22/\"],\"created\":\"2014-12-09T13:50:
 ## 51.644000Z\",\"edited\":\"2014-12-20T21:17:56.891000Z\",\"url\":
 ## \"http://swapi.dev/api/people/1/\"}"</code></pre>
 
@@ -260,7 +283,8 @@ Lists can be accessed in similar fashion to vectors. Integer, logical or charact
 
 ***
 
-<pre><code class="r">resp %>% 
+<pre><code class="r">library(jsonlite)
+resp %>% 
     .$content %>% 
     rawToChar() %>% 
     fromJSON()
@@ -320,8 +344,7 @@ response
 
 ***
 
-There are several R packages, that are simply wrappers around popular web APIs and free to use: `spotifyr`, `rtweet`,`quandlr`, `Rfacebook`, `googleflights`, `ìnstaR`, `Rlinkedin`, `RedditExtractoR`, and many many more ...
-
+There are several R packages, that are simply wrappers around popular web APIs and free to use: `spotifyr`, `rtweet`, `quandlr`, `Rfacebook`, `googleflights`, `ìnstaR`, `Rlinkedin`, `RedditExtractoR`, and many many more ...
 
 **Securing Credentials**
 
@@ -618,7 +641,7 @@ sp_500 <- url %>%
           # read the HTML from the webpage
           read_html() %>%
           # Get the nodes with the id
-          html_nodes(css = "#constituents")
+          html_nodes(css = "#constituents") %>%
           # html_nodes(xpath = "//*[@id='constituents']"") %>% 
           # Extract the table and turn the list into a tibble
           html_table() %>% 
@@ -823,6 +846,8 @@ There are many use cases: Contact Scraping, Monitoring/Comparing Prices, Scrapin
 
 In this case you learn how to web-scrape all bike models from the bike manufacturer Canyon to put into a strategic database with competitor product data. The individual product pages have a ton of valuable information. Hence, we have to find a way to get all individual product URLs to scrape the content for our strategic database.
 
+The following steps describe how you get the bike data, which you have already used in the last session.
+
 The starting point is the analysis of the URL, website and product structure of your competitor. The URL consists of a base path and several page paths:
 
 * URL Base path / Landing page / Home
@@ -937,7 +962,8 @@ bike_family_tbl
 ##         2 js-navigationList-MOUNTAIN    #js-navigationList-MOUNTAIN   
 ##         3 js-navigationList-EBIKES      #js-navigationList-EBIKES     
 ##         4 js-navigationList-HYBRID-CITY #js-navigationList-HYBRID-CITY
-##         5 js-navigationList-YOUNGHEROES #js-navigationList-YOUNGHEROES</code></pre>
+##         5 js-navigationList-YOUNGHEROES #js-navigationList-YOUNGHEROES<br>
+# The updated page has now also ids for CFR and GRAVEL. You can either include or remove them.</code></pre>
 </section>
 
 ***
@@ -949,7 +975,7 @@ bike_family_tbl
 # Combine all Ids to one string so that we will get all nodes at once
 # (seperated by the OR operator ",")
 family_id_css <- bike_family_tbl %>%
-                    .[["family_id"]] %>%
+                    pull(family_id) %>%
                     stringr::str_c(collapse = ", ")
 family_id_css
 ## "#js-navigationList-ROAD, #js-navigationList-MOUNTAIN, #js-navigationList-EBIKES, #js-navigationList-HYBRID-CITY, #js-navigationList-YOUNGHEROES"</br>
@@ -965,7 +991,7 @@ bike_category_tbl <- html_home %>%</br>
            enframe(name = "position", value = "subdirectory") %>%</br>
            # Add the domain, because we will get only the subdirectories
            mutate(
-              url = str_glue("https://www.canyon.com{subdirectory}")
+              url = glue("https://www.canyon.com{subdirectory}")
            ) %>%</br>
            # Some categories are listed multiple times.
            # We only need unique values
@@ -989,7 +1015,7 @@ bike_category_tbl
 
 ***
 
-* Step 2: Get URL for each individual bike of each product category
+* Step 2: Get URL for each individual bike of each product category. You might have to scroll down a bit (depending on the category).
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_02.png" caption="classes for the individual bike urls" >}}
 
@@ -1145,7 +1171,7 @@ bike_data_tbl <- tibble()</br>
 # Loop through all urls
 for (i in seq_along(bike_category_tbl$url)) {</br>
   bike_category_url <- bike_category_tbl$url[i]
-  bike_data_tbl         <- bind_rows(bike_data_tbl, get_bike_data(bike_category_url))</br>
+  bike_data_tbl     <- bind_rows(bike_data_tbl, get_bike_data(bike_category_url))</br>
   # Wait between each request to reduce the load on the server 
   # Otherwise we could get blocked
   Sys.sleep(5)</br>
@@ -1156,21 +1182,53 @@ for (i in seq_along(bike_category_tbl$url)) {</br>
 
 ***
 
-* Step 2.4: We didn't get only the canyon bikes, but also other products listed below some bike categories. They have a different id length. Let's remove observations, where the length of the id is not 4. And we got some duplicates. They have to be removed as well:
+* Step 2.4: CLEANING</br>
+We didn't get only the canyon bikes, but also other products listed below some bike categories. They have a different id length. Let's remove observations, where the length of the id is not 4. And we got some duplicates. They have to be removed as well:
 
 <pre><code class="r"># Check for duplicates
 bike_data_cleaned_tbl %>%
     group_by(id) %>%
     filter(n()>1) %>%
     View()</code></pre>
+    
+In this step we can also split the categories (seperator = Slash, when it is not preceded or followd by a whitespace. Negative look ahead and negative look behind.), rename some columns, fix some missing values, add the frame material and reorder the data.
 
 <section class="hide">
-<pre><code class="r"># Filter non Canyon bikes (based on id length)
-bike_data_cleaned_tbl <- bike_data_tbl %>%
-                            filter(nchar(.$id) == 4) %>%</br> 
-                            # And remove the duplicates based on the id
-                            distinct(id, .keep_all = T)</code></pre>
+<pre><code class="r"># Filter non Canyon bikes (based on id length) and add an empty column for the colors
+bike_data_cleaned_tbl <- bike_data_tbl %>%</br>
+    # Filter for bikes. Only unique ones
+    filter(nchar(.$id) == 4) %>%
+    filter(!(name %>% str_detect("Frameset"))) %>%
+    distinct(id, .keep_all = T) %>%</br>
+    # Split categories (Speedmax had to be treated individually)
+    mutate(category = replace(category, 
+           name == "Speedmax CF SLX 8.0 SL", "Road/Triathlon Bike/Speedmax")) %>%
+    separate(col = category, into = c("category_1",
+                                      "category_2",
+                                      "category_3"),
+             sep = "(?&lt;!\\s)/(?!\\s)") %>%</br>
+    # Renaming
+    rename("year"       = "dimension50") %>%
+    rename("model"      = "name") %>%
+    rename("gender"     = "dimension63") %>%
+    rename("price_euro" = "metric4") %>%</br>
+    # Fix years manually (have checked the website)
+    mutate(year = replace_na(year, 2021)) %>%</br>
+    # Add frame material
+    mutate(frame_material = case_when(
+                          model %>% str_detect(" CF ") ~ "carbon",
+                          model %>% str_detect(" CFR ") ~ "carbon",
+                          TRUE ~ "aluminium"
+                                      )
+          ) %>%</br>
+    # Select and order columns
+    select(-c(position, brand, variant, starts_with("dim"), 
+              quantity, feedProductId, price, metric5)) %>%
+    select(id, model, year, frame_material, price_euro, everything())</br>
+saveRDS(bike_data_cleaned_tbl, "bike_data_cleaned_tbl.rds")</code></pre>
 </section>
+
+Now you have the updated bike data from last session. In this case we don't only want the bike models, but also all the different available color variations for each bike.
 
 ***
 
@@ -1197,9 +1255,9 @@ get_colors <- function(url) {</br>
         str_subset(pattern = "window.deptsfra") %>%</br>
         # remove the chars that do not belong to the json
         # 1. replace at the beginning everything until the first "{" with ""
-        gsub("^[^\\{]+", "", .) %>%
+        str_replace("^[^\\{]+", "") %>%
         # 2. replace at the end everything after the last "}" with ""
-        gsub("[^\\}]+$", "", .) %>%</br>
+        str_replace("[^\\}]+$", "") %>%</br>
         # Convert from json to an r object and pick the relevant values
         fromJSON() %>%
         purrr::pluck("productDetail", "variationAttributes", "values", 1, "value") %>%</br>
@@ -1209,11 +1267,15 @@ get_colors <- function(url) {</br>
 # Run the function over all urls and add result to bike_data_cleaned_tbl
 # This will take a long time (~ 20-30 minutes) because we have to iterate over many bikes
 bike_data_colors_tbl <- bike_data_cleaned_tbl %>% 
-    mutate(color_variations = map(bike_url_vec, get_colors))</br>
+    mutate(colors = map(bike_url_vec, get_colors))</br>
 saveRDS(bike_data_colors_tbl, "bike_data_colors_tbl.rds")</code></pre>
 </section>
 
 ***
+
+<a href="https://davisvaughan.github.io/furrr/" target="_blank">
+<img src="/img/icons/logo_furrr.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
+</a>
 
 Processing large amounts of data with complex models can be time consuming. Historically, R has only utilized only one core, which makes it single-threaded. Which is a shame, because most computers are much more powerful than that. A computer with one processor may still have 4 cores (quad-core), allowing 4 computations to be executed at the same time. Much R code runs fast and fine on a single core or processor. But at times, it is good to utilize more than one core for the same calculation. This is called parallel processing instead of sequential computing. There are many libraries, that makes it pretty easy to use the power of multiple cores. With the package `furrr` the only step you have to do is adding the line `plan("multiprocess")` and replacing `map()` with `future_map()`.
 
@@ -1231,50 +1293,39 @@ bike_data_colors_tbl <- bike_data_cleaned_tbl %>%
 
 <section class="hide">
 <pre><code class="r"># 6.0 Create the urls for each variation</br>
-bike_data_wrangled_tbl <- bike_data_colors_tbl %>%</br>
-           # Remove unnecessary columns
-           select(name, id, category, dimension50, dimension63, price, metric4, description, url, color_variations) %>%</br>
-           # Rename some columns
-           rename(year = dimension50) %>%
-           rename(price_dollar = price) %>%
-           rename(price_euro = metric4) %>%</br>
-           # Make the data tyidy
-           # Use str_count(test$color_variations, ";") %>% max()
-           # 2 --> max 3 color variants
-           separate(col  = color_variations, 
-                    into = c("color1","color2","color3"), 
-                    sep  = ";", convert = T) %>%
-           pivot_longer(cols           = c("color1", "color2", "color3"), 
-                        names_to       = "color", 
-                        values_drop_na = T) %>%
-           select(-color) %>%
-           rename(color = value) %>%</br>
-           # Merge url and query parameters for the colors
-           mutate(url_color = glue("{url}?dwvar_{id}_pv_rahmenfarbe={color}")) %>%</br>
-           # Use library(stringi) to replace the last dash (HTLM format of a dash)
-           mutate(url_color = ifelse(grepl(pattern = "/", .$color),
-                                     stringi::stri_replace_last_fixed(.$url_color, 
-                                     "/", "%2F"),
-                                     .$url_color))</br>
-bike_data_wrangled_tbl %>% glimpse()
+bike_data_colors_tbl <- bike_data_colors_tbl %>%</br>
+  # Create entry for each color variation
+  unnest(colors) %>%</br>
+  # Merge url and query parameters for the colors
+  mutate(url_color = glue("{url}?dwvar_{id}_pv_rahmenfarbe={colors}")) %>%
+  select(-url) %>%</br>
+  # Use stringi to replace the last dash with the HTLM format of a dash (%2F)
+  # Only if there is a dash in the color column
+  mutate(url_color = ifelse(str_detect(colors, pattern = "/"),</br>
+                        # if TRUE --> replace      
+                        stringi::stri_replace_last_fixed(url_color, "/", "%2F"),</br>
+                        # ELSE --> take the original url
+                        url_color))</br>
+bike_data_colors_tbl %>% glimpse()
 ## Rows: 416
-## Columns: 11
-## $ name         <chr> "Aeroad CF SL Disc 8.0 AF", "Aeroad CF SLX Disc 9.0 ETAP",…
-## $ id           <chr> "2881", "2873", "2873", "2874", "2874", "2876", "2876", "2…
-## $ category     <chr> "Road/Race/Aeroad", "Road/Race/Aeroad", "Road/Race/Aeroad"…
-## $ year         <chr> "2020", "2020", "2020", "2020", "2020", "2020", "2020", "2…
-## $ dimension63  <chr> "unisex", "unisex", "unisex", "unisex", "unisex", "unisex"…
-## $ price_dollar <dbl> 4200.84, 6553.78, 6553.78, 6133.61, 6133.61, 4368.91, 4368…
-## $ price_euro   <chr> "4999.00", "7799.00", "7799.00", "7299.00", "7299.00", "51…
-## $ description  <chr> "Canyon - Experience WorldTour-level performance and sport…
-## $ url          <chr> "https://www.canyon.com/en-de/road-bikes/race-bikes/aeroad…
-## $ color        <chr> "BU/WH", "BK", "BU/WH", "BK", "BU/WH", "SR/BK", "BU/WH", "…
-## $ url_color    <chr> "https://www.canyon.com/en-de/road-bikes/race-bikes/aeroad…</code></pre>
+## Columns: 12
+## $ id               &lt;chr&gt; "2493", "2453", "2452", "2452", "2451", "2451",…
+## $ model            &lt;chr&gt; "Aeroad CFR Disc EPS", "Aeroad CFR Disc AXS",…
+## $ year             &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", …
+## $ frame_material   &lt;chr&gt; "carbon", "carbon", "carbon", "carbon", …
+## $ price_euro       &lt;chr&gt; "8999.00", "7999.00", "7499.00", "7499.00",…
+## $ category_1       &lt;chr&gt; "Road", "Road", "Road", "Road", "Road", …
+## $ category_2       &lt;chr&gt; "Race", "Race", "Race", "Race", "Race", …
+## $ category_3       &lt;chr&gt; "Aeroad", "Aeroad", "Aeroad", "Aeroad", …
+## $ gender           &lt;chr&gt; "unisex", "unisex", "unisex", "unisex", …
+## $ description      &lt;chr&gt; "Canyon - An aero road bike that combines …
+## $ color_variations &lt;chr&gt; "BK/BK", "BK/BK", "BK/BK", "BK/MC", "BK/BK",…
+## $ url_color        &lt;chr&gt; "https://www.canyon.com/en-de/road-bikes/…</code></pre>
 </section>
 
 ***
 
-Now we have the URL for each individual bike and can get the stock availability for each size. Saving that data in a tibble for each obseravtion in the tibble itself and then using `unnest()` to create the wide data format is way easier then using `str_c()`,  `separate()` and `pivot_longer()`:
+Now we have the URL for each individual bike and can get the stock availability for each size and color variation. It is the same process: Get the json data, save that data in a tibble/ list for each observation in the tibble itself and then using `unnest()` to create the wide data format. 
 
 <section class="hide">
 <pre><code class="r"># Create function
@@ -1288,9 +1339,9 @@ get_sizes <- function(url) {</br>
     str_subset(pattern = "window.deptsfra") %>%</br>
     # remove the chars that do not belong to the json
     # 1. replace at the beginning everything until the first "{" with ""
-    gsub("^[^\\{]+", "", .) %>%
+    str_replace("^[^\\{]+", "") %>%
     # 2. replace at the end everything after the last "}" with ""
-    gsub("[^\\}]+$", "", .) %>%</br>
+    str_replace("[^\\}]+$", "") %>%</br>
     # Convert from json to an r object and pick the relevant values
     fromJSON(flatten = T) %>%
     purrr::pluck("productDetail", "variationAttributes", "values", 2) %>%</br>
@@ -1307,11 +1358,10 @@ get_sizes <- function(url) {</br>
 bike_url_color_vec <- bike_data_wrangled_tbl %>% 
                         pull(url_color)</br>
 # Map
-bike_data_sizes_tbl <- bike_data_wrangled_tbl %>% 
+bike_data_sizes_tbl <- bike_data_colors_tbl %>% 
   mutate(size = map(bike_url_color_vec, get_sizes))</br>
 # Unnest
 bike_data_sizes_tbl <- bike_data_sizes_tbl %>% 
-                         select(-url) %>% 
                          unnest(size)</br>
 saveRDS(bike_data_sizes_tbl, "bike_data_sizes_tbl.rds")</code></pre>
 </section>
@@ -1349,16 +1399,6 @@ Things to keep in mind…
 * Code Changes: The underling HTML code of a web page can change anytime due to changes in design or for updating details. In such case, your script will stop working. It is important to identify changes to the web page and modify the web scraping script accordingly.
 * API Availability: In many cases, an API is made available by the service provider or organization. It is always advisable to use the API and avoid web scraping.
 * IP Blocking: Do not flood websites with requests as you run the risk of getting blocked. Have some time gap between request so that your IP address is not blocked from accessing the website. Of course, you can also learn to work your way around the anti scraping methods. However, you do need to understand the legality of scraping data and whatever you are doing with the scraped data: http://www.prowebscraper.com/blog/six-compelling-facts-about-legality-of-web-scraping/
-
-## <i class="fa fa-flag-checkered" aria-hidden="true"></i> Code Checkpoint
-
-<!-- DOWNLOADBOX -->
-<div id="header">Download</div>
-<div id="container">
-  <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://raw.githubusercontent.com/TUHHStartupEngineers/dat_sci_ss20/master/03/scrape_canyon.R" target="_blank"><b>scrape_canyon.R</b></a></div>
-  <div id="clear"></div>
-</div>
 
 ### Datacamp
 <div id="header">Recommended Datacamp courses</div>

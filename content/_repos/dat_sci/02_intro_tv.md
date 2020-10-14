@@ -229,7 +229,7 @@ write_rds(dataset_tbl, "data.rds")</code></pre>
 
 ### Tidy
 <a href="https://tidyr.tidyverse.org/" target="_blank">
-<img src="/img/icons/logo_tidyr.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
+<img src="/img/icons/logo_tidyr.png" align="right" style="width:200px; height:231px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
 </a>
 
 Reshaping your data with tidyr
@@ -594,7 +594,7 @@ diamonds5
 
 ### Transform
 <a href="https://dplyr.tidyverse.org/" target="_blank">
-<img src="/img/icons/logo_dplyr.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
+<img src="/img/icons/logo_dplyr.png" align="right" style="width:200px; height:231px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
 </a>
 
 Often you’ll need to create some new variables or summaries, or maybe you just want to rename the variables or reorder the observations in order to make the data a little easier to work with. `dplyr` is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges. The following five key dplyr functions allow you to solve the vast majority of your data manipulation challenges:
@@ -1188,7 +1188,7 @@ You should have a new variable called `bike_orderlines_joined_tbl` stored in you
 #### 5. Wrangling data
 Data manipulation & Cleaning. Usually a data scientist will spend most of his/her time at this section. These are the issues we are facing for our analysis:
 
-* Take a look at the column `category` (e.g. by running `bike_orderlines_joined_tbl$category`). Those entries seem to three categories separated by a `-`. For example there are Mountain - Trail - Spectral and Mountain - Trail - Neuron. You can print all unique entries, that start with `Mountain` with the following code chunk:
+* Take a look at the column `category` (e.g. by running `bike_orderlines_joined_tbl$category`). Those entries seem to have three categories separated by a `-`. For example there are Mountain - Trail - Spectral and Mountain - Trail - Neuron. You can print all unique entries, that start with `Mountain` with the following code chunk:
 
 <pre><code class="r">bike_orderlines_joined_tbl %>% 
   select(category) %>%
@@ -1208,9 +1208,7 @@ Data manipulation & Cleaning. Usually a data scientist will spend most of his/he
 ##  9 Mountain - Fat Bikes - Dude      
 ## 10 Mountain - Cross-Country - Exceed</code></pre>
 
-We want to analyze the sales by product family (= 1st category). To do it, we have to separate the column category in category.1, category.2 and category.3.
-
-Moreover, we want to report the total revenue per year and category as well. Therefore, we have to add the total price (sales price * quantity) to the data.
+We want to analyze the total sales by product family (= 1st category). To do it, we have to separate the column category in category.1, category.2 and category.3 and add the total price (sales price * quantity) to the data.
 
 To fix those issues we are going to do a series of `dplyr` operations on the object `bike_orderlines_joined_tbl`:
 
@@ -1460,9 +1458,22 @@ Excel is great when others may want access to your data that are Excel users. Fo
 
 Your challenges are pretty similar like the analyses we just did:
 
-1. Analyze the sales by location (state) with a bar plot. Since `state` and `city` are multiple features (variables), they should be split. Which states sells most of the bikes?
+1. Analyze the sales by location (state) with a bar plot. Since `state` and `city` are multiple features (variables), they should be split. Which state sells most of the bikes? Replace your `bike_orderlines_wrangled_tbl` object with the newly wrangled object (with the columns `state` and `city`).
 
-2. Analyze the sales by location and year (facet_wrap).
+Hint: Add `+ theme(axis.text.x = element_text(angle = 45, hjust = 1))` to your plotting code to rotate your x-axis labels. Probably you have to resize the viewer pane to show the entire plot. For your website, try different values for `fig.width` and `fig.height` in your markdown document:
+
+````r
+```{r plot, fig.width=10, fig.height=7}
+
+sales_by_loc_tbl %>%
+  
+  ggplot( ... ) +
+  ...
+
+```
+`````
+
+2. Analyze the sales by location and year (facet_wrap). Because there are 12 states with bike stores, you should get 12 plots.
 
 Insert your scripts and results into your website. It might be easier to move your entire project folder into your website folder.
 
