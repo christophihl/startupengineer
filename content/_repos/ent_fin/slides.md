@@ -37,22 +37,23 @@ weight: 10
 ## 4) Valuation Methods
 
 
-
 <br/>
 
-## 5) Term Sheets
 
 
-
-<br/>
-
-## 6) Structuring Deals
-
+## 5) Early Stage and Venture Capital Investors
 
 
 <br/>
 
-## 7) Corporate Governance
+## 6) Term Sheets
+
+
+
+<br/>
+
+## 7) Structuring Deals
+
 
 
 <br/>
@@ -66,17 +67,14 @@ weight: 10
 ## 9) Debt Financing
 
 
+<br/>
+
+## 10) Corporate Governance
+
 
 <br/>
 
-## 10) Exits
-
-
-
-<br/>
-
-## 11) Venture Capital vs. Early Stage Investors
-
+## 11) Exits
 
 
 

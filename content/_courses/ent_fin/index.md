@@ -135,14 +135,14 @@ Access to course notes & materials [**here**]({{< relref "_repos/ent_fin/_index.
 | 2 | November 9th | Financial Planning |
 | 3 | November 16th | Ownership and Returns |
 | 4 | November 23rd | Valuation Methods |
-| 5 | November 30th | Term Sheets| 
-| 6 | December 7th | Structuring Deals |
-| 7 | December 14th | Corporate Governance |
+| 5 | November 30th | Early Stage and Venture Capital Investors |
+| 6 | December 7th | Term Sheets| 
+| 7 | December 14th| Structuring Deals |
 | - | Dec 20th - Jan 3rd | Christmas Holiday |
 | 8 | January 4th | Staged Financing |
 | 9 | January 11th | Debt Financing |
-| 10 | January 18th | Exit |
-| 11 | January 25th | Venture Capital vs. Early Stage Investors |
+| 10 | January 18th | Corporate Governance |
+| 11 | January 25th | Exit |
 
 
 
