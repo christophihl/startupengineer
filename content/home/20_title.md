@@ -51,9 +51,9 @@ subtitle = ""
  css_class = ""
 +++
 
-### Welcome to the 
+### Welcome to the [**Hamburg University of Technology**](https://www.tu-hamburg.de)
 
-# **TUHH Institute of Entrepreneurship (TIE)**
+# **Institute of Entrepreneurship**
 
 ### Inaugurated in June 2014 &middot; Headed by [**Christoph Ihl**](/authors/ihl) &middot; Dedicated to three objectives:
 
