@@ -82,7 +82,24 @@ OutReach Networks is an unusual start-up company in that it was profitable early
 
 <br/>
 
-## 5) Term Sheets
+## 5) Early Stage and Venture Capital Investors
+
+**Case**: [PunchTab, Inc. (HBS 9-812-033)](https://www.dropbox.com/s/9b1kmrwtmtna68h/PunchTab.pdf?dl=0)
+
+`Abstract`:
+PunchTab was a Silicon Valley startup founded in 2011 that was developing an Internet-based turnkey customer loyalty program for website owners, mobile applications developers, and brands. Founder/CEO Ranjith Kumaran must make strategic decisions about how to fund PunchTab's early operations and growth given the many options available: individual angel investors, super angel funds, incubators, and seed funds inside traditional venture capital firms.
+
+
+`Assignment Questions`:
+1)	What is your evaluation of PunchTab’s business? Is it an attractive investment opportunity?
+2)	Do you think it makes sense to do a seed round financing? Why or why not?
+3)	What are the relevant differences between angels and venture capital investors that Ranjith Kumaran should consider when raising money for his venture? Who would be the best partner for him in the short term? Who would be the best partner in the long term?
+4)	How is a convertible note different from a traditional “priced” financing? Should Kumaran care whether the investors offer him one option or another?
+5)	What should Kumaran do?
+
+<br/>
+
+## 6) Term Sheets
 
 **Case**: [OptiGuard, Inc.: Series A-Round Term Sheet (UV-7287)](https://www.dropbox.com/s/1s1x8ot7nbrpgal/OptiGuard.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/rrd5oelvdlj6jvz/OptiGuard.xlsx?dl=0)
 
@@ -97,9 +114,10 @@ OptiGuard. Inc. is a cybersecurity startup that is attempting raise a first roun
 5)	What are the implications to WVP if it has a participating versus conventional liquidation preference and OptiGuard is sold for $15 million in three years?
 6)	If you were Mannix, would you accept WVP’s offer as proposed, or attempt to negotiate certain terms of the offer? If you choose to negotiate, what adjustments would you seek to make?
 
+
 <br/>
 
-## 6) Structuring Deals
+## 7) Structuring Deals
 
 **Case**: [StreetShares, Inc: Fintech Platform Lending Business (UV-7935)](https://www.dropbox.com/s/ps5txt2pyjbznxq/StreetShares.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/3n9aapofsuelfm5/StreetShares.xlsx?dl=0)
 
@@ -115,21 +133,6 @@ Because the deal is earlier than those RCP usually invests in, Fruehwirth has as
 4) 	Complete the capitalization table for the Series B investment, assuming the deal closes on January 1, 2018.
 5) 	What are the expected IRR and CoC to RCP's investors before carried interest (i.e., their gross returns)?
 6)	All things conisidered, would you proceed with the investment in StreetShares?
-
-<br/>
-
-## 7) Corporate Governance
-
-**Case**: [The Uber Board Deliberates: Is Good Governance Worth the Firing of an Entrepreneurial Founder? (CU-243)](https://www.dropbox.com/s/c6vw9t6zwt86icf/Uber.pdf?dl=0)
-
-`Abstract`:
-Uber Technologies, the privately held ride-sharing service and logistics platform, suffered a series of PR crises during 2017. As Uber's legal and PR turmoil increased, Travis Kalanick, cofounder and longtime CEO, was forced to resign as CEO, while retaining his directorship position on the nine-member board. His June 2017 resignation was meant to calm the uproar, but it instead increased investor uncertainty. In an effort to put the recent past behind the company, the directors of Uber scheduled a board meeting for October 3, 2017, to vote on critical proposals from new CEO Dara Khosrowshahi that were focused essentially on one question: How should Uber be governed now that Kalanick had stepped down as CEO? In this case, students are asked to consider the responsibilities of the Uber board of directors to the company's investors and shareholders, employees, management, and contractors as the company moves rapidly towards its long-awaited IPO. Included with the case text are board member roles for use in a role play simulating board discussion.
-
-`Assignment Questions`:
-1)	What is the problem, and is the board or Kalanick responsible?
-2)	Was Kalanick the right CEO for Uber considering the competitive strategy of the ride-sharing platform?
-3) 	What are the central governance issues for Uber?
-4) 	What is more important to Uber's success: Khosrowshahi's governance or Kalanick's entreprneurial spirit?
 
 
 <br/>
@@ -169,10 +172,28 @@ greeNEWit is an energy audit company in Columbia, Maryland. The firm's three fou
 4) How risky is greeNEWit? What beta would you assign to this company? What cost of capital should be used for analysing greeNEWit? 
 5) Should the partners seek equity financing? Use DCF and multiples analysis to determine fair value for the firm's equity. This also means that you will need to estimate an industry growth rate and sales forecast for greeNEWit.
 
+<br/>
+
+## 10) Corporate Governance
+
+**Case**: [The Uber Board Deliberates: Is Good Governance Worth the Firing of an Entrepreneurial Founder? (CU-243)](https://www.dropbox.com/s/c6vw9t6zwt86icf/Uber.pdf?dl=0)
+
+`Abstract`:
+Uber Technologies, the privately held ride-sharing service and logistics platform, suffered a series of PR crises during 2017. As Uber's legal and PR turmoil increased, Travis Kalanick, cofounder and longtime CEO, was forced to resign as CEO, while retaining his directorship position on the nine-member board. His June 2017 resignation was meant to calm the uproar, but it instead increased investor uncertainty. In an effort to put the recent past behind the company, the directors of Uber scheduled a board meeting for October 3, 2017, to vote on critical proposals from new CEO Dara Khosrowshahi that were focused essentially on one question: How should Uber be governed now that Kalanick had stepped down as CEO? In this case, students are asked to consider the responsibilities of the Uber board of directors to the company's investors and shareholders, employees, management, and contractors as the company moves rapidly towards its long-awaited IPO.
+
+`Assignment Questions`:
+1)	What is the problem, and is the board or Kalanick responsible?
+2)	Was Kalanick the right CEO for Uber considering the competitive strategy of the ride-sharing platform?
+3) 	What are the central governance issues for Uber?
+4) 	What is more important to Uber's success: Khosrowshahi's governance or Kalanick's entreprneurial spirit?
+
+
+
+
 
 <br/>
 
-## 10) Exits
+## 11) Exits
 
 **Case**: [Glassdoor: The Fundraising Journey (E-673)](https://www.dropbox.com/s/ueytrp8z6ssnaij/Glassdoor_A.pdf?dl=0)
 
@@ -184,24 +205,6 @@ From his time as a young engineer at Microsoft in 1993, to the challenge of buil
 1)	Write up an analysis of all pros and cons for both alternatives, IPO vs acquisition.
 2)	Reflect on the issues discussed in class.
 3)	Weigh these pros and cons to derive your own recommendation how Hohman should decide.
-
-
-<br/>
-
-## 11) Venture Capital vs. Early Stage Investors
-
-**Case**: [PunchTab, Inc. (HBS 9-812-033)](https://www.dropbox.com/s/9b1kmrwtmtna68h/PunchTab.pdf?dl=0)
-
-`Abstract`:
-PunchTab was a Silicon Valley startup founded in 2011 that was developing an Internet-based turnkey customer loyalty program for website owners, mobile applications developers, and brands. Founder/CEO Ranjith Kumaran must make strategic decisions about how to fund PunchTab's early operations and growth given the many options available: individual angel investors, super angel funds, incubators, and seed funds inside traditional venture capital firms.
-
-
-`Assignment Questions`:
-1)	What is your evaluation of PunchTab’s business? Is it an attractive investment opportunity?
-2)	Do you think it makes sense to do a seed round financing? Why or why not?
-3)	What are the relevant differences between angels and venture capital investors that Ranjith Kumaran should consider when raising money for his venture? Who would be the best partner for him in the short term? Who would be the best partner in the long term?
-4)	How is a convertible note different from a traditional “priced” financing? Should Kumaran care whether the investors offer him one option or another?
-5)	What should Kumaran do?
 
 
 <br/>

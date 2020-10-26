@@ -40,7 +40,7 @@ projects: []
 * `Business Decisions with Machine Learning`
 * `Building Business Data Products`
 
-They can be taken independently, but it is highly recommended to enroll sequentially. 
+They can be taken independently, but it is highly recommended to enroll consecutively. 
 
 ***
 

@@ -109,15 +109,7 @@ The instructions to the use of the MATCH tool provide a detailed guide to its pr
 
 <br/>
 
-## 7) Corporate Governance
-
-[`Voting`](https://www.dropbox.com/s/xohjmlbsj1efpkx/Voting.xlsx?dl=0)<br/>
-This tool provides some simple relationships that make clear the role of dual class shares and other deviations from the one-share-one-vote principle that we explain in the section on **Voting Rights**.
-
-
-<br/>
-
-## 8) Staged Financing
+## 7) Staged Financing
 
 [`Dilution with Staging`](https://www.dropbox.com/s/gx728w1od8jlejp/Dilution_with_Staging.xlsx?dl=0)<br/>
 This tool computes share ownership and dilution for entrepreneurs and investors across three rounds, building on materials we explain in the section on **Staged Investment and Owbership**. It also ncludes the possibility of down rounds. The tool can be extended to different types of investors and different price dynamics.
@@ -142,7 +134,7 @@ This tool allows to verify the effect of stock option pools on share ownership.
 
 <br/>
 
-## 9) Debt Financing
+## 8) Debt Financing
 
 [`Cost of Risky Debt`](https://www.dropbox.com/s/25yyvtjn32hyltg/Cost_of_risky_debt.xlsx?dl=0)<br/>
 This tool provides a detailed analysis of the material we explain in the section **The Fallacy That Debt is Cheaper Than Equity**. The tool allows to compare different combinations of debt and equity and shows why entrepreneurs often fail to understand the true cost of debt. The tool can be further developed by incorporating alternative assumptions on equity funding.
@@ -154,6 +146,17 @@ The tool provides a handy way to compute the cost of trade credit as a function 
 This tool compares the cost and other features of different sources of non-equity finance, building on materials we explain in the section on **Alternative Types of Debt**.
 
 <br/>
+
+
+
+## 9) Corporate Governance
+
+[`Voting`](https://www.dropbox.com/s/xohjmlbsj1efpkx/Voting.xlsx?dl=0)<br/>
+This tool provides some simple relationships that make clear the role of dual class shares and other deviations from the one-share-one-vote principle that we explain in the section on **Voting Rights**.
+
+
+<br/>
+
 
 ## 10) Exits
 
