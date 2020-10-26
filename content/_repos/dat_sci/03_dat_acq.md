@@ -37,7 +37,7 @@ Why web scrape in the context of Business Analytics?
 * Few companies have programs to actively retrieve & analyze competitor data
 * Companies that implement programs have a Competitive Advantage
 
-## <i class="fab fa-r-project" aria-hidden="true"></i> Theory Input
+## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;Theory Input
 
 ### Databases
 
@@ -840,7 +840,7 @@ If we go to the right side of the viewer, a button appears. Clicking it will sen
 ## "Stealth"     "aero silver"</code></pre>
 
 <!-- HEADING with Business-Logo -->
-## <i class="fas fa-user-tie"></i> Business case
+## <i class="fas fa-user-tie"></i> &nbsp;Business case
 
 There are many use cases: Contact Scraping, Monitoring/Comparing Prices, Scraping Reviews/Ratings etc.
 
