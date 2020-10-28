@@ -1072,9 +1072,10 @@ bike_json_tbl  <- html_bike_category %>%</br>
            # Set "not defined" and emtpy fields to NA (will be easier to work with)
            map(na_if, "not defined") %>%
            map(na_if, "") %>%</br>
-           # The class of the col dimension56 varies between numeric and char.
+           # The class of dimension56 and price varies between numeric and char.
            # This converts this column in each list to numeric
-           map(~mutate_at(.,"dimension56", as.numeric)) %>%</br>
+           # across allows to perform the same operation on multiple columns
+           map(~mutate(., across(c("dimension56","price"), as.numeric))) %>%</br>
            # Stack all lists together
            bind_rows() %>%
            # Convert to tibble so that we have the same data format
@@ -1114,7 +1115,7 @@ get_bike_data <- function(url) {</br>
              map(purrr::pluck, 2, "impressions") %>% 
              map(na_if, "not defined") %>%
              map(na_if, "") %>%
-             map(~mutate_at(.,"dimension56", as.numeric)) %>%
+             map(~mutate(., across(c("dimension56","price"), as.numeric))) %>%
              bind_rows() %>%
              as_tibble() %>%
              rowid_to_column(var='position') %>%
@@ -1247,7 +1248,7 @@ bike_url_vec <- bike_data_cleaned_tbl %>%
                       pull(url)</br>
 # Create function to get the variations
 get_colors <- function(url) {</br>
-    color_variations <- url %>%</br>
+    url %>%</br>
         read_html() %>%</br>
         # Get all 'script nodes' and convert to char
         html_nodes(css = "script") %>%
@@ -1261,9 +1262,7 @@ get_colors <- function(url) {</br>
         str_replace("[^\\}]+$", "") %>%</br>
         # Convert from json to an r object and pick the relevant values
         fromJSON() %>%
-        purrr::pluck("productDetail", "variationAttributes", "values", 1, "value") %>%</br>
-        # Paste all results into one string
-        str_c(collapse = ";")
+        purrr::pluck("productDetail", "variationAttributes", "values", 1, "value")
 }</br>
 # Run the function over all urls and add result to bike_data_cleaned_tbl
 # This will take a long time (~ 20-30 minutes) because we have to iterate over many bikes
