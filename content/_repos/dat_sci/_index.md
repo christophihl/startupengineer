@@ -21,6 +21,11 @@ menu:
     weight: 1
 ---
 
+{{% alert warning %}}
+The content of this class is designed for the dark theme of this website. If you have the bright theme activated, click the button furthest to the right of the navigation bar to change it.
+{{% /alert %}}
+
+
 ## General Course Description and Objectives
  
 This is a practical and skill-focused introduction to using open-source programming software (R, RStudio, and R Markdown) in several aspects of Business Analytics. The course covers basic scripting/coding in R, data-wrangling, advanced graphing and machine learning. You will learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools to apply machine learning techniques. There is no prerequisite knowledge needed in R Programming, data science or machine learning. The chapters in this course are arranged according to 14 practical projects with concrete examples. These examples are short, easy to understand, cover everything you need to know and provide you with immediate practice. Learning to program is like learning to speak another language — you progress faster when you practice.
