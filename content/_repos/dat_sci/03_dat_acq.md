@@ -302,7 +302,7 @@ Alternatively, the content of a API response can be accessed using the `content(
 
 The automatical parsing is convenient for interactive usage, but if you’re writing an API wrapper, it’s best to parse the text or raw content yourself and check it is as you expect.
 
-Let's try to query the API from aplhavantage to get the current quote for the stock of Wirecard (Ticker WDI.DE). To do so, take a look at the <a href="https://www.alphavantage.co/documentation/" target="_blank">documentation</a> and go to Quote Endpoint and take a look at the Examples. It seems to get the quote for Apple, we just have to replace the Ticker IBM with WDI.DE:
+Let's try to query the API from aplhavantage to get the current quote for the stock of Wirecard (Ticker WDI.DE). To do so, take a look at the <a href="https://www.alphavantage.co/documentation/" target="_blank">documentation</a> and go to the section Quote Endpoint and take a look at the Examples. The examples demonstrate how to query information for IBM (symbol=IBM). In order to get the quote for another company, we just have to replace the symbol with another stock ticker (WDI.DE in our case):
 
 <section class="hide">
 <pre><code class="r">resp <- GET('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=WDI.DE')
@@ -413,12 +413,14 @@ Unlike R, HTML is not a programming language. Instead, it’s called a markup la
 The simplest HTML document looks like this:
 
 <pre><code class="html">&lt;html&gt;
-&lt;head&gt;</code></pre>
+  &lt;head&gt;&lt;/head&gt;
+&lt;/html&gt;</code></pre>
 
 Although the above is a legitimate HTML document, it has no text or other content. If we were to save that as a `.html` file and open it using a web browser, we would see a blank page.
 Notice that the word html is surrounded by `<>` brackets, which indicates that it is a tag. To add some more structure and text to this HTML document, we could add the following:
 
-<pre><code class="html">&lt;head&gt;
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt;
 &lt;/head&gt;
 &lt;body&gt
   &lt;p&gt;Here's a paragraph of text!&lt;/p&gt;
@@ -1284,7 +1286,7 @@ Processing large amounts of data with complex models can be time consuming. Hist
 <pre><code class="r">library(furrr)     # Parallel Processing using purrr (iteration)
 plan("multiprocess")
 bike_data_colors_tbl <- bike_data_cleaned_tbl %>% 
-    mutate(color_variations = future_map(bike_url_vec, get_colors))</code></pre>
+    mutate(colors = future_map(bike_url_vec, get_colors))</code></pre>
 </section>
 
 ***
@@ -1319,7 +1321,7 @@ bike_data_colors_tbl %>% glimpse()
 ## $ category_3       &lt;chr&gt; "Aeroad", "Aeroad", "Aeroad", "Aeroad", …
 ## $ gender           &lt;chr&gt; "unisex", "unisex", "unisex", "unisex", …
 ## $ description      &lt;chr&gt; "Canyon - An aero road bike that combines …
-## $ color_variations &lt;chr&gt; "BK/BK", "BK/BK", "BK/BK", "BK/MC", "BK/BK",…
+## $ colors           &lt;chr&gt; "BK/BK", "BK/BK", "BK/BK", "BK/MC", "BK/BK",…
 ## $ url_color        &lt;chr&gt; "https://www.canyon.com/en-de/road-bikes/…</code></pre>
 </section>
 

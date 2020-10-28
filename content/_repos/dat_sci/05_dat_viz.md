@@ -422,7 +422,7 @@ revenue_by_year_tbl %>%
 
 {{< figure src="/img/courses/dat_sci/05/examples_9.png">}}
 
-### 3. Formatting
+### 4. Formatting
 
 > Cheatsheet Page 2
 
@@ -611,117 +611,82 @@ sales_by_year_category_1_tbl %>%
 
 **1. Colors**
 
-Working with colors. This will help you customize visualizations. 
+R comes with a bunch of named colors. These are just character names (e.g. "cornflowerblue"). You can use those named colors, but you can also use RGB (specifying color values as combinations of Red - Green - Blue, e.g. white = 255 - 255 - 255) and Hex codes (specifiyng color by hexidecimal, e.g. white = #FFFFFF).
 
-R comes with a bunch of named colors. These are just character names (e.g. "cornflowerblue").
-
-*1.1 Color Conversion* 
-
-```r
-# Named Colors. This returns a long list of colors that can be used by name
-colors()
-
+<figure id="11">
+ <figcaption style="text-align: left; margin-bottom: 5px">1.1 Color Conversion</figcaption>
+ <pre><code class="r"># Named Colors. This returns a long list of colors that can be used by name
+colors()</br>
 # Example
-sales_by_year_category_1_tbl %>%
-
-    ggplot(aes(year, revenue)) +
-
-    geom_col(fill = "slateblue")
-```
-
-You can named colors, but you can also use RGB (specifying color values as combinations of Red - Green - Blue, e.g. white = 255 - 255 - 255) and Hex codes (specifiyng color by hexidecimal, e.g. white = #FFFFFF).
-
-```r
+sales_by_year_category_1_tbl %>%</br>
+    ggplot(aes(year, revenue)) +</br>
+    geom_col(fill = "slateblue")</br>
 # To RGB
-col2rgb("slateblue")
-
-col2rgb("#2C3E50")
-
+col2rgb("slateblue")</br>
+col2rgb("#2C3E50")</br>
 # To HEX (this function should be provided to a geom)
-rgb(44, 62, 80, maxColorValue = 255)
-```
+rgb(44, 62, 80, maxColorValue = 255)</code></pre>
+</figure>
 
-*1.2 Color palettes*
-
-Colors that are typically work well together.
-
-```r
-### Brewer. Comes with basic R.
-#Primarly for discrete data.
-
+<figure id="12">
+ <figcaption style="text-align: left; margin-bottom: 5px">1.2 Color Palettes: Colors that are typically work well together.</figcaption>
+ <pre><code class="r">### Brewer. Comes with basic R.
+#Primarly for discrete data.</br>
 # We can use those palletes by just calling their names (e.g. "Blues")
 # Display the colors
 RColorBrewer::display.brewer.all() 
 # Get information
 RColorBrewer::brewer.pal.info
 # Get the HEX codes
-RColorBrewer::brewer.pal(n = 8, name = "Blues")[1]
-
+RColorBrewer::brewer.pal(n = 8, name = "Blues")[1]</br>
 # Example
-sales_by_year_category_1_tbl %>%
-
-    ggplot(aes(year, revenue)) +
-
-    geom_col(fill = RColorBrewer::brewer.pal(n = 8, name = "Blues")[8])
-
-
+sales_by_year_category_1_tbl %>%</br>
+    ggplot(aes(year, revenue)) +</br>
+    geom_col(fill = RColorBrewer::brewer.pal(n = 8, name = "Blues")[8])</br></br>
 ### Viridis
 viridisLite::viridis(n = 20)
-# The last two characters indicate the transparency (e.g. FF makes it 100% transparent)
-
+# The last two characters indicate the transparency (e.g. FF makes it 100% transparent)</br>
 # Example
-sales_by_year_category_1_tbl %>%
+sales_by_year_category_1_tbl %>%</br>
+    ggplot(aes(year, revenue)) +</br>
+    geom_col(fill = viridisLite::viridis(n = 20)[10])</code></pre>
+</figure>
 
-    ggplot(aes(year, revenue)) +
-
-    geom_col(fill = viridisLite::viridis(n = 20)[10])
-```
+***
 
 **2.0 Aesthetic Mappings**
 
 All possible aestehetics for each geom, can be found in the corresponding help pages (e.g. ?geom_point).
 
-*2.1 Color*
-
-* Used with line and points, Outlines of rectangular objects
-
-```r
-sales_by_year_category_1_tbl %>%
-
+<figure id="21">
+ <figcaption style="text-align: left; margin-bottom: 5px">2.1 Color: Used with line and points, Outlines of rectangular objects</figcaption>
+ <pre><code class="r">sales_by_year_category_1_tbl %>%</br>
     # Put the aes color mapping here, to apply it to geom_line and geom_point
-    ggplot(aes(year, revenue, color = category_1)) +
-    
+    ggplot(aes(year, revenue, color = category_1)) +</br>
     # Or you could do it locally in each geom 
     # (aes mapping only necessary if you map it to a column)
     geom_line(size = 1) + # geom_line(aes(color = category_1))
-    geom_point(color = "dodgerblue", size = 5)
-```
+    geom_point(color = "dodgerblue", size = 5)</code></pre>
+</figure>
 
-*2.2 Fill*
-
-* Used with fill of rectangular objects (stacked column chart in this case)
-
-```r
-sales_by_year_category_1_tbl %>%
-
+<figure id="22">
+ <figcaption style="text-align: left; margin-bottom: 5px">2.2 Fill: Used with fill of rectangular objects (stacked column chart in this case)</figcaption>
+ <pre><code class="r">sales_by_year_category_1_tbl %>%</br>
     ggplot(aes(year, revenue)) +
     geom_col(aes(fill = category_1)) 
-    # You could use color = ... to color the outlines
-```
-   
-*2.3 Size*
+    # You could use color = ... to color the outlines</code></pre>
+</figure>
 
-* Typically used with points
-
-```r
-sales_by_year_category_1_tbl %>%
-
-    ggplot(aes(year, revenue, size = revenue)) +
-    
+<figure id="23">
+ <figcaption style="text-align: left; margin-bottom: 5px">2.3 Size: Typically used with points</figcaption>
+ <pre><code class="r">sales_by_year_category_1_tbl %>%</br>
+    ggplot(aes(year, revenue, size = revenue)) +</br>
     # The local size overrides the global size
     geom_line(aes(color = category_1), size = 1) + 
-    geom_point()
-```
+    geom_point()</code></pre>
+</figure>
+
+***
 
 **3.0 Faceting**
 
@@ -740,6 +705,205 @@ sales_by_year_category_1_tbl %>%
     facet_wrap(~ category_1, ncol = 3, scales = "free_y") +
 
     expand_limits(y = 0)
+```
+
+***
+
+**4.0 Position Adjustments (Stack & Dodge)**
+
+Using the position argument to plot Stacked Bars & Side-By-Side Bars
+
+```r
+sales_by_year_category_1_tbl %>%
+
+    ggplot(aes(year, revenue, fill = category_1)) +
+    # geom_col(position = "stack") # default
+    # geom_col(position = "dodge")
+    geom_col(position = position_dodge(width = 0.9), color = "white")
+
+# Stacked Area
+
+sales_by_year_category_1_tbl %>%
+
+    ggplot(aes(year, revenue, fill = category_1)) +
+    geom_area(color = "black")
+```
+
+***
+
+**5.0 Scales (Colors, Fills, Axis)**
+
+*5.1 Plot Starting Points*
+
+* Continuous (e.g. Revenue): Changes color via gradient palette
+* Categorical (e.g. category_2): Changes color via discrete palette
+
+<figure id="511">
+ <figcaption style="text-align: left; margin-bottom: 5px">Plot 1: Faceted Plot, Color = Continuous Scale</figcaption>
+ <pre><code class="r">g_facet_continuous <- sales_by_year_category_1_tbl %>%</br>
+    ggplot(aes(year, revenue, color = revenue)) +
+    geom_line(size = 1) +
+    geom_point(size = 3) +</br>
+    facet_wrap(~ category_1, scales = "free_y") +
+    expand_limits(y = 0) +</br>
+    theme_minimal()</br>
+g_facet_continuous</code></pre>
+</figure>
+
+<figure id="512">
+ <figcaption style="text-align: left; margin-bottom: 5px">Plot 2: Faceted Plot, Color = Discrete Scale</figcaption>
+ <pre><code class="r">g_facet_discrete <- sales_by_year_category_1_tbl %>%</br>
+    ggplot(aes(year, revenue, color = category_1)) +
+    geom_line(size = 1) +
+    geom_point(size = 3) +</br>
+    facet_wrap(~ category_1, scales = "free_y") +
+    expand_limits(y = 0) +</br>
+    theme_minimal()</br>
+g_facet_discrete</code></pre>
+</figure>
+
+<figure id="513">
+ <figcaption style="text-align: left; margin-bottom: 5px">Plot 3: Stacked Area Plot</figcaption>
+ <pre><code class="r">g_area_discrete <- sales_by_year_category_1_tbl %>%</br>
+    ggplot(aes(year, revenue, fill = category_1)) +
+    geom_area(color = "black") +</br>
+    theme_minimal()</br>
+g_area_discrete</code></pre>
+</figure>
+
+From here on, we are going to use those plots for further formatting:
+
+*5.2 Scale Colors & Fills*
+
+Awesome way to show variation by groups (discrete) and by values (continuous).
+
+<figure id="521">
+ <figcaption style="text-align: left; margin-bottom: 5px">5.2.1 Color by Revenue (Continuous Scale)</figcaption>
+ <pre><code class="r">g_facet_continuous +</br>
+    # scale_color_continuous(
+    #     low   = "black",
+    #     high  = "cornflowerblue"
+    # )
+    # This is basically like adding a theme
+    scale_color_viridis_c(option = "E", direction = -1)</code></pre>
+</figure>
+
+<figure id="522">
+ <figcaption style="text-align: left; margin-bottom: 5px">5.2.2 Color by Category 1 (Discrete Scale)</figcaption>
+ <pre><code class="r">RColorBrewer::display.brewer.all()
+RColorBrewer::brewer.pal.info
+RColorBrewer::brewer.pal(n = 8, name = "Blues")</br>
+g_facet_discrete +
+    scale_color_brewer(palette = "Set3") +
+    theme_dark()</br>
+g_facet_discrete +
+    scale_color_viridis_d(option = "D") +
+    theme_dark()</code></pre>
+</figure>
+
+<figure id="523">
+ <figcaption style="text-align: left; margin-bottom: 5px">5.2.3 Fill by Category 1</figcaption>
+ <pre><code class="r">g_area_discrete +
+    scale_fill_brewer(palette = "Set3")</br>
+g_area_discrete +
+    scale_fill_viridis_d()</code></pre>
+</figure>
+
+*5.3 Axis Scales*
+
+<figure id="523">
+ <pre><code class="r">g_facet_continuous +
+    scale_x_continuous(breaks = seq(2015, 2019, by = 2)) +
+    scale_y_continuous(labels = scales::dollar_format(scale = 1e-6, 
+                                                      preix = "",
+                                                      suffix = "M"))</code></pre>
+</figure>
+
+***
+
+**6.0 Labels**
+
+```r
+g_facet_continuous +
+
+    scale_x_continuous(breaks = seq(2011, 2015, by = 2)) +
+    scale_y_continuous(labels = scales::dollar_format(scale = 1e-6, 
+                                                      suffix = "M")) +
+
+    geom_smooth(method = "lm", se = FALSE) +
+
+    scale_color_viridis_c() +
+    theme_dark() +
+
+    labs(
+        title = "Bike Sales",
+        subtitle = "Sales are trending up",
+        caption = "5-year sales trends\ncomes from our ERP Database",
+        x = "Year",
+        y = "Revenue (M €)",
+        color = "Revenue" # Legend text
+    )
+```
+
+***
+
+**7.0 Themes**
+
+Run `View(g_facet_continuous)` and expand `theme` to see which elements of the plots can be changed with `theme()`.
+
+```r
+g_facet_continuous +
+
+    theme_light() +
+
+    theme(
+        axis.text.x = element_text(
+            angle = 45,
+            hjust = 1
+        ),
+        strip.background = element_rect(
+            color = "black",
+            fill  = "cornflowerblue",
+            size  = 1
+        ),
+        strip.text = element_text(
+            face  = "bold",
+            color = "white"
+        )
+    )
+```
+
+***
+
+**8.0 Putting It All Together**
+
+```r
+sales_by_year_category_1_tbl %>%
+
+    ggplot(aes(year, revenue, fill = category_1)) +
+
+    geom_area(color = "black") +
+
+    # Scales
+    scale_fill_brewer(palette = "Blues", direction = -1) +
+    scale_y_continuous(labels = scales::dollar_format(prefix = "", suffix = " €")) +
+
+    # Labels
+    labs(
+        title = "Sales Over Year by Category 1",
+        subtitle = "Sales Trending Upward",
+        x = "",
+        y = "Revenue ($M)",
+        fill = "2nd Category",
+        caption = "Bike sales trends look strong heading into 2020"
+    ) +
+
+    # Theme
+    theme_light() +
+    theme(
+        title = element_text(face = "bold", color = "#08306B")
+
+    )
 ```
 
 #### Factors
