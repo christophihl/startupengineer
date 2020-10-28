@@ -111,8 +111,8 @@ This course module can prepare students for the following career paths:
 
 ### Time & Location
 
-* `Entrepreneurial Finance: Lecture`: Monday, 13.00 - 14.30, Buidling Q, Room 1.21
-* `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.30, Buidling Q, Room 1.21
+* `Entrepreneurial Finance: Lecture`: Monday, 10.30 - 12.00, Buidling Q, Room 1.21
+* `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.15, Buidling Q, Room 1.21
 
 {{% alert warning %}}
 As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.

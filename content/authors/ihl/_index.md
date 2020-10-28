@@ -75,7 +75,7 @@ social:
   link: "mailto:christoph.ihl@tuhh.de"
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/christoph-ihl-b87a8773/
+  link: https://www.linkedin.com/in/christoph-ihl
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/Ihluminate

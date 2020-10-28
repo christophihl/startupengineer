@@ -32,7 +32,7 @@ If you want to submit a case solution, please `upload the pdf file to Stud.IP in
 Hardina Smythe, a recent MBA graduate, has just joined a top-tier venture capital firm in the difficult environment of late 2010. Her first assignment is to evaluate three different deals and make recommendations to the partners. Each potential investment has strengths and drawbacks for both the firm and Hardina.
 
 `Assignment Questions`:
-1) How should Vine Brook evaluate each of these potential investments?
+1) How should Vine Brook evaluate each of these potential investments? Use the the [`The Venture Evaluation Matrix Spreadsheet Tool`](https://www.dropbox.com/s/pdtntrytcra7852/VEM-Spreadsheet-Tool.xlsx?dl=0) to structure your evaluation.
 2) How can Hardina best position Vine Brook and herself for success? Put yourself in Hardina Smythe's place and make a PowerPoint presentation that evaluates the three options and recommends one for further due diligence?
 
 
