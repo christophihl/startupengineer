@@ -1426,10 +1426,10 @@ Excel is great when others may want access to your data that are Excel users. Fo
   bike_orderlines_wrangled_tbl %>%
     write_xlsx("00_data/01_bike_sales/02_wrangled_data/bike_orderlines.xlsx")</br>
   # 7.2 CSV ----
-  order_items_wrangled_tbl %>% 
+  bike_orderlines_wrangled_tbl %>% 
     write_csv("00_data/01_bike_sales/02_wrangled_data/bike_orderlines.csv")</br>
   # 7.3 RDS ----
-  order_items_wrangled_tbl %>% 
+  bike_orderlines_wrangled_tbl %>% 
     write_rds("00_data/01_bike_sales/02_wrangled_data/bike_orderlines.rds")</code></pre>
 </section>
 

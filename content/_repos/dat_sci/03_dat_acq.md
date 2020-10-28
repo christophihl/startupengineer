@@ -1189,6 +1189,7 @@ We didn't get only the canyon bikes, but also other products listed below some b
 bike_data_cleaned_tbl %>%
     group_by(id) %>%
     filter(n()>1) %>%
+    arrange(id) %>% 
     View()</code></pre>
     
 In this step we can also split the categories (seperator = Slash, when it is not preceded or followd by a whitespace. Negative look ahead and negative look behind.), rename some columns, fix some missing values, add the frame material and reorder the data.
@@ -1355,7 +1356,7 @@ get_sizes <- function(url) {</br>
     as_tibble()</br>
 }</br>
 # Pull url vector
-bike_url_color_vec <- bike_data_wrangled_tbl %>% 
+bike_url_color_vec <- bike_data_colors_tbl %>% 
                         pull(url_color)</br>
 # Map
 bike_data_sizes_tbl <- bike_data_colors_tbl %>% 
@@ -1416,6 +1417,6 @@ This week there are two challenges for you:
 
 1. Get some data via an API. There are millions of providers, that offer API access for free and have good documentation about how to query their service. You just have to google them. You can use whatever service you want. For example, you can get data about your listening history (spotify), get data about flights (skyscanner) or just check the weather forecast.
 
-2. Scrape an ecommerce site of your choice and create a small database. It is not necessary to scrape different urls. If you want, you can only scrape one static site with multiple products listed. Your database should contain at least the product names and current prices. You can use amazon, competitors of Canyon or any other online shop.
+2. Scrape one of the competitor websites of canyon (either https://www.rosebikes.de/ or https://www.radon-bikes.de) and create a small database. The database should contain the model names, the categories and the prices of the bikes. 
 
-Upload your codes to your github page. Keep in mind that you should not publish your credentials.
+Upload your codes to your github page. Print the first 10 rows of your tibbles. Keep in mind that you should not publish your credentials.
