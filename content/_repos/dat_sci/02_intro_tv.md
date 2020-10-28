@@ -1220,9 +1220,7 @@ bike_orderlines_wrangled_tbl <- bike_orderlines_joined_tbl %>%
   # 5.1 Separate category name
   separate(col    = category,
            into   = c("category.1", "category.2", "category.3"),
-           sep    = " - ",
-           # Setting remove to FALSE to keep the original column
-           remove = FALSE) %>%</br>
+           sep    = " - ") %>%</br>
   # 5.2 Add the total price (price * quantity) 
   # Add a column to a tibble that uses a formula-style calculation of other columns
   mutate(total.price = price * quantity) %>%</br>
@@ -1237,12 +1235,12 @@ bike_orderlines_wrangled_tbl <- bike_orderlines_joined_tbl %>%
   bind_cols(bike_orderlines_joined_tbl %>% select(order.id)) %>% </br>
   # 5.3.4 You can reorder the data by selecting the columns in your desired order.
   # You can use select_helpers like contains() or everything()
-  select(contains("date"), contains("id"), contains("order"),
-         quantity, price, total.price,
-         everything()) %>%</br>
+  select(order.id, contains("order"), contains("model"), contains("category"),
+         price, quantity, total.price,
+         everything()) %>%/br>
   # 5.4 Rename columns because we actually wanted underscores instead of the dots
   # (one at the time vs. multiple at once)
-  rename(order_date = order.date) %>%
+  rename(bikeshop = name) %>%
   set_names(names(.) %>% str_replace_all("\\.", "_"))</pre></code class="r">
 
 Explanation of the last step:</br>

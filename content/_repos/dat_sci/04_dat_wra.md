@@ -16,7 +16,9 @@ weight: 5
 
 Data wrangling (Cleaning & Preparation) is the process of preparing data for analysis. It is important. It is the foundation of exploratory data analysis. We prepare data prior to modeling & machine learning. In this session we will repeat most of the data wrangling function we have discussed already earlier. After that the concept of data.table for handling big data will be introduced.
 
-## <i class="fab fa-r-project" aria-hidden="true"></i> Theory Input / Practice
+## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;Theory Input
+
+### Recap / Practice
 
 The functions for data wrangling you need to learn are integrated into 7 Key Topics:
 
@@ -28,108 +30,72 @@ The functions for data wrangling you need to learn are integrated into 7 Key Top
 6. `Combining` data (Joining & Binding)
 7. `Splitting & Combining` Column Text - Building features from text columns
 
-We have used already most of the functions in the last sessions. However, in order to learn them you need to practice them. Let's see if you can solve the following tasks. We start with data from the last Canyon case. I have scraped for you the frame sizes and the corresponding numbers of units on stock:
+We have used already most of the functions in the last sessions. However, in order to learn them you need to practice them. Let's see if you can solve the following tasks. We start with the `bikes_tbl` from the last Canyon case. First we have to replace the dots with the underscores and split the category column (same steps we have applied to `bike_orderlines_tbl`).
 
-<!-- DOWNLOADBOX -->
-<div id="header">Download</div>
-<div id="container">
-  <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/03/bike_data_sizes_tbl.rds" target="_blank"><b>bike_data_sizes_tbl.rds</b></a></div>
-  <div id="clear"></div>
-</div>
+<section class="hide">
+<pre><code class="r">bikes_tbl <- read_excel("00_data/01_bike_sales/01_raw_data/bikes.xlsx") %>%</br> 
+                  # Separate product category name in main and sub
+                  separate(col    = category,
+                           into   = c("category.1", "category.2", "category.3"),
+                           sep    = " - ") %>%</br>
+                  # Renaming columns
+                  set_names(names(.) %>% str_replace_all("\\.", "_"))</code></pre>
+</section>
 
-<pre><code class="r">bike_data_sizes_tbl <- readRDS("bike_data_sizes_tbl.rds")</br>
-bike_data_sizes_tbl %>% pull(category) %>% unique()
-##  [1] "Road/Race/Aeroad"                     "Road/Endurance/Endurace"
-##  [3] "E-Bikes/E-Road/Endurace:ON"           "Road/Gravel Bike/Grail"
-##  [5] "Road/Cyclocross/Inflite"              "Road/Triathlon Bike/Speedmax"
-##  [7] NA                                     "Road/Race/Ultimate"
-##  [9] "Mountain/Fat Bikes/Dude"              "Mountain/Cross-Country/Exceed"
-## [11] "Mountain/Trail/Grand Canyon"          "E-Bikes/E-Mountain/Grand Canyon:ON"
-## [13] "Mountain/Cross-Country/Lux"           "Mountain/Trail/Neuron"
-## [15] "E-Bikes/E-Mountain/Neuron:ON"         "Mountain/Downhill/Sender"
-## [17] "Mountain/Trail/Spectral"              "E-Bikes/E-Mountain/Spectral:ON"
-## [19] "Mountain/Dirt Jump/Stitched"          "Mountain/Enduro/Strive"
-## [21] "Mountain/Enduro/Torque"               "E-Bikes/E-Trekking/Pathlite:ON"
-## [23] "E-Bikes/E-Fitness/Roadlite:ON"        "Hybrid / City/City Bikes/Commuter"
-## [25] "Hybrid / City/Touring Bikes/Pathlite" "Hybrid / City/City Bikes/Roadlite"</br>
-# BEFORE WE START:
-# Let's separate the category column (Slash, when it is not preceded or 
-# followd by a whitespace. Negative look ahead and negative look behind.
-bike_data_sizes_tbl <- bike_data_sizes_tbl %>%</br>
-    separate(col = category, into = c("category_1", "category_2", "category_3"), 
-             sep = "(?&lt;!\\s)/(?!\\s)")</br>
-bike_data_sizes_tbl %>% glimpse()
-## Rows: 2,009
-## Columns: 15
-## $ name               &lt;chr&gt; "Aeroad CF SL Disc 8.0 AF", "Aeroad CF 
-## $ id                 &lt;chr&gt; "2881", "2881", "2881", "2881", "2881",
-## $ category_1         &lt;chr&gt; "Road", "Road", "Road", "Road", "Road",
-## $ category_2         &lt;chr&gt; "Race", "Race", "Race", "Race", "Race",
-## $ category_3         &lt;chr&gt; "Aeroad", "Aeroad", "Aeroad", "Aeroad",
-## $ year               &lt;chr&gt; "2020", "2020", "2020", "2020", "2020",
-## $ dimension63        &lt;chr&gt; "unisex", "unisex", "unisex", "unisex",
-## $ price_dollar       &lt;dbl&gt; 4200.84, 4200.84, 4200.84, 4200.84, 420 …
-## $ price_euro         &lt;dbl&gt; 4999, 4999, 4999, 4999, 4999, 4999, 499 …
-## $ description        &lt;chr&gt; "Canyon - Experience WorldTour-level  …
-## $ color              &lt;chr&gt; "BU/WH", "BU/WH", "BU/WH", "BU/WH", …
-## $ url_color          &lt;chr&gt; "https://www.canyon.com/en-de/road-b…
-## $ id_size            &lt;chr&gt; "50011969", "50011970", "50011971", …
-## $ size               &lt;chr&gt; "2XS", "XS", "S", "M", "L", "XL", "2XL",…
-## $ stock_availability &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 2, 4, 1, 1, 4, 0, …</code></pre>
+***
 
 #### 1. Working with columns (features)
 
 Functions: `select()`, `pull()`, `rename()` and `set_names()`
 
-1.1 Basic `select()`: Use select() in three different ways (column names, indices and select_helpers) to select the first 5 columns.
+1.1 Basic `select()`: Use select() in three different ways (column names, indices and select_helpers) to select the first 3 columns.
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    select(name, id, category_1, category_2, category_3)</br>
-bike_data_sizes_tbl %>%
-    select(1:5)</br>
-bike_data_sizes_tbl %>%
-    select(1:2, starts_with("category_"))</br></code></pre>
+<pre><code class="r">bikes_tbl %>%
+  select(bike_id, model, model_year)</br>
+bikes_tbl %>%
+  select(1:3)</br>
+bikes_tbl %>%
+  select(1, contains("model"))</code></pre>
 </section>
 
 ***
 
-1.2 `Reduce` columns: Select only name and price_euro:
+1.2 `Reduce` columns: Select only model and price:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    select(name, price_euro)</code></pre>
+<pre><code class="r">bikes_tbl %>%
+    select(model, price)</code></pre>
 </section>
 
 ***
 
-1.3 `Rearrange` columns: Put the last three columns in front (select_helpers):
+1.3 `Rearrange` columns: Put the category columns in front (select_helpers):
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    select(id_size:stock_availability, everything())</code></pre>
+<pre><code class="r">bikes_tbl %>%
+  select(category_1:category_3, everything())</code></pre>
 </section>
 
 ***
 
-1.4 `Select helpers`: Select all columns that start with price:
+1.4 `Select helpers`: Select all columns that start with model:
 
 <section class="hide">
 <pre><code class="r">?starts_with</br>
-bike_data_sizes_tbl %>%
-    select(starts_with("price"))</code></pre>
+bikes_tbl %>%
+  select(starts_with("model"))</code></pre>
 </section>
 
 ***
 
-1.5 Pull() `extracts` content of a tibble column. Calculate the mean auf price_euro:
+1.5 Pull() `extracts` content of a tibble column. Calculate the mean auf price:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    # select(price_euro) %>% # Does not work
-    pull(price_euro) %>%
-    mean()</code></pre>
+<pre><code class="r">bikes_tbl %>%
+  # select(price) %>% Does not work
+  pull(price) %>%
+  mean()</code></pre>
 </section>
 
 ***
@@ -138,41 +104,41 @@ bike_data_sizes_tbl %>%
 
 <section class="hide">
 <pre><code class="r">?select_if</br>
-bike_data_sizes_tbl %>%
+bikes_tbl %>%
     select_if(is.character)</br>
-bike_data_sizes_tbl %>%
+bikes_tbl %>%
     select_if(~ is.numeric(.))</br>
-bike_data_sizes_tbl %>%
+bikes_tbl %>%
     select_if(~ !is.numeric(.))</code></pre>
 </section>
 
 ***
 
-1.7 Select name, category_1, category_2, category_3, price_euro and rename them to Model, Bike Family, Ride Style, Bike Category, Price in Euro. `rename()`: One column at a time. 
+1.7 Select model, category_1, category_2, category_3, price and rename them to Model, Bike Family, Ride Style, Bike Category, Price in Euro. Use `rename()` to rename one column at a time. 
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    select(name, category_1, category_2, category_3, price_euro) %>% 
+<pre><code class="r">bikes_tbl %>%
+    select(model, category_1, category_2, category_3, price) %>% 
     rename(
-        Model           = name,
+        Model           = model,
         `Bike Family`   = category_1,
         `Ride Style`    = category_2,
         `Bike Category` = category_3,
-        `Price in Euro`= price_euro
+        `Price in Euro` = price
     )</code></pre>
 </section>
 
 ***
 
-1.8 Select name, category_1, category_2, category_3, price_euro and rename them to Model, Bike Family, Ride Style, Bike Category, Price in Euro. `set_names()`: All columns at once. 
+1.8 Select model, category_1, category_2, category_3, price and rename them to Model, Bike Family, Ride Style, Bike Category, Price in Euro. Use `set_names()` to rename all columns at once. 
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    select(name, category_1, category_2, category_3, price_euro) %>% 
+<pre><code class="r">bikes_tbl %>%
+    select(model, category_1, category_2, category_3, price) %>% 
     set_names(c("Model", "Bike Family", "Ride Style", "Bike Category", "Price in Euro"))</br>
 # An example using str_replace
-bike_data_sizes_tbl %>%
-    select(name, category_1, category_2, category_3, price_euro) %>% 
+bikes_tbl %>%
+    select(model, category_1, category_2, category_3, price) %>% 
     set_names(names(.) %>% str_replace("_", " ") %>% str_to_title())</code></pre>
 </section>
 
@@ -182,45 +148,45 @@ bike_data_sizes_tbl %>%
 
 Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
 
-2.1 `Arranging` with arrange() and desc(): Select name and price_euro and arrange the data by price_euro in a descending order:
+2.1 `Arranging` with arrange() and desc(): Select model and price and arrange the data by price in a descending order:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    select(name, price_euro) %>%
-    arrange(desc(price_euro)) %>%
+<pre><code class="r">bikes_tbl %>%
+    select(model, price) %>%
+    arrange(desc(price)) %>%
     View()</code></pre>
 </section>
 
 ***
 
 2.2 Filtering rows. Formula based with `filter()`:</br>
-2.2.1 Filter rows, where price_euro is greater than the mean of price_euro:
+2.2.1 Filter rows, where price is greater than the mean of price:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    select(name, price_euro) %>%
-    filter(price_euro > mean(price_euro))</code></pre>
+<pre><code class="r">bikes_tbl %>%
+    select(model, price) %>%
+    filter(price > mean(price))</code></pre>
 </section>
 
 ***
-2.2.2 Filter rows, where price_euro is greater 5000 or lower 1000 and sort by descending price_euro:
+2.2.2 Filter rows, where price is greater 5000 or lower 1000 and sort by descending price:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    select(name, price_euro) %>%
-    filter((price_euro > 5000) | (price_euro < 1000)) %>%
-    arrange(desc(price_euro)) %>%
-    View()</code></pre>
+<pre><code class="r">bikes_tbl %>%
+  select(model, price) %>%
+  filter((price > 5000) | (price < 1000)) %>%
+  arrange(desc(price)) %>%
+  View()</code></pre>
 </section>
 
 ***
-2.2.3 Filter rows, where price_euro is greater 6000 and the name contains "Strive" (`str_detect()`):
+2.2.3 Filter rows, where price is greater 5000 and the model contains "Endurace" (`str_detect()`):
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    select(name, price_euro) %>%
-    filter(price_euro > 6000,
-           name %>% str_detect("Strive")
+<pre><code class="r">bikes_tbl %>%
+    select(model, price) %>%
+    filter(price > 5000,
+           model %>% str_detect("Endurace")
            )</code></pre>
 </section>
 
@@ -228,7 +194,7 @@ Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
 2.2.4 Filter rows, where the category_1 is "Hybrid / City" or "E-Bikes". Use the `%in%` operator:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
+<pre><code class="r">bikes_tbl %>%
     filter(category_1 %in% c("Hybrid / City", "E-Bikes"))</code></pre>
 </section>
 
@@ -236,7 +202,7 @@ Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
 2.2.5 Filter rows, where the category_2 is "E-Mountain":
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
+<pre><code class="r">bikes_tbl %>%
     filter(category_2 == "E-Mountain")</code></pre>
 </section>
 
@@ -244,31 +210,31 @@ Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
 2.2.6 Negate 2.2.4 and 2.2.5
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
+<pre><code class="r">bikes_tbl %>%
     filter(category_2 != "E-Mountain")</br>
-bike_data_sizes_tbl %>%
+bikes_tbl %>%
     filter(!(category_2 %in% c("Hybrid / City", "E-Bikes")))</code></pre>
 </section>
 
 ***
 2.3 Filtering rows with row number(s) using `slice()`:</br>
-2.3.1 Arrange by price_euro (1. ascending and 2. descending) and filter the first 5 rows:
+2.3.1 Arrange by price (1. ascending and 2. descending) and filter the first 5 rows:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    arrange(desc(price_euro)) %>%
+<pre><code class="r">bikes_tbl %>%
+    arrange(desc(price)) %>%
     slice(1:5)</br>
-bike_data_sizes_tbl %>%
-    arrange(price_euro) %>%
+bikes_tbl %>%
+    arrange(price) %>%
     slice(1:5)</code></pre>
 </section>
 
 ***
-2.3.2 Arrange by price_euro (descending) and filter the last 5 rows (use `nrow()`):
+2.3.2 Arrange by price (descending) and filter the last 5 rows (use `nrow()`):
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    arrange(desc(price_euro)) %>%
+<pre><code class="r">bikes_tbl %>%
+    arrange(desc(price)) %>%
     slice((nrow(.)-4):nrow(.))</code></pre>
 </section>
 
@@ -276,84 +242,90 @@ bike_data_sizes_tbl %>%
 2.4 `distinct()`: Unique values. List unique values for category_1, for a combination of category_1 and category_2 and for combination of category_1, category_2 and category_3:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
+<pre><code class="r">bikes_tbl %>%
     distinct(category_1)</br>
-bike_data_sizes_tbl %>%
+bikes_tbl %>%
     distinct(category_1, category_2)</br>
-bike_data_sizes_tbl %>%
+bikes_tbl %>%
     distinct(category_1, category_2, category_3)</code></pre>
 </section>
 
 ***
 #### 3. Performing feature-based calculations
 
-Functions: `mutate()`, `case_when()`
+Functions: `mutate()`, `case_when()`. Let's load `bike_orderlines_tbl`.
 
-3.1 `Adding Columns`. Select name, size, stock_availability, price_euro and add total_stock_value, that is stock_availability * price_euro. Assign this to a tibble named bike_data_stock_tbl:
+```r
+bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_orderlines.rds")
+```
+
+3.1 `Adding Columns`. Add the column "freight_costs". The costs are 2 € per kilogram.
 
 <section class="hide">
-<pre><code class="r">bike_data_stock_tbl <- bike_data_sizes_tbl %>%
-    select(name, size, stock_availability, price_euro) %>%
-    mutate(total_stock_value = stock_availability * price_euro)</code></pre>
+<pre><code class="r">bike_orderlines_tbl %>%
+    mutate(freight_costs = 2 * weight)</code></pre>
 </section>
 
 ***
-3.2 `Overwrite Columns`. Replace total_stock_value with the log values of it:
+3.2 `Overwrite Columns`. Replace total_price with the log values of it:
 
 <section class="hide">
-<pre><code class="r">bike_data_stock_tbl %>%
-    mutate(total_stock_value = log(total_stock_value))</code></pre>
+<pre><code class="r">bike_orderlines_tbl %>%
+    mutate(total_price = log(total_price))</code></pre>
 </section>
 
 ***
-3.2 `Transformations`: Add the log and the square root of the total_stock_value:
+3.2 `Transformations`: Add the log and the square root of the total_price:
 
 <section class="hide">
-<pre><code class="r">bike_data_stock_tbl %>%
-    mutate(total_stock_value_log = log(total_stock_value)) %>%
-    mutate(total_stock_value_sqrt = total_stock_value^0.5)</code></pre>
+<pre><code class="r">bike_orderlines_tbl %>%
+    mutate(price_log = log(total_price)) %>%
+    mutate(price_sqrt = total_price^0.5)</code></pre>
 </section>
 
 ***
-3.3 `Adding Flags` (feature engineering): Add a column that equals to `TRUE` if name contains the word strive and filter by that:
+3.3 `Adding Flags` (feature engineering): Add a column that equals to `TRUE` if model contains the word strive and filter by that:
 
 <section class="hide">
-<pre><code class="r">bike_data_stock_tbl %>%
-    mutate(is_strive = name %>% str_to_lower() %>% str_detect("strive")) %>%
+<pre><code class="r">bike_orderlines_tbl %>%
+    mutate(is_strive = model %>% str_to_lower() %>% str_detect("strive")) %>%
     filter(is_strive)</code></pre>
 </section>
 
 ***
-3.4 `Binning with ntile()`: Add a column and create 3 groups for total_stock_value, where the groups each have as close to the same number of members as possible
+3.4 `Binning with ntile()`: Add a column and create 3 groups for total_price, where the groups each have as close to the same number of members as possible
 
 <section class="hide">
-<pre><code class="r">bike_data_stock_tbl %>%
-    mutate(total_stock_value_binned = ntile(total_stock_value, 3))</code></pre>
+<pre><code class="r">bike_orderlines_tbl %>%
+    mutate(price_binned = ntile(total_price, 3)) %>% 
+    select(total_price, price_binned, everything())</code></pre>
 </section>
 
 ***
-3.5 More flexible binning wiht `case_when()`: Numeric to categorical. Add a column, use `case_when` and choose the quantiles yourself (use `quantile()`). Set the results to High, Medium and Low:
+3.5 More flexible binning with `case_when()`: Numeric to categorical. Add a column, use `case_when` and choose the quantiles yourself (use `quantile()`). Set the results to High, Medium and Low:
 
 <section class="hide">
-<pre><code class="r">bike_data_stock_tbl %>%
-    mutate(total_stock_value_binned = ntile(total_stock_value, 3)) %>%
-    mutate(total_stock_value_binned2 = case_when(
-        total_stock_value > quantile(total_stock_value, 0.75) ~ "High",
-        total_stock_value > quantile(total_stock_value, 0.25) ~ "Medium",
+<pre><code class="r">bike_orderlines_tbl %>%
+    mutate(price_binned = ntile(total_price, 3)) %>%
+    mutate(price_binned2 = case_when(
+        total_price > quantile(total_price, 0.75) ~ "High",
+        total_price > quantile(total_price, 0.25) ~ "Medium",
         TRUE ~ "Low" # Everything else
-    ))</code></pre>
+    )) %>% 
+    select(total_price, price_binned, price_binned2, everything())</code></pre>
 </section>
 
 ***
-3.6 More flexible binning wiht `case_when()`: Text to categorical. Add a column that equals to "Aeroad", when name contains "aerorad",  "Ultimate", when name contains "ultimate" and "Not Aeroad or Ultimate" in every other case":
+3.6 More flexible binning with `case_when()`: Text to categorical. Add a column that equals to "Aeroad", when model contains "aerorad",  "Ultimate", when model contains "ultimate" and "Not Aeroad or Ultimate" in every other case":
 
 <section class="hide">
-<pre><code class="r">bike_data_stock_tbl %>%
+<pre><code class="r">bike_orderlines_tbl %>%
     mutate(bike_type = case_when(
-        name %>% str_to_lower() %>% str_detect("aeroad") ~ "Aeroad",
-        name %>% str_to_lower() %>% str_detect("ultimate") ~ "Ultimate",
+        model %>% str_to_lower() %>% str_detect("aeroad") ~ "Aeroad",
+        model %>% str_to_lower() %>% str_detect("ultimate") ~ "Ultimate",
         TRUE ~ "Not Aeroad or Ultimate" # Everything else
-    ))</code></pre>
+    )) %>% 
+    select(bike_type, everything())</code></pre>
 </section>
 
 ***
@@ -361,38 +333,38 @@ Functions: `mutate()`, `case_when()`
 
 Functions: `group_by()`,  `summarise()` and `summarize_all()`
 
-4.1 Summarise entire stock value:
+4.1 Summarise the total revenue:
 
 <section class="hide">
-<pre><code class="r">bike_data_stock_tbl %>%
+<pre><code class="r">bike_orderlines_tbl %>%
     summarise(
-        stock_value = sum(price_euro * stock_availability)
+        revenue = sum(total_price)
     )</code></pre>
 </section>
 
 ***
-4.2 Summarise entire stock value for each category_1
+4.2 Summarise the total revenue for each category_1
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
+<pre><code class="r">bike_orderlines_tbl %>%
     group_by(category_1) %>%
-    summarise(stock_value = sum(price_euro * stock_availability))</code></pre>
+    summarise(revenue = sum(total_price))</code></pre>
 </section>
 
 ***
-4.3 Summarise entire stock value for the groups containing category_1 and category_2. Sort by descending stock value:
+4.3 Summarise the total revenue for the groups made of category_1 and category_2. Sort by descending revenue:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
+<pre><code class="r">bike_orderlines_tbl %>%
     group_by(category_1, category_2) %>%
-    summarise(stock_value = sum(price_euro * stock_availability)) %>%
-    # Always ungroup() after you summarize(). Left-over groups will cause diffictult-to-detect errors.
+    summarise(revenue = sum(total_price)) %>%
+    # Always ungroup() after you summarize(). Left-over groups will cause difficult-to-detect errors.
     ungroup() %>%
-    arrange(desc(stock_value))</code></pre>
+    arrange(desc(revenue))</code></pre>
 </section>
 
 ***
-4.3 `Summary functions`: Add the total_stock_value, filter thr rows where stock value is not zero, group by category_1 and category_2 and summarize the
+4.3 `Summary functions`: Group by category_1 and category_2 and summarize the
 * count
 * average
 * median
@@ -401,17 +373,15 @@ Functions: `group_by()`,  `summarise()` and `summarize_all()`
 * maximum
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
-    mutate(total_stock_value = price_euro * stock_availability) %>%
-    filter(total_stock_value != 0) %>%
+<pre><code class="r">bike_orderlines_tbl %>%
     group_by(category_1, category_2) %>%
     summarize(
-        count = n(), # Frequency (number if observations) in a group
-        avg   = mean(total_stock_value), # arithmetic average
-        med   = median(total_stock_value), # value at 50th percentile
-        sd    = sd(total_stock_value), # measure of spread
-        min   = min(total_stock_value),
-        max   = max(total_stock_value)
+        count = n(),
+        avg   = mean(total_price),
+        med   = median(total_price),
+        sd    = sd(total_price),
+        min   = min(total_price),
+        max   = max(total_price)
     ) %>%
     ungroup() %>%
     arrange(desc(count))</code></pre>
@@ -421,23 +391,22 @@ Functions: `group_by()`,  `summarise()` and `summarize_all()`
 
 4.4 `summarize_all()` - Detect missing values:
 
-<pre><code class="r"># Create total stock value column and insert missing values for demonstration
-bike_data_missing <- bike_data_sizes_tbl %>%</br>
-    mutate(total_stock_value = price_euro * stock_availability) %>%
-    mutate(total_stock_value = c(rep(NA, 4), total_stock_value[5:nrow(.)]))</code></pre>
+<pre><code class="r"># Create total_price column and insert missing values for demonstration
+bike_orderlines_missing <- bike_orderlines_tbl %>%
+    mutate(total_price = c(rep(NA, 4), total_price[5:nrow(.)]))</code></pre>
 
 Use `summarise_all()` to list missing values (absolute and relative):
 
 <section class="hide">
 <pre><code class="r"># detect missing (absolute)
-bike_data_missing %>%
-  summarise_all(~ sum(is.na(.)))</br>
+bike_orderlines_missing %>%
+    summarise_all(~ sum(is.na(.)))</br>
 # detect missing (relative)
-bike_data_missing %>%
-  summarise_all(~ sum(is.na(.)) / length(.))</br>
+bike_orderlines_missing %>%
+    summarise_all(~ sum(is.na(.)) / length(.))</br>
 # Handling missing data
-bike_data_missing %>%
-    filter(!is.na(total_stock_value))</code></pre>
+bike_orderlines_missing %>%
+    filter(!is.na(total_price))</code></pre>
 </section>
 
 ***
@@ -461,42 +430,44 @@ a) bike_data_sizes_tbl. Make the values of the column size to columns:
 
 ***
 
-b) Create the following tibble:
+b) Create a tibble with the sales for each category_1 and each bikeshop. Name it `bikeshop_revenue_tbl`:
 
-<pre><code class="r">bike_data_years_tbl <- bike_data_sizes_tbl %>%
-    mutate(total_stock_value = price_dollar * stock_availability) %>%
-    filter(!is.na(year)) %>%
-    select(year, category_1, total_stock_value) %>%
-    group_by(year, category_1) %>%
-    summarise(total_stock_value = sum(total_stock_value))</code></pre>
+<section>
+<pre><code class="r">bikeshop_revenue_tbl <- bike_orderlines_tbl %>%
+    select(bikeshop, category_1, total_price) %>%</br>
+    group_by(bikeshop, category_1) %>%
+    summarize(sales = sum(total_price)) %>%
+    ungroup() %>%
+    arrange(desc(sales))</code></pre>
+</section>
     
 ***
 
-Make the values of category_1 to columns and make the values to a dollar format (use `scales::dollar()`). Store the result in bike_data_years_formatted_tbl:
+Make the values of category_1 to columns and make the values to a euro format (use `scales::dollar(x, big.mark = ".", decimal.mark = ",", prefix = "", suffix = " €")`). Store the result in bikeshop_revenue_formatted_tbl:
 
 <section class="hide">
-<pre><code class="r">bike_data_years_formatted_tbl <- bike_data_years_tbl %>%
+<pre><code class="r">bikeshop_revenue_formatted_tbl <- bikeshop_revenue_tbl %>%
                                     pivot_wider(names_from  = category_1,
-                                                values_from = total_stock_value) %>%
-                                    arrange(desc(Mountain)) %>%
+                                                values_from = sales) %>%
                                     mutate(
-                                        Mountain = scales::dollar(Mountain),
-                                        Road     = scales::dollar(Road),
-                                        `Hybrid / City` = scales::dollar(`Hybrid / City`),
-                                        `E-Bikes` = scales::dollar(`E-Bikes`)
+                                        Mountain = scales::dollar(Mountain, big.mark = ".", decimal.mark = ",", prefix = "", suffix = " €"),
+                                        Gravel = scales::dollar(Gravel, big.mark = ".", decimal.mark = ",", prefix = "", suffix = " €"),
+                                        Road     = scales::dollar(Road, big.mark = ".", decimal.mark = ",", prefix = "", suffix = " €"),
+                                        `Hybrid / City` = scales::dollar(`Hybrid / City`, big.mark = ".", decimal.mark = ",", prefix = "", suffix = " €"),
+                                        `E-Bikes` = scales::dollar(`E-Bikes`, big.mark = ".", decimal.mark = ",", prefix = "", suffix = " €")
                                     )</code></pre>
 </section>
 
 ***
-5.2 `pivot_longer()`: Wide to Long. Recreate the original tibble from bike_data_years_formatted_tbl:
+5.2 `pivot_longer()`: Wide to Long. Recreate the original tibble from bikeshop_revenue_formatted_tbl:
 
 <section class="hide">
-<pre><code class="r">bike_data_years_formatted_tbl %>%
-    pivot_longer(cols           = c(names(.)[2:5]),
+<pre><code class="r">bikeshop_revenue_formatted_tbl %>%
+    pivot_longer(cols           = c(names(.)[2:6]),
                  names_to       = "category_1",
-                 values_to      = "total_stock_value",
+                 values_to      = "sales",
                  values_drop_na = T) %>%
-    mutate(total_stock_value =  total_stock_value %>% str_remove_all("\\$|,") %>% as.double())</code></pre>
+    mutate(sales =  sales %>% str_remove_all("€|\\.") %>% as.double())</code></pre>
 </section>
 
 ***
@@ -506,36 +477,34 @@ Functions: `left_join()`, `bind_cols()` and `bind_rows()`
 
 6.1 Create two tibbles
 
-<pre><code class="r">bike_price_tbl <- bike_data_sizes_tbl %>% select(1:13)
-bike_size_tbl  <- bike_data_sizes_tbl %>% select(13:15) %>% rename(id = id_size)</code></pre>
+<pre><code class="r">order_dates_tbl <- bike_orderlines_tbl %>% select(1:3)
+order_items_tbl  <- bike_orderlines_tbl %>% select(1:2,4:8)</code></pre>
 
 Bind them back together using `left_join()`:
 
 <section class="hide">
-<pre><code class="r">bike_price_tbl %>%
-    left_join(y = bike_size_tbl, by = c("id_size" = "id"))</code></pre>
+<pre><code class="r">order_dates_tbl %>%</br>
+    # By argument not necessary, because both tibbles share the same column names
+    left_join(y = order_items_tbl, by = c("order_id" = "order_id", "order_line" = "order_line"))</code></pre>
 </section>
 
 ***
-6.2 `bind_cols()`: Remove all columns from bike_data_sizes_tbl that contain "category" but bind back the column category_1:
-
-<pre><code class="r">bike_price_tbl <- bike_data_sizes_tbl %>% select(1:13)
-bike_size_tbl  <- bike_data_sizes_tbl %>% select(13:15) %>% rename(id = id_size)</code></pre>
+6.2 `bind_cols()`: Remove all columns from bike_orderlines_tbl that contain "category" but bind back the column category_1:
 
 <section class="hide">
-<pre><code class="r">bike_data_sizes_tbl %>%
+<pre><code class="r">bike_orderlines_tbl %>%
     select(-contains("category")) %>%</br>
     bind_cols(
-        bike_data_sizes_tbl %>% select(category_1)
+        bike_orderlines_tbl %>% select(category_1)
     )</code></pre>
 </section>
 
 ***
 6.3 `bind_rows()`: Can be useful for splitting a dataset into a training and a test dateset. 
 
-<pre><code class="r">train_tbl <- bike_data_sizes_tbl %>%
+<pre><code class="r">train_tbl <- bike_orderlines_tbl %>%
     slice(1:(nrow(.)/2))</br>
-test_tbl <- bike_data_sizes_tbl %>%
+test_tbl <- bike_orderlines_tbl %>%
     slice((nrow(.)/2 + 1):nrow(.))</code></pre>
     
 Bind them back together using `bind_rows()`.
@@ -551,53 +520,31 @@ Bind them back together using `bind_rows()`.
 
 Functions: `separate()` and `unite()`
 
-Let's use our olist data:
-
-<pre><code class="r">orders_tbl <- read_csv("olist_orders_dataset.csv")</code></pre>
-
-Select order.estimated.delivery.date and convert it to character. Then separate it into year, month and day. Make each column numeric. Combine them again using `unite()` and convert the colum back to Date (`as.Date()`)
-
-<pre><code class="r">train_tbl <- bike_data_sizes_tbl %>%
-    slice(1:(nrow(.)/2))</br>
-test_tbl <- bike_data_sizes_tbl %>%
-    slice((nrow(.)/2 + 1):nrow(.))</code></pre>
-    
-Bind them back together using `bind_rows()`.
+Select order_date and convert it to character. Then separate it into year, month and day. Make each column numeric. Combine them again using `unite()` and convert the column back to a Date format (`as.Date()`)
 
 <section class="hide">
-<pre><code class="r">orders_tbl %>%
-    select(order.estimated.delivery.date) %>%
-    mutate(order.estimated.delivery.date = as.character(order.estimated.delivery.date)) %>%</br>
-    # separate
-    separate(col  = order.estimated.delivery.date, 
-             into = c("year", "month", "day"), 
-             sep  = "-", remove = FALSE) %>%</br>
-    mutate(
-        year  = as.numeric(year),
-        month = as.numeric(month),
-        day   = as.numeric(day)
-    ) %>%</br>
-    # unite
-    unite(order_date_united, year, month, day, sep = "-", remove = FALSE) %>%
-    mutate(order_date_united = as.Date(order_date_united))</code></pre>
+<pre><code class="r">bike_orderlines_tbl %>% 
+  select(order_date) %>% 
+  mutate(order_date = as.character(order_date)) %>%</br>
+  # separate
+  separate(col  = order_date,
+           into = c("year", "month", "day"),
+           sep  = "-", remove = FALSE) %>%</br>
+  mutate(
+    year  = as.numeric(year),
+    month = as.numeric(month),
+    day   = as.numeric(day)
+  ) %>%</br>
+  # unite
+  unite(order_date_united, year, month, day, sep = "-", remove = FALSE) %>%
+  mutate(order_date_united = as.Date(order_date_united))</code></pre>
 </section>
-
-## <i class="fa fa-flag-checkered" aria-hidden="true"></i> Code Checkpoint
-
-<!-- DOWNLOADBOX -->
-<div id="header">Download</div>
-<div id="container">
-  <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/04/data_wrangling_checkpoint.R" target="_blank"><b>data_wrangling_checkpoint.R</b></a></div>
-  <div id="clear"></div>
-</div>
 
 ### data.table
 
 <a href="https://rdatatable.gitlab.io/data.table/index.html" target="_blank">
 <img src="/img/icons/logo_datatable.png" align="right" style="width:173px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
 </a>
-
 
 The `data.table` is an enhanced alternative to R’s default `data.frame` or `tibble` from the tidyverse to handle tabular data. The reason it’s so popular is because it allows you to do blazing fast data manipulations  (see <a href="https://github.com/Rdatatable/data.table/wiki/Benchmarks-%3A-Grouping" target="_blank">benchmarks</a> on up to two billion rows). This package is being used in different fields such as finance and genomics and is especially useful for those of you that are working with large data sets (for example, 1GB to 100GB in RAM). Though `data.table` provides a slightly different syntax from the regular R `data.frame`, it is quite intuitive. 
 
@@ -617,7 +564,7 @@ covid_data_dt <- fread(url)</br>
 class(covid_data_dt)
 ##  "data.table" "data.frame"</code></pre>
 
-As you see from the above output, the `data.table` inherits from a `data.frame` class and therefore is a `data.frame` by itself. So, functions that accept a data.frame will work just fine on data.table as well. When the number of rows to print exceeds the default of  100, it automatically prints only the top 5 and bottom 5 rows. 
+As you see from the output above, the `data.table` inherits from a `data.frame` class and therefore is a `data.frame` by itself. So, functions that accept a data.frame will work just fine on data.table as well (like data.frame and tibbles). When the number of rows to print exceeds the default of 100, it automatically prints only the top 5 and bottom 5 rows. 
 
 If you want to compare the speed to base R `read.csv()` or `read_csv()` from the `readr` package, you can run the following code:
 
@@ -648,7 +595,7 @@ In contrast to a `data.frame` or `tibble`, you can do a lot more than just subse
 
 <pre><code class="r">## FROM[WHERE, SELECT/ORDER BY/UPDATE, GROUP BY]</br>
 covid_data_dt[i, j, by]</br>
-# Example
+# Example (filter by year, sum cases, group by continent)
 covid_data_dt[year == 2019, sum(cases), by = continentExp]</code></pre>
 
 Users who have an SQL background might perhaps immediately relate to this syntax. The way to read it (out loud) is: Take the data.table covid_data_dt, subset/reorder rows using `i`, then calculate `j`, grouped by `by`. Let’s begin by looking at `i` and `j` first - subsetting rows and operating on columns.
@@ -703,7 +650,7 @@ Since columns can be referred to as if they are variables within the frame of da
 <pre><code class="r"># List names 
 colnames(covid_data_dt)
 setnames(covid_data_dt, "dateRep", "date")
-setnames(covid_data_dt, "countriesAndTerritories", "countries")
+setnames(covid_data_dt, "countriesAndTerritories", "country")
 setnames(covid_data_dt, "continentExp", "continent")</code></pre>
 
 ***
@@ -712,11 +659,20 @@ setnames(covid_data_dt, "continentExp", "continent")</code></pre>
 
 Convert the in-built `airquality` dataset to a data.table. Then select `Solar.R`, `Wind` and `Temp` for those rows where `Ozone` is not missing. You'll need the function `is.na()`.
 
+```r
+# List all internal data sets
+data()
+
+# Load specified data sets
+data("airquality")
+```
+
 *Solution*
 <section class="hide">
 <pre><code class="r"># Solution 1
 aq_dt <- data.table(airquality)
-aq_dt[!is.na(Ozone), .(Solar.R, Wind, Temp)]</br>
+aq_dt[!is.na(Ozone), .(Solar.R, Wind, Temp)]
+</br>
 # Solution 2
 setDT(airquality)
 airquality[!is.na(Ozone), .(Solar.R, Wind, Temp)]</code></pre>
@@ -744,9 +700,9 @@ To create multiple new columns at once, use the special assignment symbol as a f
 
 <pre><code class="r">covid_data_dt[,  `:=`(deaths_per_capita = deaths / popData2019,
                       cases_per_capita = cases / popData2019,
-                      cases_per_deaths = cases / deaths)]</br>
+                      deaths_per_cases = deaths / cases)]</br>
 # To delete a column, assign it to NULL
-covid_data_dt[, cases_per_deaths := NULL]</code></pre>
+covid_data_dt[, deaths_per_cases := NULL]</code></pre>
 
 Of course, you can also modify existing columns:
 
@@ -760,7 +716,8 @@ Convert the in-built `mtcars` dataset to a data.table. Create a new column calle
 
 *Solution*
 <section class="hide">
-<pre><code class="r">mtcars$carname <- rownames(mtcars)
+<pre><code class="r">data("mtcars") # step not absolutely necessary
+mtcars$carname <- rownames(mtcars)
 mtcars_dt <- as.data.table(mtcars)
 mtcars_dt[, mileage_type := ifelse(mpg > 20, 'high', 'low')]</code></pre>
 </section>
@@ -771,7 +728,7 @@ mtcars_dt[, mileage_type := ifelse(mpg > 20, 'high', 'low')]</code></pre>
 
 * Calculate the average number of new cases and deaths in Germany for the month of April
 
-<pre><code class="r">covid_data_dt[countries == "Germany" & month == 4, 
+<pre><code class="r">covid_data_dt[country == "Germany" & month == 4, 
               .(m_cases = mean(cases), 
                 m_death = mean(deaths)
                 )
@@ -783,14 +740,14 @@ Because the three main components of the query (`i`, `j` and `by`) are together 
 
 * On how many days did less than 1000 people die in the USA in the month of June?
 
-<pre><code class="r">covid_data_dt[countries == "United_States_of_America" & 
+<pre><code class="r">covid_data_dt[country == "United_States_of_America" & 
               month == 5 & deaths < 1000, 
               length(day)
              ]</code></pre>
 
 The function `length()` requires an input argument. We just needed to compute the number of rows in the subset. We could have used any other column as input argument to `length()` really. This type of operation occurs quite frequently, especially while grouping (as we will see in the next section), to the point where data.table provides a special symbol `.N` for it.
 
-<pre><code class="r">covid_data_dt[countries == "United_States_of_America" & 
+<pre><code class="r">covid_data_dt[country == "United_States_of_America" & 
               month == 5 & deaths < 1000, 
               .N
              ]</code></pre>
@@ -804,7 +761,7 @@ We’ve already seen `i` and `j` from data.table’s general form in the previou
 
 * How can we get the number of days where the death toll was greater than 1000 for each country?
 
-<pre><code class="r">covid_data_dt[deaths > 1000, .N, by = countries]</code></pre>
+<pre><code class="r">covid_data_dt[deaths > 1000, .N, by = country]</code></pre>
 
 We know `.N` is a special variable that holds the number of rows in the current group. Grouping by `countries` obtains the number of rows, `.N`, for each group.
 
@@ -816,7 +773,7 @@ If we need the row numbers instead of the number of rows, use `.I` instead of `.
 
 <pre><code class="r">covid_data_dt[continent == "Europe",
               .(mean(cases), mean(deaths)),
-              by = .(countries, month, year)
+              by = .(country, month, year)
              ]</code></pre>
         
 Since we did not provide column names for the expressions in `j`, they were automatically generated as V1 and V2. data.table retaining the original order of groups is intentional and by design. 
@@ -829,7 +786,8 @@ Use mtcars_dt from above. Compute the number of cars and the mean mileage for ea
 
 *Solution*
 <section class="hide">
-<pre><code class="r">mtcars_dt[, .(.N, mileage = mean(mpg) %>% round(2)), by=gear]</code></pre>
+<pre><code class="r">library(magrittr) # to use the pipe
+mtcars_dt[, .(.N, mileage = mean(mpg) %>% round(2)), by=gear]</code></pre>
 </section>
 
 ***
@@ -840,7 +798,7 @@ Let’s reconsider the task of getting the means of cases and deaths for each co
 
 <pre><code class="r">covid_cases_means <- covid_data_dt[,.(m_cases  = mean(cases) %>% round(1), 
                                       m_deaths = mean(deaths) %>% round(1)), 
-                                      by = .(countries)
+                                      by = .(country)
                                   ]</code></pre>
 
 * How can we order covid_cases_means using the columns m_death?
@@ -851,7 +809,7 @@ We can store the intermediate result in a variable, and then use order(-m_deaths
                   m_cases  = round(mean(cases),  digits = 1), 
                   m_deaths = round(mean(deaths), digits = 1)
                  ), 
-                 by = .(countries)][order(-m_cases)]</code></pre>
+                 by = .(country)][order(-m_cases)]</code></pre>
 
 We can add expressions one after another, forming a chain of operations.
 
@@ -866,7 +824,7 @@ Yes it does. As an example, if we would like to find out how many days had more 
                  )
              ]</code></pre>
 
-The last row corresponds to `deaths > 1000 = TRUE` and `cases < 1000 = TRUE`. We can see, that occured twice (once in China and once in Spain). Naming of the columns is optional. You can provide other columns along with expressions, for example ... `by = .(death_gt_1k = deaths > 1000, cases_lt_1k = cases < 1000, year)`.
+The last row corresponds to `deaths > 1000 = TRUE` and `cases < 1000 = TRUE`. We can see, that occured 4 times (once in Bolivia, China, Ecuador and Spain). Naming of the columns is optional. You can provide other columns along with expressions, for example ... `by = .(death_gt_1k = deaths > 1000, cases_lt_1k = cases < 1000, year)`.
 
 
 **10. .SD**
@@ -904,7 +862,7 @@ Let’s understand why keys can be useful and how to set it. Setting one or more
 
 To set a key, use the `setkey()` function:
 
-<pre><code class="r">setkey(covid_data_dt, date, countries)</code></pre>
+<pre><code class="r">setkey(covid_data_dt, date, country)</code></pre>
 
 You can set one or multiple keys if you wish. It’s so fast making it look like nothing happened. But it internally sorted data.table with `date` and `countries` as the keys. You should see it if you print the table again. 
 
@@ -920,48 +878,51 @@ covid_data_EUR_dt <- covid_data_dt[ continent == "Europe",
                                                               round(1)
                                                              }
                                            ), 
-                                    by = .(countries), 
+                                    by = .(country), 
                                     .SDcols = c("cases", "deaths")
                                    ]</br>
 # Set key
-setkey(covid_data_EUR_dt, countries)
+setkey(covid_data_EUR_dt, country)
 key(covid_data_EUR_dt)</br>
 # Create two data.tables from that
-cd_dt1 <- covid_data_EUR_dt[, .(countries, cases)]
-cd_dt2 <- covid_data_EUR_dt[1:20, .(countries, deaths)]</br>
+cd_dt1 <- covid_data_EUR_dt[, .(country, cases)]
+cd_dt2 <- covid_data_EUR_dt[1:20, .(country, deaths)]</br>
 # Join them
 cd_dt1[cd_dt2]</code></pre>
 
 This returns `cd_dt1`‘s rows using `cd_dt2` based on the key of these data.tables. You can join them also without setting keys, if you specify the `on=` argument (but joining by key has some speed advantages):
 
-<pre><code class="r">setkey(cd_dt1, NULL)
+<pre><code class="r"># Remove keys
+setkey(cd_dt1, NULL)
 setkey(cd_dt2, NULL)
-cd_dt1[cd_dt2, on = "countries"]
+# Join
+cd_dt1[cd_dt2, on = "country"]
 # If they had different colnames
 cd_dt1[cd_dt2, on = c(colA = "colB"]</br>
 # Alternatively you can use the function merge()
 # Inner Join
-merge(cd_dt1, cd_dt2, by='countries')
+merge(cd_dt1, cd_dt2, by='country')
 # Left Join
-merge(cd_dt1, cd_dt2, by='countries', all.x = T)
+merge(cd_dt1, cd_dt2, by='country', all.x = T)
 # Outer Join
-merge(cd_dt1, cd_dt2, by='countries', all = T)
+merge(cd_dt1, cd_dt2, by='country', all = T)
 # If they had different colnames use by.x="colA", by.y="colB"</code></pre>
 
 For more information on the different joins, click <a href="https://rstudio-pubs-static.s3.amazonaws.com/52230_5ae0d25125b544caab32f75f0360e775.html" target="_blank">here</a>. 
 
-If you want to add the values of `cd_dt2` to `cd_dt1`, then it's best to join `cd_dt1` with `cd_dt2` and update `cd_dt1` by reference (meaniing with no copy necessary at all) as follows:
+If you want to add the values of `cd_dt2` to `cd_dt1`, then it's best to join `cd_dt1` with `cd_dt2` and update `cd_dt1` by reference (meaning with no copy necessary at all) as follows:
 
-<pre><code class="r">cd_dt1[cd_dt2, on = "countries", deaths := i.deaths]</code></pre>
+<pre><code class="r">cd_dt1[cd_dt2, on = "country", deaths := i.deaths]</code></pre>
 
-This is a better approach (in terms of memory efficiency) than using `cd_dt2[cd_dt1, on = "countries"]` because the latter just prints the result to the console. When you want to get the results back into `cd_dt1`, you need to use `cd_dt1 <- cd_dt2[cd_dt1, on='a']` which will give you the same result.
+This is a better approach (in terms of memory efficiency) than using `cd_dt2[cd_dt1, on = "country"]` because the latter just prints the result to the console. When you want to get the results back into `cd_dt1`, you need to use `cd_dt1 <- cd_dt2[cd_dt1, on='a']` which will give you the same result.
 
 To merge multiple data.tables, you could use the following approach:
 
+```r
 dt_list    <- list(cd_dt1, cd_dt2, cd_dt3)
-merge_func <- function(...) merge(..., all = TRUE, by='countries')
-dt_merged  <- Reduce(merge_func, dt_list)</code></pre>
-
+merge_func <- function(...) merge(..., all = TRUE, by='country')
+dt_merged  <- Reduce(merge_func, dt_list)
+```
 
 **12. set() function**
 
@@ -1017,7 +978,7 @@ We can do much more in `i` by keying a data.table, which allows blazing fast sub
 * DT[col > val, head(.SD, 1), by = ...] - combine i along with j and by.
 
 <!-- HEADING with Business-Logo -->
-## <i class="fas fa-user-tie"></i> Business case
+## <i class="fas fa-user-tie"></i> &nbsp;Business case
 
 This case is about wrangling large data with `data.table`. The topic are Bank Loan Defaults.
 
@@ -1041,7 +1002,7 @@ Each quarter contains around ~5M rows of data. Since 2000 that totals to around 
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/04/load_data.zip" target="_blank"><b>loan_data.zip</b></a></div>
+  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/blob/master/04/loan_data.zip" target="_blank"><b>loan_data.zip</b></a></div>
   <div id="clear"></div>
 </div>
 
@@ -1110,7 +1071,7 @@ After spcifying the columns, we can import the data using the `vroom` function. 
 
 <section class="hide">
 <pre><code class="r">acquisition_data <- vroom(
-      file       = "data/Acquisition_2019Q1.txt", 
+      file       = "loan_data/Acquisition_2019Q1.txt", 
       delim      = "|", 
       col_names  = names(col_types_acq),
       col_types  = col_types_acq,
@@ -1158,7 +1119,7 @@ col_types_perf = list(
     foreclosure_principal_write_off_amount = col_double(),
     servicing_activity_indicator           = col_factor(NULL))</br>
 performance_data <- vroom(
-    file       = "data/Performance_2018Q1.txt", 
+    file       = "loan_data/Performance_2018Q1.txt", 
     delim      = "|", 
     col_names  = names(col_types_perf),
     col_types  = col_types_perf,
