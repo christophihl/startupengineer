@@ -302,7 +302,7 @@ Alternatively, the content of a API response can be accessed using the `content(
 
 The automatical parsing is convenient for interactive usage, but if you’re writing an API wrapper, it’s best to parse the text or raw content yourself and check it is as you expect.
 
-Let's try to query the API from aplhavantage to get the current quote for the stock of Wirecard (Ticker WDI.DE). To do so, take a look at the <a href="https://www.alphavantage.co/documentation/" target="_blank">documentation</a> and go to Quote Endpoint and take a look at the Examples. It seems to get the quote for Apple, we just have to replace the Ticker IBM with WDI.DE:
+Let's try to query the API from aplhavantage to get the current quote for the stock of Wirecard (Ticker WDI.DE). To do so, take a look at the <a href="https://www.alphavantage.co/documentation/" target="_blank">documentation</a> and go to the section Quote Endpoint and take a look at the Examples. The examples demonstrate how to query information for IBM (symbol=IBM). In order to get the quote for another company, we just have to replace the symbol with another stock ticker (WDI.DE in our case):
 
 <section class="hide">
 <pre><code class="r">resp <- GET('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=WDI.DE')
@@ -413,12 +413,14 @@ Unlike R, HTML is not a programming language. Instead, it’s called a markup la
 The simplest HTML document looks like this:
 
 <pre><code class="html">&lt;html&gt;
-&lt;head&gt;</code></pre>
+  &lt;head&gt;&lt;/head&gt;
+&lt;/html&gt;</code></pre>
 
 Although the above is a legitimate HTML document, it has no text or other content. If we were to save that as a `.html` file and open it using a web browser, we would see a blank page.
 Notice that the word html is surrounded by `<>` brackets, which indicates that it is a tag. To add some more structure and text to this HTML document, we could add the following:
 
-<pre><code class="html">&lt;head&gt;
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt;
 &lt;/head&gt;
 &lt;body&gt
   &lt;p&gt;Here's a paragraph of text!&lt;/p&gt;
@@ -1072,9 +1074,10 @@ bike_json_tbl  <- html_bike_category %>%</br>
            # Set "not defined" and emtpy fields to NA (will be easier to work with)
            map(na_if, "not defined") %>%
            map(na_if, "") %>%</br>
-           # The class of the col dimension56 varies between numeric and char.
+           # The class of dimension56 and price varies between numeric and char.
            # This converts this column in each list to numeric
-           map(~mutate_at(.,"dimension56", as.numeric)) %>%</br>
+           # across allows to perform the same operation on multiple columns
+           map(~mutate(., across(c("dimension56","price"), as.numeric))) %>%</br>
            # Stack all lists together
            bind_rows() %>%
            # Convert to tibble so that we have the same data format
@@ -1114,7 +1117,7 @@ get_bike_data <- function(url) {</br>
              map(purrr::pluck, 2, "impressions") %>% 
              map(na_if, "not defined") %>%
              map(na_if, "") %>%
-             map(~mutate_at(.,"dimension56", as.numeric)) %>%
+             map(~mutate(., across(c("dimension56","price"), as.numeric))) %>%
              bind_rows() %>%
              as_tibble() %>%
              rowid_to_column(var='position') %>%
@@ -1189,6 +1192,7 @@ We didn't get only the canyon bikes, but also other products listed below some b
 bike_data_cleaned_tbl %>%
     group_by(id) %>%
     filter(n()>1) %>%
+    arrange(id) %>% 
     View()</code></pre>
     
 In this step we can also split the categories (seperator = Slash, when it is not preceded or followd by a whitespace. Negative look ahead and negative look behind.), rename some columns, fix some missing values, add the frame material and reorder the data.
@@ -1246,7 +1250,7 @@ bike_url_vec <- bike_data_cleaned_tbl %>%
                       pull(url)</br>
 # Create function to get the variations
 get_colors <- function(url) {</br>
-    color_variations <- url %>%</br>
+    url %>%</br>
         read_html() %>%</br>
         # Get all 'script nodes' and convert to char
         html_nodes(css = "script") %>%
@@ -1260,9 +1264,7 @@ get_colors <- function(url) {</br>
         str_replace("[^\\}]+$", "") %>%</br>
         # Convert from json to an r object and pick the relevant values
         fromJSON() %>%
-        purrr::pluck("productDetail", "variationAttributes", "values", 1, "value") %>%</br>
-        # Paste all results into one string
-        str_c(collapse = ";")
+        purrr::pluck("productDetail", "variationAttributes", "values", 1, "value")
 }</br>
 # Run the function over all urls and add result to bike_data_cleaned_tbl
 # This will take a long time (~ 20-30 minutes) because we have to iterate over many bikes
@@ -1284,7 +1286,7 @@ Processing large amounts of data with complex models can be time consuming. Hist
 <pre><code class="r">library(furrr)     # Parallel Processing using purrr (iteration)
 plan("multiprocess")
 bike_data_colors_tbl <- bike_data_cleaned_tbl %>% 
-    mutate(color_variations = future_map(bike_url_vec, get_colors))</code></pre>
+    mutate(colors = future_map(bike_url_vec, get_colors))</code></pre>
 </section>
 
 ***
@@ -1319,7 +1321,7 @@ bike_data_colors_tbl %>% glimpse()
 ## $ category_3       &lt;chr&gt; "Aeroad", "Aeroad", "Aeroad", "Aeroad", …
 ## $ gender           &lt;chr&gt; "unisex", "unisex", "unisex", "unisex", …
 ## $ description      &lt;chr&gt; "Canyon - An aero road bike that combines …
-## $ color_variations &lt;chr&gt; "BK/BK", "BK/BK", "BK/BK", "BK/MC", "BK/BK",…
+## $ colors           &lt;chr&gt; "BK/BK", "BK/BK", "BK/BK", "BK/MC", "BK/BK",…
 ## $ url_color        &lt;chr&gt; "https://www.canyon.com/en-de/road-bikes/…</code></pre>
 </section>
 
@@ -1355,7 +1357,7 @@ get_sizes <- function(url) {</br>
     as_tibble()</br>
 }</br>
 # Pull url vector
-bike_url_color_vec <- bike_data_wrangled_tbl %>% 
+bike_url_color_vec <- bike_data_colors_tbl %>% 
                         pull(url_color)</br>
 # Map
 bike_data_sizes_tbl <- bike_data_colors_tbl %>% 
@@ -1416,6 +1418,6 @@ This week there are two challenges for you:
 
 1. Get some data via an API. There are millions of providers, that offer API access for free and have good documentation about how to query their service. You just have to google them. You can use whatever service you want. For example, you can get data about your listening history (spotify), get data about flights (skyscanner) or just check the weather forecast.
 
-2. Scrape an ecommerce site of your choice and create a small database. It is not necessary to scrape different urls. If you want, you can only scrape one static site with multiple products listed. Your database should contain at least the product names and current prices. You can use amazon, competitors of Canyon or any other online shop.
+2. Scrape one of the competitor websites of canyon (either https://www.rosebikes.de/ or https://www.radon-bikes.de) and create a small database. The database should contain the model names, the categories and the prices of the bikes. 
 
-Upload your codes to your github page. Keep in mind that you should not publish your credentials.
+Upload your codes to your github page. Print the first 10 rows of your tibbles. Keep in mind that you should not publish your credentials.
