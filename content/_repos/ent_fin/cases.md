@@ -40,10 +40,10 @@ Hardina Smythe, a recent MBA graduate, has just joined a top-tier venture capita
 
 ## 2) Financial Planning
 
-**Case**: [Workhorse Inc. (Da Rin, Hellmann, FEF 2020)](), [supplemental Excel worksheet]()
+**Case**: [Workhorse Inc. (Da Rin, Hellmann, FEF 2020)](https://www.dropbox.com/s/qw3hjif4xklongj/WorkHorse.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/frjojpqzrdse4an/WorkHorse.xlsx?dl=0)
 
 `Abstract`:
-tbd
+Workhorse Inc., a startup in the solar power industry, has to prepare financial projections to convince investors and acquire funding.
 
 `Assignment Questions`:
 1) Use the the [`Financial Projections tool`](https://www.dropbox.com/s/v5bnoud3z2nbync/Financial-Projections-Model_%28blank%29.xlsx?dl=0)<br/> to complete the financial plan for Workhorse Inc.
