@@ -40,7 +40,7 @@ Hardina Smythe, a recent MBA graduate, has just joined a top-tier venture capita
 
 ## 2) Financial Planning
 
-**Case**: [Workhorse Inc. (Da Rin, Hellmann, FEF 2020)](https://www.dropbox.com/s/qw3hjif4xklongj/WorkHorse.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/frjojpqzrdse4an/WorkHorse.xlsx?dl=0)
+**Case**: [Workhorse Inc. (Da Rin, Hellmann, FEF 2020)](https://www.dropbox.com/s/h0mnnorfdgti2bp/WorkHorse.pdf?dl=0), [supplemental Excel worksheet](https://www.dropbox.com/s/frjojpqzrdse4an/WorkHorse.xlsx?dl=0)
 
 `Abstract`:
 Workhorse Inc., a startup in the solar power industry, has to prepare financial projections to convince investors and acquire funding.
