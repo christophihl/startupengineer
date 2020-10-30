@@ -1,7 +1,7 @@
 ---
 title: Business Plan for a Pedal Electric Kids Car
-event: Academic Theme Conference
-event_url: https://example.org
+event: 
+event_url: 
 
 showauthordate: false
 
@@ -25,7 +25,7 @@ date_end: "2030-06-01T15:00:00Z"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: "2020-10-30T15:00:00Z"
+publishDate: "2020-09-30T15:00:00Z"
 
 authors: []
 tags: []
