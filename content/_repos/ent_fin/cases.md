@@ -16,10 +16,9 @@ weight: 20
 
 ## Note
 
-In the second part of each class session, we will discuss a real company case study related to the respective lecture topics. Students are supposed to have read (not solved) each case before class. We will briefly clarify questions about the case, then students will work in breakout sessions on an intial solution of the case (for approximately 1.5 hours) within teams of up to 5 students. These initial solutions are then (selectively) discussed among all partcipants. Based on the team solutions and joint discussions, students should then write up individual case solutions to be uploaded to Studip prior to the following week's class.
+In the second part of each class session, we will discuss a real company case study related to the respective lecture topics. Students are supposed to have read (not solved) each case before class. We will briefly clarify questions about the case, then students will work in breakout sessions on an intial solution of the case (for approximately 1.5 hours) within teams of up to 5 randomly assigned students. These initial solutions are then (selectively) discussed among all partcipants. Based on the team solutions and joint discussions, students should then write up individual case solutions to be uploaded to Studip prior to the following week's class.
 
-If you want to submit a case solution, please `upload the pdf file to Stud.IP in the folder named after your lastname`. Please use the following file name and info:
-`lastname_casename.pdf`; e.g. `ihl_microsoft.pdf`. The file itself must contain your full name and immatriculation number as well as your team members names you discussed the case with.
+If you want to submit a case solution, please `upload the pdf file to Stud.IP in the folder named after your lastname`. If there is no folder with your lastname (yet), just save it to the root directory. Please use the following file name and info: `lastname_casename.pdf`; e.g. `ihl_microsoft.pdf`. The file itself must contain your full name and immatriculation number as well as your team members' names you discussed the case with.
 
 
 <br/>

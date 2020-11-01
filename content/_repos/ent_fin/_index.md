@@ -26,9 +26,10 @@ menu:
 
 Here you find the following materials:
 
-- Slides
-- Cases
-- Tools
+- [Slides]({{< relref "_repos/ent_fin/slides.md" >}})
+- [Videos]({{< relref "_repos/ent_fin/videos.md" >}})
+- [Cases]({{< relref "_repos/ent_fin/cases.md" >}})
+- [Tools]({{< relref "_repos/ent_fin/tools.md" >}})
 
 
 <br/>

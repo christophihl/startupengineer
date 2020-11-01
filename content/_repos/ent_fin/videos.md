@@ -1,6 +1,6 @@
 ---
-title: Slides
-linktitle: Slides
+title: Videos
+linktitle: Videos
 toc: true
 type: docs
 date: "2020-10-05T00:00:00Z"
@@ -8,15 +8,30 @@ lastmod: "2020-10-05T00:00:00Z"
 draft: false
 menu:
   ent_fin:
-    weight: 10
+    weight: 15
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 10
+weight: 15
 --- 
 
 
 
-## 1) [Introduction: Evaluating Venture Opportunities](https://www.dropbox.com/s/z0lwsyl6qzmobpg/Ent_Fin_WS21_Intro.pdf?dl=0)
+## 1) Introduction: Evaluating Venture Opportunities
+
+* Part 1: {{< youtube ov1zk80Iu-c >}}
+
+
+* Part 2: {{< youtube CpC3T-VfVV8 >}}
+
+
+* Part 3: {{< youtube 3S3DR83Y5jk >}}
+
+
+* Part 4: {{< youtube lRdWWvm2txw >}}
+
+
+* Part 5: {{< youtube ghqQRPq7NgI >}}
+
 
 
 <br/>
