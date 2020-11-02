@@ -74,7 +74,10 @@ bikes_tbl %>%
 
 <section class="hide">
 <pre><code class="r">bikes_tbl %>%
-  select(category_1:category_3, everything())</code></pre>
+  select(category_1:category_3, everything())</br>
+# Alternative using relocate()
+bikes_tbl %>%
+  relocate(category_1:category_3)</code></pre>
 </section>
 
 ***
@@ -100,16 +103,16 @@ bikes_tbl %>%
 
 ***
 
-1.6 `Select_if`: First extract all character columns. Then extract all non numeric columns.
+1.6 `Select()` and `where()`: First extract all character columns. Then extract all non numeric columns.
 
 <section class="hide">
-<pre><code class="r">?select_if</br>
+<pre><code class="r">?where</br>
 bikes_tbl %>%
-    select_if(is.character)</br>
+    select(where(is.character))</br>
 bikes_tbl %>%
-    select_if(~ is.numeric(.))</br>
+    select(where(is.numeric))</br>
 bikes_tbl %>%
-    select_if(~ !is.numeric(.))</code></pre>
+    select(!where(is.numeric))</code></pre>
 </section>
 
 ***
@@ -331,7 +334,7 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
 ***
 #### 4. Performing summary calculations
 
-Functions: `group_by()`,  `summarise()` and `summarize_all()`
+Functions: `group_by()` and `summarise()`
 
 4.1 Summarise the total revenue:
 
@@ -389,21 +392,21 @@ Functions: `group_by()`,  `summarise()` and `summarize_all()`
 
 ***
 
-4.4 `summarize_all()` - Detect missing values:
+4.4 `across()` - Detect missing values:
 
 <pre><code class="r"># Create total_price column and insert missing values for demonstration
 bike_orderlines_missing <- bike_orderlines_tbl %>%
     mutate(total_price = c(rep(NA, 4), total_price[5:nrow(.)]))</code></pre>
-
-Use `summarise_all()` to list missing values (absolute and relative):
+    
+`across()` makes it easy to apply the same transformation to multiple columns. Use it in combination with `summarise()` to list missing values (absolute and relative). `across()` supersedes the family of "scoped variants" like `summarise_at()`, `summarise_if()`, and `summarise_all()`. The same applies to the family of `mutate_()` functions.
 
 <section class="hide">
 <pre><code class="r"># detect missing (absolute)
 bike_orderlines_missing %>%
-    summarise_all(~ sum(is.na(.)))</br>
+    summarise(across(everything(), ~sum(is.na(.))))</br>
 # detect missing (relative)
 bike_orderlines_missing %>%
-    summarise_all(~ sum(is.na(.)) / length(.))</br>
+    summarise(across(everything(), ~sum(is.na(.)) / length(.)))</br>
 # Handling missing data
 bike_orderlines_missing %>%
     filter(!is.na(total_price))</code></pre>

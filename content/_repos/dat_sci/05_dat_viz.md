@@ -39,7 +39,7 @@ To get to these advanced plots, you need to learn everything from the `ggplot2` 
    - Labels & legends
    - themes
    
-## <i class="fab fa-r-project" aria-hidden="true"></i> Theory Input
+## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;Theory Input
 
 <a href="https://ggplot2.tidyverse.org" target="_blank">
 <img src="/img/icons/logo_ggplot2.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
@@ -652,6 +652,8 @@ sales_by_year_category_1_tbl %>%</br>
     geom_col(fill = viridisLite::viridis(n = 20)[10])</code></pre>
 </figure>
 
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_1.png">}}
+
 ***
 
 **2.0 Aesthetic Mappings**
@@ -669,6 +671,8 @@ All possible aestehetics for each geom, can be found in the corresponding help p
     geom_point(color = "dodgerblue", size = 5)</code></pre>
 </figure>
 
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_2.png">}}
+
 <figure id="22">
  <figcaption style="text-align: left; margin-bottom: 5px">2.2 Fill: Used with fill of rectangular objects (stacked column chart in this case)</figcaption>
  <pre><code class="r">sales_by_year_category_1_tbl %>%</br>
@@ -676,6 +680,8 @@ All possible aestehetics for each geom, can be found in the corresponding help p
     geom_col(aes(fill = category_1)) 
     # You could use color = ... to color the outlines</code></pre>
 </figure>
+
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_3.png">}}
 
 <figure id="23">
  <figcaption style="text-align: left; margin-bottom: 5px">2.3 Size: Typically used with points</figcaption>
@@ -685,6 +691,8 @@ All possible aestehetics for each geom, can be found in the corresponding help p
     geom_line(aes(color = category_1), size = 1) + 
     geom_point()</code></pre>
 </figure>
+
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_4.png">}}
 
 ***
 
@@ -707,6 +715,8 @@ sales_by_year_category_1_tbl %>%
     expand_limits(y = 0)
 ```
 
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_5.png">}}
+
 ***
 
 **4.0 Position Adjustments (Stack & Dodge)**
@@ -720,7 +730,11 @@ sales_by_year_category_1_tbl %>%
     # geom_col(position = "stack") # default
     # geom_col(position = "dodge")
     geom_col(position = position_dodge(width = 0.9), color = "white")
+```
 
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_6.png">}}
+
+```r
 # Stacked Area
 
 sales_by_year_category_1_tbl %>%
@@ -728,6 +742,8 @@ sales_by_year_category_1_tbl %>%
     ggplot(aes(year, revenue, fill = category_1)) +
     geom_area(color = "black")
 ```
+
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_7.png">}}
 
 ***
 
@@ -750,6 +766,8 @@ sales_by_year_category_1_tbl %>%
 g_facet_continuous</code></pre>
 </figure>
 
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_8.png">}}
+
 <figure id="512">
  <figcaption style="text-align: left; margin-bottom: 5px">Plot 2: Faceted Plot, Color = Discrete Scale</figcaption>
  <pre><code class="r">g_facet_discrete <- sales_by_year_category_1_tbl %>%</br>
@@ -762,6 +780,8 @@ g_facet_continuous</code></pre>
 g_facet_discrete</code></pre>
 </figure>
 
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_9.png">}}
+
 <figure id="513">
  <figcaption style="text-align: left; margin-bottom: 5px">Plot 3: Stacked Area Plot</figcaption>
  <pre><code class="r">g_area_discrete <- sales_by_year_category_1_tbl %>%</br>
@@ -770,6 +790,8 @@ g_facet_discrete</code></pre>
     theme_minimal()</br>
 g_area_discrete</code></pre>
 </figure>
+
+{{< figure src="/img/courses/dat_sci/05/examples_formatting_10.png">}}
 
 From here on, we are going to use those plots for further formatting:
 
@@ -985,183 +1007,229 @@ fct_relevel(f, "a", after = 3)
 For further information, see chapter <a href="https://r4ds.had.co.nz/factors.html" target="_blank">Factors</a> from <a href="https://r4ds.had.co.nz" target="_blank">R for Data Science</a>.
 
 <!-- HEADING with Business-Logo -->
-## <i class="fas fa-user-tie"></i> Business case
+## <i class="fas fa-user-tie"></i> &nbsp;Business case
+
+
 
 **Case 1**
 
-* Question: How much purchasing power is in top 5 customer cities?
-* Goal: Visualize top N customer cities in terms of revenue, include cumulative percentage.
+* Question: How much purchasing power is in top 5 customers (bikeshops)?
+* Goal: Lollipop Chart. Visualize top N customers in terms of Revenue, include cumulative percentage.
 
-*1. Load libraries and data and join them together*
+*1. Load libraries and data*
 
-<pre><code class="r"># 1.0 Lollipop Chart: Top N Customers ----
+```r
+# 1.0 Lollipop Chart: Top N Customers ----
 library(tidyverse)
-library(lubridate)</br>
-order_items_tbl <- read_rds("00_data/01_e-commerce/02_wrangled_data/order_items_tbl.rds")
-orders_tbl      <- read_rds("00_data/01_e-commerce/02_wrangled_data/orders_tbl.rds")
-customers_tbl   <- read_rds("00_data/01_e-commerce/02_wrangled_data/customers_tbl.rds")</br>
-order_lines_tbl <- order_items_tbl %>% 
-  left_join(orders_tbl) %>% 
-  left_join(customers_tbl)</code></pre>
+library(lubridate)
+
+bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_orderlines.rds")
+```
   
 *2. Data manipluation*
 
-<pre><code class="r">n <- 10
+```r
+n <- 10
 # Data Manipulation
-top_customers_tbl <- order_lines_tbl %>%</br>
-  # Select relevant columns
-  select(customer_city, price) %>%</br>
-  # Collapse the least frequent values into “other”
-  mutate(customer_city = as_factor(customer_city) %>% 
-                         fct_lump(n = n, w = price)) %>%</br>
-  # Group and summarize
-  group_by(customer_city) %>%
-  summarize(revenue = sum(price)) %>%
-  ungroup() %>%</br>
-  # Reorder the column customer_city by revenue
-  mutate(customer_city = customer_city %>% fct_reorder(revenue)) %>%
-  # Place "Other" at the beginning
-  mutate(customer_city = customer_city %>% fct_relevel("Other", after = 0)) %>%
-  # Sort by this column
-  arrange(desc(customer_city)) %>%</br>
-  # Add Revenue Text
-  mutate(revenue_text = scales::dollar(revenue, scale = 1e-6, suffix = "M")) %>%</br>
-  # Add Cumulative Percent
-  mutate(cum_pct = cumsum(revenue) / sum(revenue)) %>%
-  mutate(cum_pct_text = scales::percent(cum_pct)) %>%</br>
-  # Add Rank
-  mutate(rank = row_number()) %>%
-  mutate(rank = case_when(
-    rank == max(rank) ~ NA_integer_,
-    TRUE ~ rank
-  )) %>%</br>
-  # Add Label text
-  mutate(label_text = str_glue("Rank: {rank}\nRev: {revenue_text}\nCumPct: {cum_pct_text}"))</code></pre>
+top_customers_tbl <- bike_orderlines_tbl %>%
+    
+    # Select relevant columns
+    select(bikeshop, total_price) %>%
+    
+    # Collapse the least frequent values into “other”
+    mutate(bikeshop = as_factor(bikeshop) %>% fct_lump(n = n, w = total_price)) %>%
+    
+    # Group and summarize
+    group_by(bikeshop) %>%
+    summarize(revenue = sum(total_price)) %>%
+    ungroup() %>%
+    
+    # Reorder the column customer_city by revenue
+    mutate(bikeshop = bikeshop %>% fct_reorder(revenue)) %>%
+    # Place "Other" at the beginning
+    mutate(bikeshop = bikeshop %>% fct_relevel("Other", after = 0)) %>%
+    # Sort by this column
+    arrange(desc(bikeshop)) %>%
+    
+    # Add Revenue Text
+    mutate(revenue_text = scales::dollar(revenue, 
+                                         scale  = 1e-6, 
+                                         prefix = "", 
+                                         suffix = "M €")) %>%
+    
+    # Add Cumulative Percent
+    mutate(cum_pct = cumsum(revenue) / sum(revenue)) %>%
+    mutate(cum_pct_text = scales::percent(cum_pct)) %>%
+    
+    # Add Rank
+    mutate(rank = row_number()) %>%
+    mutate(rank = case_when(
+        rank == max(rank) ~ NA_integer_,
+        TRUE ~ rank
+    )) %>%
+    
+    # Add Label text
+    mutate(label_text = str_glue("Rank: {rank}\nRev: {revenue_text}\nCumPct: {cum_pct_text}"))
+```
 
 *3. Data visualization*
 
-<pre><code class="r"># Data Visualization
-top_customers_tbl %>%</br>
+```r
+# Data Visualization
+top_customers_tbl %>%
+    
     # Canvas
-    ggplot(aes(x = revenue, y = customer_city)) +</br>
+    ggplot(aes(revenue, bikeshop)) +
+    
     # Geometries
-    geom_segment(aes(xend = 0, yend = customer_city), 
-                 color = palette_light()[1],
+    geom_segment(aes(xend = 0, yend = bikeshop), 
+                 color = RColorBrewer::brewer.pal(n = 11, name = "RdBu")[11],
                  size  = 1) +
+                 
     geom_point(aes(size = revenue),
-               color = palette_light()[1]) +
+               color = RColorBrewer::brewer.pal(n = 11, name = "RdBu")[11]) +
+    
     geom_label(aes(label = label_text), 
                hjust = "inward",
                size  = 3,
-               color = palette_light()[1]) +</br>
+               color = RColorBrewer::brewer.pal(n = 11, name = "RdBu")[11]) +
+    
     # Formatting
-    scale_x_continuous(labels = scales::dollar_format(scale = 1e-6, suffix = "M")) +
+    scale_x_continuous(labels = scales::dollar_format(scale = 1e-6, 
+                                                      prefix = "",
+                                                      suffix = "M €")) +
     labs(
-      title = str_glue("Top {n} Customers"),
-      subtitle = str_glue("Start: {year(min(order_lines_tbl$order_purchase_timestamp))}
-                            End:  {year(max(order_lines_tbl$order_purchase_timestamp))}"),
-      x = "Revenue ($M)",
-      y = "Customer",
-      caption = str_glue("Top 3 cities contribute
-                           24% of purchasing power.")
+        title = str_glue("Top {n} Customers"),
+        subtitle = str_glue(
+              "Start: {year(min(bike_orderlines_tbl$order_date))}
+               End:  {year(max(bike_orderlines_tbl$order_date))}"),
+        x = "Revenue (M €)",
+        y = "Customer",
+        caption = str_glue("Top 6 customers contribute
+                           52% of purchasing power.")
     ) +
+    
     theme_minimal() +
     theme(
-      legend.position = "none",
-      plot.title = element_text(face = "bold"),
-      plot.caption = element_text(face = "bold.italic")
-    )</code></pre>
+        legend.position = "none",
+        plot.title = element_text(face = "bold"),
+        plot.caption = element_text(face = "bold.italic")
+    )
+```
     
-<section class="hide">  
-{{< figure src="/img/courses/dat_sci/05/ggplot_04.png" caption=" Lollipop Chart: Top N Customer Cities" >}}
-</section>
+{{< figure src="/img/courses/dat_sci/05/business_case_1.png" caption="Lollipop Chart: Top N Customers" >}}
 
 ***
 
 **Case 2**
 
 * Question: Do specific customers have a purchasing preference?
-* Goal: Visualize heatmap of proportion of sales by sub category for the categories fashion & furniture. Since Heatmaps are great for showing details in 3 dimensions, show the results for each customer state.
+* Goal: Visualize heatmap of proportion of sales by Secondary Product Category
 
-*1. Load libraries and data and join them together*
+*1. Data manipluation*
 
-<pre><code class="r"># 2.0 Heatmaps ----
-library(tidyverse)
-library(tidyquant) # For colors</br>
-order_items_tbl <- read_rds("00_data/01_e-commerce/02_wrangled_data/order_items_tbl.rds") 
-orders_tbl      <- read_rds("00_data/01_e-commerce/02_wrangled_data/orders_tbl.rds") 
-products_tbl    <- read_rds("00_data/01_e-commerce/02_wrangled_data/products_tbl.rds")
-customers_tbl   <- read_rds("00_data/01_e-commerce/02_wrangled_data/customers_tbl.rds")</br>
-# Data Manipulation
-# Joing together
-order_lines_tbl <- order_items_tbl %>% 
-  left_join(orders_tbl) %>% 
-  left_join(customers_tbl) %>% 
-  left_join(products_tbl)</code></pre>
-
-*2. Data manipluation*
-
-<pre><code class="r"># Select columns and filter categories
-pct_sales_by_state_tbl <- order_lines_tbl %>% 
-  select(customer_state, main_category_name, sub_category_name, price) %>% 
-  filter(main_category_name == "fashion" | main_category_name == "moveis") %>% </br>
-  # Group by category and summarize
-  group_by(customer_state, main_category_name, sub_category_name) %>%
-  summarise(total_revenue = sum(price)) %>%
-  ungroup() %>%</br>
-  # Group by state and calculate revenue ratio
-  group_by(customer_state) %>%
-  mutate(pct = round((total_revenue / sum(total_revenue)), digits = 2)) %>%
-  ungroup() %>%</br>
-  # Reverse order of states
-  mutate(customer_state = as.factor(customer_state) %>% fct_rev()) %>%
-  mutate(customer_state_num = as.numeric(customer_state))</code></pre>
+```r
+# Select columns and filter categories
+pct_sales_by_customer_tbl <- bike_orderlines_tbl %>%
+    
+    select(bikeshop, category_1, category_2, quantity) %>%
+    filter(category_1 %in% c("Mountain","Road")) %>% 
+    
+    # Group by category and summarize
+    group_by(bikeshop, category_1, category_2) %>%
+    summarise(total_qty = sum(quantity)) %>%
+    ungroup() %>%
+    
+    # Add missing groups (not necessarily mandatory, but we'd get holes in the plot)
+    # complete() creates NAs. We need to set those to 0.
+    complete(bikeshop, nesting(category_1, category_2)) %>% 
+    mutate(across(total_qty, ~replace_na(., 0))) %>%  
+    
+    # Group by bikeshop and calculate revenue ratio
+    group_by(bikeshop) %>%
+    mutate(pct = total_qty / sum(total_qty)) %>%
+    ungroup() %>%
+    
+    # Reverse order of bikeshops
+    mutate(bikeshop = as.factor(bikeshop) %>% fct_rev()) %>%
+    # Just to verify
+    mutate(bikeshop_num = as.numeric(bikeshop))
+```
   
-*3. Data visualization*
+*2. Data visualization*
   
-<pre><code class="r"># Data Visualization
-pct_sales_by_state_tbl %>%</br>
-  ggplot(aes(sub_category_name, customer_state)) +</br>
-  # Geometries
-  geom_tile(aes(fill = pct)) +
-  geom_text(aes(label = scales::percent(pct)), 
-            size = 3) +
-  facet_wrap(~ main_category_name, scales = "free_x") +</br>
-  # Formatting
-  scale_fill_gradient(low = "white", high = palette_light()[1]) +
-  labs(
-    title = "Heatmap of Purchasing Habits",
-    x = "Sub Category",
-    y = "Customer State",
-    caption = str_glue(
-      "Customer states that prefer Fashion products: 
-        AMAZONAS (AM)</br>
-        Customer states that prefer furniture products: 
-        All other states. Customers from Amapá (AP) so not buy fashion products at all")
-  ) +
-  theme_tq() +
-  theme(
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    legend.position = "none",
-    plot.title = element_text(face = "bold"),
-    plot.caption = element_text(face = "bold.italic")
-  )</code></pre>
+```r
+# Data Visualization
+  pct_sales_by_customer_tbl %>%
+    
+    ggplot(aes(category_2, bikeshop)) +
+    
+    # Geometries
+    geom_tile(aes(fill = pct)) +
+    geom_text(aes(label = scales::percent(pct, accuracy = 1L)), 
+              size = 3) +
+    facet_wrap(~ category_1, scales = "free_x") +
+    
+    # Formatting
+    scale_fill_gradient(low = "white", high = "#2C3E50") +
+    labs(
+      title = "Heatmap of Purchasing Habits",
+      x = "Bike Type (Category 2)",
+      y = "Customer",
+      caption = str_glue(
+        "Customers that prefer Road: 
+        To be discussed ...
+        
+        Customers that prefer Mountain: 
+        To be discussed ...")
+    ) +
+    
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      legend.position = "none",
+      plot.title = element_text(face = "bold"),
+      plot.caption = element_text(face = "bold.italic")
+    )
+```
 
-<section class="hide">  
-{{< figure src="/img/courses/dat_sci/05/ggplot_05.png" caption="Heatmap of purchasing habits" >}}
-</section>
+{{< figure src="/img/courses/dat_sci/05/business_case_2.png" caption="Heatmap of purchasing habits" >}}
 
 <!-- HEADING (challenge) -->
-## <i class="fas fa-laptop-code"></i> Challenge
+## <i class="fas fa-laptop-code"></i> &nbsp;Challenge
 
-Create at least 2 plots.
+The challenge deals with the covid data from last session. This time I recommend to use the tidyverse to wrangle the data...
 
-1. For the first one use the olist data and create a `violin plot` that shows the price distribution for whatever categories you choose.
-2. Take the covid data from the last session and map the death / cases over the time. Show the trend for the entire world as well as for Germany and the USA (`line plot`).
-3. Optional: Create a `worldmap` and color the countries according to the fatality (total deaths per capita). If it is easier for you, you can do it also just for the states of the USA or any other state (you need to get a different dataset though).
+```r
+library(tidyverse)
+covid_data_tbl <- read_csv("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv")
+```
+
+... but of course you can also use the data.table library.
+
+**Challenge 1**
+
+Goal: Map the time course of the cumulative Covid-19 cases! Your plot should look like this:
+
+{{< figure src="/img/courses/dat_sci/05/challenge_1.png" caption="Challenge 1" >}}
+
+Adding the cases for Europe is optional. You can choose your own color theme, but don't use the default one. Don't forget to scale the axis properly. The labels can be added with `geom_label()` or with `geom_label_repel()` (from the package `ggrepel`).
+
+**Challenge 2**
+
+Goal: Visualize the distribution of the mortality rate (deaths / population) with `geom_map()`. The necessary longitudinal and lateral data can be accessed with this function:
+
+```r
+world <- map_data("world")
+```
+
+This data has also be put in the map argument of `geom_map()`:
+
+```r
+plot_data %>% ggplot( ... ) +
+  geom_map(aes(map_id = ..., ... ), map = world, ... ) +
+  ...
+```
 
 
-
-
-
+{{< figure src="/img/courses/dat_sci/05/challenge_2.png" caption="Challenge 2" >}}
 
