@@ -1222,7 +1222,7 @@ Goal: Visualize the distribution of the mortality rate (deaths / population) wit
 world <- map_data("world")
 ```
 
-This data has also be put in the map argument of `geom_map()`:
+This data has also to be put in the map argument of `geom_map()`:
 
 ```r
 plot_data %>% ggplot( ... ) +
@@ -1230,6 +1230,23 @@ plot_data %>% ggplot( ... ) +
   ...
 ```
 
+Hint (data wrangling):
+
+<!-- CODE (hide) -->
+<section class="hide">
+You have to join the lat/long data and the covid data. Unfortunately the countries are not named identically in each dataset. You can ajust the data with the following code chunk:
+
 
 {{< figure src="/img/courses/dat_sci/05/challenge_2.png" caption="Challenge 2" >}}
 
+
+<pre><code class="r">
+  ... %>% 
+  mutate(across(countriesAndTerritories, str_replace_all, "_", " ")) %>%
+  mutate(countriesAndTerritories = case_when(</br>
+    countriesAndTerritories == "United Kingdom" ~ "UK",
+    countriesAndTerritories == "United States of America" ~ "USA",
+    countriesAndTerritories == "Czechia" ~ "Czech Republic",
+    TRUE ~ countriesAndTerritories</br>
+  ))</code></pre>
+</section>
