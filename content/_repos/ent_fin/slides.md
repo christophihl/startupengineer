@@ -16,12 +16,12 @@ weight: 10
 
 
 
-## 1) [Introduction: Evaluating Venture Opportunities](https://www.dropbox.com/s/z0lwsyl6qzmobpg/Ent_Fin_WS21_Intro.pdf?dl=0)
+## [1) Introduction: Evaluating Venture Opportunities](https://www.dropbox.com/s/z0lwsyl6qzmobpg/Ent_Fin_WS21_Intro.pdf?dl=0)
 
 
 <br/>
 
-## 2) Financial Planning
+## [2) Financial Planning](https://www.dropbox.com/s/iaxj81tic3s2636/Ent_Fin_WS21_FinPlan.pdf?dl=0)
 
 
 <br/>

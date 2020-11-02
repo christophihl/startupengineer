@@ -39,6 +39,24 @@ weight: 15
 ## 2) Financial Planning
 
 
+* Part 1 - Intro to Financial Projections: {{< youtube SN1YpLiY4mo >}}
+
+
+* Part 2 - Revenue Projection: {{< youtube d74HYubheXw >}}
+
+
+* Part 3 - Cost Projections: {{< youtube ax6w3bfzqaA >}}
+
+
+* Part 4 - Classic Mistakes: {{< youtube YianAYwuhII >}}
+
+
+* Part 5 - Examples and Summary: {{< youtube in8L5Ie4qGQ >}}
+
+
+
+
+
 <br/>
 
 ## 3) Ownership and Returns
