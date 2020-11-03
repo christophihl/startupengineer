@@ -1234,7 +1234,7 @@ Hint (data wrangling):
 
 <!-- CODE (hide) -->
 <section class="hide">
-You have to join the lat/long data and the covid data. Unfortunately the countries are not named identically in each dataset. You can ajust the data with the following code chunk:
+You have to join the lat/long data and the covid data. Unfortunately, the countries are not named identically in each dataset. You can adjust the data with the following code chunk:
 
 
 {{< figure src="/img/courses/dat_sci/05/challenge_2.png" caption="Challenge 2" >}}
