@@ -37,7 +37,7 @@ Why web scrape in the context of Business Analytics?
 * Few companies have programs to actively retrieve & analyze competitor data
 * Companies that implement programs have a Competitive Advantage
 
-## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;Theory Input
+## Theory Input <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;
 
 ### Databases
 
@@ -119,6 +119,7 @@ That is pretty much the gist of how you would connect to a database. Now every d
 
 ### API
 
+#### Requests
 Up until now all files were stored locally in your system or in your working directory. But there may be a scenario where those files are stored at some remote server. Also the data is no longer present in expected file formats like `txt`, `csv`, `.xslx`. In such cases, the most common format in which data is stored on the Web can be `json`, `xml` or `html`. This is where accessing the web with R comes in picture.
 
 We refer such data as web data and the exposed file path, which is nothing but the url to access the Web data, is referred to as an API (application programming interface). When we want to access and work on web data in R studio we invoke/consume the corresponding API using HTTP clients in R.
@@ -346,27 +347,27 @@ response
 
 There are several R packages, that are simply wrappers around popular web APIs and free to use: `spotifyr`, `rtweet`, `quandlr`, `Rfacebook`, `googleflights`, `ìnstaR`, `Rlinkedin`, `RedditExtractoR`, and many many more ...
 
-**Securing Credentials**
+#### Securing Credentials
 
 It is important to avoid publishing code with your credentials in plain text. There are several options to protect your credentials in R: 
 
-1. Environment variables using the .Renviron file
-2. Encrypt credentials with the keyring package
-3. Prompt for credentials using the RStudio IDE.
+* Option 1: Environment variables using the .Renviron file
+* Option 2: Encrypt credentials with the keyring package
+* Option 3: Prompt for credentials using the RStudio IDE.
 
-*.Renviron file*
+**Option 1:** *.Renviron file*
 
 The .Renviron file can be used to store the credentials, which can then be retrieved with `Sys.getenv()`. Here are the steps:
 
-1. Create a new file defining the credentials:
+* Create a new file defining the credentials:
 
 <pre><code class="r">userid = "username"
    pwd = "password"</code></pre>
    
-2. Save it in your home directory with the file name `.Renviron`. If you are asked whether you want to save a file whose name begins with a dot, say YES.
-3. Note that by default, dot files are usually hidden. However, within RStudio, the file browser will make .Renviron visible and therefore easy to edit in the future.
-4. Restart R. `.Renviron` is processed only at the start of an R session.
-5. Retrieve the credentials using Sys.getenv("userid") / Sys.getenv("pwd")
+* Save it in your home directory with the file name `.Renviron`. If you are asked whether you want to save a file whose name begins with a dot, say YES.
+* Note that by default, dot files are usually hidden. However, within RStudio, the file browser will make .Renviron visible and therefore easy to edit in the future.
+* Restart R. `.Renviron` is processed only at the start of an R session.
+* Retrieve the credentials using Sys.getenv("userid") / Sys.getenv("pwd")
 
 <pre><code class="r">alphavantage_api_url <- "https://www.alphavantage.co/query"
 ticker               <- "WDI.DE"
@@ -376,7 +377,7 @@ GET(alphavantage_api_url, query = list('function' = "GLOBAL_QUOTE",
                                        apikey     = Sys.getenv('TOKEN'))
     )</code></pre>
 
-*keyring package*
+**Option 2:** *keyring package*
 
 You can then store a value in the keyring from R with the `key_set()` function. You’ll be asked to enter a “password,” which is actually how you enter the value you want to securely store. By using the password dialog box, you can set the value once interactively and never have to type the value in clear text. You can access the value with the `key_get()` function.
 
@@ -388,7 +389,7 @@ GET(alphavantage_api_url, query = list('function' = "GLOBAL_QUOTE",
                                        apikey     = key_get("token"))
     )</code></pre>
 
-*prompt credentials*
+**Option 3:** *prompt credentials*
 
 The RStudio IDE’s API can be used to prompt the user to enter the credentials in a popup box that masks what is typed:
 
@@ -619,7 +620,7 @@ A combination of look-ahead and look-behind is a good way to extract something b
 
 ***
 
-#### Web scraping examples:
+#### Examples
 
 1st example: Get all companies from the S&P 500 (wikipedia)
 
@@ -842,7 +843,8 @@ If we go to the right side of the viewer, a button appears. Clicking it will sen
 ## "Stealth"     "aero silver"</code></pre>
 
 <!-- HEADING with Business-Logo -->
-## <i class="fas fa-user-tie"></i> &nbsp;Business case
+## Business Case <i class="fas fa-user-tie"></i> &nbsp;
+### Goal
 
 There are many use cases: Contact Scraping, Monitoring/Comparing Prices, Scraping Reviews/Ratings etc.
 
@@ -898,9 +900,9 @@ Our goal is to get data for every bike in every available color scheme. We can d
 
 ***
 
-**Analysis with R**
+### Analysis with R
 
-1. Load the libraries
+First, we have to load the relevant libraries.
 
 <section class="hide">
 <pre><code class="r"># WEBSCRAPING ----</br>
@@ -915,7 +917,9 @@ library(stringi)   # character string/text processing</code></pre>
 
 ***
 
-2. Analyze the page to make a plan for our web scraping approach (there is no unique way. Possibly there are hundreds of ways to get that data.)
+#### Page analysis
+
+Analyze the page to make a plan for our web scraping approach (there is no unique way. Possibly there are hundreds of ways to get that data.)
 
 * Where are the individual bikes listed, so that we can scrape their URLs? --> On the product category sites:
 
@@ -929,11 +933,14 @@ library(stringi)   # character string/text processing</code></pre>
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_00.png" caption="Ids for the product families" >}}
 
-3. Get the available color IDs for each indivual bike.
+#### Get color/bike
 
-* Step 1: Get URLs for each of the product categories
+Get the available color IDs for each individual bike.
 
-* Step 1.1: Get the bike product family IDs (doing that manually would have been faster. This is just for the purpuse of demonstration). 
+***
+**Step 1:** Get URLs for each of the product categories
+
+* 1.1: Get the bike product family IDs (doing that manually would have been faster. This is just for the purpuse of demonstration). 
 
 <section class="hide">
 <pre><code class="r"># 2.0 COLLECT PRODUCT FAMILIES ----</br>
@@ -968,7 +975,7 @@ bike_family_tbl
 # The updated page has now also ids for CFR and GRAVEL. You can either include or remove them.</code></pre>
 </section>
 
-***
+</br>
 
 * Step 1.2: Get bike product category urls
 
@@ -1017,7 +1024,7 @@ bike_category_tbl
 
 ***
 
-* Step 2: Get URL for each individual bike of each product category. You might have to scroll down a bit (depending on the category).
+**Step 2:** Get URL for each individual bike of each product category. You might have to scroll down a bit (depending on the category).
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_02.png" caption="classes for the individual bike urls" >}}
 
@@ -1055,7 +1062,7 @@ bike_desc_tbl <- html_bike_category %>%</br>
    enframe(name = "position", value = "description")</code></pre>
 </section>
 
-***
+</br>
 
 There is often data in JSON format listed with a lot of interesting data. Let's scrape that too.
 
@@ -1089,7 +1096,7 @@ bike_json_tbl  <- html_bike_category %>%</br>
            left_join(bike_url_tbl)</code></pre>
 </section>
 
-***
+</br>
 
 * Step 2.2: Make a function to get the bike data for every bike of each category (just wrap the above code into the `function()` function)
 
@@ -1147,9 +1154,9 @@ bike_data_tbl
 ## #   dimension56 <dbl>, metric5 <chr>, description <chr>, url <chr></code></pre>
 </section>
 
-***
+</br>
 
-* Step 2.3 (`map()`): If we run this function for all bike category urls, we get the data for every bike
+* Step 2.3a (`map()`): If we run this function for all bike category urls, we get the data for every bike
 
 <section class="hide">
 <pre><code class="r"># 4.4.1 Map the function against all urls</br>
@@ -1163,9 +1170,9 @@ bike_data_tbl <- bind_rows(bike_data_lst)
 saveRDS(bike_data_tbl, "bike_data_tbl.rds")</code></pre>
 </section>
 
-***
+</br>
 
-* Step 2.3 (`for loop`): The same could be achieved with a foor loop:
+* Step 2.3b (`for loop`): The same could be achieved with a foor loop:
 
 <section class="hide">
 <pre><code class="r"># 4.4.1 Alternative with a for loop</br>
@@ -1183,7 +1190,7 @@ for (i in seq_along(bike_category_tbl$url)) {</br>
 }</code></pre>
 </section>
 
-***
+</br>
 
 * Step 2.4: CLEANING</br>
 We didn't get only the canyon bikes, but also other products listed below some bike categories. They have a different id length. Let's remove observations, where the length of the id is not 4. And we got some duplicates. They have to be removed as well:
@@ -1232,12 +1239,14 @@ bike_data_cleaned_tbl <- bike_data_tbl %>%</br>
 saveRDS(bike_data_cleaned_tbl, "bike_data_cleaned_tbl.rds")</code></pre>
 </section>
 
+</br>
+
 Now you have the updated bike data from last session. In this case we don't only want the bike models, but also all the different available color variations for each bike.
 
 ***
 
-* Step 3: Get all color variations for each bike
-* Step 3.1: Get the color IDs for each bike
+**Step 3:** Get all color variations for each bike
+* Step 3.1a: Get the color IDs for each bike
 
 The only place where I found all color variations for each bike was the script window.deptsfra (found it by searching for known color ids from example URLs), which is not loaded in the html body but in the html head. The content in this script is just a big JSON file (the one that was mentioned earlier), which we must extract. To look at it in a nicer representation, you can copy it and paste it to https://jsonlint.com for example.  
 
@@ -1281,7 +1290,9 @@ saveRDS(bike_data_colors_tbl, "bike_data_colors_tbl.rds")</code></pre>
 
 Processing large amounts of data with complex models can be time consuming. Historically, R has only utilized only one core, which makes it single-threaded. Which is a shame, because most computers are much more powerful than that. A computer with one processor may still have 4 cores (quad-core), allowing 4 computations to be executed at the same time. Much R code runs fast and fine on a single core or processor. But at times, it is good to utilize more than one core for the same calculation. This is called parallel processing instead of sequential computing. There are many libraries, that makes it pretty easy to use the power of multiple cores. With the package `furrr` the only step you have to do is adding the line `plan("multiprocess")` and replacing `map()` with `future_map()`.
 
-* Step 3.1: Get the color IDs for each bike in a faster way (parallel)
+***
+
+* Step 3.1b: Get the color IDs for each bike in a faster way (parallel)
 <section class="hide">
 <pre><code class="r">library(furrr)     # Parallel Processing using purrr (iteration)
 plan("multiprocess")
@@ -1289,7 +1300,7 @@ bike_data_colors_tbl <- bike_data_cleaned_tbl %>%
     mutate(colors = future_map(bike_url_vec, get_colors))</code></pre>
 </section>
 
-***
+</br>
 
 * Step 3.2: Now we have the color Ids, but we still have to build the URLs for each variant by adding the Ids as query parameters.
 
@@ -1325,7 +1336,7 @@ bike_data_colors_tbl %>% glimpse()
 ## $ url_color        &lt;chr&gt; "https://www.canyon.com/en-de/road-bikes/…</code></pre>
 </section>
 
-***
+</br>
 
 Now we have the URL for each individual bike and can get the stock availability for each size and color variation. It is the same process: Get the json data, save that data in a tibble/ list for each observation in the tibble itself and then using `unnest()` to create the wide data format. 
 
@@ -1368,9 +1379,11 @@ bike_data_sizes_tbl <- bike_data_sizes_tbl %>%
 saveRDS(bike_data_sizes_tbl, "bike_data_sizes_tbl.rds")</code></pre>
 </section>
 
-***
+</br>
 
 The database has now already over 2000 observations. From here we could start monitoring prices and availablilty etc. But I leave that up to you how to proceed.
+
+### Further details
 
 This was an introduction to web scraping static sites by using the library `rvest`. However, many web pages are dynamic and use JavaScript to load their content. These websites often require a different approach to gather the data. If you take a look at the following screenshot, you see, that also the website of Canyon uses JavaScript libraries like JQuery or ReactJs or Angular to dynamically create the HTML data. It will only be downloaded if we click the 'View More Items' button. So we can not simply use rvest to scrap the data if we want zo analyze the entire content (in this case only a few bikes/frames are not loaded).
 
@@ -1401,8 +1414,9 @@ Things to keep in mind…
 * Code Changes: The underling HTML code of a web page can change anytime due to changes in design or for updating details. In such case, your script will stop working. It is important to identify changes to the web page and modify the web scraping script accordingly.
 * API Availability: In many cases, an API is made available by the service provider or organization. It is always advisable to use the API and avoid web scraping.
 * IP Blocking: Do not flood websites with requests as you run the risk of getting blocked. Have some time gap between request so that your IP address is not blocked from accessing the website. Of course, you can also learn to work your way around the anti scraping methods. However, you do need to understand the legality of scraping data and whatever you are doing with the scraped data: http://www.prowebscraper.com/blog/six-compelling-facts-about-legality-of-web-scraping/
-
-### Datacamp
+ 
+***
+**Datacamp**
 <div id="header">Recommended Datacamp courses</div>
 <div id="container">
   <div id="first">{{% icon datacamp %}}</div>
@@ -1411,8 +1425,10 @@ Things to keep in mind…
   <div id="clear"></div>
 </div>
 
+***
+
 <!-- HEADING (challenge) -->
-## <i class="fas fa-laptop-code"></i> Challenge
+## Challenge <i class="fas fa-laptop-code"></i>
 
 In this chapter, there are two challenges for you:
 
