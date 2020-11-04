@@ -92,7 +92,7 @@ Let's do the data wrangling:
 
 <pre><code class="r">library(tidyverse) # loads ggplot2
 library(lubridate)</br>
-bike_orderlines_tbl <- read_rds(path = "02_data_wrangling/bike_orderlines.rds")</br>
+bike_orderlines_tbl <- read_rds("02_data_wrangling/bike_orderlines.rds")</br>
 # 1.0 Anatomy of a ggplot ----</br>
 # 1.1 How ggplot works ----</br>
 # Step 1: Format data ----</br>
@@ -156,7 +156,7 @@ Note that using the `aes()` function will cause the visual channel to be based o
 
 ### 3. Geometries
 
-> Cheatsheet Page 1
+> See page 1 of the visualization Cheatsheet
 
 The 2nd layer generates a visual depiction of the data using geometry types. `Geometries` are the fundamental way to represent data in your plot. They are the actual marks we put on a plot and hence determine the plot type: Histrograms, scatter plots, box plots etc. Building on these basics, ggplot2 can be used to build almost any kind of plot you may want. The most obvious distinction between plots is what geometric objects (geoms) they include. Examples include:
 
@@ -185,7 +185,7 @@ Now that we know about geometric objects and aesthetic mapping, we’re ready to
 
 ***
 
-As mentioned earlier, if we specify an aesthetic within `ggplot()` it will be passed on to each geom that follows. But each geom layer can have its own aes specification by wrapping the attributes in the geoms into `aes()`. This will map these variables to other aesthetics e.g. the revenue to the size of the dots `geom_point(aes(size = revenue))`. You will see that the size of the dots varies then based on the amount of revenue and we will get another legend. This allows us to only show certain characteristics for that specific layer. If you wish to apply an aesthetic property to an entire geometry, you can set that property as an argument to the geom method, outside of the aes() call: `geom_point(color = "blue")` or `geom_point(size = 5)`.
+As mentioned earlier, if we specify an aesthetic within `ggplot()` it will be passed on to each geom that follows. But each geom layer can have its own aes specification by wrapping the attributes in the geoms into `aes()`. This will map these variables to other aesthetics e.g. the revenue to the size of the dots `geom_point(aes(size = sales))`. You will see that the size of the dots varies then based on the amount of revenue and we will get another legend. This allows us to only show certain characteristics for that specific layer. If you wish to apply an aesthetic property to an entire geometry, you can set that property as an argument to the geom method, outside of the aes() call: `geom_point(color = "blue")` or `geom_point(size = 5)`.
 
 In summary, variables are mapped to aesthetics with the `aes()` function, while fixed visual cues are set outside the aes() call. This sometimes leads to confusion, as in this example:
 
@@ -424,7 +424,7 @@ revenue_by_year_tbl %>%
 
 ### 4. Formatting
 
-> Cheatsheet Page 2
+> See page 2 of the visualization Cheatsheet
 
 Once we have that, we can get into the formatting:
 
@@ -502,7 +502,7 @@ Let's do the following formatting:
     subtitle = "Sales are trending up and to the right!",
     x = "",
     y = "Sales (Millions)",
-    color = "Rev ($M)",
+    color = "Rev (M €)",
     caption = "What's happening?\nSales numbers showing year-over-year growth."
   )</code></pre>
   
@@ -555,7 +555,7 @@ sales_by_month_2015 <- bike_orderlines_tbl %>%</br>
   scale_color_continuous(low = "red", high = "black",
                          labels = scales::dollar_format(scale = 1/1e6, 
                                                         prefix = "", 
-                                                        suffix = "M")) +
+                                                        suffix = "M €")) +
   scale_x_continuous(breaks = sales_by_month_2015$month, 
                      labels = month(sales_by_month_2015$month, label = T)) +
   scale_y_continuous(labels = scales::dollar_format(scale = 1/1e6, 
@@ -566,7 +566,7 @@ sales_by_month_2015 <- bike_orderlines_tbl %>%</br>
     subtitle = "April is the strongest month!",
     x = "",
     y = "Sales (Millions)",
-    color = "Rev ($M)",
+    color = "Rev (M €)",
     caption = "What's happening?\nSales numbers are dropping towards the end of the year."
   )  +  
   theme_economist() +
@@ -915,7 +915,7 @@ sales_by_year_category_1_tbl %>%
         title = "Sales Over Year by Category 1",
         subtitle = "Sales Trending Upward",
         x = "",
-        y = "Revenue ($M)",
+        y = "Revenue (M €)",
         fill = "2nd Category",
         caption = "Bike sales trends look strong heading into 2020"
     ) +
@@ -1230,15 +1230,13 @@ plot_data %>% ggplot( ... ) +
   ...
 ```
 
+{{< figure src="/img/courses/dat_sci/05/challenge_2.png" caption="Challenge 2" >}}
+
 Hint (data wrangling):
 
 <!-- CODE (hide) -->
 <section class="hide">
 You have to join the lat/long data and the covid data. Unfortunately, the countries are not named identically in each dataset. You can adjust the data with the following code chunk:
-
-
-{{< figure src="/img/courses/dat_sci/05/challenge_2.png" caption="Challenge 2" >}}
-
 
 <pre><code class="r">
   ... %>% 
