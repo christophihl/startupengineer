@@ -537,7 +537,7 @@ A helpful tool to get the CSS Selector / xpath paths is the selectorgadget. It i
 
 <pre><code class="js">javascript:(function()%7Bvar%20s=document.createElement('div');s.innerHTML='Loading...';s.style.color='black';s.style.padding='20px';s.style.position='fixed';s.style.zIndex='9999';s.style.fontSize='3.0em';s.style.border='2px%20solid%20black';s.style.right='40px';s.style.top='40px';s.setAttribute('class','selector_gadget_loading');s.style.background='white';document.body.appendChild(s);s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src','https://dv0akt2986vzh.cloudfront.net/unstable/lib/selectorgadget.js');document.body.appendChild(s);%7D)();</code></pre>
 
-But keep in mind, that there are infinite ways to select an element and having knowledge about the underlying html code of a website makes it way easier to scrape a webiste in the long run. To find the CSS class for an element, we need to right-click on that area and select “Inspect” or “Inspect Element” (depending on the browser you are using). The hardest part of scraping is figuring out the xpath or css to indicate which html nodes to select. 
+But keep in mind, that there are infinite ways to select an element and having knowledge about the underlying html code of a website makes it way easier to scrape a website in the long run. To find the CSS class for an element, we need to right-click on that area and select “Inspect” or “Inspect Element” (depending on the browser you are using). The hardest part of scraping is figuring out the xpath or css to indicate which html nodes to select. 
 
 <a href="https://rvest.tidyverse.org/" target="_blank">
 <img src="/img/icons/logo_rvest.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
@@ -627,7 +627,7 @@ A combination of look-ahead and look-behind is a good way to extract something b
 * read in the html from the URL
 * Select the correct html nodes and extract the html table
 
-In order to start parsing through a web page, we first need to request that data from the computer server that contains it. In revest, the function that serves this purpose is the `read_html()` function. It takes in a web URL as an argument and returns a list object that contains the tree-like structure we discussed earlier. 
+In order to start parsing through a web page, we first need to request that data from the computer server that contains it. In rvest, the function that serves this purpose is the `read_html()` function. It takes in a web URL as an argument and returns a list object that contains the tree-like structure we discussed earlier. 
 
 {{< figure src="/img/courses/dat_sci/03/html_wiki.png" caption="HTML from the wikipedia HTML" >}}
 
@@ -765,7 +765,7 @@ This will communicate the server something like “I want the linguistic content
 
 #### Functional programming
 
-If we scrape more than one page, we usually have to iterate over the content. Iterating refers to programmatically repeating a step or sets of steps, a set number of times or until a condition is meant.
+If we scrape more than one page, we usually have to iterate over the content. Iterating refers to programmatically repeating a step or sets of steps, a set number of times or until a condition is met.
 Typically, when we iterate in any programming language, we use a loop, typically a `for loop`:
 
 <pre><code class="r">for (variable in vector) {
@@ -889,7 +889,7 @@ The products are divided into families and categories:
 * URL Page path for the product categories (the ride styles, endurance-bikes in this example, don't matter to us):
   + https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/
   
-Each bike can come in different color variations (indicated by `?dwvar_2399_pv_rahmenfarbe=BK` in thie example)
+Each bike can come in different color variations (indicated by `?dwvar_2399_pv_rahmenfarbe=BK` in this example)
 
 * URL query parameters (initialized by the question mark `?`)
   + https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/endurace-cf-slx-disc-9.0-etap/2399.html?dwvar_2399_pv_rahmenfarbe=BK&dwvar_2399_pv_rahmengroesse=M&quantity=1
@@ -929,7 +929,7 @@ library(stringi)   # character string/text processing</code></pre>
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_00.png" caption="Ids for the product families" >}}
 
-3. Get the available color IDs for each indiviual bike.
+3. Get the available color IDs for each indivual bike.
 
 * Step 1: Get URLs for each of the product categories
 
@@ -945,7 +945,7 @@ html_home         <- read_html(url_home)</br>
 bike_family_tbl <- html_home %>%</br>
                  # Get the nodes for the families ...
                  html_nodes(css = ".js-navigationDrawer__list--secondary") %>%
-                 # ...and extract the infromation of the id attribute
+                 # ...and extract the information of the id attribute
                  html_attr('id') %>%</br>
                  # Remove the product families Gear and Outlet and Woman 
                  # (because the female bikes are also listed with the others)
@@ -1414,7 +1414,7 @@ Things to keep in mind…
 <!-- HEADING (challenge) -->
 ## <i class="fas fa-laptop-code"></i> Challenge
 
-This week there are two challenges for you:
+In this chapter, there are two challenges for you:
 
 1. Get some data via an API. There are millions of providers, that offer API access for free and have good documentation about how to query their service. You just have to google them. You can use whatever service you want. For example, you can get data about your listening history (spotify), get data about flights (skyscanner) or just check the weather forecast.
 

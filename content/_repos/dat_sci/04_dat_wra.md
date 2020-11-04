@@ -27,8 +27,8 @@ The functions for data wrangling you need to learn are integrated into 7 Key Top
 3. Performing `feature-based calculations` - using mutate()
 4. Performing `summary calculations` - Working with groups and summarized data
 5. `Reshaping` data (pivoting) - Converting from wide to long format and vice versa
-6. `Combining` data (Joining & Binding)
-7. `Splitting & Combining` Column Text - Building features from text columns
+6. `Combining` Joining & Binding data
+7. `Splitting & Combining` Building features from text columns
 
 We have used already most of the functions in the last sessions. However, in order to learn them you need to practice them. Let's see if you can solve the following tasks. We start with the `bikes_tbl` from the last Canyon case. First we have to replace the dots with the underscores and split the category column (same steps we have applied to `bike_orderlines_tbl`).
 
@@ -287,7 +287,7 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
 </section>
 
 ***
-3.3 `Adding Flags` (feature engineering): Add a column that equals to `TRUE` if model contains the word strive and filter by that:
+3.3 `Adding Flags` (feature engineering): Add a column that equals to `TRUE` if model contains the word "strive" and filter by that:
 
 <section class="hide">
 <pre><code class="r">bike_orderlines_tbl %>%
@@ -319,7 +319,7 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
 </section>
 
 ***
-3.6 More flexible binning with `case_when()`: Text to categorical. Add a column that equals to "Aeroad", when model contains "aerorad",  "Ultimate", when model contains "ultimate" and "Not Aeroad or Ultimate" in every other case":
+3.6 More flexible binning with `case_when()`: Text to categorical. Add a column that equals to "Aeroad", when model contains "aerorad",  "Ultimate", when model contains "ultimate" and "Not Aeroad or Ultimate" in every other case:
 
 <section class="hide">
 <pre><code class="r">bike_orderlines_tbl %>%
@@ -361,13 +361,13 @@ Functions: `group_by()` and `summarise()`
 <pre><code class="r">bike_orderlines_tbl %>%
     group_by(category_1, category_2) %>%
     summarise(revenue = sum(total_price)) %>%
-    # Always ungroup() after you summarize(). Left-over groups will cause difficult-to-detect errors.
+    # Always ungroup() after you summarise(). Left-over groups will cause difficult-to-detect errors.
     ungroup() %>%
     arrange(desc(revenue))</code></pre>
 </section>
 
 ***
-4.3 `Summary functions`: Group by category_1 and category_2 and summarize the
+4.3 `Summary functions`: Group by category_1 and category_2 and summarize the price by
 * count
 * average
 * median
@@ -378,7 +378,7 @@ Functions: `group_by()` and `summarise()`
 <section class="hide">
 <pre><code class="r">bike_orderlines_tbl %>%
     group_by(category_1, category_2) %>%
-    summarize(
+    summarise(
         count = n(),
         avg   = mean(total_price),
         med   = median(total_price),
@@ -422,7 +422,7 @@ The wide format is Reader Friendly. People tend to read data as wide format, whe
 
 5.1 `pivot_wider()`: Long to wide. 
 
-a) bike_data_sizes_tbl. Make the values of the column size to columns:
+a) bike_data_sizes_tbl. Make the values of the column "size" to columns:
 
 <section class="hide">
 <pre><code class="r">bike_data_sizes_tbl %>% 
@@ -439,7 +439,7 @@ b) Create a tibble with the sales for each category_1 and each bikeshop. Name it
 <pre><code class="r">bikeshop_revenue_tbl <- bike_orderlines_tbl %>%
     select(bikeshop, category_1, total_price) %>%</br>
     group_by(bikeshop, category_1) %>%
-    summarize(sales = sum(total_price)) %>%
+    summarise(sales = sum(total_price)) %>%
     ungroup() %>%
     arrange(desc(sales))</code></pre>
 </section>
@@ -901,7 +901,7 @@ setkey(cd_dt2, NULL)
 # Join
 cd_dt1[cd_dt2, on = "country"]
 # If they had different colnames
-cd_dt1[cd_dt2, on = c(colA = "colB"]</br>
+cd_dt1[cd_dt2, on = c(colA = "colB")]</br>
 # Alternatively you can use the function merge()
 # Inner Join
 merge(cd_dt1, cd_dt2, by='country')
@@ -1122,7 +1122,7 @@ col_types_perf = list(
     foreclosure_principal_write_off_amount = col_double(),
     servicing_activity_indicator           = col_factor(NULL))</br>
 performance_data <- vroom(
-    file       = "loan_data/Performance_2018Q1.txt", 
+    file       = "loan_data/Performance_2019Q1.txt", 
     delim      = "|", 
     col_names  = names(col_types_perf),
     col_types  = col_types_perf,
@@ -1258,7 +1258,12 @@ combined_data %>% glimpse()</code></pre>
 Let's work with the column `current_loan_delinquency_status`:
 
 <pre><code class="r">combined_data$current_loan_delinquency_status %>% unique()
-##  0 NA  1  2  3  4  5  6  7  8  9 10 11 12</code></pre>
+##  0 NA  1  2  3  4  5  6  7  8  9 10 11 12
+
+# or:
+combined_data[,current_loan_delinquency_status] %>% unique()
+##  0 NA  1  2  3  4  5  6  7  8  9 10 11 12
+</code></pre>
 
 Zero is good. Zero means the loan is paid on time. One would mean that the borrower is one month behind and so on... The worst case is 12. For machine learning approaches we could want to add a response variable, that tells us whether a loan will become delinquent in next 3 months. For that we are using the `lead()` function, that finds previous values in a vector (the opposite `lag()` finds next values). Those functions are useful for comparing values ahead of or behind the current values.
 
@@ -1324,7 +1329,7 @@ toc()</br>
 tic()
 combined_data %>%
   group_by(loan_id) %>%
-  summarize(total_delinq = max(current_loan_delinquency_status)) %>%
+  summarise(total_delinq = max(current_loan_delinquency_status)) %>%
   ungroup() %>%
   arrange(desc(total_delinq))
 toc()</code></pre>

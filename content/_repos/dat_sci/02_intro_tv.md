@@ -632,7 +632,7 @@ diamonds %>%
 <div id="container">
   <div id="first">{{% icon info-solid %}}</div>
   <div id="second">
-  An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. You have used already mathemaical operators. The following table shows some relational and logical operators supported by the R language.</br></br>
+  An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. You have used already mathematical operators. The following table shows some relational and logical operators supported by the R language.</br></br>
 <table>
 <thead>
 <tr>

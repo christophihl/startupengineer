@@ -246,7 +246,7 @@ RStudio allows you to execute commands directly from the script editor by using 
 
 Write your calculations for the EOQ in the script editor and ...
 
-* ... execute a single line (click the Run icon <img src="/img/courses/dat_sci/01/icon_run.png" width=3% style="display:inline-block; margin:0px"> or hit <kbd>Cmd</kbd>+<kbd>Return</kbd>). Note that the cursor can be anywhere on the line and one does not need to highlight anything
+* ... execute a single line (click the Run icon <img src="/img/courses/dat_sci/01/icon_run.png" width=3% style="display:inline-block; margin:0px"> or hit <kbd>Cmd</kbd>+<kbd>Return</kbd>). Note that the cursor can be anywhere on the line and one does not need to highlight anything (unless you want to define a function)
 * ... execute multiple lines (Highlight lines with the cursor, then click Run or press <kbd>Cmd</kbd>+ <kbd>Return</kbd>
 * ... execute the whole script (Source icon <img src="/img/courses/dat_sci/01/icon_source.png" width=3% style="display:inline-block; margin:0px"> or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>)
 
@@ -363,7 +363,7 @@ sample(die, size = 1)
 ## 3</code></pre>
 <!-- CODE (show) -->
 
-With the `sample` function you can simulate rolling a pair of dice, if you set the argument `size` to the value 2. But additonally, you have to set the value `replacement`to `TRUE`. Otherwise rolling pairs would not be possible. If you want to add up the dice, you can feed your result straight into the sum function:
+With the `sample` function you can simulate rolling a pair of dice, if you set the argument `size` to the value 2. But additonally, you have to set the value `replacement` to `TRUE`. Otherwise rolling pairs would not be possible. If you want to add up the dice, you can feed your result straight into the sum function:
 
 <!-- CODE (show) -->
 <pre><code class="r">dice <- sample(die, size = 2, replace = TRUE)
@@ -679,7 +679,7 @@ hist(results)</code></pre>
   </div>
 </div>
 
-We will use GitHub to store your data and hand in your assignments through your personal website (github pages). To be able to do so, complete the following steps (detailled instructions below):
+We will use GitHub to store your data and hand in your assignments through your personal website (github pages). To be able to do so, complete the following steps (detailed instructions below):
 
 1. Create a free github account. 
 
@@ -761,7 +761,7 @@ That's it. Now you can navigate to your new homepage via this link: `https://git
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .Rmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. `Press commit to master.`" >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="4. Press `Push origin` and wait a couple seconds. Your changes should now be served on your website" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="4. Press `Push origin` and wait a couple of minutes. Your changes should now be served on your website" >}}
 
 Summary for editing your webpage and serving on github
 
