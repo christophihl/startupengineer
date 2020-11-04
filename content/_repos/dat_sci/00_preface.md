@@ -31,7 +31,7 @@ There are plenty of advantages of using R instead of other software packages...
 R integrates with other tools to generate manuscripts from your code. If you collect more data, or fix a mistake in your dataset, the figures and the statistical tests in your manuscript are updated automatically. R code is great for reproducibility. Reproducibility is when someone else (including your future self) can obtain the same results from the same dataset when using the same analysis.
 
 * `Efficient functions and data structures for data analysis`<br>
-R is designed for data analysis. It comes with special data structures and data types that make handling of missing data and statistical factors convenient. R can connect to spreadsheets, databases, and many other data formats, on your computer or on the web. The skills you learn with R scale easily with the size of your dataset. Whether your dataset has hundreds or millions of lines, it won’t make much difference to you.
+R is designed for data analysis. It comes with special data structures and data types that make handling of missing data and statistical factors convenient. R can connct to spreadsheets, databases, and many other data formats, on your computer or on the web. The skills you learn with R scale easily with the size of your dataset. Whether your dataset has hundreds or millions of lines, it won’t make much difference to you.
 
 * `Powerful graphics`</b><br>
 The plotting functionalities in R are endless, and allow you to adjust any aspect of your graph to convey most effectively the message from your data.
