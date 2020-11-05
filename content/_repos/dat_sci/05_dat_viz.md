@@ -18,7 +18,7 @@ Data visualization is the second most important skill of a data scientist (after
 
 1. Top N Customers. Which customers have the most purchasing power?
 
-2. Heatmap of pruchasing habits. Which customers prefer which products?
+2. Heatmap of purchasing habits. Which customers prefer which products?
 
 To get to these advanced plots, you need to learn everything from the `ggplot2` package:
 
@@ -158,7 +158,7 @@ Note that using the `aes()` function will cause the visual channel to be based o
 
 > See page 1 of the visualization Cheatsheet
 
-The 2nd layer generates a visual depiction of the data using geometry types. `Geometries` are the fundamental way to represent data in your plot. They are the actual marks we put on a plot and hence determine the plot type: Histrograms, scatter plots, box plots etc. Building on these basics, ggplot2 can be used to build almost any kind of plot you may want. The most obvious distinction between plots is what geometric objects (geoms) they include. Examples include:
+The 2nd layer generates a visual depiction of the data using geometry types. `Geometries` are the fundamental way to represent data in your plot. They are the actual marks we put on a plot and hence determine the plot type: Histograms, scatter plots, box plots etc. Building on these basics, ggplot2 can be used to build almost any kind of plot you may want. The most obvious distinction between plots is what geometric objects (geoms) they include. Examples include:
 
 * points (`geom_point`, for scatter plots, dot plots, etc)
 * lines (`geom_line`, for time series, trend lines, etc)
@@ -169,7 +169,7 @@ Each of these geometries will leverage the aesthetic mappings supplied although 
 
 <pre><code class="r">help.search("geom_", package = "ggplot2")</code></pre>
 
-Now that we know about geometric objects and aesthetic mapping, we’re ready to make our first ggplot: a line with dots (instead of a bar plot like in session 2). We'll use combination of `geom_line` and `geom_point` to do this, which requires aes mappings for x and y. The color for revenue is optional. We can set the size / thickness of the points / line with the size argument. Additionally, we can insert a trendline based on the dots using `geom_smooth()`. The arguments `lm` stands for linear regression. With `se = FALSE` we remove the display of the standard errors.
+Now that we know about geometric objects and aesthetic mapping, we’re ready to make our first ggplot: a line with dots (instead of a bar plot like in session 2). We'll use combination of `geom_line` and `geom_point` to do this, which requires aes mappings for x and y. The color for revenue is optional. We can set the size / thickness of the points / line with the size argument. Additionally, we can insert a trendline based on the dots using `geom_smooth()`. The arguments `lm` stands for linear regression. With `se = FALSE` we remove the display of the standard errors. Note, that colors in the shown plots do not necessarily match with colors used in the code but are chosen such that the website looks appealing. Feel free to play with colours in your own code.
 
 <pre><code class="r">sales_by_year_tbl %>%</br>
   # Canvas
@@ -230,7 +230,7 @@ order_value_tbl %>%
 *2. Line Plots*
 
 * Great for time series
-* Goal: Describe revenue by Month, expose cyclic nature
+* Goal: Describe revenue by month, expose cyclic nature
 
 ```r
 # Data Manipulation
