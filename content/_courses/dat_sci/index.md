@@ -113,7 +113,11 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 ### Course Notes & Materials
 
-Access to course notes & materials [**here**]({{< relref "_repos/dat_sci/_index.md" >}}).
+| Course | Course notes & material |
+| --- | --- |
+| 1. Business Data Science Basics | [**click here**]({{< relref "_repos/dat_sci_1/_index.md" >}}) | 
+| 2. Business Decisions with Machine Learning | [**click here**]({{< relref "_repos/dat_sci_2/_index.md" >}}) | 
+| 3. Building Business Data Products | [**click here**]({{< relref "_repos/dat_sci_3/_index.md" >}}) | 
 
 ***
 

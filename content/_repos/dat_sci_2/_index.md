@@ -16,7 +16,7 @@ type: docs  # Do not modify.
 # - name: Declare this menu item as a parent with ID `name`.
 # - weight: Position of link in menu.
 menu:
-  dat_sci:
+  dat_sci_2:
     name: Overview
     weight: 1
 ---
@@ -63,17 +63,11 @@ These tutorials are optional and you can choose whatever <a href="https://learn.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | June 12th | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci/01_intro_r.html" >}}) |
-| 2 | June 19th | [Introduction to the tidyverse]({{< relref "_repos/dat_sci/02_intro_tv.html" >}}) |
-| 3 | June 26th | [Data Acqusition]({{< relref "_repos/dat_sci/03_dat_acq.html" >}}) |
-| 4 | tbd | Data Wrangling |
-| 5 | tbd | Data Visualization |
-| 6 | tbd | Fundamentals of Machine Learning |
-| 7 | tbd | ML: Performance Measures |
-| 8 | tbd | Supervised ML: Classifaction |
-| 9 | tbd | Supervised ML: Regression |
-| 10 | tbd | Unsupervised ML: Clustering |
-| 11 | tbd | Unsupervised ML: Dimension Reduction  |
-| 12 | tbd | ML: Deep Learning |
-| 13 | tbd | Reporting with RMarkdown  |
-| 14 | tbd | Reporting with Shiny |
+| 1 | 07.12. - 09.12. | [Machine Learning Foundations]({{< relref "_repos/dat_sci_2/06_ml_fund.html" >}}) |
+| 2 | 07.12. - 09.12. | [Supervised Machine Learning I]({{< relref "_repos/dat_sci_2/07_ml_sup_I.html" >}}) |
+| 3 | 07.12. - 09.12. | [Supervised Machine Learning II]({{< relref "_repos/dat_sci_2/08_ml_sup_II.html" >}}) |
+| 4 | 07.12. - 09.12. | [Automated Machine Learning with H2O I]({{< relref "_repos/dat_sci_2/09_ml_h2o_I.html" >}}) |
+| 5 | 07.12. - 09.12. | [Automated Machine Learning with H2O II]({{< relref "_repos/dat_sci_2/10_ml_h2o_II.html" >}}) |
+| 6 | 07.12. - 09.12. | [Performance Measures]({{< relref "_repos/dat_sci_2/11_ml_perf_meas.html" >}}) |
+| 7 | 07.12. - 09.12. | [Explaining Black-Box Models with LIME]({{< relref "_repos/dat_sci_2/12_ml_lime.html" >}}) |
+| 8 | 07.12. - 09.12. | [Deep Learning]({{< relref "_repos/dat_sci_2/13_ml_dl.html" >}}) |
