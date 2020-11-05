@@ -6,7 +6,7 @@ type: docs
 date: "2019-05-05T00:00:00+01:00"
 draft: false
 menu:
-  dat_sci_1:
+  dat_sci:
     parent: I. Data Science Fundamentals
     weight: 6
 
@@ -14,9 +14,9 @@ menu:
 weight: 5
 ---
 
-Data wrangling (Cleaning & Preparation) is the process of preparing data for analysis. It is important. It is the foundation of exploratory data analysis. We prepare data prior to modeling & machine learning. In this session we will repeat most of the data wrangling function we have discussed already earlier. After that the concept of data.table for handling big data will be introduced.
+Data wrangling (Cleaning & Preparation) is the important process of preparing data for analysis and the foundation of exploratory data analysis. We prepare data prior to modeling & machine learning. In this session we will repeat most of the data wrangling function we have discussed already earlier. After that the concept of data.table for handling big data will be introduced.
 
-## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;Theory Input
+## Theory Input <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;
 
 ### Recap / Practice
 
@@ -44,7 +44,8 @@ We have used already most of the functions in the last sessions. However, in ord
 
 ***
 
-#### 1. Working with columns (features)
+#### (1) Basic column operations
+**Working with columns/features**
 
 Functions: `select()`, `pull()`, `rename()` and `set_names()`
 
@@ -59,16 +60,16 @@ bikes_tbl %>%
   select(1, contains("model"))</code></pre>
 </section>
 
-***
+</br>
 
-1.2 `Reduce` columns: Select only model and price:
+1.2 Reduce columns: `Select` only model and price:
 
 <section class="hide">
 <pre><code class="r">bikes_tbl %>%
     select(model, price)</code></pre>
 </section>
 
-***
+</br>
 
 1.3 `Rearrange` columns: Put the category columns in front (select_helpers):
 
@@ -80,7 +81,7 @@ bikes_tbl %>%
   relocate(category_1:category_3)</code></pre>
 </section>
 
-***
+</br>
 
 1.4 `Select helpers`: Select all columns that start with model:
 
@@ -90,7 +91,7 @@ bikes_tbl %>%
   select(starts_with("model"))</code></pre>
 </section>
 
-***
+</br>
 
 1.5 Pull() `extracts` content of a tibble column. Calculate the mean auf price:
 
@@ -101,7 +102,7 @@ bikes_tbl %>%
   mean()</code></pre>
 </section>
 
-***
+</br>
 
 1.6 `Select()` and `where()`: First extract all character columns. Then extract all non numeric columns.
 
@@ -115,7 +116,7 @@ bikes_tbl %>%
     select(!where(is.numeric))</code></pre>
 </section>
 
-***
+</br>
 
 1.7 Select model, category_1, category_2, category_3, price and rename them to Model, Bike Family, Ride Style, Bike Category, Price in Euro. Use `rename()` to rename one column at a time. 
 
@@ -131,7 +132,7 @@ bikes_tbl %>%
     )</code></pre>
 </section>
 
-***
+</br>
 
 1.8 Select model, category_1, category_2, category_3, price and rename them to Model, Bike Family, Ride Style, Bike Category, Price in Euro. Use `set_names()` to rename all columns at once. 
 
@@ -147,7 +148,8 @@ bikes_tbl %>%
 
 ***
         
-#### 2. Working with rows (observations) 
+#### (2) Basic row operations 
+**Working with rows/observations**
 
 Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
 
@@ -160,7 +162,7 @@ Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
     View()</code></pre>
 </section>
 
-***
+</br>
 
 2.2 Filtering rows. Formula based with `filter()`:</br>
 2.2.1 Filter rows, where price is greater than the mean of price:
@@ -171,7 +173,8 @@ Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
     filter(price > mean(price))</code></pre>
 </section>
 
-***
+</br>
+
 2.2.2 Filter rows, where price is greater 5000 or lower 1000 and sort by descending price:
 
 <section class="hide">
@@ -182,7 +185,8 @@ Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
   View()</code></pre>
 </section>
 
-***
+</br>
+
 2.2.3 Filter rows, where price is greater 5000 and the model contains "Endurace" (`str_detect()`):
 
 <section class="hide">
@@ -193,7 +197,8 @@ Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
            )</code></pre>
 </section>
 
-***
+</br>
+
 2.2.4 Filter rows, where the category_1 is "Hybrid / City" or "E-Bikes". Use the `%in%` operator:
 
 <section class="hide">
@@ -201,7 +206,8 @@ Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
     filter(category_1 %in% c("Hybrid / City", "E-Bikes"))</code></pre>
 </section>
 
-***
+</br>
+
 2.2.5 Filter rows, where the category_2 is "E-Mountain":
 
 <section class="hide">
@@ -209,7 +215,8 @@ Functions: `arrange()`, `filter()`, `slice()` and `distinct()`
     filter(category_2 == "E-Mountain")</code></pre>
 </section>
 
-***
+</br>
+
 2.2.6 Negate 2.2.4 and 2.2.5
 
 <section class="hide">
@@ -219,7 +226,8 @@ bikes_tbl %>%
     filter(!(category_2 %in% c("Hybrid / City", "E-Bikes")))</code></pre>
 </section>
 
-***
+</br>
+
 2.3 Filtering rows with row number(s) using `slice()`:</br>
 2.3.1 Arrange by price (1. ascending and 2. descending) and filter the first 5 rows:
 
@@ -232,7 +240,8 @@ bikes_tbl %>%
     slice(1:5)</code></pre>
 </section>
 
-***
+</br>
+
 2.3.2 Arrange by price (descending) and filter the last 5 rows (use `nrow()`):
 
 <section class="hide">
@@ -241,7 +250,8 @@ bikes_tbl %>%
     slice((nrow(.)-4):nrow(.))</code></pre>
 </section>
 
-***
+</br>
+
 2.4 `distinct()`: Unique values. List unique values for category_1, for a combination of category_1 and category_2 and for combination of category_1, category_2 and category_3:
 
 <section class="hide">
@@ -254,7 +264,8 @@ bikes_tbl %>%
 </section>
 
 ***
-#### 3. Performing feature-based calculations
+#### (3) Column transformations
+**Performing column/feature-based calculations/transformations**
 
 Functions: `mutate()`, `case_when()`. Let's load `bike_orderlines_tbl`.
 
@@ -269,7 +280,8 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
     mutate(freight_costs = 2 * weight)</code></pre>
 </section>
 
-***
+</br>
+
 3.2 `Overwrite Columns`. Replace total_price with the log values of it:
 
 <section class="hide">
@@ -277,7 +289,8 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
     mutate(total_price = log(total_price))</code></pre>
 </section>
 
-***
+</br>
+
 3.2 `Transformations`: Add the log and the square root of the total_price:
 
 <section class="hide">
@@ -286,7 +299,8 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
     mutate(price_sqrt = total_price^0.5)</code></pre>
 </section>
 
-***
+</br>
+
 3.3 `Adding Flags` (feature engineering): Add a column that equals to `TRUE` if model contains the word "strive" and filter by that:
 
 <section class="hide">
@@ -295,7 +309,8 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
     filter(is_strive)</code></pre>
 </section>
 
-***
+</br>
+
 3.4 `Binning with ntile()`: Add a column and create 3 groups for total_price, where the groups each have as close to the same number of members as possible
 
 <section class="hide">
@@ -304,7 +319,8 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
     select(total_price, price_binned, everything())</code></pre>
 </section>
 
-***
+</br>
+
 3.5 More flexible binning with `case_when()`: Numeric to categorical. Add a column, use `case_when` and choose the quantiles yourself (use `quantile()`). Set the results to High, Medium and Low:
 
 <section class="hide">
@@ -318,7 +334,8 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
     select(total_price, price_binned, price_binned2, everything())</code></pre>
 </section>
 
-***
+</br>
+
 3.6 More flexible binning with `case_when()`: Text to categorical. Add a column that equals to "Aeroad", when model contains "aerorad",  "Ultimate", when model contains "ultimate" and "Not Aeroad or Ultimate" in every other case:
 
 <section class="hide">
@@ -332,7 +349,7 @@ bike_orderlines_tbl <- read_rds("00_data/01_bike_sales/02_wrangled_data/bike_ord
 </section>
 
 ***
-#### 4. Performing summary calculations
+#### (4) Summary calculations
 
 Functions: `group_by()` and `summarise()`
 
@@ -345,7 +362,8 @@ Functions: `group_by()` and `summarise()`
     )</code></pre>
 </section>
 
-***
+</br>
+
 4.2 Summarise the total revenue for each category_1
 
 <section class="hide">
@@ -354,7 +372,8 @@ Functions: `group_by()` and `summarise()`
     summarise(revenue = sum(total_price))</code></pre>
 </section>
 
-***
+</br>
+
 4.3 Summarise the total revenue for the groups made of category_1 and category_2. Sort by descending revenue:
 
 <section class="hide">
@@ -366,8 +385,9 @@ Functions: `group_by()` and `summarise()`
     arrange(desc(revenue))</code></pre>
 </section>
 
-***
-4.3 `Summary functions`: Group by category_1 and category_2 and summarize the price by
+</br>
+
+4.4 `Summary functions`: Group by category_1 and category_2 and summarize the price by
 * count
 * average
 * median
@@ -390,9 +410,9 @@ Functions: `group_by()` and `summarise()`
     arrange(desc(count))</code></pre>
 </section>
 
-***
+</br>
 
-4.4 `across()` - Detect missing values:
+4.5 `across()` - Detect missing values:
 
 <pre><code class="r"># Create total_price column and insert missing values for demonstration
 bike_orderlines_missing <- bike_orderlines_tbl %>%
@@ -414,15 +434,15 @@ bike_orderlines_missing %>%
 
 ***
 
-#### 5. Reshaping data (pivoting)
+#### (5) Reshaping/Pivoting
 
 Functions: `pivot_wider()` and `pivot_longer()`
 
-The wide format is Reader Friendly. People tend to read data as wide format, where columns are categories and the cell contents are values.
+The wide format is reader-friendly. People tend to read data as wide format, where columns are categories and the cell contents are values.
 
 5.1 `pivot_wider()`: Long to wide. 
 
-a) bike_data_sizes_tbl. Make the values of the column "size" to columns:
+bike_data_sizes_tbl. Make the values of the column "size" to columns:
 
 <section class="hide">
 <pre><code class="r">bike_data_sizes_tbl %>% 
@@ -431,9 +451,9 @@ a) bike_data_sizes_tbl. Make the values of the column "size" to columns:
               values_from = stock_availability)</code></pre>
 </section>
 
-***
+</br>
 
-b) Create a tibble with the sales for each category_1 and each bikeshop. Name it `bikeshop_revenue_tbl`:
+5.2 Create a tibble with the sales for each category_1 and each bikeshop. Name it `bikeshop_revenue_tbl`:
 
 <section>
 <pre><code class="r">bikeshop_revenue_tbl <- bike_orderlines_tbl %>%
@@ -443,8 +463,7 @@ b) Create a tibble with the sales for each category_1 and each bikeshop. Name it
     ungroup() %>%
     arrange(desc(sales))</code></pre>
 </section>
-    
-***
+
 
 Make the values of category_1 to columns and make the values to a euro format (use `scales::dollar(x, big.mark = ".", decimal.mark = ",", prefix = "", suffix = " €")`). Store the result in bikeshop_revenue_formatted_tbl:
 
@@ -461,8 +480,9 @@ Make the values of category_1 to columns and make the values to a euro format (u
                                     )</code></pre>
 </section>
 
-***
-5.2 `pivot_longer()`: Wide to Long. Recreate the original tibble from bikeshop_revenue_formatted_tbl:
+</br>
+
+5.3 `pivot_longer()`: Wide to Long. Recreate the original tibble from bikeshop_revenue_formatted_tbl:
 
 <section class="hide">
 <pre><code class="r">bikeshop_revenue_formatted_tbl %>%
@@ -474,7 +494,8 @@ Make the values of category_1 to columns and make the values to a euro format (u
 </section>
 
 ***
-#### 6. Combining data (Joining & Binding)
+#### (6) Joining & Binding
+**Combining data by rows/columns**
 
 Functions: `left_join()`, `bind_cols()` and `bind_rows()`
 
@@ -491,7 +512,8 @@ Bind them back together using `left_join()`:
     left_join(y = order_items_tbl, by = c("order_id" = "order_id", "order_line" = "order_line"))</code></pre>
 </section>
 
-***
+</br>
+
 6.2 `bind_cols()`: Remove all columns from bike_orderlines_tbl that contain "category" but bind back the column category_1:
 
 <section class="hide">
@@ -502,7 +524,8 @@ Bind them back together using `left_join()`:
     )</code></pre>
 </section>
 
-***
+</br>
+
 6.3 `bind_rows()`: Can be useful for splitting a dataset into a training and a test dateset. 
 
 <pre><code class="r">train_tbl <- bike_orderlines_tbl %>%
@@ -519,7 +542,8 @@ Bind them back together using `bind_rows()`.
 
 ***
 
-#### 7. Splitting & Combining Column Text
+#### (7) Splitting & Combining
+**Perform operations on text columns**
 
 Functions: `separate()` and `unite()`
 
@@ -551,11 +575,17 @@ Select order_date and convert it to character. Then separate it into year, month
 
 The `data.table` is an enhanced alternative to R’s default `data.frame` or `tibble` from the tidyverse to handle tabular data. The reason it’s so popular is because it allows you to do blazing fast data manipulations  (see <a href="https://github.com/Rdatatable/data.table/wiki/Benchmarks-%3A-Grouping" target="_blank">benchmarks</a> on up to two billion rows). This package is being used in different fields such as finance and genomics and is especially useful for those of you that are working with large data sets (for example, 1GB to 100GB in RAM). Though `data.table` provides a slightly different syntax from the regular R `data.frame`, it is quite intuitive. 
 
-The next section will explain you the fundamental syntax of `data.table` and the structure behind it. All the core data manipulation functions of `data.table`, in what scenarios they are used and how to use it, with some advanced tricks and tips as well.
+The next sections will explain you the fundamental syntax of `data.table` and the structure behind it. All the core data manipulation functions of `data.table`, in what scenarios they are used and how to use it, with some advanced tricks and tips as well.
+
+***
+
+#### First steps
 
 **1. Installation**
 
 You can install and load the `data.table` package like every other package.
+
+***
 
 **2. Importing data**
 
@@ -603,6 +633,9 @@ covid_data_dt[year == 2019, sum(cases), by = continentExp]</code></pre>
 
 Users who have an SQL background might perhaps immediately relate to this syntax. The way to read it (out loud) is: Take the data.table covid_data_dt, subset/reorder rows using `i`, then calculate `j`, grouped by `by`. Let’s begin by looking at `i` and `j` first - subsetting rows and operating on columns.
 
+***
+
+#### Basic row/column operations
 **3. Subset and order rows in `i`**
 
 * Filtering rows based on conditions: Get all rows/observations for Germany in June:  
@@ -625,6 +658,8 @@ In this case, there is no condition. The row indices are already provided in `i`
 <pre><code class="r">covid_data_dt[order(year, month, day, -countriesAndTerritories)]</code></pre>
 
 We can use `-` on a character columns within the frame of a data.table to sort in decreasing order.
+
+***
 
 **4. Select column(s) in `j` and rename columns**
 
@@ -692,6 +727,8 @@ airquality[!is.na(Ozone), .(Solar.R, Wind, Temp)]</code></pre>
 covid_data_dt[deaths > 1000]</code></pre>
 
 data.table’s `j` can handle more than just selecting columns - it can handle expressions, i.e., computing on columns.
+
+***
 
 **6. Create new columns**
 
@@ -795,6 +832,7 @@ mtcars_dt[, .(.N, mileage = mean(mpg) %>% round(2)), by=gear]</code></pre>
 
 ***
 
+#### Advanced operations
 **9. Chaining**
 
 Let’s reconsider the task of getting the means of cases and deaths for each country:
@@ -947,7 +985,7 @@ system.time(for (i in 1:10000) DT[i,V1:=i])
 system.time(for (i in 1:10000) set(DT,i,1L,i))
 ## 0.03 seconds  ( 19700 times faster, overhead of [.data.table is avoided )</code></pre>
 
-**Summary**
+#### Summary
 
 The general form of data.table syntax is:
 
@@ -981,11 +1019,11 @@ We can do much more in `i` by keying a data.table, which allows blazing fast sub
 * DT[col > val, head(.SD, 1), by = ...] - combine i along with j and by.
 
 <!-- HEADING with Business-Logo -->
-## <i class="fas fa-user-tie"></i> &nbsp;Business case
+## Business case <i class="fas fa-user-tie"></i> &nbsp;
 
 This case is about wrangling large data with `data.table`. The topic are Bank Loan Defaults.
 
-**Business Objectives:** 
+### Goal
 
 Loan defaults cost organizations multi-millions. Therefore, we need to understand which people or institutions will default on loans, in order to prevent defaults. The data we are going to analyze is coming from Fannie Mae. Fannie Mae provides both an acquisitions file and a performance file for loans:
 
@@ -1017,6 +1055,10 @@ How do we analyze this amount of data? The solutions are:
 
 dplyr is designed for readability. It makes copies through the piping process, which is normally OK. But for large data it is not memory or speed efficient. Thus, we will be focusing on data.table, the high-performance version of base R's data.frame, in this case. For each step, I provide a data.table and a dplyr solution, so that you can compare both approaches.
 
+***
+
+### First Steps
+
 **1. Libraries**
 
 <pre><code class="r"># Tidyverse
@@ -1026,6 +1068,8 @@ library(vroom)</br>
 library(data.table)</br>
 # Counter
 library(tictoc)</code></pre>
+
+***
 
 **2. Import data**
 
@@ -1068,7 +1112,7 @@ col_types_acq <- list(
     relocation_mortgage_indicator      = col_factor(NULL))</code></pre>
 </section>
 
-***
+</br>
 
 After spcifying the columns, we can import the data using the `vroom` function. The data is separated by `|`. The argument `na` sets the defined Values (e.g. empty values) to NA in R. That makes handling them easier.
 
@@ -1083,7 +1127,7 @@ After spcifying the columns, we can import the data using the `vroom` function. 
 acquisition_data %>% glimpse()</code></pre>
 </section>
 
-***
+</br>
 
 The result is a tibble with 297,452 rows. It contains the data about all the loans. Each loan is identified by an id `loan_id`. The data tells you, who sold the loan (e.g. JPMORGAN CHASE BANK), what is the original interest rate (e.g. 5.875 %), the original unpaid balance (e.g. 324.000 $), the loan term (e.g. 360 month / 30 years) and so on. But it does not show how the loans change over time. And that's what the next dataset is for. The performance data. We are going to do the same process:
 
@@ -1130,9 +1174,13 @@ performance_data <- vroom(
 performance_data %>% glimpse()</code></pre>
 </section>
 
-***
+</br>
 
 Thise data is bigger. It has 3.1M rows. It is perfect for data.table. The reason why it so big is because for each of those loans, there is a time series to it. So it characterizes the performance of that loan over time. That means: Is it getting paid? What are the numbers of month to maturity...
+
+***
+
+### data.table & Wrangling
 
 **3. Convert to data.table**
 
@@ -1172,7 +1220,7 @@ performance_data %>%
 toc()</code></pre>
 </section>
 
-***
+</br>
 
 *4.2 Prepare the data*
 
@@ -1187,14 +1235,14 @@ key(combined_data)</br>
 setorderv(combined_data, c("loan_id", "monthly_reporting_period"))</code></pre>
 </section>
 
-***
+</br>
 
 *4.3 Select columns*
 
 Select only the following columns:
 
 <section class="hide">
-<pre><code class="r"># 4.1 Select Columns ----
+<pre><code class="r"># 4.3 Select Columns ----
 combined_data %>% dim()</br>
 keep_cols <- c("loan_id",
                "monthly_reporting_period",
@@ -1251,7 +1299,7 @@ combined_data %>% dim()</br>
 combined_data %>% glimpse()</code></pre>
 </section>
 
-***
+</br>
 
 *4.4 Grouped Mutations*
 
@@ -1271,7 +1319,7 @@ We need a column that equals to TRUE or FALSE. Take the delinquency status, shif
 
 
 <section class="hide">
-<pre><code class="r"># 4.3 Grouped Mutations ----
+<pre><code class="r"># 4.4 Grouped Mutations ----
 # - Add response variable (Predict wether loan will become delinquent in next 3 months)</br>
 # dplyr
 tic()
@@ -1294,6 +1342,8 @@ rm(temp)</code></pre>
 
 ***
 
+### Analysis & Findings 
+
 **5. Analysis**
 
 Answer the following questions:
@@ -1312,7 +1362,7 @@ combined_data %>%
 toc()</code></pre>
 </section>
 
-***
+</br>
 
 * Which loans have the most outstanding delinquencies?
 
@@ -1335,7 +1385,7 @@ combined_data %>%
 toc()</code></pre>
 </section>
 
-*** 
+</br>
 
 * What is the last unpaid balance value for delinquent loans
 
@@ -1361,7 +1411,7 @@ combined_data %>%
 toc()</code></pre>
 </section>
 
-***
+</br>
 
 * What are the Loan Companies with highest unpaid balance?
 
@@ -1401,8 +1451,10 @@ toc()</code></pre>
 
 The trick to solving big data Problems. Make them small. Large datasets can be sampled. Sampling makes data manageable. Upgrade to Big Data tools once you have a good methodology. 
 
+***
+
 <!-- HEADING (challenge) -->
-## <i class="fas fa-laptop-code"></i> Challenge
+## Challenge <i class="fas fa-laptop-code"></i>
 
 Patents play a critical role in incentivizing innovation, without which we wouldn't have much of the technology we rely on everyday. What does your iPhone, Google's PageRank algorithm, and a butter
 substitute called Smart Balance all have in common? 

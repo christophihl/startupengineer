@@ -6,7 +6,7 @@ type: docs
 date: "2019-05-05T00:00:00+01:00"
 draft: false
 menu:
-  dat_sci_1:
+  dat_sci:
     parent: I. Data Science Fundamentals
     weight: 5
 
@@ -933,7 +933,7 @@ Analyze the page to make a plan for our web scraping approach (there is no uniqu
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_00.png" caption="Ids for the product families" >}}
 
-#### Get color/bike
+#### Scraping
 
 Get the available color IDs for each individual bike.
 
@@ -943,7 +943,7 @@ Get the available color IDs for each individual bike.
 * 1.1: Get the bike product family IDs (doing that manually would have been faster. This is just for the purpuse of demonstration). 
 
 <section class="hide">
-<pre><code class="r"># 2.0 COLLECT PRODUCT FAMILIES ----</br>
+<pre><code class="r"># 1.1 COLLECT PRODUCT FAMILIES ----</br>
 url_home          <- "https://www.canyon.com/en-de"
 xopen(url_home) # Open links directly from RStudio to inspect them</br>
 # Read in the HTML for the entire webpage
@@ -980,7 +980,7 @@ bike_family_tbl
 * Step 1.2: Get bike product category urls
 
 <section class="hide">
-<pre><code class="r"># 3.0 COLLECT PRODUCT CATEGORIES ----</br>
+<pre><code class="r"># 1.2 COLLECT PRODUCT CATEGORIES ----</br>
 # Combine all Ids to one string so that we will get all nodes at once
 # (seperated by the OR operator ",")
 family_id_css <- bike_family_tbl %>%
@@ -1028,11 +1028,11 @@ bike_category_tbl
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_02.png" caption="classes for the individual bike urls" >}}
 
-* Step 2.1: Do it for a single bike
+* Step 2.1.1: Do it for a single bike
 
 <section class="hide">
-<pre><code class="r"># 4.0 COLLECT BIKE DATA ----</br>
-# 4.1 Get URL for each bike of the Product categories</br>
+<pre><code class="r"># 2.0 COLLECT BIKE DATA ----</br>
+# 2.1 Get URL for each bike of the Product categories</br>
 # select first bike category url
 bike_category_url <- bike_category_tbl$url[1]</br>
 # Alternatives for selecting values
@@ -1052,7 +1052,7 @@ bike_url_tbl        <- html_bike_category %>%</br>
                 str_remove(pattern = "\\?.*") %>%</br>
                 # Convert vector to tibble
                 enframe(name = "position", value = "url")</br>
-# 4.2 Extract the descriptions (since we have retrieved the data already)
+# 2.1.2 Extract the descriptions (since we have retrieved the data already)
 bike_desc_tbl <- html_bike_category %>%</br>
    # Get the nodes in the meta tag where the attribute itemprop equals description
    html_nodes('.productTile__productSummaryLeft > meta[itemprop="description"]') %>%</br>
@@ -1069,7 +1069,7 @@ There is often data in JSON format listed with a lot of interesting data. Let's 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_03.png" caption="JSON data of the bikes" >}}
 
 <section class="hide">
-<pre><code class="r"># 4.3 Get even more data from JSON files
+<pre><code class="r"># 2.1.3 Get even more data from JSON files
 bike_json_tbl  <- html_bike_category %>%</br>
            html_nodes(css = '.productGrid__listItem.xlt-producttile > div') %>%
            html_attr("data-gtm-impression") %>%</br>
@@ -1101,7 +1101,7 @@ bike_json_tbl  <- html_bike_category %>%</br>
 * Step 2.2: Make a function to get the bike data for every bike of each category (just wrap the above code into the `function()` function)
 
 <section class="hide">
-<pre><code class="r"># 4.4 Wrap it into a function ----
+<pre><code class="r"># 2.2 Wrap it into a function ----
 get_bike_data <- function(url) {</br>
   html_bike_category <- read_html(url)</br>
   # Get the URLs
@@ -1159,7 +1159,7 @@ bike_data_tbl
 * Step 2.3a (`map()`): If we run this function for all bike category urls, we get the data for every bike
 
 <section class="hide">
-<pre><code class="r"># 4.4.1 Map the function against all urls</br>
+<pre><code class="r"># 2.3.1a Map the function against all urls</br>
 # Extract the urls as a character vector
 bike_category_url_vec <- bike_category_tbl %>% 
                             pull(url)</br>
@@ -1175,7 +1175,7 @@ saveRDS(bike_data_tbl, "bike_data_tbl.rds")</code></pre>
 * Step 2.3b (`for loop`): The same could be achieved with a foor loop:
 
 <section class="hide">
-<pre><code class="r"># 4.4.1 Alternative with a for loop</br>
+<pre><code class="r"># 2.3.1b Alternative with a for loop</br>
 # Create an empty tibble, that we can populate
 bike_data_tbl <- tibble()</br>
 # Loop through all urls
@@ -1253,7 +1253,7 @@ The only place where I found all color variations for each bike was the script w
 {{< figure src="/img/courses/dat_sci/03/canyon_script.png" caption="JSON data inside a script" >}}
 
 <section class="hide">
-<pre><code class="r"># 5.0 Get all color variations for each bike</br>
+<pre><code class="r"># 3.1a Get all color variations for each bike</br>
 # Extract all bike urls
 bike_url_vec <- bike_data_cleaned_tbl %>% 
                       pull(url)</br>
@@ -1305,7 +1305,7 @@ bike_data_colors_tbl <- bike_data_cleaned_tbl %>%
 * Step 3.2: Now we have the color Ids, but we still have to build the URLs for each variant by adding the Ids as query parameters.
 
 <section class="hide">
-<pre><code class="r"># 6.0 Create the urls for each variation</br>
+<pre><code class="r"># 3.2 Create the urls for each variation</br>
 bike_data_colors_tbl <- bike_data_colors_tbl %>%</br>
   # Create entry for each color variation
   unnest(colors) %>%</br>

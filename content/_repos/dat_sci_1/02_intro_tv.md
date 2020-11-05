@@ -6,7 +6,7 @@ type: docs
 date: "2019-05-05T00:00:00+01:00"
 draft: false
 menu:
-  dat_sci_1:
+  dat_sci:
     parent: I. Data Science Fundamentals
     weight: 4
 
@@ -19,7 +19,7 @@ weight: 3
 The intent of this chapter is to get you familiarized with the process of going from data import to visualization. This section will walk you through the core concepts in the packages `dplyr` and `ggplot2`, which are parts of the `tidyverse`. The tidyverse is a collection of R packages developed by RStudio’s chief scientist Hadley Wickham. These packages work well together as part of larger data analysis pipeline. You will gain a tremendous level of experience and repetitions with these packages, which will solidify your knowledge. The later chapters will solidify your understanding of all concepts in this part.
 
 <!-- HEADING (R theory) -->
-## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;Theory Input
+## Theory Input <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;
 ### Packages
 
 You know what functions are and how to write your own functions. You’re not the only person writing your own functions with R. Many people design tools that can help people analyze data. They provide those functions and objects for free in wrapped up packages. You only have to download and install them. Each R package is hosted at http://cran.r-project.org, the same website that hosts R (often interesting new R packages are only available on GitHub, because submitting to CRAN is a lot more work than just providing a version on github). However, you don’t need to visit the website (or github) to download an R package. You can download packages straight from R’s command line.
@@ -70,6 +70,8 @@ If you get errors do the following:
 
 If otherwise unsuccessful, contact me and I will do my best to troubleshoot.
 
+***
+
 ### Pipes
 
 <a href="https://magrittr.tidyverse.org" target="_blank">
@@ -107,6 +109,8 @@ When coupling several function calls with the pipe-operator, the benefit will be
   transform(variable_c = variable_a/variable_b) %>%
   head(100)</code></pre>
 <!-- CODE (show) -->
+
+***
 
 ### Tibbles
 
@@ -161,6 +165,8 @@ vehicles %>% .$dist
 vehicles %>% .[['dist']]
 vehicles %>% .[[2]]</code></pre>
 <!-- CODE (show) -->
+
+***
 
 ### Import
 
@@ -226,6 +232,8 @@ write_csv(dataset_tbl, "data.csv")
 # Saving in csv (or tsv) does mean you loose information about the type of data in particular columns. You can avoid this by using  write_rds() and read_rds() to read/write objects in R binary rds format.
 write_rds(dataset_tbl, "data.rds")</code></pre>
 <!-- CODE (show) -->
+
+***
 
 ### Tidy
 <a href="https://tidyr.tidyverse.org/" target="_blank">
@@ -403,7 +411,6 @@ table 1
  
 To illustrate how we can make data tidy easily, we are using modified variants of the diamonds dataset from the ggplot2 package. Try to make the data tidy by looking at the corresponding help pages of each provided function.
 
-***
 
 1. Tidying data with `pivot_longer()`: Use, if some of your column names are actually values of a variable. Alternatively you can use `gather()`, but it is recommended to use `pivot_longer()`, because the other function is no longer being maintained.
 
@@ -591,6 +598,8 @@ diamonds5
 #&#x2060;#&#x2060; 5 Good      335 SI2      4.34  4.35  2.75</code></pre>
 </section>
 <!-- CODE (hide) -->
+
+***
 
 ### Transform
 <a href="https://dplyr.tidyverse.org/" target="_blank">
@@ -922,13 +931,16 @@ month(bday)
 year(bday)
 ## 1979</code></pre>
 
+***
 
 <!-- HEADING with Business-Logo -->
-## <i class="fas fa-user-tie"></i> &nbsp;Business case
+## Business case <i class="fas fa-user-tie"></i> &nbsp;
 
+### Goal & Data
+
+**Goal**</br>
 You are a data scientist now. Your job is to study the products, look for opportunities to sell new products, better serve the customer and better market the products. All of that is supposed to be justified by data.
 
-**Objective**</br>
 In this session you are about to get your hands into R with a real world situation. The goal is to analyze the sales of bikes sold through bike stores in germany. The bike models correspond to the models of the manufacturer Canyon (in the next session you will see how to gather this data), but the sales and store data are made up.
 
 * Sales by year
@@ -936,8 +948,7 @@ In this session you are about to get your hands into R with a real world situati
 
 We are going to do that by importing, wrangling and visualizing of the provided data.
 
-### Data
-
+**Data**</br>
 The bike sales data is divided in multiple datasets for better understanding and organization. When working with transactional data, Entity-relationship diagrams (ERD) are used for describing and defining the data models (see example below). It illustrates the logical structure of the databases (see [ER-diagram-symbols-and-meaning](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) for further information). Please refer to the following data schema when working with the sales data. It shows with which key column we can combine the single databases. Example: To see which items are included in an order, you have to combine `Order Lines` with `Bikes` via the columns `product.id` and `bike.id`.
 
 <!-- ADJUST THIS PART -->
@@ -945,11 +956,11 @@ The bike sales data is divided in multiple datasets for better understanding and
 
 The dataset has information of ~15k orders from 2015 to 2019 made from multiple bike stores in germany. Its features allows viewing an order from multiple dimensions: from price to customer location, product attributes and many more. 
 
+The three tables contain the following information (excerpt):
+
 ***
 
-The data contain the following information (excerpt):
-
-**Table `bikes`:**
+**1: Table `bikes`:**
 
 | bike.id | model | model.year | frame.material | weight | price | category | gender | url |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -968,7 +979,7 @@ The data contain the following information (excerpt):
 
 ***
 
-**Table `bikeshops`:**
+**2: Table `bikeshops`:**
 
 | bikeshop.id | name | location | lat | lng |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -983,7 +994,7 @@ The data contain the following information (excerpt):
 
 ***
 
-**Table `Order Lines`:**
+**3: Table `Order Lines`:**
 
 | ___ | order.id | order.line | order.date | customer.id | product.id | quantity |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1000,7 +1011,9 @@ The data contain the following information (excerpt):
 
 ***
 
-### Analysis
+### Analysis with R
+
+#### First steps
 
 You have downloaded the data already in the last session. Let's start by creating a script file. You can download the following template and add it to your folder `01_getting_started`:
 
@@ -1020,7 +1033,7 @@ You have downloaded the data already in the last session. Let's start by creatin
   <div id="clear"></div>
 </div>
 
-As you can see the template has a couple of sections. In the following we are going to populate them step by step in order to conduct our analysis. 
+As you can see the template has seven sections. In the following we are going to populate them step by step in order to conduct our analysis. 
 
 <!-- INFOBOX -->
 <div id="header">Infobox</div>
@@ -1030,7 +1043,7 @@ As you can see the template has a couple of sections. In the following we are go
   <div id="clear"></div>
 </div>
 
-#### 1. Libraries
+##### 1. Libraries
 You can just load the `tidyverse` library since it attaches all the packages we will need for this analysis. For the purpose of learning, the single packages, that we need, are listed as well.
 <!-- CODE (hide) -->
 <section class="hide">
@@ -1055,7 +1068,7 @@ library(tidyverse)
 library(readxl)</code></pre>
 </section></br>
 
-#### 2. Import
+##### 2. Import
 The files are located at `/00_data/01_bike_sales/01_raw_data/`. To read tha data into R we are going to use the `read_excel()` function from the `readxl` package. Take a look at the help site to figure out how to use it. Also think about which data we need for our analysis. You can ignore the default arguments (the arguments which equal already a value) for now. Don't forget to store the data into a named variable.
 
 <!-- CODE (show) -->
@@ -1092,7 +1105,7 @@ In your environment you should see now 3 loaded tables. You can click on them to
 </section></br>
 <!-- CODE (hide) -->
 
-#### 3. Examine
+##### 3. Examine
 Use different methods to take a look and get a feel for the data.
 
 <!-- CODE (hide) -->
@@ -1127,7 +1140,11 @@ glimpse(orderlines_tbl)
 ## $ quantity    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1,…</code></pre>
 </section></br>
 
-#### 4. Joining data
+***
+
+#### Data manipulation
+
+##### 4. Joining data
 Take a look at `?left_join()`. Start by merging order_items and products and then chain all joins together.
 
 <!-- CODE (hide) -->
@@ -1185,7 +1202,7 @@ bike_orderlines_joined_tbl %>% glimpse()
 You should have a new variable called `bike_orderlines_joined_tbl` stored in your Global Environment.
 </section></br>
 
-#### 5. Wrangling data
+##### 5. Wrangling data
 Data manipulation & Cleaning. Usually a data scientist will spend most of his/her time at this section. These are the issues we are facing for our analysis:
 
 * Take a look at the column `category` (e.g. by running `bike_orderlines_joined_tbl$category`). Those entries seem to have three categories separated by a `-`. For example there are Mountain - Trail - Spectral and Mountain - Trail - Neuron. You can print all unique entries, that start with `Mountain` with the following code chunk:
@@ -1252,8 +1269,11 @@ Explanation of the last step:</br>
 </section>
 <!-- CODE (hide) -->
 
+***
 
-#### 6. Business Insights
+#### Insights & Saving
+
+##### 6. Business Insights
 
 Now that we got the data in a good format, we can start to create business insights for that. We are going to do two analyses. The first is Sales by year and the second is sales by category. This will be a 2 step process for each analysis: Step 1: Manipulate / prepare the data and Step 2: Visualize it (this is one of the most important skills a data scientist needs to know).
 
@@ -1413,7 +1433,7 @@ sales_by_year_cat_1_tbl %>%</br>
 * Make sure that you have two plots, one for aggregated sales by year and one for sales by year and category_1
 * Save your work
 
-#### 7. Writing files
+##### 7. Writing files
 
 Excel is great when others may want access to your data that are Excel users. For example, many Busienss Intelligence Analysts use Excel not R. CSV is a good option when others may use different languages such as Python, Java or C++. RDS is a format used exclusively by R to save any R object in it's native format
 
@@ -1441,6 +1461,7 @@ Excel is great when others may want access to your data that are Excel users. Fo
   <div id="clear"></div>
 </div>
 
+***
 
 ### Datacamp
 <div id="header">Recommended Datacamp courses</div>
@@ -1451,8 +1472,10 @@ Excel is great when others may want access to your data that are Excel users. Fo
   <div id="clear"></div>
 </div>
 
+***
+
 <!-- HEADING (challenge) -->
-## <i class="fas fa-laptop-code"></i> &nbsp;Challenge
+## Challenge <i class="fas fa-laptop-code"></i> &nbsp;
 
 Your challenges are pretty similar like the analyses we just did:
 

@@ -6,7 +6,7 @@ type: docs
 date: "2019-05-05T00:00:00+01:00"
 draft: false
 menu:
-  dat_sci_1:
+  dat_sci:
     parent: I. Data Science Fundamentals
     weight: 7
 
@@ -16,21 +16,21 @@ weight: 6
 
 Data visualization is the second most important skill of a data scientist (after data wrangling). By the end of this session, you will be able to use the package `ggplot2` to build different data graphics and to craft effective visualizations, which answer questions like these:
 
-1. Top N Customers. Which customers have the most purchasing power?
+* Top N Customers. Which customers have the most purchasing power?
 
-2. Heatmap of purchasing habits. Which customers prefer which products?
+* Heatmap of purchasing habits. Which customers prefer which products?
 
 To get to these advanced plots, you need to learn everything from the `ggplot2` package:
 
-1. Learn the `anatomy` of a ggplot object
-2. Learn the `geometries` of a ggplot object including
+* Learn the `anatomy` of a ggplot object
+* Learn the `geometries` of a ggplot object including
    - Scatter plots (2D Relationships)
    - Line plots (Time series)
    - Bar / Column plots (category vs. numeric)
    - Histograms, Faceted Histograms, Density Plots (Univariate & within-feature distributions)
    - Box plots & Violon plots (Distributions by category)
    - Text & Label geometries (Adding textual mappings)
-3. `Formatting` a ggplot object
+* `Formatting` a ggplot object
    - Colors & Color palettes
    - Aesthetic feature mappings (color, fill, size)
    - Faceted plots (investigate categories)
@@ -38,8 +38,10 @@ To get to these advanced plots, you need to learn everything from the `ggplot2` 
    - Scales (Continuous & discrete features)
    - Labels & legends
    - themes
-   
-## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;Theory Input
+
+***
+
+## Theory Input <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;
 
 <a href="https://ggplot2.tidyverse.org" target="_blank">
 <img src="/img/icons/logo_ggplot2.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
@@ -53,11 +55,11 @@ Think of ggplots like building layers of a cake. Each layer is added on top. Bui
 
 We can specify the different parts of the plot, and combine them together using the `+` operator (Note that the `+` operator is similar to the `%>%` pipe operator but is not interchangeable!. If you want a similar look, you can also use `%+%`).
 
-### 1. Data preparation
+***
+
+### (0) Data preparation
 
 We are working with our bike data. You can read your rds file or recreate the data again. Before we disucss the anatomy of ggplot, we have to prepare the data appropriately and get it in the right format. The key to a good ggplot is knowing how to format the data for a ggplot. Let's start by visualizing the sales over the years. So we only need the price and the date column and group and summarize those accordingly (just like we did in the second session).
-
-***
 
 <a href="https://scales.r-lib.org/index.html" target="_blank">
 <img src="/img/icons/logo_scales.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
@@ -85,8 +87,6 @@ scales::dollar(100, prefix = "", suffix = " €",
                     big.mark = ".", decimal.mark = ",")
 ## "100 €"
 ```
-
-***
 
 Let's do the data wrangling:
 
@@ -122,7 +122,9 @@ sales_by_year_tbl
   
 Now that we have our data formatted, we can begin our ggplot by piping our data into the `ggplot()` function. All ggplot2 plots begin with a call to `ggplot()`, supplying default data and aesthethic mappings, specified by `aes()`. You then add layers, scales, coords and facets with `+` or `%+%`.
 
-### 2. Canvas
+***
+
+### (1) Canvas
 
 Aesthetic mappings describe how variables/ columns in the data are mapped to visual properties (aesthetics) of geometries (e.g. scatterplot. See next step). They represent something you can see in the final plot. There are all sorts of different mappings:
 
@@ -154,7 +156,11 @@ If you run this, just the canvas in the viewer pane will be created. The canvas 
 
 Note that using the `aes()` function will cause the visual channel to be based on the data specified in the argument. For example, using aes(color = "blue") won’t cause the geometry’s color to be “blue”, but will instead cause the visual channel to be mapped from the vector c("blue") — as if we only had a single type of engine that happened to be called “blue”. This will become more clear in the next steps.
 
-### 3. Geometries
+***
+
+### (2) Geometries
+
+**General**
 
 > See page 1 of the visualization Cheatsheet
 
@@ -183,8 +189,6 @@ Now that we know about geometric objects and aesthetic mapping, we’re ready to
 {{< figure src="/img/courses/dat_sci/05/ggplot_01.png" caption="Scatter plot" >}}
 </section>
 
-***
-
 As mentioned earlier, if we specify an aesthetic within `ggplot()` it will be passed on to each geom that follows. But each geom layer can have its own aes specification by wrapping the attributes in the geoms into `aes()`. This will map these variables to other aesthetics e.g. the revenue to the size of the dots `geom_point(aes(size = sales))`. You will see that the size of the dots varies then based on the amount of revenue and we will get another legend. This allows us to only show certain characteristics for that specific layer. If you wish to apply an aesthetic property to an entire geometry, you can set that property as an argument to the geom method, outside of the aes() call: `geom_point(color = "blue")` or `geom_point(size = 5)`.
 
 In summary, variables are mapped to aesthetics with the `aes()` function, while fixed visual cues are set outside the aes() call. This sometimes leads to confusion, as in this example:
@@ -195,9 +199,11 @@ In summary, variables are mapped to aesthetics with the `aes()` function, while 
   # this is fine -- turns all points red
   color = "red")</code></pre>
 
-#### Examples of geometries
+***
 
-*1. Point / Scatter Plots*
+**Examples of geometries:**
+
+#### Point / Scatter Plots
 
 * Great for Continuous vs Continuous
 * Also good for Lollipop Charts (more on this later)
@@ -227,7 +233,9 @@ order_value_tbl %>%
 
 {{< figure src="/img/courses/dat_sci/05/examples_1.png">}}
 
-*2. Line Plots*
+***
+
+#### Line Plots
 
 * Great for time series
 * Goal: Describe revenue by month, expose cyclic nature
@@ -255,7 +263,9 @@ revenue_by_month_tbl %>%
 
 {{< figure src="/img/courses/dat_sci/05/examples_2.png">}}
 
-*3. Bar / Column Plots*
+***
+
+#### Bar / Column Plots
 
 * Great for categories
 * Goal: Sales by Descriptive Category
@@ -283,7 +293,9 @@ revenue_by_category_2_tbl %>%
 
 {{< figure src="/img/courses/dat_sci/05/examples_3.png">}}
 
-*4. Histogram / Density Plots*
+***
+
+#### Histogram / Density Plots
 
 * Great for inspecting the distribution of a variable
 * Goal: Unit price of bicycles
@@ -335,7 +347,9 @@ bike_orderlines_tbl %>%
 
 {{< figure src="/img/courses/dat_sci/05/examples_6.png">}}
 
-*5. Box Plot / Violin Plot* 
+***
+
+#### Box Plot / Violin Plot
 
 * Great for comparing distributions
 * Goal: Unit price of model, segmenting by category 2
@@ -375,7 +389,9 @@ unit_price_by_cat_2_tbl %>%
 
 {{< figure src="/img/courses/dat_sci/05/examples_8.png">}}
 
-*6. Adding Text & Labels*
+***
+
+#### Text & Labels
 
 * Goal: Exposing sales over time, highlighting outlier
 
@@ -422,15 +438,21 @@ revenue_by_year_tbl %>%
 
 {{< figure src="/img/courses/dat_sci/05/examples_9.png">}}
 
-### 4. Formatting
+***
+
+### (3) Formatting
 
 > See page 2 of the visualization Cheatsheet
 
 Once we have that, we can get into the formatting:
 
+***
+
 *Range of your plot*
 
 To expand the range of a plot you can use `expand_limit()`. As arguments set y and/or x either to single values or a vector containing the upper and the lower limit (e.g. `expand_limit(y = 0)`). If you want to zoom into a certain area use `coord_cartesian(ylim = c(ymin, ymax), xlim = c(xmin, xmax))` and set the values accordingly. If you don't wrap `ylim` and `xlim` into `coord_cartesian` the values out of range will be dropped.
+
+***
 
 *Scales*
 
@@ -488,7 +510,9 @@ Let's do the following formatting:
   scale_y_continuous(labels = scales::dollar_format(scale  = 1/1e6, 
                                                     prefix = "", 
                                                     suffix = "M €")) +</code></pre>
-  
+
+***
+
 *Labels*
 
 The title and axis labels can be changed using the `labs()` function with title, x and y arguments. Another option is to use the ggtitle(), xlab() and ylab().
@@ -579,7 +603,7 @@ sales_by_month_2015 <- bike_orderlines_tbl %>%</br>
 
 By assigning the code to `g` for example and running `View(g)` you see, that g is basically just a list containing all the information we just provided.
 
-#### Examples of formatting
+**Examples of formatting:**
 
 Let's create a new subset of the data for some examples of formatting:
 
@@ -609,7 +633,7 @@ sales_by_year_category_1_tbl %>%
     arrange(category_1_num)
 ```
 
-**1. Colors**
+#### Colors
 
 R comes with a bunch of named colors. These are just character names (e.g. "cornflowerblue"). You can use those named colors, but you can also use RGB (specifying color values as combinations of Red - Green - Blue, e.g. white = 255 - 255 - 255) and Hex codes (specifiyng color by hexidecimal, e.g. white = #FFFFFF).
 
@@ -656,7 +680,7 @@ sales_by_year_category_1_tbl %>%</br>
 
 ***
 
-**2.0 Aesthetic Mappings**
+#### Aesthetic Mappings
 
 All possible aestehetics for each geom, can be found in the corresponding help pages (e.g. ?geom_point).
 
@@ -696,7 +720,7 @@ All possible aestehetics for each geom, can be found in the corresponding help p
 
 ***
 
-**3.0 Faceting**
+#### Faceting
 
 * `facet_wrap()` separates a plot with groups into multiple plots (aka facets)
 * Great way to tease out variation by category
@@ -719,7 +743,7 @@ sales_by_year_category_1_tbl %>%
 
 ***
 
-**4.0 Position Adjustments (Stack & Dodge)**
+#### Position Adjustments (Stack & Dodge)
 
 Using the position argument to plot Stacked Bars & Side-By-Side Bars
 
@@ -747,9 +771,9 @@ sales_by_year_category_1_tbl %>%
 
 ***
 
-**5.0 Scales (Colors, Fills, Axis)**
+#### Scales (Colors, Fills, Axis)
 
-*5.1 Plot Starting Points*
+*1 Plot Starting Points*
 
 * Continuous (e.g. Revenue): Changes color via gradient palette
 * Categorical (e.g. category_2): Changes color via discrete palette
@@ -795,12 +819,12 @@ g_area_discrete</code></pre>
 
 From here on, we are going to use those plots for further formatting:
 
-*5.2 Scale Colors & Fills*
+*2 Scale Colors & Fills*
 
 Awesome way to show variation by groups (discrete) and by values (continuous).
 
 <figure id="521">
- <figcaption style="text-align: left; margin-bottom: 5px">5.2.1 Color by Revenue (Continuous Scale)</figcaption>
+ <figcaption style="text-align: left; margin-bottom: 5px">2.1 Color by Revenue (Continuous Scale)</figcaption>
  <pre><code class="r">g_facet_continuous +</br>
     # scale_color_continuous(
     #     low   = "black",
@@ -811,7 +835,7 @@ Awesome way to show variation by groups (discrete) and by values (continuous).
 </figure>
 
 <figure id="522">
- <figcaption style="text-align: left; margin-bottom: 5px">5.2.2 Color by Category 1 (Discrete Scale)</figcaption>
+ <figcaption style="text-align: left; margin-bottom: 5px">2.2 Color by Category 1 (Discrete Scale)</figcaption>
  <pre><code class="r">RColorBrewer::display.brewer.all()
 RColorBrewer::brewer.pal.info
 RColorBrewer::brewer.pal(n = 8, name = "Blues")</br>
@@ -824,14 +848,14 @@ g_facet_discrete +
 </figure>
 
 <figure id="523">
- <figcaption style="text-align: left; margin-bottom: 5px">5.2.3 Fill by Category 1</figcaption>
+ <figcaption style="text-align: left; margin-bottom: 5px">2.3 Fill by Category 1</figcaption>
  <pre><code class="r">g_area_discrete +
     scale_fill_brewer(palette = "Set3")</br>
 g_area_discrete +
     scale_fill_viridis_d()</code></pre>
 </figure>
 
-*5.3 Axis Scales*
+*3 Axis Scales*
 
 <figure id="523">
  <pre><code class="r">g_facet_continuous +
@@ -843,7 +867,7 @@ g_area_discrete +
 
 ***
 
-**6.0 Labels**
+#### Labels
 
 ```r
 g_facet_continuous +
@@ -869,7 +893,7 @@ g_facet_continuous +
 
 ***
 
-**7.0 Themes**
+#### Themes
 
 Run `View(g_facet_continuous)` and expand `theme` to see which elements of the plots can be changed with `theme()`.
 
@@ -897,7 +921,7 @@ g_facet_continuous +
 
 ***
 
-**8.0 Putting It All Together**
+**Example graph: Putting It All Together**
 
 ```r
 sales_by_year_category_1_tbl %>%
@@ -928,7 +952,9 @@ sales_by_year_category_1_tbl %>%
     )
 ```
 
-#### Factors
+***
+
+**Factors**
 
 <a href="https://forcats.tidyverse.org/index.html" target="_blank">
 <img src="/img/icons/logo_forcats.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
@@ -1006,12 +1032,12 @@ fct_relevel(f, "a", after = 3)
 
 For further information, see chapter <a href="https://r4ds.had.co.nz/factors.html" target="_blank">Factors</a> from <a href="https://r4ds.had.co.nz" target="_blank">R for Data Science</a>.
 
+***
+
 <!-- HEADING with Business-Logo -->
-## <i class="fas fa-user-tie"></i> &nbsp;Business case
+## Business case <i class="fas fa-user-tie"></i> &nbsp;
 
-
-
-**Case 1**
+### Case 1
 
 * Question: How much purchasing power is in top 5 customers (bikeshops)?
 * Goal: Lollipop Chart. Visualize top N customers in terms of Revenue, include cumulative percentage.
@@ -1121,7 +1147,7 @@ top_customers_tbl %>%
 
 ***
 
-**Case 2**
+### Case 2
 
 * Question: Do specific customers have a purchasing preference?
 * Goal: Visualize heatmap of proportion of sales by Secondary Product Category
@@ -1194,8 +1220,10 @@ pct_sales_by_customer_tbl <- bike_orderlines_tbl %>%
 
 {{< figure src="/img/courses/dat_sci/05/business_case_2.png" caption="Heatmap of purchasing habits" >}}
 
+***
+
 <!-- HEADING (challenge) -->
-## <i class="fas fa-laptop-code"></i> &nbsp;Challenge
+## Challenge <i class="fas fa-laptop-code"></i> &nbsp;
 
 The challenge deals with the covid data from last session. This time I recommend to use the tidyverse to wrangle the data...
 
@@ -1206,7 +1234,9 @@ covid_data_tbl <- read_csv("https://opendata.ecdc.europa.eu/covid19/casedistribu
 
 ... but of course you can also use the data.table library.
 
-**Challenge 1**
+***
+
+### Challenge 1
 
 Goal: Map the time course of the cumulative Covid-19 cases! Your plot should look like this:
 
@@ -1214,7 +1244,9 @@ Goal: Map the time course of the cumulative Covid-19 cases! Your plot should loo
 
 Adding the cases for Europe is optional. You can choose your own color theme, but don't use the default one. Don't forget to scale the axis properly. The labels can be added with `geom_label()` or with `geom_label_repel()` (from the package `ggrepel`).
 
-**Challenge 2**
+***
+
+### Challenge 2
 
 Goal: Visualize the distribution of the mortality rate (deaths / population) with `geom_map()`. The necessary longitudinal and lateral data can be accessed with this function:
 

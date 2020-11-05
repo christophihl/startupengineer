@@ -6,7 +6,7 @@ date: "2019-05-05T00:00:00+01:00"
 draft: false
 toc: true
 menu:
-  dat_sci_2:
+  dat_sci:
     parent: Overview
     weight: 2
 
@@ -69,4 +69,3 @@ Many of the examples in this course are inspired by ...
 
 * [R for Data Science](https://r4ds.had.co.nz) by Hadley Wickham & Garrett Grolemund
 * [Hands-On Programming with R](https://rstudio-education.github.io/hopr/) by Garret Grolemund
-* ...

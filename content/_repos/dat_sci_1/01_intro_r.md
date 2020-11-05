@@ -6,7 +6,7 @@ date: "2019-05-05T00:00:00+01:00"
 draft: false
 toc: true
 menu:
-  dat_sci_1:
+  dat_sci:
     parent: I. Data Science Fundamentals
     weight: 3
 
@@ -662,6 +662,8 @@ hist(results)</code></pre>
   <div id="clear"></div>
 </div>
 
+***
+
 ## GitHub for journaling
 <!-- GitHub and GitHub Logos -->
 <div class="flex-container images">
@@ -811,6 +813,8 @@ See the `R Markdown Cheat Sheet` for further information regarding the markdown 
 </div>
 
 Send the URLs of your website to <a href = "mailto: joschka.schwarz@tuhh.de">joschka.schwarz@tuhh.de</a>.
+
+***
 
 ### Datacamp
 <div id="header">Recommended Datacamp courses</div>
