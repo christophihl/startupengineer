@@ -16,7 +16,7 @@ type: docs  # Do not modify.
 # - name: Declare this menu item as a parent with ID `name`.
 # - weight: Position of link in menu.
 menu:
-  dat_sci:
+  dat_sci_1:
     name: Overview
     weight: 1
 ---
@@ -28,7 +28,9 @@ The content of this class is designed for the dark theme of this website. If you
 
 ## General
  
-This is a practical and skill-focused introduction to using open-source programming software (R, RStudio, and R Markdown) in several aspects of Business Analytics. The course covers basic scripting/coding in R, data-wrangling, advanced graphing and machine learning. You will learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools to apply machine learning techniques. There is no prerequisite knowledge needed in R Programming, data science or machine learning. The chapters in this course are arranged according to 14 practical projects with concrete examples. These examples are short, easy to understand, cover everything you need to know and provide you with immediate practice. Learning to program is like learning to speak another language — you progress faster when you practice.
+This is a practical and skill-focused introduction to using open-source programming software (R, RStudio, and R Markdown) in several aspects of Business Analytics. 
+
+The course covers basic scripting/coding in R, data-wrangling and advanced graphing. You will learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools to apply advanced data science techniques. There is no prerequisite knowledge needed in R Programming or data science. The chapters in this course are arranged according to 5 practical projects with concrete examples. These examples are short, easy to understand, cover everything you need to know and provide you with immediate practice. Learning to program is like learning to speak another language — you progress faster when you practice.
 
 ## Course objectives
 
@@ -37,23 +39,21 @@ After completing this module, you will be able to:
 * Obtain large amounts of data via APIs or web scraping from the Internet
 * Clean and transform data
 * Explore and visualize data in a goal-oriented way
-* Model data using modern machine learning techniques with respect to classifications and predictive predictions
-* Communicate data and results in the form of products and applications  
 
 ## Course structure
 
-Over the course of seven days you will complete 14 sessions. Each session will involve a small amount of lecturing on R concepts, and a large amount of time for students to complete coding and analysis problems.
+Over the course of 5 sessions you will complete 4 assignments. Each session will involve a small amount of lecturing on R concepts, and a large amount of time for students to complete coding and analysis problems.
 
 
 ## DataCamp <embed src="../../img/icons//datacamp.svg" align="center" height="30px" style="padding:0px 5px 5px 0px">
 
-If you have R-studio working and your github page set up (will be explained in detail in the corresponding chapter), you can get started with online tutorials from datacamp and you can begin messing around in R. In order to do so, join the NIT data science team on datacamp via the following link (Please register with your tuhh email address):
+If you have R-studio working and your github page set up (will be explained in detail in the corresponding chapter), you can get started with online tutorials from datacamp and you can begin messing around in R. In order to do so, join the TUHH data science team on datacamp via the following link (Please register with your tuhh email address):
 
 <!-- DOWNLOADBOX -->
 <div id="header">Website</div>
 <div id="container">
   <div id="first">{{% icon globe %}}</div>
-  <div id="second"><a href="https://www.datacamp.com/groups/shared_links/91287653ed5bd4c0f14e7c60e2d61a62dc1f1ba2afc84a4909665c00cd441f0c" target="_blank"><b>datacamp.com</b></a></div>
+  <div id="second"><a href="https://www.datacamp.com/" target="_blank"><b>tbd</b></a></div>
   <div id="clear"></div>
 </div>
 
@@ -63,17 +63,8 @@ These tutorials are optional and you can choose whatever <a href="https://learn.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | June 12th | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci/01_intro_r.html" >}}) |
-| 2 | June 19th | [Introduction to the tidyverse]({{< relref "_repos/dat_sci/02_intro_tv.html" >}}) |
-| 3 | June 26th | [Data Acqusition]({{< relref "_repos/dat_sci/03_dat_acq.html" >}}) |
-| 4 | tbd | Data Wrangling |
-| 5 | tbd | Data Visualization |
-| 6 | tbd | Fundamentals of Machine Learning |
-| 7 | tbd | ML: Performance Measures |
-| 8 | tbd | Supervised ML: Classifaction |
-| 9 | tbd | Supervised ML: Regression |
-| 10 | tbd | Unsupervised ML: Clustering |
-| 11 | tbd | Unsupervised ML: Dimension Reduction  |
-| 12 | tbd | ML: Deep Learning |
-| 13 | tbd | Reporting with RMarkdown  |
-| 14 | tbd | Reporting with Shiny |
+| 1 | 23.11.20 - 25.11.20 | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci_1/01_intro_r.html" >}}) |
+| 2 | 23.11.20 - 25.11.20 | [Introduction to the tidyverse]({{< relref "_repos/dat_sci_1/02_intro_tv.html" >}}) |
+| 3 | 23.11.20 - 25.11.20 | [Data Acqusition]({{< relref "_repos/dat_sci_1/03_dat_acq.html" >}}) |
+| 4 | 23.11.20 - 25.11.20 | [Data Wrangling]({{< relref "_repos/dat_sci_1/04_dat_wra.html" >}}) |
+| 5 | 23.11.20 - 25.11.20 | [Data Visualization]({{< relref "_repos/dat_sci_1/05_dat_viz.html" >}}) |

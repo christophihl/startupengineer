@@ -16,7 +16,7 @@ type: docs  # Do not modify.
 # - name: Declare this menu item as a parent with ID `name`.
 # - weight: Position of link in menu.
 menu:
-  dat_sci:
+  dat_sci_2:
     name: Overview
     weight: 1
 ---
@@ -63,17 +63,13 @@ These tutorials are optional and you can choose whatever <a href="https://learn.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | June 12th | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci/01_intro_r.html" >}}) |
-| 2 | June 19th | [Introduction to the tidyverse]({{< relref "_repos/dat_sci/02_intro_tv.html" >}}) |
-| 3 | June 26th | [Data Acqusition]({{< relref "_repos/dat_sci/03_dat_acq.html" >}}) |
-| 4 | tbd | Data Wrangling |
-| 5 | tbd | Data Visualization |
-| 6 | tbd | Fundamentals of Machine Learning |
-| 7 | tbd | ML: Performance Measures |
-| 8 | tbd | Supervised ML: Classifaction |
-| 9 | tbd | Supervised ML: Regression |
-| 10 | tbd | Unsupervised ML: Clustering |
-| 11 | tbd | Unsupervised ML: Dimension Reduction  |
-| 12 | tbd | ML: Deep Learning |
-| 13 | tbd | Reporting with RMarkdown  |
-| 14 | tbd | Reporting with Shiny |
+| 1 | tbd | [Machine Learning Foundations]({{< relref "_repos/dat_sci_2/06_ml_fund.html" >}}) |
+| 2 | tbd | [ML: Supervised I]({{< relref "_repos/dat_sci_2/07_ml_sup_I.md" >}}) |
+| 3 | tbd | [ML: Supervised II({{< relref "_repos/dat_sci_2/08_ml_sup_II.md" >}}) |
+| 4 | tbd | [ML: H2O I]({{< relref "_repos/dat_sci_2/09_ml_h2o_I.md" >}}) |
+| 5 | tbd | [ML: H2O II]({{< relref "_repos/dat_sci_2/10_ml_h2o_II.md" >}}) |
+| 6 | tbd | [ML: Performance Measures]({{< relref "_repos/dat_sci_2/11_ml_perf_meas.md" >}}) |
+| 7 | tbd | [ML: Lime]({{< relref "_repos/dat_sci_2/12_ml_lime.md" >}}) |
+| 8 | tbd | [ML: Deep Learning]({{< relref "_repos/dat_sci_2/13_ml_dl.md" >}}) |
+
+

@@ -16,7 +16,7 @@ type: docs  # Do not modify.
 # - name: Declare this menu item as a parent with ID `name`.
 # - weight: Position of link in menu.
 menu:
-  dat_sci:
+  dat_sci_3:
     name: Overview
     weight: 1
 ---
@@ -63,17 +63,4 @@ These tutorials are optional and you can choose whatever <a href="https://learn.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | June 12th | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci/01_intro_r.html" >}}) |
-| 2 | June 19th | [Introduction to the tidyverse]({{< relref "_repos/dat_sci/02_intro_tv.html" >}}) |
-| 3 | June 26th | [Data Acqusition]({{< relref "_repos/dat_sci/03_dat_acq.html" >}}) |
-| 4 | tbd | Data Wrangling |
-| 5 | tbd | Data Visualization |
-| 6 | tbd | Fundamentals of Machine Learning |
-| 7 | tbd | ML: Performance Measures |
-| 8 | tbd | Supervised ML: Classifaction |
-| 9 | tbd | Supervised ML: Regression |
-| 10 | tbd | Unsupervised ML: Clustering |
-| 11 | tbd | Unsupervised ML: Dimension Reduction  |
-| 12 | tbd | ML: Deep Learning |
-| 13 | tbd | Reporting with RMarkdown  |
-| 14 | tbd | Reporting with Shiny |
+| 1 | June 12th | [Reporting with Shiny]({{< relref "_repos/dat_sci_3/14_rep_shiny.html" >}}) |

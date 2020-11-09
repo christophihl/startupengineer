@@ -6,7 +6,7 @@ date: "2019-05-05T00:00:00+01:00"
 draft: false
 toc: true
 menu:
-  dat_sci:
+  dat_sci_1:
     parent: I. Data Science Fundamentals
     weight: 3
 
@@ -812,7 +812,11 @@ See the `R Markdown Cheat Sheet` for further information regarding the markdown 
   <div id="clear"></div>
 </div>
 
-Send the URLs of your website to <a href = "mailto: joschka.schwarz@tuhh.de">joschka.schwarz@tuhh.de</a>.
+### Submission
+
+Submit your lab journal URL via the following form:
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctVjKJaCKNtzCK0ufDmiSaKf-LnGsCWMUwfZGxEkemw5Eu2Q/viewform?embedded=true&hl=en" width="640" height="536" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
 
 ***
 
