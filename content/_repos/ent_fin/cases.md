@@ -61,7 +61,10 @@ HealthCraft's three founders are about to craft their founding agreement and spl
 
 `Assignment Questions`:
 1) What should the founders include in their agreement?
-2) How should the founders structure their equity split?
+2) How should the founders structure their equity split? 
+3) Use the [`FAST`](https://www.dropbox.com/s/hisgltupqfblh0g/FAST.xlsx?dl=0) to document your final agreement.
+4) Give a written summary to explain and justify your final agreement.
+
 
 <br/>
 

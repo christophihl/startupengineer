@@ -62,6 +62,23 @@ weight: 15
 ## 3) Ownership and Returns
 
 
+* Part 1: {{< youtube wcTGYbK2l-I >}}
+
+
+* Part 2: {{< youtube vxpYrp9L1EI >}}
+
+
+* Part 3: {{< youtube EdUZim1Mxgk >}}
+
+
+* Part 4: {{< youtube ftN4FED2Jww >}}
+
+
+* Part 5: {{< youtube QNYCd0-rbFs >}}
+
+
+
+
 
 <br/>
 
