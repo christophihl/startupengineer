@@ -26,8 +26,7 @@ weight: 10
 
 <br/>
 
-## 3) Ownership and Returns
-
+## [3) Ownership and Returns](https://www.dropbox.com/s/z9ypbazz3oqcglw/Ent_Fin_WS21_Ownership%26Returns.pdf?dl=0)
 
 
 <br/>
