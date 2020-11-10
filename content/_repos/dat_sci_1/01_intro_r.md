@@ -544,14 +544,14 @@ Getting set up: Create a new project, organize your working directory and save y
 2. In RStudio under the `File` menu, click on `New Project` (or click <img src="/img/courses/dat_sci/01/icon_new_project.png" width=3% style="display:inline-block; margin:0px"> and then choose `Existing Directory`. This will be your working directory (e.g., ~/data-science).
 3. Locate the downloaded folder and then click `Create Project`.
 
-Your working directory should now look like this:
+Your working directory should now look like this (the structure was modified a little):
 
 <!-- image -->
 {{< figure src="/img/courses/dat_sci/01/project_structure.png" caption="Project structure example in RStudio" >}}
 
-For this first project, we will just need a `00_getting_started/` folder to store our first script. We will use the other folders for when we learn how to import data such as CSV files, and for the figures that we will save. 
+For this first project, we will just need a `01_getting_started/` folder to store our first script. We will use the other folders for when we learn how to import data such as CSV files, and for the figures that we will save. 
 
-4. Under the Files tab on the right of the screen, click on New Folder and create a folder named `00_getting_started` within your newly created working directory. (Alternatively, type `dir.create("00_getting_started")` at your R console.) 
+4. (If it was not there already) Under the Files tab on the right of the screen, click on New Folder and create a folder named `01_getting_started` within your newly created working directory. (Alternatively, type `dir.create("01_getting_started")` at your R console.) 
 
 5. Open your previously saved R-script and save it in this directory.
 
