@@ -44,29 +44,31 @@ projects: []
 
 ***
 
-### Lehrende
-
-* {{% mention "ihl" %}}
-
-***
-
-### Alle weiteren Informationen und Materialien zur Veranstaltung
-
-* [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/overview?cid=605a7835e42d9869524e71dc76e58021)
-
-***
-
 ### Zeit & Ort
-* Vorlesung `Grundlagen der Betriebswirtschaftslehre`: Mittwoch, 11.30 - 14.00, Audimax II
-* Übung `Entrepreneurship`: Donnerstag, 14.00 - 15.30 & 15.45 - 17.15, Channel 4
+* Vorlesung `Grundlagen der Betriebswirtschaftslehre`: Donnerstag, 18.30 - 21.00, Audimax II
+* Übung `Entrepreneurship`: Donnerstag, 15.00 - 16.30 & 16.45 - 18.15, Channel 4
 
 {{% alert warning %}}
 Solange die gegenwärtige Situation anhält, finden alle Veranstaltungen in Form von aufgezeichneten Videovorlesungen oder Live-Videokonferenzen statt, zu denen die Teilnehmner rechtzeitig Zugang erhalten.
 {{% /alert %}}
 
+
 ***
 
-### Vorlesungsmaterialien `Unternehmertum (Entrepreneurship)` 
+### Lehrende für die Themen `Unternehmertum (Entrepreneurship)` & `Finanzplanung`
+
+* {{% mention "ihl" %}}
+
+***
+
+### Vorlesungsmaterialien `Unternehmertum (Entrepreneurship)` & `Finanzplanung`
 
 Zugang zu Vorlesungsfolien und -videos [**here**]({{< relref "_repos/gbwl/_index.md" >}}).
+
+
+***
+
+### Alle weiteren Informationen und Materialien zur Veranstaltung
+
+* [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=c0da875ca2e0eb3664e776a5f1120547)
 
