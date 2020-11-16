@@ -733,7 +733,7 @@ You should now see a copy of the lab journal repo in your github account. That m
 
 * **macOS only**: Install the Apple `Xcode` developer tools. 
 
-Option 1: Run `xcode-select --install` in the terminal.
+Option 1: Run `xcode-select --install` in the terminal. <!-- DOWNLOADBOX --> ##### EXMPLAIN TERMINAL
 
 Option 2: You can install Xcode for free from the App Store. 
 
@@ -810,11 +810,11 @@ Requirements for StatiCrypt:
 
 **Step 2:** Install StatiCrypt via npm
 
-Run `npm install -g https://github.com/TUHHStartupEngineers/staticrypt` in your terminal.
+Run `npm install -g https://github.com/TUHHStartupEngineers/staticrypt` in your terminal. If you get the error: `errno 13 permission denied`, you don't have the permission to install it. To resolve this error put `sudo` (for unix systems) in front of the command and enter your password if prompted.
 
 **Step 3:** Set your password and store it in your global environment 
 
-Run `Sys.setenv(LAB_KEY = "Your-token")` in the R console. Replace "Your-token" with your passphrase for your website. Do not use your standard passwords. The lab journal password are displayed in clear text to the teaching assistants.
+Run `Sys.setenv(LAB_KEY = "Your-token")` in the R console. Replace "Your-token" with your passphrase for your website. **DO NOT USE YOUR STANDARD PASSWORDS.** The lab journal password are displayed in clear text to the teaching assistants.
 
 **Step 4:** Build your website (including password protection)
 
