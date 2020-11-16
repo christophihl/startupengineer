@@ -76,11 +76,10 @@ HealthCraft's three founders are about to craft their founding agreement and spl
 OutReach Networks is an unusual start-up company in that it was profitable early in its development and did not have to seek VC funding to support its growth. The company has grown quickly and may soon be a candidate for an IPO. In November 2011, an experienced venture capitalist approaches the founder with an offer to invest $30 million in exchange for 30% of the company. While the founder sees some benefit from the VC's experience in preparing the firm for an IPO and the funding enabling it to scale more quickly, he cannot understand how the VC has arrived at this offer.
 
 `Assignment Questions`:
-1) What are the challenges of valuing an early stage company?
-2) In what way is ORN a typical startup company?
-3) What is the value of the firm under the venture capital method?
-4) What is the value of the firm under the discounted cash-flow method?
-5) Is Everest Partners justified in asking for a 30% equity stake?
+1) In what way is ORN a typical or atypival startup company to value?
+2) What is the value of the firm under the venture capital method?
+3) What is the value of the firm under the discounted cash-flow method?
+4) Is Everest Partners justified in asking for a 30% equity stake?
 
 <br/>
 
@@ -112,7 +111,7 @@ OptiGuard. Inc. is a cybersecurity startup that is attempting raise a first roun
 1)	How attractive is the company to prospective investors?
 2)	Does the term sheet for the Series A round generally favour the entrepreneur (Mannix) or the VC investor (WVP)? Cite specific terms and features of the contract to support your opinion.
 3)	Before the Series A round, what is OptiGuard’s postmoney value? After the Series A round, what is the pre- and postmoney value if the offer is accepted as proposed?
-4)	What are the implications to WVP if another investor offers to provide OptiGuard an additional $7.8 million in equity after the Series A round at a price of $8.00 a share? At $3.00 a share?
+4)	What are the implications to WVP if another investor offers to provide OptiGuard an additional <span>$</span>7.8 million in equity after the Series A round at a price of <span>$</span>8.00 a share? At <span>$</span>3.00 a share?
 5)	What are the implications to WVP if it has a participating versus conventional liquidation preference and OptiGuard is sold for $15 million in three years?
 6)	If you were Mannix, would you accept WVP’s offer as proposed, or attempt to negotiate certain terms of the offer? If you choose to negotiate, what adjustments would you seek to make?
 

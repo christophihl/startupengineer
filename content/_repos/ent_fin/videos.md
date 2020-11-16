@@ -85,6 +85,21 @@ weight: 15
 ## 4) Valuation Methods
 
 
+
+* Part 1: {{< youtube q_QipQwaAMY >}}
+
+
+* Part 2: {{< youtube T9fyjgDFGhE >}}
+
+
+* Part 3: {{< youtube bONnV4RQqN8 >}}
+
+
+* Part 4: {{< youtube UlAb1RGWR1I >}}
+
+
+
+
 <br/>
 
 

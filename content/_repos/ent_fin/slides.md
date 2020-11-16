@@ -31,7 +31,7 @@ weight: 10
 
 <br/>
 
-## 4) Valuation Methods
+## [4) Valuation Methods](https://www.dropbox.com/s/d60hdpfv0wrkctl/Ent_Fin_WS21_ValuationMethods.pdf?dl=0)
 
 
 <br/>

@@ -6,8 +6,8 @@ weight: 1
 
 # Page metadata.
 title: GBWL - Unternehmertum
-date: "2020-04-29T00:00:00Z"
-lastmod: "2020-04-29T00:00:00Z"
+date: "2020-11-14T00:00:00Z"
+lastmod: "2020-11-14T00:00:00Z"
 draft: false  # Is this a draft? true/false
 toc: true  # Show table of contents? true/false
 type: docs  # Do not modify.
@@ -28,7 +28,7 @@ menu:
 
 <br/>
 
-- [Präsentationsfolien](https://www.dropbox.com/s/rgirk690cj4mp1y/GBWL_Unternehmertum_SS20.pdf?dl=0)
+- [Präsentationsfolien](https://www.dropbox.com/s/5jolye6b6ekemp3/GBWL_Unternehmertum_WS21.pdf?dl=0)
 
 <br/>
 
