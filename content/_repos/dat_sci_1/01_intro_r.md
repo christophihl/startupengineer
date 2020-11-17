@@ -703,6 +703,26 @@ We will use GitHub to store your data and hand in your assignments through your 
   <div id="clear"></div>
 </div>
 
+* **Windows only**: Install `Git`.<br>
+On Windows, you also have to install “Git for Windows” and set “git/cmd” and “git/bin” as system variables.
+
+<!-- DOWNLOADBOX -->
+<div id="header">Download</div>
+<div id="container">
+  <div id="first">{{% icon download %}}</div>
+  <div id="second"><a href="https://gitforwindows.org" target="_blank"><b>https://gitforwindows.org</b></a></b></div>
+  <div id="clear"></div>
+</div>
+
+Set as system variables:
+System Properties (Tab: Advanced) -> Environment Variables -> System variables -> Path -> Edit -> New:
+
+*C:\Program Files\Git\cmd* <br>
+*C:\Program Files\Git\bin*
+
+{{< figure src="/img/courses/dat_sci/01/win_sysvariables.gif" caption="Click on Edit and add the variables" >}}
+
+
 3. Accept the assignment on GitHub Classroom, create a website using R Markdown and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
 
 To get started with this template you only have to login to github and click this invitation link: 
@@ -733,7 +753,13 @@ You should now see a copy of the lab journal repo in your github account. That m
 
 * **macOS only**: Install the Apple `Xcode` developer tools. 
 
-Option 1: Run `xcode-select --install` in the terminal. <!-- DOWNLOADBOX --> ##### EXMPLAIN TERMINAL
+Option 1: Run `xcode-select --install` in the terminal. 
+
+***
+You can copy the command directly in your terminal (*Terminal* on MacOS, *Command Prompt* on Windows).
+
+Terminals/command shells only accept text commands and are a useful way to run task on a computer.
+***
 
 Option 2: You can install Xcode for free from the App Store. 
 
@@ -810,7 +836,7 @@ Requirements for StatiCrypt:
 
 **Step 2:** Install StatiCrypt via npm
 
-Run `npm install -g https://github.com/TUHHStartupEngineers/staticrypt` in your terminal. If you get the error: `errno 13 permission denied`, you don't have the permission to install it. To resolve this error put `sudo` (for unix systems) in front of the command and enter your password if prompted.
+Run `npm install -g https://github.com/TUHHStartupEngineers/staticrypt` in your terminal. If you get the error: `errno 13 permission denied`, you don't have the permission to install it. To resolve this error put `sudo` (for unix systems) in front of the command and enter your password (your password for e.g. unlocking your account on Windows/MacOS) if prompted.
 
 **Step 3:** Set your password and store it in your global environment 
 
