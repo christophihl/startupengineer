@@ -90,7 +90,7 @@ The upper part (the header) between the dashes is the YAML section, that control
 * `code_folding`: Can be set to show, hide, none. Know your audience: This option should be set depening on whether you send the document to technical audiences (e.g. data scientists) or to non-technical audiences (e.g. business leaders). 
 * `df_print`: default, kable, tibble, paged. For large datasets creating a pageable table might be a good idea.
 * `highlight`: Specifies the syntax highlighting style. Supported styles include default, tango, pygments, kate, monochrome, espresso, zenburn, haddock, breezedark, and textmate. Pass null to prevent syntax highlighting.
-number_sections: Add section numbering to headers
+* `number_sections`: Add section numbering to headers
 * `theme`: Specifies the Bootstrap theme to use for the page (themes are drawn from the [Bootswatch](https://bootswatch.com/3/) theme library). Valid themes include default, cerulean, journal, flatly, darkly, readable, spacelab, united, cosmo, lumen, paper, sandstone, simplex, and yeti. Pass null for no theme (in this case you can use the css parameter to add your own styles).
 * `toc`: Add a table of contents (TOC)
 * `toc_depth`: Specify the depth of headers that it applies to
@@ -103,7 +103,7 @@ The second part is what we call a code chunk. This is one is a special code chun
 * `eval`: Whether to evaluate a code chunk. Toggles whether or not to run the code.
 * `results`: When set to 'hide', text output will be hidden; when set to 'asis', text output is written “as-is”. Toggles whether or not to show output (text, tables, plots, etc.).
 
-There are many more options you can control than we have covered here. You can get them by running `knitr::opts_chunk$get()` in the console.
+There are many more options you can control than we have not covered here. You can get them by running `knitr::opts_chunk$get()` in the console.
 
 Information about how to format text, insert headers, text, lists and images can be found in the provided `.Rmd` file.
 
@@ -173,20 +173,20 @@ bike_orderlines_tbl <- orderlines_tbl %>%
 Let's create two functions for the EURO formatting. We can use the `scales::dollar` and `scales::dollar_format` functions, but we have to adjust them to the euro format: 
 
 ```r
-format_to_euro <- function(x, suffix = ' €') {
+format_to_euro <- function(x, suffix = " €") {
 
   scales::dollar(x,
                  suffix       = suffix,
-                 prefix       = '',
-                 big.mark     = '.',
-                 decimal.mark = ',')
+                 prefix       = "",
+                 big.mark     = ".",
+                 decimal.mark = ",")
 }
 
 euro_format <- function(scale        = 1,
-                        prefix       = '',
-                        suffix       = ' €',
-                        big.mark     = '.',
-                        decimal.mark = ',') {
+                        prefix       = "",
+                        suffix       = " €",
+                        big.mark     = ".",
+                        decimal.mark = ",") {
 
   scales::dollar_format(suffix       = suffix,
                         prefix       = prefix,
@@ -664,7 +664,7 @@ germany_sf <- st_as_sf(germany_sp) %>%
 
 *Step 4: Wrangle and plot data in a new section*
 
-Take a look at the `germany_sf` object. It has already all the information to plot the map. But we still need the revenue information aggregated per state so that we can see the information as we hover over a state. We just need to group and summarize the bike data, join it with the geographic data and create labels for the hover texts. The wrangled data can then be plotted with the `plot_ly()` function. In the arguments of `plot_ly()` we use the `~` to specify which column to use. Plotly can use Brewer color paletes for the color schemes (e.g. "Blues").
+Take a look at the `germany_sf` object. It has already all the information to plot the map. But we still need the revenue information aggregated per state so that we can see the information as we hover over a state. We just need to group and summarize the bike data, join it with the geographic data and create labels for the hover texts. The wrangled data can then be plotted with the `plot_ly()` function. In the arguments of `plot_ly()` we use the `~` to specify which column to use. Plotly can use Brewer color palettes for the color schemes (e.g. "Blues").
 
 ````r
 Column {data-width=1000}
@@ -684,7 +684,7 @@ geo_plot_tbl <- bike_orderlines_tbl %>%
                   st_as_sf()
 ```
 
-```
+```{r}
 plot_ly(geo_plot_tbl, 
         split      = ~NAME_1, 
         color      = ~total_revenue,
@@ -831,7 +831,7 @@ Outputs react to changes in input by running their render code and displaying up
 | renderTable |	Data frame, matrix, other table like structures |
 | renderText |	Character vectors |
 
-Let's output the selection in the pane Checkbox Output. To do that, we have to fill out the code chunk and link it to our checkbox group. To output the selection, we can use `renderPrint()`. It renders the printed output gernerated from a reactive expression.
+Let's output the selection in the pane Checkbox Output. To do that, we have to fill out the code chunk and link it to our checkbox group. To output the selection, we can use `renderPrint()`. It renders the printed output generated from a reactive expression.
 
 `input` is a special object (list) that keeps track of all UI components. `input` allows us to refer to them in render functions using the format: input$inputId.
 
@@ -1023,7 +1023,7 @@ observeEvent(eventExpr = input$reset, handlerExpr = {
   
   updateDateRangeInput(session = session, 
                        inputId = "date_range", 
-                       start   = min(sales_data_tbl$date), 
+                       start   = "2018-01-01", 
                        end     = today())
   
   updateSliderInput(session = session, 
