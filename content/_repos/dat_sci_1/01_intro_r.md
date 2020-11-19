@@ -844,7 +844,7 @@ Run `npm install -g https://github.com/TUHHStartupEngineers/staticrypt` in your 
 
 Run `Sys.setenv(LAB_KEY = "Your-token")` in the R console. Replace "Your-token" with your passphrase for your website. You have to repeat this step everytime you start RStudio. **DO NOT USE YOUR STANDARD PASSWORDS.** The lab journal password are displayed in clear text to the teaching assistants.
 
-*Alternative 1*
+*Alternative 2*
 
 To make this step permanent, execute the following steps:
 
