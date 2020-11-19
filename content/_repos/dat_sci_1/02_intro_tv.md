@@ -1254,7 +1254,7 @@ bike_orderlines_wrangled_tbl <- bike_orderlines_joined_tbl %>%
   # You can use select_helpers like contains() or everything()
   select(order.id, contains("order"), contains("model"), contains("category"),
          price, quantity, total.price,
-         everything()) %>%/br>
+         everything()) %>%</br>
   # 5.4 Rename columns because we actually wanted underscores instead of the dots
   # (one at the time vs. multiple at once)
   rename(bikeshop = name) %>%

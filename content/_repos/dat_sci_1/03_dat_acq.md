@@ -106,7 +106,7 @@ This is just a connection so far. If we want to pull the data into local memory 
 
 <pre><code class="r">album_tbl <- tbl(con, "Album") %>% collect()</code></pre>
 
-If you are familiar with SQL, you can send queries like this: `x <- dbGetQuery(con, 'SELECT * FROM artists')`. 
+If you are familiar with SQL, you can send queries like this: `x <- dbGetQuery(con, 'SELECT * FROM Artist')`. 
 
 Once you are done with the data acquisition, disconnect from the database:
 
