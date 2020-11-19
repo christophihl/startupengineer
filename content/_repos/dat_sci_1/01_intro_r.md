@@ -840,7 +840,19 @@ Run `npm install -g https://github.com/TUHHStartupEngineers/staticrypt` in your 
 
 **Step 3:** Set your password and store it in your global environment 
 
-Run `Sys.setenv(LAB_KEY = "Your-token")` in the R console. Replace "Your-token" with your passphrase for your website. **DO NOT USE YOUR STANDARD PASSWORDS.** The lab journal password are displayed in clear text to the teaching assistants.
+*Alternative 1*
+
+Run `Sys.setenv(LAB_KEY = "Your-token")` in the R console. Replace "Your-token" with your passphrase for your website. You have to repeat this step everytime you start RStudio. **DO NOT USE YOUR STANDARD PASSWORDS.** The lab journal password are displayed in clear text to the teaching assistants.
+
+*Alternative 1*
+
+To make this step permanent, execute the following steps:
+
+1. Create a `.Renviron` file in your project directory: `file.create(".Renviron")`
+2. Open this file by clicking on it in the files browser
+3. Add the line `LAB KEY = "Your-token"` and replace "Your-token" with your passphrase
+4. Save the file
+5. Go to GitHub Desktop to review the changes. Right-Click on the `.Renviron` file and select `Ignore File (Add to .gitignore)`.
 
 **Step 4:** Build your website (including password protection)
 
