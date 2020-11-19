@@ -810,7 +810,7 @@ Every github repository has the capability of serving html files (web page files
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_02.png" caption="2. Scroll down and select the master Branch and click the option to serve from the docs folder. Press Save. (You should see a little green message above the github pages options with a link to your new webpage)." >}}
 
-That's it. Now you can navigate to your new homepage via this link: `https://github_username.github.io/lab_journal_website/`. It may take a while until you can reach it.
+That's it. Now you can navigate to your new homepage via the link in the greenbox. It may take a while until you can reach it.
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .Rmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. `Press commit to master.`" >}}
 
