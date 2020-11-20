@@ -32,6 +32,21 @@ menu:
 
 <br/>
 
+
+## Aufzeichnung der Zoom Live Session
+
+<br/>
+
+- [Aufzeichung](https://tuhh.zoom.us/rec/share/pVuS_UPOXyjUHB2dFL0hnXPBQBAbyZJYQmDKh6h0YRNXW1UaVt36g4WyKAq9bWvZ.DjR00S3-eV15cjvw)
+- Kennwort: AU??bk31
+
+<br/>
+
+
+
+## Lehrvideos
+
+
 ### Was ist Entrepreneurship?
 
 {{< youtube XadGSGMWuI0 >}}
