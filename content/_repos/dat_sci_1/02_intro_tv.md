@@ -1479,7 +1479,7 @@ Excel is great when others may want access to your data that are Excel users. Fo
 
 Your challenges are pretty similar like the analyses we just did:
 
-1. Analyze the sales by location (state) with a bar plot. Since `state` and `city` are multiple features (variables), they should be split. Which state sells most of the bikes? Replace your `bike_orderlines_wrangled_tbl` object with the newly wrangled object (with the columns `state` and `city`).
+1. Analyze the sales by location (state) with a bar plot. Since `state` and `city` are multiple features (variables), they should be split. Which state has the highes revenue? Replace your `bike_orderlines_wrangled_tbl` object with the newly wrangled object (with the columns `state` and `city`).
 
 Hint: Add `+ theme(axis.text.x = element_text(angle = 45, hjust = 1))` to your plotting code to rotate your x-axis labels. Probably you have to resize the viewer pane to show the entire plot. For your website, try different values for `fig.width` and `fig.height` in your markdown document:
 
