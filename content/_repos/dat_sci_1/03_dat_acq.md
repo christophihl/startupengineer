@@ -1196,7 +1196,7 @@ for (i in seq_along(bike_category_tbl$url)) {</br>
 We didn't get only the canyon bikes, but also other products listed below some bike categories. They have a different id length. Let's remove observations, where the length of the id is not 4. And we got some duplicates. They have to be removed as well:
 
 <pre><code class="r"># Check for duplicates
-bike_data_cleaned_tbl %>%
+bike_data_tbl %>%
     group_by(id) %>%
     filter(n()>1) %>%
     arrange(id) %>% 
