@@ -697,7 +697,7 @@ Get the title: The title is in the child node with an a tag:
 
 ***
 
-Get the year: The year has the classes .titleColumn AND .secondaryInfo. Separate those by a space. The logical operator OR can be indicated by a comma.            
+Get the year: The year has the classes .titleColumn AND .secondaryInfo. Separate those by a space.
 
 <!-- CODE (hide) -->
 <section class="hide">
