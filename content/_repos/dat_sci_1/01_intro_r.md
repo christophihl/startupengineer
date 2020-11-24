@@ -810,7 +810,7 @@ Every github repository has the capability of serving html files (web page files
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_02.png" caption="2. Scroll down and select the master Branch and click the option to serve from the docs folder. Press Save. (You should see a little green message above the github pages options with a link to your new webpage)." >}}
 
-That's it. Now you can navigate to your new homepage via this link: `https://github_username.github.io/lab_journal_website/`. It may take a while until you can reach it.
+That's it. Now you can navigate to your new homepage via the link in the greenbox. It may take a while until you can reach it.
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .Rmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. `Press commit to master.`" >}}
 
@@ -840,7 +840,19 @@ Run `npm install -g https://github.com/TUHHStartupEngineers/staticrypt` in your 
 
 **Step 3:** Set your password and store it in your global environment 
 
-Run `Sys.setenv(LAB_KEY = "Your-token")` in the R console. Replace "Your-token" with your passphrase for your website. **DO NOT USE YOUR STANDARD PASSWORDS.** The lab journal password are displayed in clear text to the teaching assistants.
+*Alternative 1*
+
+Run `Sys.setenv(LAB_KEY = "Your-token")` in the R console. Replace "Your-token" with your passphrase for your website. You have to repeat this step everytime you start RStudio. **DO NOT USE YOUR STANDARD PASSWORDS.** The lab journal password are displayed in clear text to the teaching assistants.
+
+*Alternative 2*
+
+To make this step permanent, execute the following steps:
+
+1. Create a `.Renviron` file in your project directory: `file.create(".Renviron")`
+2. Open this file by clicking on it in the files browser
+3. Add the line `LAB KEY = "Your-token"` and replace "Your-token" with your passphrase
+4. Save the file
+5. Go to GitHub Desktop to review the changes. If the `.Renviron` file appears, right-click on it and select `Ignore File (Add to .gitignore)`. If it does not appear, everything is already set.
 
 **Step 4:** Build your website (including password protection)
 

@@ -53,11 +53,11 @@ If you have R-studio working and your github page set up (will be explained in d
 <div id="header">Website</div>
 <div id="container">
   <div id="first">{{% icon globe %}}</div>
-  <div id="second"><a href="https://www.datacamp.com/" target="_blank"><b>tbd</b></a></div>
+  <div id="second"><a href="https://www.datacamp.com/groups/shared_links/4f8ca9f0d781153fe63cdad89c2130b918af4a66480a12eed71492c65f0d9dbf" target="_blank"><b>https://www.datacamp.com/groups/shared_links/4f8ca9f0d781153fe63cdad89c2130b918af4a66480a12eed71492c65f0d9dbf</b></a></div>
   <div id="clear"></div>
 </div>
 
-These tutorials are optional and you can choose whatever <a href="https://learn.datacamp.com/courses/" target="_blank"><b>courses</b></a> you want. In accordance with the content of the sessions, I will recommend you to complete tutorials at the end of each session.
+These tutorials are optional and you can choose whatever <a href="https://learn.datacamp.com/courses" target="_blank"><b>courses</b></a> you want. R, Python or SQL. In accordance with the content of the sessions, I will recommend you to complete tutorials at the end of each session.
 
 ## Schedule
 
