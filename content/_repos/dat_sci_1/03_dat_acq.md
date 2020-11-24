@@ -1434,6 +1434,6 @@ In this chapter, there are two challenges for you:
 
 1. Get some data via an API. There are millions of providers, that offer API access for free and have good documentation about how to query their service. You just have to google them. You can use whatever service you want. For example, you can get data about your listening history (spotify), get data about flights (skyscanner) or just check the weather forecast.
 
-2. Scrape one of the competitor websites of canyon (either https://www.rosebikes.de/ or https://www.radon-bikes.de) and create a small database. The database should contain the model names, the categories and the prices of the bikes. 
+2. Scrape one of the competitor websites of canyon (either https://www.rosebikes.de/ or https://www.radon-bikes.de) and create a small database. The database should contain the model names and prices for at least one category. Use the `selectorgadget` to get a good understanding of the website structure.
 
 Upload your codes to your github page. Print the first 10 rows of your tibbles. Keep in mind that you should not publish your credentials.
