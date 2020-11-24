@@ -737,7 +737,7 @@ To get started with this template you only have to login to github and click thi
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_02.png" caption="... to enter the virtual classroom." width="75%" >}}
 
-You might have to refresh the page after a while. But then you're ready to go and able to access your template by clicking on the bottom link (you don't need to accept the invitation to TUHHStartupEngineers).
+You might have to refresh the page after a while. But then you're ready to go and able to access your template by clicking on the bottom link (you don't need to accept the invitation to TUHHStartupEngineers). That means you have all of the files you need to compile a website with RMarkdown.
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_03.png" caption="You're ready to go!" width="75%" >}}
 
@@ -745,7 +745,13 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_04.png" caption="Accept owmork as collaborator." width="50%" >}}
 
-You should now see a copy of the lab journal repo in your github account. That means you have all of the files you need to compile a website with RMarkdown.
+<!-- INFOBOX -->
+<div id="header">Infobox</div>
+<div id="container">
+  <div id="first">{{% icon info-solid %}}</div>
+  <div id="second">The repo was created in the organization Account TUHH Startup Engineers. It is not assigned to your account, but you have full admin rights to change everything as you wish.</div>
+  <div id="clear"></div>
+</div>
 
 ### Compiling on your local computer
 
