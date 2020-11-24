@@ -1372,7 +1372,7 @@ bike_url_color_vec <- bike_data_colors_tbl %>%
                         pull(url_color)</br>
 # Map
 bike_data_sizes_tbl <- bike_data_colors_tbl %>% 
-  mutate(size = map(bike_url_color_vec, get_sizes))</br>
+  mutate(size = future_map(bike_url_color_vec, get_sizes))</br>
 # Unnest
 bike_data_sizes_tbl <- bike_data_sizes_tbl %>% 
                          unnest(size)</br>
