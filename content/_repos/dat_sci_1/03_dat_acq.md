@@ -704,8 +704,8 @@ Get the year: The year has the classes .titleColumn AND .secondaryInfo. Separate
 <pre><code class="r">year <- html %>% 
           html_nodes(".titleColumn .secondaryInfo") %>%
           html_text() %>% 
-          # Remove all brackets --> "(" OR ")"
-          stringr::str_replace_all(pattern = "\\(|\\)", replacement = "") %>% 
+          # Extract numbers
+          stringr::str_extract(pattern = "[0-9]+") %>% 
           as.numeric()</code></pre>
 </section>
 
