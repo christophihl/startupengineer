@@ -697,15 +697,15 @@ Get the title: The title is in the child node with an a tag:
 
 ***
 
-Get the year: The year has the classes .titleColumn AND .secondaryInfo. Separate those by a space. The logical operator OR can be indicated by a comma.            
+Get the year: The year has the classes .titleColumn AND .secondaryInfo. Separate those by a space.
 
 <!-- CODE (hide) -->
 <section class="hide">
 <pre><code class="r">year <- html %>% 
           html_nodes(".titleColumn .secondaryInfo") %>%
           html_text() %>% 
-          # Remove all brackets --> "(" OR ")"
-          stringr::str_replace_all(pattern = "\\(|\\)", replacement = "") %>% 
+          # Extract numbers
+          stringr::str_extract(pattern = "[0-9]+") %>% 
           as.numeric()</code></pre>
 </section>
 
