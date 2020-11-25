@@ -856,7 +856,7 @@ To make this step permanent, execute the following steps:
 
 1. Create a `.Renviron` file in your project directory: `file.create(".Renviron")`
 2. Open this file by clicking on it in the files browser
-3. Add the line `LAB KEY = "Your-token"` and replace "Your-token" with your passphrase
+3. Add the line `LAB_KEY = "Your-token"` and replace "Your-token" with your passphrase
 4. Save the file
 5. Go to GitHub Desktop to review the changes. If the `.Renviron` file appears, right-click on it and select `Ignore File (Add to .gitignore)`. If it does not appear, everything is already set.
 
