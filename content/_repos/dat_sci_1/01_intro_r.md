@@ -857,10 +857,12 @@ To make this step permanent, execute the following steps:
 1. Create a `.Renviron` file in your project directory: `file.create(".Renviron")`
 2. Open this file by clicking on it in the files browser
 3. Add the line `LAB_KEY = "Your-token"` and replace "Your-token" with your passphrase
-4. Save the file
+4. Save the file. If you want to access these values, you have to restart RStudio, because the `.Renviron` file is only initialized at startup.
 5. Go to GitHub Desktop to review the changes. If the `.Renviron` file appears, right-click on it and select `Ignore File (Add to .gitignore)`. If it does not appear, everything is already set.
 
 **Step 4:** Build your website (including password protection)
+
+Test to check if your `.Renviron` variables are accessible: Run `Sys.getenv("LAB_KEY")` in your console. It should output your password.
 
 Run `source("build_website.R")` in the R console. Your working directory needs to be set to `~/lab_journal_website/`. This step also starts the process, which would have been triggered by clicking on `Build Website`. Additionally, it adds password protection (You can take a look at the `build_website.R` script to see what is going on). You have to execute step 4 everytime before you want to push changes to github / your online lab journal.
 
