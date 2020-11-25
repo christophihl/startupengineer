@@ -1509,9 +1509,9 @@ In the `Patents_DB_dictionary_bulk_downloads.xlsx` file you will find informatio
 
 Answer the following questions with that data:
 
-1. **Patent Dominance:** What US company has the most patents? List the 10 US companies with the most aaigned/granted patents.
+1. **Patent Dominance:** What __US company / corporation__ has the most patents? List the 10 US companies with the most assigned/granted patents.
 2. **Recent patent acitivity:** What US company had the most patents granted in 2019? List the top 10 companies with the most new granted patents for 2019.
-3. **Innovation in Tech:** What is the most innovative tech sector? For the top 10 companies with the most patents: What are the top 5 USPTO main classes of their patents?
+3. **Innovation in Tech:** What is the most innovative tech sector? For the top 10 companies __(worldwide)__ with the most patents, what are the top 5 USPTO tech main classes?
 
 Answer the question with `data.table` or `dplyr`. You will need the following tables for each question:
 
