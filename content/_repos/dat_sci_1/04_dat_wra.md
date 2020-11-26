@@ -1500,7 +1500,6 @@ col_types <- list(
 patent_tbl <- vroom(
             file       = "patent.tsv", 
             delim      = "\t", 
-            col_names  = names(col_types),
             col_types  = col_types,
             na         = c("", "NA", "NULL")
         )</code></pre>
