@@ -1506,6 +1506,8 @@ patent_tbl <- vroom(
         
 In the `Patents_DB_dictionary_bulk_downloads.xlsx` file you will find information about the datatypes for each column of the tables. This will help you to create the "recipe" to import the data.
 
+To speed up your processing, you can select `col_skip()` as a *"datatype"* to only read the columns of the data into R, that you will need for your analysis. 
+
 Answer the following questions with that data:
 
 1. **Patent Dominance:** What __US company / corporation__ has the most patents? List the 10 US companies with the most assigned/granted patents.
