@@ -42,7 +42,7 @@ weight: 10
 
 <br/>
 
-## 6) Term Sheets
+## [6) Term Sheets](https://www.dropbox.com/s/zdipu9py62tfkgy/Ent_Fin_WS21_TermSheets.pdf?dl=0)
 
 
 

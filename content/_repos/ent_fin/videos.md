@@ -103,13 +103,24 @@ weight: 15
 <br/>
 
 
-
 ## 5) Early Stage and Venture Capital Investors
+
+* [Zoom Recording](https://www.dropbox.com/s/es28ig4txifdh6q/zoom_0.mp4?dl=0)
+
 
 
 <br/>
 
 ## 6) Term Sheets
+
+
+* Part 1: {{< youtube BEB7bSh0zTw >}}
+
+
+* Part 2: {{< youtube uYGgYh1LQyU >}}
+
+
+* Part 3: {{< youtube XTJ8VkuzhdI >}}
 
 
 
