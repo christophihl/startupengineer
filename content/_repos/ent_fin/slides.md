@@ -37,8 +37,7 @@ weight: 10
 <br/>
 
 
-
-## 5) Early Stage and Venture Capital Investors
+## [5) Early Stage and Venture Capital Investors](https://www.dropbox.com/s/xf64eddmrjz5yft/Ent_Fin_WS21_Early_Stage_Investors.pdf?dl=0)
 
 
 <br/>
