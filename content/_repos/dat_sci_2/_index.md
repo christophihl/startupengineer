@@ -30,24 +30,9 @@ The content of this class is designed for the dark theme of this website. If you
  
 This is a practical and skill-focused introduction to using open-source programming software (R, RStudio, and R Markdown) in several aspects of Business Analytics. The course covers basic scripting/coding in R, data-wrangling, advanced graphing and machine learning. You will learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools to apply machine learning techniques. There is no prerequisite knowledge needed in R Programming, data science or machine learning. The chapters in this course are arranged according to 14 practical projects with concrete examples. These examples are short, easy to understand, cover everything you need to know and provide you with immediate practice. Learning to program is like learning to speak another language — you progress faster when you practice.
 
-## Course objectives
-
-After completing this module, you will be able to:
-
-* Obtain large amounts of data via APIs or web scraping from the Internet
-* Clean and transform data
-* Explore and visualize data in a goal-oriented way
-* Model data using modern machine learning techniques with respect to classifications and predictive predictions
-* Communicate data and results in the form of products and applications  
-
-## Course structure
-
-Over the course of seven days you will complete 14 sessions. Each session will involve a small amount of lecturing on R concepts, and a large amount of time for students to complete coding and analysis problems.
-
-
 ## DataCamp <embed src="../../img/icons//datacamp.svg" align="center" height="30px" style="padding:0px 5px 5px 0px">
 
-If you have R-studio working and your github page set up (will be explained in detail in the corresponding chapter), you can get started with online tutorials from datacamp and you can begin messing around in R. In order to do so, join the NIT data science team on datacamp via the following link (Please register with your tuhh email address):
+If you have R-studio working and your github page set up (will be explained in detail in the corresponding chapter), you can get started with online tutorials from datacamp and you can begin messing around in R. In order to do so, join the TUHH data science team on datacamp via the following link (Please register with your tuhh email address):
 
 <!-- DOWNLOADBOX -->
 <div id="header">Website</div>
@@ -58,18 +43,3 @@ If you have R-studio working and your github page set up (will be explained in d
 </div>
 
 These tutorials are optional and you can choose whatever <a href="https://learn.datacamp.com/courses/" target="_blank"><b>courses</b></a> you want. In accordance with the content of the sessions, I will recommend you to complete tutorials at the end of each session.
-
-## Schedule
-
-| Session | Date | Topic |
-| --- | --- | --- |
-| 1 | tbd | [Machine Learning Foundations]({{< relref "_repos/dat_sci_2/06_ml_fund.html" >}}) |
-| 2 | tbd | [ML: Supervised I]({{< relref "_repos/dat_sci_2/07_ml_sup_I.md" >}}) |
-| 3 | tbd | [ML: Supervised II({{< relref "_repos/dat_sci_2/08_ml_sup_II.md" >}}) |
-| 4 | tbd | [ML: H2O I]({{< relref "_repos/dat_sci_2/09_ml_h2o_I.md" >}}) |
-| 5 | tbd | [ML: H2O II]({{< relref "_repos/dat_sci_2/10_ml_h2o_II.md" >}}) |
-| 6 | tbd | [ML: Performance Measures]({{< relref "_repos/dat_sci_2/11_ml_perf_meas.md" >}}) |
-| 7 | tbd | [ML: Lime]({{< relref "_repos/dat_sci_2/12_ml_lime.md" >}}) |
-| 8 | tbd | [ML: Deep Learning]({{< relref "_repos/dat_sci_2/13_ml_dl.md" >}}) |
-
-

@@ -19,7 +19,7 @@ codefolding_show: hide
 ---
 
 {{% alert warning %}}
-If you already participated in the first course ("Business Data Science Basics") you can skip the first part and jump right into "GitHub for journaling".
+If you already participated in the first course ("Business Data Science Basics") you can skip the first part and jump right into "Mattermost".
 {{% /alert %}}
 
 <!-- R-Logo and RStudio-Logo -->
@@ -613,7 +613,36 @@ hist(results)</code></pre>
 </div>
 
 ***
+## Mattermost
 
+In the course of the next chapters, we will do a lot of coding and it is very likely that errors will occur. That can have several reasons but dealing with errors is an elementary component in programming in data science and machine learning. As already mentioned, in the most cases other people from around the world have had similar problems and you will find the right solution to your problem performing a query on the internet. Please try to do that as a first step when you run into an error.
+
+If you don't find a solution and feel you are stuck, don't hesitate to use the relevant Mattermost channel. For each chapter there will be a channel where we try to help you as much as possible. But in order to keep it efficient and manageable it is necessary that we all follow some basic rules:
+
+1. Use the right channel: for each chapter there is a correct channel as well as a general channel for questions that do not relate to a specific chapter.
+2. Post error message: if you run into an error it is necessary that we know what the error is. Often reading the error message very carefully can also help you to understand where the problem comes from.
+3. Post the code that caused the error: in order to reproduce the error we need the last command that caused the error. If we need more context we will ask you for that.
+4. Use the [formatting guidelines of Mattermost](https://communicating.tuhh.de/help/formatting) when you post code. That makes a huge difference in terms of readability. They will also be linked in the channel description. Most important is that using *```* one line above and one line below your code will make it easy to read. 
+5. Use thread function to reply to a discussion. This way a discussion can be easier read. You find the reply button on the right side of a message.
+6. Use the search function: It will allow you to search across channels for similar problems as it is very likely that the you encounter the same problems as the other students.
+
+Playing by these rules makes it a lot easier for everyone to follow the discussion and learn from similar problems and everyone can benefit from the discussions.
+
+<!-- CODE (show) -->
+<pre><code class="r"> 
+```r
+x %>% sum()
+```
+
+**Error:**
+Error in x %>% sum() : could not find function "%>%"
+</code></pre>
+
+
+{{< figure src="/img/courses/dat_sci/01/mattermost_example_error.png" caption="Minimalistic example of how you could post an error in Mattermost. See how little formatting makes the code very nice to read." width="50%" >}}
+
+
+***
 ## GitHub for journaling
 <!-- GitHub and GitHub Logos -->
 <div class="flex-container images">
@@ -655,10 +684,18 @@ We will use GitHub to store your data and hand in your assignments through your 
 
 3. Accept the assignment on GitHub Classroom, create a website using R Markdown and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
 
+<!-- INFOBOX -->
+<div id="header">Infobox</div>
+<div id="container">
+  <div id="first">{{% icon info-solid %}}</div>
+  <div id="second">Please note, that there can be minor deviations from the screenshots, e.g. the name of the classroom and the next steps serve as a general instruction.</div>
+  <div id="clear"></div>
+</div>
+
 To get started with this template you only have to login to github and click this invitation link: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/F4rCkypW" target="_blank"><b>Business Data Science Basics - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/bdyUeBBR" target="_blank"><b>Business Decisions with Machine Learning - GitHub Classroom</b></a>
 </div>
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_00.png" caption="Click `Authorize GitHub Classroom`" width="50%" >}}

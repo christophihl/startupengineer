@@ -1092,10 +1092,6 @@ What can you deduce about the interaction between Monthly Income and Attrition?
 <li>It's difficult to deduce anything based on the visualization</li>
 </ol>
 
-<section class="hide">
-c.
-</section>
-
 ***
 
 *2. Compensation Features*
@@ -1109,10 +1105,6 @@ What can you deduce about the interaction between Percent Salary Hike and Attrit
   <li>It's difficult to deduce anything based on the visualization</li>
 </ol>
 
-<section class="hide">
-d.
-</section>
-
 ***
 
 *3. Compensation Features*
@@ -1125,10 +1117,6 @@ What can you deduce about the interaction between Stock Option Level and Attriti
 <li>It's difficult to deduce anything based on the visualization</li>
 </ol>
 
-<section class="hide">
-b.
-</section>
-
 ***
 
 *4. Survey Results*
@@ -1140,10 +1128,6 @@ What can you deduce about the interaction between Environment Satisfaction and A
 <li>A higher proportion of those leaving have a high environment satisfaction level</li>
 <li>It's difficult to deduce anything based on the visualization</li>
 </ol>
-
-<section class="hide">
-a.
-</section>
 
 ***
 
@@ -1158,10 +1142,6 @@ What can you deduce about the interaction between Work Life Balance and Attritio
 <li>It's difficult to deduce anything based on the visualization</li>
 </ol>
 
-<section class="hide">
-b.
-</section>
-
 ***
 
 *6. Performance Data*
@@ -1175,11 +1155,6 @@ What Can you deduce about the interaction between Job Involvement and Attrition?
 <li>It's difficult to deduce anything based on the visualization</li>
 </ol>
 
-
-<section class="hide">
-a.
-</section>
-
 ***
 
 *7. Work-Life Features*
@@ -1190,10 +1165,6 @@ What can you deduce about the interaction between Over Time and Attrition?
 <li>The proportion of those leaving that are working Over Time are high compared to those that are not leaving</li>
 <li>The proportion of those staying that are working Over Time are high compared to those that are not staying</li>
 </ol>
-
-<section class="hide">
-a.
-</section>
 
 ***
 
@@ -1207,10 +1178,6 @@ What can you deduce about the interaction between Training Times Last Year and A
 <li>It's difficult to deduce anything based on the visualization</li>
 </ol>
 
-<section class="hide">
-b.
-</section>
-
 ***
 
 *9. Time-Based Features*
@@ -1223,10 +1190,6 @@ What can you deduce about the interaction between Years At Company and Attrition
 <li>It's difficult to deduce anything based on the visualization</li>
 </ol>
 
-<section class="hide">
-b.
-</section>
-
 ***
 
 *10. Time-Based Features*
@@ -1238,7 +1201,3 @@ What can you deduce about the interaction between Years Since Last Promotion and
 <li>Those that are leaving have fewer years since last promotion than those that are staying</li>
 <li>It's difficult to deduce anything based on the visualization</li>
 </ol>
-
-<section class="hide">
-c.
-</section>
