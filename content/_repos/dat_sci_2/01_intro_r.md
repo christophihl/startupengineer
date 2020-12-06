@@ -788,7 +788,7 @@ Every Github repository has the capability of serving html files (web page files
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your lab_journal_website repository and click the settings button in the top right corner." >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02.png" caption="2. Scroll down and select the master Branch and click the option to serve from the docs folder. Press Save. (You should see a little green message above the github pages options with a link to your new webpage)." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_new.png" caption="2. Scroll down and select the master Branch and make sure the option to serve from the root folder is set. Press Save. (You should see a little green message above the github pages options with a link to your new webpage)." >}}
 
 That's it. Now you can navigate to your new homepage via the link in the greenbox. It may take a while until you can reach it.
 
