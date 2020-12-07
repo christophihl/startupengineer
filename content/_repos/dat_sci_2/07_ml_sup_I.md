@@ -209,9 +209,13 @@ bike_data_tbl <- readRDS("raw_data/bike_orderlines.rds")
 Have a look at the data using functions like `head()`, `View()` or `glimpse()`. Some of you may already know the data. It contains orderlines from a bicycle manufacturer with additional information about the models.
 For each of the models, we know their categories, price and weight. Let's see how they are related. As a first step in modeling, it’s always a good idea to plot the data:
 
+{{% alert warning %}}
+The data used for the following plots is a little older than the data you are using. The bike manufacturer Canyon has added the category `Gravel`. If you want to get similar results you have to filter the data accordingly. Otherwise just alter the code snippets so that they work for five categories.
+{{% /alert %}}
+
 ```r
 ggplot(bike_data_tbl,
-       aes(x = price_euro, 
+       aes(x = price, 
            y = weight, 
            group = category_1, 
            col = category_1)) +
@@ -239,10 +243,10 @@ We can see that bikes that are more expensive tend to have lower weights, but th
 A standard two-way analysis of variance (ANOVA) model makes sense for this dataset because we have both a continuous predictor and a categorical predictor. Since the slopes appear to be different for at least some of the bike models, let’s build a model that allows for two-way interactions. Specifying an R formula with our variables in this way:
 
 ```r
-weight ~ price_euro * category_1
+weight ~ price * category_1
 ```
 
-allows our regression model depending on `price_euro` to have separate slopes and intercepts for each `category_1`.
+allows our regression model depending on `price` to have separate slopes and intercepts for each `category_1`.
 
 For this kind of model, ordinary least squares is a good initial approach. With `tidymodels`, we start by specifying the functional form of the model that we want using the `parsnip` package. Since there is a numeric outcome and the model should be linear with slopes and intercepts, the model type is __linear regression__. We can declare this with:
 
@@ -267,7 +271,7 @@ From here, the model can be estimated or trained using the `fit()` function:
 
 ```r
 lm_fit <- lm_mod %>% 
-            fit(weight ~ price_euro * category_1, 
+            fit(weight ~ price * category_1, 
                 data = bike_data_tbl)
 ```
 
@@ -279,13 +283,13 @@ tidy(lm_fit)
 ##   term                               estimate std.error statistic  p.value
 ##   <chr>                                 <dbl>     <dbl>     <dbl>    <dbl>
 ## 1 (Intercept)                        16.9      1.35         12.6  2.31e-27
-## 2 price_euro                          0.00117  0.000345      3.38 8.55e- 4
+## 2 price                          0.00117  0.000345      3.38 8.55e- 4
 ## 3 category_1Hybrid / City            -4.38     1.64         -2.68 7.98e- 3
 ## 4 category_1Mountain                 -3.30     1.42         -2.33 2.07e- 2
 ## 5 category_1Road                     -8.21     1.39         -5.89 1.51e- 8
-## 6 price_euro:category_1Hybrid / City -0.00248  0.000698     -3.55 4.76e- 4
-## 7 price_euro:category_1Mountain      -0.00137  0.000367     -3.74 2.41e- 4
-## 8 price_euro:category_1Road          -0.00138  0.000355     -3.88 1.39e- 4
+## 6 price:category_1Hybrid / City -0.00248  0.000698     -3.55 4.76e- 4
+## 7 price:category_1Mountain      -0.00137  0.000367     -3.74 2.41e- 4
+## 8 price:category_1Road          -0.00138  0.000355     -3.88 1.39e- 4
 ```
 
 **III. Use a model to predict**
@@ -293,10 +297,10 @@ tidy(lm_fit)
 Suppose that it would be particularly interesting to make a plot of the bike weights that cost 2000 €. To create such a graph, we start with some new example data that we will make predictions for, to show in our graph:
 
 ```r
-new_points <- expand.grid(price_euro = 20000, 
+new_points <- expand.grid(price = 20000, 
                           category_1 = c("E-Bikes", "Hybrid / City", "Mountain", "Road"))
 new_points
-##   price_euro    category_1
+##   price    category_1
 ## 1       2000       E-Bikes
 ## 2       2000 Hybrid / City
 ## 3       2000      Mountain
@@ -371,7 +375,7 @@ bayes_mod <- linear_reg() %>%
 
 # train the model
 bayes_fit <-  bayes_mod %>% 
-                fit(weight ~ price_euro * category_1, 
+                fit(weight ~ price * category_1, 
                 data = bike_data_tbl)
 
 print(bayes_fit, digits = 5)
@@ -380,19 +384,19 @@ print(bayes_fit, digits = 5)
 ## Fit time:  1m 39.2s 
 ## stan_glm
 ##  family:       gaussian [identity]
-##  formula:      weight ~ price_euro * category_1
+##  formula:      weight ~ price * category_1
 ##  observations: 218
 ##  predictors:   8
 ## ------
 ##                                    Median   MAD_SD  
 ## (Intercept)                        15.24134  1.25450
-## price_euro                          0.00158  0.00032
+## price                          0.00158  0.00032
 ## category_1Hybrid / City            -2.34716  1.53781
 ## category_1Mountain                 -1.52799  1.31226
 ## category_1Road                     -6.47532  1.31294
-## price_euro:category_1Hybrid / City -0.00310  0.00066
-## price_euro:category_1Mountain      -0.00180  0.00035
-## price_euro:category_1Road          -0.00180  0.00033
+## price:category_1Hybrid / City -0.00310  0.00066
+## price:category_1Mountain      -0.00180  0.00035
+## price:category_1Road          -0.00180  0.00033
 ## 
 ## Auxiliary parameter(s):
 ##       Median  MAD_SD 
@@ -413,13 +417,13 @@ tidy(bayes_fit, conf.int = TRUE)
 ##   term                               estimate std.error conf.low conf.high
 ##   <chr>                                 <dbl>     <dbl>    <dbl>     <dbl>
 ## 1 (Intercept)                        15.2      1.25     13.3      17.4    
-## 2 price_euro                          0.00158  0.000324  0.00102   0.00209
+## 2 price                          0.00158  0.000324  0.00102   0.00209
 ## 3 category_1Hybrid / City            -2.35     1.54     -5.08     -0.0920 
 ## 4 category_1Mountain                 -1.53     1.31     -3.89      0.418  
 ## 5 category_1Road                     -6.48     1.31     -8.78     -4.47   
-## 6 price_euro:category_1Hybrid / City -0.00310  0.000663 -0.00415  -0.00192
-## 7 price_euro:category_1Mountain      -0.00180  0.000348 -0.00232  -0.00119
-## 8 price_euro:category_1Road          -0.00180  0.000333 -0.00233  -0.00121
+## 6 price:category_1Hybrid / City -0.00310  0.000663 -0.00415  -0.00192
+## 7 price:category_1Mountain      -0.00180  0.000348 -0.00232  -0.00119
+## 8 price:category_1Road          -0.00180  0.000333 -0.00233  -0.00121
 ```
 
 A goal of the tidymodels packages is that the interfaces to common tasks are standardized (as seen in the tidy() results above). The same is true for getting predictions; we can use the same code even though the underlying packages use very different syntax:
