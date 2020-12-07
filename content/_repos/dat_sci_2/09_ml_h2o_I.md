@@ -14,7 +14,9 @@ menu:
 weight: 10
 ---
 
-In the next chapters, we learn `H2O`, an advanced open source machine learning tool available in R. The algorithm we focus on is Automated Machine Learning (AutoML). In the next chapters, you will learn:
+COMING SOON...
+
+<!--In the next chapters, we learn `H2O`, an advanced open source machine learning tool available in R. The algorithm we focus on is Automated Machine Learning (AutoML). In the next chapters, you will learn:
 
 * How to generate high performance models using `h2o.automl()`
 * What the `H2O Leaderboard` is and how to inspect its models visually
@@ -201,7 +203,6 @@ scatter_plot(mtcars, disp, hp)
 ```
 As you can see, you’ve plotted the `hp` (horsepower) variable against `disp` (displacement) and added a regression line. Now, instead of copying and pasting ggplot code to create the same plot with different datasets and variables, we can just call our function. We will see application of this framework in the business case.
 
-<!-- HEADING with Business-Logo -->
 ## <i class="fas fa-user-tie"></i>&nbsp;Business case
 
 **Business problem**
@@ -228,7 +229,6 @@ A Excel Employee Turnover Cost Calculator is a great way to show others in your 
 
 {{< figure src="/img/courses/dat_sci/09/excel_sheet.png" width="75%">}}
 
-<!-- DOWNLOADBOX -->
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
@@ -259,7 +259,6 @@ In the end, we want to use h2o to determine the probability of a certain employe
 
 IBM has gathered information on employee satisfaction, income, seniority and some demographics. It includes the data of 1470 employees. It can be found on [kaggle](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset) or just download it here:
 
-<!-- DOWNLOADBOX -->
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
@@ -269,7 +268,6 @@ IBM has gathered information on employee satisfaction, income, seniority and som
 
 The definition table will be needed later as well:
 
-<!-- DOWNLOADBOX -->
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
@@ -1076,7 +1074,6 @@ employee_attrition_tbl %>%
     plot_ggpairs(Attrition)
 ```
 
-<!-- HEADING (challenge) -->
 ## <i class="fas fa-laptop-code"></i> &nbsp;Challenge
 
 Use your learning from descriptive features and `plot_ggpairs()` to further investigate the features. Run the functions above according to the features needed. Answer the following questions. You will see the answer by clicking the Code button. Most of the time, you will only need the images from diagonal.
@@ -1200,4 +1197,4 @@ What can you deduce about the interaction between Years Since Last Promotion and
 <li>Those that are leaving have more years since last promotion than those that are staying</li>
 <li>Those that are leaving have fewer years since last promotion than those that are staying</li>
 <li>It's difficult to deduce anything based on the visualization</li>
-</ol>
+</ol>-->

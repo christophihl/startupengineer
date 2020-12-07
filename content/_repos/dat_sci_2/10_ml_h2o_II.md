@@ -14,7 +14,8 @@ menu:
 weight: 11
 ---
 
-In this chapter, we shift gears into the third CRISP-DM Step: Data Preparation. We are making our transition into modeling with H2O. In this chapter, you will learn:
+COMING SOON...
+<!--In this chapter, we shift gears into the third CRISP-DM Step: Data Preparation. We are making our transition into modeling with H2O. In this chapter, you will learn:
 
 * How to create a preprocessing pipeline to iteratively combine data into a human readable format
 * How to use the recipes package for preparing the data in a machine readable format (recap)
@@ -24,7 +25,6 @@ In this chapter, we shift gears into the third CRISP-DM Step: Data Preparation. 
 
 There is no theory section in this session. Everything is explained at the appropriate place.
 
-<!-- HEADING with Business-Logo -->
 ## <i class="fas fa-user-tie"></i>&nbsp;Business case
 
 ### Data processing
@@ -161,7 +161,6 @@ data_merged_tbl <- list(HR_Data = employee_attrition_tbl) %>%
         select(sort(names(.))) 
 ```
 
-<!-- INFOBOX -->
 <div id="header">Infobox</div>
 <div id="container">
   <div id="first">{{% icon info-solid %}}</div>
@@ -1262,12 +1261,10 @@ Next session:
 * Assessing H2O Performance
 * Explaining Black-Box Models With LIME
 
-<!-- HEADING (challenge) -->
 ## <i class="fas fa-laptop-code"></i> &nbsp;Challenge
 
 For the challenge, we shall be working with a [Product Backorders](https://www.researchgate.net/publication/319553365_Predicting_Material_Backorders_in_Inventory_Management_using_Machine_Learning) dataset. The goal here is to predict whether or not a product will be put on backorder status, given a number of product metrics such as current inventory, transit time, demand forecasts and prior sales. It’s a classic Binary Classification problem. The dataset can be accessed from here:
 
-<!-- DOWNLOADBOX -->
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
@@ -1282,5 +1279,5 @@ Steps:
 3. run AutoML specifying the stopping criterion
 4. View the leaderboard
 5. Predicting using Leader Model
-5. Save the leader model
+5. Save the leader model-->
 

@@ -13,15 +13,14 @@ menu:
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
 weight: 9
 ---
-
+COMING SOON...
+<!--
 Let's apply our newly acquired machine learning skills to a business case!
 
-<!-- HEADING with Business-Logo -->
 ## <i class="fas fa-user-tie"></i>&nbsp;Business case
 
 In this case we are using the scraped data from the bike manufacturer Canyon. You can use the data, that you have already worked with or download it again (there are minor changes to the data).
 
-<!-- DOWNLOADBOX -->
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
@@ -113,7 +112,6 @@ If you’re buying a bike, then, after the frame, the groupset is the second thi
 
 There are three main manufacturers of groupsets and bike components.  Shimano is the largest and best known, while the other two of the “big three” are Campagnolo and SRAM.  All three manufacturers offer a range of groupsets (divided into road and MTB) at competing price points. Groupsets are arranged into heirarchies, with compatible parts grouped in order of quality and price. 
 
-<!-- DOWNLOADBOX -->
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
@@ -454,7 +452,6 @@ model_02_linear_lm_complex %>% calc_metrics(new_data = test_tbl)
 
 The MAE dropped quite a bit. We have an improvement of over 500 € in our ability to correctly predict these bikes and we didn't even change our model.
 
-<!-- INFOBOX -->
 <div id="header">Infobox</div>
 <div id="container">
   <div id="first">{{% icon info-solid %}}</div>
@@ -1031,12 +1028,10 @@ g2 <- g1 +
 
 I leave the interpretation to you!
 
-<!-- HEADING (challenge) -->
 ## <i class="fas fa-laptop-code"></i>&nbsp;Challenge
 
 In this session we did not use the `recipes` packages to prepare our data. This is going to be your challenge. For further information take a look at the last session or just use google. Prepare the data for the models with the steps provided below. But this time use all features provided (not just detected strings in two columns). Remember, you don't need to set the flags by yourself (see `all_nominal()`).
 
-<!-- DOWNLOADBOX -->
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
@@ -1070,5 +1065,5 @@ test_transformed_tbl  <- bake(..., ...)
 
 **IV. Evaluate your model with the yardstick package**
 
-Just use the function, that we have created in this session.
+Just use the function, that we have created in this session.-->
 

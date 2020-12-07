@@ -14,8 +14,8 @@ menu:
 weight: 12
 ---
 
-
-This session is a continuation of the last one, Modeling Churn with H2O. In this session, we take the H2O models we've developed and show you how to inspect, visualize, and communicate performance. In this chapter, you will learn:
+COMING SOON...
+<!--This session is a continuation of the last one, Modeling Churn with H2O. In this session, we take the H2O models we've developed and show you how to inspect, visualize, and communicate performance. In this chapter, you will learn:
 
 * How to visualize the `H2O leaderboard`
 * How to generate and work with H2O Performance objects using `h2o.performance()`
@@ -24,7 +24,6 @@ This session is a continuation of the last one, Modeling Churn with H2O. In this
 * How to make a `Model Diagnostic Dashboard` using the cowplot package
 
 
-<!-- HEADING with Business-Logo -->
 ## <i class="fas fa-user-tie"></i>&nbsp;Business case
 
 ### Leaderboard Vizualization
@@ -1032,7 +1031,6 @@ automl_models_h2o@leaderboard %>%
 
 {{< figure src="/img/courses/dat_sci/11/model_metrics.png">}}
 
-<!-- HEADING (challenge) -->
 ## <i class="fas fa-laptop-code"></i> &nbsp;Challenge
 
 Apply all the steps you have learned in this session on the dataset from challenge of the last session (Product Backorders):
@@ -1044,4 +1042,4 @@ Apply all the steps you have learned in this session on the dataset from challen
 5. Precision vs Recall Plot
 6. Gain Plot
 7. Lift Plot
-8. Dashboard with cowplot
+8. Dashboard with cowplot-->

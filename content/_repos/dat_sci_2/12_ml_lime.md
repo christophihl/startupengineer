@@ -13,7 +13,8 @@ menu:
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
 weight: 13
 ---
-
+COMING SOON...
+<!--
 Despite widespread adoption, machine learning models remain mostly black boxes. Understanding the reasons behind predictions is, however, quite important in assessing trust, which is fundamental if one plans to take action based on a prediction, or when choosing whether to deploy a new model. In this session, we take the H2O models we've developed and show you how to explain localized prediction results using a special technique called LIME (Local Interpretable Model-Agnostic Explanations).
 
 In this short session, you will learn:
@@ -39,7 +40,6 @@ The following video gives a good explanation of lime:
 {{< youtube hUnRCxnydCc >}}
 
 
-<!-- HEADING with Business-Logo -->
 ## <i class="fas fa-user-tie"></i> &nbsp;Business case
 
 We are still working with our attrition data. Let's load a H2O model from the alst time. 
@@ -277,7 +277,6 @@ plot_explanations(explanation)
 
 Can you read this plot?
 
-<!-- HEADING (challenge) -->
 ## <i class="fas fa-laptop-code"></i> &nbsp;Challenge
 
 This is a two part challenge:
@@ -310,4 +309,4 @@ You will need at least the layers `geom_tile()` and `facet_wrap()`.
 
 **HINTS:**
 
-If you do get stuck on this challenge, because this is actually a rather difficult challenge, I highly recommend checking out the library `lime` from Thomas Pedersens' github page [https://github.com/thomasp85/lime](https://github.com/thomasp85/lime). All of the R code is in the folder `R`. Check that out if you got stuck. You will be able to find some hints in there as to how Thomas did it when he coded the lime package. When coding in the wild, your best friend is GitHub. Use other people's code as an advantage. Learn from what they do.
+If you do get stuck on this challenge, because this is actually a rather difficult challenge, I highly recommend checking out the library `lime` from Thomas Pedersens' github page [https://github.com/thomasp85/lime](https://github.com/thomasp85/lime). All of the R code is in the folder `R`. Check that out if you got stuck. You will be able to find some hints in there as to how Thomas did it when he coded the lime package. When coding in the wild, your best friend is GitHub. Use other people's code as an advantage. Learn from what they do.-->

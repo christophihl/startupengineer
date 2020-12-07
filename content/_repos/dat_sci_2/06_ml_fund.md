@@ -69,6 +69,14 @@ ggplot(sim1, aes(x, y)) +
 
 There are 250 models on this plot, but a lot are really bad! We need to find the good models by making precise our intuition that a good model is “close” to the data. We need a way to quantify the distance between the data and a model. Then we can fit the model by finding the value of $a_{0}$ and $a_{1}$ that generate the model with the smallest distance from this data.
 
+<!-- INFOBOX -->
+<div id="header">Infobox</div>
+<div id="container">
+  <div id="first">{{% icon info-solid %}}</div>
+  <div id="second">A <b>If you want to learn some more basic elements of programming in R, you can always have a look at the course <a href="https://www.startupengineer.io/_repos/dat_sci_1/" target="_blank">Business Data Science Basics</a> (password: ds_fund_ws20).</div>
+  <div id="clear"></div>
+</div>
+
 One easy place to start is to find the vertical distance between each point and the model, as in the following diagram. (Note that the x values are slightly shifted so you can see the individual distances.)
 
 {{< figure src="/img/courses/dat_sci/06/simple_model_03.png" width="75%">}}

@@ -13,7 +13,8 @@ menu:
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
 weight: 14
 ---
-
+COMING SOON...
+<!--
 This session will get you started with TensorFlow for R. The best place to get started with TensorFlow is using Keras - a Deep Learning API created by François Chollet and ported to R by JJ Allaire. Keras makes it easy to get started, and it allows you to progressively build more complex workflows as you need to use advanced models and techniques.
 
 
@@ -70,7 +71,6 @@ Let’s walk-through the steps before we implement in R.
 
 3. Compile the model: The last step is to compile the model with `compile()`. We’ll use `optimizer = "adam"`, which is one of the most popular optimization algorithms. We select loss = `binary_crossentropy` for a binary classification problem and `sparse_categorical_crossentropy` when there are two or more label classes. See [here](https://keras.io/api/losses/) for other loss functions. We’ll select `metrics = c("accuracy")` to be evaluated during training and testing.
 
-<!-- HEADING with Business-Logo -->
 ## <i class="fas fa-user-tie"></i> &nbsp;Business case
 
 In this first business case, we will train a neural network model to classify images of clothing, like sneakers and shirts. It’s fine if you don’t understand all the details, this is a fast-paced overview of a complete Keras program with the details explained as we go.
@@ -439,7 +439,7 @@ Finally, use the trained model to make a prediction about a single image.
 
 ```r
 # Grab an image from the test dataset
-# take care to keep the batch dimension, as this is expected by the model --> ?drop
+# take care to keep the batch dimension, as this is expected by the model -> ?drop
 dim(test_images)
 ## [1] 10000    28    28
 
@@ -557,7 +557,6 @@ class_names[class_pred + 1]
 ## [1] "T-shirt/top"
 ```
 
-<!-- HEADING (challenge) -->
 ## <i class="fas fa-laptop-code"></i> &nbsp;Challenge
 
 
@@ -577,7 +576,6 @@ We need the following packages:
 * `yardstick`: Tidy methods for measuring model performance
 * `corrr`:  Tidy methods for correlation
 
-<!-- DOWNLOADBOX -->
 <div id="header">Download</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
@@ -1144,4 +1142,4 @@ The correlation analysis helps us quickly disseminate which features that the LI
 
 *Decreases Likelihood of Churn (Turquoise):*
 * Contract = “Two Year”
-* Total Charges (Note that this may be a biproduct of additional services such as Online Security)
+* Total Charges (Note that this may be a biproduct of additional services such as Online Security)-->
