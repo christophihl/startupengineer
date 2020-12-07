@@ -784,7 +784,7 @@ Important: After compilation, all of the files for displaying your website are s
 
 ### Serving your webpage on the internet
 
-Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `docs` folder. The example files are set so that when you compile the example in RStudio, the output automatically goes into the `docs` folder. As the final step, we have to tell GitHub to serve the html files in your docs folder as a website:
+Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `root` folder. The example files are set so that when you compile the example in RStudio, the output automatically goes into the `root` folder (which is your project folder). As the final step, we have to tell GitHub to serve the html files in your root folder as a website:
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your lab_journal_website repository and click the settings button in the top right corner." >}}
 
@@ -805,7 +805,7 @@ Now we want to go one step further and password protect your website. You might 
 
 {{< figure src="/img/courses/dat_sci/01/setting_password_02.png" caption="2. Type in a password of your choice. You will get the message `Wrong password` but don't wory." >}}
 
-{{< figure src="/img/courses/dat_sci/01/setting_password_03.png" caption="3. Now you have to copy the part like shown in the picture. By pasting the hash from the URL rename your folder (if you haven't changed it the location is something like: ../GitHub/lab_journal_website/docs)" >}}
+{{< figure src="/img/courses/dat_sci/01/setting_password_03.png" caption="3. Now you have to copy the part like shown in the picture. By pasting the hash from the URL rename your folder (if you haven't changed it the location is something like: ../GitHub/journal_ml)" >}}
 
 {{< figure src="/img/courses/dat_sci/01/setting_password_04.png" caption="4. Rename the entry `output_dir` in `site.yml` in RStudio. Only replace the hash but nothing else." >}}
 
