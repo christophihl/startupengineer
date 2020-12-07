@@ -113,6 +113,8 @@ weight: 15
 
 ## 6) Term Sheets
 
+* [Zoom Recording](https://www.dropbox.com/s/1eiiok947zluk6n/zoom_1.mp4?dl=0)
+
 
 * Part 1: {{< youtube BEB7bSh0zTw >}}
 
