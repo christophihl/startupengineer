@@ -73,7 +73,7 @@ There are 250 models on this plot, but a lot are really bad! We need to find the
 <div id="header">Infobox</div>
 <div id="container">
   <div id="first">{{% icon info-solid %}}</div>
-  <div id="second">A <b>If you want to learn some more basic elements of programming in R, you can always have a look at the course <a href="https://www.startupengineer.io/_repos/dat_sci_1/" target="_blank">Business Data Science Basics</a> (password: ds_fund_ws20).</div>
+  <div id="second"> If you want to learn some more basic elements of programming in R, you can always have a look at the course <a href="https://www.startupengineer.io/_repos/dat_sci_1/" target="_blank">Business Data Science Basics</a> (password: ds_fund_ws20).</div>
   <div id="clear"></div>
 </div>
 
