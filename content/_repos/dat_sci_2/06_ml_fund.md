@@ -337,8 +337,13 @@ To minimize the probability of making errors on new examples, the SVM algorithm,
 
 We will be using the SVM algorithm at some later point during this class. In this session we will start using the k-means algorithm.
 
+<<<<<<< Updated upstream
 ***
 ## Business case <i class="fas fa-user-tie"></i>
+=======
+<!-- HEADING with Business-Logo -->
+## Business case <i class="fas fa-user-tie"></i> &nbsp;
+>>>>>>> Stashed changes
 
 The tools and techniques that we discuss in this section are complex by nature from a theoretical perspective. Further adding to complexity is the sheer number of algorithms available. The goal is to streamline your education and focus on application since this is where the rubber hits the road. However, for those that want to learn the theory, I will recommend several resources that have helped me understand various topics.
 
@@ -377,6 +382,19 @@ UMAP is very similar to t-SNE except faster and more scalable!
 You can find some information about the data set we are going to use <a href="https://usermanual.wiki/Document/dunnhumby3020Breakfast20at20the20Frat20User20Guide.1760767253/html" target="_blank"><b>here</b></a>.
 
 
+<<<<<<< Updated upstream
+=======
+We could have used the olist data set for the analysis, but I found the following data set more appealing:
+
+<!-- DOWNLOADBOX -->
+<div id="header">Download</div>
+<div id="container">
+  <div id="first">{{% icon download %}}</div>
+  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/06/breakfast_at_the_frat.xlsx.zip" target="_blank"><b>ADD BIKE DATA HERE</b></a></div>
+  <div id="clear"></div>
+</div>
+
+>>>>>>> Stashed changes
 We are using the following clustering workflow:
 
 Collect data -> Standardize / Normalize -> Spread to User-Item Format
@@ -394,7 +412,9 @@ library(tidyverse)
 library(broom)
 library(umap)
 library(ggrepel) # Addon for ggplot, so that the labels do not overlap
+bike_orderlines_tbl <- read_rds("~/../bike_orderlines.rds")
 
+<<<<<<< Updated upstream
 stores_tbl      <- read_excel(path  = "breakfast_at_the_frat.xlsx", 
                               sheet = "dh Store Lookup",
                               skip  = 1)
@@ -408,6 +428,8 @@ transaction_tbl <- read_excel(path  = "breakfast_at_the_frat.xlsx",
 orderlines_tbl <- transaction_tbl %>% 
                     left_join(products_tbl) %>% 
                     left_join(stores_tbl, by = c("STORE_NUM" = "STORE_ID"))
+=======
+>>>>>>> Stashed changes
 ```
 We load the libraries we need for the following task and read the excel file.
 If you want to better understand what the tables look like, you can use functions like `head()`, `glimpse()` and `View()`.
