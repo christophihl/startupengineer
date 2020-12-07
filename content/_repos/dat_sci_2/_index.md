@@ -38,7 +38,7 @@ If you have R-studio working and your github page set up (will be explained in d
 <div id="header">Website</div>
 <div id="container">
   <div id="first">{{% icon globe %}}</div>
-  <div id="second"><a href="https://www.datacamp.com/groups/shared_links/91287653ed5bd4c0f14e7c60e2d61a62dc1f1ba2afc84a4909665c00cd441f0c" target="_blank"><b>datacamp.com</b></a></div>
+  <div id="second"><a href="https://www.datacamp.com/groups/shared_links/4f8ca9f0d781153fe63cdad89c2130b918af4a66480a12eed71492c65f0d9dbf" target="_blank"><b>datacamp.com</b></a></div>
   <div id="clear"></div>
 </div>
 
