@@ -849,3 +849,5 @@ UMAP can sometimes be more useful than PCA as PCA is linear and UMAP is nonlinea
 **Company Segmentation with Stock Prices**
 
 In your assignment folder you will find a `.Rmd` file that contains all instructions and also intermediate results in case you get stuck. You can knit the `.Rmd` file to a html/pdf file by clicking the knit button.
+
+You can download the required dataset from here: [Data](https://cloud.tuhh.de/index.php/s/yxtniMpGWExx7S5)
