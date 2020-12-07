@@ -775,7 +775,7 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_04_finish.png" caption="2.4 Click `Finish`" >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` and select your `lab_journal_website` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` and select your `journal_ml` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
 
 3. Navigate to the folder you just cloned/downloaded, open the `lab_journal_website.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
 
@@ -786,7 +786,7 @@ Important: After compilation, all of the files for displaying your website are s
 
 Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `root` folder. The example files are set so that when you compile the example in RStudio, the output automatically goes into the `root` folder (which is your project folder). As the final step, we have to tell GitHub to serve the html files in your root folder as a website:
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your lab_journal_website repository and click the settings button in the top right corner." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your journal repository and click the settings button in the top right corner." >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_new.png" caption="2. Scroll down and select the master Branch and make sure the option to serve from the root folder is set. Press Save. (You should see a little green message above the github pages options with a link to your new webpage)." >}}
 
