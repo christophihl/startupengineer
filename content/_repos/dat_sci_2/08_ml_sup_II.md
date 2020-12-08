@@ -80,6 +80,8 @@ model_sales_tbl %>%
     )
 ```
 
+Don't get confused by the image. For this plot, different data was used. But the underlying information is the same.
+
 {{< figure src="/img/courses/dat_sci/08/facet.png">}}
 
 We are showing this vizualisation, because we can use it as a game plan. We want to answer the questions
@@ -116,7 +118,7 @@ bike_features_tbl <- readRDS("~/bike_features_tbl.rds")
 glimpse(bike_features_tbl)
 
 bike_features_tbl <- bike_features_tbl %>% 
-    select(model:weight, `Rear Derailleur`, `Shift Lever`) %>% 
+    select(model:url, `Rear Derailleur`, `Shift Lever`) %>% 
     mutate(
       `shimano dura-ace`        = `Rear Derailleur` %>% str_to_lower() %>% str_detect("shimano dura-ace ") %>% as.numeric(),
       `shimano ultegra`         = `Rear Derailleur` %>% str_to_lower() %>% str_detect("shimano ultegra ") %>% as.numeric(),
@@ -153,7 +155,7 @@ bike_features_tbl <- bike_features_tbl %>%
 Let's order and tidy the tibble a bit. We need the following data:
 
 * ID: Tells us which rows are being sampled
-* Target (price_euro): What we are trying to predict
+* Target (price): What we are trying to predict
 * Predictors (all other columns): Data that our algorithms will use to build relationships to target
 
 Adding good engineered features is the #1 way to boost model performance.
@@ -164,7 +166,7 @@ bike_features_tbl <- bike_features_tbl %>%
   
   mutate(id = row_number()) %>% 
   
-  select(id, everything(), -stock_availability, -url_base)
+  select(id, everything(), -url)
 ```
 
 **III. Splitting the Data**
@@ -249,7 +251,7 @@ Let's use for the first model only category_2 and frame_material as variables.
 
 model_01_linear_lm_simple <- linear_reg(mode = "regression") %>%
     set_engine("lm") %>%
-    fit(price_euro ~ category_2 + frame_material, data = train_tbl)
+    fit(price ~ category_2 + frame_material, data = train_tbl)
 ```
 
 Make predictions using a parsnip `model_fit` object.
@@ -262,17 +264,17 @@ model_01_linear_lm_simple %>%
 ## # A tibble: 42 x 1
 ##    .pred
 ##    <dbl>
-##  1 4719.
-##  2 4719.
-##  3 4719.
-##  4 2139 
-##  5 1298.
-##  6 2697.
-##  7 2697.
-##  8 2697.
-##  9 3757.
-## 10 3757.
-## # … with 32 more rows
+## 1 4678.
+## 2 3280.
+## 3 3370.
+## 4 3618.
+## 5 3618.
+## 6 4678.
+## 7 4678.
+## 8 4678.
+## 9 4678.
+## 10 4678.
+## # … with 35 more rows
 ```
 
 We calculate model metrics comparing the test data predictions with the actual values to get a baseline model performance. `MAE` and `RMSE` are important concepts:
@@ -281,7 +283,7 @@ We calculate model metrics comparing the test data predictions with the actual v
 * *MAE (Mean absolute error)*: Absolute value of residuals generates the magnitude of error. Take the average to get the average error.
 * *RMSE (Root mean squared error)*: Square the residuals to remove negative sign. Take the average. Take the square root of average to return to units of initial error term.
 
-`yardstick::metrics()` calculates the common metrics comparing a "truth" (price_euro) to an "estimate" (.pred).
+`yardstick::metrics()` calculates the common metrics comparing a "truth" (price) to an "estimate" (.pred).
 
 ```r
 ?metrics
@@ -289,17 +291,17 @@ We calculate model metrics comparing the test data predictions with the actual v
 model_01_linear_lm_simple %>%
     predict(new_data = test_tbl) %>%
 
-    bind_cols(test_tbl %>% select(price_euro)) %>%
+    bind_cols(test_tbl %>% select(price)) %>%
     
     # Manual approach
-    # mutate(residuals = price_euro - .pred) %>% 
+    # mutate(residuals = price - .pred) %>% 
     # 
     # summarize(
     #   mae  = abs(residuals) %>% mean(),
     #   rmse = mean(residuals^2)^0.5
     # )
     
-    yardstick::metrics(truth = price_euro, estimate = .pred)
+    yardstick::metrics(truth = price, estimate = .pred)
 ```
 
 ***
@@ -384,8 +386,8 @@ Before we are going to the next model, let's create a helper function, because c
 model_01_linear_lm_simple %>%
     predict(new_data = test_tbl) %>%
 
-    bind_cols(test_tbl %>% select(price_euro)) %>%
-    yardstick::metrics(truth = price_euro, estimate = .pred)
+    bind_cols(test_tbl %>% select(price)) %>%
+    yardstick::metrics(truth = price, estimate = .pred)
 
 # Generalized into a function
 calc_metrics <- function(model, new_data = test_tbl) {
@@ -393,8 +395,8 @@ calc_metrics <- function(model, new_data = test_tbl) {
     model %>%
         predict(new_data = new_data) %>%
 
-        bind_cols(new_data %>% select(price_euro)) %>%
-        yardstick::metrics(truth = price_euro, estimate = .pred)
+        bind_cols(new_data %>% select(price)) %>%
+        yardstick::metrics(truth = price, estimate = .pred)
 
 }
 
@@ -402,9 +404,9 @@ model_01_linear_lm_simple %>% calc_metrics(test_tbl)
 ## # A tibble: 3 x 3
 ##   .metric .estimator .estimate
 ##   <chr>   <chr>          <dbl>
-## 1 rmse    standard    1750.   
-## 2 rsq     standard       0.328
-## 3 mae     standard    1293.   
+## 1 rmse    standard    1369.   
+## 2 rsq     standard       0.414
+## 3 mae     standard    924.   
 ```
 
 ***
@@ -425,18 +427,18 @@ model_02_linear_lm_complex <- linear_reg("regression") %>%
     set_engine("lm") %>%
     
     # This is going to be different. Remove unnecessary columns.
-    fit(price_euro ~ ., data = train_tbl %>% select(-c(id:category_1), -c(category_3:gender), -weight))
+    fit(price ~ ., data = train_tbl %>% select(-c(id:weight), -category_1, -c(category_3:gender)))
 
 model_02_linear_lm_complex %>% calc_metrics(new_data = test_tbl)
 ## # A tibble: 3 x 3
 ##   .metric .estimator .estimate
 ##   <chr>   <chr>          <dbl>
-## 1 rmse    standard    1060.   
-## 2 rsq     standard       0.747
-## 3 mae     standard     782.
+## 1 rmse    standard    971.   
+## 2 rsq     standard       0.712
+## 3 mae     standard     801.
 ```
 
-The MAE dropped quite a bit. We have an improvement of over 500 € in our ability to correctly predict these bikes and we didn't even change our model.
+The MAE dropped quite a bit. We have an improvement of over 100 € in our ability to correctly predict these bikes and we didn't even change our model.
 
 <div id="header">Infobox</div>
 <div id="container">
@@ -523,17 +525,17 @@ model_03_linear_glmnet <- linear_reg(mode    = "regression",
                                      penalty = 10, 
                                      mixture = 0.1) %>%
     set_engine("glmnet") %>%
-    fit(price_euro ~ ., data = train_tbl %>% select(-c(id:category_1), -c(category_3:gender), -weight))
+    fit(price ~ ., data = train_tbl %>% select(-c(id:weight), -category_1, -c(category_3:gender)))
 
 model_03_linear_glmnet %>% calc_metrics(test_tbl)
 ## # A tibble: 3 x 3
 ##   .metric .estimator .estimate
 ##   <chr>   <chr>          <dbl>
-## 1 rmse    standard    1075.   
-## 2 rsq     standard       0.738
-## 3 mae     standard     789.   
+## 1 rmse    standard    953.   
+## 2 rsq     standard       0.728
+## 3 mae     standard     788.   
 ```
-Unfortunately it did not improve the model. Try tuning yourself. See if you can improve further. Play around with the `penalty` and the `mixture` arguments and check the MAE value. There are several different combinations. Systematically adjusting the model parameters to optimize the performance is called `Hyper Parameter Tuning`. Grid Search, which we have mentioned earlier, is a popular hyperparameter tuning method of producing a "grid", that has many combinations of parameters. Hyper Parameter Tuning, Grid Search & Cross Validation: All of these advanced topics are covered in detail in the next sessions.
+Unfortunately it did improve the model just slightly. Try tuning yourself. See if you can improve further. Play around with the `penalty` and the `mixture` arguments and check the MAE value. There are several different combinations. Systematically adjusting the model parameters to optimize the performance is called `Hyper Parameter Tuning`. Grid Search, which we have mentioned earlier, is a popular hyperparameter tuning method of producing a "grid", that has many combinations of parameters. Hyper Parameter Tuning, Grid Search & Cross Validation: All of these advanced topics are covered in detail in the next sessions.
 
 **2.1.2 Model Explanation**
 
@@ -612,15 +614,15 @@ model_04_tree_decision_tree <- decision_tree(mode = "regression",
               min_n           = 7) %>%
               
     set_engine("rpart") %>%
-    fit(price_euro ~ ., data = train_tbl %>% select(-c(id:category_1), -c(category_3:gender), -weight))
+    fit(price ~ ., data = train_tbl %>% select(-c(id:weight), -category_1, -c(category_3:gender)))
 
 model_04_tree_decision_tree %>% calc_metrics(test_tbl)
 ## # A tibble: 3 x 3
 ##   .metric .estimator .estimate
 ##   <chr>   <chr>          <dbl>
-## 1 rmse    standard    1268.   
-## 2 rsq     standard       0.640
-## 3 mae     standard     940.    
+## 1 rmse    standard    1165.   
+## 2 rsq     standard       0.617
+## 3 mae     standard     976.    
 ```
 
 Min N = 20 results in underfitting
@@ -693,15 +695,15 @@ model_05_rand_forest_ranger <- rand_forest(
     # Run ?ranger::ranger to play around with many arguments
     # We need to set importance to impurity to be able to explain the model in the next step
     set_engine("ranger", replace = TRUE, splitrule = "extratrees", importance = "impurity") %>%
-    fit(price_euro ~ ., data = train_tbl %>% select(-c(id:category_1), -c(category_3:gender), -weight))
+    fit(price ~ ., data = train_tbl %>% select(-c(id:weight), -category_1, -c(category_3:gender)))
 
 model_05_rand_forest_ranger %>% calc_metrics(test_tbl)
 ## # A tibble: 3 x 3
 ##   .metric .estimator .estimate
 ##   <chr>   <chr>          <dbl>
-## 1 rmse    standard    1346.   
-## 2 rsq     standard       0.590
-## 3 mae     standard     987. 
+## 1 rmse    standard    1091.   
+## 2 rsq     standard       0.656
+## 3 mae     standard     877. 
 ```
 
 These random Forests are highly tunable, meaning they have a lot of different parameters that we can use. Try to improve. See if you can improve the model performance.
@@ -747,15 +749,15 @@ model_06_rand_forest_randomForest <- rand_forest("regression") %>%
     set_engine("randomForest") %>%
     
     # All character variables have to be changed to factor variables
-    fit(price_euro ~ ., data = train_tbl %>% select(-c(id:category_1), -c(category_3:gender), -weight) %>% mutate_if(is.character, as_factor))
+    fit(price ~ ., data = train_tbl %>% select(-c(id:weight), -category_1, -c(category_3:gender)) %>% mutate_if(is.character, as_factor))
 
 model_06_rand_forest_randomForest %>% calc_metrics(test_tbl)
 ## # A tibble: 3 x 3
 ##   .metric .estimator .estimate
 ##   <chr>   <chr>          <dbl>
-## 1 rmse    standard    1232.   
-## 2 rsq     standard       0.663
-## 3 mae     standard     882.   
+## 1 rmse    standard    963.   
+## 2 rsq     standard       0.758
+## 3 mae     standard     773.   
 ```
 
 Try to improve. There are some further features to tune. Now that we have a model, we can do the same thing that we did before with ranger. We can compute the feature importance with `randomForest::importance()`. It works pretty similar.
@@ -838,15 +840,15 @@ model_07_boost_tree_xgboost <- boost_tree(
     tree_depth = 7
     ) %>%
     set_engine("xgboost") %>%
-    fit(price_euro ~ ., data = train_tbl %>% select(-c(id:category_1), -c(category_3:gender), -weight))
+    fit(price ~ ., data = train_tbl %>% select(-c(id:weight), -category_1, -c(category_3:gender)))
 
 model_07_boost_tree_xgboost %>% calc_metrics(test_tbl)
 ## # A tibble: 3 x 3
 ##   .metric .estimator .estimate
 ##   <chr>   <chr>          <dbl>
-## 1 rmse    standard    1216.   
-## 2 rsq     standard       0.666
-## 3 mae     standard     870.   
+## 1 rmse    standard    1021.   
+## 2 rsq     standard       0.726
+## 3 mae     standard     793.   
 ```
 
 Try to improve.
@@ -892,9 +894,9 @@ It's always a good idea to set up an experiment to determine if your models are 
 # 5.0 TESTING THE ALGORITHMS OUT ----
 g1 <- bike_features_tbl %>% 
     mutate(category_2 = as.factor(category_2) %>% 
-           fct_reorder(price_euro)) %>% 
+           fct_reorder(price)) %>% 
     
-    ggplot(aes(category_2, price_euro)) +
+    ggplot(aes(category_2, price)) +
     geom_violin() +
     geom_jitter(width = 0.1, alpha = 0.5, color = "#2dc6d6") +
     coord_flip() +
@@ -949,7 +951,7 @@ Predict the price model by model...
 
 ```r
 # Linear Methods ----
-
+# Doesn't work right now
 predict(model_03_linear_glmnet, new_data = new_cross_country)
 ## # A tibble: 1 x 1
 ##   .pred
@@ -1016,15 +1018,7 @@ I leave the interpretation to you!
 
 ## <i class="fas fa-laptop-code"></i>&nbsp;Challenge
 
-In this session we did not use the `recipes` packages to prepare our data. This is going to be your challenge. For further information take a look at the last session or just use google. Prepare the data for the models with the steps provided below. But this time use all features provided (not just detected strings in two columns). Remember, you don't need to set the flags by yourself (see `all_nominal()`).
-
-<div id="header">Download</div>
-<div id="container">
-  <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/08/bike_features_tbl.rds" target="_blank"><b>bike_features_tbl.rds</b></a></div>
-  <div id="clear">
-  </div>
-</div>
+In this session we did not use the `recipes` packages to prepare our data. This is going to be your challenge. For further information take a look at the last session or just use google. Prepare the data for the models with the steps provided below. Remember, you don't need to set the flags by yourself (see `all_nominal()`).
 
 **I. Build a model**
 
