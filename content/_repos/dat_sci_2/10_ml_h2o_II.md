@@ -14,8 +14,7 @@ menu:
 weight: 11
 ---
 
-COMING SOON...
-<!--In this chapter, we shift gears into the third CRISP-DM Step: Data Preparation. We are making our transition into modeling with H2O. In this chapter, you will learn:
+In this chapter, we shift gears into the third CRISP-DM Step: Data Preparation. We are making our transition into modeling with H2O. In this chapter, you will learn:
 
 * How to create a preprocessing pipeline to iteratively combine data into a human readable format
 * How to use the recipes package for preparing the data in a machine readable format (recap)
@@ -1279,5 +1278,5 @@ Steps:
 3. run AutoML specifying the stopping criterion
 4. View the leaderboard
 5. Predicting using Leader Model
-5. Save the leader model-->
+5. Save the leader model
 

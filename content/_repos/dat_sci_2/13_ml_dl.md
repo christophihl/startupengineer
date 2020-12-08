@@ -13,8 +13,7 @@ menu:
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
 weight: 14
 ---
-COMING SOON...
-<!--
+
 This session will get you started with TensorFlow for R. The best place to get started with TensorFlow is using Keras - a Deep Learning API created by François Chollet and ported to R by JJ Allaire. Keras makes it easy to get started, and it allows you to progressively build more complex workflows as you need to use advanced models and techniques.
 
 
@@ -1142,4 +1141,4 @@ The correlation analysis helps us quickly disseminate which features that the LI
 
 *Decreases Likelihood of Churn (Turquoise):*
 * Contract = “Two Year”
-* Total Charges (Note that this may be a biproduct of additional services such as Online Security)-->
+* Total Charges (Note that this may be a biproduct of additional services such as Online Security)

@@ -14,9 +14,7 @@ menu:
 weight: 10
 ---
 
-COMING SOON...
-
-<!--In the next chapters, we learn `H2O`, an advanced open source machine learning tool available in R. The algorithm we focus on is Automated Machine Learning (AutoML). In the next chapters, you will learn:
+In the next chapters, we learn `H2O`, an advanced open source machine learning tool available in R. The algorithm we focus on is Automated Machine Learning (AutoML). In the next chapters, you will learn:
 
 * How to generate high performance models using `h2o.automl()`
 * What the `H2O Leaderboard` is and how to inspect its models visually
@@ -1197,4 +1195,4 @@ What can you deduce about the interaction between Years Since Last Promotion and
 <li>Those that are leaving have more years since last promotion than those that are staying</li>
 <li>Those that are leaving have fewer years since last promotion than those that are staying</li>
 <li>It's difficult to deduce anything based on the visualization</li>
-</ol>-->
+</ol>

@@ -14,8 +14,7 @@ menu:
 weight: 12
 ---
 
-COMING SOON...
-<!--This session is a continuation of the last one, Modeling Churn with H2O. In this session, we take the H2O models we've developed and show you how to inspect, visualize, and communicate performance. In this chapter, you will learn:
+This session is a continuation of the last one, Modeling Churn with H2O. In this session, we take the H2O models we've developed and show you how to inspect, visualize, and communicate performance. In this chapter, you will learn:
 
 * How to visualize the `H2O leaderboard`
 * How to generate and work with H2O Performance objects using `h2o.performance()`
@@ -1042,4 +1041,4 @@ Apply all the steps you have learned in this session on the dataset from challen
 5. Precision vs Recall Plot
 6. Gain Plot
 7. Lift Plot
-8. Dashboard with cowplot-->
+8. Dashboard with cowplot
