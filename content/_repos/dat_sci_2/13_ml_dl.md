@@ -14,6 +14,11 @@ menu:
 weight: 14
 ---
 
+{{% alert warning %}}
+This session including the challenge is optional. It is not an examination component.
+{{% /alert %}}
+
+
 This session will get you started with TensorFlow for R. The best place to get started with TensorFlow is using Keras - a Deep Learning API created by François Chollet and ported to R by JJ Allaire. Keras makes it easy to get started, and it allows you to progressively build more complex workflows as you need to use advanced models and techniques.
 
 
