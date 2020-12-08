@@ -13,20 +13,12 @@ menu:
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
 weight: 9
 ---
-COMING SOON...
-<!--
+
 Let's apply our newly acquired machine learning skills to a business case!
 
 ## <i class="fas fa-user-tie"></i>&nbsp;Business case
 
-In this case we are using the scraped data from the bike manufacturer Canyon. You can use the data, that you have already worked with or download it again (there are minor changes to the data).
-
-<div id="header">Download</div>
-<div id="container">
-  <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/08/bike_data_s8_tbl.rds" target="_blank"><b>bike_data_s8_tbl.rds</b></a></div>
-  <div id="clear"></div>
-</div>
+In this case we are using the scraped data from the bike manufacturer Canyon again. This is an extension of the data that you already know.
 
 At the beginning we need to load the following packages:
 
@@ -58,31 +50,34 @@ To determine possible product gaps, let's start with visualizing the data. It wo
 
 ```r
 # Modeling ----------------------------------------------------------------
-bike_data_tbl <- readRDS("~/bike_data_s8_tbl.rds")
-glimpse(bike_data_tbl)
+bike_orderlines_tbl <- readRDS("~/bike_orderlines_tbl.rds")
+glimpse(bike_orderlines_tbl)
 
-model_stocks_tbl <- bike_data_tbl %>%
-  mutate(total_stock = price_euro * stock_availability) %>%
-  arrange(desc(total_stock))
+model_sales_tbl <- bike_orderlines_tbl %>%
+    select(total_price, model, category_2, frame_material) %>%
+    
+    group_by(model, category_2, frame_material) %>%
+    summarise(total_sales = sum(total_price)) %>%
+    ungroup() %>%
+    
+    arrange(desc(total_sales))
 
-model_stocks_tbl %>%
-
-  # Convert to factors, so that we can reorder the plot by total_stock
-  # Otherwise it is ordered alphabetically
-  mutate(category_2 = as_factor(category_2) %>%
-           fct_reorder(total_stock, .fun = max) %>%
-           fct_rev()) %>%
-
-  ggplot(aes(frame_material, total_stock)) +
-  geom_violin() +
-  geom_jitter(width = 0.1, alpha = 0.5, color = "#2dc6d6") +
-  #coord_flip() +
-  facet_wrap(~ category_2) +
-  scale_y_continuous(labels = scales::dollar_format(scale = 1e-6, suffix = "M", accuracy = 0.1)) +
-  labs(
-    title = "Total Stock for each Model",
-    x = "Frame Material", y = "Stock Value"
-  )
+model_sales_tbl %>%
+    mutate(category_2 = as_factor(category_2) %>% 
+               fct_reorder(total_sales, .fun = max) %>% 
+               fct_rev()) %>%
+    
+    ggplot(aes(frame_material, total_sales)) +
+    geom_violin() +
+    geom_jitter(width = 0.1, alpha = 0.5, color = "#2c3e50") +
+    #coord_flip() +
+    facet_wrap(~ category_2) +
+    scale_y_continuous(labels = scales::dollar_format(scale = 1e-6, suffix = "M", accuracy = 0.1)) +
+    tidyquant::theme_tq() +
+    labs(
+        title = "Total Sales for Each Model",
+        x = "Frame Material", y = "Revenue"
+    )
 ```
 
 {{< figure src="/img/courses/dat_sci/08/facet.png">}}
@@ -100,7 +95,7 @@ We are showing this vizualisation, because we can use it as a game plan. We want
 
 We have the bike models separated into aluminium and carbon frames. The reason for that is splitting the bikes in lower end products (alu) and higher end (carbon) ones. 
 
-For our approach we assume that the stock numbers are in line with the sales numbers. You can see that most categories offer both specifications and they make a fair amount of the lower end products as well. But not all categories have an alumnium option. Those products with "High-End" (carbon) option only could be missing out on revenues. 
+You can see that most categories offer both specifications and they make a fair amount of the lower end products as well. But not all categories have an aluminium option. Those products with "High-End" (carbon) option only could be missing out on revenues. 
 
 We can focus on those product gaps (products like "Cross-Country" and "Fat Bikes") for new product development. Based on this information, we are going to come up with a pricing algorithm, that allows us to price models and see if it is going to be a profitable venture. We could generate significant revenue by filling in the gaps, if we use the other categories as a benchmark.
 
@@ -112,21 +107,12 @@ If you’re buying a bike, then, after the frame, the groupset is the second thi
 
 There are three main manufacturers of groupsets and bike components.  Shimano is the largest and best known, while the other two of the “big three” are Campagnolo and SRAM.  All three manufacturers offer a range of groupsets (divided into road and MTB) at competing price points. Groupsets are arranged into heirarchies, with compatible parts grouped in order of quality and price. 
 
-<div id="header">Download</div>
-<div id="container">
-  <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://github.com/TUHHStartupEngineers/dat_sci_ss20/raw/master/08/bike_features_tbl.rds" target="_blank"><b>bike_features_tbl.rds</b></a></div>
-  <div id="clear">
-  </div>
-</div>
-
 Most components are designed to work best with those in the same brand and hierarchy. Cross-compatibility is not the norm, especially between the three different brands, although there are of course exceptions. That is why I only examine one component (the Rear Derailleur, or if not existent the Shift lever) of the bikes to categorize the them.
 
 The following step creates dummy variables on this non-numeric data by setting flags (0 or 1) for each component. We could have done this with the `recipes` approach as well `step_dummy(all_nominal(), - all_outcomes())`.
 
 ```r
 bike_features_tbl <- readRDS("~/bike_features_tbl.rds")
-bike_features_tbl <- left_join(bike_data_tbl, bike_features_tbl)
 glimpse(bike_features_tbl)
 
 bike_features_tbl <- bike_features_tbl %>% 
@@ -1065,5 +1051,5 @@ test_transformed_tbl  <- bake(..., ...)
 
 **IV. Evaluate your model with the yardstick package**
 
-Just use the function, that we have created in this session.-->
+Just use the function, that we have created in this session.
 
