@@ -190,6 +190,10 @@ split_obj %>% testing() %>% distinct(category_2)
 # Assign training and test data
 train_tbl <- training(split_obj)
 test_tbl  <- testing(split_obj)
+
+# We have to remove spaces and dashes from the column names
+train_tbl <- train_tbl %>% set_names(str_replace_all(names(train_tbl), " |-", "_"))
+test_tbl  <- test_tbl  %>% set_names(str_replace_all(names(test_tbl),  " |-", "_"))
 ```
 
 ### 1. Linear Regression
@@ -683,10 +687,6 @@ Let's use the packages `ranger` and `randomForest`.
 
 library(ranger)
 
-# We have to remove spaces and dashes from the column names
-train_tbl <- train_tbl %>% set_names(str_replace_all(names(train_tbl), " |-", "_"))
-test_tbl  <- test_tbl  %>% set_names(str_replace_all(names(test_tbl),  " |-", "_"))
-
 set.seed(1234)
 model_05_rand_forest_ranger <- rand_forest(
     mode = "regression", mtry = 8, trees = 5000, min_n = 10
@@ -952,11 +952,11 @@ Predict the price model by model...
 ```r
 # Linear Methods ----
 # Doesn't work right now
-predict(model_03_linear_glmnet, new_data = new_cross_country)
+predict(model_01_linear_lm_simple,, new_data = new_cross_country)
 ## # A tibble: 1 x 1
 ##   .pred
 ##   <dbl>
-## 1 1752.
+## 1 2323.
 ```
 
 ```r
