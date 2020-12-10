@@ -1274,7 +1274,7 @@ For the challenge, we shall be working with a [Product Backorders](https://www.r
 Steps:
 
 1. Load the training & test dataset
-2. Specifiy the response and predictor variables (watch out for the column "sku")
+2. Specifiy the response and predictor variables
 3. run AutoML specifying the stopping criterion
 4. View the leaderboard
 5. Predicting using Leader Model
