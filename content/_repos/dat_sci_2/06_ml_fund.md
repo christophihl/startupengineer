@@ -375,6 +375,7 @@ UMAP is very similar to t-SNE except faster and more scalable!
 
 ***
 You can find some information about the data set we are going to use <a href="https://usermanual.wiki/Document/dunnhumby3020Breakfast20at20the20Frat20User20Guide.1760767253/html" target="_blank"><b>here</b></a>.
+You can download the required dataset from here: [Data](https://cloud.tuhh.de/index.php/s/yxtniMpGWExx7S5)
 
 We are using the following clustering workflow:
 
