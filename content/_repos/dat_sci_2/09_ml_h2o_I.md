@@ -58,7 +58,7 @@ AutoML ensembles (combines) these models to provide superior performance.
 
 **Setup**
 
-H2O requires Java. If you do not already have Java installed, install it from [java.com](https://java.com/en/download/) before installing H2O. To load a recent H2O package from CRAN, run: `install.packages("h2o")`. After H2O is installed on your system, verify the installation completed successfully by initializing H2O:
+H2O requires Java. If you do not already have Java installed, install it from [java.com](https://java.com/en/download/) before installing H2O. Supported versions include: Java 8, 9, 10, 11, 12, 13, 14. Don't use Version 15! To load a recent H2O package from CRAN, run: `install.packages("h2o")`. After H2O is installed on your system, verify the installation completed successfully by initializing H2O:
 
 ```r
 library(h2o)
