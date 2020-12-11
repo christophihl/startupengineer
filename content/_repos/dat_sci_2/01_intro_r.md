@@ -682,6 +682,25 @@ We will use GitHub to store your data and hand in your assignments through your 
   <div id="clear"></div>
 </div>
 
+* **Windows only**: Install `Git`.<br>
+On Windows, you also have to install “Git for Windows” and set “git/cmd” and “git/bin” as system variables.
+
+<!-- DOWNLOADBOX -->
+<div id="header">Download</div>
+<div id="container">
+  <div id="first">{{% icon download %}}</div>
+  <div id="second"><a href="https://gitforwindows.org" target="_blank"><b>https://gitforwindows.org</b></a></b></div>
+  <div id="clear"></div>
+</div>
+
+Set as system variables:
+System Properties (Tab: Advanced) -> Environment Variables -> System variables -> Path -> Edit -> New:
+
+*C:\Program Files\Git\cmd* <br>
+*C:\Program Files\Git\bin*
+
+{{< figure src="/img/courses/dat_sci/01/win_sysvariables.gif" caption="Click on Edit and add the variables" >}}
+
 3. Accept the assignment on GitHub Classroom, create a website using R Markdown and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
 
 <!-- INFOBOX -->
