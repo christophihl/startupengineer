@@ -48,8 +48,7 @@ weight: 10
 
 <br/>
 
-## 7) Structuring Deals
-
+## [7) Structuring Deals](https://www.dropbox.com/s/quvd5rip8lum1b3/Ent_Fin_WS21_7_StructuringDeals.pdf?dl=0)
 
 
 <br/>
