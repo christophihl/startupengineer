@@ -53,7 +53,7 @@ weight: 10
 
 <br/>
 
-## 8) Staged Financing
+## [8) Staged Financing](https://www.dropbox.com/s/99p5cfualz6rila/Ent_Fin_WS21_StagedFinancing.pdf?dl=0)
 
 
 

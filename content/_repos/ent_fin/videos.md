@@ -130,11 +130,21 @@ weight: 15
 
 ## 7) Structuring Deals
 
+* [Zoom Recording](https://www.dropbox.com/s/ukify43c55994wz/zoom_2.mp4?dl=0)
+
 
 
 <br/>
 
 ## 8) Staged Financing
+
+
+* Part 1: {{< youtube ALbjw6OkCyY >}}
+(sorry for bad quality, maybe it works with the slides next to you)
+
+
+* Part 2: {{< youtube 8LA5EjGCezM >}}
+
 
 
 
