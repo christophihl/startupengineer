@@ -130,7 +130,7 @@ Because the deal is earlier than those RCP usually invests in, Fruehwirth has as
 `Assignment Questions`:
 1)	How attractive is StreetShares as an investment opportunity? What are its strenghts and weaknesses?
 2)	What are some of the challenges online lenders face in competing and gaining share against incumbent banks? How well is StreetShares positioned relative to its competitors?
-3) 	Do the deal terms om page 8 of the case give Fruehwirth adequate rights to protect his interests as a minority investor?
+3) 	Do the deal terms on page 8 of the case give Fruehwirth adequate rights to protect his interests as a minority investor?
 4) 	Complete the capitalization table for the Series B investment, assuming the deal closes on January 1, 2018.
 5) 	What are the expected IRR and CoC to RCP's investors before carried interest (i.e., their gross returns)?
 6)	All things conisidered, would you proceed with the investment in StreetShares?
