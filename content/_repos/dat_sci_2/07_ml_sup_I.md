@@ -430,11 +430,11 @@ A goal of the tidymodels packages is that the interfaces to common tasks are sta
 
 ```r
 bayes_plot_data <- 
-  new_points %>% 0
+  new_points %>%
   bind_cols(predict(bayes_fit, new_data = new_points)) %>% 
   bind_cols(predict(bayes_fit, new_data = new_points, type = "conf_int"))
 
-ggplot(bayes_plot_data, aes(x = food_regime)) + 
+ggplot(bayes_plot_data, aes(x = category_1)) + 
   geom_point(aes(y = .pred)) + 
   geom_errorbar(aes(ymin = .pred_lower, ymax = .pred_upper), width = .2) + 
   labs(y = "Bike weight") + 
