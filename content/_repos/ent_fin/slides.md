@@ -48,13 +48,12 @@ weight: 10
 
 <br/>
 
-## 7) Structuring Deals
-
+## [7) Structuring Deals](https://www.dropbox.com/s/quvd5rip8lum1b3/Ent_Fin_WS21_7_StructuringDeals.pdf?dl=0)
 
 
 <br/>
 
-## 8) Staged Financing
+## [8) Staged Financing](https://www.dropbox.com/s/99p5cfualz6rila/Ent_Fin_WS21_StagedFinancing.pdf?dl=0)
 
 
 

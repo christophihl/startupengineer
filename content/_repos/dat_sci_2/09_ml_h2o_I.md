@@ -1074,7 +1074,7 @@ employee_attrition_tbl %>%
 
 ## <i class="fas fa-laptop-code"></i> &nbsp;Challenge
 
-Use your learning from descriptive features and `plot_ggpairs()` to further investigate the features. Run the functions above according to the features needed. Answer the following questions. You will see the answer by clicking the Code button. Most of the time, you will only need the images from diagonal.
+Use your learning from descriptive features and `plot_ggpairs()` to further investigate the features. Run the functions above according to the features needed. Answer the following questions. Most of the time, you will only need the images from diagonal.
 
 *1. Compensation Features*
 
