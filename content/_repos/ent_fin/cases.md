@@ -147,13 +147,13 @@ Because the deal is earlier than those RCP usually invests in, Fruehwirth has as
 A battery company is running out of money and has not met all of its milestones. The year is 2012 and many cleantech investors have decided to pull back. Fast Ion Battery needs a \$5 million bridge round, but one of its three investors has refused to continue funding the company. John Davidson, a partner at Ware Street Capital and the lead investor in Fast Ion, must decide whether or not to save the company.
 
 `Assignment Questions`:
-1)	Calculate the value of the abandonment option embedded in the Bridge round of funding by taking the following steps:<br/>
-	a.	Use the decision tree framework to map the capitalization table to potential outcomes for Fast Ion Battery. Assume the startup gets the projected pre-money valuation and investment amounts if it continues to raise capital and zero if it fails. What are the implied probabilities that it will achieve each round of funding?<br/>
-	b.	Use these probabilities to generate the expected value of two decision trees: one where the investors put in <span>$</span>5 million at the first stage and <span>$</span>25 million if the Bridge Round is successful. And a second where they put in the full <span>$</span>30 million in an all-or-nothing bet. In each case, use <span>$</span>175 million as the value if successful (pre-money of Series C) and assume the startup is worth zero if it fails.<br/>
-	c.	Given these assumptions, what is the value of the option to abandon the investment if Fast Ion continues to falter after the Bridge round of funding runs out?<br/>
-2)	What factors should John Davidson be considering as he decides whether or not to convince his partnership to continue funding Fast Ion Battery?
-3) 	Using the data in Exhibits 1, 2, 4 and 5 please build out a revised Cap Table for Fast Ion by including a <span>$</span>5 million bridge round at <span>$</span>1.50 per share. Calculate both the IRR and cash-on-cash multiple for each investor, assuming that Fast Ion gets funded and is able to exit in December 2016 at a <span>$</span>350 million valuation, and that WSC and Franconia Ventures split the investments Bluelock would have made). How does implementing “pay-to-play” impact returns?
-4)	If they decide to do the Bridge round, should they implement the pay-to-play clause?
+1)	Calculate the value of the abandonment option embedded in the Bridge round by mapping out two scenarios in the form of decision trees: <br/>
+	a. Generate the expected values of one decision tree where the investors put in <span>$</span>5 million at the first stage and <span>$</span>25 million if the Bridge Round is successful. Assume the startup gets the projected pre-money valuations in rounds B and C if it continues to raise capital and zero if it fails. What are the implied probabilities that it will achieve both B and C rounds of funding?
+	b. Use these probabilities in a second decision tree where they put in the full <span>$</span>30 million in an all-or-nothing bet.
+	c. Given these assumptions, what is the value of the option to abandon the investment if Fast Ion continues to falter after the Bridge round of funding runs out?<br/>
+2)	What factors (relative benefits and costs) should the investors be considering as they decide whether or not to continue funding Fast Ion Battery in a Bridge round? Given these, should they extend a Bridge round to Fast Ion Battery?
+3) 	Suppose that they decide to extend a <span>$</span>5 million Bridge round at <span>$</span>1.50 per share, and that WSC and Franconia Ventures split the investments Bluelock would have made. Further, assume that Fast Ion gets funded and is able to exit in December 2016 at a <span>$</span>350 million valuation. How do the terms related to the warrants and the pay-to-play clause impact the ownership of the VCs who continue to participate. Complete the capitalization tables in the supplementary Excel sheet.
+4)	Calculate both the IRR and cash-on-cash multiple for each investor. How does implementing “pay-to-play” impact returns. Given these findings, should they implement the pay-to-play clause?
 
 
 <br/>
