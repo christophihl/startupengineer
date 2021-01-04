@@ -138,6 +138,8 @@ weight: 15
 
 ## 8) Staged Financing
 
+* [Zoom Recording](https://tuhh.zoom.us/rec/share/0QL_GdFfakogDlEei_nO7IX6JqroMEkgAO78mQMdzGGmvtyYzkSBQNP4vUT3zpHs.lODqBVJKDnATW2hc?startTime=1609764115000)
+
 
 * Part 1: {{< youtube ALbjw6OkCyY >}}
 (sorry for bad quality, maybe it works with the slides next to you)
