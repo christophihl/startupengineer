@@ -13,8 +13,9 @@ menu:
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
 weight: 15
 ---
-
+<!--
 Congratulations. You are now in the 14th and final week of the course. You are very close to understanding all the foundations of data science. You have learned data wrangling, visualization, machine learning and now you are ready for communication with `rmarkdown`, interactive visualization with `plotly` and building apps with `flexdashboard` and `shiny`.
+-->
 
 ## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;Theory Input
 
