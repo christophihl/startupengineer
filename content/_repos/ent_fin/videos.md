@@ -154,6 +154,7 @@ weight: 15
 
 ## 9) Debt Financing
 
+* [Zoom Recording](https://www.dropbox.com/s/eatsbci0zugsx1w/zoom_3.mp4?dl=0)
 
 <br/>
 
