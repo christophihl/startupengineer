@@ -26,24 +26,56 @@ You're building this!
 
 << INSERT IMAGE or embedd APP >>
 
+<a href="https://cran.r-project.org/web/packages/quantmod/index.html" target="_blank">
+<img src="/img/icons/logo_quantmod.png" align="right" style="height:100px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
+</a>
+
+We’ll use the `quantmod` package to retrieve and manipulate stock information. There’s a lot of details behind `quantmod` and extensible timeseries (`xts`) objects, much of which is beyond the scope of this class. We’ll skim the surface to get you to a proficient level. 
+
+First, load the quantmod package and use the `getSymbols()` function to retrieve stock prices. Optionally, you can use the `from` and `to` arguments to limit the range of prices. `auto.assign` indicates whether the results should be loaded to the environment (automatically generates a new objects if `TRUE`) or if `FALSE` be returned instead (what we are used to).
+
+```r
+library(quantmod)
+library(lubridate)
+getSymbols("AAPL", from = "2020-01-01", to = today(), auto.assign = F)
+```
+
+* The index is a column of dates. This is different from data frames, which generally do not have row names and indicies are a sequence from 1:nrow.
+* The values are prices and volumes. We’ll be working primarily the `adjusted price` when graphing, since this removes the effect of stock splits.
+
 ### Project Setup
 
-Let's get started! Get ourselves setup with a blank project. In RStudio click File and New Project --> New Directory --> Name it `stock_analyzer_app`. Save it where you want
+Let's get started! Get ourselves setup with a new blank project. In RStudio click 
+
+1. Click `File`
+2. Click `New Project`
+3. Select `New Directory` 
+4. Name it `stock_analyzer_app`. 
+5. Save it where you want 
+
+KLÄRUNG `OLI`: Step 5, Integration mit GITHUB<br>
+KLÄRUNG `OLI`: Headlines und Nummerierung
 
 ### 1. App Workflow
 
-**Stock Analyzer - Financial Analysis Code Workflow for our App**
+First we need to come up with an analysis. A Financial Analysis Code Workflow for our App. We have to think about how the user is going to interact with the app and integrate this analysis into it. We need to do accomplish the following steps:
 
-First we need to come up with an analysis. We have to think about how the user is going to interact with the app and integrate this anaylsis into it. We need to do accomplish the following steps:
+1. Create a dropwdown list from that the user can select stock indices (DAX, S&P 500, DOW, NASDAQ100).
+2. Pull in the stock list from the selected stock index.
+3. The user will select 1 stock from the selected stock index.
+4. The functionality is designed to pull the past 180 days of stock data.
+5. Create an analysis button to start the analysis functions.
+6. Plot the analysis itself with ggplotly (timeseries visualization).
+7. We will implement 2 moving averages - short (fast) and long (slow)
+8. Output an automated commentary, that indicates positive or negative trends based on the moving averages.
+9. Add sliders to adjust the analysis.
+10. Add a date range input field to adjust the default time frame.
 
-1. Pull in the S&P 500 stock index 
-2. Create analysis function / button
-3. Analysis itself
-3. Output commentary
+Before you start an App, you should always have an analysis that you've completed. It should be functioning separately from the web app.
 
-Before you start an App, you should have an analysis that you've completed. Separete from the web app
+You can use the following template for your analysis.
 
-<< INSERT R Structured Sample Download >>
+KLÄRUNG `OLI`: Detaillierung des tempaltes. Mehr input?
 
 <!-- DOWNLOADBOX -->
 <div id="header">Website</div>
@@ -53,25 +85,15 @@ Before you start an App, you should have an analysis that you've completed. Sepa
   <div id="clear"></div>
 </div>
 
-APPLICATION DESCRIPTION 
-- The user will select 1 stock from the SP 500 stock index
-- The functionality is designed to pull the past 180 days of stock data
-- We will implement 2 moving averages - short (fast) and long (slow)
+**Moving Average Indicators**
 
-Moving Average Indicators
+????: Vielleicht weiter runter an die passende stelle
 
-In stock analsis, comparing moving averages can help determine if a stock is likely to continue going up or down. This is a simple form of a technical trading pattern.
+In stock analysis, comparing moving averages can help determine if a stock is likely to continue going up or down. This is a simple form of a technical trading pattern.
 
 Short (Fast) Moving Average: Uses a shorter time window (e.g. 20-days). Indicates short term trend.
 Long (Slow) Moving Average: Uses a longer time window (e.g. 50-days). Indicates longterm trend.
 
-- We will produce a timeseries visualization
-- We will produce automated commentary based on the moving averages
-
-REPRODUCIBILITY REQUIREMENTS
-- The functionality is designed to pull the past 180 days of stock data from today's date
-- Because of this, your analysis may differ from mine
-- To reproduce my analysis, replace today() with ymd("2019-08-20")
 
 **App Workflow - Steps**
 
@@ -81,10 +103,12 @@ Tip: Break up your analysis into modular functions. This will help big time in t
 2. Extract symbol based on user input
 3. Get Stock data
 4. Plot stock data
-5. generate commentary
-6. test workflow
-7. save scripts
+5. Generate commentary
+6. Test workflow
+7. Save scripts
 
+
+????????? BREAKPOINT
 
 ### 1.1 Get the stock list
 
