@@ -706,7 +706,7 @@ Use `renderText()` and `textOutput()` together. These are used to generate HTML 
 {{< figure src="/img/courses/dat_sci/14/shiny_server_textoutput1.png">}}
 
 
-# Reactively Generate the Plot Header - On Button Click
+### 3.2 Reactively Generate the Plot Header - On Button Click
 
 event
 
@@ -717,3 +717,90 @@ should include ignoreNULL = FALSE: to allow App to run on load.
 {{< figure src="/img/courses/dat_sci/14/shiny_server_textoutput2.png">}}
 
 
+### 3.3 Reactively Import Stock Data - On Symbol Extraction
+
+server
+
+When `stock_symbol()` changes it will react (reactive()) stock_data_tbl()
+
+
+Use renderPrint() + verbatimTextOutput() when developing your app. It helps to see how the app is processing your code
+
+verbatimTextOutput(outputId = "stock_data")
+renderPrint(stock_data_tbl())
+
+
+```r
+# Get Stock Data ----
+stock_data_tbl <- reactive({
+
+  stock_symbol() %>% 
+        get_stock_data(from = today() - days(180), 
+                       to   = today(),
+                       mavg_short = 20,
+                       mavg_long  = 50)
+
+})
+
+output$stock_data <- renderPrint(stock_data(), {
+
+
+
+})
+
+```
+
+{{< figure src="/img/courses/dat_sci/14/shiny_server_stock_data.png">}}
+
+
+### 3.4 Reactively Render the Interactive Time Series Plot - On Stock Data Update
+
+
+Instead of rendering the plot data, we want to render the plot. when `stock_data_tbl` changes
+
+`renderPlotly()` will render the interactive plot
+
+`renderPlotly()` and `plotlyOutput()` got together. 
+
+* ... renders the plot on the server
+* ... positions the plot in the UI
+
+can use the ID "plotly_plot"
+
+
+### 3.5 Reactively Render the Analyst Commentary - On Stock Data Update + Action Button Event
+
+self explaining
+
+### 3.6 Add moving average sliders to your Stock Analyzer
+
+you can use hr()
+
+APPLICATION DESCRIPTION ----
+- Add Moving Average Functionality
+- UI Placement:
+  - Add a horizontal rule between the Analyze button and the new UI.
+  - Place the Sliders below the button and horizontal rule
+- Short MAVG Requirements: Starting value of 20, min of 5, max of 40
+- Long MAVG Requirements: Starting value of 50, min of 50, max of 120
+- Server requirements: Update immediately on change
+
+{{< figure src="/img/courses/dat_sci/14/shiny_server_mavg.png">}}
+
+### 3.7 Add Index selection
+
+{{< figure src="/img/courses/dat_sci/14/shiny_server_index_selection.png">}}
+
+### 3.8 Add Date Range input
+
+Final
+
+{{< figure src="/img/courses/dat_sci/14/shiny_server_final.png">}}
+
+### 3.9 App Cleanup
+
+Don't forget to remove everything. Commented out stuff, the textOutputs() etc ...
+
+Order the server functions as consistent as possible with your anaylsis workflow. This makes it easier to debug your app and mak updates to your app as your analyiss cahgnes over time
+
+It does not has a lot of theme to it, it just looks like a basic website ... You could make it look really cool though with bootstrap.
