@@ -14,7 +14,7 @@ menu:
 weight: 16
 ---
 
-Congratulations. You are now in the 14th and final week of the course. You are very close to understanding all the foundations of data science. You have learned data wrangling, visualization, machine learning and now you are ready for communication with `rmarkdown`, interactive visualization with `plotly` and building apps with `flexdashboard` and `shiny`.
+The goal of this session is to teach you how to develop a shiny application. 
 
 ## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp; ProjectStock Analyzer Application
 

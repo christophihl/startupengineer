@@ -6,8 +6,8 @@ date: "2019-05-05T00:00:00+01:00"
 draft: false
 toc: true
 menu:
-  dat_sci_2:
-    parent: II. Machine Learning
+  dat_sci_3:
+    parent: Overview
     weight: 3
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
