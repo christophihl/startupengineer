@@ -16,14 +16,16 @@ weight: 16
 
 The goal of this session is to teach you how to develop a shiny application. 
 
-## <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp; ProjectStock Analyzer Application
+## 1 - Stock Analyzer Application <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;
 
-This is going to be your second Project: Stock Analyzer App - A fully functional stock analysis application built with shiny
+Your second challenge is going to be developing a **stock analyzer app** - a fully functional sotck analysis application built with shiny.
 
-An app that can pull in any of the stock that are listed in the SP500, DOW, NASDAQ or DAX and it will be able to select one and analyze them using a short and a long moving average. The user can change the moving averages to what they want
+The application will be capable of showing any stocks listed in the S&P500, DOW, NASDAQ or DAX selected by the user.
+On top, users will be able to analyze trends with chosen parameters based on moving averages.
 
 You're building this!
 
+`@JOSCHKA`
 << INSERT IMAGE or embedd APP >>
 
 <a href="https://cran.r-project.org/web/packages/quantmod/index.html" target="_blank">
@@ -37,15 +39,17 @@ First, load the quantmod package and use the `getSymbols()` function to retrieve
 ```r
 library(quantmod)
 library(lubridate)
-getSymbols("AAPL", from = "2020-01-01", to = today(), auto.assign = F)
+getSymbols("AAPL", from = "2020-01-01", to = today("UTC"), auto.assign = F)
 ```
 
 * The index is a column of dates. This is different from data frames, which generally do not have row names and indicies are a sequence from 1:nrow.
-* The values are prices and volumes. We’ll be working primarily the `adjusted price` when graphing, since this removes the effect of stock splits. This value is the closing price adjusted for any stock splits or dividends that occured during the time range.
+* The values are prices and volumes. We’ll be working primarily with the `adjusted price` when graphing, since this removes the effect of stock splits. This value is the closing price adjusted for any stock splits or dividends that occured during the time range.
 
-### Project Setup
+### 1.0 - Setup & Workflow
 
-Let's get started! Get ourselves setup with a new blank project. In RStudio click 
+**I. Setup**
+
+Let's get started! You can either use the project already created in the assignment or create your own new blank project. In RStudio click 
 
 1. Click `File`
 2. Click `New Project`
@@ -53,29 +57,30 @@ Let's get started! Get ourselves setup with a new blank project. In RStudio clic
 4. Name it `stock_analyzer_app`. 
 5. Save it where you want 
 
-KLÄRUNG `OLI`: Step 5, Integration mit GITHUB<br>
-KLÄRUNG `OLI`: Headlines und Nummerierung
+**II. Workflow of our final app**
 
-### 1. App Workflow
+As you can see in the final app linked above, we will have to implement a variety of steps to obtain a good functionality.
+We can think of it as a *Financial Analysis Code Workflow* for our app. 
+It determines how the user is going to interact with the app and what features are available.
 
-First we need to come up with an analysis. A Financial Analysis Code Workflow for our App. We have to think about how the user is going to interact with the app and integrate this analysis into it. We need to do accomplish the following steps:
+We need to accomplish the following steps in our analysis:
 
-1. Create a dropwdown list from that the user can select stock indices (DAX, S&P 500, DOW, NASDAQ100).
-2. Pull in the stock list from the selected stock index.
-3. The user will select 1 stock from the selected stock index.
-4. The functionality is designed to pull the past 180 days of stock data.
-5. Create an analysis button to start the analysis functions.
-6. Plot the analysis itself with ggplotly (timeseries visualization).
-7. We will implement 2 moving averages - short (fast) and long (slow)
-8. Output an automated commentary, that indicates positive or negative trends based on the moving averages.
-9. Add sliders to adjust the analysis.
-10. Add a date range input field to adjust the default time frame.
+1. Create a *dropwdown list* from that the user can select *stock indices* (DAX, S&P 500, DOW, NASDAQ100).
+2. Pull in the *stock list from the selected stock index*.
+3. The user will *select one stock* from the selected stock index.
+4. The functionality is designed to *pull the past 180 days of stock data*.
+5. Create an *analysis button* to start the analysis functions.
+6. *Plot* the analysis itself with ggplotly (timeseries visualization).
+7. We will *implement two moving averages* - short (fast) and long (slow)
+8. Output an *automated commentary*, that indicates positive or negative trends based on the moving averages.
+9. Add *sliders* to adjust the analysis.
+10. Add a *date range input field* to adjust the default time frame.
 
-Before you start an App, you should always have an analysis that you've completed. It should be functioning separately from the web app. Let's start with that.
+Before you start an app, you should always have an analysis that you've completed.
+It should be functioning separately from the web app.
+Let's start with that before we implement the advanced features into our app.
 
 You can use the following template for your analysis.
-
-KLÄRUNG `OLI`: Detaillierung des tempaltes. Mehr input?
 
 <!-- DOWNLOADBOX -->
 <div id="header">Website</div>
@@ -85,19 +90,24 @@ KLÄRUNG `OLI`: Detaillierung des tempaltes. Mehr input?
   <div id="clear"></div>
 </div>
 
-**App Workflow - Steps**
+**III. App Workflow - First Steps**
 
-Tip: Break up your analysis into modular functions. This will help big time in the Shiny Apps. We will build the following functions:
+Tip: Break up your analysis into modular functions. This will help big time in the Shiny Apps. In this section, we will build the following functions:
 
 1. Get stock lists
 2. Extract symbol based on user input
 3. Get Stock data
 4. Plot stock data
 5. Generate commentary
-6. Save scripts (so that we can update our functions easily)
+6. Test workflow
+7. Save scripts (so that we can update our functions easily)
 
+The structure for these steps is as follows:
+For the most functions, we prepared a *Test code* chunk that will help you to come up with an approach to write the function in the *Modularize (function)* chunk which then will be saved later.
+Good practice is to also test if the function works under *Example function falls*.
 
-### 1.1 Get the stock list
+### 1.1 - Stock List
+*Get the stock list*
 
 We want to have a list of stocks, that the user can select from. We need a function that retrieves all the stocks in a given index. The following function is designed for the three major US indices and the biggest German index containing the 30 largest German blue-chip companies: 
 
@@ -107,8 +117,6 @@ We want to have a list of stocks, that the user can select from. We need a funct
 * NASDAQ100 
 
 You can modify the list as you want. You can add any indices and ETFs to the following scheme. The function is currently built for retrieving the lists (names and symbols) from the corresponding wikipedia pages:
-
-KLÄRUNG `OLI`: Komplette function oder sollen die Teile selbst bauen?
 
 ```r
 get_stock_list <- function(stock_index = "SP500") {
@@ -172,7 +180,7 @@ get_stock_list <- function(stock_index = "SP500") {
 Let's test the function. Default is the German DAX. To retrieve other lists, just change the argument.
 
 ```r
-stock_list_lst <- get_stock_list()
+stock_list_lst <- get_stock_list("DAX")
 # get_stock_list("DOW")
 # get_stock_list("SP500")
 
@@ -197,7 +205,8 @@ stock_list_lst
 ## # … with 20 more rows
 ```
 
-### 1.2 Extract Symbol based on user input
+### 1.2 - Extract Symbol
+*Extract Symbol based on user input*
 
 As shown above, we need the stock symbols from the returned lists. 
 
@@ -234,7 +243,8 @@ get_symbol_from_user_input <- function(user_input) {
 ```
 
 
-### 1.3 Get stock data
+### 1.3 - Stock Data
+*Get stock data*
 
 In this step we are retrieving the stock prices for a given symbol in a given time frame. Addtionally, we are adding two columns for the moving averages. In stock analysis, comparing moving averages can help determine if a stock is likely to continue going up or down. This is a simple form of a technical trading pattern:
 
@@ -321,13 +331,14 @@ stock_data_tbl <- get_stock_data("AAPL", from = "2020-06-01", to = "2021-01-12",
 ```
 
 
-### 1.4 Plot the stock data
+### 1.4 - Plot
+*Plot the stock data*
 
 Now that we are able to pull in the data, we can easily plot a time series diagram with `ggplot` and `ggplotly`. 
 
 * Convert to long format (factors keep the order of our legend matching the order of our data columns)
-* ggplot has to be grouped <<- see my stackoverflow answer
-* You cann add themes or change the style as you want
+* ggplot has to be grouped <<- see my stackoverflow answer `@JOSCHKA`
+* You can add themes or change the style as you want
 
 *Test code*
 
@@ -355,30 +366,10 @@ ggplotly(g)
 <iframe width="100%" height="600" name="iframe" frameBorder="0" src="/img/courses/dat_sci/14/stock_plot.html"></iframe>
 <!--- {{< plotly json="/img/courses/dat_sci/14/test.json" height="500px" modebar="false">}} DOES NOT WORK --->
 
-*Modularize (function)*
-
-```r
-plot_stock_data <- function(stock_data) {
-
-     g <- stock_data %>%
-
-     ...
-
-     ggplotly(g)
-}
-```
-
-*Example function calls*
-
-```r
-"ADS.DE" %>% 
-    get_stock_data() %>%
-    plot_stock_data()
-```
-
-* Control for different currencies. The y-axis needs to be in € for the German stocks and in $ for the US stocks.
-
-KLÄRUNG `OLI`: sollen die das selber bauen?
+In the interactive plot you see that the currency is displayed as well.
+In order to control for different currencies - € for the German stocks and $ for the US stocks - the y-axis needs to be formatted.
+To do so we make use of the package `scales`.
+Add this function to your script and insert the argument `scale_y_continuous()` to your plot.
 
 ```r
 currency_format <- function(currency) {
@@ -392,8 +383,33 @@ currency_format <- function(currency) {
 }
 
 # Add this to your plot function
-## scale_y_continuous(labels = currency_format(stock_list_lst %>% purrr::pluck("currency"))) +
+## + scale_y_continuous(labels = currency_format(stock_list_lst %>% purrr::pluck("currency")))
 ```
+
+
+*Modularize (function)*
+
+```r
+plot_stock_data <- function(stock_data) {
+
+     g <- stock_data %>%
+
+     ... # add your code to create a plot
+
+     ggplotly(g)
+}
+```
+
+*Example function calls*
+
+```r
+"ADS.DE" %>% 
+    get_stock_data() %>%
+    plot_stock_data()
+```
+
+
+`@JOSCHKA` : DAS BRAUCHEN WIR NICHT UND KANN RAUS ODER?
 
 *Example function calls*
 
@@ -408,40 +424,39 @@ stock_list_lst <- get_stock_list()
 
 ```
 
-### 1.5 COMMENTARY 
+### 1.5 - Trend Analysis
+*Generate automated commentary*
 
-Automatically generate an anaylist commentary based on a moving average logic:
+Automatically generate an analyst commentary based on a moving average logic:
 
 **1.5.1 Implement commentary Logic** 
 
 Compare both moving averages on the last day. The logic goes as this:
 
 * If short < long, this is a bad sign
-* If short > long, this is a 
+* If short > long, this is a good sign
 
-Steps
+The intuition is that a higher short-term moving average indicates a positive trend.
+Let's try to assign `warning_signal` a value of `TRUE` when the short < long.
+Remember, that a logical expression needs to be fulfilled in order to obtain the value `TRUE`, e.g. `2>1`.
 
 1. Get last value
 2. Compare long and short
 
-KLÄRUNG `OLI`: sollen die das selber bauen?
-
 ```r
 warning_signal <- stock_data_tbl %>%
     tail(1) %>% # Get last value
-    mutate(mavg_warning_flag = mavg_short < mavg_long) %>%
+    mutate(mavg_warning_flag = ..) %>% # insert the logical expression
     pull(mavg_warning_flag)
 ```
 
 **1.5.2 Extract the moveing average days**
 
-Calculate / Extract which ...-day moving average are generated (baesed on the number of NAs):
-
-KLÄRUNG `OLI`: sollen die das selber bauen?
+Calculate / Extract which ...-day moving average are generated (based on the number of NAs):
 
 ```r
 n_short <- stock_data_tbl %>% pull(mavg_short) %>% is.na() %>% sum() + 1
-n_long  <- stock_data_tbl %>% pull(mavg_long) %>% is.na() %>% sum() + 1
+n_long  <- .. # Do the same for the long average
 ```
 
 Create a warning signal logic:
@@ -458,18 +473,15 @@ if (warning_signal) {
 
 ```r
 generate_commentary <- function(data, user_input) {
-    warning_signal <- data %>%
-        tail(1) %>%
-        mutate(mavg_warning_flag = mavg_short < mavg_long) %>%
-        pull(mavg_warning_flag)
+    warning_signal <- data %>% ..
     
-    n_short <- data %>% pull(mavg_short) %>% is.na() %>% sum() + 1
-    n_long  <- data %>% pull(mavg_long) %>% is.na() %>% sum() + 1
+    n_short <- data %>% ..
+    n_long  <- data %>% ..
     
-    if (warning_signal) {
-        str_glue("In reviewing the stock prices of {user_input}, the {n_short}-day moving average is below the {n_long}-day moving average, indicating negative trends")
+    if (..) {
+        str_glue(".. {user_input} .. {n_long} .. negative..")
     } else {
-        str_glue("In reviewing the stock prices of {user_input}, the {n_short}-day moving average is above the {n_long}-day moving average, indicating positive trends")
+        str_glue(".. {user_input} .. {n_short} .. positive")
         
     }
 }
@@ -477,21 +489,24 @@ generate_commentary <- function(data, user_input) {
 generate_commentary(stock_data_tbl, user_input = user_input)
 ```
 
-*Example function calls*
+### 1.6 - Test
+
+Let's test our whole workflow.
 
 ```r
 # get_stock_list("DAX")
 "ADS.DE, Adidas" %>% 
     get_symbol_from_user_input() %>%
-    get_stock_data(from = "2020-01-01", to = "2020-12-30") %>%
+    get_stock_data(from = from, to = to ) %>%
     # plot_stock_data()
     generate_commentary(user_input = "ADS.DE, Adidas")
 ## In reviewing the stock prices of ADS.DE, Adidas, the 20-day moving average is above the 50-day moving average, indicating positive trends
 ```
 
-#### 1.6 Save scripts
+### 1.7 - Save
 
-The following code allows you to override your functions everytime you add changes to them:
+Because we want to reference our functions later, we need to save them.
+The following code allows you to override your functions every time you add changes to them:
 
 ```r
 fs::dir_create("00_scripts") #create folder
