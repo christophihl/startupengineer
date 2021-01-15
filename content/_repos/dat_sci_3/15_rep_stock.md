@@ -595,11 +595,11 @@ div(
 
 ### 2.2 Adding the Main Application UI Section
 
-Essentially we are building a website. We want to have different sections. 
+Essentially we are building a website, that contains different sections. Let's add a section for the dropdown list and the plot(?).
 
-The actual dropdown and the plot in here 
+* `column()` generates a bootstrap grid column with width specified in units up to 12 units wide
 
-column() generates a bootstrap grid column with width specified in units up to 12 units wide
+ADD INFORMATION ABOUT BOOTSTRAP?!
 
 ```r
 # 2.0 APPLICATION UI -----
@@ -609,20 +609,16 @@ div(
 )
 ```
 
-4 units on the left and 8 units on the right. If you drag it, it will adjust. (include bootstrap information here) We call that responsive layout. Responsive Layout: Depending on the width of your screen, bootstrap adjusts the columns. This helps apps look good on Mobile, Tablet & Desktop devices.
+We could split our layout like this: 4 units on the left (dropdown) and 8 units on the right (plot). If you draged your website, it would adjust the content automatically (include bootstrap information here?!). We call that responsive layout (Responsive Layout: Depending on the width of your screen, bootstrap adjusts the columns. This helps apps look good on Mobile, Tablet & Desktop devices).
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_cols.png">}}
 
-Shiny has HTML Helpers: These are bootstrap components that Shiny has turned into functions. We'll see a bunch of examples of these.
+Shiny has a lot of HTML Helpers: These are bootstrap components that Shiny has turned into functions. One that we want to add is a `wellPanel()`.
 
-ADD wellPanel()
+* `wellPanel()`: Creates a Bootstrap Well. This is just a diviion that has a gray background. <div class="well"></div>
+* `pickerInput()`: A shinywidgets widget that creates a UI dropdown
 
-wellPanel(): Creates a Bootstrap Well. This is just a diviion that has a gray background. <div class="well"></div>
-pickerInput(): A shinywidgets widget that creates a UI dropdown
-
-runApp(): Use runApp() if the "Reload App" button gets hung up. Note that runApp() looks for a file called "app.R". If your app has a file name that is different, just put it in quotes inside of runApp()
-
-e.g. runApp("01_stock_analyzer_layout.R")
+Use the function`runApp()` if the "Reload App" button gets hung up. Note that runApp() looks for a file called "app.R". If your app has a file name that is different, just put it in quotes inside of the functio (`runApp("01_stock_analyzer_layout.R")`).
 
 ```r
 # 2.0 APPLICATION UI -----
@@ -631,7 +627,9 @@ div(
     width = 4,
     wellPanel(
     
-    # Add content here pickerInput(inputId = "stock_selection", choices = 1:10)
+    # Add content here 
+    pickerInput(inputId = "stock_selection", 
+                choices = 1:10)
     
     )
   ), 
@@ -648,32 +646,32 @@ div(
 
 ### 2.3 Generating the S&P500 Stock List Dropdown
 
+Some calculations only need to be performed once. I typically add these to the top of my application (or in a file that we can `source()`). For example we need `get_stock_list()` for our initial set up only once and can place it on top of our script (above the ### UI section).
 
-Some calc's only need to be performed once. I typically add these to the top of my application (or in a file that I source)
+Let's modify the above added `pickerOnput()` for our use case (the stock list dropdown selection).
 
-e.g. get_stock_list() on top (above the ### UI)
+Check out the shinyWidgets documentation for more information on available widgets liek pickerInput() and their options. And run `?pickerOptions`
 
-pickerInput: Check out the shinyWidgets documentation for more information on available widgets and options
---> change the choices to stocklist$label
-multiple = F
-selected = filter to aAAPLE (This will fail if AAPL is not present. What if AAPL gets removed from the SP500? Or what if the user selects an index like the DAX that AAPL is not part of?) How can you make this code more resistant to failure?
+Steps:
 
-?pickerOptions
-set options: 
-* actionsBox
-* liveSearch 
-* size
+* Change the choices to stocklist$label
+* Set multiple = F
+* selected = You can filter it to AAPL, but this will fail if AAPL is not present in the stock list. What if AAPL gets removed from the SP500? Or what if the user selects an index like the DAX that AAPL is not part of?
+* set further arguments to the options argumen: 
+  * actionsBox = FALSE,
+  * liveSearch = TRUE
+  * size = 10
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_dropdown.png">}}
 
 ### 2.4 Adding the Analyze button
 
-actionButton(): A button that generates a click event
-icon() let's us use Font Awesome icons ("download" icon)
+* `actionButton()`: A button that generates a click event. Give it the ID `analyze`.
+* `icon()` let's us use Font Awesome icons (e.g. "download" icon). Use it inside the `icon` argument.
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_button.png">}}
 
-Nothing will happen, because we don't have set up any server logics
+If your run the app and press the button nothing will happen, because we don't have set up any server logics yet.
 
 ### 2.5 Inserting the Interactive Time Series Plot into our UI
 
@@ -682,76 +680,60 @@ Add two divisions for the title and for the plot
 * div(h4())
 * div(get_stock_data(), plot_stock_data())
 
-you could store the data at the top of the script (like the idnex list)
-
-now we should have the plot in there
+For testing purposes you could store the data again at the top of the script (like the index list). Now we should have the plot in there.
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_plot.png">}}
 
 ### 2.6  Adding the Analyst Commentary
 
-width = 12
-generate_commentary(user_input = "Placeholder")
+Suggested values:
+
+* width = 12
+* generate_commentary(user_input = "Placeholder")
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_commentary.png">}}
 
 ## 3. Adding Server Functionality
 
-Let's start filling the server function.
-
-* Cheat Sheet: Part Sever Opeartions (Reactivity)
+Let's start filling the server function. A helpful documentation is the Shiny cheat sheet (Part Server Opeartions (Reactivity)).
 
 ### 3.1 Reactive Symbol Extraction
 
-you can comment out / remove the stock_data_tbl at the top, because that is going to be updated depending on the user input
+Now you can comment out / remove the stock_data_tbl object at the top, because that is going to be updated depending on the user input. Everything what is needed, is in our source file. we just need to figure out how to use these
 
-everything is needed in our source file. we just need to figure out how to use these
+We delay Reactions `eventReactive()` (Great for generating reactive values from Button clicks). This functions generates a reactive value only when an event happens. Good for creating reactive values following button clicks. Let's start with plotting out the symbol that the user selects when clicking the analyze Button (`input$analyze`):
 
-* Delay Reactions (Great for gernerating reactive values from Button clicks)
-* eventReactive(): generates a reactive value only when an event happens. Good for creating reactive values following button clicks
+* Print the symbol that the user is selecting (inputId = "analyze")
+* Use `renderText()` and `textOutput()` together. These are used to generate HTML text for inside H-tags (headers) and p-tags (paragraphs).
 
-start with plotting out the symbol that the user selects
+REWRITE, BETTER EXPLANATION
 
- Analyze 
-input`$` and output`$`
-
-1. Get the symbol that the user is selecting (--> inputId = "analyze")
-
+```r
     # Stock Symbol ----
     stock_symbol <- eventReactive(input$analyze, {
         input$stock_selection
     })
 
     output$selected_symbol <- renderText(stock_symbol())
+```
     
-Use `renderText()` and `textOutput()` together. These are used to generate HTML text for inside H-tags (headers) and p-tags (paragraphs)
-
 {{< figure src="/img/courses/dat_sci/14/shiny_server_textoutput1.png">}}
 
 
 ### 3.2 Reactively Generate the Plot Header - On Button Click
 
-event
-
-output$plot_header <- renderText(stock_symbol())
-
-should include ignoreNULL = FALSE: to allow App to run on load.
+* output$plot_header <- renderText(stock_symbol())
+* The `eventReactive()` should include `ignoreNULL = FALSE` to allow the App to run on load.
 
 {{< figure src="/img/courses/dat_sci/14/shiny_server_textoutput2.png">}}
 
 
 ### 3.3 Reactively Import Stock Data - On Symbol Extraction
 
-server
-
-When `stock_symbol()` changes it will react (reactive()) stock_data_tbl()
-
-
-Use renderPrint() + verbatimTextOutput() when developing your app. It helps to see how the app is processing your code
-
-verbatimTextOutput(outputId = "stock_data")
-renderPrint(stock_data_tbl())
-
+* When `stock_symbol()` changes it will react (reactive()), stock_data_tbl())
+* Use renderPrint() + verbatimTextOutput() when developing your app. It helps to see how the app is processing your code
+  + `verbatimTextOutput(outputId = "stock_data")`
+  + `renderPrint(stock_data_tbl())`
 
 ```r
 # Get Stock Data ----
@@ -781,14 +763,11 @@ output$stock_data <- renderPrint(stock_data(), {
 
 Instead of rendering the plot data, we want to render the plot. when `stock_data_tbl` changes
 
-`renderPlotly()` will render the interactive plot
+* `renderPlotly()` and `plotlyOutput()` got together. 
+* `renderPlotly()` will render the interactive plot on the server
+* `plotlyOutput()` plots in the UI
 
-`renderPlotly()` and `plotlyOutput()` got together. 
-
-* ... renders the plot on the server
-* ... positions the plot in the UI
-
-can use the ID "plotly_plot"
+* Sse the ID `plotly_plot`
 
 
 ### 3.5 Reactively Render the Analyst Commentary - On Stock Data Update + Action Button Event
@@ -797,10 +776,8 @@ self explaining
 
 ### 3.6 Add moving average sliders to your Stock Analyzer
 
-you can use hr()
-
-APPLICATION DESCRIPTION ----
-- Add Moving Average Functionality
+* You can use `hr()` to add breaks
+* Add Moving Average Functionality
 - UI Placement:
   - Add a horizontal rule between the Analyze button and the new UI.
   - Place the Sliders below the button and horizontal rule
@@ -815,8 +792,6 @@ APPLICATION DESCRIPTION ----
 {{< figure src="/img/courses/dat_sci/14/shiny_server_index_selection.png">}}
 
 ### 3.8 Add Date Range input
-
-Final
 
 {{< figure src="/img/courses/dat_sci/14/shiny_server_final.png">}}
 
