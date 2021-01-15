@@ -323,11 +323,11 @@ stock_data_tbl <- get_stock_data("AAPL", from = "2020-06-01", to = "2021-01-12",
 
 ### 1.4 Plot the stock data
 
-Now that we are able to pull in the data, we can easily plot a time series diagram with `ggplot` and `ggplotly` 
+Now that we are able to pull in the data, we can easily plot a time series diagram with `ggplot` and `ggplotly`. 
 
-factor keeps the order of our legend matching the order of our data columns
-ggplot has to be grouped <<- see my stackoverflow answer
-Add themes or change the style as you want
+* Convert to long format (factors keep the order of our legend matching the order of our data columns)
+* ggplot has to be grouped <<- see my stackoverflow answer
+* You cann add themes or change the style as you want
 
 *Test code*
 
@@ -335,13 +335,13 @@ Add themes or change the style as you want
 g <- stock_data_tbl %>% 
     
      # convert to long format
-     pivot_longer(cols         = adjusted:mavg_long, 
-                  names_to     = "legend", 
-                  values_to    = "value", 
+     pivot_longer(...    = ..., 
+                  ...    = ..., 
+                  ...    = ..., 
                   names_ptypes = list(legend = factor())) %>% 
     
      # ggplot
-     ggplot(aes(date, value, color = legend, group = legend)) +
+     ggplot(aes(..., ..., ... = ..., group = legend)) +
      geom_line(aes(linetype = legend)) +
      
      # Add theme possibly: theme_...
@@ -353,12 +353,7 @@ ggplotly(g)
 ```
 
 <iframe width="100%" height="600" name="iframe" frameBorder="0" src="/img/courses/dat_sci/14/stock_plot.html"></iframe>
-
-<iframe width="100%" height="600" name="iframe" frameBorder="0" src="/img/courses/dat_sci/14/g1_dynamic.html"></iframe>
-
-{{< plotly json="/img/courses/dat_sci/14/test.json" height="500px" modebar="false">}}
-
-??????????? DOES NOT WORK
+<!--- {{< plotly json="/img/courses/dat_sci/14/test.json" height="500px" modebar="false">}} DOES NOT WORK --->
 
 *Modularize (function)*
 
@@ -367,26 +362,13 @@ plot_stock_data <- function(stock_data) {
 
      g <- stock_data %>%
 
-     # convert to long format
-     pivot_longer(cols         = adjusted:mavg_long, 
-                  names_to     = "legend", 
-                  values_to    = "value", 
-                  names_ptypes = list(legend = factor())) %>% 
-    
-     # ggplot
-     ggplot(aes(date, value, color = legend, group = legend)) +
-     geom_line(aes(linetype = legend)) +
-     
-     # Add theme possibly: theme_...
-     # Add colors possibly: scale_color_..
-     
-     labs(y = "Adjusted Share Price", x = "")
+     ...
 
      ggplotly(g)
 }
 ```
 
-*test*
+*Example function calls*
 
 ```r
 "ADS.DE" %>% 
@@ -394,7 +376,9 @@ plot_stock_data <- function(stock_data) {
     plot_stock_data()
 ```
 
-* Control for different currencies
+* Control for different currencies. The y-axis needs to be in € for the German stocks and in $ for the US stocks.
+
+KLÄRUNG `OLI`: sollen die das selber bauen?
 
 ```r
 currency_format <- function(currency) {
@@ -407,10 +391,13 @@ currency_format <- function(currency) {
     return(x)
 }
 
+# Add this to your plot function
 ## scale_y_continuous(labels = currency_format(stock_list_lst %>% purrr::pluck("currency"))) +
 ```
 
-*Test function*
+*Example function calls*
+
+We have to add another argument to the `plot_stock_data()` function:
 
 ```r
 stock_list_lst <- get_stock_list()
@@ -421,18 +408,23 @@ stock_list_lst <- get_stock_list()
 
 ```
 
-
 ### 1.5 COMMENTARY 
 
-Automatically gernerate anaylist commentary from moving averages (based on a moving average logic):
+Automatically generate an anaylist commentary based on a moving average logic:
 
-#### 1.5.1 
+**1.5.1 Implement commentary Logic** 
 
-If short < long, this is a bad sign
-If short > long, this is a 
+Compare both moving averages on the last day. The logic goes as this:
+
+* If short < long, this is a bad sign
+* If short > long, this is a 
+
+Steps
 
 1. Get last value
 2. Compare long and short
+
+KLÄRUNG `OLI`: sollen die das selber bauen?
 
 ```r
 warning_signal <- stock_data_tbl %>%
@@ -441,16 +433,18 @@ warning_signal <- stock_data_tbl %>%
     pull(mavg_warning_flag)
 ```
 
-#### 1.5.2 
+**1.5.2 Extract the moveing average days**
 
-* calculate which ...-day moving average are generated (baesed on the number of NAs)
+Calculate / Extract which ...-day moving average are generated (baesed on the number of NAs):
+
+KLÄRUNG `OLI`: sollen die das selber bauen?
 
 ```r
 n_short <- stock_data_tbl %>% pull(mavg_short) %>% is.na() %>% sum() + 1
 n_long  <- stock_data_tbl %>% pull(mavg_long) %>% is.na() %>% sum() + 1
 ```
 
-* Create a warning signal logic
+Create a warning signal logic:
 
 ```r
 if (warning_signal) {
@@ -460,7 +454,7 @@ if (warning_signal) {
 }
 ```
 
-*Modularize it (function)*
+*Modularize (function)*
 
 ```r
 generate_commentary <- function(data, user_input) {
@@ -483,7 +477,7 @@ generate_commentary <- function(data, user_input) {
 generate_commentary(stock_data_tbl, user_input = user_input)
 ```
 
-*Test it*
+*Example function calls*
 
 ```r
 # get_stock_list("DAX")
@@ -496,6 +490,8 @@ generate_commentary(stock_data_tbl, user_input = user_input)
 ```
 
 #### 1.6 Save scripts
+
+The following code allows you to override your functions everytime you add changes to them:
 
 ```r
 fs::dir_create("00_scripts") #create folder
@@ -510,6 +506,8 @@ dump(
  
 ## 2 Stock Analyzer - Creating the Layout with Shiny
 
+Now that we have all of our functions, we can start to build our app. Let's start with building the layout first. The layout refers to the User Interface (Design & Structure of our App)
+
 * Download File template (01_stock_analyzer_layout.R)
 
 <!-- DOWNLOADBOX -->
@@ -520,23 +518,19 @@ dump(
   <div id="clear"></div>
 </div>
 
-* Layout refers to the User Interface (Design & Structure of our App)
-
-3 components of a Shiny App
-
-1. UI
-2. Server
-3. shinyApp()
-
 RStudio IDE will alter it's functionality once it recognizes we are building a Shiny App (buttons top right of the window)
 
-1.2.1 The three components of a shiny app
+There are 3 components of a Shiny App
 
-1. ui: A function that is built using nested HTML componets. More importantly, this function controls to look & appearance of our web application.
-  * fluidPage() crates a Web Page that we can add elements to.
-2. server: A special function that is setup with an input, output & session. More important, this is where reactive code is run.
-3. shinyApp(): Connects the UI with the server functionality
+1. UI
+  +  `ui`: A function that is built using nested HTML componets. More importantly, this function controls to look & appearance of our web application.
+    + `fluidPage()` crates a Web Page that we can add elements to.
+2. Server
+  + `server`: A special function that is setup with an input, output & session. More important, this is where reactive code is run.
+3. shinyApp()
+  + `shinyApp()`: Connects the UI with the server functionality
 
+Our script needs to have at least the following components:
 
 ```r
 # UI ----
@@ -566,13 +560,11 @@ fluidPage(title = "Stock Analyzer")
 ## <div class="container-fluid"></div>
 ```
 
-Now let's assemble the layout.
+Now let's assemble every necessary part of our layout.
 
 ### 2.1 Making the Header of our web app
 
-Now we want to start playing around with this fluidPage. This is how shiny allows us to build applications.
-
-Change the HTML
+First we want to start playing around with this fluidPage. This is how shiny allows us to build applications by changing the underlying HTML code.
 
 ```
 ui <- fluidPage(
@@ -583,12 +575,12 @@ ui <- fluidPage(
 )
 ```
 
-Add new components.
+Add new components. Keep your app organized with comments. Use the outline to navigate your app.
 
-div() function: Creates an HTML division. It's used to create sections in your app. <div></div>
-Tip: Keep your app organized with comments. USe the outline to navigate your app.
-h1(): Creates an H1 Header (largest size of header) <h1></h1>
-p(): Creates an paragraph HTML tag <p></p>
+* `div()` function: Creates an HTML division. It's used to create sections in your app (<div></div>).
+
+* `h1()`: Creates an H1 Header (largest size of header) (<h1></h1>).
+* `p()`: Creates an paragraph HTML tag (<p></p>)
 
 ```r
 # 1.0 HEADER ----
