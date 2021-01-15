@@ -32,7 +32,7 @@ You're building this!
 
 We’ll use the `quantmod` package to retrieve and manipulate stock information. There’s a lot of details behind `quantmod` and extensible timeseries (`xts`) objects, much of which is beyond the scope of this class. We’ll skim the surface to get you to a proficient level. 
 
-First, load the quantmod package and use the `getSymbols()` function to retrieve stock prices. Optionally, you can use the `from` and `to` arguments to limit the range of prices. `auto.assign` indicates whether the results should be loaded to the environment (automatically generates a new objects if `TRUE`) or if `FALSE` be returned instead (what we are used to).
+First, load the quantmod package and use the `getSymbols()` function to retrieve stock prices. This function uses a financial symbol to collect data from financial APIs (e.g. yahoo finance). Optionally, you can use the `from` and `to` arguments to limit the range of prices. `auto.assign` indicates whether the results should be loaded to the environment (automatically generates a new objects if `TRUE`) or if `FALSE` be returned instead (what we are used to).
 
 ```r
 library(quantmod)
@@ -41,7 +41,7 @@ getSymbols("AAPL", from = "2020-01-01", to = today(), auto.assign = F)
 ```
 
 * The index is a column of dates. This is different from data frames, which generally do not have row names and indicies are a sequence from 1:nrow.
-* The values are prices and volumes. We’ll be working primarily the `adjusted price` when graphing, since this removes the effect of stock splits.
+* The values are prices and volumes. We’ll be working primarily the `adjusted price` when graphing, since this removes the effect of stock splits. This value is the closing price adjusted for any stock splits or dividends that occured during the time range.
 
 ### Project Setup
 
@@ -71,7 +71,7 @@ First we need to come up with an analysis. A Financial Analysis Code Workflow fo
 9. Add sliders to adjust the analysis.
 10. Add a date range input field to adjust the default time frame.
 
-Before you start an App, you should always have an analysis that you've completed. It should be functioning separately from the web app.
+Before you start an App, you should always have an analysis that you've completed. It should be functioning separately from the web app. Let's start with that.
 
 You can use the following template for your analysis.
 
@@ -85,38 +85,30 @@ KLÄRUNG `OLI`: Detaillierung des tempaltes. Mehr input?
   <div id="clear"></div>
 </div>
 
-**Moving Average Indicators**
-
-????: Vielleicht weiter runter an die passende stelle
-
-In stock analysis, comparing moving averages can help determine if a stock is likely to continue going up or down. This is a simple form of a technical trading pattern.
-
-Short (Fast) Moving Average: Uses a shorter time window (e.g. 20-days). Indicates short term trend.
-Long (Slow) Moving Average: Uses a longer time window (e.g. 50-days). Indicates longterm trend.
-
-
 **App Workflow - Steps**
 
-Tip: Break up your analysis into modular functions. This will help big time in the Shiny Apps.
+Tip: Break up your analysis into modular functions. This will help big time in the Shiny Apps. We will build the following functions:
 
-1. Get Stock list
+1. Get stock lists
 2. Extract symbol based on user input
 3. Get Stock data
 4. Plot stock data
 5. Generate commentary
-6. Test workflow
-7. Save scripts
+6. Save scripts (so that we can update our functions easily)
 
-
-????????? BREAKPOINT
 
 ### 1.1 Get the stock list
 
-Retrieve the stock in a index. The list of stock indicies that we have supplied are: DAX, SP500, DOW, NASDAQ100. You can modify the list as you want. You can add more indices and ETFs.
+We want to have a list of stocks, that the user can select from. We need a function that retrieves all the stocks in a given index. The following function is designed for the three major US indices and the biggest German index containing the 30 largest German blue-chip companies: 
 
---> List of stocks, that the user can select from
+* DAX30
+* SP500
+* DOW30
+* NASDAQ100 
 
-Our approach is retrieving the names and stock symbols from wikipedia:
+You can modify the list as you want. You can add any indices and ETFs to the following scheme. The function is currently built for retrieving the lists (names and symbols) from the corresponding wikipedia pages:
+
+KLÄRUNG `OLI`: Komplette function oder sollen die Teile selbst bauen?
 
 ```r
 get_stock_list <- function(stock_index = "SP500") {
@@ -175,7 +167,9 @@ get_stock_list <- function(stock_index = "SP500") {
 }
 ```
 
-*Example calls*
+*Example function calls*
+
+Let's test the function. Default is the German DAX. To retrieve other lists, just change the argument.
 
 ```r
 stock_list_lst <- get_stock_list()
@@ -205,28 +199,32 @@ stock_list_lst
 
 ### 1.2 Extract Symbol based on user input
 
+As shown above, we need the stock symbols from the returned lists. 
+
+This could be an example user input. 
+
 ```r
 user_input <- "AAPL, Apple Inc."
 ```
 
+Build a function that extracts `AAPL` from that input. You can use `stringr::str_split()` in combination with `purrr::pluck()` (helps us drill into lists).
+
 *Test code*
 
-`purrr::pluck` helps us drill into lists
-
 ```r
-user_input %>% str_split(pattern = ", ") %>% purrr::pluck(1, 1)
+user_input %>% ... %>% ...
 ## [1] "AAPL"
 ```
 
-*Function*
+*Modularize (function)*
 
 ```r
 get_symbol_from_user_input <- function(user_input) {
-    user_input %>% str_split(pattern = ", ") %>% purrr::pluck(1, 1)
+    user_input %>% ... %>% ... 
 }
 ```
 
-*Example calls*
+*Example function calls*
 
 ```r
 "ADS.DE, Adidas" %>% get_symbol_from_user_input()
@@ -238,15 +236,21 @@ get_symbol_from_user_input <- function(user_input) {
 
 ### 1.3 Get stock data
 
-* `quantmod::getSymbols()` uses a financial symbol to collect data from financial APIs (e.g. yahoo finance).
-* Adjusted Closing Price: Thise value is the closing price adjusted for any stock splits or dividends that occured during the time range.
-* `rollmean()` calculates a rolling average (vectorized) from the zoo package
+In this step we are retrieving the stock prices for a given symbol in a given time frame. Addtionally, we are adding two columns for the moving averages. In stock analysis, comparing moving averages can help determine if a stock is likely to continue going up or down. This is a simple form of a technical trading pattern:
 
-Pull in last 180 days of stock history (default)
+* Short (Fast) Moving Average: Uses a shorter time window (e.g. 20-days). Indicates short term trend.
+* Long (Slow) Moving Average: Uses a longer time window (e.g. 50-days). Indicates longterm trend.
+
+* `rollmean()` calculates a rolling average (vectorized) from the `zoo` package (will be loaded with the `quantmod` package.)
+  + Because there might be missing values in the retrieved data, we need to set the `fill` argument to `NA`
+  + By default the rolling average is being centered (there will probably show up less NA values at the beginning than expected. Example: If we took an average of the first 5 values, there should be 4 NA values at the top). We provide the argument called `align` and pass the value `right`. 
+* `timetk::tk_tbl` makes it easy to convert the `xts` object from the `getSymbols()` function to a `tibble` object. Similar to `as_tibble()`.
+
+Pull in last 180 days of stock history (default), calculate a 5-day short movering average and a 50-day long moving average:
 
 *Test code*
 
-* set values for testing
+Set values for testing
 
 ```r
 from   <- today() - days(180) 
@@ -255,28 +259,34 @@ to     <- today() # or something int this format "2021-01-07"
 
 ```r
 # Retrieve market data
-"AAPL" %>% quantmod::getSymbols(src         = "yahoo", 
-                                from        = from, 
-                                to          = to, 
-                                auto.assign = FALSE) %>% 
+"AAPL" %>% quantmod::getSymbols(
+              src         = "yahoo", 
+              from        = ..., 
+              to          = ..., 
+              auto.assign = FALSE) %>% 
     
-                                # Convert to tibble
-                                timetk::tk_tbl(preserve_index = T, 
-                                               # rename_index   = "date",
-                                               silent         = T) %>% 
+              # Convert to tibble
+              timetk::tk_tbl(preserve_index = T, 
+              silent         = T) %>% 
     
-                                # Modify tibble 
-                                set_names(c("date", "open", "high", "low", "close", "volume", "adjusted")) %>% 
-                                drop_na() %>%
-                                dplyr::mutate(date = lubridate::as_date(date)) %>% 
-                                dplyr::select(date, adjusted) %>%
+              # Modify tibble 
+              set_names(c("date", "open", "high", "low", "close", "volume", "adjusted")) %>% 
+              drop_na() %>%
+                                
+              # Convert the date column to a date object (I suggest a lubridate function)
+              dplyr::... %>% 
+              # Select the date and the adjusted column
+              dplyr::... %>%
     
-                                # Add moving averages
-                                mutate(mavg_short = rollmean(adjusted, k = 5,  fill = NA, align = "right")) %>% 
-                                mutate(mavg_long  = rollmean(adjusted, k = 50, fill = NA, align = "right"))
+              # Add the moving averages
+              # name the columns mavg_short and mavg_long
+              dplyr::...(... = ...(..., ...,  fill = NA, align = "right")) %>% 
+              dplyr::...(... = ...(..., ...,  fill = NA, align = "right"))
 ```
 
-*Fucntion*
+*Modularize (function)*
+
+Basically, you just need to copy your code from above into the `function` function.
 
 ```r
 get_stock_data <- function(stock_symbol, 
@@ -285,23 +295,12 @@ get_stock_data <- function(stock_symbol,
                            mavg_short = 20, mavg_long = 50) {
     
     stock_symbol %>% quantmod::getSymbols( 
-        src         = "yahoo", 
-        from        = from, 
-        to          = to, 
-        auto.assign = FALSE) %>% 
-        timetk::tk_tbl(preserve_index = T, 
-                       silent         = T) %>% 
-        set_names(c("date", "open", "high", "low", "close", "volume", "adjusted")) %>% 
-        drop_na() %>%
-        dplyr::mutate(date = lubridate::as_date(date)) %>% 
-        dplyr::select(date, adjusted) %>%
-        mutate(mavg_short = rollmean(adjusted, k = mavg_short, fill = NA, align = "right")) %>%
-        mutate(mavg_long  = rollmean(adjusted, k = mavg_long,  fill = NA, align = "right"))
+        ...
     
 }
 ```
 
-*Examples*
+*Example function calls*
 
 ```r
 stock_data_tbl <- get_stock_data("AAPL", from = "2020-06-01", to = "2021-01-12", mavg_short = 5, mavg_long = 8)
@@ -324,11 +323,13 @@ stock_data_tbl <- get_stock_data("AAPL", from = "2020-06-01", to = "2021-01-12",
 
 ### 1.4 Plot the stock data
 
+Now that we are able to pull in the data, we can easily plot a time series diagram with `ggplot` and `ggplotly` 
+
 factor keeps the order of our legend matching the order of our data columns
 ggplot has to be grouped <<- see my stackoverflow answer
 Add themes or change the style as you want
 
-*test*
+*Test code*
 
 ```r
 g <- stock_data_tbl %>% 
@@ -352,6 +353,12 @@ ggplotly(g)
 ```
 
 <iframe width="100%" height="600" name="iframe" frameBorder="0" src="/img/courses/dat_sci/14/stock_plot.html"></iframe>
+
+<iframe width="100%" height="600" name="iframe" frameBorder="0" src="/img/courses/dat_sci/14/g1_dynamic.html"></iframe>
+
+{{< plotly json="/img/courses/dat_sci/14/test.json" height="500px" modebar="false">}}
+
+??????????? DOES NOT WORK
 
 *Modularize (function)*
 
