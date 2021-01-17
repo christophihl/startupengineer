@@ -14,19 +14,13 @@ menu:
 weight: 16
 ---
 
-The goal of this session is to teach you how to develop a shiny application. 
+The goal of this session is to teach you how to develop a shiny application without the use of `flexdeshboard`.
 
-## 1 - Stock Analyzer Application <i class="fab fa-r-project" aria-hidden="true"></i> &nbsp;
+## 1 - Functions
 
-Your second challenge is going to be developing a **stock analyzer app** - a fully functional sotck analysis application built with shiny.
+Your second challenge is going to be developing a **stock analyzer app** - a fully functional stock analysis application built with `shiny`.
 
-The application will be capable of showing any stocks listed in the S&P500, DOW, NASDAQ or DAX selected by the user.
-On top, users will be able to analyze trends with chosen parameters based on moving averages.
-
-You're building this!
-
-`@JOSCHKA`
-<< INSERT IMAGE or embedd APP >>
+The application will be capable of showing any stocks listed in the S&P500, DOW, NASDAQ or DAX selected by the user. On top, users will be able to analyze trends with chosen parameters based on moving averages.
 
 <a href="https://cran.r-project.org/web/packages/quantmod/index.html" target="_blank">
 <img src="/img/icons/logo_quantmod.png" align="right" style="height:100px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
@@ -119,7 +113,8 @@ We want to have a list of stocks, that the user can select from. We need a funct
 You can modify the list as you want. You can add any indices and ETFs to the following scheme. The function is currently built for retrieving the lists (names and symbols) from the corresponding wikipedia pages:
 
 ```r
-get_stock_list <- function(stock_index = "SP500") {
+# 1.0 GET STOCK LIST ----
+get_stock_list <- function(stock_index = "DAX") {
     
     # Control for upper and lower case
     index_lower <- str_to_lower(stock_index)
@@ -133,44 +128,36 @@ get_stock_list <- function(stock_index = "SP500") {
     # Control for different currencies and different column namings in wiki
     vars <- switch(index_lower,
                    dax    = list(wiki     = "DAX", 
-                                 columns  = c("Ticker symbol", "Company"),
-                                 currency = "euro"),
+                                 columns  = c("Ticker symbol", "Company")),
                    sp500  = list(wiki     = "List_of_S%26P_500_companies", 
-                                 columns  = c("Symbol", "Security"),
-                                 currency = "dollar"),
+                                 columns  = c("Symbol", "Security")),
                    dow    = list(wiki     = "Dow_Jones_Industrial_Average",
-                                 columns  = c("Symbol", "Company"),
-                                 currency = "dollar"),
+                                 columns  = c("Symbol", "Company")),
                    nasdaq = list(wiki     = "NASDAQ-100",
-                                 columns  = c("Ticker", "Company"),
-                                 currency = "dollar")
+                                 columns  = c("Ticker", "Company"))
     )
     
     # Extract stock list depending on user input
-    stock_list_tbl <- read_html(glue("https://en.wikipedia.org/wiki/{vars$wiki}")) %>% 
+    read_html(glue("https://en.wikipedia.org/wiki/{vars$wiki}")) %>% 
                         
-                        # Extract table from wiki
-                        html_nodes(css = "#constituents") %>% 
-                        html_table() %>% 
-                        dplyr::first() %>% 
-                        as_tibble(.name_repair = "minimal") %>% 
-                        # Select desired columns (different for each article)
-                        dplyr::select(vars$columns) %>% 
-                        # Make naming identical
-                        set_names(c("symbol", "company")) %>% 
+        # Extract table from wiki
+        html_nodes(css = "#constituents") %>% 
+        html_table() %>% 
+        dplyr::first() %>% 
+        as_tibble(.name_repair = "minimal") %>% 
+        # Select desired columns (different for each article)
+        dplyr::select(vars$columns) %>% 
+        # Make naming identical
+        set_names(c("symbol", "company")) %>% 
                         
-                        # Clean (just relevant for DOW)
-                        mutate(symbol = str_remove(symbol, "NYSE\\:[[:space:]]")) %>% 
+        # Clean (just relevant for DOW)
+        mutate(symbol = str_remove(symbol, "NYSE\\:[[:space:]]")) %>% 
         
-                        # Sort
-                        arrange(symbol) %>%
-                        # Create the label for the dropdown list (Symbol + company name)
-                        mutate(label = str_c(symbol, company, sep = ", ")) %>%
-                        dplyr::select(label)
-    
-    # Return currency and the stock list
-    return(list(currency     = vars$currency,
-                constituents = stock_list_tbl))
+        # Sort
+        arrange(symbol) %>%
+        # Create the label for the dropdown list (Symbol + company name)
+        mutate(label = str_c(symbol, company, sep = ", ")) %>%
+        dplyr::select(label)
     
 }
 ```
@@ -180,15 +167,11 @@ get_stock_list <- function(stock_index = "SP500") {
 Let's test the function. Default is the German DAX. To retrieve other lists, just change the argument.
 
 ```r
-stock_list_lst <- get_stock_list("DAX")
+stock_list_tbl <- get_stock_list()
 # get_stock_list("DOW")
 # get_stock_list("SP500")
 
-stock_list_lst
-## $currency
-## [1] "euro"
-## 
-## $constituents
+stock_list_tbl
 ## # A tibble: 30 x 1
 ##    label                 
 ##    <chr>                 
@@ -256,7 +239,7 @@ In this step we are retrieving the stock prices for a given symbol in a given ti
   + By default the rolling average is being centered (there will probably show up less NA values at the beginning than expected. Example: If we took an average of the first 5 values, there should be 4 NA values at the top). We provide the argument called `align` and pass the value `right`. 
 * `timetk::tk_tbl` makes it easy to convert the `xts` object from the `getSymbols()` function to a `tibble` object. Similar to `as_tibble()`.
 
-Pull in last 180 days of stock history (default), calculate a 5-day short movering average and a 50-day long moving average:
+Pull in last 180 days of stock history (default), calculate a 5-day short moving average and a 50-day long moving average. Add a new column with the currency. You can set it to "EUR" if the Symbol contains `.DE` and to "USD" otherwise.
 
 *Test code*
 
@@ -278,20 +261,26 @@ to     <- today() # or something int this format "2021-01-07"
               # Convert to tibble
               timetk::tk_tbl(preserve_index = T, 
               silent         = T) %>% 
+              
+              # Add currency column (based on symbol)
+              mutate(currency = case_when(
+                    str_detect(names(.) %>% last(), "...") ~ "...",
+                    TRUE                                   ~ "...")) %>% 
     
               # Modify tibble 
-              set_names(c("date", "open", "high", "low", "close", "volume", "adjusted")) %>% 
+              set_names(c("date", "open", "high", "low", "close", "volume", "adjusted", "currency")) %>% 
               drop_na() %>%
                                 
               # Convert the date column to a date object (I suggest a lubridate function)
               dplyr::... %>% 
-              # Select the date and the adjusted column
-              dplyr::... %>%
     
               # Add the moving averages
               # name the columns mavg_short and mavg_long
               dplyr::...(... = ...(..., ...,  fill = NA, align = "right")) %>% 
-              dplyr::...(... = ...(..., ...,  fill = NA, align = "right"))
+              dplyr::...(... = ...(..., ...,  fill = NA, align = "right")) %>% 
+              
+              # Select the date and the adjusted column
+              dplyr::select(date, adjusted, mavg_short, mavg_long, currency)
 ```
 
 *Modularize (function)*
@@ -337,7 +326,7 @@ stock_data_tbl <- get_stock_data("AAPL", from = "2020-06-01", to = "2021-01-12",
 Now that we are able to pull in the data, we can easily plot a time series diagram with `ggplot` and `ggplotly`. 
 
 * Convert to long format (factors keep the order of our legend matching the order of our data columns)
-* ggplot has to be grouped <<- see my stackoverflow answer `@JOSCHKA`
+* For line graphs, the data points must be grouped so that it knows which points to connect. In this case, it is simple -- all points should be connected, so `group=legend`. When more variables are used and multiple lines are drawn, the grouping for lines is usually done by variable.
 * You can add themes or change the style as you want
 
 *Test code*
@@ -347,8 +336,8 @@ g <- stock_data_tbl %>%
     
      # convert to long format
      pivot_longer(...    = ..., 
-                  ...    = ..., 
-                  ...    = ..., 
+                  ...    = "legend", 
+                  ...    = "value", 
                   names_ptypes = list(legend = factor())) %>% 
     
      # ggplot
@@ -374,16 +363,17 @@ Add this function to your script and insert the argument `scale_y_continuous()` 
 ```r
 currency_format <- function(currency) {
     
-    if (currency == "dollar") { x <- scales::dollar_format(largest_with_cents = 10) }
-    if (currency == "euro")   { x <- scales::dollar_format(prefix = "", suffix = " €",
-                                     big.mark = ".", decimal.mark = ",",
-                                     largest_with_cents = 10)}
-    
+    if (currency == "dollar") 
+    { x <- scales::dollar_format(largest_with_cents = 10) }
+    if (currency == "euro")   
+    { x <- scales::dollar_format(prefix = "", suffix = " €",
+                                 big.mark = ".", decimal.mark = ",",
+                                 largest_with_cents = 10)}
     return(x)
 }
 
 # Add this to your plot function
-## + scale_y_continuous(labels = currency_format(stock_list_lst %>% purrr::pluck("currency")))
+## + scale_y_continuous(labels = stock_data_tbl %>% pull(currency) %>% first() %>% currency_format()) +
 ```
 
 
@@ -406,22 +396,6 @@ plot_stock_data <- function(stock_data) {
 "ADS.DE" %>% 
     get_stock_data() %>%
     plot_stock_data()
-```
-
-
-`@JOSCHKA` : DAS BRAUCHEN WIR NICHT UND KANN RAUS ODER?
-
-*Example function calls*
-
-We have to add another argument to the `plot_stock_data()` function:
-
-```r
-stock_list_lst <- get_stock_list()
-"ADS.DE" %>% 
-    get_stock_data() %>%
-    plot_stock_data(stock_data = .,
-                    index_data = stock_list_lst)
-
 ```
 
 ### 1.5 - Trend Analysis
@@ -498,7 +472,7 @@ Let's test our whole workflow.
 "ADS.DE, Adidas" %>% 
     get_symbol_from_user_input() %>%
     get_stock_data(from = from, to = to ) %>%
-    # plot_stock_data()
+    # plot_stock_data() %>%
     generate_commentary(user_input = "ADS.DE, Adidas")
 ## In reviewing the stock prices of ADS.DE, Adidas, the 20-day moving average is above the 50-day moving average, indicating positive trends
 ```
@@ -513,17 +487,14 @@ fs::dir_create("00_scripts") #create folder
 
 # write functions to an R file
 dump(
-    list = c("get_stock_list", "get_symbol_from_user_input", "get_stock_data", "plot_stock_data", "generate_commentary"),
+    list = c("get_stock_list", "get_symbol_from_user_input", "get_stock_data", "plot_stock_data", "currency_format", "generate_commentary"),
     file = "00_scripts/stock_analysis_functions.R", 
     append = FALSE) # Override existing 
 ```
 
- 
-## 2 Stock Analyzer - Creating the Layout with Shiny
+## 2 Layout
 
-Now that we have all of our functions, we can start to build our app. Let's start with building the layout first. The layout refers to the User Interface (Design & Structure of our App)
-
-* Download File template (01_stock_analyzer_layout.R)
+Now that we have all of our functions, we can start to build our app. Let's start with building the layout first. The layout refers to the User Interface (Design & Structure of our App). You can download the following template:
 
 <!-- DOWNLOADBOX -->
 <div id="header">Website</div>
@@ -533,12 +504,12 @@ Now that we have all of our functions, we can start to build our app. Let's star
   <div id="clear"></div>
 </div>
 
-RStudio IDE will alter it's functionality once it recognizes we are building a Shiny App (buttons top right of the window)
+RStudio IDE will alter it's functionality once it recognizes we are building a Shiny App (there appears a `Run App` button at top right of the window to start your app).
 
 There are 3 components of a Shiny App
 
 1. UI
-  +  `ui`: A function that is built using nested HTML componets. More importantly, this function controls to look & appearance of our web application.
+  +  `ui`: A function that is built using nested HTML components. More importantly, this function controls to look & appearance of our web application.
     + `fluidPage()` crates a Web Page that we can add elements to.
 2. Server
   + `server`: A special function that is setup with an input, output & session. More important, this is where reactive code is run.
@@ -564,11 +535,7 @@ Run App Button --> Result in Viewer
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_empty.png">}}
 
-You see the title
-
-If you inspect the HTML file (right click ...) in the <head> node ... and pretty much an empty body (container-fluid). divisions.
-
-see for yourself. this function just produces some HTML code with an empty division (div):
+As for now you only see the title in the tab. If you inspect the HTML file (right click --> Inspect Element), you will see the &lt;title&gt; node in the &lt;head&gt; node as well as pretty much an empty body (the container-fluid division). You can see for yourself what the function `fluidPage()` creates. This function just produces some HTML code with an empty division &lt;div&gt;&lt;/div&gt;:
 
 ```r
 fluidPage(title = "Stock Analyzer")
@@ -577,9 +544,10 @@ fluidPage(title = "Stock Analyzer")
 
 Now let's assemble every necessary part of our layout.
 
-### 2.1 Making the Header of our web app
+### 2.1 - Header
+*Making the Header of our web app*
 
-First we want to start playing around with this fluidPage. This is how shiny allows us to build applications by changing the underlying HTML code.
+First we want to start playing around with this `fluidPage()` function. This is how shiny allows us to build applications by changing the underlying HTML code.
 
 ```
 ui <- fluidPage(
@@ -590,12 +558,11 @@ ui <- fluidPage(
 )
 ```
 
-Add new components. Keep your app organized with comments. Use the outline to navigate your app.
+Add new components (divisions, headers and paragraphs). Keep your app organized with comments. Use the outline to navigate your app.
 
-* `div()` function: Creates an HTML division. It's used to create sections in your app (<div></div>).
-
-* `h1()`: Creates an H1 Header (largest size of header) (<h1></h1>).
-* `p()`: Creates an paragraph HTML tag (<p></p>)
+* `div()`: Creates an HTML division. It's used to create sections in your app (&lt;div&gt;&lt;/div&gt;).
+* `h1()`: Creates an H1 Header (largest size of header) (&lt;h1&gt;&lt;/h1&gt;).
+* `p()`: Creates an paragraph HTML tag (&lt;p&gt;&lt;/p&gt;)
 
 ```r
 # 1.0 HEADER ----
@@ -608,13 +575,14 @@ div(
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_header.png">}}
 
 
-### 2.2 Adding the Main Application UI Section
+### 2.2 - Main Section
+*Adding the Main Application UI Section*
 
-Essentially we are building a website, that contains different sections. Let's add a section for the dropdown list and the plot(?).
+Essentially we are building a website, that contains different sections. Let's add sections for the input (dropdown list etc.) and the output (plot).
 
-* `column()` generates a bootstrap grid column with width specified in units up to 12 units wide
+* `column()` generates a bootstrap (= open-source CSS framework) grid column with width specified in units up to 12 units wide
 
-ADD INFORMATION ABOUT BOOTSTRAP?!
+We could split our layout like this: 4 units on the left (input) and 8 units on the right (output). If you dragged your website, it would adjust the content automatically. We call that a Responsive layout (= Depending on the width of your screen, bootstrap adjusts the columns), that helps apps look good on Mobile, Tablet & Desktop devices.
 
 ```r
 # 2.0 APPLICATION UI -----
@@ -624,16 +592,14 @@ div(
 )
 ```
 
-We could split our layout like this: 4 units on the left (dropdown) and 8 units on the right (plot). If you draged your website, it would adjust the content automatically (include bootstrap information here?!). We call that responsive layout (Responsive Layout: Depending on the width of your screen, bootstrap adjusts the columns. This helps apps look good on Mobile, Tablet & Desktop devices).
-
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_cols.png">}}
 
-Shiny has a lot of HTML Helpers: These are bootstrap components that Shiny has turned into functions. One that we want to add is a `wellPanel()`.
+Shiny has a lot of HTML Helpers: These are bootstrap components that Shiny has turned into functions. We want to add a `wellPanel()` and a `pickerInput()`.
 
-* `wellPanel()`: Creates a Bootstrap Well. This is just a diviion that has a gray background. <div class="well"></div>
+* `wellPanel()`: Creates a Bootstrap Well. This is just a division that has a gray background: &lt;div class="well"&gt;&lt;/div&gt;
 * `pickerInput()`: A shinywidgets widget that creates a UI dropdown
 
-Use the function`runApp()` if the "Reload App" button gets hung up. Note that runApp() looks for a file called "app.R". If your app has a file name that is different, just put it in quotes inside of the functio (`runApp("01_stock_analyzer_layout.R")`).
+Use the function`runApp()` if the "Reload App" button gets hung up. Note that `runApp()` looks for a file called "app.R". If your app has a file name that is different, just put it in quotes inside of the function (`runApp("01_stock_analyzer_layout.R")`).
 
 ```r
 # 2.0 APPLICATION UI -----
@@ -659,27 +625,27 @@ div(
 )
 ```
 
-### 2.3 Generating the S&P500 Stock List Dropdown
+### 2.3 - Dropdown List
+*Generating the S&P500 Stock List Dropdown*
 
-Some calculations only need to be performed once. I typically add these to the top of my application (or in a file that we can `source()`). For example we need `get_stock_list()` for our initial set up only once and can place it on top of our script (above the ### UI section).
+Some calculations only need to be performed once. Typically,  those are added to the top of the application (or in a file that we can `source()`). For example we need `get_stock_list()` for our initial set up only once and can place it on top of our script (above the ### UI section).
 
-Let's modify the above added `pickerOnput()` for our use case (the stock list dropdown selection).
-
-Check out the shinyWidgets documentation for more information on available widgets liek pickerInput() and their options. And run `?pickerOptions`
+Let's modify the above added `pickerOnput()` for our use case (the stock list dropdown selection). Check out the shinyWidgets documentation for more information on available widgets like `pickerInput()` and their options. Also run `?pickerOptions` for explanations of the arguments.
 
 Steps:
 
-* Change the choices to stocklist$label
-* Set multiple = F
-* selected = You can filter it to AAPL, but this will fail if AAPL is not present in the stock list. What if AAPL gets removed from the SP500? Or what if the user selects an index like the DAX that AAPL is not part of?
-* set further arguments to the options argumen: 
-  * actionsBox = FALSE,
-  * liveSearch = TRUE
-  * size = 10
+* Change the choices to `stocklist$label`
+* Set `multiple = F`
+* selected = Optional
+* set further arguments to the options argument: 
+  * `actionsBox = FALSE`,
+  * `liveSearch = TRUE`
+  * `size = 10`
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_dropdown.png">}}
 
-### 2.4 Adding the Analyze button
+### 2.4 - Button
+*Adding the Analyze button*
 
 * `actionButton()`: A button that generates a click event. Give it the ID `analyze`.
 * `icon()` let's us use Font Awesome icons (e.g. "download" icon). Use it inside the `icon` argument.
@@ -688,7 +654,8 @@ Steps:
 
 If your run the app and press the button nothing will happen, because we don't have set up any server logics yet.
 
-### 2.5 Inserting the Interactive Time Series Plot into our UI
+### 2.5 - Plot
+*Inserting the Interactive Time Series Plot into our UI*
 
 Add two divisions for the title and for the plot 
 
@@ -699,7 +666,8 @@ For testing purposes you could store the data again at the top of the script (li
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_plot.png">}}
 
-### 2.6  Adding the Analyst Commentary
+### 2.6 - Commentary
+*Adding the Analyst Commentary*
 
 Suggested values:
 
@@ -708,20 +676,20 @@ Suggested values:
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_commentary.png">}}
 
-## 3. Adding Server Functionality
+## 3. Server
+*Adding Server Functionality*
 
 Let's start filling the server function. A helpful documentation is the Shiny cheat sheet (Part Server Opeartions (Reactivity)).
 
-### 3.1 Reactive Symbol Extraction
+### 3.1 Symbol Extraction
+*Reactive Symbol Extraction*
 
-Now you can comment out / remove the stock_data_tbl object at the top, because that is going to be updated depending on the user input. Everything what is needed, is in our source file. we just need to figure out how to use these
+Now you can comment out / remove the `stock_data_tbl` object at the top, because that is going to be updated depending on the user input. Everything what is needed, is in our source file. We just need to figure out how to use these.
 
-We delay Reactions `eventReactive()` (Great for generating reactive values from Button clicks). This functions generates a reactive value only when an event happens. Good for creating reactive values following button clicks. Let's start with plotting out the symbol that the user selects when clicking the analyze Button (`input$analyze`):
+We delay Reactions `eventReactive()`. This function generates a reactive value only when an event happens. That is good for creating reactive values following button clicks. Let's start with plotting out the symbol that the user selects when clicking the analyze Button (`input$analyze`):
 
 * Print the symbol that the user is selecting (inputId = "analyze")
 * Use `renderText()` and `textOutput()` together. These are used to generate HTML text for inside H-tags (headers) and p-tags (paragraphs).
-
-REWRITE, BETTER EXPLANATION
 
 ```r
     # Stock Symbol ----
@@ -735,7 +703,8 @@ REWRITE, BETTER EXPLANATION
 {{< figure src="/img/courses/dat_sci/14/shiny_server_textoutput1.png">}}
 
 
-### 3.2 Reactively Generate the Plot Header - On Button Click
+### 3.2 - Plot Header
+*Reactively Generate the Plot Header - On Button Click*
 
 * output$plot_header <- renderText(stock_symbol())
 * The `eventReactive()` should include `ignoreNULL = FALSE` to allow the App to run on load.
@@ -743,7 +712,8 @@ REWRITE, BETTER EXPLANATION
 {{< figure src="/img/courses/dat_sci/14/shiny_server_textoutput2.png">}}
 
 
-### 3.3 Reactively Import Stock Data - On Symbol Extraction
+### 3.3 - Import Stock Data
+*Reactively Import Stock Data - On Symbol Extraction*
 
 * When `stock_symbol()` changes it will react (reactive()), stock_data_tbl())
 * Use renderPrint() + verbatimTextOutput() when developing your app. It helps to see how the app is processing your code
@@ -773,25 +743,26 @@ output$stock_data <- renderPrint(stock_data(), {
 {{< figure src="/img/courses/dat_sci/14/shiny_server_stock_data.png">}}
 
 
-### 3.4 Reactively Render the Interactive Time Series Plot - On Stock Data Update
+### 3.4 - Render Plot
+*Reactively Render the Interactive Time Series Plot - On Stock Data Update*
 
-
-Instead of rendering the plot data, we want to render the plot. when `stock_data_tbl` changes
+Instead of rendering the plot data, we want to render the plot when `stock_data_tbl` changes.
 
 * `renderPlotly()` and `plotlyOutput()` got together. 
 * `renderPlotly()` will render the interactive plot on the server
 * `plotlyOutput()` plots in the UI
 
-* Sse the ID `plotly_plot`
+* Set the ID `plotly_plot`
 
+### 3.5 - Render Analyst Commentary
+*Reactively Render the Analyst Commentary - On Stock Data Update + Action Button Event*
 
-### 3.5 Reactively Render the Analyst Commentary - On Stock Data Update + Action Button Event
+Same as above.
 
-self explaining
+### 3.6 - Moving average sliders
+*Add moving average sliders to your Stock Analyzer*
 
-### 3.6 Add moving average sliders to your Stock Analyzer
-
-* You can use `hr()` to add breaks
+* You can use `hr()` to add a horizontal line (e.g., horizontal rule).
 * Add Moving Average Functionality
 - UI Placement:
   - Add a horizontal rule between the Analyze button and the new UI.
@@ -802,18 +773,39 @@ self explaining
 
 {{< figure src="/img/courses/dat_sci/14/shiny_server_mavg.png">}}
 
-### 3.7 Add Index selection
+### 3.7 - Index selection
+*Add Index selection*
+
+*UI section*
+
+You have to add `uiOutput('indices')` after the `pickerInput()` function 
+
+*Server section*
+
+```r
+# Create stock list ----    
+output$indices <- renderUI({
+        choices = stock_list_tbl() %>% purrr::pluck("label")
+        pickerInput(
+        ...
+        )
+})
+```
 
 {{< figure src="/img/courses/dat_sci/14/shiny_server_index_selection.png">}}
 
-### 3.8 Add Date Range input
+### 3.8 - Date Range
+*Add Date Range input*
 
 {{< figure src="/img/courses/dat_sci/14/shiny_server_final.png">}}
 
-### 3.9 App Cleanup
+### 3.9 - App Cleanup
 
-Don't forget to remove everything. Commented out stuff, the textOutputs() etc ...
+* Don't forget to remove everything that is not needed for the app. Commented out stuff, the `textOutputs()`, intermediate results for testing purposes etc ...
+* Order the server functions as consistent as possible with your anaylsis workflow. This makes it easier to debug your app and make updates to your app as your analysis changes over time
+* It does not has a lot of theme and functions to it, it just looks like a basic website. You could make it look really cool though and add further functions with bootstrap. But this is beyond the scope of this class. You can use this website https://getbootstrap.com/docs/5.0/getting-started/introduction/ for further information.
 
-Order the server functions as consistent as possible with your anaylsis workflow. This makes it easier to debug your app and mak updates to your app as your analyiss cahgnes over time
+{{< figure src="/img/courses/dat_sci/14/fancy_theme.png">}}
 
-It does not has a lot of theme to it, it just looks like a basic website ... You could make it look really cool though with bootstrap.
+
+
