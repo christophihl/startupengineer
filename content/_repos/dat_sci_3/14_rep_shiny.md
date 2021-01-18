@@ -49,7 +49,7 @@ R Markdown documents are fully reproducible and support dozens of static and dyn
 
 The cheat sheet for Rmarkdown can be reached in RStudio via: `File > Help > Cheatsheets > R Markdown Cheat Sheet`
 
-I have provided a complete `.Rmd` file with the most important information for you. You need to download the zip file called `reporting_rmarkdown.zip`. The file contains a `.Rmd` file and an image folder with an image. The best place to put it (the unzipped content), is the `06_communication` folder of our bike analysis project. 
+I have provided a complete `.Rmd` file with the most important information for you. You need to download the zip file called `reporting_rmarkdown.zip`. The file contains a `.Rmd` file and an image folder with an image. 
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
