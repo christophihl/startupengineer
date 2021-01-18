@@ -57,7 +57,7 @@ Now, we are required to register on [shinyapps.io](https://www.shinyapps.io/).
 One particular advantage is that you can use your GitHub account to register.
 To do so, go to [shinyapps.io - Sign Up](https://www.shinyapps.io/admin/#/signup) and click on `Sign Up with GitHub`.
 
-{{< figure src="/img/courses/dat_sci/15/authorize_github_shinyapps.png" caption="...">}}
+{{< figure src="/img/courses/dat_sci/15/authorize_github_shinyapps.png" caption="shinyapps.io needs an authorization to receive personal data from GitHub.">}}
 
 You will be asked to authorize shinyapps.io to use your GitHub profile information, which facilitates the registration. Of course you can also register without GitHub, if you prefer.
 
@@ -69,7 +69,7 @@ You should see your token there and click on `Show`.
 Then, a window containing with an incomplete R function `rsconnect::setAccountInfo()` with the argument `secret` missing.
 Please never share your secret token with anyone!
 
-{{< figure src="/img/courses/dat_sci/15/copy_token.png" caption="...">}}
+{{< figure src="/img/courses/dat_sci/15/copy_token.png" caption="In this view, the argument `secret` is hidden.">}}
 
 To copy the complete command including all required arguments, either click on `Show secret` and copy the command or click on `Copy to clipboard` and take the command from there.
 
@@ -80,15 +80,19 @@ Now you are ready to publish your app.
 
 To send your application to shinyapps.io, you have to click on the publish icon highlighted by the arrow in the screenshot below.
 
-{{< figure src="/img/courses/dat_sci/15/publish_icon.png" caption="...">}}
+{{< figure src="/img/courses/dat_sci/15/publish_icon.png" caption="After clicking on the publish icon, another screen will pop up.">}}
 
 In the following prompt you should see your files you want to publish and your shinyapp.io account.
 
-{{< figure src="/img/courses/dat_sci/15/publish_prompt.png" caption="...">}}
+{{< figure src="/img/courses/dat_sci/15/publish_prompt.png" caption="All data and code needs to be selected.">}}
 
-Confirming will cause the building of your app on shinyapps.io which especially when done for the first time will take some time.
-That is because ...
-After the first built publishing will become significantly faster.
+Confirming will cause the building of your app on shinyapps.io which - especially when done for the first time - will take some time.
+That is because when you deploy your application, `rsconnect` sends all required packages, their dependencies, your R version and of course your application to shinyapps.io.
+This whole environment from your local machine is replicated on shinyapps.io, that means for example all packages first have to be installed which takes some time.
+Please note, that you should not have any `install.packages()` calls in your code.
+After the first built publishing will become significantly faster as these packages are already installed on your shinyapps.io environment.
+
+When you make changes to your app and want to update your web application, you can also use the function `rsconnect::deployApp("/path/to/your/app")` to add changes manually instead of using the publish button.
 
 
 **4. Dealing with error messages**
@@ -101,17 +105,18 @@ Then, you won't see your web application but an error message stating:
 To get a better understanding of how to troubleshoot, you have to go on shinyapps.io and check the logs for the full error message.
 Go to the application and you will see the tab `Logs` on the top, which will show you what you would usually see in your R console.
 
-{{< figure src="/img/courses/dat_sci/15/error_log.png" caption="...">}}
+{{< figure src="/img/courses/dat_sci/15/error_log.png" caption="Error logs of your applications">}}
 
 Two common errors that often occur when attempting to publish the application for the first time are:
 
-* Your data should be located in your app directory. Copy it in the same directory and change the code accordingly.
+* Your data should be located in your app directory. Copy it in the same directory and change the code accordingly. The application only has access to the data in the application directory or within a subdirectory. Data in a subdirectory must be referenced with relative paths rather than absolute paths.
 * Even if referenced by already loaded packages, all packages need to be installed. Note that you only want to load but do not want install packages in your code. Installing should be done in the console. 
 
 In general, it is good practice to always have a look at the error logs if something has gone wrong.
 In both cases, the logs would have given a useful hint to understand the error.
+Alternatively, entering `rsconnect::showLogs("/path/to/your/app")` will show you the logs directly in RStudio.
 
-If you make changes in your application and want to publish them, you only have to click on the publish button.
+If you make changes in your application and want to publish them, you only have to click on the publish button or use the command explained in step 3.
 You don't have to repeat the other steps.
 
 You can have a look at the published website using the link below:
