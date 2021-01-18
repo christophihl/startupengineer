@@ -807,5 +807,9 @@ output$indices <- renderUI({
 
 {{< figure src="/img/courses/dat_sci/14/fancy_theme.png">}}
 
+## Submission
+Please share your URLs and your student information with us:
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuVemMv7nLaINBWyw0fgIFLipsYUe02aXZwhsV2q6ZnCHhZQ/viewform?embedded=true" width="640" height="1110" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
 
 
