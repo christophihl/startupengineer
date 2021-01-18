@@ -131,4 +131,4 @@ You can have a look at the published website using the link below:
 
 Your challenge is to follow the instructions and publish your application from the previous chapter!
 
-Please provide use with the link to your application!
+Please provide use with the link to your application using the submission form in the next chapter!

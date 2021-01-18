@@ -510,7 +510,7 @@ There are 3 components of a Shiny App
 
 1. UI
   +  `ui`: A function that is built using nested HTML components. More importantly, this function controls to look & appearance of our web application.
-    + `fluidPage()` crates a Web Page that we can add elements to.
+    + `fluidPage()` creates a Web Page that we can add elements to.
 2. Server
   + `server`: A special function that is setup with an input, output & session. More important, this is where reactive code is run.
 3. shinyApp()
@@ -567,7 +567,7 @@ Add new components (divisions, headers and paragraphs). Keep your app organized 
 ```r
 # 1.0 HEADER ----
 div(
-    h1("Stock Analzer")
+    h1("Stock Analzer"),
     p("This is my second shiny project")
 )
 ```
@@ -630,7 +630,7 @@ div(
 
 Some calculations only need to be performed once. Typically,  those are added to the top of the application (or in a file that we can `source()`). For example we need `get_stock_list()` for our initial set up only once and can place it on top of our script (above the ### UI section).
 
-Let's modify the above added `pickerOnput()` for our use case (the stock list dropdown selection). Check out the shinyWidgets documentation for more information on available widgets like `pickerInput()` and their options. Also run `?pickerOptions` for explanations of the arguments.
+Let's modify the above added `pickerInput()` for our use case (the stock list dropdown selection). Check out the shinyWidgets documentation for more information on available widgets like `pickerInput()` and their options. Also run `?pickerOptions` for explanations of the arguments.
 
 Steps:
 
@@ -679,7 +679,7 @@ Suggested values:
 ## 3. Server
 *Adding Server Functionality*
 
-Let's start filling the server function. A helpful documentation is the Shiny cheat sheet (Part Server Opeartions (Reactivity)).
+Let's start filling the server function. A helpful documentation is the Shiny cheat sheet (Part Server Operations (Reactivity)).
 
 ### 3.1 Symbol Extraction
 *Reactive Symbol Extraction*
@@ -697,7 +697,7 @@ We delay Reactions `eventReactive()`. This function generates a reactive value o
         input$stock_selection
     })
 
-    output$selected_symbol <- renderText(stock_symbol())
+    output$selected_symbol <- renderText({stock_symbol()})
 ```
     
 {{< figure src="/img/courses/dat_sci/14/shiny_server_textoutput1.png">}}
@@ -732,11 +732,7 @@ stock_data_tbl <- reactive({
 
 })
 
-output$stock_data <- renderPrint(stock_data(), {
-
-
-
-})
+output$stock_data <- renderPrint({stock_data_table()})
 
 ```
 
@@ -806,6 +802,12 @@ output$indices <- renderUI({
 * It does not has a lot of theme and functions to it, it just looks like a basic website. You could make it look really cool though and add further functions with bootstrap. But this is beyond the scope of this class. You can use this website https://getbootstrap.com/docs/5.0/getting-started/introduction/ for further information.
 
 {{< figure src="/img/courses/dat_sci/14/fancy_theme.png">}}
+
+## <i class="fas fa-laptop-code"></i>&nbsp;Challenge
+
+Your challenge is to complete the app as explained above and publish it on shinyapps.io!
+
+Please provide use with the link to your application in the following submission form!
 
 ## Submission
 Please share your URLs and your student information with us:
