@@ -158,7 +158,13 @@ weight: 15
 
 <br/>
 
+
+
 ## 10) Corporate Governance
+
+* [Zoom Recording](https://www.dropbox.com/s/hqihsordzzj61ml/zoom_4.mp4?dl=0)
+
+
 
 
 <br/>
