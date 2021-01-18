@@ -634,7 +634,7 @@ Let's modify the above added `pickerInput()` for our use case (the stock list dr
 
 Steps:
 
-* Change the choices to `stocklist$label`
+* Change the choices to `stock_list_tbl$label` (`stock_list_tbl` is obtained from function call `get_stock_list()`)
 * Set `multiple = F`
 * selected = Optional
 * set further arguments to the options argument: 
@@ -663,6 +663,7 @@ Add two divisions for the title and for the plot
 * div(get_stock_data(), plot_stock_data())
 
 For testing purposes you could store the data again at the top of the script (like the index list). Now we should have the plot in there.
+We cannot link our stock from the dropdown list with the plot yet.
 
 {{< figure src="/img/courses/dat_sci/14/shiny_layout_plot.png">}}
 
@@ -702,6 +703,7 @@ We delay Reactions `eventReactive()`. This function generates a reactive value o
     
 {{< figure src="/img/courses/dat_sci/14/shiny_server_textoutput1.png">}}
 
+You can see that clicking `Analyze` outputs the symbol of the chosen stock.
 
 ### 3.2 - Plot Header
 *Reactively Generate the Plot Header - On Button Click*
@@ -755,28 +757,31 @@ Instead of rendering the plot data, we want to render the plot when `stock_data_
 
 Same as above.
 
-### 3.6 - Moving average sliders
-*Add moving average sliders to your Stock Analyzer*
-
-* You can use `hr()` to add a horizontal line (e.g., horizontal rule).
-* Add Moving Average Functionality
-- UI Placement:
-  - Add a horizontal rule between the Analyze button and the new UI.
-  - Place the Sliders below the button and horizontal rule
-- Short MAVG Requirements: Starting value of 20, min of 5, max of 40
-- Long MAVG Requirements: Starting value of 50, min of 50, max of 120
-- Server requirements: Update immediately on change
-
-{{< figure src="/img/courses/dat_sci/14/shiny_server_mavg.png">}}
-
-### 3.7 - Index selection
+### 3.6 - Index selection
 *Add Index selection*
+
+Until now, we were just able to display stocks from one particular index.
+In order to extend our app, we want to include other indices as well and let the user select his preferred index using a dropdown menu.
+
+A few changes in our app are necessary:
 
 *UI section*
 
-You have to add `uiOutput('indices')` after the `pickerInput()` function 
+In the UI Section, the `pickerInput()` should now allow to choose from our different indices.
+`uiOutput("indices")`, which should be added directly after that, will display the list of stocks in the selected index.
+
+```r
+# Changes in UI  
+pickerInput(..), # select index
+
+uiOutput("indices"), # only stock from selected index are shown (computation in server)
+```
 
 *Server section*
+
+In the server section, the application generates the picker input for the stocks based on the selected index.
+First, you have to define `stock_list_tbl` which reacts to the index selection and then extract the stock labels.
+Having those, you can again use the picker input for the stocks (although this time in the server section.)
 
 ```r
 # Create stock list ----    
@@ -790,8 +795,24 @@ output$indices <- renderUI({
 
 {{< figure src="/img/courses/dat_sci/14/shiny_server_index_selection.png">}}
 
+### 3.7 - Moving average sliders
+*Add moving average sliders to your Stock Analyzer*
+
+* You can use `hr()` to add a horizontal line (e.g., horizontal rule).
+* Add Moving Average Functionality
+- UI Placement:
+  - Add a horizontal rule between the Analyze button and the new UI.
+  - Place the Sliders below the button and horizontal rule
+- Short MAVG Requirements: Starting value of 20, min of 5, max of 40
+- Long MAVG Requirements: Starting value of 50, min of 50, max of 120
+- Server requirements: Update immediately on change. We don't need `eventReactive()` but the changes in the slider input should be directly have an impact on `stock_data_tbl()`.
+
+{{< figure src="/img/courses/dat_sci/14/shiny_server_mavg.png">}}
+
 ### 3.8 - Date Range
 *Add Date Range input*
+
+As for the moving average, we want the plot to update immediately when we change the date (without clicking `Analyze`).
 
 {{< figure src="/img/courses/dat_sci/14/shiny_server_final.png">}}
 
