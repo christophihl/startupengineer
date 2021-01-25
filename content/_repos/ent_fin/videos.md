@@ -171,6 +171,7 @@ weight: 15
 
 ## 11) Exits
 
+* [Zoom Recording](https://www.dropbox.com/s/sjban93nihqtxd9/zoom_5.mp4?dl=0)
 
 
 <br/>
