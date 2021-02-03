@@ -126,17 +126,18 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 20th | Introduction |
-| 2 | April 27th | Customer Segmentation |
-| 3 | May 4th | Business Model Design |
-| 4 | May 11th | Revenue Models & Pricing |
-| 5 | May 18th | Market Sizing & Competition Analysis| 
-| 6 | May 25th | Lean Startup & Experimentation |
-| - | June 1st | Pfingsten Holiday |
-| 7 | June 8th | Intermediate Pitches |
-| 8 | June 15th | Marketing |
-| 9 | June 22th | Sales |
-| 10 | June 29th | Scaling Operations |
-| 11 | July 6th | Financial Projections |
-| 12 | July 13th | Final Startup Pitches |
+| 1 | April 12th | Introduction |
+| 2 | April 19th | Customer Segmentation |
+| 3 | April 26th | Business Model Design |
+| 4 | May 3rd | Revenue Models & Pricing |
+| - | May 10th | Holiday |
+| 5 | May 17th | Market Sizing & Competition Analysis| 
+| - | May 24th | Pfingsten Holiday |
+| 6 | May 31st | Lean Startup & Experimentation |
+| 7 | June 7th | Intermediate Pitches |
+| 8 | June 14th | Marketing |
+| 9 | June 21st | Sales |
+| 10 | June 28th | Scaling Operations |
+| 11 | July 5th | Financial Projections |
+| 12 | July 12th | Final Startup Pitches |
 | 13 | July 20th | Submission of Final Pitch Deck |
