@@ -74,7 +74,7 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
 
 
 
-<iframe src="https://christophihl.github.io/reveal_presentations/org_ent_teams/" title="Organizing Entrepreneurial Teams" width="800" height="600" marginheight="0" marginwidth="0" frameBorder="0.5">
+<iframe src="https://christophihl.github.io/reveal_presentations/org_ent_teams/" title="Organizing Entrepreneurial Teams" width="842" height="595" marginheight="0" marginwidth="0" frameBorder="0.5">
   <p>Your browser does not support iframes.</p>
 </iframe>
 
