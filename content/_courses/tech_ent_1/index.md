@@ -7,11 +7,11 @@ authors:
 weight: 10
 tags: []
 categories: []
-date: "2020-03-25T00:00:00Z"
-lastMod: "2020-03-25T00:00:00Z"
+date: "2021-02-04T00:00:00Z"
+lastMod: "2021-02-04T00:00:00Z"
 showauthordate: false
 featured: true
-draft: true
+draft: false
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
@@ -91,16 +91,16 @@ This course module can prepare student for the following career paths:
 
 ### Grading
 
-* `40%` (team): Development and pitch of an own startup project
+* `35%` (team): Development and pitch of an own startup project
 * `35%` (team): Case solutions submitted in/after class
 * `15%` (individual): Three case memos submitted before class
-* `10%` (individual): Class participation
+* `15%` (individual): Class participation
 
 ***
 
 ### Registration
 
-* Open from April 6th until April 18th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=fdcd1a92820187a11787a272da3cbaf8)
+* To open soon on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
 
 ***
 
@@ -128,16 +128,16 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 | --- | --- | --- |
 | 1 | April 12th | Introduction |
 | 2 | April 19th | Customer Segmentation |
-| 3 | April 26th | Business Model Design |
-| 4 | May 3rd | Revenue Models & Pricing |
+| 3 | April 26th | Technology and Product Development |
+| 4 | May 3rd | Competition and Market Analysis |
 | - | May 10th | Holiday |
-| 5 | May 17th | Market Sizing & Competition Analysis| 
+| 5 | May 17th | Platform Business Models | 
 | - | May 24th | Pfingsten Holiday |
-| 6 | May 31st | Lean Startup & Experimentation |
-| 7 | June 7th | Intermediate Pitches |
-| 8 | June 14th | Marketing |
-| 9 | June 21st | Sales |
-| 10 | June 28th | Scaling Operations |
-| 11 | July 5th | Financial Projections |
+| 6 | May 31st | Revenue Models & Pricing |
+| 7 | June 7th | Lean Startup & Experimentation |
+| 8 | June 14th | Growth Management & Metrics |
+| 9 | June 21st | Marketing |
+| 10 | June 28th | Sales |
+| 11 | July 5th | Financial Analysis |
 | 12 | July 12th | Final Startup Pitches |
-| 13 | July 20th | Submission of Final Pitch Deck |
+| 13 | July 19th | Submission of Final Pitch Deck |
