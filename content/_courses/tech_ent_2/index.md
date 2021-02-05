@@ -78,7 +78,7 @@ Upon completion of this course module, students will be able to:
 * Design new business models by gathering and combining relevant ideas, facts and information 
 * Evaluate business opportunities and derive judgment about next steps & decisions
 
-This course module can prepare student for the following career paths: 
+This course module can prepare students for the following career paths: 
 * Startup founder
 * Early employee in a startup
 * New business development in established corporations
@@ -91,10 +91,10 @@ This course module can prepare student for the following career paths:
 
 ### Grading [^1]
 
-* `40%` (team): Development and pitch of an own startup project
+* `35%` (team): Development and pitch of an own startup project
 * `35%` (team): Case solutions submitted in/after class
 * `15%` (individual): Three case memos submitted before class
-* `10%` (individual): Class participation
+* `15%` (individual): Class participation
 
 [^1]: Master students enrolled in the entire module are graded based on all four components. NTW (Betrieb & Management) students enrolled in 2 ECTS are graded based on the startup project, students enrolled in 4 ECTS are graded based on the startup project *and* case solutions.
 
@@ -107,8 +107,8 @@ This course module can prepare student for the following career paths:
 ***
 
 ### Time & Location
-* `Entrepreneurship`: Monday, 13.00 - 14.30, Buidling M, Room 0526
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.30, Buidling M, Room 1582
+* `Entrepreneurship`: Monday, 13.00 - 14.30, Building M, Room 0526
+* `Creation of Business Opportunities`: Monday, 15.00 - 17.30, Building M, Room 1582
 
 {{% alert warning %}}
 As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
@@ -129,8 +129,8 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 | --- | --- | --- |
 | 1 | April 12th | Introduction |
 | 2 | April 19th | Customer Segmentation |
-| 3 | April 26th | Technology and Product Development |
-| 4 | May 3rd | Competition and Market Analysis |
+| 3 | April 26th | Technology & Product Development |
+| 4 | May 3rd | Competition & Market Analysis |
 | - | May 10th | Holiday |
 | 5 | May 17th | Platform Business Models | 
 | - | May 24th | Pfingsten Holiday |
