@@ -7,7 +7,6 @@ authors:
 tags:
 categories:
 date: "2020-04-05T00:00:00Z"
-date: "2020-04-05T00:00:00Z"
 featured: false
 draft: false
 
