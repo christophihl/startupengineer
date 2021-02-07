@@ -12,6 +12,7 @@ address:
   country: Germany
 
 summary: A Natural Field Experiment of the Autonomy in Choosing Teams and Ideas.
+
 abstract: "Scholars have suggested that autonomy can lead to better entrepreneurial team performance. Yet, there are different types of autonomy and they come at a cost. We shed light on whether two fundamental organizational design choices granting teams autonomy to (1) choose project ideas to work on and (2) choose team members to work with, affect performance. We run a natural field experiment involving 939 students in a lean startup entrepreneurship course over 11 weeks. The aim is to disentangle the separate and joint effects of granting autonomy in choosing teams and choosing ideas compared to a baseline treatment with pre-assigned ideas and team members. We find that teams with autonomy in choosing either ideas or team members outperform teams in the baseline treatment as measured by pitch-deck performance. The effect of choosing ideas is significantly stronger than the effect of choosing teams. However, the performance gains
 vanish for teams that are granted full autonomy of choosing both ideas and teams. This suggests the two forms of autonomy are substitutes. Causal mediation analysis reveals that the main effects of choosing ideas or teams can partly be explained by a better match of ideas with team members interests and prior network contacts among team members, respectively. While homophily and lack of team diversity cannot explain the performance drop among teams with full autonomy, our results suggest that self-selected teams fall prey to overconfidence and complacency too early to fully exploit the potential of their chosen idea. We discuss the implications of these findings for research on organizational design, autonomy, and innovation."
 
@@ -57,7 +58,7 @@ slides: "https://christophihl.github.io/reveal_presentations/org_ent_teams/"
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects:
-- internal-project
+- external-project_1
 
 # Enable math on this page?
 math: true
