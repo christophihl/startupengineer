@@ -16,34 +16,34 @@
   {{ end }}
 
 
-  {{ if not (in (slice "talk" "page") $page.Type) }}
   {{ if $page.Params.showauthordate | default "true" }}
   <span class="article-date">
-    {{ $date := $page.Lastmod.Format site.Params.date_format }}
-    {{ if eq $page.Type "publication" }}
-      {{ $date = $page.Date.Format (site.Params.publications.date_format | default "January, 2006") }}
-    {{ else }}
-      {{ if ne $page.Params.Lastmod $page.Params.Date }}
-          {{ i18n "last_updated" }}
-      {{ end }}
-    {{ end }}
+    {{ $date := $page.Date.Format "January 2, 2006" }}
     {{ $date }}
   </span>
   {{ end }}
-  {{ end }}
 
-  {{ if and (eq $is_list 1) (eq $page.Type "publication") }}
+
+  {{ if (eq $page.Type "publication") }}
   <span class="middot-divider"></span>
   <span class="pub-publication">
-    {{ if $page.Params.publication_short }}
-      {{ $page.Params.publication_short | markdownify }}
-    {{ else if $page.Params.publication }}
+    {{ if $page.Params.publication }}
       {{ $page.Params.publication | markdownify }}
     {{ end }}
   </span>
   {{ end }}
 
-  {{ if and (eq $page.Type "post") (not (or (eq site.Params.reading_time false) (eq $page.Params.reading_time false))) }}
+  {{ if (eq $page.Type "_talks") }}
+  <span class="middot-divider"></span>
+  <span class="event">
+    {{ if $page.Params.event }}
+      {{ $page.Params.event | markdownify }}
+    {{ end }}
+  </span>
+  {{ end }}
+
+
+  {{ if and (eq $page.Type "_news") (not (or (eq site.Params.reading_time false) (eq $page.Params.reading_time false))) }}
   <span class="middot-divider"></span>
   <span class="article-reading-time">
     {{ $page.ReadingTime }} {{ i18n "minute_read" }}

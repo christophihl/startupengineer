@@ -69,7 +69,7 @@ weight: 10
 
 <br/>
 
-## 11) Exits
+## [11) Exits](https://www.dropbox.com/s/210786kll74htzx/Ent_Fin_WS21_Exits.pdf?dl=0)
 
 
 

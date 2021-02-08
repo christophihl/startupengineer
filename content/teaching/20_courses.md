@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 20  # Order that this section will appear.
 
 title = "Courses"
-subtitle = "Winter Term 20/21"
+subtitle = "Summer Term 21"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

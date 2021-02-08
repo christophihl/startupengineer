@@ -5,14 +5,15 @@
 {{/* Set default titles for node pages */}}
 {{ $title := .Title }}
 {{ if and (not $title) .IsNode }}
-  {{ if eq .Type "post" }}
-    {{ $title = i18n "posts" }}
-  {{ else if eq .Type "talk" }}
+  {{ if eq .Type "_news" }}
+    {{ $title = i18n "news" }}
+  {{ else if eq .Type "_talks" }}
     {{ $title = i18n "talks" }}
   {{ else if eq .Type "publication" }}
     {{ $title = i18n "publications" }}
   {{end}}
 {{end}}
+
 
 {{/* Header image */}}
 {{ if and .Params.header.image (not (and $featured (not .Params.image.preview_only))) }}
@@ -27,6 +28,7 @@
   {{ with .Params.header.caption }}<span class="article-header-caption">{{ . | markdownify | emojify }}</span>{{ end }}
 </div>
 {{end}}
+
 
 {{/* Featured image layout */}}
 {{ if and $featured (not .Params.image.preview_only) }}
@@ -55,7 +57,7 @@
 <div class="article-container pt-3">
   <h1>{{ $title }}</h1>
 
-  {{ with $page.Params.subtitle }}
+  {{ with $page.Params.summary }}
   <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
   {{end}}
 
@@ -83,7 +85,7 @@
 <div class="{{$ctnr}} pt-3">
   <h1>{{ $title }}</h1>
 
-  {{ with $page.Params.subtitle }}
+  {{ with $page.Params.summary }}
   <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
   {{end}}
 
