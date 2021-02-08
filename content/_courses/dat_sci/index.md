@@ -53,6 +53,7 @@ They can be taken independently, but it is highly recommended to enroll consecut
 
 ### Instructor(s)
 
+* {{% mention "lampe" %}}
 * {{% mention "ihl" %}}
 * {{% mention "schwarz" %}}
 * {{% mention "mork" %}}
