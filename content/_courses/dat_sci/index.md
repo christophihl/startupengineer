@@ -3,6 +3,7 @@ title: Business Analytics with Data Science and Machine Learning
 subtitle: 3 complementary elective courses in "Business & Management"
 summary: 3 complementary elective courses in "Business & Management"
 authors:
+- lampe
 - ihl
 - schwarz
 - mork
