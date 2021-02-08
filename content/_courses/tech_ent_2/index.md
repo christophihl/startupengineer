@@ -1,7 +1,7 @@
 ---
-title: Technology Entrepreneurship
-subtitle: Startup Engineering&#58; How to build a startup
-summary: 6 ECTS Module for Master MEM, NTW & Erasmus
+title: Startup Engineering
+subtitle: How to build a startup
+summary: 2 complementary elective courses in "Business & Management"
 authors:
 - lampe
 weight: 20
@@ -33,15 +33,15 @@ projects: []
 
 ### Credits
 
-* 6 ECTS module
-* 2 courses `Entrepreneurship` & `Creation of Business Opportunities`
+* 2 courses `Startup Engineering: Project` & `Startup Engineering: Cases`
+* 2 * 2 ECTS
 
 ***
 
 ### Target Audience
 
-* Engineering Masters, Erasmus & NTW (Betrieb & Management, 2 * 2 ECTS)
-* IWI, LIM & GTIME students please refer to [this course]({{< relref "_courses/tech_ent_1/index.md" >}}) <br>(duplicated because of capacity contraints)
+* Master students with "Business & Management" courses in their curriculum, who want to earn up to 2 * 2 ECTS
+* Students with a strong interest and motivation in acquiring the skills required to build new technology startups.
 
 ***
 
@@ -89,26 +89,26 @@ This course module can prepare students for the following career paths:
 
 ***
 
-### Grading [^1]
+### Grading/ Evaluation
 
-* `35%` (team): Development and pitch of an own startup project
-* `35%` (team): Case solutions submitted in/after class
-* `15%` (individual): Three case memos submitted before class
-* `15%` (individual): Class participation
-
-[^1]: Master students enrolled in the entire module are graded based on all four components. NTW (Betrieb & Management) students enrolled in 2 ECTS are graded based on the startup project, students enrolled in 4 ECTS are graded based on the startup project *and* case solutions.
+* `Startup Engineering: Project` (team deliverable): Development and pitch of an own startup project
+* `Startup Engineering: Cases` (team deliverable): Case solutions submitted in/after class
 
 ***
 
 ### Registration
 
-* To open soon on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip)
+To open soon:
+
+* `Startup Engineering: Project`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
+* `Startup Engineering: Cases`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
 
 ***
 
 ### Time & Location
-* `Entrepreneurship`: Monday, 13.00 - 14.30, Building M, Room 0526
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.30, Building M, Room 1582
+
+* `Startup Engineering: Project`: Monday, 13.00 - 14.30, Building M, Room 0526
+* `Startup Engineering: Cases`: Monday, 15.00 - 16.30, Building M, Room 1582
 
 {{% alert warning %}}
 As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.

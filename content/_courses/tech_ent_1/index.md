@@ -1,7 +1,7 @@
 ---
 title: Technology Entrepreneurship
 subtitle: Startup Engineering&#58; How to build a startup
-summary: 6 ECTS Module for Master IWI, LIM & GTIME
+summary: 6 ECTS Module for Master Students
 authors:
 - ihl
 weight: 10
@@ -38,16 +38,10 @@ projects: []
 
 ***
 
-### Target Audience
-
-* Master students in IWI, LIM & GTIME
-* Engineering Masters, Erasmus & NTW students please refer to [this course]({{< relref "_courses/tech_ent_2/index.md" >}}) <br>(duplicated because of capacity contraints)
-
-***
-
 ### Instructor(s)
 
 * {{% mention "ihl" %}}
+* {{% mention "lampe" %}}
 
 ***
 
@@ -96,18 +90,39 @@ This course module can prepare students for the following career paths:
 * `15%` (individual): Three case memos submitted before class
 * `15%` (individual): Class participation
 
+
+***
+
+### Target Audience
+
+Due to capacity contraints, this course module duplicated for two audiences:
+
+* Master Students in IWI, LIM & GTIME
+* Master Students in Engineering and Erasmus Programs
+
+
 ***
 
 ### Registration
 
-* To open soon on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
+To open soon:
+
+* For IWI, LIM & GTIME students here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
+* For Engineering and Erasmus students here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
 
 ***
 
 ### Time & Location
 
+*For IWI, LIM & GTIME students*: 
 * `Entrepreneurship`: Monday, 13.00 - 14.30, Building A, Room A 1.20
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.30, Building O, Room 018
+* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building O, Room 018
+
+
+*For Engineering and Erasmus students*: 
+* `Entrepreneurship`: Monday, 13.00 - 14.30, Building M, Room 0526
+* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building M, Room 1582
+
 
 {{% alert warning %}}
 As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
