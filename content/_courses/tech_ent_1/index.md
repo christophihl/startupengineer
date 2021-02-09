@@ -95,7 +95,7 @@ This course module can prepare students for the following career paths:
 
 ### Target Audience
 
-Due to capacity contraints, this course module duplicated for two audiences:
+Due to capacity contraints, this course module is duplicated for two audiences:
 
 * Master Students in IWI, LIM & GTIME
 * Master Students in Engineering and Erasmus Programs
