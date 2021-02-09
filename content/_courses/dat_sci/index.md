@@ -97,9 +97,9 @@ After completing this module, students will be able to:
 
 To open soon:
 
-* `Business Data Science Basics`: [e-learning.tuhh.de/studip]((https://e-learning.tuhh.de/studip/)
-* `Business Decisions with Machine Learning`: [e-learning.tuhh.de/studip]((https://e-learning.tuhh.de/studip/)
-* `Building Business Data Products`: [e-learning.tuhh.de/studip]((https://e-learning.tuhh.de/studip/)
+* `Business Data Science Basics`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
+* `Business Decisions with Machine Learning`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
+* `Building Business Data Products`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
 
 ***
 
