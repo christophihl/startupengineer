@@ -41,7 +41,6 @@ links:
   url: https://www.dropbox.com/s/v8joh6g0bha409s/org_ent_teams.pdf?dl=0
 url_code: ""
 url_pdf: ""
-url_slides: 'https://christophihl.github.io/revealjs/slides/210120_org_ent_teams/'
 url_video: ""
 
 # Markdown Slides (optional).
