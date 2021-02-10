@@ -36,12 +36,12 @@ image:
 
 links:
 - name: Slides
-  url: https://christophihl.github.io/reveal_presentations/org_ent_teams/
+  url: https://christophihl.github.io/revealjs/slides/210120_org_ent_teams/
 - name: pdf
   url: https://www.dropbox.com/s/v8joh6g0bha409s/org_ent_teams.pdf?dl=0
 url_code: ""
 url_pdf: ""
-url_slides: 'https://christophihl.github.io/reveal_presentations/org_ent_teams/'
+url_slides: 'https://christophihl.github.io/revealjs/slides/210120_org_ent_teams/'
 url_video: ""
 
 # Markdown Slides (optional).
@@ -49,7 +49,7 @@ url_video: ""
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: "https://christophihl.github.io/reveal_presentations/org_ent_teams/"
+slides: "https://christophihl.github.io/revealjs/slides/210120_org_ent_teams/"
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -65,7 +65,7 @@ math: true
 
 
 <div class="resp-container">
-    <iframe class="resp-iframe" src="https://christophihl.github.io/reveal_presentations/org_ent_teams/" title="Organizing Entrepreneurial Teams" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+    <iframe class="resp-iframe" src="https://christophihl.github.io/revealjs/slides/210120_org_ent_teams/" title="Organizing Entrepreneurial Teams" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
 </div>
 
 
