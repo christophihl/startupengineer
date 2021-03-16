@@ -6,7 +6,7 @@ type: docs
 date: "2020-05-20T00:00:00Z"
 draft: false
 menu:
-  start_eng:
+  tech_ent:
     weight: 7
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
@@ -34,6 +34,8 @@ This section on lean startup & experimentation provides resources and materials 
 <br/>
 
 ## Identifying Risky Assumptions
+* [Strategically](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3684428)
+<br/>
 * [Qualitatively](https://medium.com/lean-startup-circle/how-to-conduct-lean-experiments-aecc6aae17c5)
 <br/>
 * [Quantitatively](https://dkander.wordpress.com/2013/05/07/how-to-diagnose-your-riskiest-assumptions/)
