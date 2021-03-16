@@ -95,17 +95,15 @@ After completing this module, students will be able to:
 
 ### Registration
 
-To open soon:
-
-* `Business Data Science Basics`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
-* `Business Decisions with Machine Learning`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
-* `Building Business Data Products`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
+* `Business Data Science Basics`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=dfff4f3fbcd3d08a6d209bc210f44acf)
+* `Business Decisions with Machine Learning`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=dd745195c044307b1d81cad005d06509)
+* `Building Business Data Products`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=a57646f84d23356f38803964d05237b9)
 
 ***
 
 ### Time & Location
 
-* tbd
+* each scheduled day from 9 a.m. - 5 p.m.
 
 {{% alert warning %}}
 As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
@@ -131,11 +129,11 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | --- | Introduction to R, RStudio IDE & GitHub |
-| 2 | --- | Introduction to the tidyverse |
-| 3 | --- | Data Acquisition |
-| 4 | --- | Data Wrangling |
-| 5 | --- | Data Visualization |
+| 1 | April 19 - 21 | Introduction to R, RStudio IDE & GitHub |
+| 2 | April 19 - 21 | Introduction to the tidyverse |
+| 3 | April 19 - 21 | Data Acquisition |
+| 4 | April 19 - 21 | Data Wrangling |
+| 5 | April 19 - 21 | Data Visualization |
 
 <br>
 
@@ -143,12 +141,12 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 6 | --- | Fundamentals of Machine Learning |
-| 7 | --- | Supervised ML: Regression (I) |
-| 8 | --- | Supervised ML: Regression (II) |
-| 9 | --- | Automated ML with H20 (I) | 
-| 10 | --- | Automated ML with H20 (II) |
-| 11 | --- | ML Performance Measures |
+| 6 | May 17 - 19 | Fundamentals of Machine Learning |
+| 7 | May 17 - 19 | Supervised ML: Regression (I) |
+| 8 | May 17 - 19 | Supervised ML: Regression (II) |
+| 9 | May 17 - 19 | Automated ML with H20 (I) | 
+| 10 | May 17 - 19 | Automated ML with H20 (II) |
+| 11 | May 17 - 19 | ML Performance Measures |
 
 
 <br>
@@ -157,6 +155,6 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 12 | --- | Explainable ML with LIME |
-| 13 | --- | ML: Deep Learning |
-| 14 | --- | Reporting with RMarkdown, Shiny, Flexdashboard |
+| 12 | June 21 - 23 | Explainable ML with LIME |
+| 13 | June 21 - 23 | ML: Deep Learning |
+| 14 | June 21 - 23 | Reporting with RMarkdown, Shiny, Flexdashboard |

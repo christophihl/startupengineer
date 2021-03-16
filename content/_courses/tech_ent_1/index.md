@@ -105,10 +105,8 @@ Due to capacity contraints, this course module is duplicated for two audiences:
 
 ### Registration
 
-To open soon:
-
-* For IWI, LIM & GTIME students here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
-* For Engineering and Erasmus students here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/)
+* IWI, LIM & GTIME students please register only here for the entire module: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=10bb7c4236abb39258188aa574abbe4c)
+* Engineering and Erasmus students please register only here for the entire module: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=66774df4d782f886a4603a8c38224892)
 
 ***
 
