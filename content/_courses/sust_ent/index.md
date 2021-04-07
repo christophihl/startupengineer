@@ -13,7 +13,7 @@ date: "2020-03-25T00:00:00Z"
 lastMod: "2020-03-25T00:00:00Z"
 showauthordate: false
 featured: true
-draft: true
+draft: false
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
@@ -68,7 +68,11 @@ Empfohlene Literatur:
 * `20%` (individuell): mündliche Beteiligung
 
 
-### Zeit & Ort
+### Termine & Ort
+
+* Freitag, 23.04.21, 09:00 - 17:30
+* Freitag, 30.04.21, 09:00 - 17:30
+* Freitag, 07.05.21, 09:00 - 17:30
 
 {{% alert warning %}}
 Solange die gegenwärtige Situation anhält, finden alle Veranstaltungen in Form von aufgezeichneten Videovorlesungen oder Live-Videokonferenzen statt, zu denen die Teilnehmner rechtzeitig Zugang erhalten.
