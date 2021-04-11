@@ -36,11 +36,13 @@ Here are a few good resources and inspirations about how to find startup ideas:
 
 * [Brainstorming for New Startup Ideas: A Framework to Spur Creative Thinking](https://www.forentrepreneurs.com/startup-ideation/)
 
-* Two video lectures on ideation from the [Y-Combinator](https://www.ycombinator.com) Startup School (2014 inaugural edition):
+* Three video lectures on ideation from the [Y-Combinator](https://www.ycombinator.com) Startup School:
 <br/>
 {{< youtube f4_14pZlJBs >}}
 <br/>
 {{< youtube egJeFaIXZLo >}}
+<br/>
+{{< youtube DOtCl5PU8F0 >}}
 
 
 
