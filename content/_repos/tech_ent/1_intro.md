@@ -68,9 +68,12 @@ Here are a few good resources and inspirations about how to find startup ideas:
 
 ## How to turn an idea into a business?
 
-Some preliminary thoughts on what entrepreneurship is about.
+What technology entrepreneurship is about. Introductory lecture:
 
-**...soon to come ...**
+* [Slides](https://www.dropbox.com/s/g809xvq1o45oklz/Technology_Entrepreneurship_Intro_SS21.pdf?dl=0)
+
+* Recording: coming soon
+
 
 
 
