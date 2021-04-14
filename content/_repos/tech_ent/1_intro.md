@@ -74,7 +74,10 @@ Introductory lecture:
 
 * [Slides](https://www.dropbox.com/s/g809xvq1o45oklz/Technology_Entrepreneurship_Intro_SS21.pdf?dl=0)
 
-* [Recording](https://www.dropbox.com/s/pydmaqlb8cf3p2z/1_TE_Intro.mp4?dl=0)
+* Recording:
+
+<br/>
+{{< youtube AJ2uuvnHjwk >}}
 
 
 
