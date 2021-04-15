@@ -28,7 +28,7 @@ menu:
 
 <br/>
 
-- [Präsentationsfolien](https://www.dropbox.com/s/5jolye6b6ekemp3/GBWL_Unternehmertum_WS21.pdf?dl=0)
+- [Präsentationsfolien](https://www.dropbox.com/s/zs0okkhi26itrmb/GBWL_Unternehmertum_SS21.pdf?dl=0)
 
 <br/>
 
@@ -37,8 +37,7 @@ menu:
 
 <br/>
 
-- [Aufzeichung](https://tuhh.zoom.us/rec/share/pVuS_UPOXyjUHB2dFL0hnXPBQBAbyZJYQmDKh6h0YRNXW1UaVt36g4WyKAq9bWvZ.DjR00S3-eV15cjvw)
-- Kennwort: AU??bk31
+- to be announced
 
 <br/>
 

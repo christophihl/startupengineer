@@ -7,10 +7,10 @@ date: "2020-04-22T00:00:00Z"
 draft: true
 menu:
   tech_ent:
-    weight: 20
+    weight: 12
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 20
+weight: 11
 --- 
 
 ## Note
