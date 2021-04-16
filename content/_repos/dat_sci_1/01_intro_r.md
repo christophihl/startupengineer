@@ -835,7 +835,7 @@ Check for yourself what happens, if you set eval to `TRUE`.
 
 * text mixed with simple text formatting
 
-See the `R Markdown Cheat Sheet` for further information regarding the markdown syntax:
+See the `R Markdown Cheat Sheet` for further information regarding the markdown syntax. It is necessary, that your code is formatted correctly to be evaluated.
 
 <div id="header">Cheat Sheet</div>
 <div id="container">
