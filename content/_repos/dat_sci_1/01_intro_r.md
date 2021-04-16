@@ -685,7 +685,7 @@ We will use GitHub to store your data and hand in your assignments through your 
 To get started with this template you only have to login to github and click this invitation link: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/bdyUeBBR" target="_blank"><b>Business Decisions with Machine Learning - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/GrlxPUw2" target="_blank"><b>Business Data Science Basics - GitHub Classroom</b></a>
 </div>
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_00.png" caption="Click `Authorize GitHub Classroom`" width="50%" >}}
@@ -835,7 +835,7 @@ Check for yourself what happens, if you set eval to `TRUE`.
 
 * text mixed with simple text formatting
 
-See the `R Markdown Cheat Sheet` for further information regarding the markdown syntax:
+See the `R Markdown Cheat Sheet` for further information regarding the markdown syntax. It is necessary, that your code is formatted correctly to be evaluated.
 
 <div id="header">Cheat Sheet</div>
 <div id="container">
