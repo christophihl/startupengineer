@@ -1544,5 +1544,5 @@ Answer the question with `data.table` or `dplyr`. You will need the following ta
 | 2 | assignee, patent_assignee, patent |
 | 3 | assignee, patent_assignee, uspc |
 
-
+Please note, that it is better to not upload the tables to your github repo due to their size.
 

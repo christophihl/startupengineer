@@ -949,6 +949,15 @@ In this session you are about to get your hands into R with a real world situati
 We are going to do that by importing, wrangling and visualizing of the provided data.
 
 **Data**</br>
+
+<!-- DOWNLOADBOX -->
+<div id="header">Download</div>
+<div id="container">
+  <div id="first">{{% icon download %}}</div>
+  <div id="second"><a href="https://cloud.tuhh.de/index.php/s/Cxe7YSM8RY2SgCn" target="_blank"><b>Data Science Data</b></a></div>
+  <div id="clear"></div>
+</div>
+
 The bike sales data is divided in multiple datasets for better understanding and organization. When working with transactional data, Entity-relationship diagrams (ERD) are used for describing and defining the data models (see example below). It illustrates the logical structure of the databases (see [ER-diagram-symbols-and-meaning](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) for further information). Please refer to the following data schema when working with the sales data. It shows with which key column we can combine the single databases. Example: To see which items are included in an order, you have to combine `Order Lines` with `Bikes` via the columns `product.id` and `bike.id`.
 
 <!-- ADJUST THIS PART -->
@@ -1015,7 +1024,7 @@ The three tables contain the following information (excerpt):
 
 #### First steps
 
-You have downloaded the data already in the last session. Let's start by creating a script file. You can download the following template and add it to your folder `01_getting_started`:
+You have downloaded the data already. Let's start by creating a script file. You can download the following template and add it to a folder that will contain your scripts:
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
@@ -1069,7 +1078,7 @@ library(readxl)</code></pre>
 </section></br>
 
 ##### 2. Import
-The files are located at `/00_data/01_bike_sales/01_raw_data/`. To read tha data into R we are going to use the `read_excel()` function from the `readxl` package. Take a look at the help site to figure out how to use it. Also think about which data we need for our analysis. You can ignore the default arguments (the arguments which equal already a value) for now. Don't forget to store the data into a named variable.
+Move your downloaded data files to a folder in your project, e.g. `/00_data/01_raw_data/`. To read tha data into R we are going to use the `read_excel()` function from the `readxl` package. Take a look at the help site to figure out how to use it. Also think about which data we need for our analysis. You can ignore the default arguments (the arguments which equal already a value) for now. Don't forget to store the data into a named variable.
 
 <!-- CODE (show) -->
 <pre><code class="r">?read_excel</code></pre>
@@ -1093,11 +1102,11 @@ We need:
 
 <pre><code class="r"># 2.0 Importing Files ----
 # A good convention is to use the file name and suffix it with tbl for the data structure tibble
-bikes_tbl      <- read_excel(path = "00_data/01_bike_sales/01_raw_data/bikes.xlsx")
-orderlines_tbl <- read_excel("00_data/01_bike_sales/01_raw_data/orderlines.xlsx")
+bikes_tbl      <- read_excel(path = "00_data/01_raw_data/bikes.xlsx")
+orderlines_tbl <- read_excel("00_data/01_raw_data/orderlines.xlsx")
 
 # Not necessary for this analysis, but for the sake of completeness
-bikeshops_tbl  <- read_excel("00_data/01_bike_sales/01_raw_data/bikeshops.xlsx")
+bikeshops_tbl  <- read_excel("00_data/01_raw_data/bikeshops.xlsx")
 </code></pre>
 
 In your environment you should see now 3 loaded tables. You can click on them to take a look at the data.
