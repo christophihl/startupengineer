@@ -1225,14 +1225,14 @@ pct_sales_by_customer_tbl <- bike_orderlines_tbl %>%
 <!-- HEADING (challenge) -->
 ## Challenge <i class="fas fa-laptop-code"></i> &nbsp;
 
-The challenge deals with the covid data from last session. This time I recommend to use the tidyverse to wrangle the data...
+The challenge deals again with covid data. This time we are using a different up to date data set. I recommend to use the tidyverse to wrangle the data...
 
 ```r
 library(tidyverse)
-covid_data_tbl <- read_csv("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv")
+covid_data_tbl <- read_csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv")
 ```
 
-... but of course you can also use the data.table library.
+... but of course you can also use the `data.table` library.
 
 ***
 
@@ -1272,11 +1272,11 @@ You have to join the lat/long data and the covid data. Unfortunately, the countr
 
 <pre><code class="r">
   ... %>% 
-  mutate(across(countriesAndTerritories, str_replace_all, "_", " ")) %>%
-  mutate(countriesAndTerritories = case_when(</br>
-    countriesAndTerritories == "United Kingdom" ~ "UK",
-    countriesAndTerritories == "United States of America" ~ "USA",
-    countriesAndTerritories == "Czechia" ~ "Czech Republic",
-    TRUE ~ countriesAndTerritories</br>
-  ))</code></pre>
+  mutate(location = case_when(</br>
+    location == "United Kingdom" ~ "UK",
+    location == "United States" ~ "USA",
+    location == "Democratic Republic of Congo" ~ "Democratic Republic of the Congo",
+    TRUE ~ location</br>
+  )) %>%
+  distinct()</code></pre>
 </section>
