@@ -703,32 +703,20 @@ We will use GitHub to store your data and hand in your assignments through your 
   <div id="clear"></div>
 </div>
 
-* **Windows only**: Install `Git`.<br>
-On Windows, you also have to install “Git for Windows” and set “git/cmd” and “git/bin” as system variables.
+3. Accept the assignment on GitHub Classroom, create a website using R Markdown and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
 
-<!-- DOWNLOADBOX -->
-<div id="header">Download</div>
+<!-- INFOBOX -->
+<div id="header">Infobox</div>
 <div id="container">
-  <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://gitforwindows.org" target="_blank"><b>https://gitforwindows.org</b></a></b></div>
+  <div id="first">{{% icon info-solid %}}</div>
+  <div id="second">Please note, that there can be minor deviations from the screenshots, e.g. the name of the classroom and the next steps serve as a general instruction.</div>
   <div id="clear"></div>
 </div>
-
-Set as system variables:
-System Properties (Tab: Advanced) -> Environment Variables -> System variables -> Path -> Edit -> New:
-
-*C:\Program Files\Git\cmd* <br>
-*C:\Program Files\Git\bin*
-
-{{< figure src="/img/courses/dat_sci/01/win_sysvariables.gif" caption="Click on Edit and add the variables" >}}
-
-
-3. Accept the assignment on GitHub Classroom, create a website using R Markdown and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
 
 To get started with this template you only have to login to github and click this invitation link: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/F4rCkypW" target="_blank"><b>Business Data Science Basics - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/bdyUeBBR" target="_blank"><b>Business Decisions with Machine Learning - GitHub Classroom</b></a>
 </div>
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_00.png" caption="Click `Authorize GitHub Classroom`" width="50%" >}}
@@ -755,19 +743,24 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 
 ### Compiling on your local computer
 
-1. Make sure the `rmarkdown` package and all it's dependencies are installed in R-studio: 
-
-* **macOS only**: Install the Apple `Xcode` developer tools. 
-
-Option 1: Run `xcode-select --install` in the terminal. 
+1. Make sure the `rmarkdown` package and all it's dependencies are installed in RStudio: 
 
 ***
-You can copy the command directly in your terminal (*Terminal* on MacOS, *Command Prompt* on Windows).
+**macOS only**: Install the Apple `Xcode` developer tools.
 
-Terminals/command shells only accept text commands and are a useful way to run task on a computer.
-***
+* Option 1: Run `xcode-select --install` in the terminal. 
 
-Option 2: You can install Xcode for free from the App Store. 
+<!-- INFOBOX -->
+<div id="header">Infobox</div>
+<div id="container">
+  <div id="first">{{% icon info-solid %}}</div>
+  <div id="second">Terminals/command shells only accept text commands and are a useful way to run task on a computer. 
+  
+  You can copy commands directly in your terminal (*Terminal* on MacOS, *Command Prompt* on Windows).</div>
+  <div id="clear"></div>
+</div>
+
+* Option 2: You can install Xcode for free from the App Store. 
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
@@ -777,7 +770,8 @@ Option 2: You can install Xcode for free from the App Store.
   <div id="clear"></div>
 </div>
 
-* **Windows only**: Download and install the latest version of `Rtools`.
+***
+**Windows only**: Download and install the latest version of `Rtools`.
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
@@ -787,9 +781,10 @@ Option 2: You can install Xcode for free from the App Store.
   <div id="clear"></div>
 </div>
 
+***
 * **Both systems**
-  + Open R-studio, click the packages tab in the lower right hand corner, click install packages, type in rmarkdown, make sure "install dependencies" is clicked on, then press install. 
-  + Close R-studio.
+  + Open RStudio, click the packages tab in the lower right hand corner, click install packages, type in `rmarkdown`, make sure "install dependencies" is clicked on, then press install. 
+  + Close RStudio.
 
 2. Open GitHub Desktop, make sure it is connected to your account and clone your repository to your computer so that you have a local copy of that data:
 
@@ -801,20 +796,20 @@ Option 2: You can install Xcode for free from the App Store.
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_04_finish.png" caption="2.4 Click `Finish`" >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` and select your `lab_journal_website` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` and select your `journal_ml` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
 
-3. Navigate to the folder you just cloned/downloaded, open the `lab_journal_website.Rproj` file. This should automatically open R-studio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell R-studio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the R-studio editor. Click the "journal.Rmd" file, replace the author name with your name and save the file again. You can freely alter the other content as well to design your website as you desire.
+3. Navigate to the folder you just cloned/downloaded, open the `lab_journal_website.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
 
-4. To compile the entire website, find the build tab in the top right hand corner. You should see the option to `build website` <img src="/img/courses/dat_sci/01/icon_build_website.png" width=3% style="display:inline-block; margin:0px"> Click this. The website should be built. After the website is built, you should be able to see it in the R-studio browser (viewer pane in the bottom right corner). There is a little button <img src="/img/courses/dat_sci/01/icon_open_browser.png" width=3% style="display:inline-block; margin:0px"> that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
-Important: After compilation, all of the files for displaying your website are saved in the folder where your R project resides. When you look at these in a browser (for example, by going to the folder and dragging the index.html file into a browser), you are loading from your disk. Only you will be able to see the website, because it is on your hard-drive. You need to upload to a web server to serve the webpage on the internet.
+4. To compile the entire website, find the build tab in the top right hand corner. You should see the option to `build website` <img src="/img/courses/dat_sci/01/icon_build_website.png" width=3% style="display:inline-block; margin:0px"> Click this. The website should be built. After the website is built, you should be able to see it in the RStudio browser (viewer pane in the bottom right corner). There is a little button <img src="/img/courses/dat_sci/01/icon_open_browser.png" width=3% style="display:inline-block; margin:0px"> that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
+Important: After compilation, all of the files for displaying your website are saved in the folder where your R project resides. When you look at these in a browser (for example, by going to the folder and dragging the index.html file into a browser - don't worry about the password protection for now), you are loading from your disk. Only you will be able to see the website, because it is on your hard-drive. You need to upload to a web server to serve the webpage on the internet.
 
 ### Serving your webpage on the internet
 
-Every github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `docs` folder. The example files are set so that when you compile the example in R-studio, the output automatically goes into the `docs` folder. As the final step, we have to tell github to serve the html files in your docs folder as a website:
+Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `root` folder. The example files are set so that when you compile the example in RStudio, the output automatically goes into the `root` folder (which is your project folder). As the final step, we have to tell GitHub to serve the html files in your root folder as a website:
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your lab_journal_website repository and click the settings button in the top right corner." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your journal repository and click the settings button in the top right corner." >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02.png" caption="2. Scroll down and select the master Branch and click the option to serve from the docs folder. Press Save. (You should see a little green message above the github pages options with a link to your new webpage)." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_new.png" caption="2. Scroll down and select the master Branch and make sure the option to serve from the root folder is set. Press Save. (You should see a little green message above the github pages options with a link to your new webpage)." >}}
 
 That's it. Now you can navigate to your new homepage via the link in the greenbox. It may take a while until you can reach it.
 
@@ -822,64 +817,24 @@ That's it. Now you can navigate to your new homepage via the link in the greenbo
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="4. Press `Push origin` and wait a couple of minutes. Your changes should now be served on your website" >}}
 
-Now we want to go one step further and password protect you Lab Journal page (the journal.html file). We are using StatiCrypt, that uses AES-256 to encrypt your web page with your passphrase. StatiCrypt is based on the crypto-js (javascript) library, which again requires Node.js (JavaScript runtime environment that executes JavaScript code outside a web browser to produce dynamic web page content before the page is sent to the user's web browser).
+***
+### Password Protection
 
+Now we want to go one step further and password protect your website. You might have noticed already that when you try to open your website you are asked for a password. At the moment it is still the default password but in the next steps you will set your own password. **DO NOT USE YOUR STANDARD PASSWORDS.** You later will be asked to submit your passwords to the teaching assistants who will be able to see it in clear text.
 
-Requirements for StatiCrypt:
+{{< figure src="/img/courses/dat_sci/01/setting_password_01.png" caption="1. Open your personal website that you created a few steps before. You should see the following screen where you are asked to type in a password." >}}
 
-* Node.js
-* npm (Node.js package manager)
+{{< figure src="/img/courses/dat_sci/01/setting_password_02.png" caption="2. Type in a password of your choice. You will get the message `Wrong password` but don't wory." >}}
 
-**Step 1:** Installe Node.js (The Node.js installer includes the NPM package manager).
+{{< figure src="/img/courses/dat_sci/01/setting_password_03.png" caption="3. Now you have to copy the part like shown in the picture. By pasting the hash from the URL rename your folder (if you haven't changed it the location is something like: ../GitHub/journal_ml)" >}}
 
-<!-- DOWNLOADBOX -->
-<div id="header">Download</div>
-<div id="container">
-  <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://nodejs.org/en/download/" target="_blank"><b>https://nodejs.org/en/download/</b></a></b></div>
-  <div id="clear"></div>
-</div>
+{{< figure src="/img/courses/dat_sci/01/setting_password_04.png" caption="4. Rename the entry `output_dir` in `site.yml` in RStudio. Only replace the hash but nothing else." >}}
 
-**Step 2:** Install StatiCrypt via npm
+As a last step, click `Build Website` which will open the local version of your website. To upload your changes to GitHub you need to commit and push the changes via GitHub Desktop. Only then you will be able to log in to your website with your new password.
 
-Run `npm install -g https://github.com/TUHHStartupEngineers/staticrypt` in your terminal. If you get the error: `errno 13 permission denied`, you don't have the permission to install it. To resolve this error put `sudo` (for unix systems) in front of the command and enter your password (your password for e.g. unlocking your account on Windows/MacOS) if prompted.
+If you ever want to change your password, e.g. because you forgot it, just repeat the steps.
 
-**Step 3:** Set your password and store it in your global environment 
-
-*Alternative 1*
-
-Run `Sys.setenv(LAB_KEY = "Your-token")` in the R console. Replace "Your-token" with your passphrase for your website. You have to repeat this step everytime you start RStudio. **DO NOT USE YOUR STANDARD PASSWORDS.** The lab journal password are displayed in clear text to the teaching assistants.
-
-*Alternative 2*
-
-To make this step permanent, execute the following steps:
-
-1. Create a `.Renviron` file in your project directory: `file.create(".Renviron")`
-2. Open this file by clicking on it in the files browser
-3. Add the line `LAB_KEY = "Your-token"` and replace "Your-token" with your passphrase
-4. Save the file. If you want to access these values, you have to restart RStudio, because the `.Renviron` file is only initialized at startup.
-5. Go to GitHub Desktop to review the changes. If the `.Renviron` file appears, right-click on it and select `Ignore File (Add to .gitignore)`. If it does not appear, everything is already set.
-
-**Step 4:** Build your website (including password protection)
-
-Test to check if your `.Renviron` variables are accessible: Run `Sys.getenv("LAB_KEY")` in your console. It should output your password.
-
-Run `source("build_website.R")` in the R console. Your working directory needs to be set to `~/lab_journal_website/`. This step also starts the process, which would have been triggered by clicking on `Build Website`. Additionally, it adds password protection (You can take a look at the `build_website.R` script to see what is going on). You have to execute step 4 everytime before you want to push changes to github / your online lab journal.
-
-Summary for editing your webpage and serving on github:
-
-<ol type="1">
-       <li>Open up the project file in the folder for your repo on your local computer (.rproj file).</li>
-       <li>Edit the .rmd files in R-studio.</li>
-       <li>Recompile website...</li>
-       <ol type="a">
-             <li>... by clicking <code>Build website</code> to preview your changes locally.</li>
-             <li>... by running <code>source("build_website.R")</code> to add password protection (watch out that your working directory is set properly).</li>
-       </ol>
-       </li>
-       <li>Send your changes back to the online github repository.</li>
-</ol>
-
+***
 ### RMarkdown
 
 Each page of your website is created by a R Markdown file (.Rmd). This is a plain text file that has the extension .Rmd. Notice that the file contains three types of content:
@@ -922,9 +877,9 @@ See the `R Markdown Cheat Sheet` for further information regarding the markdown 
 
 ### Submission
 
-Submit your lab journal URL and password via the following form:
+Submit your journal URL and password via the following form. If you do not submit your information, we won't be able to evaluate your assignments.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctVjKJaCKNtzCK0ufDmiSaKf-LnGsCWMUwfZGxEkemw5Eu2Q/viewform?embedded=true&hl=en" width="640" height="536" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqL-LlsQbTPWqLAHxzaR7Se0qMr6TZh8h0TSTuAv-wMXGX2g/viewform?embedded=true" width="640" height="1166" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
 
 ***
 

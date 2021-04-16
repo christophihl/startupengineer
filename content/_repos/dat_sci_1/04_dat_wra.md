@@ -1461,13 +1461,26 @@ substitute called Smart Balance all have in common?
 
 …They all probably wouldn't be here if not for patents. A patent provides its owner with the ability to make money off of something that they invented, without having to worry about someone else copying their technology. Think Apple would spend millions of dollars developing the iPhone if Samsung could just come along and rip it off? Probably not.
 
-Patents offer a great opportunity for data analysis, because the data is public. PatentsView is one of USPTO's (United States Patent and Trademark Office) new initiatives intended to increase the usability and value of patent data. That data can be downloaded here:
+Patents offer a great opportunity for data analysis, because the data is public. PatentsView is one of USPTO's (United States Patent and Trademark Office) new initiatives intended to increase the usability and value of patent data. 
+
+Please note, that the patent data provided by the USPTO is a very large data set that might overload your computer power. Therefore, we also provide a reduced data set that is filtered to the year 2014 only with less columns, so you are able to complete the task, if your computer can't process the large original data file.
+
+*Alternative 1*: The original USPTO data can be downloaded here:
 
 <!-- DOWNLOADBOX -->
 <div id="header">Website</div>
 <div id="container">
   <div id="first">{{% icon globe %}}</div>
   <div id="second"><a href="https://www.patentsview.org/download/" target="_blank"><b>https://www.patentsview.org/download/</b></a></div>
+  <div id="clear"></div>
+</div>
+
+*Alternative 2*: The reduced data set for the year 2014 can be downloaded here.
+
+<div id="header">Website</div>
+<div id="container">
+  <div id="first">{{% icon globe %}}</div>
+  <div id="second"><a href="https://cloud.tuhh.de/index.php/s/sGZKmdfLfdZBFK9" target="_blank"><b>https://cloud.tuhh.de/index.php/s/sGZKmdfLfdZBFK9</b></a></div>
   <div id="clear"></div>
 </div>
 
@@ -1481,7 +1494,7 @@ Information about the data will be found here:
   <div id="clear"></div>
 </div>
 
-You can import the data like this: 
+You can import the data like this (the reduced data set does not contain all the columns): 
 
 <pre><code class="r">library(vroom)
 col_types <- list(
@@ -1508,11 +1521,20 @@ In the `Patents_DB_dictionary_bulk_downloads.xlsx` file you will find informatio
 
 To speed up your processing, you can select `col_skip()` as a *"datatype"* to only read the columns of the data into R, that you will need for your analysis. 
 
-Answer the following questions with that data:
+Answer the following questions in case you used the full data set:
+
+*Alternative 1 [original data]*
 
 1. **Patent Dominance:** What __US company / corporation__ has the most patents? List the 10 US companies with the most assigned/granted patents.
-2. **Recent patent acitivity:** What US company had the most patents granted in 2019? List the top 10 companies with the most new granted patents for 2019.
+2. **Recent patent activity:** What US company had the most patents granted in 2019? List the top 10 companies with the most new granted patents for 2019.
 3. **Innovation in Tech:** What is the most innovative tech sector? For the top 10 companies __(worldwide)__ with the most patents, what are the top 5 USPTO tech main classes?
+
+*Alternative 2 [reduced data]*
+
+1. **Patent Dominance:** What __US company / corporation__ has the most patents? List the 10 US companies with the most assigned/granted patents.
+2. **Recent patent activity:** What US company had the most patents granted in August 2014? List the top 10 companies with the most new granted patents for August 2014.
+3. **Innovation in Tech:** What is the most innovative tech sector? For the top 10 companies __(worldwide)__ with the most patents, what are the top 5 USPTO tech main classes?
+
 
 Answer the question with `data.table` or `dplyr`. You will need the following tables for each question:
 
