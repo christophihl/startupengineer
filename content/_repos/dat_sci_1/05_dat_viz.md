@@ -1229,7 +1229,7 @@ The challenge deals again with covid data. This time we are using a different up
 
 ```r
 library(tidyverse)
-covid_data_tbl <- read_csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv")
+covid_data_tbl <- read_csv(""https://covid.ourworldindata.org/data/owid-covid-data.csv"")
 ```
 
 ... but of course you can also use the `data.table` library.
