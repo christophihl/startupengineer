@@ -23,7 +23,18 @@ This section on customer segmentation provides resources and materials to suppor
 5. Formulate hypothesis about customer problems and solutions with the value proposition canvas.
 6. Test hypothesis about customer problems and solutions in interviews.
 
+
+<br/><br/>
+
+## Lecture on Customer Segmentation
+
+* [Slides](https://www.dropbox.com/s/y5yztfw4yiauakr/Technology_Entrepreneurship_Customers_SS21.pdf?dl=0)
+
+* Recording:
+
 <br/>
+{{< youtube U9HN-Rrb3GQ >}}
+
 
 ## Strategic choice between customer segments
 
@@ -32,6 +43,11 @@ This section on customer segmentation provides resources and materials to suppor
 {{< youtube a1YQfA426c0 >}}
 <br/>
 {{< youtube Ym183bubnl0 >}}
+<br/>
+
+* [Workbook](https://www.dropbox.com/s/i1s9mdioik7b2yj/Choosing%2BYour%2BCustomer.pdf?dl=0) to analyze the strategic choice of customer segments
+<br/>
+{{< youtube pEzj3ldBO7c >}}
 <br/>
 
 
