@@ -34,7 +34,7 @@ This section on customer segmentation provides resources and materials to suppor
 
 <br/>
 {{< youtube U9HN-Rrb3GQ >}}
-
+<br/><br/>
 
 ## Strategic choice between customer segments
 
@@ -48,7 +48,7 @@ This section on customer segmentation provides resources and materials to suppor
 * [Workbook](https://www.dropbox.com/s/i1s9mdioik7b2yj/Choosing%2BYour%2BCustomer.pdf?dl=0) to analyze the strategic choice of customer segments
 <br/>
 {{< youtube pEzj3ldBO7c >}}
-<br/>
+<br/><br/>
 
 
 * Market Opportunity Navigator - Intro:
@@ -57,7 +57,7 @@ This section on customer segmentation provides resources and materials to suppor
 <br/>
 * [Market Opportunity Navigator - Materials](https://wheretoplay.co)
 
-<br/>
+<br/><br/>
 
 ## Customer segmentation
 * [Basic types](https://www.marketing91.com/types-of-customer-segments/)
@@ -66,14 +66,14 @@ This section on customer segmentation provides resources and materials to suppor
 
 ## Job-To-Be-Done
 * [Jobs-To-Be-Done framework for customer segmentation](https://uxdesign.cc/8-things-to-use-in-jobs-to-be-done-framework-for-product-development-4ae7c6f3c30b)
-
+<br/>
 <br/>
 
 ## Personas
 * [Personas and Job-To-Be-Done](https://www.nngroup.com/articles/personas-jobs-be-done/)
 * [Personas and Segmentation](https://medium.com/@emmaboulton/joining-the-dots-between-b2b-customer-segments-and-personas-59f128d1d60f)
 
-<br/>
+<br/><br/>
 
 ## Market S-Curve and Adopter Categories
 <br/>
@@ -88,7 +88,7 @@ This section on customer segmentation provides resources and materials to suppor
 * [Example](https://designabetterbusiness.com/2017/10/12/how-to-really-understand-your-customer-with-the-value-proposition-canvas/)
 
 
-<br/>
+<br/><br/>
 
 ## Customer discovery interviews
 * [B2C](https://www.youtube.com/watch?v=OTkP2JDeGWM)
