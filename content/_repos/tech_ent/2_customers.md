@@ -31,7 +31,6 @@ This section on customer segmentation provides resources and materials to suppor
 * [Slides](https://www.dropbox.com/s/y5yztfw4yiauakr/Technology_Entrepreneurship_Customers_SS21.pdf?dl=0)
 
 * Recording:
-
 <br/>
 {{< youtube U9HN-Rrb3GQ >}}
 <br/><br/>
