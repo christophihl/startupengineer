@@ -32,7 +32,7 @@ This section on customer segmentation provides resources and materials to suppor
 
 * Recording:
 <br/>
-{{< youtube U9HN-Rrb3GQ >}}
+{{< youtube v7G2JZh1378 >}}
 <br/><br/>
 
 ## Strategic choice between customer segments
