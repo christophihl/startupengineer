@@ -7,10 +7,10 @@ date: "2020-04-29T00:00:00Z"
 draft: false
 menu:
   tech_ent:
-    weight: 4
+    weight: 6
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 3
+weight: 5
 ---
 
 ## Objectives
@@ -66,7 +66,7 @@ This section on buiness model innovation provides resources and materials to sup
 
 <br/>
 
-## Busines Model Canvas
+## Business Model Canvas
 * Intro:
 <br/>
 {{< youtube QoAOzMTLP5s >}}
