@@ -1471,7 +1471,7 @@ Please note, that the patent data provided by the USPTO is a very large data set
 <div id="header">Website</div>
 <div id="container">
   <div id="first">{{% icon globe %}}</div>
-  <div id="second"><a href="https://www.patentsview.org/download/" target="_blank"><b>https://www.patentsview.org/download/</b></a></div>
+  <div id="second"><a href="https://www.patentsview.org/download/" target="_blank"><b>https://patentsview.org/download/data-download-tables</b></a></div>
   <div id="clear"></div>
 </div>
 
