@@ -32,9 +32,8 @@ This section on technology and product development provides resources and materi
 
 * Recording:
 <br/>
-{{< youtube v7G2JZh1378 >}}
+{{< youtube 6pf_DOY7sdI >}}
 <br/><br/>
-
 
 
 
