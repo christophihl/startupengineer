@@ -58,5 +58,29 @@ This section on market sizing & competition analysis provides resources and mate
 * [Visualize Competition II](https://blogs.berkeley.edu/2013/11/11/a-new-way-to-look-at-competitors/)
 <br/>
 * [Visualize Competition III](https://www.edrawsoft.com/competition-analysis-charts.html)
+
+
 <br/>
 
+
+## Choosing Competition: The Entrepreneurial Strategy Compass
+* Intro:
+<br/>
+{{< youtube 6s8qWzxSmjM >}}
+<br/>
+* Intellectual Property Strategy:
+<br/>
+{{< youtube zsrZ6O6HgIY >}}
+<br/>
+* Value Chain Strategy:
+<br/>
+{{< youtube wPCOwHT0EvA >}}
+<br/>
+* Disruption Strategy:
+<br/>
+{{< youtube 4ODCGfi7pwI >}}
+<br/>
+* Architectual Strategy:
+<br/>
+{{< youtube gX5ojx3RUvo >}}
+<br/>
