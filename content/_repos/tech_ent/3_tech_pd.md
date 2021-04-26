@@ -28,7 +28,7 @@ This section on technology and product development provides resources and materi
 
 ## Lecture on Technology and Product Development
 
-* [Slides](https://www.dropbox.com/s/y5yztfw4yiauakr/Technology_Entrepreneurship_Customers_SS21.pdf?dl=0)
+* [Slides](https://www.dropbox.com/s/99o9981wcvbmicb/Technology_Entrepreneurship_Tech_SS21.pdf?dl=0)
 
 * Recording:
 <br/>
@@ -63,4 +63,8 @@ This section on technology and product development provides resources and materi
 <br/>
 
 
+* [Workbook](https://www.dropbox.com/s/kmb34ke4ke6ausu/Choosing%2BYour%2BTechnology.pdf?dl=0) to analyze the strategic choice of technology
+<br/>
+{{< youtube HZGc56i4Wjw >}}
+<br/><br/>
 
