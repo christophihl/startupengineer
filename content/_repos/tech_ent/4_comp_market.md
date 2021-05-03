@@ -22,7 +22,19 @@ This section on market sizing & competition analysis provides resources and mate
 4. Understand different types of markets and modes of competition.
 5. Conduct and visualize the competition analysis for a startup idea.
 
+
+
+<br/><br/>
+
+## Lecture on Competition and Market Analysis
+
+* [Slides](https://www.dropbox.com/s/l03thzvax1wsh20/Technology_Entrepreneurship_Comp%26Mark_SS21.pdf?dl=0)
+
+* Recording:
 <br/>
+{{< youtube 6pf_DOY7sdI >}}
+<br/><br/>
+
 
 ## Market Sizing: The Startup Way
 * [The Startup Way: TAM, SAM, SOM](https://demigos.com/blog-post/how-a-startup-can-define-its-market-size/)
