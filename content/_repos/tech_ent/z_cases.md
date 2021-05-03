@@ -69,3 +69,21 @@ The Avatech founding team has developed four potential "models" for bringing Ava
 2) Considering that the snow detecting equipment industry is still in its infancy, which of these approaches (or a variant of your own design) would help a startup such as Avatech establish a customer value proposition and also position Avatech to be able to succeed on an ongoing basis?
 3) Provide a detailed action plan and the rationale for justifying your choice.
 4) How would you size the relevant market for Avatech (i.e. ski (safety) equipment)? 
+
+
+<br/>
+
+## (Platform) Business Model Innovation
+
+**Case**: [CampusHash](https://www.dropbox.com/s/ln2pz1fwe5d98iy/CampusHash.pdf?dl=0)
+
+`Assignment Questions`:
+1) What is CampusHash‘s current business model? (Only in class: Outline them with the business model canvas.) 
+2) How does it fit into the Entrepreneurial Strategy Compass?
+3) How does the business model change with the three considered alternatives? (Only in class: Outline them with the business model canvas.) 
+4) How do the three considered alternatives fit into the Entrepreneurial Strategy Compass? What type of pivot does each of these business model changes refer to?
+5) Develop one more additonal alternative with the Business Model Navigator Patterns! (Only in class.)
+6) Can you evaluate and compare the currenet and alternative business models in monetary terms: i.e. annual costs, revenue, profits? (Optional: after class.)
+
+
+
