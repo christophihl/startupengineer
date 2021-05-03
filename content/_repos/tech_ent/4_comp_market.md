@@ -30,11 +30,12 @@ This section on market sizing & competition analysis provides resources and mate
 
 * [Slides](https://www.dropbox.com/s/l03thzvax1wsh20/Technology_Entrepreneurship_Comp%26Mark_SS21.pdf?dl=0)
 
-* [Recording](https://www.dropbox.com/s/by3sbrygrgcomcy/4_TE_Comp.mp4?dl=0)
 
 <br/>
-{{< youtube 6pf_DOY7sdI >}}
+{{< youtube sVEkhMHPbvc >}}
 <br/><br/>
+
+
 
 
 ## Market Sizing: The Startup Way
