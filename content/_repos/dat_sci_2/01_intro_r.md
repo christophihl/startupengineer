@@ -856,9 +856,9 @@ See the `R Markdown Cheat Sheet` for further information regarding the markdown 
 
 ### Submission
 
-Submit your lab journal URL and password via the following form:
+Please submit your lab journal URL and password via the following form. Otherwise we cannot evaluate your journal.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSej9U7iik0T5xdk282WbDeHNzegGZ_RcKOIdTZ7hQZJAkCM2w/viewform?embedded=true" width="640" height="986" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_K3W6LN91a41Qx1PcWcbpCTE8wxIz23WZNFB-yg3-OsRG8Q/viewform?embedded=true" width="640" height="1332" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
 
 ***
 
