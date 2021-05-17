@@ -73,7 +73,7 @@ The Avatech founding team has developed four potential "models" for bringing Ava
 
 <br/>
 
-## (Platform) Business Model Innovation
+## (Platform) Business Models
 
 **Case**: [CampusHash](https://www.dropbox.com/s/ln2pz1fwe5d98iy/CampusHash.pdf?dl=0)
 
@@ -86,4 +86,26 @@ The Avatech founding team has developed four potential "models" for bringing Ava
 6) Can you evaluate and compare the currenet and alternative business models in monetary terms: i.e. annual costs, revenue, profits? (Optional: after class.)
 
 
+<br/>
+
+## Revenue Models and Pricing
+
+**Case 1**: [PassionConnect](https://www.dropbox.com/s/zwv99gq6wyp7als/PassionConnect.pdf?dl=0)
+
+`Assignment Questions`:
+1) What criteria should the co-founders use to evaluate each of the revenue models they consider? [^1]
+[^1]: Here is a list of possible criteria:
+	- **Financial:** predictability of revenues (recurring vs. one-time); positive cash flow cycle (earn before you spend); profit potential; fixed vs. variable cost; customer acquisition / marketing cost
+	- **Users / customers:** impact on user experience; impact on user growth (speed up or slow down); scalability with new users; conversion rate (to paying users)
+	- **Feasibility:** alignment with founder goals and value proposition; required investment to launch, integration / fit with current business activities
+2) Evaluate each revenue model against your selection of criteria – which one should they choose?
+3) What are the key decisions to be made for the chosen revenue model in order to implement it?
+
+
+**Case 2**: [Basecamp](https://www.dropbox.com/s/0r5s5q74s3fi3a0/Basecamp.pdf?dl=0)
+
+`Assignment Questions`:
+1) Evaluate the price-testing process at Basecamp. Should Lorang have conducted different tests or in a different manner? What is the purpose of price testing at this stage of a venture?
+2) Evaluate the results of the tests that Basecamp did conduct. What is your interpretation of the data from the A/B test, the price sensitivity survey, the team's dicussion of "customers and comparables" (p. 11), and Fred's comments about pricing (Exhibit 3)?
+3) Evaluate each pricing option being considered for BC3. If you were Noah Lorang, which change (if any) would you recommend for BC3 and why?
 
