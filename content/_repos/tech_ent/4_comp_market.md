@@ -1,16 +1,16 @@
 ---
-title: Market Sizing & Competition Analysis
-linktitle: Market Sizing & Competition Analysis
+title: Competition & Market Analysis
+linktitle: Competition & Market Analysis
 toc: true
 type: docs
 date: "2020-05-05T00:00:00Z"
 draft: false
 menu:
   tech_ent:
-    weight: 6
+    weight: 5
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 5
+weight: 4
 ---
 
 ## Objectives
@@ -22,7 +22,21 @@ This section on market sizing & competition analysis provides resources and mate
 4. Understand different types of markets and modes of competition.
 5. Conduct and visualize the competition analysis for a startup idea.
 
+
+
+<br/><br/>
+
+## Lecture on Competition and Market Analysis
+
+* [Slides](https://www.dropbox.com/s/l03thzvax1wsh20/Technology_Entrepreneurship_Comp%26Mark_SS21.pdf?dl=0)
+
+
 <br/>
+{{< youtube sVEkhMHPbvc >}}
+<br/><br/>
+
+
+
 
 ## Market Sizing: The Startup Way
 * [The Startup Way: TAM, SAM, SOM](https://demigos.com/blog-post/how-a-startup-can-define-its-market-size/)
@@ -58,5 +72,29 @@ This section on market sizing & competition analysis provides resources and mate
 * [Visualize Competition II](https://blogs.berkeley.edu/2013/11/11/a-new-way-to-look-at-competitors/)
 <br/>
 * [Visualize Competition III](https://www.edrawsoft.com/competition-analysis-charts.html)
+
+
 <br/>
 
+
+## Choosing Competition: The Entrepreneurial Strategy Compass
+* Intro:
+<br/>
+{{< youtube 6s8qWzxSmjM >}}
+<br/>
+* Intellectual Property Strategy:
+<br/>
+{{< youtube zsrZ6O6HgIY >}}
+<br/>
+* Value Chain Strategy:
+<br/>
+{{< youtube wPCOwHT0EvA >}}
+<br/>
+* Disruption Strategy:
+<br/>
+{{< youtube 4ODCGfi7pwI >}}
+<br/>
+* Architectual Strategy:
+<br/>
+{{< youtube gX5ojx3RUvo >}}
+<br/>

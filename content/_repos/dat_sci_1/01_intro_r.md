@@ -672,7 +672,7 @@ We will use GitHub to store your data and hand in your assignments through your 
   <div id="clear"></div>
 </div>
 
-3. Accept the assignment on GitHub Classroom, create a website using R Markdown and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
+3. Accept the assignment on GitHub Classroom, create a website using R Markdown and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/journal_template/" target="_blank"><b>Journal Data Science</b></a>. You can open it using the password: *test*.
 
 <!-- INFOBOX -->
 <div id="header">Infobox</div>

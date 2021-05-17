@@ -37,7 +37,7 @@ menu:
 
 <br/>
 
-- to be announced
+- [Zoom-Aufnahme](https://www.dropbox.com/s/sce77f6bhy1oqxz/zoom_0.mp4?dl=0)
 
 <br/>
 

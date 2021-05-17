@@ -7,10 +7,10 @@ date: "2020-04-22T00:00:00Z"
 draft: false
 menu:
   tech_ent:
-    weight: 12
+    weight: 13
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 11
+weight: 12
 --- 
 
 ## Note
@@ -50,5 +50,40 @@ Jason Rosenthal decides to bring in your team to provide a rapid turn-around ana
 6) How does Evisort ensure that the answers its software provides are accurate? How does the software mitigate errors the AI might make?
 7) What is Evisort's competitive advantage in the marketplace?
 8) What is the main descision point the co-founders face at the end of the case? What factors need to be considered before the co-founders can plan their growth strategy?
+
+
+<br/>
+
+## Competition and Market Analysis
+
+**Case**: [Avatech](https://www.dropbox.com/s/pmdi9dx6n7pb3c0/Avatech_Case.pdf?dl=0)
+
+`Assignment Questions`:
+The Avatech founding team has developed four potential "models" for bringing Avatech to market:
+* `The Intellectual Property Model`: Under this approach, Avatech would focus on building a reputation and intellectual property portfolio for being the leading innovator in snow safety. The goal would be to hire expert researchers and engineers in this field and aim at building a solid patent portfolio, which they would license out to other sporting equipment manufacturers.
+* `The Collaboration Model`: Under this approach, Avatech would focus on building tight partnership with other established sporting equipment manufacturers. This strategy will allow Avatech to take advantage of the existing supplier and distribution channels and become a complement to the incumbent companies’ existing product portfolio. This would require Avatech to hire additional experienced business development people to build partnerships.
+* `The Leading Innovator Model`: Under this approach, Avatech would focus on positioning itself as a differentiated sporting equipment brand with strong technological expertise. They would particularly aim at penetrating the early adopter group. In order to strike out on their own, Avatech would need to build its own value chain of suppliers and distributors.
+* `The Platform Model`: In this model, Avatech would transform itself into a digital ski safety platform that integrate multiple sources of safety data, from Avatech users to forecasting services. This would require Avatech to hire software developers and data scientists to build the platform and analytics.
+
+1) What are the strengths and weaknesses of these four alternatives?
+2) Considering that the snow detecting equipment industry is still in its infancy, which of these approaches (or a variant of your own design) would help a startup such as Avatech establish a customer value proposition and also position Avatech to be able to succeed on an ongoing basis?
+3) Provide a detailed action plan and the rationale for justifying your choice.
+4) How would you size the relevant market for Avatech (i.e. ski (safety) equipment)? 
+
+
+<br/>
+
+## (Platform) Business Model Innovation
+
+**Case**: [CampusHash](https://www.dropbox.com/s/ln2pz1fwe5d98iy/CampusHash.pdf?dl=0)
+
+`Assignment Questions`:
+1) What is CampusHash‘s current business model? (Only in class: Outline them with the business model canvas.) 
+2) How does it fit into the Entrepreneurial Strategy Compass?
+3) How does the business model change with the three considered alternatives? (Only in class: Outline them with the business model canvas.) 
+4) How do the three considered alternatives fit into the Entrepreneurial Strategy Compass? What type of pivot does each of these business model changes refer to?
+5) Develop one more additonal alternative with the Business Model Navigator Patterns! (Only in class.)
+6) Can you evaluate and compare the currenet and alternative business models in monetary terms: i.e. annual costs, revenue, profits? (Optional: after class.)
+
 
 

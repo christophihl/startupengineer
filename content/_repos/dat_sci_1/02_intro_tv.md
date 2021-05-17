@@ -49,7 +49,7 @@ packagename::function_name()</code></pre>
   <div id="clear"></div>
 </div>
 
-Downlaod the following file and place in your getting_started folder. Try running the commands to install some of the packages we are going to use throughout this class.
+Downlaod the following file and place in a folder in your project. Try running the commands to install some of the packages we are going to use throughout this class.
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
