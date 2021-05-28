@@ -22,7 +22,19 @@ This section on revenue models & pricing provides resources and materials to sup
 4. Consider pricing principles implied by behavioral economics and psychology.
 5. Learn about tools to measure willingness-to-pay.
 
+
+<br/><br/>
+
+## Lecture on Revenue Models & Pricing
+
+* [Slides](https://www.dropbox.com/s/38e4wtgqyp1qs9r/Technology_Entrepreneurship_Rev_Price_SS21.pdf?dl=0)
+
+
 <br/>
+{{< youtube 5Zpv_OBwHx8 >}}
+<br/><br/>
+
+
 
 ## Types of Revenue Models
 * [List by the Founder Institute](https://fi.co/insight/the-10-most-popular-startup-revenue-models)
