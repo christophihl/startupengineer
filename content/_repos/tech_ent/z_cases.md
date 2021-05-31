@@ -109,3 +109,23 @@ The Avatech founding team has developed four potential "models" for bringing Ava
 2) Evaluate the results of the tests that Basecamp did conduct. What is your interpretation of the data from the A/B test, the price sensitivity survey, the team's dicussion of "customers and comparables" (p. 11), and Fred's comments about pricing (Exhibit 3)?
 3) Evaluate each pricing option being considered for BC3. If you were Noah Lorang, which change (if any) would you recommend for BC3 and why?
 
+
+<br/>
+
+## Lean Startup & Experimentation
+
+`Please choose in advance one of the following three cases to work on in your group. Then it would only be smart to choose this case also for an optional individual case memo :wink:`
+
+**Case 1**: [Rent The Runway](https://www.dropbox.com/s/sgtqule2e5d65c8/RentTheRunway.pdf?dl=0)
+
+**Case 2**: [Dropbox](https://www.dropbox.com/s/sex7u286xce8kw4/Dropbox.pdf?dl=0)
+
+**Case 3**: [Lit Motors](https://www.dropbox.com/s/6o4an8s39x7dc9l/LitMotors.pdf?dl=0)
+
+`Assignment Questions for all three cases`:
+1) What hypotheses did the company seek to validate so far?
+2) What did the company do to validate these hypotheses?
+3) How do you evaluate these validation efforts? What was good, what could be improved and how?
+4) What hypotheses should the company validate next? And how?
+
+
