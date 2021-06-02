@@ -1025,6 +1025,7 @@ In this session we did not use the `recipes` packages to prepare our data. This 
 **II. Create features with the recipes package**
 
 This is just a template. Check the documentation for further information.
+Note that, depending on how you write your code, you will probably only need `bake()` or `prep()`. 
 
 ```r
 ?recipe
