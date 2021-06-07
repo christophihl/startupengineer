@@ -25,6 +25,10 @@ This section on lean startup & experimentation provides resources and materials 
 <br/>
 
 
+## Strategic Experimentation
+* [Workbook](https://www.dropbox.com/s/h9016gsmwink3pd/Test%2B2%2C%2BChoose%2B1.pdf?dl=0)
+
+
 ## Lean Startup Principles
 * [Eric Ries](http://theleanstartup.com/principles)
 <br/>
