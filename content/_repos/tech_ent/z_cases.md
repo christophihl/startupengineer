@@ -129,3 +129,49 @@ The Avatech founding team has developed four potential "models" for bringing Ava
 4) What hypotheses should the company validate next? And how?
 
 
+## Marketing for Startup Growth
+
+**Case**: [Hubble Contact Lenses](https://www.dropbox.com/s/mdtoqq1py8r8118/HubbleContactLenses.pdf?dl=0)
+
+`Assignment Questions`:
+1) What are strengths and weaknesses in Hubble's current business model? What are the expected changes in consumer behavior and decision making for the business model to work?
+2) How efficiently does Hubble acquire and retain customers? What do they do well? What needs improvement?
+For in-class group work only: What is the customer lifetime value (CLV) of a Hubble customer? (Make reasonable assumptions as needed.) How is CLV likely to develop for Hubble over time? What can Hubble do to improve it? What factors work against it?
+3) Assess how Hubble has used owned, earned, and paid media to support the customer journey and move customers through the acquisition funnel? What needs to change as the company scales? Why?
+4) What is the role of offline and online advertising in acquiring Hubble customers? Evaluate the following decisions facing Hubble regarding online versus offline media allocation:
+	- As of April 2018, Hubble is allocating 78% of its paid media spend to online advertising and 22% to traditional channels (i.e., TV, radio, podcast, and direct mail). Is this budget allocation between online and offline appropriate and if not, how would you adjust it?
+	- Based on the results of the TV test campaigns (i.e. the $1 Million test across different markets and the World Series TV test), would you recommend that Hubble switch some of its spending to TV? Why or why not? How much do you trust the data coming out of these tests?
+	- Should Hubble continue to spend the bulk of its budget on reaching new consumers or reallocate some of that spending to retarget those who have already been exposed to its ads? Why?
+5) As Hubble prepares to scale its business following its upcoming fundraise, how should they allocate capital across the following decisions? Which, if any, would you priotitize in the short term?
+	- Should Hubble expand its product line?
+	- Should Hubble move beyond DTC? If so, should it open its own flagship stores, sell via a wholesale model through retailers, or create a reseller option for opticians?
+	- Should Hubble expand internationally or focus on its business at home in the U.S.?
+	- How do each of these scaling decisions impact Hubble's integrated marekting communication strategy?
+
+<br/>
+
+## Sales for Startup Growth
+
+**Case**: [AnswerDash](https://www.dropbox.com/s/zjqockzz72lo2h3/AnswerDash.pdf?dl=0)
+
+`Assignment Questions`:
+1) Assess AnswerDash’s current go-to-market approach, including customer selection, pricing, communication, and sales efforts. Which aspects do you like? Which ones don’t you like? For in-class group work only: Based on the current pricing model what is the customer lifetime value (CLV) to AnswerDash?  (Make reasonable assumptions as needed.)
+2) For in-class group work only: Calculate the economic value that the AnswerDash product delivers for an e-commerce vs. Software-as-a-Service customer. Separate between cost savings and revenue lift benefits. (As as a starting point, you can consider an organization with 100,000 monthly web visitors and $1,000,000 monthly revenues.) 
+3) What is your view on the three primary options AnswerDash is contemplating going forward? Which would you recommend by the company pursue?
+4) For the strategic option you support, what would be your marketing & sales approach? What companies to target, how to position the value proposition, how to sell to an organization, and what pricing model / format to allow?
+
+
+
+<br/>
+
+## Organizing for Startup Growth
+
+**Case**: [N12-Technologies](https://www.dropbox.com/s/raf98cyjetm6sll/N12_Tech.pdf?dl=0)
+
+`Assignment Questions`:
+1) What were the major stages in N12's scaling up process? What were the primary challenges? How effectively did the company manage the transistion from 4 to 27 employees?
+2) What has been N12's approach to (a) building an organization, (b) buildinhg a business? What (if any) is the conncetion between the two?
+3) How would you describe the roles, responsibilities, and relationships of: (a) Berkson and Flavin, (b) Williams and Degitarov, (c) Jarosz and Gouldstone? How have the jobs changed over time? How would you advise them going forward?
+4) What is your evaluation of N12's future prospects? What do you see as the biggest opportunities? The primary threats or challenges? What (if anything) should they do differently?
+
+

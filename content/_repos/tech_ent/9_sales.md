@@ -1,16 +1,16 @@
 ---
-title: Sales for Startups
-linktitle: Sales for Startups
+title: Sales for Startup Growth
+linktitle: Sales for Startup Growth
 toc: true
 type: docs
 date: "2020-07-06T00:00:00Z"
 draft: false
 menu:
   tech_ent:
-    weight: 11
+    weight: 10
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 10
+weight: 9
 ---
 
 ## Objectives

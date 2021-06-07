@@ -148,9 +148,9 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 | - | May 24th | Pfingsten Holiday |
 | 6 | May 31st | Revenue Models & Pricing |
 | 7 | June 7th | Lean Startup & Experimentation |
-| 8 | June 14th | Growth Management & Metrics |
-| 9 | June 21st | Marketing |
-| 10 | June 28th | Sales |
+| 8 | June 14th | Marketing for Startup Growth |
+| 9 | June 21st | Sales for Startup Growth |
+| 10 | June 28th | Organizing for Startup Growth |
 | 11 | July 5th | Financial Analysis |
 | 12 | July 12th | Final Startup Pitches |
 | 13 | July 19th | Submission of Final Pitch Deck |
