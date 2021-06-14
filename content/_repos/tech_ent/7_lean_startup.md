@@ -25,6 +25,20 @@ This section on lean startup & experimentation provides resources and materials 
 <br/>
 
 
+<br/><br/>
+
+## Lecture on Lean Startup & Experimentation
+
+* [Slides](https://www.dropbox.com/s/9gamkaz2fm9jcvc/Technology_Entrepreneurship_Lean_Exp_SS21.pdf?dl=0)
+
+
+<br/>
+Video to come soon
+<br/><br/>
+
+
+
+
 ## Strategic Experimentation
 * [Workbook](https://www.dropbox.com/s/h9016gsmwink3pd/Test%2B2%2C%2BChoose%2B1.pdf?dl=0)
 
