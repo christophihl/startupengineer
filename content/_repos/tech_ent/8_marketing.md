@@ -24,6 +24,22 @@ This section on marketing for startups provides resources and materials to suppo
 
 <br/>
 
+
+<br/><br/>
+
+## Lecture on arketing for Startup Growth
+
+* [Slides](https://www.dropbox.com/s/1gkas8s3bkwfm8d/Technology_Entrepreneurship_Marketing_SS21.pdf?dl=0)
+
+
+<br/>
+Video to come soon
+<br/><br/>
+
+
+
+
+
 ## When and How to Grow
 
 * YCombinator on Growth
