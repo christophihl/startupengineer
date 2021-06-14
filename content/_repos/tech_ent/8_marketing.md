@@ -33,10 +33,8 @@ This section on marketing for startups provides resources and materials to suppo
 
 
 <br/>
-Video to come soon
+{{< youtube 1ngd1c9ons8 >}}
 <br/><br/>
-
-
 
 
 
