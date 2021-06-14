@@ -27,7 +27,7 @@ This section on marketing for startups provides resources and materials to suppo
 
 <br/><br/>
 
-## Lecture on arketing for Startup Growth
+## Lecture on Marketing for Startup Growth
 
 * [Slides](https://www.dropbox.com/s/1gkas8s3bkwfm8d/Technology_Entrepreneurship_Marketing_SS21.pdf?dl=0)
 
