@@ -808,7 +808,7 @@ That's it. Now you can navigate to your new homepage via the link in the greenbo
 
 ## Submission
 
-In the last chapter you will be asked for your name, student number, GitHub name and URLs to your web applications.
+In one of the following chapters you will be asked for your name, student number, GitHub name and URLs to your web applications.
 
 ***
 
