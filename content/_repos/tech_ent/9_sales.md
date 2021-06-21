@@ -28,9 +28,8 @@ This section on sales for startups provides resources and materials to support t
 
 
 <br/>
-{{< youtube 1ngd1c9ons8 >}}
+{{< youtube 6FYbwbfbFR0 >}}
 <br/><br/>
-
 
 
 
