@@ -20,6 +20,20 @@ This section on sales for startups provides resources and materials to support t
 2. Design a buyer journey and a sales process.
 3. Create a bottom up marketing and sales plan.
 
+<br/><br/>
+
+## Lecture on Sales for Startup Growth
+
+* [Slides](https://www.dropbox.com/s/akxj5dfekrfricg/Technology_Entrepreneurship_Sales_SS21.pdf?dl=0)
+
+
+<br/>
+{{< youtube 1ngd1c9ons8 >}}
+<br/><br/>
+
+
+
+
 
 <br/>
 
