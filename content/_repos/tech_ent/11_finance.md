@@ -1,6 +1,6 @@
 ---
-title: Financial Projections & Valuation
-linktitle: Financial Projections & Valuation
+title: Financial Projections
+linktitle: Financial Projections
 toc: true
 type: docs
 date: "2020-07-01T00:00:00Z"
@@ -20,7 +20,13 @@ This section on financial projections & valuation provides resources and materia
 2. Forecast revenues.
 3. Forecast costs.
 4. Assess the financial attractiveness and capital needs of a startup.
-5. Determine the financial value of a startup business.
+
+
+<br/><br/>
+
+## Lecture on Financial Projections
+
+* [Slides](https://www.dropbox.com/s/l9c2akzzjguo81m/Technology_Entrepreneurship_SS21_FinPlan.pdf?dl=0)
 
 
 <br/>
@@ -65,11 +71,5 @@ This section on financial projections & valuation provides resources and materia
 
 ## Financial Projections Template
 
-* [Template by Prof. Thomas Hellmann](https://www.dropbox.com/s/whv56heecq97wb7/Financial_Projections_TH.xlsx?dl=0)
+* [Template by Prof. Thomas Hellmann](https://www.dropbox.com/s/2bni4jpmldycnor/Financial-Projections-Model_%28blank%29.xlsx?dl=0)
 
-
-<br/>
-
-## Startup Valuation
-
-Under Construction. Coming soon...

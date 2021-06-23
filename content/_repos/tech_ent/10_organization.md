@@ -31,7 +31,7 @@ This section on organizing for startup growth provides resources and materials t
 
 
 <br/>
-Slides: to come
+Video: to come
 <br/><br/>
 
 
