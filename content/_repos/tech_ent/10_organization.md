@@ -27,12 +27,13 @@ This section on organizing for startup growth provides resources and materials t
 
 ## Lecture on Organizing for Startup Growth
 
-* Slides: to come
+* [Slides](https://www.dropbox.com/s/ryxc8c94ea4jii0/Technology_Entrepreneurship_Organization_SS21.pdf?dl=0)
 
 
 <br/>
 Video: to come
 <br/><br/>
+
 
 
 
