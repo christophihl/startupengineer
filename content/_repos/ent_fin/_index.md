@@ -22,7 +22,95 @@ menu:
 ---
 
 
-## Materials
+### Credits
+
+* 6 ECTS module
+* 2 courses `Entrepreneurial Finance: Lecture` & `Entrepreneurial Finance: Case Studies`
+
+***
+
+### Target Audience
+
+* Master students in IWI, LIM, GTIME & Exchange Programs
+
+***
+
+### Instructor(s)
+
+* {{% mention "ihl" %}}
+* {{% mention "lampe" %}}
+
+***
+
+### Overview
+<details class="description" close><summary data-close="Show" data-open="Hide"></summary>
+Entrepreneurial finance is at the center of a clash of two very distant worlds: that of entrepreneurship and that of finance. Finance is disciplined, based on numbers and logical thinking and looking for proven track records. Entrepreneurship is messy, based on intuition and experimentation and treading off the beaten track. Entrepreneurial finance is the provision of funding to young, innovative, growth-oriented companies. Entrepreneurial companies are young, typically less than ten years old, and introduce innovative products or business models. The younger are called “startups,” and are typically less than five years old.
+<br><br>
+There is a variety of investors who can finance entrepreneurial companies: family and friends, business angels, accelerators and incubators, crowdfunding platforms, venture capital firms, corporate investors, etc. The course provides a thorough understanding of what motivates them, of the way they invest, and of what support they can provide to a company at what stage in the fundraising cycle. The course addresses the following key questions: How much money can and should be raised? When should it be raised and from whom? What is a reasonable valuation of the company? How should funding, employment contracts and exit decisions be structured?
+<br><br>
+Thus, the course provides an understanding of the whole fundraising cycle, from the moment the entrepreneur conceived her idea to the moment investors exit the company and move on. We examine the entrepreneur's signalling to investors of the qualities of the venture, the investors' evaluation of the venture, the various dimensions of contracting (cash flow rights, control rights, compensation, and other clauses), the negotiation of a deal and the provision of corporate governance, the process of staged financing, the financing through debt, and the exit process though liquidity events such as initial public offering, sale or merger.
+<br><br>
+The workflow in this module is comprised of two course elements:
+
+1. {{< hl >}}(Flipped) classroom{{< /hl >}}: learning about and discussing concepts and tools currently prevailing in theory and practice of modern entrepreneurial finance.
+2. {{< hl >}}Problem-based learning{{< /hl >}}: deepen an understanding of the concepts and tools by seeing them applied and applying them to real company cases.
+
+</details>
+
+***
+
+### Objectives
+
+<details class="description" close><summary data-close="Show" data-open="Hide"></summary>
+
+Upon completion of this course module, students will be able to:
+* Prepare a financial plan for a new venture or business opportunity
+* Engage in financial valuation for new ventures and business opportunities
+* Understand the design of financial contracts 
+* Analyze and evaluate growth and exit strategies
+
+This course module can prepare students for the following career paths: 
+* Startup founder or early employee in a startup
+* Venture capital investing 
+* Strategy & valuation consulting
+* Corporate finance
+
+</details>
+
+***
+
+
+### Textbook
+
+* [Da Rin, Marco, and Thomas Hellmann. Fundamentals of Entrepreneurial Finance. Oxford University Press, 2020.](https://www.entrepreneurialfinance.net)
+
+***
+
+### Grading
+
+* `70%` (individual): Written case solutions submitted after class (for 7 out of 11 cases)
+* `30%` (individual): Oral class participation
+
+***
+
+### Registration
+
+* to open soon
+
+***
+
+### Time & Location
+
+* `Entrepreneurial Finance: Lecture`: Monday, 10.30 - 12.00, Buidling Q, Room 1.21
+* `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.15, Buidling Q, Room 1.21
+
+{{% alert warning %}}
+As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
+{{% /alert %}}
+
+***
+
+### Course Notes & Materials
 
 Here you find the following materials:
 
@@ -32,9 +120,11 @@ Here you find the following materials:
 - [Tools]({{< relref "_repos/ent_fin/tools.md" >}})
 
 
-<br/>
 
-## Preliminary Schedule
+***
+
+### Preliminary Schedule
+
 
 | Session | Date | Topic |
 | --- | --- | --- |
@@ -50,4 +140,6 @@ Here you find the following materials:
 | 9 | January 11th | Debt Financing |
 | 10 | January 18th | Corporate Governance |
 | 11 | January 25th | Exit |
+
+
 
