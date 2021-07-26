@@ -1072,7 +1072,7 @@ Create a Rmd document, that can generate a pdf and a html output. The generated 
 
 **Shiny**
 
-Take the flexdashboard, which we have created in this session (with the German map), make it reactive and add shiny components to it. It does not necessarily has to look like the following, but it should have a selection function for the Bike Type (category_1) and for the Bike Family (category_2) and a date range slider. For the bike selection tools, I have used `shinyWidgets::checkboxGroupButtons()`, `shinyWidgets::pickerInput()`. Check [dreamrs.github.io/shinyWidgets/index.html](https://dreamrs.github.io/shinyWidgets/index.html)
+Take the flexdashboard, which we have created in this session (with the German map), make it reactive and add shiny components to it. It does not necessarily has to look like the following, but it should have a selection function for the Bike Type (category_1) and for the Bike Family (category_2), a date range slider and at least two visualizations. For the bike selection tools, I have used `shinyWidgets::checkboxGroupButtons()`, `shinyWidgets::pickerInput()`. Check [dreamrs.github.io/shinyWidgets/index.html](https://dreamrs.github.io/shinyWidgets/index.html)
 to see the code. Using the `shinyWidgets` package is optional, you can also use the built in checkboxes. Use `renderPlotly()` and `plotlyOutput()` to plot the map reactively. Don't forget to put `runtime: shiny` at the top of the Rmarkdown file.
 
 {{< figure src="/img/courses/dat_sci/14/sales_dashboard.png">}}
