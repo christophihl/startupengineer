@@ -12,7 +12,7 @@ date: "2020-10-05T00:00:00Z"
 lastmod: "2020-10-05T00:00:00Z"
 showauthordate: false
 featured: true
-draft: true
+draft: false
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
@@ -111,11 +111,11 @@ This course module can prepare students for the following career paths:
 
 ### Time & Location
 
-* `Entrepreneurial Finance: Lecture`: Monday, 10.30 - 12.00, Buidling Q, Room 1.21
-* `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.15, Buidling Q, Room 1.21
+* `Entrepreneurial Finance: Lecture`: Monday, 10.30 - 12.00, Buidling Chanel 4, Room 0.08
+* `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.15, Chanel 4, Room 0.08
 
 {{% alert warning %}}
-As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
+We plan for a hybrid format in which both online partcipipation and physical presence should be possible.
 {{% /alert %}}
 
 ***
@@ -131,18 +131,17 @@ Access to course notes & materials [**here**]({{< relref "_repos/ent_fin/_index.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | November 2nd | Introduction: Evaluating Venture Opportunities|
-| 2 | November 9th | Financial Planning |
-| 3 | November 16th | Ownership and Returns |
-| 4 | November 23rd | Valuation Methods |
-| 5 | November 30th | Early Stage and Venture Capital Investors |
-| 6 | December 7th | Term Sheets| 
-| 7 | December 14th| Structuring Deals |
-| - | Dec 20th - Jan 3rd | Christmas Holiday |
-| 8 | January 4th | Staged Financing |
-| 9 | January 11th | Debt Financing |
-| 10 | January 18th | Corporate Governance |
-| 11 | January 25th | Exit |
-
-
-
+| 1 | October 18th | Introduction: Evaluating Venture Opportunities|
+| 2 | October 25th | Financial Planning |
+| 3 | November 1st | Ownership and Returns |
+| 4 | November 8th | Valuation Methods |
+| 5 | November 15th | Early Stage and Venture Capital Investors |
+| 6 | November 22th | Term Sheets| 
+| 7 | November 29th| Structuring Deals |
+| 8 | December 6th | Staged Financing |
+| 9 | December 13th | Debt Financing |
+| - | Dec 20th - Jan 2nd | Christmas Holiday |
+| 10 | January 3rd | Corporate Governance |
+| 11 | January 10th | Exit |
+| 12 | January 17th | Guest Lecture |
+| 13 | January 24th | Wrap up |

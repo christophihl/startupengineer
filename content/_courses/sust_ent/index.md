@@ -12,8 +12,8 @@ categories: []
 date: "2020-03-25T00:00:00Z"
 lastMod: "2020-03-25T00:00:00Z"
 showauthordate: false
-featured: true
-draft: false
+featured: false
+draft: true
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
