@@ -111,7 +111,7 @@ This course module can prepare students for the following career paths:
 
 ### Time & Location
 
-* `Entrepreneurial Finance: Lecture`: Monday, 10.30 - 12.00, Buidling Chanel 4, Room 0.08
+* `Entrepreneurial Finance: Lecture`: Monday, 13.00 - 14.30, Buidling Chanel 4, Room 0.08
 * `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.15, Chanel 4, Room 0.08
 
 {{% alert warning %}}
@@ -123,6 +123,7 @@ We plan for a hybrid format in which both online partcipipation and physical pre
 ### Course Notes & Materials
 
 Access to course notes & materials [**here**]({{< relref "_repos/ent_fin/_index.md" >}}).
+Password to found on Studip.
 
 ***
 
