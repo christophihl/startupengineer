@@ -105,7 +105,7 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* Open from October 5th until November 1st on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=dd5bddbc03851253f9e3d47d4bf8c91d)
+* Open from September 27th until October 17th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=e3f942b6d1a4adb9af4da59bdd699c39&again=yes)
 
 ***
 
@@ -123,7 +123,7 @@ We plan for a hybrid format in which both online partcipipation and physical pre
 ### Course Notes & Materials
 
 Access to course notes & materials [**here**]({{< relref "_repos/ent_fin/_index.md" >}}).
-Password to found on Studip.
+Password to be found on Studip.
 
 ***
 
