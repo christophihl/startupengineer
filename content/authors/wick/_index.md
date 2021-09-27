@@ -37,6 +37,12 @@ interests:
 
 education:
   courses:
+  - course: Co-Founder
+    institution: Valuecase GmbH, Hamburg, Germany
+    year: 2021 - 
+  - course: Research Associate
+    institution: Hamburg University of Technology, Germany
+    year: 2021
   - course: PhD in Management
     institution: Hamburg University of Technology, Germany
     year: 2015 - 2019
@@ -45,7 +51,7 @@ education:
     year: 2016
   - course: Consultant
     institution: McKinsey & Company, Hamburg, Germany
-    year: 2013 - current
+    year: 2013 - 2021
   - course: Trainee
     institution: HSH Nordbank, Hamburg, Germany
     year: 2009 - 2012
@@ -73,6 +79,6 @@ email: ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Current Members
+- Alumni
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Entrepreneurial Finance
-subtitle: 6 ECTS Module for Master Students (formerly Corporate Entrepreneurship and Growth)
-summary: 6 ECTS Module for Master Students (formerly Corporate Entrepreneurship and Growth)
+subtitle: 6 ECTS Module for Master Students
+summary: 6 ECTS Module for Master Students
 authors:
 - ihl
 - lampe
