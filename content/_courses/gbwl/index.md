@@ -45,8 +45,8 @@ projects: []
 ***
 
 ### Zeit & Ort
-* Vorlesung `Grundlagen der Betriebswirtschaftslehre`: Donnerstag, 18.30 - 21.00, Audimax II
-* Übung `Entrepreneurship`: Donnerstag, 15.00 - 16.30 & 16.45 - 18.15, Channel 4
+* Vorlesung `Grundlagen der Betriebswirtschaftslehre`: Donnerstag, 15.00 - 17.30, (virtuell)
+* Übung `Entrepreneurship`: Mittwoch, 11.15 - 12.45 & 13.00 - 14.30 (virtuell)
 
 {{% alert warning %}}
 Solange die gegenwärtige Situation anhält, finden alle Veranstaltungen in Form von aufgezeichneten Videovorlesungen oder Live-Videokonferenzen statt, zu denen die Teilnehmner rechtzeitig Zugang erhalten.
