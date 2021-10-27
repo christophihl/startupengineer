@@ -70,5 +70,5 @@ Zugang zu Vorlesungsfolien und -videos [**here**]({{< relref "_repos/gbwl/_index
 
 ### Alle weiteren Informationen und Materialien zur Veranstaltung
 
-* [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=c0da875ca2e0eb3664e776a5f1120547)
+* [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/overview?cid=47f23461ec532266c599d0a63cca55a1)
 

@@ -15,6 +15,15 @@ type: docs  # Do not modify.
 # Add menu entry to sidebar.
 # - name: Declare this menu item as a parent with ID `name`.
 # - weight: Position of link in menu.
+# Aufzeichnung der Zoom Live Session
+# 
+# <br/>
+# 
+# - [Zoom-Aufnahme](https://www.dropbox.com/s/sce77f6bhy1oqxz/zoom_0.mp4?dl=0)
+# 
+# <br/>
+
+
 menu:
   gbwl:
     name: GBWL - Unternehmertum
@@ -28,16 +37,7 @@ menu:
 
 <br/>
 
-- [Präsentationsfolien](https://www.dropbox.com/s/zs0okkhi26itrmb/GBWL_Unternehmertum_SS21.pdf?dl=0)
-
-<br/>
-
-
-## Aufzeichnung der Zoom Live Session
-
-<br/>
-
-- [Zoom-Aufnahme](https://www.dropbox.com/s/sce77f6bhy1oqxz/zoom_0.mp4?dl=0)
+- [Präsentationsfolien](https://www.dropbox.com/s/f7p5hcyz2f8ffoe/GBWL_Unternehmertum_WS21.pdf?dl=0)
 
 <br/>
 
