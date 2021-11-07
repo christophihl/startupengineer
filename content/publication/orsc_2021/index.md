@@ -45,7 +45,7 @@ links:
   url: https://www.innovationgrowthlab.org/projects/choosing-team-members-versus-ideas-evidence-field-experiment-entrepreneurial-team
 - name: AEA RCT Registry
   url: https://www.socialscienceregistry.org/trials/1179
-url_pdf: ''
+url_pdf: pdf/orsc_2021.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
