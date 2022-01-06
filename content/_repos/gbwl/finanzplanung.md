@@ -5,12 +5,16 @@ summary: Overview
 weight: 1
 
 # Page metadata.
-title: Übersicht
+title: GBWL - Finanzplanung
 date: "2020-11-14T00:00:00Z"
 lastmod: "2020-11-14T00:00:00Z"
 draft: false  # Is this a draft? true/false
 toc: true  # Show table of contents? true/false
 type: docs  # Do not modify.
+
+# Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
+weight: 20
+
 
 # Add menu entry to sidebar.
 # - name: Declare this menu item as a parent with ID `name`.
@@ -26,29 +30,23 @@ type: docs  # Do not modify.
 
 menu:
   gbwl:
-    name: Übersicht
-    weight: 1
+    name: GBWL - Finanzplanung
+    weight: 20
 ---
 
 <br/>
 
-### Lehrende
+# Investitions- und Finanzplanung
+## Vorlesungsmaterialien
 
-* {{% mention "ihl" %}}
-* {{% mention "lampe" %}}
+<br/>
 
-***
+- [Präsentationsfolien](https://www.dropbox.com/s/0dtzuqsbzpegnus/GBWL_Finanzplanung_WS22.pdf?dl=0)
 
-### Materialien
+<br/>
 
-- [Unternehmertum]({{< relref "_repos/gbwl/unternehmertum.md" >}})
-- [Investitions- und Finanzplanung]({{< relref "_repos/gbwl/finanzplanung.md" >}})
 
-***
+## Lehrvideo
 
-### Zeitplan
+{{< youtube lBXqrpzEX8o >}}
 
-| Datum | Thema |
-| --- | --- |
-| 04.11.21 | Unternehmertum |
-| 13.01.22 | Investitions- und Finanzplanung |
