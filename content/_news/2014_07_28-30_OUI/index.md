@@ -1,3 +1,4 @@
+---
 title: Christoph Ihl attended the 12th OUI in Boston
 subtitle: From July 28 to July 30, 2014 the 12. International Open and User Innovation Workshop was held at the Harvard Business School campus in Boston, USA. 
 summary: 

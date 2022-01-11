@@ -1,3 +1,4 @@
+---
 title: Druid Society Conference 2016 
 subtitle: The 20th Anniversary Conference took place in Copenhagen from June 13 to 15, 2016
 summary: Main topic - Innovation and the dynamics of change

@@ -1,3 +1,4 @@
+---
 title: 16. Annual International Open and User Innovation Conference 
 subtitle: The 16th International Open and User Innovation Conference was held from August 6-8, 2018 at the Stern School of Business at New York University.
 summary: 

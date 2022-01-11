@@ -1,3 +1,4 @@
+---
 title: VHB/TIE Tagung 2017 in Koblenz 
 subtitle: In September 2017 the TIE-Conference took place at the Campus of Koblenz-Landau University
 summary: This year’s conference on Technology, Innovation and Entrepreneurship was a great success!

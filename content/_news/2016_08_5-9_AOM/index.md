@@ -1,3 +1,4 @@
+---
 title: 2016 Academy of Management Annual Meeting
 subtitle: Making Organizations Meaningful
 summary: The 76th Annual Meeting of the Academy of Management took place from August 5 to 9, 2016 in Anaheim, California, USA.

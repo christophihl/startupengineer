@@ -1,3 +1,4 @@
+---
 title: 2015 Academy of Management Annual Meeting
 subtitle: The 75. Annual Meeting of the AOM was held August 7 – 11, 2015 in Vancouver, B.C. Canada. 
 summary: The main topic of this conference was Opening Governance

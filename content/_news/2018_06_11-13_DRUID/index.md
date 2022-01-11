@@ -1,3 +1,4 @@
+---
 title: DRUID Academy Conference 2018 
 subtitle: The DRUID Academy Conference 2018 took place in Copenhagen, Denmark from June 11 to 13, 2018
 summary: 

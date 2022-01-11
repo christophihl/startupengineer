@@ -1,3 +1,4 @@
+---
 title: International Open and User Innovation Meeting 2015
 subtitle: From July 13 to 15, 2015 – The International Open and User Innovation Meeting (OUI) took place in Lisbon
 summary: 

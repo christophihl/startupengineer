@@ -1,3 +1,4 @@
+---
 title: EURAM 2018
 subtitle: EURAM 2018 took place at the University of Iceland in Reykjavik from June 19 to 22. 
 summary: Research in action, accelerating knowledge creation in management, was this year’s topic.

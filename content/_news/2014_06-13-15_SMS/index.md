@@ -1,3 +1,4 @@
+---
 title: SMS Special Conference in Copenhagen, June 13 – 15, 2014
 subtitle: Micro-Foundations for Strategic Management Research - Embracing Individuals
 summary: 
