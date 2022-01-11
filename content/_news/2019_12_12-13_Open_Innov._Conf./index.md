@@ -1,6 +1,6 @@
 ---
 title: World Open Innovation Conference 2019 in Rome
-subtitle: Conference Theme: Opening up for Managing Business and Societal Challenges
+subtitle: 'Conference Theme: Opening up for Managing Business and Societal Challenges'
 summary: Christoph Ihl and Alexander Vossen presented their paper - Copyright Or Copy Right? Unsolicited User Behavior As Market Signals
 authors:
 - grabi
