@@ -1,12 +1,12 @@
 ---
-title: 2018 Academy of Management Annual Meeting
-subtitle: Improving Lives
-summary: In 2018 the Annual Meeting of the AOM took place in Chicago
+title: PhD Thesis of Jan Willem Reerink
+subtitle: University-industry knowledge transfer - an empirical analysis of channels, motives and distances
+summary: 
 authors:
 - grabi
 tags:
 categories:
-date: 2018-08-13
+date: 2018-09-02
 featured: false
 draft: false
 
@@ -28,12 +28,8 @@ image:
 projects: []
 ---
 
-The following Conference Proceedings had been presented 
+The present thesis investigates several technology transfer channels in the context of university-industry knowledge transfer. Both traditional channels such as collaborative research or academic patenting and innovative alternatives such as broadcast search are considered. Theoretical advances and implications for policy can be derived by implementing novel methods from the field of Data Science.
 
-Herding and the Role of Experts in Equity Crowdfunding Markets by Christoph Ihl and Jan Niklas Wick
+Examiners: Prof. Dr. Christoph Ihl and Prof. Dr. Robin Kleer
 
-How institutional entrepreneurs diffuse institutional logics to shape an emerging field by Christoph Ihl and Giulio Barth
-
-The Hidden Cost of Crowd Capital - Categorization of Organizational Deviance in New Venture Financing by Christoph Ihl and Jan Niklas Wick
-
-
+Day of Oral Doctoral Examination: 09.02.2018

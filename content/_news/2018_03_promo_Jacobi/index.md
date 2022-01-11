@@ -1,12 +1,12 @@
 ---
-title: 2018 Academy of Management Annual Meeting
-subtitle: Improving Lives
-summary: In 2018 the Annual Meeting of the AOM took place in Chicago
+title: PhD Thesis of Matthias Jacobi
+subtitle: Media judgment of entrepreneurial failure – implications for founders
+summary: 
 authors:
 - grabi
 tags:
 categories:
-date: 2018-08-13
+date: 2018-03-02
 featured: false
 draft: false
 
@@ -28,12 +28,8 @@ image:
 projects: []
 ---
 
-The following Conference Proceedings had been presented 
+The thesis with the topic Media judgment of entrepreneurial failure – implications for founders compares media reporting about failure of startups in Germany and the US. It can be shown, that the US media reports more positively about failed startups, than the German media does.
 
-Herding and the Role of Experts in Equity Crowdfunding Markets by Christoph Ihl and Jan Niklas Wick
+Examiners: Prof. Dr. Christoph Ihl and Prof. Dr. Michel Clement
 
-How institutional entrepreneurs diffuse institutional logics to shape an emerging field by Christoph Ihl and Giulio Barth
-
-The Hidden Cost of Crowd Capital - Categorization of Organizational Deviance in New Venture Financing by Christoph Ihl and Jan Niklas Wick
-
-
+Day of Oral Doctoral Examination: 02.03.2018

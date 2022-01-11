@@ -6,7 +6,7 @@ authors:
 - grabi
 tags:
 categories:
-date: "2017_09_28"
+date: 2017-09-28
 featured: false
 draft: false
 

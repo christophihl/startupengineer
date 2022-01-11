@@ -6,7 +6,7 @@ authors:
 - grabi
 tags:
 categories:
-date: "2015-08-7-11"
+date: 2015-08-11
 featured: false
 draft: false
 

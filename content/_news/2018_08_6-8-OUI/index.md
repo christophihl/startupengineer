@@ -6,7 +6,7 @@ authors:
 - grabi
 tags:
 categories:
-date: "2018-08-6-8"
+date: 2018-08-08
 featured: false
 draft: false
 

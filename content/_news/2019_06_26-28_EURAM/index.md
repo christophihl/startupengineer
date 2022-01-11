@@ -6,7 +6,7 @@ authors:
 - grabi
 tags:
 categories:
-date: "2019-06-26.-28."
+date: 2019-06-28
 featured: false
 draft: false
 

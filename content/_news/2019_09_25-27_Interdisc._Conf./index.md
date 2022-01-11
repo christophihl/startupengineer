@@ -6,7 +6,7 @@ authors:
 - grabi
 tags:
 categories:
-date: "2019-09-25-27"
+date: 2019-09-27
 featured: false
 draft: false
 

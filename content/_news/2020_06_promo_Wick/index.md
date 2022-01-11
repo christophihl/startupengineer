@@ -1,12 +1,12 @@
 ---
-title: 2018 Academy of Management Annual Meeting
-subtitle: Improving Lives
-summary: In 2018 the Annual Meeting of the AOM took place in Chicago
+title: PhD Thesis of Jan Niklas Wick
+subtitle: 'Equity Crowdfunding as a New Alternative for Startups Seeking Financing in Early Stages: Its Implications on Startups and Investors'
+summary: 
 authors:
 - grabi
 tags:
 categories:
-date: 2018-08-13
+date: 2020-06-26
 featured: false
 draft: false
 
@@ -28,12 +28,6 @@ image:
 projects: []
 ---
 
-The following Conference Proceedings had been presented 
+Examiners: Prof. Dr. Christoph Ihl and Prof. Dr. Henry Sauermann
 
-Herding and the Role of Experts in Equity Crowdfunding Markets by Christoph Ihl and Jan Niklas Wick
-
-How institutional entrepreneurs diffuse institutional logics to shape an emerging field by Christoph Ihl and Giulio Barth
-
-The Hidden Cost of Crowd Capital - Categorization of Organizational Deviance in New Venture Financing by Christoph Ihl and Jan Niklas Wick
-
-
+Day of Oral Doctoral Examination: 26.06.2020

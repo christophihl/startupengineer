@@ -1,12 +1,12 @@
 ---
-title: 2018 Academy of Management Annual Meeting
-subtitle: Improving Lives
-summary: In 2018 the Annual Meeting of the AOM took place in Chicago
+title: PhD Thesis of Jens Heckmann
+subtitle: The Importance of Legitimate Media Distinctiveness for Ventures Seeking Funding in Early and Later Stages
+summary: 
 authors:
 - grabi
 tags:
 categories:
-date: 2018-08-13
+date: 2021-09-29
 featured: false
 draft: false
 
@@ -28,12 +28,6 @@ image:
 projects: []
 ---
 
-The following Conference Proceedings had been presented 
+Examiners: Prof. Dr. Christoph Ihl and Prof. Dr. Christian Lüthje
 
-Herding and the Role of Experts in Equity Crowdfunding Markets by Christoph Ihl and Jan Niklas Wick
-
-How institutional entrepreneurs diffuse institutional logics to shape an emerging field by Christoph Ihl and Giulio Barth
-
-The Hidden Cost of Crowd Capital - Categorization of Organizational Deviance in New Venture Financing by Christoph Ihl and Jan Niklas Wick
-
-
+Day of Oral Doctoral Examination: 29.09.2021
