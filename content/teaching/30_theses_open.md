@@ -2,12 +2,11 @@
 # A Recent and Upcoming Talks section created with the Pages widget.
 # This section displays recent talks from `content/talk/`.
 
-widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
-headless = true  # This file represents a page section.
+widget = "pages"  # Do not modify this line!
 active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
-title = "Theses"
+title = "Open Thesis Topics"
 subtitle = ""
 
 [content]
@@ -29,7 +28,7 @@ subtitle = ""
     category = ""
     publication_type = ""
     exclude_featured = false
-    exclude_past = false
+    exclude_past = true
     exclude_future = false
     
 [design]
@@ -66,7 +65,6 @@ subtitle = ""
  
  # CSS class.
  css_class = ""
-
 +++
 ## General Info
 <details class="description" close><summary data-close="Show" data-open="Hide"></summary>
@@ -79,3 +77,4 @@ The first step for applicants is to choose or propose a thesis topic (based on o
 <br>
 
 ## Open Topics 
+
