@@ -7,8 +7,8 @@ authors:
 weight: 40
 tags: []
 categories: []
-date: "2020-10-05T00:00:00Z"
-lastMod: "2020-10-05T00:00:00Z"
+date: "2020-11-05T00:00:00Z"
+lastMod: "2020-12-05T00:00:00Z"
 showauthordate: false
 featured: true
 draft: false

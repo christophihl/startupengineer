@@ -2,19 +2,46 @@
 title: Business Analytics with Data Science and Machine Learning
 subtitle: 3 complementary elective courses in "Business & Management"
 summary: 3 complementary elective courses in "Business & Management"
+abstract: 
+
+event: Academic Theme Conference
+event_url: https://example.org
+
+showauthordate: false
+featured: false
+draft: false
+
+location: Source Themes HQ
+address:
+  street: 450 Serra Mall
+  city: Stanford
+  region: CA
+  postcode: '94305'
+  country: United States
+
+
 authors:
 - lampe
 - ihl
 - schwarz
 - mork
+
+
 weight: 30
 tags: []
 categories: []
-date: "2030-10-05T00:00:00Z"
-lastMod: "2030-10-05T00:00:00Z"
-showauthordate: false
-featured: false
-draft: false
+
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2030-06-01T13:00:00Z"
+date_end: "2030-06-01T15:00:00Z"
+all_day: false
+
+# Schedule page publish date (NOT talk date).
+publishDate: "2020-06-23T15:00:00Z"
+
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:

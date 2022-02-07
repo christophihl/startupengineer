@@ -27,7 +27,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 publishDate: "2020-06-23T15:00:00Z"
 
-authors: []
+authors: [schwarz]
 tags: []
 
 # Is this a featured talk? (true/false)
