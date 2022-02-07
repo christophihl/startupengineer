@@ -13,10 +13,27 @@
   url = "news/"
   weight = 20
 
+
+
 [[main]]
   name = "Team"
   url = "team/"
+  identifier = "team"
   weight = 30
+
+[[main]]
+  name = "Members"
+  url = "team/#20_people"
+  parent = "team"
+  weight = 1
+
+[[main]]
+  name = "Gallery"
+  url = "team/#30_gallery"
+  parent = "team"
+  weight = 2
+
+
 
 [[main]]
   name = "Research"
@@ -25,9 +42,64 @@
   weight = 40
 
 [[main]]
+  name = "Focus & Fields"
+  url = "research/#20_gallery"
+  parent = "research"
+  weight = 1
+
+[[main]]
+  name = "Projects"
+  url = "research/#30_projects"
+  parent = "research"
+  weight = 2
+
+[[main]]
+  name = "Presentations"
+  url = "research/#40_talks"
+  parent = "research"
+  weight = 3
+
+[[main]]
+  name = "Publications"
+  url = "research/#50_publications"
+  parent = "research"
+  weight = 4
+
+
+
+[[main]]
   name = "Teaching"
   url = "teaching/"
+  identifier = "teaching"
   weight = 50
+
+[[main]]
+  name = "Current Courses"
+  url = "teaching/#20_courses_current"
+  parent = "teaching"
+  weight = 1
+
+[[main]]
+  name = "Upcoming Courses"
+  url = "teaching/#30_courses_next"
+  parent = "teaching"
+  weight = 2
+
+
+[[main]]
+  name = "Open Theses"
+  url = "teaching/#40_theses_open"
+  parent = "teaching"
+  weight = 3
+
+
+[[main]]
+  name = "Finished Theses"
+  url = "teaching/#50_theses_finished"
+  parent = "teaching"
+  weight = 4
+
+
 
 [[main]]
   name = "Transfer"

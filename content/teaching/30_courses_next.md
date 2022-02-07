@@ -7,8 +7,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 20  # Order that this section will appear.
 
-title = "Courses"
-subtitle = "Winter Term 21/22"
+title = "Upcoming Courses"
+subtitle = "Summer Term 22"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
@@ -29,7 +29,7 @@ subtitle = "Winter Term 21/22"
     category = ""
     publication_type = ""
     exclude_featured = false
-    exclude_past = false
+    exclude_past = true
     exclude_future = false
     
 [design]

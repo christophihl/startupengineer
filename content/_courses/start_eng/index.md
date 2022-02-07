@@ -1,14 +1,14 @@
 ---
 title: Startup Engineering
 subtitle: How to build a startup
-summary: 2 complementary elective courses in "Business & Management"
+summary: complementary elective course in "Business & Management"
 authors:
 - lampe
 weight: 20
 tags: []
 categories: []
-date: "2021-02-03T00:00:00Z"
-lastMod: "2021-02-03T00:00:00Z"
+date: "2030-02-03T00:00:00Z"
+lastMod: "2030-02-03T00:00:00Z"
 showauthordate: false
 featured: false
 draft: true
@@ -33,8 +33,7 @@ projects: []
 
 ### Credits
 
-* 2 courses `Startup Engineering: Project` & `Startup Engineering: Cases`
-* 2 * 2 ECTS
+* 2 ECTS
 
 ***
 
@@ -92,7 +91,6 @@ This course module can prepare students for the following career paths:
 ### Grading/ Evaluation
 
 * `Startup Engineering: Project` (team deliverable): Development and pitch of an own startup project
-* `Startup Engineering: Cases` (team deliverable): Case solutions submitted in/after class
 
 ***
 
@@ -105,8 +103,7 @@ This course module can prepare students for the following career paths:
 
 ### Time & Location
 
-* `Startup Engineering: Project`: Monday, 13.00 - 14.30, Building M, Room 0526
-* `Startup Engineering: Cases`: Monday, 15.00 - 16.30, Building M, Room 1582
+* Monday, 13.00 - 14.30, Building M, Room 0526
 
 {{% alert warning %}}
 As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
