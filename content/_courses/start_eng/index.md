@@ -11,7 +11,7 @@ date: "2030-02-03T00:00:00Z"
 lastMod: "2030-02-03T00:00:00Z"
 showauthordate: false
 featured: false
-draft: true
+draft: false
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
