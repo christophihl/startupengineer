@@ -2,16 +2,46 @@
 title: Technology Entrepreneurship
 subtitle: Startup Engineering&#58; How to build a startup
 summary: 6 ECTS Module for Master Students
-authors:
-- ihl
-weight: 10
-tags: []
-categories: []
-date: "2021-12-01T00:00:00Z"
-lastMod: "2030-02-03T00:00:00Z"
+abstract: 
+
+event: Academic Theme Conference
+event_url: https://example.org
+
 showauthordate: false
 featured: false
 draft: false
+
+location: Source Themes HQ
+address:
+  street: 450 Serra Mall
+  city: Stanford
+  region: CA
+  postcode: '94305'
+  country: United States
+
+
+authors:
+- ihl
+- lampe
+
+
+weight: 30
+tags: []
+categories: []
+
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2030-12-01T13:00:00Z"
+date_end: "2030-12-02T15:00:00Z"
+all_day: false
+
+# Schedule page publish date (NOT talk date).
+publishDate: "2020-06-23T15:00:00Z"
+
+
+
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:

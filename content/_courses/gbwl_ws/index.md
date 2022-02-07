@@ -2,16 +2,46 @@
 title: Grundlagen der Betriebswirtschaftslehre
 subtitle: Vorlesungsthemen des Instituts für Entrepreneurship `Unternehmertum` & `Finanzplanung`
 summary: 6 ECTS Modul für Bachelor
-authors:
-- ihl
-weight: 40
-tags: []
-categories: []
-date: "2020-11-05T00:00:00Z"
-lastMod: "2020-12-05T00:00:00Z"
+abstract: 
+
+event: Academic Theme Conference
+event_url: https://example.org
+
 showauthordate: false
 featured: true
 draft: false
+
+location: Source Themes HQ
+address:
+  street: 450 Serra Mall
+  city: Stanford
+  region: CA
+  postcode: '94305'
+  country: United States
+
+
+authors:
+- ihl
+- lampe
+
+
+
+
+weight: 40
+tags: []
+categories: []
+
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2021-09-01T13:00:00Z"
+date_end: "2030-12-02T15:00:00Z"
+all_day: false
+
+# Schedule page publish date (NOT talk date).
+publishDate: "2020-06-23T15:00:00Z"
+
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
@@ -28,6 +58,8 @@ projects: []
 
 # Optional external URL for project (replaces project detail page).
 # external_link:
+
+
 
 ---
 
