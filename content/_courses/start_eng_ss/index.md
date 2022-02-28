@@ -1,7 +1,7 @@
 ---
 title: Startup Engineering
 subtitle: How to build a startup
-summary: complementary elective course in "Business & Management"
+summary: Complementary elective course in "Business & Management"
 abstract: 
 
 event: Academic Theme Conference
@@ -21,8 +21,9 @@ address:
 
 
 authors:
+- ihl
 - lampe
-
+- mork
 
 weight: 30
 tags: []
@@ -31,7 +32,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-10-01T13:00:00Z"
+date: "2021-10-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
@@ -70,14 +71,16 @@ projects: []
 
 ### Target Audience
 
-* Master students with "Business & Management" courses in their curriculum, who want to earn up to 2 * 2 ECTS
+* Master students with "Business & Management" courses in their curriculum
 * Students with a strong interest and motivation in acquiring the skills required to build new technology startups.
 
 ***
 
 ### Instructor(s)
 
+* {{% mention "ihl" %}}
 * {{% mention "lampe" %}}
+* {{% mention "mork" %}}
 
 ***
 
@@ -127,18 +130,17 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* `Startup Engineering: Project`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=827c9fd40f3a3c90c823a2d32bcab134)
-* `Startup Engineering: Cases`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=5f16fb4f278ee263518c449f93cf459e)
+* `Startup Engineering:`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=827c9fd40f3a3c90c823a2d32bcab134)
+
 
 ***
 
 ### Time & Location
 
-* Monday, 13.00 - 14.30, Building M, Room 0526
+* Monday, May 9th, 09.00 - 17.00, Building Startup Port, Harburger Schloßstrasse 6-12, Room Hertz Hörsaal
+* Tuesday, May 10th, 09.00 - 17.00, Building Startup Port, Harburger Schloßstrasse 6-12, Room Hertz Hörsaal
+* Friday, May 13th, 09.00 - 17.00, Building Startup Port, Harburger Schloßstrasse 6-12, Room Hertz Hörsaal
 
-{{% alert warning %}}
-As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
-{{% /alert %}}
 
 ***
 
@@ -153,19 +155,17 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 12th | Introduction |
-| 2 | April 19th | Customer Segmentation |
-| 3 | April 26th | Technology & Product Development |
-| 4 | May 3rd | Competition & Market Analysis |
-| - | May 10th | Holiday |
-| 5 | May 17th | Platform Business Models | 
-| - | May 24th | Pfingsten Holiday |
-| 6 | May 31st | Revenue Models & Pricing |
-| 7 | June 7th | Lean Startup & Experimentation |
-| 8 | June 14th | Marketing for Startup Growth |
-| 9 | June 21st | Sales for Startup Growth |
-| 10 | June 28th | Organizing for Startup Growth |
-| 11 | July 5th | Financial Analysis |
-| 12 | July 12th | Final Startup Pitches |
-| 13 | July 19th | Submission of Final Pitch Deck |
+| 1 | May 9th | Introduction |
+| 2 | May 9th | Customer Segmentation |
+| 3 | May 9th | Technology & Product Development |
+| 4 | May 9th | Competition & Market Analysis |
+| 5 | May 10th | Platform Business Models | 
+| 6 | May 10th | Revenue Models & Pricing |
+| 7 | May 10th | Lean Startup & Experimentation |
+| 8 | May 10th | Marketing for Startup Growth |
+| 9 | May 13th | Sales for Startup Growth |
+| 10 | May 13th | Organizing for Startup Growth |
+| 11 | May 13th | Financial Analysis |
+| 12 | May 13th | Final Startup Pitches |
+| 13 | May 27th | Submission of Final Pitch Deck |
 

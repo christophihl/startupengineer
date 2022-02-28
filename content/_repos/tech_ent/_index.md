@@ -29,27 +29,29 @@ The weekly class sessions follow along a process to develop your startup project
 
 In the second half of each class session, we will discuss a case study related to the respective topic. Students are supposed to have read (not solved) each case before class. We will briefly clarify questions about the case, then students will work in breakout sessions on an intial solution of the case (for approximately an hour) within their teams. These initial solutions are then uploaded to Studip and (selectively) discussed among all partcipants. Teams then get the chance to rework their case solutions after class for their final case subission (prior to the following week's class). 
 
-The case study work only applies to students that are enrolled either in the entire module worth 6 ECTS or in both "Betrieb & Management" courses "Technology Entrepreneurship" and "Creation of Business Opportunities". For students enrolled in the entire module worth 6 ECTS, we pay close attention to your contributions to class and case discussions. In addition, we expect case memos about three self-selected cases to be submitted before class. A case memo is about three typed pages long (1-inch margins, 12 pt font size and 1.5 line spacing) and should cover brief reflections on the assignment questions for each case (not complete answers, analyses or solutions).
+In addition, we expect case memos about three self-selected cases to be submitted before class. A case memo is about three typed pages long (1-inch margins, 12 pt font size and 1.5 line spacing) and should cover brief reflections on the assignment questions for each case (not complete answers, analyses or solutions).
 
 <br/>
 
-## Schedule
+### Preliminary Schedule
+
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 12th | Introduction |
-| 2 | April 19th | Customer Segmentation |
-| 3 | April 26th | Technology and Product Development |
-| 4 | May 3rd | Competition and Market Analysis |
-| - | May 10th | Holiday |
-| 5 | May 17th | Platform Business Models | 
-| - | May 24th | Pfingsten Holiday |
-| 6 | May 31st | Revenue Models & Pricing |
-| 7 | June 7th | Lean Startup & Experimentation |
-| 8 | June 14th | Marketing for Startup Growth |
-| 9 | June 21st | Sales for Startup Growth |
-| 10 | June 28th | Organizing for Startup Growth |
-| 11 | July 5th | Financial Analysis |
+| 1 | April 4th | Introduction |
+| 2 | April 11th | Customer Segmentation |
+| - | April 18th | Holiday |
+| 3 | April 25th | Technology & Product Development |
+| 4 | May 2nd | Competition & Market Analysis |
+| 5 | May 9th | Platform Business Models | 
+| 6 | May 16th | Revenue Models & Pricing |
+| - | May 23rd | Holiday |
+| 7 | May 30th | Lean Startup & Experimentation |
+| - | June 6th | Holiday |
+| 8 | June 13th | Marketing for Startup Growth |
+| 9 | June 20rd | Sales for Startup Growth |
+| 10 | June 27th | Organizing for Startup Growth |
+| 11 | July 4th | Financial Analysis |
 | 12 | July 12th | Final Startup Pitches |
 | 13 | July 19th | Submission of Final Pitch Deck |
 

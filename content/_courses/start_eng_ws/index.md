@@ -1,7 +1,7 @@
 ---
-title: Technology Entrepreneurship
-subtitle: Startup Engineering&#58; How to build a startup
-summary: 6 ECTS Module for Master Students
+title: Startup Engineering
+subtitle: How to build a startup
+summary: Complementary elective course in "Business & Management"
 abstract: 
 
 event: Academic Theme Conference
@@ -25,7 +25,6 @@ authors:
 - lampe
 - mork
 
-
 weight: 30
 tags: []
 categories: []
@@ -33,7 +32,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2021-12-01T13:00:00Z"
+date: "2030-10-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
@@ -43,10 +42,12 @@ publishDate: "2020-06-23T15:00:00Z"
 
 
 
+
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: "[sujins, pixabay](https://www.needpix.com/photo/1287856/artificial-intelligence-technology-futuristic-science-intelligence-business-free-pictures-free-photos-free-images), [cc0](https://creativecommons.org/share-your-work/public-domain/cc0/)"
+  caption: "[andreas baetz, pixabay](https://pixabay.com/illustrations/earth-planet-light-bulb-innovation-4782262/), [cc0](https://creativecommons.org/share-your-work/public-domain/cc0/)"
   focal_point: "smart"
 
 # Projects (optional).
@@ -58,14 +59,20 @@ image:
 projects: []
 
 # Optional external URL for project (replaces project detail page).
-# external_link: 
+# external_link:
 
 ---
 
 ### Credits
 
-* 6 ECTS module
-* 2 courses `Entrepreneurship` & `Creation of Business Opportunities`
+* 2 ECTS
+
+***
+
+### Target Audience
+
+* Master students with "Business & Management" courses in their curriculum
+* Students with a strong interest and motivation in acquiring the skills required to build new technology startups.
 
 ***
 
@@ -115,45 +122,29 @@ This course module can prepare students for the following career paths:
 
 ***
 
-### Grading
+### Grading/ Evaluation
 
-* `35%` (team): Development and pitch of an own startup project
-* `35%` (team): Case solutions submitted in/after class
-* `15%` (individual): Three case memos submitted before class
-* `15%` (individual): Class participation
-
-
-***
-
-### Target Audience
-
-Due to capacity contraints, the course `Creation of Business Opportunities` is duplicated for two audiences in two parallel sessions:
-
-* Master Students in IWI, LIM & GTIME
-* Master Students in Engineering and Erasmus Programs
-
+* `Startup Engineering: Project` (team deliverable): Development and pitch of an own startup project
 
 ***
 
 ### Registration
 
-* Please register for the `Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=10bb7c4236abb39258188aa574abbe4c)
-* Please register for the `Creation of Business Opportunities` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=10bb7c4236abb39258188aa574abbe4c)
+* `Startup Engineering:`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=827c9fd40f3a3c90c823a2d32bcab134)
 
 
 ***
 
 ### Time & Location
 
-*For IWI, LIM & GTIME students*: 
-* `Entrepreneurship`: Monday, 13.00 - 14.30, Building A, Room A 1.15.1/2
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building D, Room D 2.022
+* Monday, Dec 12th, 09.00 - 17.00, Building Startup Port, Harburger Schloßstrasse 6-12, Room Hertz Hörsaal
+* Tuesday, Dec 13th, 09.00 - 17.00, Building Startup Port, Harburger Schloßstrasse 6-12, Room Hertz Hörsaal
+* Friday, Dec 16th, 09.00 - 17.00, Building Startup Port, Harburger Schloßstrasse 6-12, Room Hertz Hörsaal
 
 
-*For Engineering and Erasmus students*: 
-* `Entrepreneurship`: Monday, 13.00 - 14.30, Building A, Room A 1.15.1/2
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.18.1
-
+{{% alert warning %}}
+As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
+{{% /alert %}}
 
 ***
 
@@ -168,19 +159,17 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 4th | Introduction |
-| 2 | April 11th | Customer Segmentation |
-| - | April 18th | Holiday |
-| 3 | April 25th | Technology & Product Development |
-| 4 | May 2nd | Competition & Market Analysis |
-| 5 | May 9th | Platform Business Models | 
-| 6 | May 16th | Revenue Models & Pricing |
-| - | May 23rd | Holiday |
-| 7 | May 30th | Lean Startup & Experimentation |
-| - | June 6th | Holiday |
-| 8 | June 13th | Marketing for Startup Growth |
-| 9 | June 20rd | Sales for Startup Growth |
-| 10 | June 27th | Organizing for Startup Growth |
-| 11 | July 4th | Financial Analysis |
-| 12 | July 12th | Final Startup Pitches |
-| 13 | July 19th | Submission of Final Pitch Deck |
+| 1 | Dec 12th | Introduction |
+| 2 | Dec 12th | Customer Segmentation |
+| 3 | Dec 12th | Technology & Product Development |
+| 4 | Dec 12th | Competition & Market Analysis |
+| 5 | Dec 13th | Platform Business Models | 
+| 6 | Dec 13th | Revenue Models & Pricing |
+| 7 | Dec 13th | Lean Startup & Experimentation |
+| 8 | Dec 13th | Marketing for Startup Growth |
+| 9 | Dec 16th | Sales for Startup Growth |
+| 10 | Dec 16th | Organizing for Startup Growth |
+| 11 | Dec 16th | Financial Analysis |
+| 12 | Dec 16th | Final Startup Pitches |
+| 13 | Dec 23th | Submission of Final Pitch Deck |
+

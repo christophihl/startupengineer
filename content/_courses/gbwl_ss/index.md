@@ -79,9 +79,6 @@ projects: []
 * Vorlesung `Grundlagen der Betriebswirtschaftslehre`: Donnerstag, 15.00 - 17.30, (virtuell)
 * Übung `Entrepreneurship`: Mittwoch, 11.15 - 12.45 & 13.00 - 14.30 (virtuell)
 
-{{% alert warning %}}
-Solange die gegenwärtige Situation anhält, finden alle Veranstaltungen in Form von aufgezeichneten Videovorlesungen oder Live-Videokonferenzen statt, zu denen die Teilnehmner rechtzeitig Zugang erhalten.
-{{% /alert %}}
 
 
 ***

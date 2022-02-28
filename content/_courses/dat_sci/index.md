@@ -21,11 +21,10 @@ address:
 
 
 authors:
-- lampe
-- ihl
 - schwarz
 - mork
-
+- lampe
+- ihl
 
 weight: 30
 tags: []
@@ -34,7 +33,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-11-01T13:00:00Z"
+date: "2021-11-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
@@ -81,10 +80,11 @@ They can be taken independently, but it is highly recommended to enroll consecut
 
 ### Instructor(s)
 
-* {{% mention "lampe" %}}
-* {{% mention "ihl" %}}
 * {{% mention "schwarz" %}}
 * {{% mention "mork" %}}
+* {{% mention "lampe" %}}
+* {{% mention "ihl" %}}
+
 
 ***
 
@@ -130,11 +130,30 @@ After completing this module, students will be able to:
 
 ### Time & Location
 
-* each scheduled day from 9 a.m. - 5 p.m.
+<br>
 
-{{% alert warning %}}
-As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
-{{% /alert %}}
+`Business Data Science Basics`
+
+* Monday, April 25th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Tuesday, April 26th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Wednesday, April 27th, 09.00 - 17.00, Building Q, Room Q - 1.121
+
+<br>
+
+`Business Decisions with Machine Learning`
+
+* Monday, May 16th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Tuesday, May 17th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Wednesday, May 18th, 09.00 - 17.00, Building Q, Room Q - 1.121
+
+<br>
+
+`Building Business Data Products`
+
+* Monday, June 20th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Tuesday, June 21st, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Wednesday, June 22nd, 09.00 - 17.00, Building Q, Room Q - 1.121
+
 
 ***
 
@@ -156,11 +175,11 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 19 - 21 | Introduction to R, RStudio IDE & GitHub |
-| 2 | April 19 - 21 | Introduction to the tidyverse |
-| 3 | April 19 - 21 | Data Acquisition |
-| 4 | April 19 - 21 | Data Wrangling |
-| 5 | April 19 - 21 | Data Visualization |
+| 1 | April 25th | Introduction to R, RStudio IDE & GitHub |
+| 2 | April 25th | Introduction to the tidyverse |
+| 3 | April 26th | Data Acquisition |
+| 4 | April 26th | Data Wrangling |
+| 5 | April 27th | Data Visualization |
 
 <br>
 
@@ -168,12 +187,12 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 6 | May 17 - 19 | Fundamentals of Machine Learning |
-| 7 | May 17 - 19 | Supervised ML: Regression (I) |
-| 8 | May 17 - 19 | Supervised ML: Regression (II) |
-| 9 | May 17 - 19 | Automated ML with H20 (I) | 
-| 10 | May 17 - 19 | Automated ML with H20 (II) |
-| 11 | May 17 - 19 | ML Performance Measures |
+| 6 | May 16th | Fundamentals of Machine Learning |
+| 7 | May 16th | Supervised ML: Regression (I) |
+| 8 | May 17th | Supervised ML: Regression (II) |
+| 9 | May 17th | Automated ML with H20 (I) | 
+| 10 | May 18th | Automated ML with H20 (II) |
+| 11 | May 18th | ML Performance Measures |
 
 
 <br>
@@ -182,6 +201,6 @@ As long as the current situation stands, physical meetings will be replaced by o
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 12 | June 21 - 23 | Explainable ML with LIME |
-| 13 | June 21 - 23 | ML: Deep Learning |
-| 14 | June 21 - 23 | Reporting with RMarkdown, Shiny, Flexdashboard |
+| 12 | June 20 | Explainable ML with LIME |
+| 13 | June 21 | ML: Deep Learning |
+| 14 | June 22 | Reporting with RMarkdown, Shiny, Flexdashboard |
