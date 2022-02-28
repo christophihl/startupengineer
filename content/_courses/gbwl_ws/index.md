@@ -8,7 +8,7 @@ event: Academic Theme Conference
 event_url: https://example.org
 
 showauthordate: false
-featured: true
+featured: false
 draft: false
 
 location: Source Themes HQ
