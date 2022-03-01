@@ -137,8 +137,8 @@ Due to capacity contraints, the course `Creation of Business Opportunities` is d
 
 ### Registration
 
-* Please register for the `Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=10bb7c4236abb39258188aa574abbe4c)
-* Please register for the `Creation of Business Opportunities` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=10bb7c4236abb39258188aa574abbe4c)
+* Please register for the `Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=da059b568d446040932419bfd75d3cbf&again=yes)
+* Please register for the `Creation of Business Opportunities` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=c616db4f8495c86efbd0c4a3b0060dc5&again=yes)
 
 
 ***
@@ -182,5 +182,5 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 | 9 | June 20rd | Sales for Startup Growth |
 | 10 | June 27th | Organizing for Startup Growth |
 | 11 | July 4th | Financial Analysis |
-| 12 | July 12th | Final Startup Pitches |
+| 12 | July 11th | Final Startup Pitches |
 | 13 | July 19th | Submission of Final Pitch Deck |

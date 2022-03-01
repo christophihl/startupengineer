@@ -130,7 +130,7 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* `Startup Engineering:`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=827c9fd40f3a3c90c823a2d32bcab134)
+* `Startup Engineering:`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=c01744022aa4467e01f9a03a8bcd469b&again=yes)
 
 
 ***

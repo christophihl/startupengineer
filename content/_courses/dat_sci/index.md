@@ -122,9 +122,9 @@ After completing this module, students will be able to:
 
 ### Registration
 
-* `Business Data Science Basics`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=dfff4f3fbcd3d08a6d209bc210f44acf)
-* `Business Decisions with Machine Learning`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=dd745195c044307b1d81cad005d06509)
-* `Building Business Data Products`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=a57646f84d23356f38803964d05237b9)
+* `Business Data Science Basics`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=0d089fb01483c67cee521185467ee95a&again=yes)
+* `Business Decisions with Machine Learning`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=fd323db23d6de6b601d7698905bff8d1&again=yes)
+* `Building Business Data Products`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=6f741dbfcb6d76efe5e349e05814c08a&again=yes)
 
 ***
 
