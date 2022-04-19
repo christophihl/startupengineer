@@ -53,18 +53,18 @@ If you have R-studio working and your github page set up (will be explained in d
 <div id="header">Website</div>
 <div id="container">
   <div id="first">{{% icon globe %}}</div>
-  <div id="second"><a href="https://www.datacamp.com/groups/shared_links/4f8ca9f0d781153fe63cdad89c2130b918af4a66480a12eed71492c65f0d9dbf" target="_blank"><b>https://www.datacamp.com/groups/shared_links/4f8ca9f0d781153fe63cdad89c2130b918af4a66480a12eed71492c65f0d9dbf</b></a></div>
+  <div id="second"><a href="https://www.datacamp.com/groups/shared_links/32a727a3e8f082595f56fd3ece38fcd91fae85a61266f6b13ecd613213d0eb85" target="_blank"><b>https://www.datacamp.com/groups/shared_links/32a727a3e8f082595f56fd3ece38fcd91fae85a61266f6b13ecd613213d0eb85</b></a></div>
   <div id="clear"></div>
 </div>
 
-These tutorials are optional and you can choose whatever <a href="https://learn.datacamp.com/courses" target="_blank"><b>courses</b></a> you want. R, Python or SQL. In accordance with the content of the sessions, I will recommend you to complete tutorials at the end of each session.
+These tutorials are optional and you can choose whatever <a href="https://app.datacamp.com/learn/courses" target="_blank"><b>courses</b></a> you want. R, Python or SQL. In accordance with the content of the sessions, I will recommend you to complete tutorials at the end of each session.
 
 ## Schedule
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | 23.11.20 - 25.11.20 | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci_1/01_intro_r.html" >}}) |
-| 2 | 23.11.20 - 25.11.20 | [Introduction to the tidyverse]({{< relref "_repos/dat_sci_1/02_intro_tv.html" >}}) |
-| 3 | 23.11.20 - 25.11.20 | [Data Acqusition]({{< relref "_repos/dat_sci_1/03_dat_acq.html" >}}) |
-| 4 | 23.11.20 - 25.11.20 | [Data Wrangling]({{< relref "_repos/dat_sci_1/04_dat_wra.html" >}}) |
-| 5 | 23.11.20 - 25.11.20 | [Data Visualization]({{< relref "_repos/dat_sci_1/05_dat_viz.html" >}}) |
+| 1 | 25.04.22 - 27.04.22 | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci_1/01_intro_r.html" >}}) |
+| 2 | 25.04.22 - 27.04.22 | [Introduction to the tidyverse]({{< relref "_repos/dat_sci_1/02_intro_tv.html" >}}) |
+| 3 | 25.04.22 - 27.04.22 | [Data Acqusition]({{< relref "_repos/dat_sci_1/03_dat_acq.html" >}}) |
+| 4 | 25.04.22 - 27.04.22 | [Data Wrangling]({{< relref "_repos/dat_sci_1/04_dat_wra.html" >}}) |
+| 5 | 25.04.22 - 27.04.22 | [Data Visualization]({{< relref "_repos/dat_sci_1/05_dat_viz.html" >}}) |

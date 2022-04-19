@@ -50,19 +50,19 @@ Before you can ask your computer to save some numbers, you’ll need to know how
 ##  Installing R & RStudio IDE
 ### Interactively
 
-Take the following stepts to get R and the IDERStudio running:
+Take the following steps to get R and the IDERStudio running:
 
 <iframe src="https://jwarz.shinyapps.io/learnR/#section-install-r" width="100%" height="500px"></iframe>
 
-If you are using safari as a browser, you have to open the content in a new window. Go to the following link and follow the instructions to install R and RStudio.
+<!-- If you are using safari as a browser, you have to open the content in a new window. Go to the following link and follow the instructions to install R and RStudio. -->
 
-<!-- SHINY BOX -->
+<!-- SHINY BOX
 <div id="header">Interactive Shinyapp</div>
 <div id="container">
   <div id="first">{{% icon shiny %}}</div>
   <div id="second"><a href="https://jwarz.shinyapps.io/learnR/" target="_blank"><b>Install R & RStudio IDE</b></a></div>
   <div id="clear"></div>
-</div>
+</div> -->
 
 ### Manually
 
@@ -765,7 +765,7 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_04_finish.png" caption="2.4 Click `Finish`" >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` and select your `journal_ml` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` and select your `bdsc-____` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
 
 3. Navigate to the folder you just cloned/downloaded, open the `lab_journal_website.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
 
@@ -774,15 +774,15 @@ Important: After compilation, all of the files for displaying your website are s
 
 ### Serving your webpage on the internet
 
-Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `root` folder. The example files are set so that when you compile the example in RStudio, the output automatically goes into the `root` folder (which is your project folder). As the final step, we have to tell GitHub to serve the html files in your root folder as a website:
+Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `root` folder. The example files are set so that when you compile the example in RStudio, the output automatically goes into the `root` folder (which is your project folder). As the final step, we have to tell GitHub to serve the html files in your root folder as a website (https://github.com/TUHHStartupEngineers/bdsc-YourUserName):
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your journal repository and click the settings button in the top right corner." >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_new.png" caption="2. Scroll down and select the master Branch and make sure the option to serve from the root folder is set. Press Save. (You should see a little green message above the github pages options with a link to your new webpage)." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_new.png" caption="2. Select `Pages` in the menu on the left, select the main Branch and make sure the option to serve from the root folder is set. Press Save. (after a while you should see a little green message above the github pages options with a link to your new webpage)." >}}
 
-That's it. Now you can navigate to your new homepage via the link in the greenbox. It may take a while until you can reach it.
+That's it. Now you can navigate to your new homepage via the link in the greenbox. It may take a while until you can reach it. The initial password is `test`. We will change that in the next steps.
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .Rmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. `Press commit to master.`" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content (e.g. the author name or the date in the `01_tidyverse.Rmd` file) you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .Rmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. `Press commit to master.`" >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="4. Press `Push origin` and wait a couple of minutes. Your changes should now be served on your website" >}}
 
@@ -793,11 +793,11 @@ Now we want to go one step further and password protect your website. You might 
 
 {{< figure src="/img/courses/dat_sci/01/setting_password_01.png" caption="1. Open your personal website that you created a few steps before. You should see the following screen where you are asked to type in a password." >}}
 
-{{< figure src="/img/courses/dat_sci/01/setting_password_02.png" caption="2. Type in a password of your choice. You will get the message `Wrong password` but don't wory." >}}
+{{< figure src="/img/courses/dat_sci/01/setting_password_02.png" caption="2. Type in a password of your choice and hit ENTER. You will get the message `Wrong password` but don't wory." >}}
 
-{{< figure src="/img/courses/dat_sci/01/setting_password_03.png" caption="3. Now you have to copy the part like shown in the picture. By pasting the hash from the URL rename your folder (if you haven't changed it the location is something like: ../GitHub/journal_ml)" >}}
+{{< figure src="/img/courses/dat_sci/01/setting_password_03.png" caption="3. Now you have to copy the part like shown in picture number 2 and rename the folder in your repository by pasting the hash from the URL (if you haven't changed it the location is something like: ../GitHub/bdsc-YourUserName)" >}}
 
-{{< figure src="/img/courses/dat_sci/01/setting_password_04.png" caption="4. Rename the entry `output_dir` in `site.yml` in RStudio. Only replace the hash but nothing else." >}}
+{{< figure src="/img/courses/dat_sci/01/setting_password_04.png" caption="4. Do the same in the `site.yml` file. Rename the entry `output_dir` with the copied hash. You can do that directly in RStudio. Only replace the hash but nothing else." >}}
 
 As a last step, click `Build Website` which will open the local version of your website. To upload your changes to GitHub you need to commit and push the changes via GitHub Desktop. Only then you will be able to log in to your website with your new password.
 
@@ -848,7 +848,7 @@ See the `R Markdown Cheat Sheet` for further information regarding the markdown 
 
 Submit your journal URL and password via the following form. If you do not submit your information, we won't be able to evaluate your assignments.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqL-LlsQbTPWqLAHxzaR7Se0qMr6TZh8h0TSTuAv-wMXGX2g/viewform?embedded=true" width="640" height="1166" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctVjKJaCKNtzCK0ufDmiSaKf-LnGsCWMUwfZGxEkemw5Eu2Q/viewform?embedded=true" width="640" height="1166" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
 
 ***
 
