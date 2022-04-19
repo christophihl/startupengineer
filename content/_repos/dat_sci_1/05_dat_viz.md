@@ -1248,7 +1248,7 @@ Adding the cases for Europe is optional. You can choose your own color theme, bu
 
 ### Challenge 2
 
-Goal: Visualize the distribution of the mortality rate (deaths / population) with `geom_map()`. The necessary longitudinal and lateral data can be accessed with this function:
+Goal: Visualize the distribution of the mortality rate (deaths / population) with `geom_map()` (alternatively, you can plot the case-fatality rate (deaths / cases)). The necessary longitudinal and lateral data can be accessed with this function:
 
 ```r
 world <- map_data("world")
