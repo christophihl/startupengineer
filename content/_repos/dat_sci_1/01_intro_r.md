@@ -54,16 +54,6 @@ Take the following steps to get R and the IDERStudio running:
 
 <iframe src="https://jwarz.shinyapps.io/learnR/#section-install-r" width="100%" height="500px"></iframe>
 
-<!-- If you are using safari as a browser, you have to open the content in a new window. Go to the following link and follow the instructions to install R and RStudio. -->
-
-<!-- SHINY BOX
-<div id="header">Interactive Shinyapp</div>
-<div id="container">
-  <div id="first">{{% icon shiny %}}</div>
-  <div id="second"><a href="https://jwarz.shinyapps.io/learnR/" target="_blank"><b>Install R & RStudio IDE</b></a></div>
-  <div id="clear"></div>
-</div> -->
-
 ### Manually
 
 Download and install R from CRAN, the Comprehensive R Archive Network. 
