@@ -695,7 +695,7 @@ We will use GitHub to store your data and hand in your assignments through your 
 To get started with this template you only have to login to github and click this invitation link: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/bdyUeBBR" target="_blank"><b>Business Decisions with Machine Learning - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/3D_CKQvK" target="_blank"><b>Business Decisions with Machine Learning - GitHub Classroom</b></a>
 </div>
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_00.png" caption="Click `Authorize GitHub Classroom`" width="50%" >}}
@@ -784,11 +784,11 @@ Important: After compilation, all of the files for displaying your website are s
 
 ### Serving your webpage on the internet
 
-Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `root` folder. The example files are set so that when you compile the example in RStudio, the output automatically goes into the `root` folder (which is your project folder). As the final step, we have to tell GitHub to serve the html files in your root folder as a website:
+Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `root` folder. The example files are set so that when you compile the example in RStudio, the output automatically goes into the `root` folder (which is your project folder). As the final step, we have to tell GitHub to serve the html files in your root folder as a website (https://github.com/TUHHStartupEngineers/bdml-YourUserName):
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your journal repository and click the settings button in the top right corner." >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_new.png" caption="2. Scroll down and select the master Branch and make sure the option to serve from the root folder is set. Press Save. (You should see a little green message above the github pages options with a link to your new webpage)." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_new.png" caption="2. Select `Pages` in the menu on the left, select the main Branch and make sure the option to serve from the root folder is set. Press Save. (after a while you should see a little green message above the github pages options with a link to your new webpage)." >}}
 
 That's it. Now you can navigate to your new homepage via the link in the greenbox. It may take a while until you can reach it.
 
@@ -805,9 +805,9 @@ Now we want to go one step further and password protect your website. You might 
 
 {{< figure src="/img/courses/dat_sci/01/setting_password_02.png" caption="2. Type in a password of your choice. You will get the message `Wrong password` but don't wory." >}}
 
-{{< figure src="/img/courses/dat_sci/01/setting_password_03.png" caption="3. Now you have to copy the part like shown in the picture. By pasting the hash from the URL rename your folder (if you haven't changed it the location is something like: ../GitHub/journal_ml)" >}}
+{{< figure src="/img/courses/dat_sci/01/setting_password_03.png" caption="3. Now you have to copy the part like shown in the picture. By pasting the hash from the URL rename your folder (if you haven't changed it the location is something like: ../GitHub/bdml-YourUserName)" >}}
 
-{{< figure src="/img/courses/dat_sci/01/setting_password_04.png" caption="4. Rename the entry `output_dir` in `site.yml` in RStudio. Only replace the hash but nothing else." >}}
+{{< figure src="/img/courses/dat_sci/01/setting_password_04.png" caption="4. Do the same in the `site.yml` file. Rename the entry `output_dir` with the copied hash. You can do that directly in RStudio. Only replace the hash but nothing else." >}}
 
 As a last step, click `Build Website` which will open the local version of your website. To upload your changes to GitHub you need to commit and push the changes via GitHub Desktop. Only then you will be able to log in to your website with your new password.
 
