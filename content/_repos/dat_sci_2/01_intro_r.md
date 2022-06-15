@@ -19,7 +19,7 @@ codefolding_show: hide
 ---
 
 {{% alert warning %}}
-If you already participated in the first course ("Business Data Science Basics") you can skip the first part and jump right into "Mattermost".
+If you already participated in the first course ("Business Data Science Basics") you can skip the first part and jump right to the section "Mattermost".
 {{% /alert %}}
 
 <!-- R-Logo and RStudio-Logo -->
