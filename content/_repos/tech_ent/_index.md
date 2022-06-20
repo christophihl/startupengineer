@@ -52,7 +52,7 @@ In addition, we expect case memos about three self-selected cases to be submitte
 | 9 | June 20rd | Sales for Startup Growth |
 | 10 | June 27th | Organizing for Startup Growth |
 | 11 | July 4th | Financial Analysis |
-| 12 | July 12th | Final Startup Pitches |
-| 13 | July 19th | Submission of Final Pitch Deck |
+| 12 | July 11th | Final Startup Pitches |
+| 13 | July 18th | Submission of Final Pitch Deck |
 
 

@@ -183,4 +183,4 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 | 10 | June 27th | Organizing for Startup Growth |
 | 11 | July 4th | Financial Analysis |
 | 12 | July 11th | Final Startup Pitches |
-| 13 | July 19th | Submission of Final Pitch Deck |
+| 13 | July 18th | Submission of Final Pitch Deck |
