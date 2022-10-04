@@ -14,7 +14,7 @@ type: docs  # Do not modify.
 
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 10
+# weight: 10
 
 # Add menu entry to sidebar.
 # - name: Declare this menu item as a parent with ID `name`.

@@ -21,9 +21,9 @@ address:
 
 
 authors:
+- schwarz
 - ihl
-- lampe
-- mork
+
 
 weight: 30
 tags: []
@@ -32,7 +32,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-10-01T13:00:00Z"
+date: "2021-10-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
@@ -78,9 +78,9 @@ projects: []
 
 ### Instructor(s)
 
+* {{% mention "schwarz" %}}
 * {{% mention "ihl" %}}
-* {{% mention "lampe" %}}
-* {{% mention "mork" %}}
+
 
 ***
 
@@ -124,33 +124,29 @@ This course module can prepare students for the following career paths:
 
 ### Grading/ Evaluation
 
-* `Startup Engineering: Project` (team deliverable): Development and pitch of an own startup project
+* `Startup Engineering` (team deliverable): Development and pitch of an own startup project
 
 ***
 
 ### Registration
 
-* `Startup Engineering:`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=827c9fd40f3a3c90c823a2d32bcab134)
+* `Startup Engineering:`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=5c921d84ffe408c90f2c18d4b4bc1ee0&again=yes)
 
 
 ***
 
 ### Time & Location
 
-* Monday, Dec 12th, 09.00 - 17.00, Building Startup Port, Harburger Schloßstrasse 6-12, Room Hertz Hörsaal
-* Tuesday, Dec 13th, 09.00 - 17.00, Building Startup Port, Harburger Schloßstrasse 6-12, Room Hertz Hörsaal
-* Friday, Dec 16th, 09.00 - 17.00, Building Startup Port, Harburger Schloßstrasse 6-12, Room Hertz Hörsaal
+* TBA
 
-
-{{% alert warning %}}
-As long as the current situation stands, physical meetings will be replaced by online and video conference sessions to which registered participants will receive access in due time.
-{{% /alert %}}
 
 ***
 
 ### Course Notes & Materials
 
 Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index.md" >}}).
+Password to be found on Studip.
+
 
 ***
 

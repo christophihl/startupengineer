@@ -13,7 +13,7 @@ toc: true  # Show table of contents? true/false
 type: docs  # Do not modify.
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 20
+# weight: 20
 
 
 # Add menu entry to sidebar.
