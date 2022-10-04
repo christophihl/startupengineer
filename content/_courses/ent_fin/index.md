@@ -8,7 +8,7 @@ event: Academic Theme Conference
 event_url: https://example.org
 
 showauthordate: false
-featured: false
+featured: true
 draft: false
 
 location: Source Themes HQ
@@ -130,7 +130,7 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* Open from September 27th until October 17th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=e3f942b6d1a4adb9af4da59bdd699c39&again=yes)
+* Open until October 17th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=43a388b5685881bcd40030296a43e730&again=yes)
 
 ***
 

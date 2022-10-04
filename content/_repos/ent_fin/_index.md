@@ -38,7 +38,6 @@ menu:
 ### Instructor(s)
 
 * {{% mention "ihl" %}}
-* {{% mention "lampe" %}}
 
 ***
 
@@ -95,18 +94,14 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* Open from September 27th until October 17th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=e3f942b6d1a4adb9af4da59bdd699c39&again=yes)
+* Open until October 17th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=43a388b5685881bcd40030296a43e730&again=yes)
 
 ***
 
 ### Time & Location
 
-* `Entrepreneurial Finance: Lecture`: Monday, 13.00 - 14.30, Buidling Chanel 4, Room 0.08
-* `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.15, Chanel 4, Room 0.08
-
-{{% alert warning %}}
-We plan for a hybrid format in which both online partcipipation and physical presence should be possible.
-{{% /alert %}}
+* `Entrepreneurial Finance: Lecture`: Monday, 13.00 - 14.30, Building HS28 (Harburger Schloßstraße 28), Room 0.01
+* `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.15, Building HS28 (Harburger Schloßstraße 28), Room 1.004
 
 ***
 
@@ -128,18 +123,15 @@ Here you find the following materials:
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | October 18th | Introduction: Evaluating Venture Opportunities|
-| 2 | October 25th | Financial Planning |
-| 3 | November 1st | Ownership and Returns |
-| 4 | November 8th | Valuation Methods |
-| 5 | November 15th | Early Stage and Venture Capital Investors |
-| 6 | November 22th | Term Sheets| 
-| 7 | November 29th| Structuring Deals |
-| 8 | December 6th | Staged Financing |
-| 9 | December 13th | Debt Financing |
-| - | Dec 20th - Jan 2nd | Christmas Holiday |
-| 10 | January 3rd | Corporate Governance |
-| 11 | January 10th | Exit |
-| 12 | January 17th | Guest Lecture |
-| 13 | January 24th | Wrap up |
-
+| 1 | November 7th | Introduction: Evaluating Venture Opportunities|
+| 2 | November 14th | Financial Planning |
+| 3 | November 21st | Ownership and Returns |
+| 4 | November 28th | Valuation Methods |
+| 5 | December 5th | Early Stage and Venture Capital Investors |
+| 6 | December 12th | Term Sheets| 
+| 7 | December 19th| Structuring Deals |
+| - | Dec 24th - Jan 8th | Christmas Holiday |
+| 8 | January 9th | Staged Financing |
+| 9 | January 16th | Debt Financing |
+| 10 | January 23rd | Corporate Governance |
+| 11 | January 30th | Exits |
