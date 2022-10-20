@@ -49,5 +49,6 @@ menu:
 
 | Datum | Thema |
 | --- | --- |
-| 04.11.21 | Unternehmertum |
-| 13.01.22 | Investitions- und Finanzplanung |
+| 20.10.22 | Unternehmertum |
+| 12.01.23 | Geschäftsmodellplanung |
+| 19.01.23 | Investitions- und Finanzplanung |
