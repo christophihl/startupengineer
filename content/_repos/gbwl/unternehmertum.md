@@ -41,7 +41,7 @@ menu:
 
 <br/>
 
-- [Präsentationsfolien](https://www.dropbox.com/s/f7p5hcyz2f8ffoe/GBWL_Unternehmertum_WS21.pdf?dl=0)
+- [Präsentationsfolien](https://www.dropbox.com/s/lg825tfykgkzv95/GBWL_Unternehmertum_WS23.pdf?dl=0)
 
 <br/>
 

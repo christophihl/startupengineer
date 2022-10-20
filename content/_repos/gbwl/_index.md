@@ -35,7 +35,6 @@ menu:
 ### Lehrende
 
 * {{% mention "ihl" %}}
-* {{% mention "lampe" %}}
 
 ***
 
