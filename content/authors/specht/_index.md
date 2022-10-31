@@ -61,9 +61,9 @@ social:
 - icon: envelope
   icon_pack: fas
   link: "mailto:oliver.specht@tuhh.de"
-# - icon: linkedin
-#  icon_pack: fab
-#  link: https://de.linkedin.com/in/hannes-lampe-86380740/
+- icon: linkedin
+  icon_pack: fab
+  ink: https://de.linkedin.com/in/oliver-specht-14411a162
 # - icon: keybase
 #   icon_pack: fab
 #   link: https://keybase.io/christophihl
