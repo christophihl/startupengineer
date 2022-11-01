@@ -15,7 +15,7 @@ superuser: false
 role: Research Assistant & Doctoral Student
 
 # Room
-room: Building Q Room 1.108
+room: Building Q Room 1.131
 
 # Telephone
 phone: +49 40 42878-4742
@@ -51,7 +51,7 @@ education:
     year: 2017 - 2019
   - course: Bachelor of Science in Industrial Engineering and Management
     institution: Technische Universität Berlin, Germany
-    year: 2027
+    year: 2017
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
