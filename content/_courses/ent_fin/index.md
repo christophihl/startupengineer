@@ -22,6 +22,7 @@ address:
 
 authors:
 - ihl
+- specht
 
 weight: 30
 tags: []

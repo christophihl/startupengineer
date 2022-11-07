@@ -21,8 +21,9 @@ address:
 
 
 authors:
-- schwarz
 - ihl
+- schwarz
+- specht
 
 
 weight: 30
@@ -78,8 +79,10 @@ projects: []
 
 ### Instructor(s)
 
-* {{% mention "schwarz" %}}
 * {{% mention "ihl" %}}
+* {{% mention "schwarz" %}}
+* {{% mention "specht" %}}
+
 
 
 ***
@@ -137,8 +140,10 @@ This course module can prepare students for the following career paths:
 
 ### Time & Location
 
-* TBA
-
+* Dec 2th, 2022; 10:00 - 15:00: Online 
+* Dec 9th, 2022; 09:00 - 17:00: Building Q, Room Q - 1.121
+* Dec 16th, 2022; 09:00 - 17:00: Building Q, Room Q - 1.121
+* Jan 13th, 2022; 09:00 - 17:00: Building Q, Room Q - 1.121
 
 ***
 
@@ -155,17 +160,15 @@ Password to be found on Studip.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | Dec 12th | Introduction |
-| 2 | Dec 12th | Customer Segmentation |
-| 3 | Dec 12th | Technology & Product Development |
-| 4 | Dec 12th | Competition & Market Analysis |
-| 5 | Dec 13th | Platform Business Models | 
-| 6 | Dec 13th | Revenue Models & Pricing |
-| 7 | Dec 13th | Lean Startup & Experimentation |
-| 8 | Dec 13th | Marketing for Startup Growth |
-| 9 | Dec 16th | Sales for Startup Growth |
-| 10 | Dec 16th | Organizing for Startup Growth |
-| 11 | Dec 16th | Financial Analysis |
-| 12 | Dec 16th | Final Startup Pitches |
-| 13 | Dec 23th | Submission of Final Pitch Deck |
+| 1 | Dec 02th, 2022 | Introduction |
+| 2 | Dec 9th, 2022 | Customer Segmentation |
+| 3 | Dec 9th, 2022 | Technology & Product Development |
+| 4 | Dec 9th, 2022 | Competition & Market Analysis |
+| 5 | Dec 16th, 2022 | Business Models | 
+| 6 | Dec 16th, 2022 | Revenue Models & Pricing |
+| 7 | Dec 16th, 2022 | Lean Startup & Experimentation |
+| 8 | Jan 13th, 2022 | Marketing for Startup Growth |
+| 9 | Jan 13th, 2022 | Sales for Startup Growth |
+| 10 | Jan 13th, 2022 | Financial Analysis |
+| 11 | Jan 27th, 2022 | Submission of Final Pitches |
 
