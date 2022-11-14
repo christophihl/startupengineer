@@ -21,7 +21,7 @@ weight: 10
 
 <br/>
 
-## [2) Financial Planning](https://www.dropbox.com/s/iaxj81tic3s2636/Ent_Fin_WS21_FinPlan.pdf?dl=0)
+## [2) Financial Planning](https://www.dropbox.com/s/6j1lfhn799041br/Ent_Fin_WS22_FinPlan.pdf?dl=0)
 
 
 <br/>
