@@ -34,7 +34,7 @@ This tool allows to visualize the results of a VEM analysis in a practical way. 
 
 ## 2) Financial Planning
 
-[`The Financial Projections model`](https://www.dropbox.com/s/v5bnoud3z2nbync/Financial-Projections-Model_%28blank%29.xlsx?dl=0)<br/>
+[`The Financial Projections model`](https://www.dropbox.com/s/akpacm9jr1fwi4l/Financial_Projections_Model_blank.xlsx?dl=0)<br/>
 This comprehensive spreadsheet allows to set up financial projections with a considerable degree of flexibility. It covers all three main accounts (P&L, BS, CF) and can be modified to make it suitable for different types of business. It also allows to vary the time frequency and to build financial ratios.
 
 
