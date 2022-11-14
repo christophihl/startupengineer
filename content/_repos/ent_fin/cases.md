@@ -45,7 +45,7 @@ Hardina Smythe, a recent MBA graduate, has just joined a top-tier venture capita
 Workhorse Inc., a startup in the solar power industry, has to prepare financial projections to convince investors and acquire funding.
 
 `Assignment Questions`:
-1) Use the the [`Financial Projections tool`](https://www.dropbox.com/s/v5bnoud3z2nbync/Financial-Projections-Model_%28blank%29.xlsx?dl=0)<br/> to complete the financial plan for Workhorse Inc.
+1) Use the the [`Financial Projections tool`](https://www.dropbox.com/s/2bni4jpmldycnor/Financial_Projections_Model_blank.xlsx?dl=0)<br/> to complete the financial plan for Workhorse Inc.
 2) Assess the financial attractiveness of the venture.
 3) Determine the financial need of the venture.
 4) Prepare a few slides to pitch the financial plan to investors.
