@@ -37,12 +37,12 @@ weight: 10
 <br/>
 
 
-## [5) Early Stage and Venture Capital Investors](https://www.dropbox.com/s/xf64eddmrjz5yft/Ent_Fin_WS21_Early_Stage_Investors.pdf?dl=0)
+## [5) Early Stage and Venture Capital Investors](https://www.dropbox.com/s/6czos09qtaj5d48/Ent_Fin_WS22_Investor_Types.pdf?dl=0)
 
 
 <br/>
 
-## [6) Term Sheets](https://www.dropbox.com/s/zdipu9py62tfkgy/Ent_Fin_WS21_TermSheets.pdf?dl=0)
+## [6) Term Sheets](https://www.dropbox.com/s/v2rvy0mqtzzqtyl/Ent_Fin_WS22_TermSheets.pdf?dl=0)
 
 
 
