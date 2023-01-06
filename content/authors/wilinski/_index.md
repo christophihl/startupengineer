@@ -39,15 +39,21 @@ education:
   - course: PhD in Management & Engineering
     institution: Hamburg University of Technology, Germany
     year: 2022 - current
+  - course: CTO & Product Owner
+    institution: Startup "Cargofaces", Germany
+    year: 2021 - 2022
   - course: Master of Science in International Management and Engineering
     institution: Hamburg University of Technology, Germany
-    year: 2021
+    year: 2019 - 2021
   - course: Working Student
     institution: Hamburg University of Technology, Germany
     year: 2020 - 2021
+  - course: Project Manager
+    institution: Dr. Ing. h. c. F. Porsche AG, Germany
+    year: 2018 - 2019
   - course: Bachelor of Science in Electrical Engineering and Management
     institution: Kiel University, Germany
-    year: 2018
+    year: 2014 - 2018
   - course: Working Student
     institution: Kiel University, Germany
     year: 2016 - 2017
