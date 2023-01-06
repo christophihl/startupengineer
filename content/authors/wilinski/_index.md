@@ -51,6 +51,9 @@ education:
   - course: Project Manager
     institution: Dr. Ing. h. c. F. Porsche AG, Germany
     year: 2018 - 2019
+  - course: Internship in the automotive industry
+    institution: Dr. Ing. h. c. F. Porsche AG, Germany
+    year: 2017 - 2018
   - course: Bachelor of Science in Electrical Engineering and Management
     institution: Kiel University, Germany
     year: 2014 - 2018
