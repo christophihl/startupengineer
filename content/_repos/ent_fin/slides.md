@@ -65,7 +65,7 @@ weight: 10
 
 <br/>
 
-## [10) Corporate Governance](https://www.dropbox.com/s/4fxdgqipe96bsf1/Ent_Fin_WS21_Corp_Governance.pdf?dl=0)
+## [10) Corporate Governance](https://www.dropbox.com/s/c95en13abojdazq/Ent_Fin_WS22_Corp_Governance.pdf?dl=0)
 
 <br/>
 

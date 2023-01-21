@@ -186,7 +186,7 @@ Uber Technologies, the privately held ride-sharing service and logistics platfor
 1)	What is the problem, and is the board or Kalanick responsible?
 2)	Was Kalanick the right CEO for Uber considering the competitive strategy of the ride-sharing platform?
 3) 	What are the central governance issues for Uber?
-4) 	What is more important to Uber's success: Khosrowshahi's governance or Kalanick's entreprneurial spirit?
+4) 	What is more important to Uber's success: Khosrowshahi's governance or Kalanick's entrepreneurial spirit?
 
 
 Video-Interview about Uber governance with the newly appointed CEO: https://www.facebook.com/watch/live/?v=10151374791194999&ref=watch_permalink
