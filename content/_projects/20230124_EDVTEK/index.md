@@ -3,7 +3,6 @@ title: Project EDV-TEK
 summary: Identification, emergence, diffusion and commercial exploitation of climate change mitigation technologies.
 authors:
 - thiesen
-
 tags:
 - Clean Technologies
 - Patent Classification
@@ -13,9 +12,22 @@ tags:
 - Neural Networks
 date: "2023-01-24T00:00:00Z"
 
+# Optional external URL for project (replaces project detail page).
+external_link: ""
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
 ---
 
 ### Abstract
+
+TEST TEST
 
 The EDV-TEK project aims to investigate four key sub-dimensions of technology research, specifically identification, emergence, diffusion, and exploitation, within the context of climate change mitigation technologies.
 
