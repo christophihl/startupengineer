@@ -16,8 +16,6 @@ date: "2023-01-24T00:00:00Z"
 external_link: ""
 
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ""
   focal_point: ""
@@ -26,8 +24,6 @@ image:
 ---
 
 ### Abstract
-
-TEST TEST
 
 The EDV-TEK project aims to investigate four key sub-dimensions of technology research, specifically identification, emergence, diffusion, and exploitation, within the context of climate change mitigation technologies.
 
@@ -39,5 +35,6 @@ In terms of diffusion, the project is using citations in patents as a measure of
 
 In terms of exploitation, the project is focusing on the commercialization of technologies, using technology startups as the object of study. Existing research has shown that patents positively influence the performance of startups, yet there is limited knowledge about the explicit technologies and their corresponding novelty level. The EDV-TEK project aims to address this gap by utilizing machine-learning neural networks to analyze the technologies and their novelty level.
 
-
+![Funded by the Federal Ministry of Education and Research](Foerderhinweis_BMBF.jpg)
+![Funded by the European Union](Foerderhinweis_EU_horizontal.jpg)
 
