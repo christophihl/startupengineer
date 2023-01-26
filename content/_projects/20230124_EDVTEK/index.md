@@ -21,7 +21,6 @@ external_link: ""
 image:
   caption: "[Wind turbine in mountain scenery](https://www.pexels.com/de-de/foto/weisse-windmuhle-414837/)"
   focal_point: Smart
-  preview_only: false
 
 ---
 
