@@ -30,7 +30,7 @@ The EDV-TEK project aims to investigate four key sub-dimensions of technology re
 
 In terms of identification, the project is utilizing Artificial Intelligence techniques to train Neural Networks that automate the process of patent classification. This field of research is relatively new and thus, the results obtained from different studies are often not comparable.
 
-In terms of emergence, the project is exploring the role of science in technological developments, with a specific focus on measuring the scientific influence and origin of knowledge by examining citations from patents to scientific publications. Additionally, novelty is also a crucial factor in the impact of knowledge.
+In terms of emergence, the project is exploring the role of science in technological developments, with a specific focus on measuring the scientific influence and origin of knowledge by examining citations from patents to scientific publications.
 
 In terms of diffusion, the project is using citations in patents as a measure of knowledge flow and knowledge recombination. Furthermore, the study will focus on the interrelatedness of diffusion, impact, and novelty.
 
