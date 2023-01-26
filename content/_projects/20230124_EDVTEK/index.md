@@ -1,7 +1,7 @@
 ---
 title: Project EDV-TEK
 summary: Identification, emergence, diffusion and commercial exploitation of climate change mitigation technologies.
-# authors: [thiesen]
+authors: [thiesen]
 tags:
 - Clean Technologies
 - Patent Classification
