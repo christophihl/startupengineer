@@ -74,7 +74,7 @@ projects: []
 * {{% mention "ihl" %}}
 * {{% mention "specht" %}}
 * {{% mention "thiesen" %}}
-* {{% mention "wilinksi" %}}
+* {{% mention "wilinski" %}}
 
 ***
 
