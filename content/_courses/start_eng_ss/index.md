@@ -9,7 +9,7 @@ event_url: https://example.org
 
 showauthordate: false
 featured: false
-draft: false
+draft: true
 
 location: Source Themes HQ
 address:

@@ -8,7 +8,7 @@ event: Academic Theme Conference
 event_url: https://example.org
 
 showauthordate: false
-featured: false
+featured: true
 draft: false
 
 location: Source Themes HQ
@@ -31,7 +31,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-11-01T13:00:00Z"
+date: "2023-02-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 

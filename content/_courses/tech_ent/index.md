@@ -8,7 +8,7 @@ event: Academic Theme Conference
 event_url: https://example.org
 
 showauthordate: false
-featured: false
+featured: true
 draft: false
 
 location: Source Themes HQ
@@ -22,22 +22,23 @@ address:
 
 authors:
 - ihl
-- mork
+- specht
+- thiesen
+- wilinski
 
-
-weight: 30
+weight: 20
 tags: []
 categories: []
 
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-12-01T13:00:00Z"
+date: "2023-02-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: "2020-06-23T15:00:00Z"
+publishDate: "2023-02-01T13:00:00Z"
 
 
 
@@ -71,8 +72,9 @@ projects: []
 ### Instructor(s)
 
 * {{% mention "ihl" %}}
-* {{% mention "lampe" %}}
-* {{% mention "mork" %}}
+* {{% mention "specht" %}}
+* {{% mention "thiesen" %}}
+* {{% mention "wilinksi" %}}
 
 ***
 
@@ -116,10 +118,17 @@ This course module can prepare students for the following career paths:
 
 ### Grading
 
-* `35%` (team): Development and pitch of an own startup project
-* `35%` (team): Case solutions submitted in/after class
-* `15%` (individual): Three case memos submitted before class
+* `50%` (team): Development and pitch of an own startup project
+* `35%` (individual): Seven case memos submitted after class
 * `15%` (individual): Class participation
+
+
+***
+
+### Global Student Innovation Challenge
+
+We strongly encourage and support student teams to particpate in the `Global Student Innovation Challenge`. This is an option on top of this course, not an obligation for this course.
+You can find more information here: [Global Student Innovation Challenge powered by PDMA](https://www.pdma.org/page/student-innovation-challenge).
 
 
 ***
@@ -145,13 +154,13 @@ Due to capacity contraints, the course `Creation of Business Opportunities` is d
 ### Time & Location
 
 *For IWI, LIM & GTIME students*: 
-* `Entrepreneurship`: Monday, 13.00 - 14.30, Building A, Room A 1.15.1/2
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building D, Room D 2.022
+* `Entrepreneurship`: Monday, 13.15 - 14.45, Building A, Room A 1.15
+* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.18
 
 
 *For Engineering and Erasmus students*: 
-* `Entrepreneurship`: Monday, 13.00 - 14.30, Building A, Room A 1.15.1/2
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.18.1
+* `Entrepreneurship`: Monday, 13.15 - 14.45, Building A, Room A 1.15
+* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.19
 
 
 ***
@@ -167,19 +176,24 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 4th | Introduction |
-| 2 | April 11th | Customer Segmentation |
-| - | April 18th | Holiday |
-| 3 | April 25th | Technology & Product Development |
-| 4 | May 2nd | Competition & Market Analysis |
-| 5 | May 9th | Platform Business Models | 
-| 6 | May 16th | Revenue Models & Pricing |
-| - | May 23rd | Holiday |
-| 7 | May 30th | Lean Startup & Experimentation |
-| - | June 6th | Holiday |
-| 8 | June 13th | Marketing for Startup Growth |
-| 9 | June 20rd | Sales for Startup Growth |
-| 10 | June 27th | Organizing for Startup Growth |
-| 11 | July 4th | Financial Analysis |
-| 12 | July 11th | Final Startup Pitches |
-| 13 | July 18th | Submission of Final Pitch Deck |
+| 1 | April 3rd | Introduction (Online Session) |
+| - | April 10th | Holiday |
+| 2 | April 17th | Customer Segmentation |
+| 3 | April 24th | Technology & Product Development |
+| - | May 1st | Holiday |
+| 4 | May 8th | Competition & Market Analysis | 
+| - | May 15th | Holiday |
+| 5 | May 22nd | Guest Lecture 1 |
+| - | May 29th | Holiday |
+| 6 | June 5th | (Platform) Business Models |
+| 7 | June 12th | Revenue Models & Pricing |
+| 8 | June 19th | Lean Startup & Experimentation |
+| 9 | June 26th | Marketing & Sales for Startup Growth  |
+| 10 | July 3rd | Guest Lecture 2 |
+| 11 | July 10th | Financial Analysis |
+| - | July 17th | Submission of Final Pitches |
+
+
+
+
+
