@@ -140,15 +140,6 @@ Due to capacity contraints, the course `Creation of Business Opportunities` is d
 * Master Students in IWI, LIM & GTIME
 * Master Students in Engineering and Erasmus Programs
 
-
-***
-
-### Registration
-
-* Please register for the `Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=da059b568d446040932419bfd75d3cbf&again=yes)
-* Please register for the `Creation of Business Opportunities` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=c616db4f8495c86efbd0c4a3b0060dc5&again=yes)
-
-
 ***
 
 ### Time & Location
@@ -161,6 +152,15 @@ Due to capacity contraints, the course `Creation of Business Opportunities` is d
 *For Engineering and Erasmus students*: 
 * `Entrepreneurship`: Monday, 13.15 - 14.45, Building A, Room A 1.15
 * `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.19
+
+
+***
+
+### Registration
+
+* *For IWI, LIM & GTIME students*, please register for the entire module `Technology Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=91d193c4645cd41e9a2c9b3f9e92445a&again=yes) 
+
+* *For Engineering and Erasmus students*, please register for the entire module `Technology Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=32b403100ca85bd7c1d5ced24b19d3ba&again=yes)
 
 
 ***
