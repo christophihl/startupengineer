@@ -5,7 +5,7 @@ summary: Overview
 weight: 1
 
 # Page metadata.
-title: Startup Engineering
+title: Technology Entrepreneurship
 date: "2020-16-04T00:00:00Z"
 lastmod: "2020-16-04T00:00:00Z"
 draft: false  # Is this a draft? true/false
