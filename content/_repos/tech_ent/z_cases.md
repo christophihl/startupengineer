@@ -13,13 +13,7 @@ menu:
 weight: 12
 --- 
 
-## Note
 
-If you want to submit a case memo or solution, please `upload the pdf file to Stud.IP in the folder named after the session that the case belongs to`. Please use the following file name and info:
-* **individal case memo**: `lastname_casename.pdf`; e.g. `ihl_zenatix.pdf`. The file itself must contain your full name and immatriculation number.
-* **team case memo**: `teamname_casename.pdf`; e.g. `memetrify_zenatix.pdf`. The team name can be anything as long as it remains unique and invariant throughout the course (exceptions allowed in case of team reformations). The file itself must contain *all* your full names and immatriculation numbers.
-
-<br/>
 
 ## Customer Segmentation
 
@@ -90,6 +84,8 @@ The Avatech founding team has developed four potential "models" for bringing Ava
 
 ## Revenue Models and Pricing
 
+`Please choose in advance one of the following two cases to work on in your group:`
+
 **Case 1**: [PassionConnect](https://www.dropbox.com/s/zwv99gq6wyp7als/PassionConnect.pdf?dl=0)
 
 `Assignment Questions`:
@@ -114,7 +110,7 @@ The Avatech founding team has developed four potential "models" for bringing Ava
 
 ## Lean Startup & Experimentation
 
-`Please choose in advance one of the following three cases to work on in your group. Then it would only be smart to choose this case also for an optional individual case memo :wink:`
+`Please choose in advance one of the following three cases to work on in your group:`
 
 **Case 1**: [Rent The Runway](https://www.dropbox.com/s/sgtqule2e5d65c8/RentTheRunway.pdf?dl=0)
 

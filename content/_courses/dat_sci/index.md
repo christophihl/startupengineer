@@ -80,7 +80,6 @@ They can be taken independently, but it is highly recommended to enroll consecut
 
 * {{% mention "schwarz" %}}
 * {{% mention "mork" %}}
-* {{% mention "lampe" %}}
 * {{% mention "ihl" %}}
 
 
@@ -132,25 +131,25 @@ After completing this module, students will be able to:
 
 `Business Data Science Basics`
 
-* Monday, April 25th, 09.00 - 17.00, Building Q, Room Q - 1.121
-* Tuesday, April 26th, 09.00 - 17.00, Building Q, Room Q - 1.121
-* Wednesday, April 27th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Monday, April 24th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Tuesday, April 25th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Wednesday, April 26th, 09.00 - 17.00, Building Q, Room Q - 1.121
 
 <br>
 
 `Business Decisions with Machine Learning`
 
-* Monday, May 16th, 09.00 - 17.00, Building Q, Room Q - 1.121
-* Tuesday, May 17th, 09.00 - 17.00, Building Q, Room Q - 1.121
-* Wednesday, May 18th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Monday, May 08th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Tuesday, May 09th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Wednesday, May 10th, 09.00 - 17.00, Building Q, Room Q - 1.121
 
 <br>
 
 `Building Business Data Products`
 
-* Monday, June 20th, 09.00 - 17.00, Building Q, Room Q - 1.121
-* Tuesday, June 21st, 09.00 - 17.00, Building Q, Room Q - 1.121
-* Wednesday, June 22nd, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Monday, June 19th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Tuesday, June 20th, 09.00 - 17.00, Building Q, Room Q - 1.121
+* Wednesday, June 21st, 09.00 - 17.00, Building Q, Room Q - 1.121
 
 
 ***
