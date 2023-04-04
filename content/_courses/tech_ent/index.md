@@ -145,13 +145,13 @@ Due to capacity contraints, the course `Creation of Business Opportunities` is d
 ### Time & Location
 
 *For IWI, LIM & GTIME students*: 
-* `Entrepreneurship`: Monday, 13.15 - 14.45, Building A, Room A 1.15
+* `Entrepreneurship`: Monday, 13.15 - 14.45, Building I, Audimax 2
 * `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.18
 
 
 *For Engineering and Erasmus students*: 
-* `Entrepreneurship`: Monday, 13.15 - 14.45, Building A, Room A 1.15
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.19
+* `Entrepreneurship`: Monday, 13.15 - 14.45, Building I, Audimax 2
+* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Channel 4 (Harburger Schloßstraße 28, 21079 Hamburg) HS28 - 0.08
 
 
 ***
