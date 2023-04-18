@@ -63,8 +63,8 @@ These tutorials are optional and you can choose whatever <a href="https://app.da
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | 25.04.22 - 27.04.22 | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci_1/01_intro_r.html" >}}) |
-| 2 | 25.04.22 - 27.04.22 | [Introduction to the tidyverse]({{< relref "_repos/dat_sci_1/02_intro_tv.html" >}}) |
-| 3 | 25.04.22 - 27.04.22 | [Data Acqusition]({{< relref "_repos/dat_sci_1/03_dat_acq.html" >}}) |
-| 4 | 25.04.22 - 27.04.22 | [Data Wrangling]({{< relref "_repos/dat_sci_1/04_dat_wra.html" >}}) |
-| 5 | 25.04.22 - 27.04.22 | [Data Visualization]({{< relref "_repos/dat_sci_1/05_dat_viz.html" >}}) |
+| 1 | 24.04.23 - 26.04.23 | [Introduction to R, RStudio IDE & GitHub]({{< relref "_repos/dat_sci_1/01_intro_r.html" >}}) |
+| 2 | 24.04.23 - 26.04.23 | [Introduction to the tidyverse]({{< relref "_repos/dat_sci_1/02_intro_tv.html" >}}) |
+| 3 | 24.04.23 - 26.04.23 | [Data Acqusition]({{< relref "_repos/dat_sci_1/03_dat_acq.html" >}}) |
+| 4 | 24.04.23 - 26.04.23 | [Data Wrangling]({{< relref "_repos/dat_sci_1/04_dat_wra.html" >}}) |
+| 5 | 24.04.23 - 26.04.23 | [Data Visualization]({{< relref "_repos/dat_sci_1/05_dat_viz.html" >}}) |
