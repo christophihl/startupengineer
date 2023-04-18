@@ -664,7 +664,13 @@ We will use GitHub to store your data and hand in your assignments through your 
   <div id="clear"></div>
 </div>
 
-3. Accept the assignment on GitHub Classroom, create a website using Quarto and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/quarto_journal_template/" target="_blank"><b>Journal Data Science</b></a>. You can open it using the password: *test*.
+3. Check for git: You should already have git on your device, but let’s check for it anyway.
+
+* Open RStudio
+* In the Terminal, run the following command: `which git`
+* If after running that you get something that looks like a file path to git on your computer, then you have git installed. For example, that might return something like this (or it could differ a bit): /usr/local/bin/git. If you instead get no response at all, you should download & install git from here: git-scm.com/downloads
+
+4. Accept the assignment on GitHub Classroom, create a website using Quarto and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/quarto_journal_template/" target="_blank"><b>Journal Data Science</b></a>. You can open it using the password: *test*.
 
 <!-- INFOBOX -->
 <div id="header">Infobox</div>
@@ -700,7 +706,7 @@ You might have to refresh the page after a while. But then you're ready to go an
 
 ### Compiling on your local computer
 
-1. Install Quarto, if necessary (UPDATE AS OF 07/28/2022)
+1. Only necessary if you do not have the most recent version of RStudio installed: Install Quarto
 
 What is Quarto? Quarto is a scientific publishing tool built on Pandoc that allows R, Python, Julia, and ObservableJS users to create dynamic documents, websites, books and more.
 
@@ -757,24 +763,24 @@ Quarto will work with RStudio v2022.02+, but you’ll need to install Quarto sep
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_04_finish.png" caption="2.4 Click `Finish`" >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` and select your `ss23-bdsb-____` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` or `Add` and then `Clone Repository ...`  and select your `TUHHStartupEngineers/ss23-bdsb-YourUserName` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
 
 3. Navigate to the folder you just cloned/downloaded, open the `lab_journal.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
 
-4. To compile the entire website, find the build tab in the top right hand corner. You should see the option to `build website` <img src="/img/courses/dat_sci/01/icon_render_website.png" width=3% style="display:inline-block; margin:0px"> Click this. The website should be built. After the website is built, you should be able to see it in the RStudio browser (viewer pane in the bottom right corner). There is a little button <img src="/img/courses/dat_sci/01/icon_open_browser.png" width=3% style="display:inline-block; margin:0px"> that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
+4. To compile the entire website, find the build tab in the top right hand corner. You should see the option to `Render website` <img src="/img/courses/dat_sci/01/icon_render_website.png" width=3% style="display:inline-block; margin:0px"> Click this. The website should be built. After the website is built, you should be able to see it in the RStudio browser (viewer pane in the bottom right corner). There is a little button <img src="/img/courses/dat_sci/01/icon_open_browser.png" width=3% style="display:inline-block; margin:0px"> that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
 Important: After compilation, all of the files for displaying your website are saved in the folder where your R project resides. When you look at these in a browser (for example, by going to the folder and dragging the _site/index.html file into a browser - don't worry about the password protection for now), you are loading from your disk. Only you will be able to see the website, because it is on your hard-drive. You need to upload to a web server to serve the webpage on the internet.
 
 ### Serving your webpage on the internet
 
 Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is built into the _site folder and then served from the `gh-pages` branch. Your files contain a workflow (GitHub Action) that realizes all these steps. We only have to tell GitHub that the page is being built and served like this.
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your journal repository (https://github.com/TUHHStartupEngineers/bdsb-YourUserName) and click the settings button in the top right corner." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to github.com, navigate to your journal repository (located in our account: https://github.com/TUHHStartupEngineers/bdsb-YourUserName) and click the settings button in the top right corner." >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_action.png" caption="2. Select `Pages` in the menu on the left and make sure the source **GitHub Actions** is set.  (after a while you should see a little message at the top with a link to your new webpage)." >}}
 
 This Action requires a encrypted secret, which is basically the password to your website. 
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_03_secret_01.png" caption="3. Select `Secrets and variables` in the menu on the left. Click `New repository secret`" >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_03_secret_01.png" caption="3. Select `Secrets and variables` -> `Actions` in the menu on the left. Click `New repository secret`" >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_03_secret_01.png" caption="4. The Name has to be `WEBSITE_TOKEN`. The value for secret will be your password for your website. **DO NOT USE YOUR STANDARD PASSWORDS.** You later will be asked to submit your passwords to the teaching assistants who will be able to see it in clear text." >}}
 
@@ -783,6 +789,10 @@ The website will be built and served every time you upload any new local changes
 {{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content (e.g. the author name or the date in the `index.qmd` file) you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .qmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. Press `Commit to main.`" >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="4. Press `Push origin` and wait a couple of minutes. Your changes should now be served on your website" >}}
+
+Your website URL: https://tuhhstartupengineers.github.io/ss23-bdsb-YourUsername/
+
+To avoid to enter your password every time you open your site or swich in between pages, set a checkmark at Remember Me below the password prompt.
 
 ***
 ### Quarto
