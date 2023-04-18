@@ -664,7 +664,7 @@ We will use GitHub to store your data and hand in your assignments through your 
   <div id="clear"></div>
 </div>
 
-3. Accept the assignment on GitHub Classroom, create a website using R Markdown and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/quarto_journal_template/" target="_blank"><b>Journal Data Science</b></a>. You can open it using the password: *test*.
+3. Accept the assignment on GitHub Classroom, create a website using Quarto and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/quarto_journal_template/" target="_blank"><b>Journal Data Science</b></a>. You can open it using the password: *test*.
 
 <!-- INFOBOX -->
 <div id="header">Infobox</div>
@@ -686,7 +686,7 @@ To get started with this template you only have to login to github and click thi
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_02.png" caption="... to enter the virtual classroom." width="75%" >}}
 
-You might have to refresh the page after a while. But then you're ready to go and able to access your template by clicking on the bottom link (you don't need to accept the invitation to TUHHStartupEngineers). That means you have all of the files you need to compile a website with RMarkdown.
+You might have to refresh the page after a while. But then you're ready to go and able to access your template by clicking on the bottom link (you don't need to accept the invitation to TUHHStartupEngineers). That means you have all of the files you need to compile a website with Quarto.
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_03.png" caption="You're ready to go!" width="75%" >}}
 
@@ -700,9 +700,9 @@ You might have to refresh the page after a while. But then you're ready to go an
 
 ### Compiling on your local computer
 
-1. Install Quarto (*IF NECESSARY - UPDATE AS OF 07/28/2022)
+1. Install Quarto, if necessary (UPDATE AS OF 07/28/2022)
 
-Quarto is a scientific publishing tool built on Pandoc that allows R, Python, Julia, and ObservableJS users to create dynamic documents, websites, books and more.
+What is Quarto? Quarto is a scientific publishing tool built on Pandoc that allows R, Python, Julia, and ObservableJS users to create dynamic documents, websites, books and more.
 
 Quarto is now included with RStudio v2022.07.1+ so no need for a separate download/install if you have the latest version of RStudio!
 
@@ -747,7 +747,7 @@ Quarto will work with RStudio v2022.02+, but you’ll need to install Quarto sep
 ***
 
 
-2. Open GitHub Desktop, make sure it is connected to your account and clone your repository to your computer so that you have a local copy of that data:
+2. Open GitHub Desktop, make sure it is connected to your account and clone your assignment repository to your computer so that you have a local copy of that data that was provided to you:
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_01_signin.png" caption="2.1 Click `Sign in to GitHub.com`" >}}
 
@@ -766,7 +766,7 @@ Important: After compilation, all of the files for displaying your website are s
 
 ### Serving your webpage on the internet
 
-Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is built into the _site folder and then served from the `gh-pages` branch. Your files contain a workflow (GitHub Action) that realizes all these steps. We only have to tell GitHub that the page is being built and served like this
+Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is built into the _site folder and then served from the `gh-pages` branch. Your files contain a workflow (GitHub Action) that realizes all these steps. We only have to tell GitHub that the page is being built and served like this.
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your journal repository (https://github.com/TUHHStartupEngineers/bdsb-YourUserName) and click the settings button in the top right corner." >}}
 
@@ -780,7 +780,7 @@ This Action requires a encrypted secret, which is basically the password to your
 
 The website will be built and served every time you upload any new local changes to GitHub. Remember to render the website every time you want to add changes to your site.
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content (e.g. the author name or the date in the `index.qmd` file) you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .Rmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. `Press commit to master.`" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content (e.g. the author name or the date in the `index.qmd` file) you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .qmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. Press `Commit to main.`" >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="4. Press `Push origin` and wait a couple of minutes. Your changes should now be served on your website" >}}
 
@@ -793,11 +793,11 @@ The website will be built and served every time you upload any new local changes
 
 You can explore [Quarto’s documentation](https://quarto.org/docs/guide/) to learn more about creating documents, websites, blogs, books, slides, etc.
 
-Each page of your website is created by a R Markdown file (.qmd). This format resembles an earlier yet another markdown format, .Rmd, also managed by RStudio, but tries to abstract away from the original R basis of .Rmd.
+Each page of your website is created by a q-Markdown file (.qmd). This format resembles an earlier yet another markdown format, .Rmd, also managed by RStudio, but tries to abstract away from the original R basis of .Rmd.
 
 All website pages are plain text file that have the extension .qmd. Notice that the file contains three types of content:
 
-* An (optional) YAML header surrounded by - - - (there is no need in the beginning to alter it)
+* An (optional) YAML header surrounded by - - - at the top (there is no need in the beginning to alter it)
 * R code chunks surrounded by ` ```s`. These chunks can be customized with `knitr` options, arguments set at the top of a chunk header after #|:
   + `#| eval: false` prevents running the code and include its results
   + `#| include: false` prevents code and results from appearing in the finished file. Quarto still runs the code in the chunk, and the results can be used by other chunks.
@@ -825,7 +825,7 @@ Check for yourself what happens, if you set eval to `true`.
 
 * text mixed with simple text formatting
 
-See the `Quarto Cheat Sheet` for further information regarding the markdown syntax. It is necessary, that your code is formatted correctly to be evaluated.
+See the `Quarto Cheat Sheet` or the official quarto documentation for further information regarding the markdown syntax. It is necessary, that your code is formatted correctly to be evaluated.
 
 <div id="header">Cheat Sheet</div>
 <div id="container">
@@ -838,7 +838,7 @@ See the `Quarto Cheat Sheet` for further information regarding the markdown synt
 
 Submit your journal URL and password via the following form. If you do not submit your information, we won't be able to evaluate your assignments.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctVjKJaCKNtzCK0ufDmiSaKf-LnGsCWMUwfZGxEkemw5Eu2Q/viewform?embedded=true" width="640" height="1166" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMgOCNfz28cvu-QgxymKuifWQD5-TxB0NU-bwmytB3BoxicA/viewform?embedded=true" width="640" height="1166" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ***
 
