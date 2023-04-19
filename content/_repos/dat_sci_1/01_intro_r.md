@@ -706,7 +706,9 @@ You might have to refresh the page after a while. But then you're ready to go an
 
 ### Compiling on your local computer
 
-1. Only necessary if you do not have the most recent version of RStudio installed: Install Quarto
+1. Make sure the `rmarkdown` package and all it's dependencies are installed in RStudio: Open RStudio, click the packages tab in the lower right hand corner, click install packages, type in `rmarkdown`, make sure "install dependencies" is clicked on, then press install (alternatively run `install.packages("rmarkdown", dependencies = TRUE)` in the console).
+
+2. Only necessary if you do not have the most recent version of RStudio installed: Install Quarto
 
 What is Quarto? Quarto is a scientific publishing tool built on Pandoc that allows R, Python, Julia, and ObservableJS users to create dynamic documents, websites, books and more.
 
@@ -753,7 +755,7 @@ Quarto will work with RStudio v2022.02+, but you’ll need to install Quarto sep
 ***
 
 
-2. Open GitHub Desktop, make sure it is connected to your account and clone your assignment repository to your computer so that you have a local copy of that data that was provided to you:
+3. Open GitHub Desktop, make sure it is connected to your account and clone your assignment repository to your computer so that you have a local copy of that data that was provided to you:
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_01_signin.png" caption="2.1 Click `Sign in to GitHub.com`" >}}
 
@@ -765,9 +767,9 @@ Quarto will work with RStudio v2022.02+, but you’ll need to install Quarto sep
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` or `Add` and then `Clone Repository ...`  and select your `TUHHStartupEngineers/ss23-bdsb-YourUserName` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
 
-3. Navigate to the folder you just cloned/downloaded, open the `lab_journal.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
+4. Navigate to the folder you just cloned/downloaded, open the `lab_journal.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
 
-4. To compile the entire website, find the build tab in the top right hand corner. You should see the option to `Render website` <img src="/img/courses/dat_sci/01/icon_render_website.png" width=3% style="display:inline-block; margin:0px"> Click this. The website should be built. After the website is built, you should be able to see it in the RStudio browser (viewer pane in the bottom right corner). There is a little button <img src="/img/courses/dat_sci/01/icon_open_browser.png" width=3% style="display:inline-block; margin:0px"> that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
+5. To compile the entire website, find the build tab in the top right hand corner. You should see the option to `Render website` <img src="/img/courses/dat_sci/01/icon_render_website.png" width=3% style="display:inline-block; margin:0px"> Click this. The website should be built. After the website is built, you should be able to see it in the RStudio browser (viewer pane in the bottom right corner). There is a little button <img src="/img/courses/dat_sci/01/icon_open_browser.png" width=3% style="display:inline-block; margin:0px"> that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
 Important: After compilation, all of the files for displaying your website are saved in the folder where your R project resides. When you look at these in a browser (for example, by going to the folder and dragging the _site/index.html file into a browser - don't worry about the password protection for now), you are loading from your disk. Only you will be able to see the website, because it is on your hard-drive. You need to upload to a web server to serve the webpage on the internet.
 
 ### Serving your webpage on the internet
