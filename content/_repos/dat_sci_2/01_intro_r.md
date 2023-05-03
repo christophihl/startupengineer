@@ -49,9 +49,19 @@ In this project, you will learn how to:
 
 Don’t worry if you’ve never programmed before and it seems like we cover a lot of ground fast. The chapter will teach you everything you need to know and gives you a concise overview of the R language. You will return to many of the concepts we meet here in the next projects, where you will examine the concepts in depth.
 
-Before you can ask your computer to save some numbers, you’ll need to know how to talk to it. RStudio gives you a way to talk to your computer. R gives you a language to speak in. To start you will need to have both R and RStudio installed on your computer before you can use them. R and RStudio are separate downloads and installations. Both are free (under the Affero General Public License (AGPL) v3) and easy to download. R is the underlying statistical computing environment, but using R alone is no fun. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. You need to install R before you install RStudio. In the following sections you'll find information about how to install the language R and the IDE RStudio. 
+{{< figure src="/img/courses/dat_sci/01/R_RStudio.png" >}}
+
+Before you can ask your computer to save some numbers, you’ll need to know how to talk to it. RStudio gives you a way to talk to your computer. R gives you a language to speak in. To start you will need to have both R and RStudio installed on your computer before you can use them. R and RStudio are separate downloads and installations. Both are free (under the Affero General Public License (AGPL) v3) and easy to download. R is the underlying statistical computing environment, but using R alone is no fun. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. You need to install R before you install RStudio. In the following sections you'll find information about how to install the language R and the IDE RStudio. You can choose between an interactive and a manual tutorial.
+
 
 ##  Installing R & RStudio IDE
+### Interactively
+
+Take the following steps to get R and the IDE RStudio running:
+
+<iframe src="https://jwarz.shinyapps.io/learnR/#section-install-r" width="100%" height="500px"></iframe>
+
+### Manually
 
 Download and install R from CRAN, the Comprehensive R Archive Network. 
 
@@ -69,10 +79,10 @@ Download and install R from CRAN, the Comprehensive R Archive Network.
 
 **Steps**
 
-1. Click “Download R for Mac/Windows”
-2. Download the appropriate file:
+1. Click “Download R for Linux / macOS / Windows”
+2. Download the appropriate file (You should have at least version 4.1.0):
     + Windows users click Base, and download the installer for the latest R version
-    + Mac users select the file R-4.X.X.pkg that aligns with your OS version
+    + Mac users select the file R-4.2.3.pkg that aligns with your OS version
 3. Follow the instructions of the installer.
 
 ***
@@ -93,7 +103,7 @@ Install RStudio’s IDE
 
 **Steps**
 
-1. Select the install file for your OS.
+1. Select the install file for your OS (You should have at least v2022.02 installed. If you already have RStudio and need to update: Open RStudio, and under ‘Help’ in the top menu, choose ‘Check for updates.’)
 2. Follow the instructions of the installer.
 
 ## Understanding the RStudio IDE
@@ -491,34 +501,8 @@ calc_EOQ(D = 4000)
 Finally, the bottom right panel is the miscellaneous panel containing five separate tabs. The <code>Files</code> tab has a navigable file manager, just like the file system on your operating system. It shows all the files and folders in the default workspace. The <code>Plot</code> tab is where graphics you create will appear. Here we can zoom, export, configure and inspect graphs/figures. Run <code>hist(mtcars$mpg)</code> for an example. The <code>Packages</code> tab shows you the packages that are installed and those that can be installed (more on this later). The <code>Help</code> tab allows you to search the R documentation for help and is where the help appears when you ask for it from the Console. 
 </div>
 
-<!-- INFOBOX -->
-<div id="header">Infobox</div>
-<div id="container">
-  <div id="first">{{% icon info-solid %}}</div>
-  <div id="second">RStudio’s default preferences generally work well, but saving a workspace to .RData can be cumbersome, especially if you are working with larger datasets. To turn that off, go to Tools –> ‘Global Options’ and select the ‘Never’ option for ‘Save workspace to .RData’ on exit.’ This also helps to save your entire work in your code instead of saving it into variables.</div>
-  <div id="clear"></div>
-</div>
 
-### Project & working directory
-
-It is good practice to keep a set of related data, analyses, and text self-contained in a single folder, called the `working directory`. It is the place from where R will be looking for and saving the files. All of the scripts within this folder can then use relative paths to files that indicate where inside the project a file is located (as opposed to absolute paths, which point to where a file is on a specific computer). Working this way makes it a lot easier to move your project around on your computer and share it with others without worrying about whether or not the underlying scripts will still work.
-
-RStudio provides a helpful set of tools to do this through its `Projects` interface, which not only creates a working directory for you, but also remembers its location (allowing you to quickly navigate to it) and optionally preserves custom settings and open files to make it easier to resume work after a break. Using RStudio projects makes this easy and ensures that your working directory is set properly.
-
-<!-- INFOBOX -->
-<div id="header">Infobox</div>
-<div id="container">
-  <div id="first">{{% icon info-solid %}}</div>
-  <div id="second">When you accept the assignment in one of the next steps you will download a folder already including a project. So in this case, you do not have to set it up by yourself. The working directory will also be automatically set to the folder the project is located in.
-</div>
-  <div id="clear"></div>
-</div>
-
-You can see your current working directory in the path given above the console or you can just run the command `getwd()`.
-If for some reason your working directory is not what it should be, you can change it in the RStudio interface by navigating in the file browser where your working directory should be, and clicking on the blue gear icon <img src="/img/courses/dat_sci/01/icon_more.png" width=3% style="display:inline-block; margin:0px"> `More` in the files tab and select `Set As Working Directory`. Alternatively you can use `setwd("/path/to/working/directory")` to reset your working directory. However, your scripts should not include this line because it will fail on someone else’s computer.
-
-***
-### Help & other resources
+**Getting help**
 
 **Within RStudio**
 
@@ -600,12 +584,15 @@ hist(results)</code></pre>
   
 {{< figure src="/img/courses/dat_sci/01/results_hist.png" caption="Histogram of 100x rolling the dice" >}}
 
-</section><br>
+</section>
 <!-- CODE (hide) -->
 
-<div id="header">{{% icon datacamp %}} Recommended Datacamp courses</div>
+***
+
+### Datacamp
+<div id="header">Recommended Datacamp courses</div>
 <div id="container">
-  <div id="first"></div>
+  <div id="first">{{% icon datacamp %}}</div>
   <div id="second">
     <a href="https://learn.datacamp.com/courses/free-introduction-to-r" target="_blank"><b>1. Introduction to R</b></a><br>  
     <a href="https://learn.datacamp.com/courses/intermediate-r" target="_blank"><b>2. Intermediate R</b></a></div>
@@ -641,8 +628,8 @@ Error in x %>% sum() : could not find function "%>%"
 
 {{< figure src="/img/courses/dat_sci/01/mattermost_example_error.png" caption="Minimalistic example of how you could post an error in Mattermost. See how little formatting makes the code very nice to read." width="50%" >}}
 
-
 ***
+
 ## GitHub for journaling
 <!-- GitHub and GitHub Logos -->
 <div class="flex-container images">
@@ -662,7 +649,7 @@ Error in x %>% sum() : could not find function "%>%"
 
 We will use GitHub to store your data and hand in your assignments through your personal website (github pages). To be able to do so, complete the following steps (detailed instructions below):
 
-1. Create a free github account. 
+1. Create a free github account (if you do not have one already). 
 
 <!-- DOWNLOADBOX -->
 <div id="header">Website</div>
@@ -672,7 +659,7 @@ We will use GitHub to store your data and hand in your assignments through your 
   <div id="clear"></div>
 </div>
 
-2. Download, install github desktop and connect it with your account. GitHub Desktop is a graphical user interface, which allows you to sync your local code changes with your online repository.
+2. Download, install github desktop and connect it with your account. GitHub Desktop is a graphical user interface, which allows you to sync your local code changes with your online repository (if you are already familiar with git and github you might not need it).
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
@@ -682,7 +669,13 @@ We will use GitHub to store your data and hand in your assignments through your 
   <div id="clear"></div>
 </div>
 
-3. Accept the assignment on GitHub Classroom, create a website using R Markdown and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
+3. Check for git: You should already have git on your device, but let’s check for it anyway.
+
+* Open RStudio
+* In the Terminal, run the following command: `which git`
+* If after running that you get something that looks like a file path to git on your computer, then you have git installed. For example, that might return something like this (or it could differ a bit): /usr/local/bin/git. If you instead get no response at all, you should download & install git from here: git-scm.com/downloads
+
+4. Accept the assignment on GitHub Classroom, create a website using Quarto and host it on Github pages, then submit the link and your personal password to your website for the assignments. You will create the website using this template <a href="https://tuhhstartupengineers.github.io/quarto_journal_template/" target="_blank"><b>Journal Data Science</b></a>. You can open it using the password: *test*.
 
 <!-- INFOBOX -->
 <div id="header">Infobox</div>
@@ -695,7 +688,7 @@ We will use GitHub to store your data and hand in your assignments through your 
 To get started with this template you only have to login to github and click this invitation link: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/3D_CKQvK" target="_blank"><b>Business Decisions with Machine Learning - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/GvwCVQ4z" target="_blank"><b>Business Decisions with Machine Learning - GitHub Classroom</b></a>
 </div>
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_00.png" caption="Click `Authorize GitHub Classroom`" width="50%" >}}
@@ -704,13 +697,9 @@ To get started with this template you only have to login to github and click thi
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_02.png" caption="... to enter the virtual classroom." width="75%" >}}
 
-You might have to refresh the page after a while. But then you're ready to go and able to access your template by clicking on the bottom link (you don't need to accept the invitation to TUHHStartupEngineers). That means you have all of the files you need to compile a website with RMarkdown.
+You might have to refresh the page after a while. But then you're ready to go and able to access your template by clicking on the bottom link (you don't need to accept the invitation to TUHHStartupEngineers). That means you have all of the files you need to compile a website with Quarto.
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_03.png" caption="You're ready to go!" width="75%" >}}
-
-If the message "owmork invited you to collaborate" pops up, press accept invitation so that all teaching assistants are able to track your progress and give feedback if needed.
-
-{{< figure src="/img/courses/dat_sci/01/github_classroom_04.png" caption="Accept owmork as collaborator." width="50%" >}}
 
 <!-- INFOBOX -->
 <div id="header">Infobox</div>
@@ -722,7 +711,15 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 
 ### Compiling on your local computer
 
-1. Make sure the `rmarkdown` package and all it's dependencies are installed in RStudio: 
+1. Make sure the `rmarkdown` package and all it's dependencies are installed in RStudio: Open RStudio, click the packages tab in the lower right hand corner, click install packages, type in `rmarkdown`, make sure "install dependencies" is clicked on, then press install (alternatively run `install.packages("rmarkdown", dependencies = TRUE)` in the console).
+
+2. Only necessary if you do not have the most recent version of RStudio installed: Install Quarto
+
+What is Quarto? Quarto is a scientific publishing tool built on Pandoc that allows R, Python, Julia, and ObservableJS users to create dynamic documents, websites, books and more.
+
+Quarto is now included with RStudio v2022.07.1+ so no need for a separate download/install if you have the latest version of RStudio!
+
+Quarto will work with RStudio v2022.02+, but you’ll need to install Quarto separately [here](https://quarto.org/docs/get-started/) (we recommend just installing the most up to date version of RStudio).
 
 ***
 **macOS only**: Install the Apple `Xcode` developer tools.
@@ -761,11 +758,9 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 </div>
 
 ***
-* **Both systems**
-  + Open RStudio, click the packages tab in the lower right hand corner, click install packages, type in `rmarkdown`, make sure "install dependencies" is clicked on, then press install. 
-  + Close RStudio.
 
-2. Open GitHub Desktop, make sure it is connected to your account and clone your repository to your computer so that you have a local copy of that data:
+
+3. Open GitHub Desktop, make sure it is connected to your account and clone your assignment repository to your computer so that you have a local copy of that data that was provided to you:
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_01_signin.png" caption="2.1 Click `Sign in to GitHub.com`" >}}
 
@@ -775,62 +770,64 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_04_finish.png" caption="2.4 Click `Finish`" >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` and select your `journal_ml` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` or `Add` and then `Clone Repository ...`  and select your `TUHHStartupEngineers/ss23-bdsb-YourUserName` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
 
-3. Navigate to the folder you just cloned/downloaded, open the `lab_journal_website.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
+4. Navigate to the folder you just cloned/downloaded, open the `lab_journal.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
 
-4. To compile the entire website, find the build tab in the top right hand corner. You should see the option to `build website` <img src="/img/courses/dat_sci/01/icon_build_website.png" width=3% style="display:inline-block; margin:0px"> Click this. The website should be built. After the website is built, you should be able to see it in the RStudio browser (viewer pane in the bottom right corner). There is a little button <img src="/img/courses/dat_sci/01/icon_open_browser.png" width=3% style="display:inline-block; margin:0px"> that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
-Important: After compilation, all of the files for displaying your website are saved in the folder where your R project resides. When you look at these in a browser (for example, by going to the folder and dragging the index.html file into a browser - don't worry about the password protection for now), you are loading from your disk. Only you will be able to see the website, because it is on your hard-drive. You need to upload to a web server to serve the webpage on the internet.
+5. To compile the entire website, find the build tab in the top right hand corner. You should see the option to `Render website` <img src="/img/courses/dat_sci/01/icon_render_website.png" width=3% style="display:inline-block; margin:0px"> Click this. The website should be built. After the website is built, you should be able to see it in the RStudio browser (viewer pane in the bottom right corner). There is a little button <img src="/img/courses/dat_sci/01/icon_open_browser.png" width=3% style="display:inline-block; margin:0px"> that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
+Important: After compilation, all of the files for displaying your website are saved in the folder where your R project resides. When you look at these in a browser (for example, by going to the folder and dragging the _site/index.html file into a browser - don't worry about the password protection for now), you are loading from your disk. Only you will be able to see the website, because it is on your hard-drive. You need to upload to a web server to serve the webpage on the internet.
 
 ### Serving your webpage on the internet
 
-Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is served from the `root` folder. The example files are set so that when you compile the example in RStudio, the output automatically goes into the `root` folder (which is your project folder). As the final step, we have to tell GitHub to serve the html files in your root folder as a website (https://github.com/TUHHStartupEngineers/bdml-YourUserName):
+Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is built into the _site folder and then served from the `gh-pages` branch. Your files contain a workflow (GitHub Action) that realizes all these steps. We only have to tell GitHub that the page is being built and served like this.
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to your github account, navigate to your journal repository and click the settings button in the top right corner." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to github.com, navigate to your journal repository (located in our account: https://github.com/TUHHStartupEngineers/bdsb-YourUserName) and click the settings button in the top right corner." >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_new.png" caption="2. Select `Pages` in the menu on the left, select the main Branch and make sure the option to serve from the root folder is set. Press Save. (after a while you should see a little green message above the github pages options with a link to your new webpage)." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_action.png" caption="2. Select `Pages` in the menu on the left and make sure the source **GitHub Actions** is set.  (after a while you should see a little message at the top with a link to your new webpage)." >}}
 
-That's it. Now you can navigate to your new homepage via the link in the greenbox. It may take a while until you can reach it.
+This Action requires a encrypted secret, which is basically the password to your website. 
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .Rmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. `Press commit to master.`" >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_03_secret_01.png" caption="3. Select `Secrets and variables` -> `Actions` in the menu on the left. Click `New repository secret`" >}}
+
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_03_secret_01.png" caption="4. The Name has to be `WEBSITE_TOKEN`. The value for secret will be your password for your website. **DO NOT USE YOUR STANDARD PASSWORDS.** You later will be asked to submit your passwords to the teaching assistants who will be able to see it in clear text." >}}
+
+The website will be built and served every time you upload any new local changes to GitHub. Remember to render the website every time you want to add changes to your site.
+
+{{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content (e.g. the author name or the date in the `index.qmd` file) you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .qmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. Press `Commit to main.`" >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="4. Press `Push origin` and wait a couple of minutes. Your changes should now be served on your website" >}}
 
-***
-### Password Protection
+Your website URL: https://tuhhstartupengineers.github.io/ss23-bdsb-YourUsername/
 
-Now we want to go one step further and password protect your website. You might have noticed already that when you try to open your website you are asked for a password. At the moment it is still the default password but in the next steps you will set your own password. **DO NOT USE YOUR STANDARD PASSWORDS.** You later will be asked to submit your passwords to the teaching assistants who will be able to see it in clear text.
-
-{{< figure src="/img/courses/dat_sci/01/setting_password_01.png" caption="1. Open your personal website that you created a few steps before. You should see the following screen where you are asked to type in a password." >}}
-
-{{< figure src="/img/courses/dat_sci/01/setting_password_02.png" caption="2. Type in a password of your choice. You will get the message `Wrong password` but don't wory." >}}
-
-{{< figure src="/img/courses/dat_sci/01/setting_password_03.png" caption="3. Now you have to copy the part like shown in the picture. By pasting the hash from the URL rename your folder (if you haven't changed it the location is something like: ../GitHub/bdml-YourUserName)" >}}
-
-{{< figure src="/img/courses/dat_sci/01/setting_password_04.png" caption="4. Do the same in the `site.yml` file. Rename the entry `output_dir` with the copied hash. You can do that directly in RStudio. Only replace the hash but nothing else." >}}
-
-As a last step, click `Build Website` which will open the local version of your website. To upload your changes to GitHub you need to commit and push the changes via GitHub Desktop. Only then you will be able to log in to your website with your new password.
-
-If you ever want to change your password, e.g. because you forgot it, just repeat the steps.
+To avoid to enter your password every time you open your site or swich in between pages, set a checkmark at Remember Me below the password prompt.
 
 ***
-### RMarkdown
+### Quarto
 
-Each page of your website is created by a R Markdown file (.Rmd). This is a plain text file that has the extension .Rmd. Notice that the file contains three types of content:
+[Quarto](https://quarto.org/) is a publishing system built on Pandoc that allows users to create dynamic content using R, Python, Julia, and ObservableJS (with plans to add more languages too!). R users have long loved [RMarkdown](https://rmarkdown.rstudio.com/) for combining prose, code, and outputs into single “knitted” documents. Quarto extends all of RMarkdown’s best features (plus many more!) to additional languages.
 
-* An (optional) YAML header surrounded by - - - (there is no need in the beginning to alter it)
-* R code chunks surrounded by ` ```s`. These chunks can be customized with `knitr` options, arguments set in the {} of a chunk header:
-  + `eval = FALSE` prevents running the code and include its results
-  + `include = FALSE` prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.
-  + `echo = FALSE` prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.
-  + `message = FALSE` prevents messages that are generated by code from appearing in the finished file.
-  + `warning = FALSE` prevents warnings that are generated by code from appearing in the finished.
-  + `fig.cap = "..."` adds a caption to graphical results.
+{{< figure src="/img/courses/dat_sci/01/quarto_schematic.png" >}}
+
+You can explore [Quarto’s documentation](https://quarto.org/docs/guide/) to learn more about creating documents, websites, blogs, books, slides, etc.
+
+Each page of your website is created by a q-Markdown file (.qmd). This format resembles an earlier yet another markdown format, .Rmd, also managed by RStudio, but tries to abstract away from the original R basis of .Rmd.
+
+All website pages are plain text file that have the extension .qmd. Notice that the file contains three types of content:
+
+* An (optional) YAML header surrounded by - - - at the top (there is no need in the beginning to alter it)
+* R code chunks surrounded by ` ```s`. These chunks can be customized with `knitr` options, arguments set at the top of a chunk header after #|:
+  + `#| eval: false` prevents running the code and include its results
+  + `#| include: false` prevents code and results from appearing in the finished file. Quarto still runs the code in the chunk, and the results can be used by other chunks.
+  + `#| echo: false` prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.
+  + `#| message: false` prevents messages that are generated by code from appearing in the finished file.
+  + `#| warning: false` prevents warnings that are generated by code from appearing in the finished.
+  + `#| fig-cap: "..."` adds a caption to graphical results.
 
 Example:
 
 <!-- CODE (show) -->
-<pre><code class="r">```{r, eval = FALSE}
+<pre><code class="r">```{r}
+#| eval: false
 numbers <- 1:1000
 
 # This will print the first 10 elements of the vector numbers
@@ -841,28 +838,31 @@ hist(sample(numbers, 100, replace = T))
 ```</code></pre>
 <!-- CODE (show) -->
 
-Check for yourself what happens, if you set eval to `TRUE`.
+Check for yourself what happens, if you set eval to `true`.
 
 * text mixed with simple text formatting
 
-See the `R Markdown Cheat Sheet` for further information regarding the markdown syntax:
+See the `Quarto Cheat Sheet` or the official quarto documentation for further information regarding the markdown syntax. It is necessary, that your code is formatted correctly to be evaluated.
 
 <div id="header">Cheat Sheet</div>
 <div id="container">
   <div id="first">{{% icon download %}}</div>
-  <div id="second"><a href="https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf" target="_blank"><b>R Markdown Cheat Sheet</b></a></div>
+  <div id="second"><a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1676540721/Marketing/Blog/Quarto_Cheat_Sheet.pdf" target="_blank"><b>Quarto Cheat Sheet</b></a></div>
   <div id="clear"></div>
 </div>
 
 ### Submission
 
-Please submit your lab journal URL and password via the following form. Otherwise we cannot evaluate your journal.
+Submit your journal URL and password via the following form. If you do not submit your information, we won't be able to evaluate your assignments.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYG3S4Vo058CbZsnuq1Onhx2zUamrSXr3vMTu0sWObR5zK8w/viewform?embedded=true" width="640" height="1332" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexyBGSu7nBCsmV1ZOtFfoaxEJ0MLPO_SxENQmSROK7MUoJYA/viewform?embedded=true" width="640" height="1166" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ***
 
 ### Datacamp
+
+No quarto video available yet. But studying R Markdown definitely helps.
+
 <div id="header">Recommended Datacamp courses</div>
 <div id="container">
   <div id="first">{{% icon datacamp %}}</div>
