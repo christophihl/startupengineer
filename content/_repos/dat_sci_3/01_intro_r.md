@@ -663,7 +663,7 @@ Error in x %>% sum() : could not find function "%>%"
 We will use GitHub to store your data and your code files. Your final submissions will be URLs to your web applications but for writing the required code we recommend you to use GitHub as it also makes it easier for us to help you if you get stuck at some point.
 If you don't have a GitHub account already, please complete the following steps:
 
-1. Create a free github account. 
+1. Create a free github account (if you do not have one already). 
 
 <!-- DOWNLOADBOX -->
 <div id="header">Website</div>
@@ -673,7 +673,7 @@ If you don't have a GitHub account already, please complete the following steps:
   <div id="clear"></div>
 </div>
 
-2. Download, install github desktop and connect it with your account. GitHub Desktop is a graphical user interface, which allows you to sync your local code changes with your online repository.
+2. Download, install github desktop and connect it with your account. GitHub Desktop is a graphical user interface, which allows you to sync your local code changes with your online repository (if you are already familiar with git and github you might not need it).
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
@@ -686,7 +686,7 @@ If you don't have a GitHub account already, please complete the following steps:
 3. Accept the assignment on GitHub Classroom: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/dTY7XG9Z" target="_blank"><b>Building Business Data Products - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/nYS3KYaj" target="_blank"><b>Building Business Data Products - GitHub Classroom</b></a>
 </div>
 
 <br>
@@ -708,7 +708,7 @@ Now you just have to follow the steps explained in the following screenshots.
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_02.png" caption="... to enter the virtual classroom." width="75%" >}}
 
-You might have to refresh the page after a while. But then you're ready to go and able to access your template by clicking on the bottom link (you don't need to accept the invitation to TUHHStartupEngineers). 
+You might have to refresh the page after a while. But then you're ready to go and able to access your template by clicking on the bottom link (you don't need to accept the invitation to TUHHStartupEngineers). That means you have all of the files you need to compile a website with Quarto.
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_03.png" caption="You're ready to go!" width="75%" >}}
 
@@ -726,7 +726,15 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 
 ### Running applications on your local computer
 
-1. Make sure the `rmarkdown` package and all it's dependencies are installed in RStudio: 
+1. Make sure the `rmarkdown` package and all it's dependencies are installed in RStudio: Open RStudio, click the packages tab in the lower right hand corner, click install packages, type in `rmarkdown`, make sure "install dependencies" is clicked on, then press install (alternatively run `install.packages("rmarkdown", dependencies = TRUE)` in the console).
+
+2. Only necessary if you do not have the most recent version of RStudio installed: Install Quarto
+
+What is Quarto? Quarto is a scientific publishing tool built on Pandoc that allows R, Python, Julia, and ObservableJS users to create dynamic documents, websites, books and more.
+
+Quarto is now included with RStudio v2022.07.1+ so no need for a separate download/install if you have the latest version of RStudio!
+
+Quarto will work with RStudio v2022.02+, but you’ll need to install Quarto separately [here](https://quarto.org/docs/get-started/) (we recommend just installing the most up to date version of RStudio).
 
 ***
 **macOS only**: Install the Apple `Xcode` developer tools.
@@ -765,11 +773,9 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 </div>
 
 ***
-* **Both systems**
-  + Open RStudio, click the packages tab in the lower right hand corner, click install packages, type in `rmarkdown`, make sure "install dependencies" is clicked on, then press install. 
-  + Close RStudio.
 
-2. Open GitHub Desktop, make sure it is connected to your account and clone your repository to your computer so that you have a local copy of that data:
+
+3. Open GitHub Desktop, make sure it is connected to your account and clone your assignment repository to your computer so that you have a local copy of that data that was provided to you:
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_01_signin.png" caption="2.1 Click `Sign in to GitHub.com`" >}}
 
@@ -779,9 +785,9 @@ If the message "owmork invited you to collaborate" pops up, press accept invitat
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_04_finish.png" caption="2.4 Click `Finish`" >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` and select your `data_products` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` or `Add` and then `Clone Repository ...`  and select your `TUHHStartupEngineers/ss23-bdsb-YourUserName` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
 
-3. Navigate to the folder you just cloned/downloaded, open e.g. the `01_reporting_tools.Rproj` file which will be the project file for the first chapter. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a template you can open and edit.
+4. Navigate to the folder you just cloned/downloaded, open the `lab_journal.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
 
 <!--
 4. To compile the entire website, find the build tab in the top right hand corner. You should see the option to `build website` <img src="/img/courses/dat_sci/01/icon_build_website.png" width=3% style="display:inline-block; margin:0px"> Click this. The website should be built. After the website is built, you should be able to see it in the RStudio browser (viewer pane in the bottom right corner). There is a little button <img src="/img/courses/dat_sci/01/icon_open_browser.png" width=3% style="display:inline-block; margin:0px"> that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
@@ -800,9 +806,9 @@ Every Github repository has the capability of serving html files (web page files
 That's it. Now you can navigate to your new homepage via the link in the greenbox. It may take a while until you can reach it.
 -->
 
-4. To upload any changes to your content you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files.
+5. To upload any changes to your content you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files.
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. `Press commit to master.`" width=95% >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="To upload any changes to your content (e.g. the author name or the date in the `index.qmd` file) you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .qmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. Press `Commit to main.`" >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="Press `Push origin` and wait a couple of minutes. Your changes should now be served to GitHub and the teaching assistants are able to see your code." width=95% >}}
 
