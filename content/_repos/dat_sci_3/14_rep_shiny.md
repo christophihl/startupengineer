@@ -51,10 +51,10 @@ The cheat sheet for Rmarkdown can be reached in RStudio via: `File > Help > Chea
 
 I have provided a complete `.Rmd` file with the most important information for you. You need to download the zip file called `reporting_rmarkdown.zip`. The file contains a `.Rmd` file and an image folder with an image. 
 
-**FEEL FREE TO CHANGE IT TO A `.qmd` FILE AND ALTER THE CONTENT ACCORDINGLY. YOU CAN USE THE FUNCTION `knitr::convert_chunk_header("reporting_rmarkdown.Rmd", output = "reporting_rmarkdown.qmd")`.
+**FEEL FREE TO CHANGE IT TO A `.qmd` FILE AND ALTER THE CONTENT ACCORDINGLY.**.
 
-* Changes your YAML header. Instead of `output:`, user `format:`
-* Converts code chunks. It uses `#|`.
+* Change your YAML header. Instead of `output:`, use `format:`.
+* Convert code chunks. Use `#|`. You can use the following function for that: `knitr::convert_chunk_header("reporting_rmarkdown.Rmd", output = "reporting_rmarkdown.qmd")`.
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
