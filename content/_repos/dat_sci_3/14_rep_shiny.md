@@ -32,24 +32,29 @@ We are using the bike data again, but please use the following updated dataset:
 </div>
 
 <!-- rmarkdown section -->
-### I. RMarkdown
+### I. Quarto (previously RMarkdown)
 
 <a href="https://rmarkdown.rstudio.com/index.html" target="_blank">
-<img src="/img/icons/logo_rmarkdown.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
+<img src="/img/icons/logo_quarto.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
 </a>
 
-R Markdown provides an authoring framework for data science. You can use a single R Markdown file to both
+R Markdown provides an authoring framework for data science. The goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. Quarto combines the functionality of R Markdown, bookdown, distill, xaringian, etc into a single consistent system with “batteries included” that reflects everything we’ve learned from R Markdown over the past 10 years. You can use a single quarto or Rmarkdown file to both
 
 * save and execute code
 * generate high quality reports that can be shared with an audience
 
-R Markdown documents are fully reproducible and support dozens of static and dynamic output formats. You are using them already to build your journal. This 1-minute video provides a quick tour of what’s possible with R Markdown:
+Quarto documents are fully reproducible and support dozens of static and dynamic output formats. You are using them already to build your journal. This 1-minute video provides a quick tour of what’s possible with R Markdown (and therefore quarto):
 
 <div style="padding:62.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/178485416?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></br>
 
 The cheat sheet for Rmarkdown can be reached in RStudio via: `File > Help > Cheatsheets > R Markdown Cheat Sheet`
 
 I have provided a complete `.Rmd` file with the most important information for you. You need to download the zip file called `reporting_rmarkdown.zip`. The file contains a `.Rmd` file and an image folder with an image. 
+
+**FEEL FREE TO CHANGE IT TO A `.qmd` FILE AND ALTER THE CONTENT ACCORDINGLY. YOU CAN USE THE FUNCTION `knitr::convert_chunk_header("reporting_rmarkdown.Rmd", output = "reporting_rmarkdown.qmd")`.
+
+* Changes your YAML header. Instead of `output:`, user `format:`
+* Converts code chunks. It uses `#|`.
 
 <!-- DOWNLOADBOX -->
 <div id="header">Download</div>
