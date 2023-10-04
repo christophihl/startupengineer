@@ -111,7 +111,7 @@ After completing this module, students will be able to:
 
 <br>
 
-* Students are evaluated based on their solutions of challenges assigned in each session, which they continuously document in their github lab journals.
+* Students are evaluated based on their solutions of challenges assigned in each session, which they continuously document in their lab journals.
 
 ***
 
@@ -119,7 +119,7 @@ After completing this module, students will be able to:
 
 <br>
 
-* `Causal Data Science for Business Analytics:`: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=211435ea94025bf71a4d72557e8a5087&again=yes)
+* `Causal Data Science for Business Analytics:`: [E-Learning StudIP](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=6ffdfcaa50763dae4ec87540e68d516c&again=yes)
 
 ***
 
@@ -127,35 +127,39 @@ After completing this module, students will be able to:
 
 <br>
 
-* TBA
-
-
-
-### Course Notes & Materials
-
-Access to course notes & materials [**here**]({{< relref "_repos/causal_ds/_index.md" >}}).
-Password to be found on Studip.
+| Session | Date | Room |
+| --- | --- | --- |
+| 1 | Monday, November 6th | Q - 1.121 |
+| 2 | Monday, November 27th | Q - 1.121 |
+| 3 | Monday, December 18th | Q - 1.121 |
 
 ***
 
-### Preliminary Topics
+### Course Notes & Materials
+
+Access to course notes & materials will be published on StudIP.
+
+***
+
+### Topics
 
 <br>
 
-1.  Introduction and Overview
-2.  Probability and Regression Review
-3.  Potential Outcomes Causal Model
-4.  Directed Acyclic Graphs
-5.  Experiments and A/B-Testing
-6.  Matching and Subclassification
-7.  Regression Discontinuity
-8.  Instrumental Variables
-9.  Panel Data
-10. Difference-in-Differences
-11. Synthetic Control
-12. Heterogeneous Treatment Effects
-13. Mediation Analysis
+**I: Fundamentals**
+1. Probability Theory
+2. Statistical Concepts
+3. Regression and Statistical Inference
+4. Causality
+5. Directed Acyclic Graphs
 
+<br>
+
+**II: Toolbox**
+1. Randomized Controlled Trials
+2. Matching and Subclassification
+3. Difference-in-Differences
+4. Instrumental Variables
+5. Regression Discontinuity
 
 
 ***
