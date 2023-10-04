@@ -33,12 +33,12 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2023-02-01T13:00:00Z"
+date: "2030-12-03T15:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: "2023-02-01T13:00:00Z"
+publishDate: "2020-06-23T15:00:00Z"
 
 
 
@@ -146,7 +146,7 @@ Due to capacity contraints, the course `Creation of Business Opportunities` is d
 
 *For IWI, LIM & GTIME students*: 
 * `Entrepreneurship`: Monday, 13.15 - 14.45, Building I, Audimax 2
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.18
+* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.19
 
 
 *For Engineering and Erasmus students*: 
@@ -183,7 +183,7 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 | - | May 1st | Holiday |
 | 4 | May 8th | Competition & Market Analysis | 
 | - | May 15th | Holiday |
-| 5 | May 22nd | Guest Lecture 1 |
+| 5 | May 22nd | Guest Lecture: Dr. Michael Mei (Founder & CEO of Menlo Systems): Driving Business Innovation with Laser and Quantum Technologies |
 | - | May 29th | Holiday |
 | 6 | June 5th | (Platform) Business Models |
 | 7 | June 12th | Revenue Models & Pricing |
