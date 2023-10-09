@@ -132,7 +132,7 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* Open until October 17th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=43a388b5685881bcd40030296a43e730&again=yes)
+* Open until October 22nd on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=c07423bfdc6cd54aeb545752e000607b&again=yes)
 
 ***
 

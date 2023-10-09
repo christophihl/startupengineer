@@ -94,14 +94,14 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* Open until October 17th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=43a388b5685881bcd40030296a43e730&again=yes)
+* Open until October 22nd on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=c07423bfdc6cd54aeb545752e000607b&again=yes)
 
 ***
 
 ### Time & Location
 
-* `Entrepreneurial Finance: Lecture`: Monday, 13.00 - 14.30, Building HS28 (Harburger Schloßstraße 28), Room 0.01
-* `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.15, Building HS28 (Harburger Schloßstraße 28), Room 1.004
+* `Entrepreneurial Finance: Lecture`: Monday, 13.15 - 14.45, Building N , Room 0008
+* `Entrepreneurial Finance: Case Studies`: Monday, 15.00 - 17.15, Building N , Room 0008
 
 ***
 
@@ -123,15 +123,17 @@ Here you find the following materials:
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | November 7th | Introduction: Evaluating Venture Opportunities|
-| 2 | November 14th | Financial Planning |
-| 3 | November 21st | Ownership and Returns |
-| 4 | November 28th | Valuation Methods |
-| 5 | December 5th | Early Stage and Venture Capital Investors |
-| 6 | December 12th | Term Sheets| 
-| 7 | December 19th| Structuring Deals |
-| - | Dec 24th - Jan 8th | Christmas Holiday |
-| 8 | January 9th | Staged Financing |
-| 9 | January 16th | Debt Financing |
-| 10 | January 23rd | Corporate Governance |
-| 11 | January 30th | Exits |
+| 1 | October 23rd | Online-Introduction: Evaluating Venture Opportunities|
+| - | October 30th | No class |
+| 2 | November 6th | Financial Planning |
+| 3 | November 13th | Ownership and Returns |
+| 4 | November 20th | Valuation Methods I |
+| 5 | November 27th | Valuation Methods II |
+| 6 | December 4th | Early Stage and Venture Capital Investors |
+| 7 | December 11th | Term Sheets| 
+| 8 | December 18th| Structuring Deals |
+| - | Dec 24th - Jan 7th | Christmas Holiday |
+| 9 | January 8th | Staged Financing |
+| 10 | January 15th | Debt Financing |
+| 11 | January 22nd | Corporate Governance |
+| 12 | January 29th | Exits |
