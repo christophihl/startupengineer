@@ -38,6 +38,7 @@ menu:
 ### Instructor(s)
 
 * {{% mention "ihl" %}}
+* {{% mention "specht" %}}
 
 ***
 
@@ -87,7 +88,7 @@ This course module can prepare students for the following career paths:
 
 ### Grading
 
-* `70%` (individual): Written case solutions submitted after class (for 7 out of 11 cases)
+* `70%` (individual): Written case solutions submitted after class (for 7 out of 10 cases)
 * `30%` (individual): Oral class participation
 
 ***
