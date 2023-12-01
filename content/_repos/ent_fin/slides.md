@@ -37,7 +37,7 @@ weight: 10
 <br/>
 
 
-## [5) Early Stage and Venture Capital Investors](https://www.dropbox.com/scl/fi/x0zc4hkz2pz9ktk5x89ht/Ent_Fin_WS23_Investor_Types.pdf?rlkey=f5akcefnl60754cvwx3v12l9h&dl=0)
+## [5) Early Stage and Venture Capital Investors](https://www.dropbox.com/s/6czos09qtaj5d48/Ent_Fin_WS22_Investor_Types.pdf?dl=0)
 
 
 <br/>
