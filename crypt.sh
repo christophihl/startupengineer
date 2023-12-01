@@ -3,7 +3,7 @@ set -e
 
 source ./config/_default/credentials
 
-npm install -g staticrypt
+npm install -g https://github.com/robinmoisson/staticrypt
 
 find ./public/_repos/tech_ent -maxdepth 1 -type f -name "index.html" -exec staticrypt --short {} -p pass -o {} --template-instructions "Access to Course Materials" \;
 
