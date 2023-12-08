@@ -35,9 +35,12 @@ interests:
 
 education:
   courses:
+  - course: CEO
+    institution: Flightright, Berlin, Germany
+    year: 2021 - current
   - course: CFO
-    institution: Flightbright, Berlin, Germany
-    year: 2019 - current
+    institution: Flightright, Berlin, Germany
+    year: 2019 - 2021
   - course: Engagement Manager
     institution: McKinsey & Company, Munich, Germany
     year: 2012 - 2019
