@@ -668,7 +668,7 @@ These functions together form the bulk of many common web scraping tasks. In gen
 html <- url %>% 
           read_html()</code></pre>
           
-{{< figure src="/img/courses/dat_sci/03/html_imdb_01.png" caption="class for title, rank, title, year and persons" >}}          
+{{< figure src="/img/courses/dat_sci/03/html_imdb_01.png" caption="Class for title and rank" >}}          
 
 Get the ranks:
 
@@ -712,7 +712,23 @@ Get the ratings:
 
 Merge everything into a tibble:
 
-<pre><code class="r">imdb_tbl <- tibble(rank, title, rating)</code></pre>
+<pre><code class="r">imdb_tbl <- tibble(rank, title, rating)<br>
+imdb_tbl
+## # A tibble: 250 × 3
+##     rank title                                       rating
+##    <dbl> <chr>                                        <dbl>
+##  1     1 Die Verurteilten                               9.3
+##  2     2 Der Pate                                       9.2
+##  3     3 The Dark Knight                                9  
+##  4     4 Der Pate 2                                     9  
+##  5     5 Die zwölf Geschworenen                         9  
+##  6     6 Schindlers Liste                               9  
+##  7     7 Der Herr der Ringe: Die Rückkehr des Königs    9  
+##  8     8 Pulp Fiction                                   8.9
+##  9     9 Der Herr der Ringe: Die Gefährten              8.9
+## 10    10 Zwei glorreiche Halunken                       8.8
+## # ℹ 240 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
 
 As a side note, if you run the code from a country where English is not the main language, it’s very likely that you’ll get some of the movie names translated into the main language of that country.
 Most likely, this happens because the server infers your location from your IP address. 
