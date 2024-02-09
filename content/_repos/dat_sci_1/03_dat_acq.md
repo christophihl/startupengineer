@@ -910,18 +910,11 @@ First, we have to load the relevant libraries.
 
 <section class="hide">
 <pre><code class="r"># WEBSCRAPING ----</br>
-# 1.0 LIBRARIES ----</br>
+# 1.0 LIBRARIES ----
 library(tidyverse) # Main Package - Loads dplyr, purrr, etc.
 library(rvest)     # HTML Hacking & Web Scraping
 library(xopen)     # Quickly opening URLs
 </section></br>
-
-<!---
-library(jsonlite)  # converts JSON files to R objects
-library(glue)      # concatenate strings
-library(stringi)   # character string/text processing</code></pre>
--->
-
 
 ***
 
@@ -935,13 +928,7 @@ Analyze the page to make a plan for our web scraping approach (there is no uniqu
 
 * Where can we find all product category sites? --> If we hover over a product family in the navigation bar (e.g. Road Bikes), always one level below (e.g. Endurance, Race, ...). The bar is not shown in the screenshot because the cursor was hovering on the corresponding HTML node in the bottom.
 
-{{< figure src="/img/courses/dat_sci/03/html_canyon_01.png" caption="Classes for the product categories" >}}
-
-<!---
-* Where do we find all available product families? In the first column:
-
-{{< figure src="/img/courses/dat_sci/03/html_canyon_00.png" caption="Ids for the product families" >}}
--->
+{{< figure src="/img/courses/dat_sci/03/html_canyon_01_1.png" caption="Classes for the product categories" >}}
 
 
 #### Scraping
@@ -950,14 +937,16 @@ Analyze the page to make a plan for our web scraping approach (there is no uniqu
 
 Inspecting the file manually first makes sense, because R retrieves the page in a different way then we do inside a browser:
 
-{{< figure src="/img/courses/dat_sci/03/html_canyon_01_2_rendered.png" caption="Rendered site" >}}
-
-{{< figure src="/img/courses/dat_sci/03/html_canyon_01_3_source_code.png" caption="Source code of the site" >}}
-
 ```r
 html_home <- read_html(url_home)
 html_home |> xml2::write_html("home.html")
 ```
+
+{{< figure src="/img/courses/dat_sci/03/html_canyon_01_2_rendered.png" caption="Rendered site" >}}
+
+{{< figure src="/img/courses/dat_sci/03/html_canyon_01_3_source_code.png" caption="Source code of the site" >}}
+
+R Code:
 
 <section class="hide">
 <pre><code class="r"># 1.2 COLLECT PRODUCT CATEGORIES ----</br>
@@ -968,7 +957,7 @@ html_home       <- read_html(url_home)<br>
 # Extract the categories URLs (Roadbike-Endurance, Roadbike-Race, ...)
 # All Models are listed on these levels.
 bike_categories_chr <- html_home |><br>
-  # Get the nodes for the categories
+  # Get the nodes for the categories. Take a look at the source code for the selector.
   # (Unfortunately not working with the Selector Gadget)
   html_elements(css = ".header__navBarPreloadItem--level2") |><br>
   # Extract the href attribute (the URLs)
@@ -976,23 +965,21 @@ bike_categories_chr <- html_home |><br>
   # Remove the product families Sale, Outlet, Gear and Customer Service
   str_subset(pattern = "sale|outlet|gear|customer-service", negate = T) |><br>
   # Add the domain, because we will get only the subdirectories
-  # Watch out for the new pipe placeholder `_` here. It needs a named argument (`...``` here)
-  str_c("https://www.canyon.com", ... = _)
-bike_category_tbl
-## # A tibble: 25 x 1
-##    url                                                                    
-##    <glue>                                                                 
-##  1 https://www.canyon.com/en-de/road-bikes/race-bikes/aeroad/             
-##  2 https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/      
-##  3 https://www.canyon.com/en-de/e-bikes/e-road-bikes/endurace-on/         
-##  4 https://www.canyon.com/en-de/road-bikes/gravel-bikes/grail/            
-##  5 https://www.canyon.com/en-de/road-bikes/cyclocross-bikes/inflite/      
-##  6 https://www.canyon.com/en-de/road-bikes/triathlon-bikes/speedmax/      
-##  7 https://www.canyon.com/en-de/road-bikes/race-bikes/ultimate/           
-##  8 https://www.canyon.com/en-de/mountain-bikes/fat-bikes/dude/            
-##  9 https://www.canyon.com/en-de/mountain-bikes/cross-country-bikes/exceed/
-## 10 https://www.canyon.com/en-de/mountain-bikes/trail-bikes/grand-canyon/  
-## # … with 15 more rows</code></pre>
+  # Watch out for the new pipe placeholder `_` here.
+  # It needs a named argument (`...``` in this case)
+  str_c("https://www.canyon.com", ... = _)<br>
+bike_categories_chr
+##  [1] "https://www.canyon.com/en-de/road-bikes/endurance-bikes/"             "https://www.canyon.com/en-de/road-bikes/race-bikes/"                 
+##  [3] "https://www.canyon.com/en-de/road-bikes/aero-bikes/"                  "https://www.canyon.com/en-de/road-bikes/cyclocross-bikes/"           
+##  [5] "https://www.canyon.com/en-de/road-bikes/triathlon-bikes/"             "https://www.canyon.com/en-de/gravel-bikes/performance/"              
+##  [7] "https://www.canyon.com/en-de/gravel-bikes/adventure/"                 "https://www.canyon.com/en-de/electric-bikes/electric-mountain-bikes/"
+##  [9] "https://www.canyon.com/en-de/electric-bikes/electric-road-bikes/"     "https://www.canyon.com/en-de/electric-bikes/electric-gravel-bikes/"  
+## [11] "https://www.canyon.com/en-de/electric-bikes/electric-city-bike/"      "https://www.canyon.com/en-de/electric-bikes/electric-touring-bikes/" 
+## [13] "https://www.canyon.com/en-de/mountain-bikes/trail-bikes/"             "https://www.canyon.com/en-de/mountain-bikes/enduro-bikes/"           
+## [15] "https://www.canyon.com/en-de/electric-bikes/electric-mountain-bikes/" "https://www.canyon.com/en-de/mountain-bikes/cross-country-bikes/"    
+## [17] "https://www.canyon.com/en-de/mountain-bikes/downhill-bikes/"          "https://www.canyon.com/en-de/mountain-bikes/dirt-jump-bikes/"        
+## [19] "https://www.canyon.com/en-de/mountain-bikes/fat-bikes/"               "https://www.canyon.com/en-de/mountain-bikes/youth-kids/"             
+## [21] "https://www.canyon.com/en-de/hybrid-bikes/city-bikes/"                "https://www.canyon.com/en-de/hybrid-bikes/touring-bikes/"  
 </section>
 
 ***
@@ -1001,77 +988,33 @@ bike_category_tbl
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_02.png" caption="classes for the individual bike urls" >}}
 
-* Step 2.1.1: Do it for a single bike
+Step 2.1: Test it for one category
 
 <section class="hide">
 <pre><code class="r"># 2.0 COLLECT BIKE DATA ----</br>
-# 2.1 Get URL for each bike of the Product categories</br>
-# select first bike category url
-bike_category_url <- bike_category_tbl$url[1]</br>
-# Alternatives for selecting values
-# bike_category_url <- bike_category_tbl %$% url %>% .[1]
-# bike_category_url <- bike_category_tbl %>% pull(url) %>% .[1]
-# bike_category_url <- deframe(bike_category_tbl[1,])
-# bike_category_url <- bike_category_tbl %>% first %>% first</br>
-xopen(bike_category_url)</br>
+# Select first bike category url
+bike_category_url <- bike_categories_chr[1]<br>
 # Get the URLs for the bikes of the first category
-html_bike_category  <- read_html(bike_category_url)
-bike_url_tbl        <- html_bike_category %>%</br>
-                # Get the 'a' nodes, which are hierarchally underneath 
-                # the class productTile__contentWrapper
-                html_nodes(css = ".productTile__contentWrapper > a") %>%
-                html_attr("href") %>%</br>
-                # Remove the query parameters of the URL (everything after the '?')
-                str_remove(pattern = "\\?.*") %>%</br>
-                # Convert vector to tibble
-                enframe(name = "position", value = "url")</br>
-# 2.1.2 Extract the descriptions (since we have retrieved the data already)
-bike_desc_tbl <- html_bike_category %>%</br>
-   # Get the nodes in the meta tag where the attribute itemprop equals description
-   html_nodes('.productTile__productSummaryLeft > meta[itemprop="description"]') %>%</br>
-   # Extract the content of the attribute content
-   html_attr("content") %>%</br>
-   # Convert vector to tibble
-   enframe(name = "position", value = "description")</code></pre>
+html_bike_category  <- read_html(bike_category_url)<br>
+bike_url_chr        <- html_bike_category |><br>
+                          # Get the 'a' nodes that containt the title and the link
+                          html_elements(".productTileDefault__productName") |><br>
+                          # html_elements(css = ".productTileDefault--bike > div > a") |>
+                          html_attr("href") |><br>
+                          # Remove the query parameters of the URL (everything after the '?')
+                          str_remove(pattern = "\\?.*")<br>
+bike_url_chr
+## [1] "https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/al/endurace-6/3718.html"                    
+## [2] "https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-7-axs/3708.html"             
+## [3] "https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-6/3706.html"                 
+## [4] "https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cfr/endurace-cfr-wrl/3490.html"             
+## [5] "https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-7/3707.html" 
+</code></pre>
 </section>
 
 </br>
 
-There is often data in JSON format listed with a lot of interesting data. Let's scrape that too.
-
-{{< figure src="/img/courses/dat_sci/03/html_canyon_03.png" caption="JSON data of the bikes" >}}
-
-<section class="hide">
-<pre><code class="r"># 2.1.3 Get even more data from JSON files
-bike_json_tbl  <- html_bike_category %>%</br>
-           html_nodes(css = '.productGrid__listItem.xlt-producttile > div') %>%
-           html_attr("data-gtm-impression") %>%</br>
-           # Convert the JSON format to dataframe
-           # map runs that function on each element of the list
-           map(fromJSON) %>% # need JSON ### need lists</br>
-           # Extract relevant information of the nested list
-           map(purrr::pluck, 2, "impressions") %>% # Need purrr and expl above</br>
-           # Set "not defined" and emtpy fields to NA (will be easier to work with)
-           map(na_if, "not defined") %>%
-           map(na_if, "") %>%</br>
-           # The class of dimension56 and price varies between numeric and char.
-           # This converts this column in each list to numeric
-           # across allows to perform the same operation on multiple columns
-           map(~mutate(., across(c("dimension56","price"), as.numeric))) %>%</br>
-           # Stack all lists together
-           bind_rows() %>%
-           # Convert to tibble so that we have the same data format
-           as_tibble() %>%</br>
-           # Add consecutive numbers so that we can bind all data together
-           # You could have also just use bind_cols()
-           rowid_to_column(var='position') %>%
-           left_join(bike_desc_tbl) %>%
-           left_join(bike_url_tbl)</code></pre>
-</section>
-
-</br>
-
-* Step 2.2: Make a function to get the bike data for every bike of each category (just wrap the above code into the `function()` function)
+Step 2.2: Make a function to get the bike model urls for each category (just wrap the above code into the `function()` function)
 
 <section class="hide">
 <pre><code class="r"># 2.2 Wrap it into a function ----
