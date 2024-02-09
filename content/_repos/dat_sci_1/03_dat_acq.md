@@ -914,6 +914,7 @@ First, we have to load the relevant libraries.
 library(tidyverse) # Main Package - Loads dplyr, purrr, etc.
 library(rvest)     # HTML Hacking & Web Scraping
 library(xopen)     # Quickly opening URLs
+</code></pre>
 </section></br>
 
 ***
@@ -980,6 +981,7 @@ bike_categories_chr
 ## [17] "https://www.canyon.com/en-de/mountain-bikes/downhill-bikes/"          "https://www.canyon.com/en-de/mountain-bikes/dirt-jump-bikes/"        
 ## [19] "https://www.canyon.com/en-de/mountain-bikes/fat-bikes/"               "https://www.canyon.com/en-de/mountain-bikes/youth-kids/"             
 ## [21] "https://www.canyon.com/en-de/hybrid-bikes/city-bikes/"                "https://www.canyon.com/en-de/hybrid-bikes/touring-bikes/"  
+</code></pre>
 </section>
 
 ***
