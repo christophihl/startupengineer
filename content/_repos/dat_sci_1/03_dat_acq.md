@@ -852,7 +852,7 @@ In this case you learn how to web-scrape all bike models from the bike manufactu
 
 The following steps describe how you get the bike data, which you have already used in the last session.
 
-The starting point is the analysis of the URL, website and product structure of your competitor. The URL consists of a base path and several page paths:
+The starting point is the analysis of the URL, website and product structure of your competitor. The URL consists of a `base path` and several `page paths`:
 
 * URL Base path / Landing page / Home
   + https://www.canyon.com/en-de/
@@ -883,12 +883,12 @@ The starting point is the analysis of the URL, website and product structure of 
 <div id="clear"></div>
 </figure>
 
-The products are divided into families and categories:
+The products are divided into FAMILIES and CATEGORIES:
 
-* URL Page path for the product families:
+* URL Page path for the product FAMILIES:
   + https://www.canyon.com/en-de/road-bikes/
 
-* URL Page path for the product categories (the ride styles, endurance-bikes in this example, don't matter to us):
+* URL Page path for the product CATEGORIES (the ride styles, `endurance-bikes` in this example, don't matter to us):
   + https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/
   
 Each bike can come in different color variations (indicated by `?dwvar_2399_pv_rahmenfarbe=BK` in this example)
@@ -896,7 +896,11 @@ Each bike can come in different color variations (indicated by `?dwvar_2399_pv_r
 * URL query parameters (initialized by the question mark `?`)
   + https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/endurace-cf-slx-disc-9.0-etap/2399.html?dwvar_2399_pv_rahmenfarbe=BK&dwvar_2399_pv_rahmengroesse=M&quantity=1
   
+<!---
 Our goal is to get data for every bike in every available color scheme. We can do that, if we are able to construct the product URLs for each individual bike / color combination.
+-->
+
+Our goal is to get the current prices for every bike model. We can do that, if we are able to construct the PRODUCT URLs for each individual bike model (It is also possible to create the URLs for each color scheme. But focusing solely on the model is sufficient for now).
 
 ***
 
@@ -910,10 +914,14 @@ First, we have to load the relevant libraries.
 library(tidyverse) # Main Package - Loads dplyr, purrr, etc.
 library(rvest)     # HTML Hacking & Web Scraping
 library(xopen)     # Quickly opening URLs
+</section></br>
+
+<!---
 library(jsonlite)  # converts JSON files to R objects
 library(glue)      # concatenate strings
 library(stringi)   # character string/text processing</code></pre>
-</section></br>
+-->
+
 
 ***
 
@@ -921,90 +929,55 @@ library(stringi)   # character string/text processing</code></pre>
 
 Analyze the page to make a plan for our web scraping approach (there is no unique way. Possibly there are hundreds of ways to get that data.)
 
-* Where are the individual bikes listed, so that we can scrape their URLs? --> On the product category sites:
+* Where are the individual bikes listed, so that we can scrape their URLs? --> On the product CATEGORY sites (e.g. https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/):
 
 {{< figure src="/img/courses/dat_sci/03/canyon_category.png" caption="Product category site" >}}
 
-* Where can we find all product category sites? --> If we hover over a product family, always in the second column of the menu bar:
+* Where can we find all product category sites? --> If we hover over a product family in the navigation bar (e.g. Road Bikes), always one level below (e.g. Endurance, Race, ...). The bar is not shown in the screenshot because the cursor was hovering on the corresponding HTML node in the bottom.
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_01.png" caption="Classes for the product categories" >}}
 
-* Where do we find all available product families? --> In the first column:
+<!---
+* Where do we find all available product families? In the first column:
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_00.png" caption="Ids for the product families" >}}
+-->
+
 
 #### Scraping
 
-Get the available color IDs for each individual bike.
+**Step 1:** Get URLs for each of the product CATEGORIES
 
-***
-**Step 1:** Get URLs for each of the product categories
+Inspecting the file manually first makes sense, because R retrieves the page in a different way then we do inside a browser:
 
-* 1.1: Get the bike product family IDs (doing that manually would have been faster. This is just for the purpuse of demonstration). 
+{{< figure src="/img/courses/dat_sci/03/html_canyon_01_2_rendered.png" caption="Rendered site" >}}
 
-<section class="hide">
-<pre><code class="r"># 1.1 COLLECT PRODUCT FAMILIES ----</br>
-url_home          <- "https://www.canyon.com/en-de"
-xopen(url_home) # Open links directly from RStudio to inspect them</br>
-# Read in the HTML for the entire webpage
-html_home         <- read_html(url_home)</br>
-# Web scrape the ids for the families
-bike_family_tbl <- html_home %>%</br>
-                 # Get the nodes for the families ...
-                 html_nodes(css = ".js-navigationDrawer__list--secondary") %>%
-                 # ...and extract the information of the id attribute
-                 html_attr('id') %>%</br>
-                 # Remove the product families Gear and Outlet and Woman 
-                 # (because the female bikes are also listed with the others)
-                 discard(.p = ~stringr::str_detect(.x,"WMN|WOMEN|GEAR|OUTLET")) %>%</br>
-                 # Convert vector to tibble
-                 enframe(name = "position", value = "family_class") %>%</br>
-                 # Add a hashtag so we can get nodes of the categories by id (#)
-                 mutate(
-                     family_id = str_glue("#{family_class}")
-                 )</br>
-bike_family_tbl
-## # A tibble: 5 x 3
-##   position family_class                  family_id                     
-##      <int> <chr>                         <glue>                        
-##         1 js-navigationList-ROAD        #js-navigationList-ROAD       
-##         2 js-navigationList-MOUNTAIN    #js-navigationList-MOUNTAIN   
-##         3 js-navigationList-EBIKES      #js-navigationList-EBIKES     
-##         4 js-navigationList-HYBRID-CITY #js-navigationList-HYBRID-CITY
-##         5 js-navigationList-YOUNGHEROES #js-navigationList-YOUNGHEROES<br>
-# The updated page has now also ids for CFR and GRAVEL. You can either include or remove them.</code></pre>
-</section>
+{{< figure src="/img/courses/dat_sci/03/html_canyon_01_3_source_code.png" caption="Source code of the site" >}}
 
-</br>
-
-* Step 1.2: Get bike product category urls
+```r
+html_home <- read_html(url_home)
+html_home |> xml2::write_html("home.html")
+```
 
 <section class="hide">
 <pre><code class="r"># 1.2 COLLECT PRODUCT CATEGORIES ----</br>
-# Combine all Ids to one string so that we will get all nodes at once
-# (seperated by the OR operator ",")
-family_id_css <- bike_family_tbl %>%
-                    pull(family_id) %>%
-                    stringr::str_c(collapse = ", ")
-family_id_css
-## "#js-navigationList-ROAD, #js-navigationList-MOUNTAIN, #js-navigationList-EBIKES, #js-navigationList-HYBRID-CITY, #js-navigationList-YOUNGHEROES"</br>
-# Extract the urls from the href attribute
-bike_category_tbl <- html_home %>%</br>
-           # Select nodes by the ids
-           html_nodes(css = family_id_css) %>%</br>
-           # Going further down the tree and select nodes by class
-           # Selecting two classes makes it specific enough
-           html_nodes(css = ".navigationListSecondary__listItem .js-ridestyles") %>%
-           html_attr('href') %>%</br>
-           # Convert vector to tibble
-           enframe(name = "position", value = "subdirectory") %>%</br>
-           # Add the domain, because we will get only the subdirectories
-           mutate(
-              url = glue("https://www.canyon.com{subdirectory}")
-           ) %>%</br>
-           # Some categories are listed multiple times.
-           # We only need unique values
-           distinct(url)</br>
+url_home        <- "https://www.canyon.com/en-de"
+xopen(url_home) # Open links directly from RStudio to inspect them<br>
+# Read HTML for the entire webpage
+html_home       <- read_html(url_home)<br>
+# Extract the categories URLs (Roadbike-Endurance, Roadbike-Race, ...)
+# All Models are listed on these levels.
+bike_categories_chr <- html_home |><br>
+  # Get the nodes for the categories
+  # (Unfortunately not working with the Selector Gadget)
+  html_elements(css = ".header__navBarPreloadItem--level2") |><br>
+  # Extract the href attribute (the URLs)
+  html_attr('href') |><br>
+  # Remove the product families Sale, Outlet, Gear and Customer Service
+  str_subset(pattern = "sale|outlet|gear|customer-service", negate = T) |><br>
+  # Add the domain, because we will get only the subdirectories
+  # Watch out for the new pipe placeholder `_` here. It needs a named argument (`...``` here)
+  str_c("https://www.canyon.com", ... = _)
 bike_category_tbl
 ## # A tibble: 25 x 1
 ##    url                                                                    
