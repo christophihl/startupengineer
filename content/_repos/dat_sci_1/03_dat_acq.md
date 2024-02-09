@@ -927,14 +927,12 @@ Analyze the page to make a plan for our web scraping approach (there is no uniqu
 
 {{< figure src="/img/courses/dat_sci/03/canyon_category.png" caption="Product category site" >}}
 
-* Where can we find all product category sites? --> If we hover over a product family in the navigation bar (e.g. Road Bikes), always one level below (e.g. Endurance, Race, ...). The bar is not shown in the screenshot because the cursor was hovering on the corresponding HTML node in the bottom.
+* Where can we find all product category sites? --> If we hover over a product family in the navigation bar (e.g. Road Bikes), always one level below (e.g. Endurance, Race, ...). The bar is not shown in the screenshot below because the cursor was hovering over the corresponding HTML node at the bottom.
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_01_1.png" caption="Classes for the product categories" >}}
 
 
 #### Scraping
-
-**Step 1:** Get URLs for each of the product CATEGORIES
 
 Inspecting the file manually first makes sense, because R retrieves the page in a different way then we do inside a browser:
 
@@ -947,7 +945,7 @@ html_home |> xml2::write_html("home.html")
 
 {{< figure src="/img/courses/dat_sci/03/html_canyon_01_3_source_code.png" caption="Source code of the site" >}}
 
-R Code:
+**Step 1:** Get URLs for each of the product CATEGORIES
 
 <section class="hide">
 <pre><code class="r"># 1.2 COLLECT PRODUCT CATEGORIES ----</br>
@@ -986,9 +984,9 @@ bike_categories_chr
 
 ***
 
-**Step 2:** Get URL for each individual bike of each product category. You might have to scroll down a bit (depending on the category).
+**Step 2:** Get the URLs for each individual bike for each product category. You might have to scroll down a bit (depending on the category).
 
-{{< figure src="/img/courses/dat_sci/03/html_canyon_02.png" caption="classes for the individual bike urls" >}}
+{{< figure src="/img/courses/dat_sci/03/html_canyon_02.png" caption="Classes for the individual bike urls" >}}
 
 Step 2.1: Test it for one category
 
@@ -1020,286 +1018,121 @@ Step 2.2: Make a function to get the bike model urls for each category (just wra
 
 <section class="hide">
 <pre><code class="r"># 2.2 Wrap it into a function ----
-get_bike_data <- function(url) {</br>
-  html_bike_category <- read_html(url)</br>
+get_bike_urls <- function(url) {<br>
+  html_bike_category <- read_html(url)<br>
   # Get the URLs
-  bike_url_tbl  <- html_bike_category %>%
-    html_nodes(css = ".productTile__contentWrapper > a") %>%
-    html_attr("href") %>%
-    str_remove(pattern = "\\?.*") %>%
-    enframe(name = "position", value = "url")</br>
-  # Get the descriptions
-  bike_desc_tbl <- html_bike_category %>%
-    html_nodes(css = '.productTile__productSummaryLeft > 
-                      meta[itemprop="description"]') %>%
-    html_attr("content") %>%
-    enframe(name = "position", value = "description")</br>
-  # Get JSON data
-  bike_json_tbl <- html_bike_category %>%
-             html_nodes(css = '.productGrid__listItem.xlt-producttile > div') %>%
-             html_attr("data-gtm-impression") %>%
-             map(fromJSON) %>% # need JSON ### need lists
-             map(purrr::pluck, 2, "impressions") %>% 
-             map(na_if, "not defined") %>%
-             map(na_if, "") %>%
-             map(~mutate(., across(c("dimension56","price"), as.numeric))) %>%
-             bind_rows() %>%
-             as_tibble() %>%
-             rowid_to_column(var='position') %>%
-             left_join(bike_desc_tbl) %>%
-             left_join(bike_url_tbl)
-}</br>
+  bike_url_chr  <- html_bike_category |> 
+    html_elements(css = ".productTileDefault__productName") |>
+    html_attr("href") |>
+    str_remove(pattern = "\\?.*")<br>
+  return(bike_url_chr)<br>
+}<br>
 # Run the function with the first url to check if it is working
-bike_category_url <- bike_category_tbl$url[1]
-bike_data_tbl     <- get_bike_data(url = bike_category_url)</br>
-bike_data_tbl
-## # A tibble: 24 x 21
-##    position name  id    brand category variant dimension50 dimension51
-##       <int> <chr> <chr> <chr> <chr>    <chr>   <chr>       <chr>      
-##  1        1 Aero… 2881  Cany… Road/Ra… 500119… 2020        Team Repli…
-##  2        2 Aero… 2873  Cany… Road/Ra… 500111… 2020        Stealth    
-##  3        3 Aero… 2874  Cany… Road/Ra… 500111… 2020        Stealth    
-##  4        4 Aero… 2876  Cany… Road/Ra… 500119… 2020        aero silver
-##  5        5 Aero… 2875  Cany… Road/Ra… 500118… 2020        Stealth    
-##  6        6 Aero… 2877  Cany… Road/Ra… 500119… 2020        Stealth    
-##  7        7 Aero… 2878  Cany… Road/Ra… 500119… 2020        Stealth    
-##  8        8 Aero… 2225  Cany… Road/Ra… 500042… 2019        Stealth    
-##  9        9 Aero… 2096  Cany… Road/Ra… 500008… 2019        Stealth    
-## 10       10 Aero… 2091  Cany… Road/Ra… 500007… 2019        Stealth    
-## # … with 14 more rows, and 13 more variables: dimension52 <chr>,
-## #   dimension53 <chr>, dimension54 <chr>, dimension55 <chr>, dimension63 <chr>,
-## #   feedProductId <chr>, quantity <int>, price <dbl>, metric4 <chr>,
-## #   dimension56 <dbl>, metric5 <chr>, description <chr>, url <chr></code></pre>
+get_bike_urls(url = bike_categories_chr[1])<br>
+# Map the function against all urls
+bike_urls_chr <- map(bike_categories_chr, get_bike_urls) |>
+                      flatten_chr() |>
+                      unique()</code></pre>
 </section>
 
 </br>
 
-* Step 2.3a (`map()`): If we run this function for all bike category urls, we get the data for every bike
+* Step 3: Get the model names and prices. You don't need to do it for all. We can subset the data beforehand.
+
+3.1: Subsetting:
 
 <section class="hide">
-<pre><code class="r"># 2.3.1a Map the function against all urls</br>
-# Extract the urls as a character vector
-bike_category_url_vec <- bike_category_tbl %>% 
-                            pull(url)</br>
-# Run the function with every url as an argument
-bike_data_lst <- map(bike_category_url_vec, get_bike_data)</br>
-# Merge the list into a tibble
-bike_data_tbl <- bind_rows(bike_data_lst)
-saveRDS(bike_data_tbl, "bike_data_tbl.rds")</code></pre>
+<pre><code class="r">
+# Split data to enable filtering
+bike_urls_tbl <- bike_urls_chr |><br>
+  tibble::as_tibble_col(column_name = "url") |>
+  tidyr::separate_wider_regex(cols = url, patterns = c(".*en-de/", family   = "[^/]*", "/",
+                                                       category = "[^/]*", "/",
+                                                       model    = "[^/]*", "/",
+                                                       material = "[^/]*", "/",
+                                                       ".*"), cols_remove = F)<br>
+# Filter
+bike_urls_endurace_tbl <- bike_urls_tbl |>
+  filter(model == "endurace")<br>
+# Print
+bike_urls_endurace_tbl |> slice(1:5)
+## # A tibble: 5 × 5
+##   family     category        model    material url                                                                                            
+##   <chr>      <chr>           <chr>    <chr>    <chr>                                                                                          
+## 1 road-bikes endurance-bikes endurace al       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/al/endurace-6/3718.html       
+## 2 road-bikes endurance-bikes endurace cf       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-7-axs/3708.html
+## 3 road-bikes endurance-bikes endurace cf       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-6/3706.html    
+## 4 road-bikes endurance-bikes endurace cfr      https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cfr/endurace-cfr-wrl/3490.html
+## 5 road-bikes endurance-bikes endurace cf       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-7/3707.html</code></pre>
 </section>
 
-</br>
-
-* Step 2.3b (`for loop`): The same could be achieved with a foor loop:
+3.2: Get name and prices for the endurace cateogory bikes
 
 <section class="hide">
-<pre><code class="r"># 2.3.1b Alternative with a for loop</br>
-# Create an empty tibble, that we can populate
-bike_data_tbl <- tibble()</br>
-# Loop through all urls
-for (i in seq_along(bike_category_tbl$url)) {</br>
-  bike_category_url <- bike_category_tbl$url[i]
-  bike_data_tbl     <- bind_rows(bike_data_tbl, get_bike_data(bike_category_url))</br>
-  # Wait between each request to reduce the load on the server 
-  # Otherwise we could get blocked
-  Sys.sleep(5)</br>
-  # print the progress
-  print(i)</br>
+<pre><code class="r"># For 1 bike
+html_bike_model <- read_html(bike_urls_endurace_tbl$url[1])<br>
+bike_price <- html_bike_model |>
+  html_element(css = ".productDescription__priceSale") |>
+  html_text() |>
+  parse_number() |>
+  str_remove("\\.")<br>
+bike_model <- html_bike_model |> 
+  html_elements(css = ".xlt-pdpName") |> 
+  html_text() |> 
+  str_squish() # Clean<br>
+# Function to do it for multiple urls
+get_model_data <- function(url) {<br>
+  html_bike_model <- read_html(url)<br>
+  bike_price <- html_bike_model |>
+    html_element(css = ".productDescription__priceSale") |>
+    html_text() |>
+    parse_number() |>
+    str_remove("\\.")<br>
+  bike_model <- html_bike_model |> 
+    html_elements(css = ".xlt-pdpName") |> 
+    html_text() |> 
+    str_squish() # Clean<br>
+  bike_data <- tibble(url   = url,
+                      model = bike_model,
+                      price = bike_price)<br>
+  return(bike_data)<br>
 }</code></pre>
 </section>
 
-</br>
-
-* Step 2.4: CLEANING</br>
-We didn't get only the canyon bikes, but also other products listed below some bike categories. They have a different id length. Let's remove observations, where the length of the id is not 4. And we got some duplicates. They have to be removed as well:
-
-<pre><code class="r"># Check for duplicates
-bike_data_tbl %>%
-    group_by(id) %>%
-    filter(n()>1) %>%
-    arrange(id) %>% 
-    View()</code></pre>
-    
-In this step we can also split the categories (seperator = Slash, when it is not preceded or followd by a whitespace. Negative look ahead and negative look behind.), rename some columns, fix some missing values, add the frame material and reorder the data.
+Run Function
 
 <section class="hide">
-<pre><code class="r"># Filter non Canyon bikes (based on id length) and add an empty column for the colors
-bike_data_cleaned_tbl <- bike_data_tbl %>%</br>
-    # Filter for bikes. Only unique ones
-    filter(nchar(.$id) == 4) %>%
-    filter(!(name %>% str_detect("Frameset"))) %>%
-    distinct(id, .keep_all = T) %>%</br>
-    # Split categories (Speedmax had to be treated individually)
-    mutate(category = replace(category, 
-           name == "Speedmax CF SLX 8.0 SL", "Road/Triathlon Bike/Speedmax")) %>%
-    separate(col = category, into = c("category_1",
-                                      "category_2",
-                                      "category_3"),
-             sep = "(?&lt;!\\s)/(?!\\s)") %>%</br>
-    # Renaming
-    rename("year"       = "dimension50") %>%
-    rename("model"      = "name") %>%
-    rename("gender"     = "dimension63") %>%
-    rename("price_euro" = "metric4") %>%</br>
-    # Fix years manually (have checked the website)
-    mutate(year = replace_na(year, 2021)) %>%</br>
-    # Add frame material
-    mutate(frame_material = case_when(
-                          model %>% str_detect(" CF ") ~ "carbon",
-                          model %>% str_detect(" CFR ") ~ "carbon",
-                          TRUE ~ "aluminium"
-                                      )
-          ) %>%</br>
-    # Select and order columns
-    select(-c(position, brand, variant, starts_with("dim"), 
-              quantity, feedProductId, price, metric5)) %>%
-    select(id, model, year, frame_material, price_euro, everything())</br>
-saveRDS(bike_data_cleaned_tbl, "bike_data_cleaned_tbl.rds")</code></pre>
+<pre><code class="r"># For one model
+bike_model_data_tbl <- get_model_data(url = bike_urls_endurace_tbl$url[1])<br>
+# For all models of the category
+bike_model_data_tbl <- bike_urls_endurace_tbl$url |> map_dfr(get_model_data)<br>
+# Join data
+bike_model_data_joined_tbl <- bike_urls_endurace_tbl |> 
+                                  left_join(bike_model_data_tbl, by = join_by("url"))<br>
+# Print
+bike_model_data_joined_tbl
+## # A tibble: 17 × 7
+##    family     category        model.x  material url                                                                                                          model.y                    price
+##    <chr>      <chr>           <chr>    <chr>    <chr>                                                                                                        <chr>                      <chr>
+##  1 road-bikes endurance-bikes endurace al       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/al/endurace-6/3718.html                     Endurace 6                 1399 
+##  2 road-bikes endurance-bikes endurace cf       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-7-axs/3708.html              Endurace CF 7 AXS          3199 
+##  3 road-bikes endurance-bikes endurace cf       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-6/3706.html                  Endurace CF 6              1999 
+##  4 road-bikes endurance-bikes endurace cfr      https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cfr/endurace-cfr-wrl/3490.html              Endurace CFR WRL           8999 
+##  5 road-bikes endurance-bikes endurace cf       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-7/3707.html                  Endurace CF 7              2499 
+##  6 road-bikes endurance-bikes endurace al       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/al/endurace-7/3705.html                     Endurace 7                 1699 
+##  7 road-bikes endurance-bikes endurace cfr      https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cfr/endurace-cfr-di2/2742.html              Endurace CFR Di2           8999 
+##  8 road-bikes endurance-bikes endurace cf-slx   https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf-slx/endurace-cf-slx-7-axs/3087.html      Endurace CF SLX 7 AXS      3999 
+##  9 road-bikes endurance-bikes endurace cf-slx   https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf-slx/endurace-cf-slx-8-axs-aero/3712.html Endurace CF SLX 8 AXS Aero 5499 
+## 10 road-bikes endurance-bikes endurace cfr      https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cfr/endurace-cfr-axs/2743.html              Endurace CFR AXS           8499 
+## 11 road-bikes endurance-bikes endurace cf-slx   https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf-slx/endurace-cf-slx-8-di2/3711.html      Endurace CF SLX 8 Di2      5199 
+## 12 road-bikes endurance-bikes endurace cf       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-8-di2/3709.html              Endurace CF 8 Di2          3799 
+## 13 road-bikes endurance-bikes endurace cf-slx   https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf-slx/endurace-cf-slx-8-di2-aero/2740.html Endurace CF SLX 8 Di2 Aero 5199 
+## 14 road-bikes endurance-bikes endurace cf-slx   https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf-slx/endurace-cf-slx-8-di2/2739.html      Endurace CF SLX 8 Di2      4199 
+## 15 road-bikes endurance-bikes endurace al       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/al/endurace-7-rb/2731.html                  Endurace 7 RB              1299 
+## 16 road-bikes endurance-bikes endurace al       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/al/endurace-7/2733.html                     Endurace 7                 1499 
+## 17 road-bikes endurance-bikes endurace cf       https://www.canyon.com/en-de/road-bikes/endurance-bikes/endurace/cf/endurace-cf-7/2735.html                  Endurace CF 7              1999</code></pre>
 </section>
 
-</br>
-
-Now you have the updated bike data from last session. In this case we don't only want the bike models, but also all the different available color variations for each bike.
-
-***
-
-**Step 3:** Get all color variations for each bike
-* Step 3.1a: Get the color IDs for each bike
-
-The only place where I found all color variations for each bike was the script window.deptsfra (found it by searching for known color ids from example URLs), which is not loaded in the html body but in the html head. The content in this script is just a big JSON file (the one that was mentioned earlier), which we must extract. To look at it in a nicer representation, you can copy it and paste it to https://jsonlint.com for example.  
-
-{{< figure src="/img/courses/dat_sci/03/canyon_script.png" caption="JSON data inside a script" >}}
-
-<section class="hide">
-<pre><code class="r"># 3.1a Get all color variations for each bike</br>
-# Extract all bike urls
-bike_url_vec <- bike_data_cleaned_tbl %>% 
-                      pull(url)</br>
-# Create function to get the variations
-get_colors <- function(url) {</br>
-    url %>%</br>
-        read_html() %>%</br>
-        # Get all 'script nodes' and convert to char
-        html_nodes(css = "script") %>%
-        as.character() %>%</br>
-        # Select the node, that contains 'window.deptsfra'
-        str_subset(pattern = "window.deptsfra") %>%</br>
-        # remove the chars that do not belong to the json
-        # 1. replace at the beginning everything until the first "{" with ""
-        str_replace("^[^\\{]+", "") %>%
-        # 2. replace at the end everything after the last "}" with ""
-        str_replace("[^\\}]+$", "") %>%</br>
-        # Convert from json to an r object and pick the relevant values
-        fromJSON() %>%
-        purrr::pluck("productDetail", "variationAttributes", "values", 1, "value")
-}</br>
-# Run the function over all urls and add result to bike_data_cleaned_tbl
-# This will take a long time (~ 20-30 minutes) because we have to iterate over many bikes
-bike_data_colors_tbl <- bike_data_cleaned_tbl %>% 
-    mutate(colors = map(bike_url_vec, get_colors))</br>
-saveRDS(bike_data_colors_tbl, "bike_data_colors_tbl.rds")</code></pre>
-</section>
-
-***
-
-<a href="https://davisvaughan.github.io/furrr/" target="_blank">
-<img src="/img/icons/logo_furrr.svg" align="right" style="width:200px; height:200px; padding:0px 0px 10px 10px; margin-top:0px; margin-bottom:0px;"/>
-</a>
-
-Processing large amounts of data with complex models can be time consuming. Historically, R has only utilized only one core, which makes it single-threaded. Which is a shame, because most computers are much more powerful than that. A computer with one processor may still have 4 cores (quad-core), allowing 4 computations to be executed at the same time. Much R code runs fast and fine on a single core or processor. But at times, it is good to utilize more than one core for the same calculation. This is called parallel processing instead of sequential computing. There are many libraries, that makes it pretty easy to use the power of multiple cores. With the package `furrr` the only step you have to do is adding the line `plan("multiprocess")` and replacing `map()` with `future_map()`.
-
-***
-
-* Step 3.1b: Get the color IDs for each bike in a faster way (parallel)
-<section class="hide">
-<pre><code class="r">library(furrr)     # Parallel Processing using purrr (iteration)
-plan("multiprocess")
-bike_data_colors_tbl <- bike_data_cleaned_tbl %>% 
-    mutate(colors = future_map(bike_url_vec, get_colors))</code></pre>
-</section>
-
-</br>
-
-* Step 3.2: Now we have the color Ids, but we still have to build the URLs for each variant by adding the Ids as query parameters.
-
-<section class="hide">
-<pre><code class="r"># 3.2 Create the urls for each variation</br>
-bike_data_colors_tbl <- bike_data_colors_tbl %>%</br>
-  # Create entry for each color variation
-  unnest(colors) %>%</br>
-  # Merge url and query parameters for the colors
-  mutate(url_color = glue("{url}?dwvar_{id}_pv_rahmenfarbe={colors}")) %>%
-  select(-url) %>%</br>
-  # Use stringi to replace the last dash with the HTLM format of a dash (%2F)
-  # Only if there is a dash in the color column
-  mutate(url_color = ifelse(str_detect(colors, pattern = "/"),</br>
-                        # if TRUE --> replace      
-                        stringi::stri_replace_last_fixed(url_color, "/", "%2F"),</br>
-                        # ELSE --> take the original url
-                        url_color))</br>
-bike_data_colors_tbl %>% glimpse()
-## Rows: 416
-## Columns: 12
-## $ id               &lt;chr&gt; "2493", "2453", "2452", "2452", "2451", "2451",…
-## $ model            &lt;chr&gt; "Aeroad CFR Disc EPS", "Aeroad CFR Disc AXS",…
-## $ year             &lt;chr&gt; "2020", "2020", "2020", "2020", "2020", …
-## $ frame_material   &lt;chr&gt; "carbon", "carbon", "carbon", "carbon", …
-## $ price_euro       &lt;chr&gt; "8999.00", "7999.00", "7499.00", "7499.00",…
-## $ category_1       &lt;chr&gt; "Road", "Road", "Road", "Road", "Road", …
-## $ category_2       &lt;chr&gt; "Race", "Race", "Race", "Race", "Race", …
-## $ category_3       &lt;chr&gt; "Aeroad", "Aeroad", "Aeroad", "Aeroad", …
-## $ gender           &lt;chr&gt; "unisex", "unisex", "unisex", "unisex", …
-## $ description      &lt;chr&gt; "Canyon - An aero road bike that combines …
-## $ colors           &lt;chr&gt; "BK/BK", "BK/BK", "BK/BK", "BK/MC", "BK/BK",…
-## $ url_color        &lt;chr&gt; "https://www.canyon.com/en-de/road-bikes/…</code></pre>
-</section>
-
-</br>
-
-Now we have the URL for each individual bike and can get the stock availability for each size and color variation. It is the same process: Get the json data, save that data in a tibble/ list for each observation in the tibble itself and then using `unnest()` to create the wide data format. 
-
-<section class="hide">
-<pre><code class="r"># Create function
-get_sizes <- function(url) {</br>
-  json <- url %>%</br>
-    read_html() %>%</br>
-    # Get all 'script nodes' and convert to char
-    html_nodes(css = "script") %>%
-    as.character() %>%</br>
-    # Select the node, that contains 'window.deptsfra'
-    str_subset(pattern = "window.deptsfra") %>%</br>
-    # remove the chars that do not belong to the json
-    # 1. replace at the beginning everything until the first "{" with ""
-    str_replace("^[^\\{]+", "") %>%
-    # 2. replace at the end everything after the last "}" with ""
-    str_replace("[^\\}]+$", "") %>%</br>
-    # Convert from json to an r object and pick the relevant values
-    fromJSON(flatten = T) %>%
-    purrr::pluck("productDetail", "variationAttributes", "values", 2) %>%</br>
-    # select(id, value, available, availability)# %>%
-    select(id, value, availability.onlyXLeftNumber) %>%</br>
-    # Rename
-    rename(id_size = id) %>%
-    rename(size = value) %>%
-    rename(stock_availability = availability.onlyXLeftNumber) %>%</br>
-    # Conver to tibble
-    as_tibble()</br>
-}</br>
-# Pull url vector
-bike_url_color_vec <- bike_data_colors_tbl %>% 
-                        pull(url_color)</br>
-# Map
-bike_data_sizes_tbl <- bike_data_colors_tbl %>% 
-  mutate(size = future_map(bike_url_color_vec, get_sizes))</br>
-# Unnest
-bike_data_sizes_tbl <- bike_data_sizes_tbl %>% 
-                         unnest(size)</br>
-saveRDS(bike_data_sizes_tbl, "bike_data_sizes_tbl.rds")</code></pre>
-</section>
-
-</br>
-
-The database has now already over 2000 observations. From here we could start monitoring prices and availablilty etc. But I leave that up to you how to proceed.
 
 ### Further details
 
