@@ -674,14 +674,10 @@ Get the ranks:
 
 <!-- CODE (hide) -->
 <section class="hide">
-<pre><code class="r">rank <-  html %>% 
-            html_nodes(css = ".titleColumn") %>% 
-            html_text() %>% 
-            # Extrag all digits between " " and ".\n" The "\" have to be escaped
-            # You can use Look ahead "<=" and Look behind "?=" for this
-            stringr::str_extract("(?<= )[0-9]*(?=\\.\\n)")%>% 
-            # Make all values numeric
-            as.numeric()</code></pre>
+<pre><code class="r">rank <- html |>  
+            html_elements(css = ".cli-title .ipc-title__text") |>  
+            html_text() |>  
+            parse_number()</code></pre>
 </section>
 
 ***
@@ -691,35 +687,13 @@ Get the title: The title is in the child node with an a tag:
 <!-- CODE (hide) -->
 <section class="hide">
 <pre><code class="r">title <- html %>% 
-            html_nodes(".titleColumn > a") %>% 
-            html_text()</code></pre>
+          html_elements(css = ".cli-title .ipc-title__text") |> 
+          html_text() |> 
+          str_remove("^\\d*\\. ") # Remove numbers, dot and space at the beginning</code></pre>
 </section>
 
 ***
 
-Get the year: The year has the classes .titleColumn AND .secondaryInfo. Separate those by a space.
-
-<!-- CODE (hide) -->
-<section class="hide">
-<pre><code class="r">year <- html %>% 
-          html_nodes(".titleColumn .secondaryInfo") %>%
-          html_text() %>% 
-          # Extract numbers
-          stringr::str_extract(pattern = "[0-9]+") %>% 
-          as.numeric()</code></pre>
-</section>
-
-***
-
-Get the people: The people are in the attribute `title`
-
-<!-- CODE (hide) -->
-<section class="hide">
-<pre><code class="r">people <- html %>% 
-            html_nodes(".titleColumn > a") %>% 
-            html_attr("title")</code></pre>
-</section>
-            
 {{< figure src="/img/courses/dat_sci/03/html_imdb_02.png" caption="class for the ratings" >}}            
 
 Get the ratings:
@@ -727,31 +701,18 @@ Get the ratings:
 <!-- CODE (hide) -->
 <section class="hide">
 <pre><code class="r">rating <- html %>% 
-            html_nodes(css = ".imdbRating > strong") %>% 
-            html_text() %>% 
-            as.numeric()</code></pre>
-</section>
-
-***
-
-... and the number of ratings:
-
-<!-- CODE (hide) -->
-<section class="hide">
-<pre><code class="r">num_ratings <- html %>% 
-              html_nodes(css = ".imdbRating > strong") %>% 
-              html_attr('title') %>% 
-              # Extract the numbers and remove the comma to make it numeric values
-              stringr::str_extract("(?<=based on ).*(?=\ user ratings)" ) %>% 
-              stringr::str_replace_all(pattern = ",", replacement = "") %>% 
-              as.numeric()</code></pre>
+  html_elements(css = ".ratingGroup--imdb-rating") |> 
+  html_text() |> 
+  str_remove("\\(.*\\)") |> 
+  str_squish() |> 
+  as.numeric()</code></pre>
 </section>
 
 ***
 
 Merge everything into a tibble:
 
-<pre><code class="r">imdb_tbl <- tibble(rank, title, year, people, rating, num_ratings)</code></pre>
+<pre><code class="r">imdb_tbl <- tibble(rank, title, rating)</code></pre>
 
 As a side note, if you run the code from a country where English is not the main language, it’s very likely that you’ll get some of the movie names translated into the main language of that country.
 Most likely, this happens because the server infers your location from your IP address. 
@@ -900,7 +861,7 @@ Each bike can come in different color variations (indicated by `?dwvar_2399_pv_r
 Our goal is to get data for every bike in every available color scheme. We can do that, if we are able to construct the product URLs for each individual bike / color combination.
 -->
 
-Our goal is to get the current prices for every bike model. We can do that, if we are able to construct the PRODUCT URLs for each individual bike model (It is also possible to create the URLs for each color scheme. But focusing solely on the model is sufficient for now).
+Our goal is to get the current prices for every bike model. We can do that, if we are able to retrieve the PRODUCT URLs for each individual bike model (It is also possible to create the URLs for each color scheme. But focusing solely on the model is sufficient for now).
 
 ***
 
@@ -934,7 +895,7 @@ Analyze the page to make a plan for our web scraping approach (there is no uniqu
 
 #### Scraping
 
-Inspecting the file manually first makes sense, because R retrieves the page in a different way then we do inside a browser:
+Inspecting the file manually first makes sense, because R retrieves the page in a different way than we do inside a browser:
 
 ```r
 html_home <- read_html(url_home)
@@ -957,7 +918,7 @@ html_home       <- read_html(url_home)<br>
 # All Models are listed on these levels.
 bike_categories_chr <- html_home |><br>
   # Get the nodes for the categories. Take a look at the source code for the selector.
-  # (Unfortunately not working with the Selector Gadget)
+  # (Unfortunately not working with the Selector Gadget with the original page)
   html_elements(css = ".header__navBarPreloadItem--level2") |><br>
   # Extract the href attribute (the URLs)
   html_attr('href') |><br>
@@ -965,7 +926,7 @@ bike_categories_chr <- html_home |><br>
   str_subset(pattern = "sale|outlet|gear|customer-service", negate = T) |><br>
   # Add the domain, because we will get only the subdirectories
   # Watch out for the new pipe placeholder `_` here.
-  # It needs a named argument (`...``` in this case)
+  # It requires a named argument (`...` in this case)
   str_c("https://www.canyon.com", ... = _)<br>
 bike_categories_chr
 ##  [1] "https://www.canyon.com/en-de/road-bikes/endurance-bikes/"             "https://www.canyon.com/en-de/road-bikes/race-bikes/"                 
