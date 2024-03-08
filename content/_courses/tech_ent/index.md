@@ -33,7 +33,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-12-03T15:00:00Z"
+date: "2023-02-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
@@ -119,48 +119,36 @@ This course module can prepare students for the following career paths:
 ### Grading
 
 * `50%` (team): Development and pitch of an own startup project
-* `35%` (individual): Seven case memos submitted after class
-* `15%` (individual): Class participation
-
-
-***
-
-### Global Student Innovation Challenge
-
-We strongly encourage and support student teams to particpate in the `Global Student Innovation Challenge`. This is an option on top of this course, not an obligation for this course.
-You can find more information here: [Global Student Innovation Challenge powered by PDMA](https://www.pdma.org/page/student-innovation-challenge).
+* `30%` (team): Three case solutions (one from each of the three parts of the course)
+* `20%` (individual): Class participation
 
 
 ***
 
 ### Target Audience
 
-Due to capacity contraints, the course `Creation of Business Opportunities` is duplicated for two audiences in two parallel sessions:
-
 * Master Students in IWI, LIM & GTIME
-* Master Students in Engineering and Erasmus Programs
+* Master Students in Engineering
+* Master Students in Erasmus Programs
+
+Due to capacity constraints, the course `Creation of Business Opportunities` is duplicated in three parallel sessions.
+
+
 
 ***
 
 ### Time & Location
 
-*For IWI, LIM & GTIME students*: 
-* `Entrepreneurship`: Monday, 13.15 - 14.45, Building I, Audimax 2
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Building A, Room A 0.19
-
-
-*For Engineering and Erasmus students*: 
-* `Entrepreneurship`: Monday, 13.15 - 14.45, Building I, Audimax 2
-* `Creation of Business Opportunities`: Monday, 15.00 - 17.15, Channel 4 (Harburger Schloßstraße 28, 21079 Hamburg) HS28 - 0.08
-
+* `Entrepreneurship (Lecture)`: Monday, 13.15 - 14.45, Building I, Audimax 2
+* `Creation of Business Opportunities (PBL I)`: Monday, 15.00 - 17.15, Building A, Room A 0.19
+* `Creation of Business Opportunities (PBL II)`: Monday, 15.00 - 17.15, Harburger Schloßstrasse 28, Room HS28 - 0.01
+* `Creation of Business Opportunities (PBL III)`: Monday, 15.00 - 17.15, Harburger Schloßstrasse 28, Room HS28 - 0.08
 
 ***
 
 ### Registration
 
-* *For IWI, LIM & GTIME students*, please register for the entire module `Technology Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=91d193c4645cd41e9a2c9b3f9e92445a&again=yes) 
-
-* *For Engineering and Erasmus students*, please register for the entire module `Technology Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=32b403100ca85bd7c1d5ced24b19d3ba&again=yes)
+* Please register for the entire module `Technology Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=5ce9e6cf75b107d7acc2881e9b47ff6b&again=yes) 
 
 
 ***
@@ -176,22 +164,20 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 3rd | Introduction (Online Session) |
-| - | April 10th | Holiday |
-| 2 | April 17th | Customer Segmentation |
-| 3 | April 24th | Technology & Product Development |
-| - | May 1st | Holiday |
-| 4 | May 8th | Competition & Market Analysis | 
-| - | May 15th | Holiday |
-| 5 | May 22nd | Guest Lecture: Dr. Michael Mei (Founder & CEO of Menlo Systems): Driving Business Innovation with Laser and Quantum Technologies |
-| - | May 29th | Holiday |
-| 6 | June 5th | (Platform) Business Models |
-| 7 | June 12th | Revenue Models & Pricing |
-| 8 | June 19th | Lean Startup & Experimentation |
-| 9 | June 26th | Marketing & Sales for Startup Growth  |
-| 10 | July 3rd | Guest Lecture 2 |
-| 11 | July 10th | Financial Analysis |
-| - | July 17th | Submission of Final Pitches |
+| 1 | April 8th | Introduction (Online Session) |
+| 2 | April 15th | Customer Segmentation |
+| 3 | April 22nd | Technology & Product Development |
+| 4 | April 29th | Competition & Market Analysis |
+| 5 | May 6th | Intermediate Pitches I |
+| 6 | May 13th | (Platform) Business Models | 
+| - | May 20th | Holiday |
+| 7 | May 27th | Revenue Models & Pricing |
+| 8 | June 3rd | Lean Startup & Experimentation |
+| 9 | June 10th | Intermediate Pitches II |
+| 10 | June 17th | Marketing for Startup Growth |
+| 11 | June 24th | Sales for Startup Growth |
+| 12 | July 1st | Financial Analysis  |
+| 13 | July 8th | Final Pitches |
 
 
 

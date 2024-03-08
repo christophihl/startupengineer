@@ -1,14 +1,14 @@
 ---
 title: Causal Data Science for Business Analytics
-subtitle: Complementary elective course in "Business & Management"
-summary: Complementary elective course in "Business & Management"
+subtitle: 6 ECTS Module for Master Students
+summary: 6 ECTS Module for Master Students
 abstract: 
 
 event: Academic Theme Conference
 event_url: https://example.org
 
 showauthordate: false
-featured: false
+featured: true
 draft: false
 
 location: Source Themes HQ
@@ -21,8 +21,8 @@ address:
 
 
 authors:
-- mork
 - ihl
+- mork
 
 weight: 30
 tags: []
@@ -60,21 +60,22 @@ projects: []
 
 ### Credits
 
-2 ECTS
+* 6 ECTS module
+* 2 courses `Causal Data Science` (Lecture) & `Business Analytics with Causal Data Science` (Problem-based Learning)
 
 ***
 
 ### Target Audience
 
-* Master students with "Business & Management" courses in their curriculum
-* Students with a strong interest and motivation in acquiring the skills required for mastering the computational aspects of modern business analytics.
+* Master students in "Data Science" and "Internationales Wirtschaftsingenieurwesen (IWI)"
+* Students with a strong interest and motivation in acquiring the skills required for mastering the causal aspects of modern business analytics.
 
 ***
 
 ### Instructor(s)
 
-* {{% mention "mork" %}}
 * {{% mention "ihl" %}}
+* {{% mention "mork" %}}
 
 
 ***
@@ -119,7 +120,7 @@ After completing this module, students will be able to:
 
 <br>
 
-* `Causal Data Science for Business Analytics:`: [E-Learning StudIP](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=6ffdfcaa50763dae4ec87540e68d516c&again=yes)
+* Please register for the entire module `Causal Data Science for Business Analytics` here: [E-Learning StudIP](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=08b87444fd3c7f7e5f8ce7f348e53d6a&again=yes)
 
 ***
 
@@ -127,11 +128,8 @@ After completing this module, students will be able to:
 
 <br>
 
-| Session | Date | Room |
-| --- | --- | --- |
-| 1 | Monday, November 6th | Q - 1.121 |
-| 2 | Monday, November 27th | Q - 1.121 |
-| 3 | Monday, December 18th | Q - 1.121 |
+* `Causal Data Science (Lecture)`: Monday, 11.30 - 13.00, Building D, Room D - 1.023
+* `Business Analytics with Causal Data Science (PBL)`: Tuesday, 15.00 - 16.30, Building O, Room O - 0.007
 
 ***
 
@@ -141,40 +139,50 @@ Access to course notes & materials will be published on StudIP.
 
 ***
 
-### Topics
+### Preliminary Schedule
+
+
+| Session | Date | Topic |
+| --- | --- | --- |
+| 1 | April 15 & 16 | Introduction to Causal Inference |
+| 2 | April 22 & 21 | Graphical Causal Models |
+| 3 | April 29 & 30 | Randomized Experiments & Linear Regression |
+| 4 | May 6 & 7 | Matching |
+| 5 | May 13 & 14 | Double Machine Learning | 
+| - | May 20 & 21 | Holiday |
+| 6 | May 27 & 28 | Effect Heterogeneity |
+| 7 | June 3 & 4 | Unobserved Confounding & Instrumental Variables |
+| 8 | June 10 & 11 | Difference-in-Difference |
+| 9 | June 17 & 18 | Synthetic Control |
+| 10 | June 24 & 25 | Regression Discontinuity |
+| 11 | July 1 & 2 | Causal Mediation  |
+| 12 | July 8 & 9 | Further Topics in Causal Machine Learning |
 
 <br>
 
-**I: Fundamentals**
-1. Probability Theory
-2. Statistical Concepts
-3. Regression and Statistical Inference
-4. Causality
-5. Directed Acyclic Graphs
-
-<br>
-
-**II: Toolbox**
-1. Randomized Controlled Trials
-2. Matching and Subclassification
-3. Difference-in-Differences
-4. Instrumental Variables
-5. Regression Discontinuity
-
-
-***
 
 ### Literature
 
 <br>
 
+**Primary**
+* Ding, Peng (2023). A First Course in Causal Inference. arXiv preprint arXiv:2305.18793.
+* Facure, Matheus (2023). Causal Inference in Python - Applying Causal Inference in the Tech Industry. O'Reilly Media.
+* Huber, Martin (2023). Causal analysis: Impact evaluation and Causal Machine Learning with applications in R. MIT Press, 2023.
+* Neal, Brady (2020). Introduction to causal inference from a Machine Learning Perspective. Course Lecture Notes (draft).
+
+<br>
+
+**Secondary**
 * Angrist, J. D., & Pischke, J. S. (2014). Mastering metrics: The path from cause to effect. Princeton university press.
 * Cunningham, Scott (2021). Causal Inference: The Mixtape, New Haven: Yale University Press.
+* Gertler, Paul J., et al. (2016). Impact evaluation in practice. World Bank Publications.
 * Hernán Miguel A., and Robins James M. (2020). Causal Inference: What If. Boca Raton: Chapman & Hall/CRC.
 * Huntington-Klein, Nick (2021). The effect: An introduction to research design and causality. Chapman and Hall/CRC.
 * Imbens, G. W., & Rubin, D. B. (2015). Causal inference in statistics, social, and biomedical sciences. Cambridge University Press.
 * Mullainathan, Sendhil, and Jann Spiess. (2017). Machine Learning: An Applied Econometric Approach. Journal of Economic Perspectives, 31(2): 87–106.
 * Pearl, Judea, and Dana Mackenzie (2018). The Book of Why. Basic Books, New York, NY.
 * Pearl, Judea, Madelyn Glymour, and Nicholas P. Jewell (2016). Causal Inference in Statistics: A Primer. John Wiley & Sons, Inc., New York, NY.
+* Peters, Jonas, Dominik Janzing, and Bernhard Schölkopf (2017). Elements of causal inference: foundations and learning algorithms. The MIT Press.
 
 
