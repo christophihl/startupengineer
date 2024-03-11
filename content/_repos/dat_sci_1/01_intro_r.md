@@ -798,9 +798,7 @@ The process of building the website can be viewed in the `Action` Tab by clickin
 
 {{< figure src="/img/courses/dat_sci/01/github_action_01.png" caption="I have named it `Initial Set Up`" >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_action_02.png" caption="I have named it `Your website URL will be shown in the deploy box`" >}}
-
-Your website URL: https://tuhhstartupengineers.github.io/repository-name/
+{{< figure src="/img/courses/dat_sci/01/github_action_02.png" caption="Your website URL will be shown in the deploy box. It has the following format: https://tuhhstartupengineers.github.io/repository-name/" >}}
 
 To avoid to enter your password every time you open your site or swich in between pages, set a checkmark at Remember Me below the password prompt.
 
