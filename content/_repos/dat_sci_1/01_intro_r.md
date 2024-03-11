@@ -765,7 +765,7 @@ Quarto will work with RStudio v2022.02+, but you’ll need to install Quarto sep
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_04_finish.png" caption="2.4 Click `Finish`" >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a Repository from the Internet...` or `Add` and then `Clone Repository ...`  and select your `TUHHStartupEngineers/ss23-bdsb-YourUserName` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
+{{< figure src="/img/courses/dat_sci/01/github_desktop_05_clone.png" caption="2.5 Click `Clone a TUHHStartupEngineers/...` in the bottom left or `Add` and then `Clone Repository ...`  and select your `TUHHStartupEngineers/...-YourUserName` repo. Choose a local path where you want to save the local copy and press `Clone`. " width="75%" >}}
 
 4. Navigate to the folder you just cloned/downloaded, open the `lab_journal.Rproj` file. This should automatically open RStudio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell RStudio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the RStudio editor. For each chapter there is a journal you should open and edit. If you save the file your website changes as well.
 
@@ -776,9 +776,9 @@ Important: After compilation, all of the files for displaying your website are s
 
 Every Github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository the webpage is built into the _site folder and then served from the `gh-pages` branch. Your files contain a workflow (GitHub Action) that realizes all these steps. We only have to tell GitHub that the page is being built and served like this.
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to github.com, navigate to your journal repository (located in our account: https://github.com/TUHHStartupEngineers/bdsb-YourUserName) and click the settings button in the top right corner." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_01.png" caption="1. Go to github.com, navigate to your journal repository (located in our account: https://github.com/TUHHStartupEngineers/...-YourUserName) and click the settings button in the top right corner." >}}
 
-{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_action.png" caption="2. Select `Pages` in the menu on the left and make sure the source **GitHub Actions** is set.  (after a while you should see a little message at the top with a link to your new webpage)." >}}
+{{< figure src="/img/courses/dat_sci/01/github_pages_settings_02_action.png" caption="2. Select `Pages` in the menu on the left and make sure the source **GitHub Actions** is set." >}}
 
 This Action requires a encrypted secret, which is basically the password to your website. 
 
@@ -786,13 +786,21 @@ This Action requires a encrypted secret, which is basically the password to your
 
 {{< figure src="/img/courses/dat_sci/01/github_pages_settings_03_secret_01.png" caption="4. The Name has to be `WEBSITE_TOKEN`. The value for secret will be your password for your website. **DO NOT USE YOUR STANDARD PASSWORDS.** You later will be asked to submit your passwords to the teaching assistants who will be able to see it in clear text." >}}
 
-The website will be built and served every time you upload any new local changes to GitHub. Remember to render the website every time you want to add changes to your site.
+The website will be built and served every time you upload any new local changes to GitHub. Remember to render the website in RStudio every time you want to add changes to your site. For the first change open the `index.qmd` in RStudio and change the author name at the top. Then render the site again.
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="3. To upload any changes to your content (e.g. the author name or the date in the `index.qmd` file) you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .qmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. Press `Commit to main.`" >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="4. Press `Push origin` and wait a couple of minutes. Your changes should now be served on your website" >}}
 
-Your website URL: https://tuhhstartupengineers.github.io/ss23-bdsb-YourUsername/
+
+
+The process of building the website can be viewed in the `Action` Tab by clicking on your named commit. 
+
+{{< figure src="/img/courses/dat_sci/01/github_action_01.png" caption="I have named it `Initial Set Up`" >}}
+
+{{< figure src="/img/courses/dat_sci/01/github_action_02.png" caption="I have named it `Your website URL will be shown in the deploy box`" >}}
+
+Your website URL: https://tuhhstartupengineers.github.io/repository-name/
 
 To avoid to enter your password every time you open your site or swich in between pages, set a checkmark at Remember Me below the password prompt.
 
