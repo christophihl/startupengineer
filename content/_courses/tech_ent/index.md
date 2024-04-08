@@ -118,9 +118,9 @@ This course module can prepare students for the following career paths:
 
 ### Grading
 
-* `50%` (team): Development and pitch of an own startup project
-* `30%` (team): Three case solutions (one from each of the three parts of the course)
-* `20%` (individual): Class participation
+* `50%` (team): Development and pitch of an own startup project - This is a combination of your intermediate and final pitches. We especially look at the usage of frameworks presented in the course materials as well as form and presentation style.
+* `30%` (team): Three case solutions (one from each of the three parts of the course) - The focus will be on evaluating the clarity and coherence of the reasoning process that led to the conclusion. Each group must thoroughly detail the steps and logic they employed to ensure their analytical approach is both transparent and replicable.
+* `20%` (individual): Class participation - Ensuring that each group member is actively contributing towards lecture and exercise sessions and presents a part of each pitch.
 
 
 ***
