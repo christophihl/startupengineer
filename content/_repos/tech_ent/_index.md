@@ -23,9 +23,9 @@ menu:
 
 ## Submission guidelines
 
-If you want to submit a case memo or a team project pitch, please follow these guidelines about filenames, format and folders:
-* **individal case memo**: filename `lastname_casename.pdf`; e.g. `ihl_lytro.pdf`. The file itself must contain your full name and immatriculation number. Please `upload the pdf file to Stud.IP in the folder named after the case company` to be found here: [studip case memo folder](https://e-learning.tuhh.de/studip/dispatch.php/course/files/index/3b46c540fa5d0194e51386f403f43037?cid=91d193c4645cd41e9a2c9b3f9e92445a). 
-* **team project pitch**: `teamname_v[number].pdf`; e.g. `memetrify_v1.pdf`. The team name can be anything as long as it remains unique and invariant throughout the course (exceptions allowed in case of team reformations). The file itself must contain *all* your full names and immatriculation numbers. The version numbers should be consecutive integers. Please `upload the pdf file to Stud.IP in the folder named after your team` to be found here: [studip team presentation folder](https://e-learning.tuhh.de/studip/dispatch.php/course/files/index/70f9300101bed80085a96d8d39a08675?cid=91d193c4645cd41e9a2c9b3f9e92445a). 
+If you want to submit a team case memo or a team project pitch, please follow these guidelines about filenames, format and folders:
+* **team case memo**: filename `teamname_casename.pdf`; e.g. `memetrify_lytro.pdf`. The team name can be anything as long as it remains unique and invariant throughout the course (exceptions allowed in case of team reformations). The file itself must contain *all* your groups full names and immatriculation numbers. Please `upload the pdf file to Stud.IP in your group folder, subfolder 'Cases'` to be found here: [studip group folders](https://e-learning.tuhh.de/studip/dispatch.php/course/files?cid=5ce9e6cf75b107d7acc2881e9b47ff6b). 
+* **team project pitch**: `teamname_v[number].pdf`; e.g. `memetrify_v1.pdf`. The file itself must contain *all* your full names and immatriculation numbers. The version numbers should be consecutive integers. Please `upload the pdf file to Stud.IP in your group folder, subfolder 'Pitches'` to be found here: [studip group folders](https://e-learning.tuhh.de/studip/dispatch.php/course/files?cid=5ce9e6cf75b107d7acc2881e9b47ff6b). 
 
 <br/>
 
@@ -33,24 +33,23 @@ If you want to submit a case memo or a team project pitch, please follow these g
 ### Topics
 
 
-| Session | Date | Topic | Individual ToDos before class | Group ToDos before class |
-| --- | --- | --- | --- | --- |
-| 1 | April 3rd | Introduction | prepare session materials | - |
-| - | April 10th | Holiday | - | - |
-| 2 | April 17th | Customer Segmentation | prepare session materials; read Lytro case | submit project pitch: ideas |
-| 3 | April 24th | Technology & Product Development | submit Lytro case memo; prepare session materials; read Evisort case | submit project pitch: customer segments |
-| - | May 1st | Holiday | - | - |
-| 4 | May 8th | Competition & Market Analysis | submit Evisort case memo; prepare session materials; read Avatech case | submit project pitch: tech, product, solution |
-| - | May 15th | Holiday | - | - |
-| 5 | May 22nd | Guest Lecture 1 | submit Avatech case memo | submit project pitch: competition & market analysis |
-| - | May 29th | Holiday | - | - |
-| 6 | June 5th | (Platform) Business Models | prepare session materials; read CampusHash case | submit project pitch: revise & put it all together |
-| 7 | June 12th | Revenue Models & Pricing | submit CampusHash case memo; prepare session materials; read PassionConnect or BaseCamp case | submit project pitch: business model |
-| 8 | June 19th | Lean Startup & Experimentation | submit PassionConnect or BaseCamp case memo; prepare session materials; read RtR, Dropbox, or LitMotors case | submit project pitch: revenue model & pricing |
-| 9 | June 26th | Marketing & Sales for Startup Growth | submit RtR, Dropbox, or LitMotors case memo; prepare session materials; read HubbleLenses case | submit project pitch: lean startup & experimentation |
-| 10 | July 3rd | Guest Lecture 2 | submit HubbleLenses case memo; read AnswerDash case | submit project pitch: marketing & sales |
-| 11 | July 10th | Financial Analysis | submit AnswerDash case memo; prepare session materials | submit project pitch: assumptions about financial model |
-| - | July 17th | Submission of Final Pitches | - | submit final project pitch & backup slides |
+| Session | Date | Topic | Group ToDos before class |
+| --- | --- | --- | --- |
+| 1 | April 8th | Introduction (Online Session) | |
+| 2 | April 15th | Customer Segmentation | Send Email containing group name, team members names and Startup Ideas Template |
+| 3 | April 22nd | Technology & Product Development | |
+| 4 | April 29th | Competition & Market Analysis | |
+| 5 | May 6th | Intermediate Pitches I | Upload presentation for Intermediate Pitches I session containing all topics until here AND one team case submission of the first segment |
+| 6 | May 13th | (Platform) Business Models | |
+| - | May 20th | Holiday | |
+| 7 | May 27th | Revenue Models & Pricing | |
+| 8 | June 3rd | Lean Startup & Experimentation | |
+| 9 | June 10th | Intermediate Pitches II | Upload presentation for Intermediate Pitches II session containing all topics until here AND one team case submission of the second segment |
+| 10 | June 17th | Marketing for Startup Growth | |
+| 11 | June 24th | Sales for Startup Growth | |
+| 12 | July 1st | Financial Analysis  | |
+| 13 | July 8th | Final Pitches | Upload presentation for Final Pitches session containing all topics and one team case submission of the third segment |
+
 
 
 
