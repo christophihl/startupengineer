@@ -683,7 +683,7 @@ We will use GitHub to store your data and hand in your assignments through your 
 To get started with this template you only have to login to github and click this invitation link: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/c-cQVaJ4" target="_blank"><b>Business Data Science Basics - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/DimItK8C" target="_blank"><b>Business Data Science Basics - GitHub Classroom</b></a>
 </div>
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_00.png" caption="Click `Authorize GitHub Classroom`" width="50%" >}}
@@ -856,7 +856,7 @@ See the `Quarto Cheat Sheet` or the official quarto documentation for further in
 
 Submit your journal URL and password via the following form. If you do not submit your information, we won't be able to evaluate your assignments.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMgOCNfz28cvu-QgxymKuifWQD5-TxB0NU-bwmytB3BoxicA/viewform?embedded=true" width="640" height="1166" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKooNYgQp_UPaXZSGmPBBrKeFaD_AUJRNtIGLf5ZEYTXiUig/viewform?embedded=true" width="640" height="1166" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ***
 
