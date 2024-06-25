@@ -65,6 +65,6 @@ The following schedule is just a guideline for you. You can organize your time a
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | July 1st | [Reporting PDFs]({{< relref "_repos/dat_sci_3/14_rep_shiny/#i-quarto-previously-rmarkdown" >}}) |
-| 2 | July 2nd | [Reporting with Flexdashboard]({{< relref "_repos/dat_sci_3/14_rep_shiny/#iii-flexdashboard" >}}) |
-| 3 | July 3rd | [Reporting with Shiny]({{< relref "_repos/dat_sci_3/14_rep_shiny/#iv-shiny" >}}) |
+| 1 | July 1st | [Reporting PDFs]({{< relref "_repos/dat_sci_3/14_rep_shiny.html#i-quarto-previously-rmarkdown" >}}) |
+| 2 | July 2nd | [Reporting with Flexdashboard]({{< relref "_repos/dat_sci_3/14_rep_shiny.html#iii-flexdashboard" >}}) |
+| 3 | July 3rd | [Reporting with Shiny]({{< relref "_repos/dat_sci_3/14_rep_shiny.html#iv-shiny" >}}) |
