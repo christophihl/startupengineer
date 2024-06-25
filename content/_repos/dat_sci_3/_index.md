@@ -53,7 +53,7 @@ If you have R-studio working and your github page set up (will be explained in d
 <div id="header">Website</div>
 <div id="container">
   <div id="first">{{% icon globe %}}</div>
-  <div id="second"><a href="https://www.datacamp.com/groups/shared_links/983ad9028575b0456ba34bc1a8e90f2611969528c2f655e5a4e8b01bda4b6da2" target="_blank"><b>https://www.datacamp.com/groups/shared_links/983ad9028575b0456ba34bc1a8e90f2611969528c2f655e5a4e8b01bda4b6da2</b></a></div>
+  <div id="second"><a href="https://www.datacamp.com/groups/shared_links/529b0628fc16a98a6e68ea540db6692bfd9a7f4c8888d7e7aded4feb5430a912" target="_blank"><b>https://www.datacamp.com/groups/shared_links/529b0628fc16a98a6e68ea540db6692bfd9a7f4c8888d7e7aded4feb5430a912</b></a></div>
   <div id="clear"></div>
 </div>
 
@@ -61,6 +61,10 @@ These tutorials are optional and you can choose whatever <a href="https://learn.
 
 ## Schedule
 
+The following schedule is just a guideline for you. You can organize your time as you like.
+
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | June 12th | [Reporting with Shiny]({{< relref "_repos/dat_sci_3/14_rep_shiny.html" >}}) |
+| 1 | July 1st | [Reporting PDFs]({{< relref "_repos/dat_sci_3/14_rep_shiny/#i-quarto-previously-rmarkdown" >}}) |
+| 2 | July 2nd | [Reporting with Flexdashboard]({{< relref "_repos/dat_sci_3/14_rep_shiny/#iii-flexdashboard" >}}) |
+| 3 | July 3rd | [Reporting with Shiny]({{< relref "_repos/dat_sci_3/14_rep_shiny/#iv-shiny" >}}) |

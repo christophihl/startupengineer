@@ -19,7 +19,7 @@ codefolding_show: hide
 ---
 
 {{% alert warning %}}
-If you already participated in the first course ("Business Data Science Basics") you can skip the first part and jump right into "Mattermost".
+If you already participated in the first course ("Business Data Science Basics") you can skip the first part and jump right to the section "Mattermost".
 {{% /alert %}}
 
 <!-- R-Logo and RStudio-Logo -->
@@ -686,7 +686,7 @@ If you don't have a GitHub account already, please complete the following steps:
 3. Accept the assignment on GitHub Classroom: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/nYS3KYaj" target="_blank"><b>Building Business Data Products - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/NfdvM_HS" target="_blank"><b>Building Business Data Products - GitHub Classroom</b></a>
 </div>
 
 <br>
@@ -811,6 +811,8 @@ That's it. Now you can navigate to your new homepage via the link in the greenbo
 {{< figure src="/img/courses/dat_sci/01/github_desktop_06_commit.png" caption="To upload any changes to your content (e.g. the author name or the date in the `index.qmd` file) you have to *commit* your changes to github using github dektop (if you are familiar with git you are free to use another method to commit your changes). As shown in this Figure you see that GitHub Desktop detects the changes automatically after saving your files (don't forget to build your website again after any changes. Otherwise the html files won't be affected by any changes to your .qmd-files). Select all of the files that you want to commit on the left panel. Write a short note to describe the changes in the box at the bottom left. Press `Commit to main.`" >}}
 
 {{< figure src="/img/courses/dat_sci/01/github_desktop_07_push.png" caption="Press `Push origin` and wait a couple of minutes. Your changes should now be served to GitHub and the teaching assistants are able to see your code." width=95% >}}
+
+Creating a website is completely optional. If you want to do it anyway, you can follow the steps here: [Serving your webpage on the internet](https://www.startupengineer.io/_repos/dat_sci_1/01_intro_r/#serving-your-webpage-on-the-internet). You might want to rename the corresponding chapter files in the directory `content/01_journal` and in the `_quarto.yml` file accordingly.
 
 ## Submission
 
