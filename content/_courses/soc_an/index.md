@@ -83,13 +83,13 @@ projects: []
 
 ### Overview
 <details class="description" close><summary data-close="Show" data-open="Hide"></summary>
-`Social analytics` broadly refers to measuring, modeling, visualizing and interpreting interactions between actors (e.g. organizations, firms, employees, customers, users, scientists, citizens or politicians) and their connections with objects (e.g. content, products, topics, or ideas). Data about these interactions and connections are available in ever greater detail and quantity from diverse digital sources, with social media platforms being just one of them.
+<b>Social analytics</b> broadly refers to measuring, modeling, visualizing and interpreting interactions between actors (e.g. organizations, firms, employees, customers, users, scientists, citizens or politicians) and their connections with objects (e.g. content, products, topics, or ideas). Data about these interactions and connections are available in ever greater detail and quantity from diverse digital sources, with social media platforms being just one of them.
 <br><br>
-The discource and debates about current societal issues can also be monitored from digitized archives of more traditional news outlets. Organizations provide valuable information about their positioning and partners via their websites. Firms often solicite customer feedback and opinions via online forums and track their interactions with products. In most fields like sports, culture, art, but also science, technology, and software development, there are specialized online communities or (user-generated) data archives, which keep track of historical interactions and connections among actors and objects of particular domains.
+The discource and debates about current societal issues can be monitored from digitized news archives. Organizations speak about their positioning and partners via their websites. Firms solicite customer feedback via online forums and track their interactions with products. In diverse fields such as sports, culture, art, but also science, technology, and software development, there are specialized online communities or (user-generated) data archives, which keep track of historical interactions and connections among actors and objects.
 <br><br>
-Tapping into these kinds of data sources for social analytics allows public and private decision makers to detect emerging trends, to track prevailant opinions over time, to identify influential actors, to find matching collaboration partners, to come up with novel ideas, to engage in competitive intelligence and benchmarking, or to build product recommendation engines.
+Tapping into these kinds of data sources for social analytics allows public and private decision makers to detect emerging trends, to track prevailant opinions over time, to identify influential actors, to find matching collaboration partners, to come up with novel ideas, to gather competitive intelligence, or to build product recommendation engines.
 <br><br>
-Relevant data on interactions and connections among actors and objects from these sources is often embodied in text and/ or needs to be converted into graphs. Therefore, the course introduces the fundamentals and current state of machine learning for unstructured text and graph data. The course has a particular emphasis on recent advancements in deep learning architectures. Through lectures and coding labs using the deep learning framework PyTorch, students will learn the necessary skills to design, implement, and understand their own deep learning models with respect to specific social analytics goals.
+Relevant data on interactions and connections among actors and objects is often embodied in text and/ or needs to be converted into graphs. Therefore, the course introduces the fundamentals and current state of machine learning for unstructured text and graph data. The course has a particular emphasis on recent advancements in deep learning architectures. Through lectures and coding labs using the deep learning framework PyTorch, students will learn the necessary skills to design, implement, and understand their own deep learning pipelines with respect to specific social analytics goals.
 </details>
 
 ***
@@ -99,7 +99,6 @@ Relevant data on interactions and connections among actors and objects from thes
 <details class="description" close><summary data-close="Show" data-open="Hide"></summary>
 
 After completing this module, students will be able to:
-
 
 * Understand and describe the role of social interactions and networks for the development of specific domains.
 * Gather, prepare and visualize social data.
