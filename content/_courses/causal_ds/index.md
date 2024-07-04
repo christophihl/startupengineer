@@ -99,8 +99,13 @@ After completing this module, students will be able to:
 * Understand the difference between "correlation” and “causation" 
 * Understand the shortcomings of current correlation-based approaches
 * Develop causal knowledge relevant for specific data-driven decisions
-* Discuss the conceptual ideas behind various causal data science tools and algorithms
-* Carry out state-of-the-art causal data analyses
+* Formalize intuition about causal relationships using a "language" of causality
+* Derive causal hypotheses that can be tested with data
+* Discuss the conceptual ideas behind state-of-the-art causal data science tools and algorithms
+* Carry out causal data analyses with state-of-the-art tools
+
+
+
 
 
 </details>
@@ -147,16 +152,16 @@ Access to course notes & materials will be published on StudIP.
 | 1 | April 15 & 16 | Introduction to Causal Inference |
 | 2 | April 22 & 21 | Graphical Causal Models |
 | 3 | April 29 & 30 | Randomized Experiments & Linear Regression |
-| 4 | May 6 & 7 | Matching |
+| 4 | May 6 & 7 | Observed Confounding |
 | 5 | May 13 & 14 | Double Machine Learning | 
 | - | May 20 & 21 | Holiday |
 | 6 | May 27 & 28 | Effect Heterogeneity |
 | 7 | June 3 & 4 | Unobserved Confounding & Instrumental Variables |
-| 8 | June 10 & 11 | Difference-in-Difference |
-| 9 | June 17 & 18 | Synthetic Control |
+| 8 | June 10 & 11 | Difference-in-Differences |
+| 9 | June 17 & 18 | Synthetic Controls |
 | 10 | June 24 & 25 | Regression Discontinuity |
 | 11 | July 1 & 2 | Causal Mediation  |
-| 12 | July 8 & 9 | Further Topics in Causal Machine Learning |
+| 12 | July 8 & 9 | Causal Discovery |
 
 <br>
 
