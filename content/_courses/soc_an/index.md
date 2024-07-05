@@ -43,7 +43,7 @@ publishDate: "2023-02-01T13:00:00Z"
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: "[© BarabásiLab (Albert-László Barabási, Alexander Gates, Alice Grishchenko, Qing Ke, Mauro Martino, Onur Varol)](https://zkm.de/de/ausstellung/2021/05/barabasilab-hidden-patterns)"
+  caption: "[© BarabásiLab (Albert-László Barabási et al.)](https://www.barabasilab.com)"
   focal_point: "smart"
 
 # Projects (optional).
