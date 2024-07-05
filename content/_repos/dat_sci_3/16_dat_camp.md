@@ -20,13 +20,11 @@ In this chapter, you'll learn the basics of data-driven decision-making and get 
 
 To be able to go through the content, you need to sign up with your tuhh email adress via the following link:
 
-https://www.datacamp.com/groups/shared_links/983ad9028575b0456ba34bc1a8e90f2611969528c2f655e5a4e8b01bda4b6da2
-
-You can find the assignment in the tab `my assignments`.
+https://www.datacamp.com/groups/shared_links/529b0628fc16a98a6e68ea540db6692bfd9a7f4c8888d7e7aded4feb5430a912
 
 ---
 
-If the assignment does not show up just start the course via this link
+If the assignment does not show up in the tab `my assignments` just start the course via this link
 
 https://app.datacamp.com/learn/courses/data-driven-decision-making-for-business
 

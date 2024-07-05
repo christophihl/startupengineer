@@ -686,7 +686,7 @@ If you don't have a GitHub account already, please complete the following steps:
 3. Accept the assignment on GitHub Classroom: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/NfdvM_HS" target="_blank"><b>Building Business Data Products - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/StVcsCy8" target="_blank"><b>Building Business Data Products - GitHub Classroom</b></a>
 </div>
 
 <br>

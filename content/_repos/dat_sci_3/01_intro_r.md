@@ -688,7 +688,7 @@ We will use GitHub to store your data and hand in your assignments through your 
 To get started with this template you only have to login to github and click this invitation link: 
 
 <div style="text-align:center">
-<a href="https://classroom.github.com/a/GvwCVQ4z" target="_blank"><b>Business Decisions with Machine Learning - GitHub Classroom</b></a>
+<a href="https://classroom.github.com/a/StVcsCy8" target="_blank"><b>Business Decisions with Machine Learning - GitHub Classroom</b></a>
 </div>
 
 {{< figure src="/img/courses/dat_sci/01/github_classroom_00.png" caption="Click `Authorize GitHub Classroom`" width="50%" >}}
