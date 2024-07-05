@@ -85,9 +85,9 @@ projects: []
 <details class="description" close><summary data-close="Show" data-open="Hide"></summary>
 <b>Social analytics</b> broadly refers to measuring, modeling, visualizing and interpreting interactions between actors (e.g. organizations, firms, employees, customers, users, scientists, citizens or politicians) and their connections with objects (e.g. content, products, topics, or ideas). Data about these interactions and connections are available in ever greater detail and quantity from diverse digital sources, with social media platforms being just one of them.
 <br><br>
-The discource and debates about current societal issues can be monitored from digitized news archives. Organizations speak about their positioning and partners via their websites. Firms solicite customer feedback via online forums and track their interactions with products. In diverse fields such as sports, culture, art, but also science, technology, and software development, there are specialized online communities or (user-generated) data archives, which keep track of historical interactions and connections among actors and objects.
+The discource and debates about current societal issues can be monitored from digitized news archives. Organizations speak about their positioning and partners via their websites. Firms solicite feedback from customers via online forums and track their interactions with products. In diverse fields such as sports, culture, and art, as well as science, technology, and software development, specialized online communities or (user-generated) data archives exist that keep track of historical interactions and connections among actors and objects.
 <br><br>
-Tapping into these kinds of data sources for social analytics allows public and private decision makers, among other things, to work towards the following goals: (1) detecting emerging trends, (2) tracking prevailant opinions over time, (3) identifying influential actors, (4) understanding the diffusion of cerain objects, (5) supporting or preventing certain social interactions, (6) finding matching collaboration partners, (7) generating novel ideas, (8) gathering competitive intelligence, or (9) building product recommendation engines.
+Tapping into these kinds of data sources for social analytics allows public and private decision makers, among other things, to work towards the following goals: (1) detecting emerging trends, (2) tracking prevailant opinions over time, (3) identifying influential actors, (4) understanding the diffusion of certain objects, (5) supporting or preventing certain social interactions, (6) finding matching collaboration partners, (7) generating novel ideas, (8) gathering competitive intelligence, or (9) building product recommendation engines.
 <br><br>
 Relevant data on interactions and connections among actors and objects is often embodied in text and/ or needs to be converted into graphs. Therefore, the course introduces the fundamentals and current state of machine learning for unstructured text and graph data. The course has a particular emphasis on recent advancements in deep learning architectures. Through lectures and coding labs using the deep learning framework PyTorch, students will learn the necessary skills to design, implement, and understand their own deep learning pipelines with respect to specific social analytics goals.
 </details>
@@ -101,7 +101,7 @@ Relevant data on interactions and connections among actors and objects is often 
 After completing this module, students will be able to:
 
 * Understand and describe the role of social interactions and networks for the development of specific domains.
-* Gather, prepare and visualize social data.
+* Gather, pre-process and visualize social data.
 * Understand and apply deep learning techniques to text and graph data.
 * Engage in a complex analysis project to deliver concise and actionable insights.
 
@@ -115,7 +115,7 @@ After completing this module, students will be able to:
 
 <br>
 
-* Students are evaluated based on their solutions of challenges assigned in each session as well as a final team project.
+* Students are evaluated based on their solutions of challenges assigned on each topic as well as a final team project.
 
 * `50%` (individual): 5 assignments about different topics.
 * `50%` (team): Teams of 3 students work on a joint research project of their choice (submission deadline: March 31).
