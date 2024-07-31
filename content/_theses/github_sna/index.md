@@ -1,5 +1,5 @@
 ---
-title: Startup Funding: Is It All About The Money? A Comprehensive Overview Of The Current State of Research In Value Added Services
+title: Startup Funding - Is It All About The Money? A Comprehensive Overview Of The Current State of Research In Value Added Services
 
 event: Academic Theme Conference
 event_url: https://example.org
