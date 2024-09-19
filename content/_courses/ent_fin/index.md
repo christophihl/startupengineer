@@ -31,7 +31,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-12-02T15:00:00Z"
+date: "2023-12-02T15:00:00Z"
 date_end: "2030-12-03T15:00:00Z"
 all_day: false
 
@@ -132,7 +132,7 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* Open until October XXnd on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de)
+* Open until October 21st on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=f7e03ac6b38880b0381115a62b6c5161&again=yes)
 
 ***
 

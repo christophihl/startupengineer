@@ -32,7 +32,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-02-01T13:00:00Z"
+date: "2023-02-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
@@ -127,8 +127,8 @@ After completing this module, students will be able to:
 
 <br>
 
-* Please register for the entire module `Deep Learning for Social Analytics` here: [E-Learning StudIP](https://e-learning.tuhh.de/studip/)
-* Due to the PBL and project-based nature of the module, we have to limit the number of partcipants to a max of 30 students.
+* Please register for the entire module `Deep Learning for Social Analytics` here: [E-Learning StudIP](https://e-learning.tuhh.de/studip/dispatch.php/course/overview?cid=d294a78eeb0d4b5028b30f05e9ee1fb8)
+* Due to the PBL and project-based nature of the module, we have to limit the number of participants to a max of 30 students.
 * In case of over-demand, access to the course will be granted based on the quality of a brief research proposal to be submitted after the first class.
 
 ***
@@ -137,8 +137,8 @@ After completing this module, students will be able to:
 
 <br>
 
-* `Deep Learning for Text and Graphs`: Friday, 10.00 - 11.30, Room tbd.
-* `Social Analytics with Deep Learning`: Friday, 12.00 - 14.15, Room tbd.
+* `Deep Learning for Text and Graphs`: Thursday, 15.00 - 16.30, Room O - 0.007.
+* `Social Analytics with Deep Learning`: Thursday, 16.45 - 18.15, Room O - 0.007.
 
 ***
 
@@ -153,20 +153,20 @@ Access to course notes & materials will be published on StudIP.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | October 18 | Course Introduction (online) |
+| 1 | October 17 | Course Introduction (online) |
 | 2 | October 25 | Word Embeddings & Topic Models |
-| 3 | November 1 | RNNs and LSTMs for Text I |
-| 4 | November 8 | RNNs and LSTMs for Text II |
-| 5 | November 15 | Transformers | 
-| 6 | November 22 | Transformers: Pre-training |
-| 7 | November 29 | Transformers: Post-training |
-| 8 | December 6 | Graph Embeddings |
-| 9 | December 13 | Graph Neural Networks (GNNs) I |
-| 10 | December 20 | Graph Neural Networks (GNNs) II |
-| 11 | January 10 | GNNs on Complex Graphs I |
-| 12 | January 17 | GNNs on Complex Graphs II  |
-| 13 | January 24 | Graph Generative Models |
-| 14 | January 31 | Project Pitches |
+| 3 | October 31 | RNNs and LSTMs for Text I |
+| 4 | November 7 | RNNs and LSTMs for Text II |
+| 5 | November 14 | Transformers | 
+| 6 | November 21 | Transformers: Pre-training |
+| 7 | November 28 | Transformers: Post-training |
+| 8 | December 5 | Graph Embeddings |
+| 9 | December 12 | Graph Neural Networks (GNNs) I |
+| 10 | December 19 | Graph Neural Networks (GNNs) II |
+| 11 | January 9 | Project Lab |
+| 12 | January 16 | Project Lab  |
+| 13 | January 23 | Project Lab |
+| 14 | January 30 | Project Pitches |
 
 <br>
 
