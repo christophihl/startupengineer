@@ -95,7 +95,7 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* Open until October 22nd on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=c07423bfdc6cd54aeb545752e000607b&again=yes)
+* Open until October 21nd on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=f7e03ac6b38880b0381115a62b6c5161&again=yes)
 
 ***
 
@@ -124,17 +124,17 @@ Here you find the following materials:
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | October 23rd | Online-Introduction: Evaluating Venture Opportunities|
-| - | October 30th | No class |
-| 2 | November 6th | Financial Planning |
-| 3 | November 13th | Ownership and Returns |
-| 4 | November 20th | Valuation Methods I |
-| 5 | November 27th | Valuation Methods II |
-| 6 | December 4th | Early Stage and Venture Capital Investors |
-| 7 | December 11th | Term Sheets| 
-| 8 | December 18th| Structuring Deals |
-| - | Dec 24th - Jan 7th | Christmas Holiday |
-| 9 | January 8th | Staged Financing |
-| 10 | January 15th | Debt Financing |
-| 11 | January 22nd | Corporate Governance |
-| 12 | January 29th | Exits |
+| 1 | October 21st | Online-Introduction: Evaluating Venture Opportunities|
+| 2 | October 28th | Financial Planning |
+| 3 | November 4th | Ownership and Returns |
+| 4 | November 11th | Valuation Methods I |
+| 5 | November 18th | Valuation Methods II |
+| 6 | November 25th | Early Stage and Venture Capital Investors |
+| 7 | December 2nd | Guest Lecture |
+| 8 | December 9th | Term Sheets| 
+| 9 | December 16th| Structuring Deals |
+| - | Dec 23rd - Jan 3rd | Christmas Holiday |
+| 10 | January 6th | Staged Financing |
+| 11 | January 13th | Debt Financing |
+| 12 | January 20th | Corporate Governance |
+| 13 | January 27th | Exits |
