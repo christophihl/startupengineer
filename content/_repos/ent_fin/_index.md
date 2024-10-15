@@ -124,7 +124,7 @@ Here you find the following materials:
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | October 21st | Online-Introduction: Evaluating Venture Opportunities|
+| 1 | October 21st | Introduction: Evaluating Venture Opportunities|
 | 2 | October 28th | Financial Planning |
 | 3 | November 4th | Ownership and Returns |
 | 4 | November 11th | Valuation Methods I |
