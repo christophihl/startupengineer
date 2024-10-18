@@ -144,29 +144,9 @@ After completing this module, students will be able to:
 
 ### Course Notes & Materials
 
-Access to course notes & materials will be published on StudIP.
+All course material and the schedule will be kept up to date on [Deep Learning for Social Analytics](https://tuhhstartupengineers.github.io/master-deep-learning-social-analytics/). All course related communication will be posted on [E-Learning StudIP](https://e-learning.tuhh.de/studip/dispatch.php/course/overview?cid=d294a78eeb0d4b5028b30f05e9ee1fb8). Make sure to check these pages and your emails regularly for updates.
 
 ***
-
-### Preliminary Schedule
-
-
-| Session | Date | Topic |
-| --- | --- | --- |
-| 1 | October 17 | Course Introduction (online) |
-| 2 | October 25 | Word Embeddings & Topic Models |
-| 3 | October 31 | RNNs and LSTMs for Text I |
-| 4 | November 7 | RNNs and LSTMs for Text II |
-| 5 | November 14 | Transformers | 
-| 6 | November 21 | Transformers: Pre-training |
-| 7 | November 28 | Transformers: Post-training |
-| 8 | December 5 | Graph Embeddings |
-| 9 | December 12 | Graph Neural Networks (GNNs) I |
-| 10 | December 19 | Graph Neural Networks (GNNs) II |
-| 11 | January 9 | Project Lab |
-| 12 | January 16 | Project Lab  |
-| 13 | January 23 | Project Lab |
-| 14 | January 30 | Project Pitches |
 
 <br>
 
