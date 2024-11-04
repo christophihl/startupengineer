@@ -161,8 +161,8 @@ Password to be found on Studip.
 | 3 | November 4th | Ownership and Returns |
 | 4 | November 11th | Valuation Methods I |
 | 5 | November 18th | Valuation Methods II |
-| 6 | November 25th | Early Stage and Venture Capital Investors |
-| 7 | December 2nd | Guest Lecture |
+| 6 | November 25th | Guest Lecture + Early Stage and VC Investors (Lecture) |
+| 7 | December 2nd | Guest Lecture + Early Stage and VC Investors (Exercise) |
 | 8 | December 9th | Term Sheets| 
 | 9 | December 16th| Structuring Deals |
 | - | Dec 23rd - Jan 3rd | Christmas Holiday |
