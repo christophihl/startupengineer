@@ -33,7 +33,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-02-01T13:00:00Z"
+date: "2023-02-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
@@ -139,8 +139,8 @@ Due to capacity constraints, the course `Creation of Business Opportunities` is 
 
 ### Time & Location
 
-* `Entrepreneurship (Lecture)`: Monday, 13.15 - 14.45, Building I, Audimax 2
-* `Creation of Business Opportunities (PBL I)`: Monday, 15.00 - 17.15, Building A, Room A 0.19
+* `Entrepreneurship (Lecture)`: Monday, 13.15 - 14.45, Building H, Audimax 1
+* `Creation of Business Opportunities (PBL I)`: Monday, 15.00 - 17.15, Building N, Room 0008
 * `Creation of Business Opportunities (PBL II)`: Monday, 15.00 - 17.15, Harburger Schloßstrasse 28, Room HS28 - 0.01
 * `Creation of Business Opportunities (PBL III)`: Monday, 15.00 - 17.15, Harburger Schloßstrasse 28, Room HS28 - 0.08
 
@@ -148,7 +148,7 @@ Due to capacity constraints, the course `Creation of Business Opportunities` is 
 
 ### Registration
 
-* Please register for the entire module `Technology Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=5ce9e6cf75b107d7acc2881e9b47ff6b&again=yes) 
+* Please register for the entire module `Technology Entrepreneurship` here: [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=2ea2b1cf8a627f6e537364e700b77f4a&again=yes) 
 
 
 ***
@@ -164,20 +164,21 @@ Access to course notes & materials [**here**]({{< relref "_repos/tech_ent/_index
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 8th | Introduction (Online Session) |
-| 2 | April 15th | Customer Segmentation |
-| 3 | April 22nd | Technology & Product Development |
-| 4 | April 29th | Competition & Market Analysis |
-| 5 | May 6th | Intermediate Pitches I |
-| 6 | May 13th | (Platform) Business Models | 
-| - | May 20th | Holiday |
-| 7 | May 27th | Revenue Models & Pricing |
-| 8 | June 3rd | Lean Startup & Experimentation |
-| 9 | June 10th | Intermediate Pitches II |
-| 10 | June 17th | Marketing for Startup Growth |
-| 11 | June 24th | Sales for Startup Growth |
-| 12 | July 1st | Financial Analysis  |
-| 13 | July 8th | Final Pitches |
+| 1 | April 7th | Introduction (Online Session) |
+| 2 | April 14th | Customer Segmentation |
+| - | April 21st | Holiday |
+| 3 | April 28th | Technology & Product Development |
+| 4 | May 5th | Competition & Market Analysis |
+| 5 | May 12th | Intermediate Pitches I |
+| 6 | May 19th | (Platform) Business Models | 
+| - | May 26th | Holiday |
+| 7 | June 2nd | Revenue Models & Pricing |
+| - | June 9th | Holiday |
+| 8 | June 16th | Lean Startup & Experimentation |
+| 9 | June 23rd | Intermediate Pitches II |
+| 10 | June 30th | Marketing & Sales for Startup Growth |
+| 11 | July 7th | Financial Analysis |
+| 12 | July 14th | Final Pitches |
 
 
 

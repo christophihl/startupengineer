@@ -31,7 +31,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-02-01T13:00:00Z"
+date: "2023-02-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
@@ -75,7 +75,6 @@ projects: []
 ### Instructor(s)
 
 * {{% mention "ihl" %}}
-* {{% mention "mork" %}}
 
 
 ***
@@ -125,7 +124,7 @@ After completing this module, students will be able to:
 
 <br>
 
-* Please register for the entire module `Causal Data Science for Business Analytics` here: [E-Learning StudIP](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=08b87444fd3c7f7e5f8ce7f348e53d6a&again=yes)
+* Please register for the entire module `Causal Data Science for Business Analytics` here: [E-Learning StudIP](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=b2dab409b613169174824b57d759cc67&again=yes)
 
 ***
 
@@ -149,19 +148,21 @@ Access to course notes & materials will be published on StudIP.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | April 15 & 16 | Introduction to Causal Inference |
-| 2 | April 22 & 21 | Graphical Causal Models |
-| 3 | April 29 & 30 | Randomized Experiments & Linear Regression |
-| 4 | May 6 & 7 | Observed Confounding |
-| 5 | May 13 & 14 | Double Machine Learning | 
-| - | May 20 & 21 | Holiday |
-| 6 | May 27 & 28 | Effect Heterogeneity |
-| 7 | June 3 & 4 | Unobserved Confounding & Instrumental Variables |
-| 8 | June 10 & 11 | Difference-in-Differences |
-| 9 | June 17 & 18 | Synthetic Controls |
-| 10 | June 24 & 25 | Regression Discontinuity |
-| 11 | July 1 & 2 | Causal Mediation  |
-| 12 | July 8 & 9 | Causal Discovery |
+| 1 | April 7 & 8 | Introduction to Causal Inference |
+| 2 | April 14 & 15 | Graphical Causal Models |
+| - | April 21 & 22 | Holiday |
+| 3 | April 28 & 29 | Randomized Experiments & Linear Regression |
+| 4 | May 5 & 6 | Observed Confounding |
+| 5 | May 12 & 13 | Double Machine Learning | 
+| 6 | May 19 & 20 | Effect Heterogeneity |
+| - | May 26 & 27 | Holiday |
+| 7 | June 2 & 3 | Unobserved Confounding & Instrumental Variables |
+| - | June 9 & 10 | Holiday |
+| 8 | June 16 & 17 | Difference-in-Differences |
+| 9 | June 23 & 24 | Synthetic Controls |
+| 10 | June 30 & July 1 | Regression Discontinuity |
+| 11 | July 7 & 8 | Causal Mediation  |
+| 12 | July 14 & 15 | Causal Discovery |
 
 <br>
 
