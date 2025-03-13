@@ -39,13 +39,13 @@ education:
   courses:
   - course: PhD in Management
     institution: Hamburg University of Technology, Germany
-    year: 2018  
-  - course: Master's Degree Candidate
+    year: 2019  
+  - course: Innovation & Technology Project Lead
     institution: Lufthansa Technik AG, Germany
-    year: 2018
+    year: 2017-2019
   - course: Internships & student work in management consulting and the automotive industry
     institution: Fraunhofer IPT & ILT, Aachen, Germany
-    year: 2011-2018
+    year: 2011-2017
   - course: Exchange student at the School of Business and Economics
     institution: Maastricht University, Netherlands
     year: 2016
