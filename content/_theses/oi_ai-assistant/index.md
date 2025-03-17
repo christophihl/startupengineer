@@ -1,5 +1,5 @@
 ---
-title: Opportunity Identification: Designing an AI-Based Assistant
+title: Opportunity Identification - Designing an AI-Based Assistant
 event: Academic Theme Conference
 event_url: https://example.org
 

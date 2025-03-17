@@ -1,5 +1,5 @@
 ---
-title: AI-Assisted Opportunity Identification: Exploring Creativity Workflows and Stakeholder Workshop Scenarios (with Applications to the Circular Economy)
+title: AI-Assisted Opportunity Identification - Exploring Creativity Workflows and Stakeholder Workshop Scenarios (with Applications to the Circular Economy)
 event: Academic Theme Conference
 event_url: https://example.org
 
