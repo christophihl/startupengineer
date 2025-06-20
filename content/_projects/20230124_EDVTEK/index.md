@@ -36,6 +36,6 @@ Relating to diffusion, the project is using citations in patents as a measure of
 
 As for exploitation, the project is focusing on the commercialization of technologies, using technology startups as the object of study. Research has shown that patents positively influence the performance of startups, yet there is limited knowledge about the explicit technologies and their corresponding novelty level. The EDV-TEK project aims to address this gap by utilizing machine-learning neural networks to analyze the underlying phenomena.
 
-![Funded by the Federal Ministry of Education and Research](Foerderhinweis_BMBF.jpg)
+![Funded by the Federal Ministry of Research, Technology and Space](Foerderhinweis_BMFTR.png)
 ![Funded by the European Union](Foerderhinweis_EU_horizontal.jpg)
 
