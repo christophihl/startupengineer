@@ -50,7 +50,7 @@ If you want to submit a team case memo or a team project pitch, please follow th
 | 10 | June 30th | Marketing & Sales for Startup Growth  | - |
 | 11 | July 7th | Financial Analysis | - |
 | 12 | July 14th | Final Pitches | Upload presentation for Final Pitches session containing all topics and one team case submission of the third segment |
-| - | July 21st | Final Submission | Upload your Final Submission incl. Pitchdeck and Video Submission |
+| - | July 28th | Final Submission | Upload your Final Submission incl. Pitchdeck and Video Submission |
 
 
 
