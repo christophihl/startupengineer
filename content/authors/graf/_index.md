@@ -13,7 +13,7 @@ superuser: false
 role: Research Assistant & Doctoral Student
 
 # Room
-room: Building Q Room 1.132
+room: Building Q Room 1.032
 
 # Telephone
 phone: +49 40 42878-4738

@@ -13,7 +13,7 @@ superuser: false
 role: Team & Project Manager
 
 # Room
-room: Building Q Room 1.134
+room: Building Q Room 1.034
 
 # Telephone
 phone: +49 40 42878-4765

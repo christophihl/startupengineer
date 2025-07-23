@@ -13,7 +13,7 @@ superuser: false
 role: Research Associate & Post-Doc
 
 # Room
-room: Building Q Room 1.131
+room: Building Q Room 1.031
 
 # Telephone
 phone: +49 40 42878-4743
