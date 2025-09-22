@@ -106,12 +106,6 @@ This thesis focuses on developing advanced NLP techniques to automatically gener
 - **Development of novel approaches** for small research field classification
 - **Validation and benchmarking** of taxonomy quality metrics
 
-**What You'll Gain:**
-- Expertise in state-of-the-art NLP and text mining techniques
-- Deep understanding of research methodology and academic publishing
-- Skills in knowledge graph construction and semantic analysis
-- Strong portfolio for careers in AI research, academic publishing, or tech industry
-
 **Ideal for students with:** Strong background in computer science, computational linguistics, or data science with interest in academic research and natural language processing.
 
 ---
