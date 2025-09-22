@@ -132,7 +132,7 @@ This course module can prepare students for the following career paths:
 
 ### Registration
 
-* Open until October 21st on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=f7e03ac6b38880b0381115a62b6c5161&again=yes)
+* Open until October 20 on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=e13d870522d79c53e72b57b90c4333af&again=yes)
 
 ***
 
@@ -156,17 +156,17 @@ Password to be found on Studip.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | October 21st | Introduction: Evaluating Venture Opportunities|
-| 2 | October 28th | Financial Planning |
-| 3 | November 4th | Ownership and Returns |
-| 4 | November 11th | Valuation Methods I |
-| 5 | November 18th | Valuation Methods II |
-| 6 | November 25th | Guest Lecture + Early Stage and VC Investors (Lecture) |
-| 7 | December 2nd | Guest Lecture + Early Stage and VC Investors (Exercise) |
-| 8 | December 9th | Term Sheets| 
-| 9 | December 16th| Structuring Deals |
-| - | Dec 23rd - Jan 3rd | Christmas Holiday |
-| 10 | January 6th | Staged Financing |
-| 11 | January 13th | Debt Financing |
-| 12 | January 20th | Corporate Governance |
-| 13 | January 27th | Exits |
+| 1 | October 13th | Introduction: Evaluating Venture Opportunities|
+| 2 | October 20th | Financial Planning |
+| 3 | October 27th | Ownership and Returns |
+| 4 | November 3rd | Valuation Methods I |
+| 5 | November 10th | Valuation Methods II |
+| 6 | November 17th | Guest Lecture + Early Stage and VC Investors (Lecture) |
+| 7 | November 24th| Guest Lecture + Early Stage and VC Investors (Exercise) |
+| 8 | December 1st | Term Sheets| 
+| 9 | December 8th| Structuring Deals |
+| 10 | December 15th | Staged Financing |
+| - | Dec 22nd - Jan 2nd | Christmas Holiday |
+| 11 | January 5th | Debt Financing |
+| 12 | January 12th | Corporate Governance |
+| 13 | January 19th | Exits |
