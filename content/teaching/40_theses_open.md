@@ -78,3 +78,42 @@ The first step for applicants is to choose or propose a thesis topic (based on o
 
 ## Open Topics 
 
+### AI in Circular Economy Research Benchmarking
+**Master's Thesis | Data Science & Innovation**
+
+This thesis offers a unique opportunity to work at the intersection of sustainability, artificial intelligence, and data science. You'll develop cutting-edge methodologies to identify, curate, and validate best practices in circular economy research using advanced data analytics techniques.
+
+**Key Focus Areas:**
+- **Data-driven best-practice identification** using machine learning algorithms
+- **Best-practice curation** through automated content analysis
+- **Validation of best-practice recommendations** via empirical testing
+- **Community-of-best-practice exchange** platform development
+
+**Ideal for students with:** Background in data science, computer science, business informatics, or environmental studies with strong analytical skills and interest in sustainability.
+
+**Contact:** Jonas Wilinski (jonas.wilinski@tuhh.de)
+
+---
+
+### Taxonomy Generation for Emerging Research Fields
+**Master's Thesis | Natural Language Processing & Research Analytics**
+
+This thesis focuses on developing advanced NLP techniques to automatically generate comprehensive taxonomies for small, emerging research fields. You'll work with cutting-edge language models and contribute to the methodological advancement of research field analysis.
+
+**Key Focus Areas:**
+- **Advanced NLP techniques** for automated taxonomy generation
+- **Analysis of existing taxonomy generation papers** and methodologies
+- **Development of novel approaches** for small research field classification
+- **Validation and benchmarking** of taxonomy quality metrics
+
+**What You'll Gain:**
+- Expertise in state-of-the-art NLP and text mining techniques
+- Deep understanding of research methodology and academic publishing
+- Skills in knowledge graph construction and semantic analysis
+- Strong portfolio for careers in AI research, academic publishing, or tech industry
+
+**Ideal for students with:** Strong background in computer science, computational linguistics, or data science with interest in academic research and natural language processing.
+
+---
+
+**Contact:** Jonas Wilinski (jonas.wilinski@tuhh.de)
