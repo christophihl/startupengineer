@@ -95,6 +95,24 @@ This thesis offers a unique opportunity to work at the intersection of sustainab
 
 ---
 
+### Circular Economy,Clean Technologies & Sustainability Innovation Research
+**Master's Theses | Quantitative & Qualitative Research Methods**
+
+Join our research institute at the intersection of Management Science and Deep Learning to investigate critical questions in clean technologies, green innovation, and circular economy transitions. We offer flexible thesis opportunities where you can pursue your specific interests using diverse methodological approaches (quantitative (e.g. Deep Learning or NLP) or qualitative (e.g. Interviews or Literature Reviews)) and comprehensive datasets (e.g., patent data, scientific publications, startup databases).
+
+**Potential Key Focus Areas:**
+- **Technology emergence and novelty** detection in sustainable innovations
+- **Diffusion patterns and commercialization** of clean technologies
+- **Circular economy transformation** through technological innovation
+- **Data-driven analysis** using PATSTAT, OpenAlex, and startup databases
+- **NLP/Deep Learning or qualitative methods** (interviews, literature reviews)
+
+**Ideal for students with:** Backgrounds in management, computer science, data science, engineering, or sustainability studies with strong analytical interests and passion for the green transition.
+
+**Contact:** Jürgen Thiesen (juergen.thiesen@tuhh.de)
+
+---
+
 ### Taxonomy Generation for Emerging Research Fields
 **Master's Thesis | Natural Language Processing & Research Analytics**
 
@@ -108,6 +126,6 @@ This thesis focuses on developing advanced NLP techniques to automatically gener
 
 **Ideal for students with:** Strong background in computer science, computational linguistics, or data science with interest in academic research and natural language processing.
 
----
-
 **Contact:** Jonas Wilinski (jonas.wilinski@tuhh.de)
+
+---
