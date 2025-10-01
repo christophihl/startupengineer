@@ -156,17 +156,17 @@ Password to be found on Studip.
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | October 13th | Introduction: Evaluating Venture Opportunities|
-| 2 | October 20th | Financial Planning |
-| 3 | October 27th | Ownership and Returns |
-| 4 | November 3rd | Valuation Methods I |
-| 5 | November 10th | Valuation Methods II |
-| 6 | November 17th | Guest Lecture + Early Stage and VC Investors (Lecture) |
-| 7 | November 24th| Guest Lecture + Early Stage and VC Investors (Exercise) |
-| 8 | December 1st | Term Sheets| 
-| 9 | December 8th| Structuring Deals |
-| 10 | December 15th | Staged Financing |
+| 1 | October 20th | Introduction: Evaluating Venture Opportunities|
+| 2 | October 27th | Financial Planning |
+| 3 | November 3rd | Ownership and Returns |
+| 4 | November 10th | Valuation Methods I |
+| 5 | November 17th | Valuation Methods II |
+| 6 | November 24th | Guest Lecture + Early Stage and VC Investors (Lecture) |
+| 7 | December 1st| Guest Lecture + Early Stage and VC Investors (Exercise) |
+| 8 | December 8th | Term Sheets| 
+| 9 | December 15th| Structuring Deals |
 | - | Dec 22nd - Jan 2nd | Christmas Holiday |
-| 11 | January 5th | Debt Financing |
-| 12 | January 12th | Corporate Governance |
-| 13 | January 19th | Exits |
+| 10 | January 5th | Staged Financing |
+| 11 | January 12th | Debt Financing |
+| 12 | January 19th | Corporate Governance |
+| 13 | January 23rd | Exits |
