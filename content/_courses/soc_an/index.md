@@ -153,22 +153,22 @@ Access to course notes & materials will be published on StudIP.
 
 | Session | Topic | Date |
 | --- | --- | --- |
-| **Block 1** | **NLP Buidling Blocks** | ** ** |
+| **Block 1** | **NLP Buidling Blocks** |  |
 | 1 | Tokens & Embeddings | October 16 |
 | 2 | RNNs & LSTMs | October 23 |
-| **Block 2** | **LLM Buildings Blocks** | ** ** |
+| **Block 2** | **LLM Building Blocks** |  |
 | 3 | Large Language Models | October 30 |
 | 4 | Transformers | November 6 |
-| **Block 3** | **Post- / Training LLMs** | ** ** |
+| **Block 3** | **Post- / Training LLMs** |  |
 | 5 | Training | November 13 |
 | 6 | Finetuning | November 20 |
-| **Block 4** | **Using LLMs** | ** ** |
+| **Block 4** | **Using LLMs** |  |
 | 7 | Text Classification, Clustering & Extraction | November 27 |
 | 8 | Semantic Search and RAG | December 4 |
-| **Block 5** | **Deep Learning on Graphs** | ** ** |
+| **Block 5** | **Deep Learning on Graphs** |  |
 | 9 | Graph Embeddings | December 11 |
 | 10 | Graph Neural Networks | December 18 |
-| **Block 6** | **Team Projects** | ** ** |
+| **Block 6** | **Team Projects** |  |
 | 11 | Project Lab | January 8 |
 | 12 | Project Lab | January 15 |
 | 11 | Project Lab | January 22 |
