@@ -32,8 +32,8 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2030-02-01T13:00:00Z"
-date_end: "2030-12-02T15:00:00Z"
+date: "2023-02-01T13:00:00Z"
+date_end: "2023-12-02T15:00:00Z"
 all_day: false
 
 # Schedule page publish date (NOT talk date).
@@ -115,9 +115,9 @@ After completing this module, students will be able to:
 
 <br>
 
-* Students are evaluated based on their solutions of challenges assigned on each topic as well as a final team project.
+* Students are evaluated based on their solutions of challenges assigned on each block as well as a final team project.
 
-* `50%` (individual): 5 assignments about different topics.
+* `50%` (individual): Five assignments, one referring to each block, each counting `10%`.
 * `50%` (team): Teams of 3 students work on a joint research project of their choice (submission deadline: March 31).
 
 
@@ -127,7 +127,7 @@ After completing this module, students will be able to:
 
 <br>
 
-* Please register for the entire module `Deep Learning for Social Analytics` here: [E-Learning StudIP](https://e-learning.tuhh.de/studip/dispatch.php/course/overview?cid=d294a78eeb0d4b5028b30f05e9ee1fb8)
+* Please register for the entire module `Deep Learning for Social Analytics` here: [E-Learning StudIP](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=88a279968ec2fe8a72c13a3b56725a35&again=yes)
 * Due to the PBL and project-based nature of the module, we have to limit the number of participants to a max of 30 students.
 * In case of over-demand, access to the course will be granted based on the quality of a brief research proposal to be submitted after the first class.
 
@@ -137,8 +137,8 @@ After completing this module, students will be able to:
 
 <br>
 
-* `Deep Learning for Text and Graphs`: Thursday, 15.00 - 16.30, Room O - 0.007.
-* `Social Analytics with Deep Learning`: Thursday, 16.45 - 18.15, Room O - 0.007.
+* `Deep Learning for Text and Graphs`: Thursday, 15.00 - 16-30, Room HS28 - 0.08.
+* `Social Analytics with Deep Learning`: Thursday, 16.45 - 19:00, Room HS28 - 0.08.
 
 ***
 
@@ -151,22 +151,35 @@ Access to course notes & materials will be published on StudIP.
 ### Preliminary Schedule
 
 
-| Session | Date | Topic |
+| Session | Topic | Date |
 | --- | --- | --- |
-| 1 | October 17 | Course Introduction (online) |
-| 2 | October 25 | Word Embeddings & Topic Models |
-| 3 | October 31 | RNNs and LSTMs for Text I |
-| 4 | November 7 | RNNs and LSTMs for Text II |
-| 5 | November 14 | Transformers | 
-| 6 | November 21 | Transformers: Pre-training |
-| 7 | November 28 | Transformers: Post-training |
-| 8 | December 5 | Graph Embeddings |
-| 9 | December 12 | Graph Neural Networks (GNNs) I |
-| 10 | December 19 | Graph Neural Networks (GNNs) II |
-| 11 | January 9 | Project Lab |
-| 12 | January 16 | Project Lab  |
-| 13 | January 23 | Project Lab |
-| 14 | January 30 | Project Pitches |
+
+| **Block 1** | **NLP Buidling Blocks** | ** ** |
+
+| 1 | Tokens & Embeddings | October 16 |
+| 2 | RNNs & LSTMs | October 23 |
+
+| **Block 2** | **LLM Buildings Blocks** | ** ** |
+| 3 | Large Language Models | October 30 |
+| 4 | Transformers | November 6 |
+
+| **Block 3** | **Post- / Training LLMs** | ** ** |
+| 5 | Training | November 13 |
+| 6 | Finetuning | November 20 |
+
+| **Block 4** | **Using LLMs** | ** ** |
+| 7 | Text Classification, Clustering & Extraction | November 27 |
+| 8 | Semantic Search and RAG | December 4 |
+
+| **Block 5** | **Deep Learning on Graphs** | ** ** |
+| 9 | Graph Embeddings | December 11 |
+| 10 | Graph Neural Networks | December 18 |
+
+| **Block 6** | **Team Projects** | ** ** |
+| 11 | Project Lab | January 8 |
+| 12 | Project Lab | January 15 |
+| 11 | Project Lab | January 22 |
+| 12 | Project Pitches | January 29 |
 
 <br>
 
@@ -176,9 +189,10 @@ Access to course notes & materials will be published on StudIP.
 
 <br>
 
+* Alammar, J., & Grootendorst, M. (2024). Hands-on large language models: language understanding and generation. O'Reilly Media.
 * Barabasi, A. L. (2016). Network Science. Cambridge University Press.
 * Hamilton, W. L. (2020). Graph Representation Learning. Synthesis Lectures on Artificial Intelligence and Machine Learning, Vol. 14, No. 3 , Pages 1-159. 
-* Jurafsky, D., & Martin, J. H. (2024). Speech and Language Processing (3rd unpublished draft).
+* Jurafsky, D., & Martin, J. H. (2025). Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition, with Language Models.
 * Ma, Y., & Tang, J. (2021). Deep learning on graphs. Cambridge University Press.
 * Rao, D., & McMahan, B. (2019). Natural language processing with PyTorch: build intelligent language applications using deep learning. O'Reilly Media.
 * Tunstall, L., Von Werra, L. , & Wolf, T. (2022). Natural language processing with transformers. O'Reilly Media.

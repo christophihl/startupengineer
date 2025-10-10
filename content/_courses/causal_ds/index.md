@@ -22,7 +22,6 @@ address:
 
 authors:
 - ihl
-- mork
 
 weight: 30
 tags: []
@@ -31,7 +30,7 @@ categories: []
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2023-02-01T13:00:00Z"
+date: "2030-02-01T13:00:00Z"
 date_end: "2030-12-02T15:00:00Z"
 all_day: false
 
@@ -104,9 +103,6 @@ After completing this module, students will be able to:
 * Carry out causal data analyses with state-of-the-art tools
 
 
-
-
-
 </details>
 
 
@@ -116,7 +112,7 @@ After completing this module, students will be able to:
 
 <br>
 
-* Students are evaluated based on their solutions of challenges assigned in each session, which they continuously document in their lab journals.
+* Five assignments, one referring to each block, each counting `20%`.
 
 ***
 
@@ -146,23 +142,34 @@ Access to course notes & materials will be published on StudIP.
 ### Preliminary Schedule
 
 
-| Session | Date | Topic |
+| Session | Topic | Date |
 | --- | --- | --- |
-| 1 | April 7 & 8 | Introduction to Causal Inference |
-| 2 | April 14 & 15 | Graphical Causal Models |
-| - | April 21 & 22 | Holiday |
-| 3 | April 28 & 29 | Randomized Experiments & Linear Regression |
-| 4 | May 5 & 6 | Observed Confounding |
-| 5 | May 12 & 13 | Double Machine Learning | 
-| 6 | May 19 & 20 | Effect Heterogeneity |
-| - | May 26 & 27 | Holiday |
-| 7 | June 2 & 3 | Unobserved Confounding & Instrumental Variables |
-| - | June 9 & 10 | Holiday |
-| 8 | June 16 & 17 | Difference-in-Differences |
-| 9 | June 23 & 24 | Synthetic Controls |
-| 10 | June 30 & July 1 | Regression Discontinuity |
-| 11 | July 7 & 8 | Causal Mediation  |
-| 12 | July 14 & 15 | Causal Discovery |
+
+| 1 | Introduction to Causal Inference | tbd |
+
+| **Block 1** | **Graphical Causal Models** | ** ** |
+
+| 2 | Graphical Causal Models | tbd |
+| 3 | Causal Discovery | tbd |
+
+| **Block 2** | **Experiments** | ** ** |
+| 4 | Experiments & Linear Regression | tbd |
+| 5 | Online A/B-Testing | tbd |
+
+| **Block 3** | **Un-/ Observed Confounding** | ** ** |
+| 6 | Observed Confounding | tbd |
+| 7 | Instrumental Variables | tbd |
+| 8 | Regression Discontinuity | tbd |
+
+| **Block 4** | **Causal Machine Learning** | ** ** |
+| 9 | Double Machine Learning | tbd |
+| 10 | Treatment Effect Heterogeneity | tbd |
+
+| **Block 5** | **Causal Panel Data** | ** ** |
+| 11 | Difference-in-Differences | tbd |
+| 12 | Synthetic Controls | tbd |
+| 13 | Counterfactual Imputation | tbd |
+| 14 | Sequential Ignorability | tbd |
 
 <br>
 
