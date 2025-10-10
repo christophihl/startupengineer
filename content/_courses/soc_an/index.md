@@ -171,8 +171,8 @@ Access to course notes & materials will be published on StudIP.
 | **Block 6** | **Team Projects** |  |
 | 11 | Project Lab | January 8 |
 | 12 | Project Lab | January 15 |
-| 11 | Project Lab | January 22 |
-| 12 | Project Pitches | January 29 |
+| 13 | Project Lab | January 22 |
+| 14 | Project Pitches | January 29 |
 
 <br>
 
