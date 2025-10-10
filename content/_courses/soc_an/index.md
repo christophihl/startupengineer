@@ -117,7 +117,7 @@ After completing this module, students will be able to:
 
 * Students are evaluated based on their solutions of challenges assigned on each block as well as a final team project.
 
-* `50%` (individual): Five assignments, one referring to each block, each counting `10%`.
+* `50%` (individual): Five assignments, one referring to each part, each counting `10%`.
 * `50%` (team): Teams of 3 students work on a joint research project of their choice (submission deadline: March 31).
 
 
@@ -153,22 +153,22 @@ Access to course notes & materials will be published on StudIP.
 
 | Session | Topic | Date |
 | --- | --- | --- |
-| **Block 1** | **NLP Building Blocks** |  |
+| **Part 1** | **NLP Building Blocks** |  |
 | 1 | Tokens & Embeddings | October 16 |
 | 2 | RNNs & LSTMs | October 23 |
-| **Block 2** | **LLM Building Blocks** |  |
+| **Part 2** | **LLM Building Blocks** |  |
 | 3 | Large Language Models | October 30 |
 | 4 | Transformers | November 6 |
-| **Block 3** | **Post- / Training LLMs** |  |
+| **Part 3** | **Post- / Training LLMs** |  |
 | 5 | Training | November 13 |
 | 6 | Finetuning | November 20 |
-| **Block 4** | **Using LLMs** |  |
+| **Part 4** | **Using LLMs** |  |
 | 7 | Text Classification, Clustering & Extraction | November 27 |
 | 8 | Semantic Search and RAG | December 4 |
-| **Block 5** | **Deep Learning on Graphs** |  |
+| **Part 5** | **Deep Learning on Graphs** |  |
 | 9 | Graph Embeddings | December 11 |
 | 10 | Graph Neural Networks | December 18 |
-| **Block 6** | **Team Projects** |  |
+| **Part 6** | **Team Projects** |  |
 | 11 | Project Lab | January 8 |
 | 12 | Project Lab | January 15 |
 | 13 | Project Lab | January 22 |

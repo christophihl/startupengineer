@@ -112,7 +112,7 @@ After completing this module, students will be able to:
 
 <br>
 
-* Five assignments, one referring to each block, each counting `20%`.
+* Five assignments, one referring to each part, each counting `20%`.
 
 ***
 
@@ -145,20 +145,20 @@ Access to course notes & materials will be published on StudIP.
 | Session | Topic | Date |
 | --- | --- | --- |
 | 1 | Introduction to Causal Inference | tbd |
-| **Block 1** | **Graphical Causal Models** |  |
+| **Part 1** | **Graphical Causal Models** |  |
 | 2 | Graphical Causal Models | tbd |
 | 3 | Causal Discovery | tbd |
-| **Block 2** | **Experiments** |  |
+| **Part 2** | **Experiments** |  |
 | 4 | Experiments & Linear Regression | tbd |
 | 5 | Online A/B-Testing | tbd |
-| **Block 3** | **Un-/ Observed Confounding** |  |
+| **Part 3** | **Un-/ Observed Confounding** |  |
 | 6 | Observed Confounding | tbd |
 | 7 | Instrumental Variables | tbd |
 | 8 | Regression Discontinuity | tbd |
-| **Block 4** | **Causal Machine Learning** |  |
+| **Part 4** | **Causal Machine Learning** |  |
 | 9 | Double Machine Learning | tbd |
 | 10 | Treatment Effect Heterogeneity | tbd |
-| **Block 5** | **Causal Panel Data** |  |
+| **Part 5** | **Causal Panel Data** |  |
 | 11 | Difference-in-Differences | tbd |
 | 12 | Synthetic Controls | tbd |
 | 13 | Counterfactual Imputation | tbd |
