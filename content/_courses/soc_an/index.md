@@ -153,7 +153,7 @@ Access to course notes & materials will be published on StudIP.
 
 | Session | Topic | Date |
 | --- | --- | --- |
-| **Block 1** | **NLP Buidling Blocks** |  |
+| **Block 1** | **NLP Building Blocks** |  |
 | 1 | Tokens & Embeddings | October 16 |
 | 2 | RNNs & LSTMs | October 23 |
 | **Block 2** | **LLM Building Blocks** |  |
