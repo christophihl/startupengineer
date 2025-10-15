@@ -34,4 +34,4 @@ By integrating **rigorous causal identification strategies**—including randomi
 
 **Examiners:** Prof. Dr. Christoph Ihl and Prof. Dr. Linus Dahlander  
   
-**Day of Oral Doctoral Examination:** 15.10.2025  
+**Day of Oral Doctoral Examination:** 13.10.2025  
