@@ -88,14 +88,14 @@ This course module can prepare students for the following career paths:
 
 ### Grading
 
-* `70%` (individual): Written case solutions submitted after class (for 7 out of 10 cases)
-* `30%` (individual): Oral class participation
+* `60%` (individual): Written case solutions submitted after class (for 7 out of 10 cases)
+* `40%` (individual): Oral class participation
 
 ***
 
 ### Registration
 
-* Open until October 21nd on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=f7e03ac6b38880b0381115a62b6c5161&again=yes)
+* Open until October 14th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=f7e03ac6b38880b0381115a62b6c5161&again=yes)
 
 ***
 
@@ -124,17 +124,17 @@ Here you find the following materials:
 
 | Session | Date | Topic |
 | --- | --- | --- |
-| 1 | October 21st | Introduction: Evaluating Venture Opportunities|
-| 2 | October 28th | Financial Planning |
-| 3 | November 4th | Ownership and Returns |
-| 4 | November 11th | Valuation Methods I |
-| 5 | November 18th | Valuation Methods II |
-| 6 | November 25th | Guest Lecture + Early Stage and VC Investors (Lecture) |
-| 7 | December 2nd | Guest Lecture + Early Stage and VC Investors (Exercise) |
-| 8 | December 9th | Term Sheets| 
-| 9 | December 16th| Structuring Deals |
-| - | Dec 23rd - Jan 3rd | Christmas Holiday |
-| 10 | January 6th | Staged Financing |
-| 11 | January 13th | Debt Financing |
-| 12 | January 20th | Corporate Governance |
-| 13 | January 27th | Exits |
+| 1 | October 20th | Introduction: Evaluating Venture Opportunities|
+| 2 | October 27th | Financial Planning |
+| 3 | November 3rd | Ownership and Returns |
+| 4 | November 10th | Valuation Methods I |
+| 5 | November 17th | Valuation Methods II |
+| 6 | November 24th | Guest Lecture + Early Stage and VC Investors (Lecture) |
+| 7 | December 1st| Guest Lecture + Early Stage and VC Investors (Exercise) |
+| 8 | December 8th | Term Sheets| 
+| 9 | December 15th| Structuring Deals |
+| - | Dec 22nd - Jan 4th | Christmas Holiday |
+| 10 | January 5th | Staged Financing |
+| 11 | January 12th | Debt Financing |
+| 12 | January 19th | Corporate Governance |
+| 13 | January 26th | Exits |

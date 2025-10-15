@@ -125,14 +125,14 @@ This course module can prepare students for the following career paths:
 
 ### Grading
 
-* `70%` (individual): Written case solutions submitted after class (for 7 out of 10 cases)
-* `30%` (individual): Oral class participation
+* `60%` (individual): Written case solutions submitted after class (for 7 out of 10 cases)
+* `40%` (individual): Oral class participation
 
 ***
 
 ### Registration
 
-* Open until October 20 on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=e13d870522d79c53e72b57b90c4333af&again=yes)
+* Open until October 13th on [e-learning.tuhh.de/studip](https://e-learning.tuhh.de/studip/dispatch.php/course/details?sem_id=e13d870522d79c53e72b57b90c4333af&again=yes)
 
 ***
 
@@ -165,8 +165,8 @@ Password to be found on Studip.
 | 7 | December 1st| Guest Lecture + Early Stage and VC Investors (Exercise) |
 | 8 | December 8th | Term Sheets| 
 | 9 | December 15th| Structuring Deals |
-| - | Dec 22nd - Jan 2nd | Christmas Holiday |
+| - | Dec 22nd - Jan 4th | Christmas Holiday |
 | 10 | January 5th | Staged Financing |
 | 11 | January 12th | Debt Financing |
 | 12 | January 19th | Corporate Governance |
-| 13 | January 23rd | Exits |
+| 13 | January 26th | Exits |
