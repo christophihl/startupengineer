@@ -88,7 +88,7 @@ This course module can prepare students for the following career paths:
 
 ### Grading
 
-* `60%` (individual): Written case solutions submitted after class (for 7 out of 10 cases)
+* `60%` (individual): Written case solutions submitted after class (for 6 out of 10 cases - Hardina Smythe case excluded)
 * `40%` (individual): Oral class participation
 
 ***
