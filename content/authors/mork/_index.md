@@ -1,12 +1,10 @@
 ---
 # Display name
-name: Oliver Mork
+name: Dr. Oliver Mork
 
 # Username (this should match the folder name)
 authors:
 - mork
-
-weight: 55
 
 # Is this the primary user of the site?
 superuser: false

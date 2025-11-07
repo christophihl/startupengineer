@@ -173,7 +173,7 @@ Access to course notes & materials will be published on StudIP.
 | 12 | Project Lab | January 15 |
 | 13 | Project Lab | January 22 |
 | 14 | Project Pitches | January 29 |
-
+|    | Project Submission: Final Upload of all Files (Report & Code) | February 19 |
 <br>
 
 
