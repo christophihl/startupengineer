@@ -129,9 +129,9 @@ Here you find the following materials:
 | 3 | November 3rd | Ownership and Returns |
 | 4 | November 10th | Valuation Methods I |
 | 5 | November 17th | Valuation Methods II |
-| 6 | November 24th | Guest Lecture + Early Stage and VC Investors (Lecture) |
-| 7 | December 1st| Guest Lecture + Early Stage and VC Investors (Exercise) |
-| 8 | December 8th | Term Sheets| 
+| 6 | November 24th | Term Sheets |
+| 7 | December 1st| Guest Lecture |
+| 8 | December 8th | Early Stage and VC Investors | 
 | 9 | December 15th| Structuring Deals |
 | - | Dec 22nd - Jan 4th | Christmas Holiday |
 | 10 | January 5th | Staged Financing |
