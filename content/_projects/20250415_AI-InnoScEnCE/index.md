@@ -17,7 +17,7 @@ tags:
 date: "2025-05-17T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: "https://ai-innoscence.eu/"
+external_link:
 
 # Featured image
 image:
