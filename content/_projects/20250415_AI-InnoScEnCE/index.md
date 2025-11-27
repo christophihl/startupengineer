@@ -68,5 +68,7 @@ The project also develops practical tools and frameworks for HEIs, including:
 
 AI-InnoScEnCE aims to create long-term, systemic impact by enabling universities to adopt **AI-powered innovation practices** and by reinforcing their role as catalysts of change in European regions. Through science–industry synergies and a strong focus on circularity, the project contributes directly to the objectives of the European Green Deal and the twin transition toward a **digital and sustainable economy**.
 
+Further updates, project activities, and news are available at  
+ **https://ai-innoscence.eu/**
+
 ![Supported and Co-Funded by EIT RawMaterials and EU ](Foerderhinweis_EU.png)
-![AI-InnoScEnCE Project Website](https://ai-innoscence.eu/)
